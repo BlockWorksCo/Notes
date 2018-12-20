@@ -12097,6 +12097,46 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
 
 ---------------------------------
 
+--------------------------------
+
+FILE_service.h
+
+
+/*!
+ * Connode files, which are located in Telit file system.
+ */
+enum
+{
+   FILE_ConActivityReportSlot = 0U,
+   FILE_ConRplStateSlot,
+   FILE_ConFwDlEncryptedFileSlot,
+   FILE_ConFwDlFileSlot,
+   FILE_ConFwDlStateSlot,
+   FILE_ConCfgDataSlot,             /*!< Unused from Agent v84, Kept for backward compatibility */
+   FILE_ConMacSecStateSlot,
+   FILE_ConDtlsStateSlot,           /*!< Unused from Agent v84, Kept for backward compatibility */
+   FILE_ConMsgQ0Slot,
+   FILE_ConMsgQ1Slot,
+   FILE_ConMsgQ2Slot,
+   FILE_ConMsgQ3Slot,
+   FILE_ConMsgQ4Slot,
+   FILE_ConMsgQ5Slot,
+   FILE_ConMsgQ6Slot,
+   FILE_ConMsgQ7Slot,
+   FILE_ConMsgQ8Slot,
+   FILE_ConMsgQ9Slot,
+   FILE_ConSpare1Slot,
+   FILE_ConSpare2Slot,
+   FILE_ConSpare3Slot,
+   FILE_ConSpare4Slot,
+   FILE_ConSpare5Slot,
+   FILE_ConSpare6Slot,
+   FILE_ConSpare7Slot,
+   FILE_ConSpare8Slot,
+   FILE_ConSpare9Slot,
+   FILE_ConTempDL,                  /*!< Temporary file location used once Connode have completed download */
+   FILE_ConnodeSlotsSizeEnum        /*!< MUST be last entry, used for validation */
+};
 
 
 
