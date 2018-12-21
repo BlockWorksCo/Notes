@@ -12139,6 +12139,52 @@ enum
 };
 
 
+--------------------------------------------
+
+NMS API
+
+"/networks/:networkId/nodes*": "/network-nodes",
+"/widget/nodestats": "/widgets-nodestats",
+"/widget/serverstats": "/widgets-servers",
+"/nodes/:nodeId/configuration*": "/node-configuration",
+"/nodes/:nodeId/widgets/statistics": "/nodes-widgets-statistics",
+"/nodes/:nodeId/actions/ping": "/node-ping",
+"/nodes/:nodeId/actions/restart": "/node-restart",
+"/nodes/:nodeId/events/node*": "/node-events-node",
+"/groups/:groupId/nodes*": "/group-nodes",
+"/nodes/:nodeId/events/network*": "/node-events-network",
+"/nodes/:nodeId/devices*": "/node-devices",
+"/jobs/configuration/params*": "/configuration-params",
+"/platform/servers/:serverName": "/platform-server",
+"/platform/servers*": "/platform-servers",
+"/jobs/:jobId/nodes*": "/job-nodes",
+"/platform/config/auth": "/configuration-auth",
+"/platform/config/dns": "/configuration-dns",
+"/platform/config/ha": "/configuration-ha",
+"/platform/config/proxy": "/configuration-proxy",
+"/platform/config/log": "/configuration-logging",
+"/platform/config/mq": "/configuration-message-queue",
+"/platform/config/events": "/configuration-network-events",
+"/platform/config/alarms": "/configuration-server-alarms",
+"/platform/config/tun6d": "/configuration-uplink-monitoring",
+"/platform/config/pki": "/configuration-pki",
+"/platform/config/nodeAccess": "/configuration-node-access",
+"/platform/alarms*": "/platform-alarms",
+"/map/nodes*": "/map-nodes",
+"/nodes/:nodeId/statistics/properties": "/node-statistics-properties",
+"/nodes/:nodeId/statistics*": "/node-statistics",
+"/platform/dtls*": "/platform-dtls$1",
+"/map/networks*": "/map-networks",
+"/platform/server-security-pair*": "/platform-server-security-pair"
+
+
+---------------------------------------------
+
+smip error:
+
+74638 [   8898.621][yyyy-mm-dd hh:mm:ss][ERROR][WanManager        ]WANMGR_NetworkTimers.c,1106:Too many AT command errors, rebooting to recover, AT command: 'AT#CSURV' after command 'AT+COPS=2'
+
+
 
 
 
