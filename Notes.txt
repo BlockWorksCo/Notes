@@ -12198,6 +12198,15 @@ Adams repo omnimesh
 
 https://gitlab.cyco.io/Omnimesh/omnimesh-demo/blob/master/omnisma-demo.py
 
+----------------------------------------------
+
+Disabling ipv6 address generation with NetworkManager:
+
+/etc/NetworkManager/system-connections/BackOffice
+
+[ipv6]
+addr-gen-mode=eui64
+
 
 
 
