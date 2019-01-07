@@ -12211,11 +12211,15 @@ addr-gen-mode=eui64
 
 SMIP-26
 
-- Suspected deadlock on acquiring SPI mutex. Is Crypto device and CC1200 on same SPI bus?
+- Suspected deadlock on acquiring SPI mutex. Is VaultIC device and CC1200 on same SPI bus?
 - Possible problem is CC code has SPI bus held, but then tries to acquire SPI bus again for
 random number generation? Don't think this can happen.
 - Possibly generate high rate of SPI traffic with CC1200 and RNG calls?
 
+
+
+ch_hal_spi_transfer:
+ - ch_osal_mutex_lock(spi_mtx, CH_HAL_SPI_MUTEX_TIMEOUT, CH_OSAL_MUTEX_RECURSIVE)
 
 
 
