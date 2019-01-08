@@ -12221,6 +12221,16 @@ random number generation? Don't think this can happen.
 ch_hal_spi_transfer:
  - ch_osal_mutex_lock(spi_mtx, CH_HAL_SPI_MUTEX_TIMEOUT, CH_OSAL_MUTEX_RECURSIVE)
 
+agent.h
+cndsmip.h
+
+C4_rndSetCallback(taskc4_rndCB);
+s_rndCB() -> taskc4_rndCB() -> CRYPTOIF_Random()
+
+CRYPTOIF_Random:
+ch_osal_mutex_lock(cryptoif_Lock, C_CH_OSAL_MUTEX_INFINITE, CH_OSAL_MUTEX_RECURSIVE)
+cryptoif_IC_Random() -> VltGenerateRandom()
+ch_osal_mutex_unlock(cryptoif_Lock);
 
 
 
