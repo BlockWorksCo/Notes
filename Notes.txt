@@ -12233,4 +12233,19 @@ cryptoif_IC_Random() -> VltGenerateRandom()
 ch_osal_mutex_unlock(cryptoif_Lock);
 
 
+--------------------------------------------------
+
+agent.h:
+
+cnd_ConState
+cnd_AgentMode
+
+cnd_ConStateCB()
+cnd_conStateAddCallback()
+
+conStateUpdatedSchedule()
+triggered by conStateUpdated()
+
+
+
 
