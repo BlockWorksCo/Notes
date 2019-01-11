@@ -12246,6 +12246,21 @@ cnd_conStateAddCallback()
 conStateUpdatedSchedule()
 triggered by conStateUpdated()
 
+---------------------------------------------------------
+
+secondary ipv6 order:
+
+https://unix.stackexchange.com/questions/285051/how-do-i-add-a-second-ipv6-address-on-linux-without-making-it-default
+
+ip addr add <address> dev <device> preferred_lft <lifetime>
+
+you can also set it on an existing address
+
+ip addr change <address> dev <device> preferred_lft <lifetime>
+
+
+if-up script in /etc/network/interfaces
+
 
 
 
