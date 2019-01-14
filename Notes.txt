@@ -12292,6 +12292,7 @@ There is capture-period-setting state in there that needs to be persisted in a d
 is common with all other config data, not just capture-period.
 DataProfileContext can then be removed, leaving the timestamp to be stored (transiently) in DataProfileDiscovery struct.
 along with discovery infomation.
+DataProfileContext does store capturePeriod for isntantaneous, need to find a way around that.
 
 
 
