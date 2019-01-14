@@ -12280,7 +12280,9 @@ and monitor meter-time by monitoring log to check for time sync occurring. When 
 - On Agent: 
 DataProfileContext->timestamp 
 dataprofile::storeConfig() 
-dataprofile::restoreConfig() handle storage of the last timestamp.
+dataprofile::restoreConfig() 
+handle storage of the last timestamp, these will evetually be removed, but for now DataProfileContext->timestamp can be
+modified by receipt of a new message from SMA: SetLastKnownGoodProfileTimestamp.
 
 
 
