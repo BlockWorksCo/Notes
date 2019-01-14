@@ -12261,6 +12261,17 @@ ip addr change <address> dev <device> preferred_lft <lifetime>
 
 if-up script in /etc/network/interfaces
 
+-------------------------------------------------------------------
+
+time sync test:
+
+server->gateway->nodes->meter.
+
+
+
+
+
+
 
 
 
