@@ -12270,7 +12270,7 @@ server->gateway->nodes->meter.
 tests:
 - (Set test) end-to-end, read meter-clock and server-clock simulateneouslyi(ish) to determine current offset. Modify server-clock -1hr to
 and monitor meter-time by monitoring log to check for time sync occurring. When found, perform a final read and comparison to verify.
-- (update) end-to-end, modify meter-clock by adjust period (10s)
+- (update) end-to-end, with a delta of -(update-threshold), -(update-threshold+1), +(update-threshold-1), +(update-threshold+1)
 
 
 
