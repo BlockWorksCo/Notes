@@ -12273,6 +12273,9 @@ and monitor meter-time by monitoring log to check for time sync occurring. When 
 - (update) end-to-end, with a delta of -(update-threshold), -(update-threshold+1), +(update-threshold-1), +(update-threshold+1)
 
 
+---------------------------------------------------------------
+
+- SMA to validate incoming profile data against corresponding schema (number of fields, type of field).
 
 
 
