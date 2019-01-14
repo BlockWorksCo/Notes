@@ -12286,7 +12286,10 @@ handle storage of the last timestamp, these will evetually be removed, but for n
 modified by receipt of a new message from SMA: SetLastKnownGoodProfileTimestamp.
 - SMA must handle potential duplicated messages for same timestamps via db update.
 
-
+At this point, FLASH is still being used to store updated last-known-good timestamp. We can stop this
+then the DataProfileContext mostly doesn't need storage.
+There is capture-period-setting state in there that needs to be persisted in a different way that
+is common with all other config data, not just capture-period.
 
 
 
