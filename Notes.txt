@@ -12276,6 +12276,8 @@ and monitor meter-time by monitoring log to check for time sync occurring. When 
 ---------------------------------------------------------------
 
 - SMA to validate incoming profile data against corresponding schema (number of fields, type of field).
+- On device registration/login, SMA responds with new message containing timestamps for all profiles.
+- On Agent, DataProfileContext->timestamp
 
 
 
