@@ -12272,15 +12272,17 @@ tests:
 and monitor meter-time by monitoring log to check for time sync occurring. When found, perform a final read and comparison to verify.
 - (update) end-to-end, with a delta of -(update-threshold), -(update-threshold+1), +(update-threshold-1), +(update-threshold+1)
 
+[meter/time_synch] { schedule}: Time synchronization request
+
 
 ---------------------------------------------------------------
 
 
 Stages:
-- Implement end-to-end application-level reliability
+- Implement end-to-end application-level reliability so we don't rely on transport-level reliability (MQ) so we don't rely on transport-level reliability (MQ).
 - Implement a small RAM-backed mq, run in parallel. Duplicate existing mq code, change file-backing to RAM-backed.
 - Move sample-data to RAM-MQ. Small-change, lots of testing.
-- Allocate space in internal FLASH for file-distribution, redirect file distribution to use this area.
+- Allocate space in internal FLASH for file-distribution, redirect file distribution to use this area. Encryption may need to be done a block-basis instead of whole-file.
 - Make small cirular buffer (notification-queue) in FLASH for node events, redirect eventStore API to use this area.
 - Move metrics to straight CoAP PUSH. Allow metrics to be unreliable? I think this is a good trade-off.
 - Move Storage of the Configuration PB to a simple small circular buffer. This is currently implemented with two-files as a (small) circular buffer.
@@ -12292,12 +12294,15 @@ At this point we have the FLASH requirement removed for the following types:
 - Meter push alarm notifications (moved to notification-queue).
 - Node events (moved to notification-queue)
 - Metrics data changed to use direct CoAP PUSH mechanism rather than storing in MQ (change of semantics here).
-- File distribution changed to use designated are on internal-FLASH.
+- File distribution (moved to designated area on internal-FLASH).
 - Configuration (moved to small circular-buffer on internal FLASH).
+- Meter-driver context storage (removed exept for instantaneous-profile capture-period which moves into config).
+
+Which leaves the final step:
+- Make FLASH driver & CNDFS optional in build.
 
 
-
-First phase of FLASH removal, put application checking in position:
+First phase ofFLASH-removal, put application checking in position:
 - SMA to validate incoming profile data against corresponding schema (number of fields, type of field).
 - On device registration/login, SMA responds with new message containing timestamps for all profiles.
 - On Agent:
