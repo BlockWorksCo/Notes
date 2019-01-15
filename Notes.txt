@@ -12334,7 +12334,7 @@ Hard fault:  Hsch BF200543f5@633beL63383S2000e958
 - Add, not replace generation of Activation-complete with newly created activation-complete node-event.
 - parameter in node event needs to contain job id for NMS to match up.
 - Timed activation of meter is complete for job.
-- Got pick of sequence.
+- Got picture of sequence to document.
 
 
 
