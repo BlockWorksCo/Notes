@@ -12281,8 +12281,19 @@ Stages:
 - Implement a small RAM-backed mq, run in parallel. Duplicate existing mq code, change file-backing to RAM-backed.
 - Move sample-data to RAM-MQ. Small-change, lots of testing.
 - Allocate space in internal FLASH for file-distribution, redirect file distribution to use this area.
-- Make small cirular buffer in FLASH for node events, redirect eventStore API to use this area.
-- Allow metrics to be unreliable? just use plain CoAP push?
+- Make small cirular buffer (notification-queue) in FLASH for node events, redirect eventStore API to use this area.
+- Move metrics to straight CoAP PUSH. Allow metrics to be unreliable? I think this is a good trade-off.
+- Move Storage of the Configuration PB to a simple small circular buffer. This is currently implemented with two-files as a (small) circular buffer.
+- Add storage for configuration of instantaneous profile capture-period (in configuration circular buffer?). Remove DataProfileContext storage.
+- Move meter-push-alarm notifications to circular buffer notification-queue.
+
+At this point we have the FLASH requirement removed for the following types:
+- Profile samples (moved to RAM-MQ which can be further optimised given time).
+- Meter push alarm notifications (moved to notification-queue).
+- Node events (moved to notification-queue)
+- Metrics data changed to use direct CoAP PUSH mechanism rather than storing in MQ (change of semantics here).
+- File distribution changed to use designated are on internal-FLASH.
+- Configuration (moved to small circular-buffer on internal FLASH).
 
 
 
