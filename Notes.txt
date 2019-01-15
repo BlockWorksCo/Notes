@@ -12275,13 +12275,24 @@ and monitor meter-time by monitoring log to check for time sync occurring. When 
 
 ---------------------------------------------------------------
 
+
+Stages:
+- Implement end-to-end application-level reliability
+- Implement a small RAM-backed mq, run in parallel. Duplicate existing mq code, change file-backing to RAM-backed.
+- Move sample-data to RAM-MQ. Small-change, lots of testing.
+- Allocate space in internal FLASH for file-distribution, redirect file distribution to use this area.
+- Make small cirular buffer in FLASH for node events, redirect eventStore API to use this area.
+- Allow metrics to be unreliable? just use plain CoAP push?
+
+
+
 First phase of FLASH removal, put application checking in position:
 - SMA to validate incoming profile data against corresponding schema (number of fields, type of field).
 - On device registration/login, SMA responds with new message containing timestamps for all profiles.
-- On Agent: 
-DataProfileContext->timestamp 
-dataprofile::storeConfig() 
-dataprofile::restoreConfig() 
+- On Agent:
+DataProfileContext->timestamp
+dataprofile::storeConfig()
+dataprofile::restoreConfig()
 handle storage of the last timestamp, these will evetually be removed, but for now DataProfileContext->timestamp can be
 modified by receipt of a new message from SMA: SetLastKnownGoodProfileTimestamp.
 - SMA must handle potential duplicated messages for same timestamps via db update.
