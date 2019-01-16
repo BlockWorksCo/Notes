@@ -12433,7 +12433,7 @@ Features of NMS are:
 
 So NMS becomes:
 - Network Management Application (NMA). Network configuration and event handling.
-- Secure Transport Endpoint (STE). Secure CoAP/HTTP proxy.
+- Secure Transport Endpoint (STE). Secure CoAP/HTTP proxy. Could be co-located with MDMS over a VPN providing a secure endpoint to SMA (not HTTPS over open network which would require re-encrypting), bypssing NMA (old NMS).
 - Asynchronous Communications Manager (ACM).
 
 
