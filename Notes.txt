@@ -12439,6 +12439,8 @@ So NMS becomes 3 submodules:
 - Asynchronous Communications Manager (ACM).
 
 
+
+
 Secure Transport Endpoint (STE): 
 - Secure CoAP/HTTP proxy. 
 - VPN between our data centre and secure data centre (MDMS).
@@ -12446,14 +12448,17 @@ Secure Transport Endpoint (STE):
 - STE co-located with MDMS.
 - Nodes can target STE over IPv6/VPN, physically located in secure data centre.
 - decrypting avoided until physically inside secure data centre with SMA and MDMS.
+- *only* secure when physically located at the *real* endpoint.
 
 Network Management Application (NMA).
 - Network configuration
 - event handling and notfication.
-- Network Monitoring and notification..
+- Network Monitoring and notification.
+- Geographic UI.
 
 Asynchronous Communications Manager (ACM):
-- 
+- Co-located with tun6d.
+- packet aggregation.
 
 
 
