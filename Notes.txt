@@ -12466,7 +12466,9 @@ Asynchronous Communications Manager (ACM):
 - ACM has a new API that we can migrate to slowly
 - Has to be ouside of DTLS as an ACM inside DTLS would have no visibility of other DTLS streams.
 - ACM has to deal with raw UDP packets to be able to transport DTLS streams.
-- ACM can have no API.
+- ACM can have no API, it must be a network interface similar to tun6.
+- ACM could present a tun interface to outside world (i.e. STE).
+- incoming packets are aggregated according to network topology obtained from tun6.
 
 
 
