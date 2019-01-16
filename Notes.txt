@@ -12459,7 +12459,10 @@ Network Management Application (NMA).
 
 Asynchronous Communications Manager (ACM):
 - Co-located with tun6d.
-- packet aggregation.
+- request aggregation.
+- multi-packet response collation.
+- Has to be a man-in-the-middle in order to perform aggregation and collation of multi-packet responses.
+- Single ACM instance serves multiple applications, can optimise across applications.
 
 
 
@@ -12488,6 +12491,7 @@ Asynchronous Communications Manager (ACM):
 18) Job management is effectively an asynchronous data transfer API, therefore application independent and sees opaque data, therfore unprivelaged.
 
 20) Secure end-to-end transport communications (i.e. to STE) cannot be aggregated/optimised though ACM (ACM *has* to be a man-in-the-middle).
+21) ACM is a single isntance serving multiple applications.
 
 Factors to consider for determining split?
 - security/privelage separation.
