@@ -12433,7 +12433,10 @@ Features of NMS are:
 8) Accepted techniques for secure end-to-end transfer of private information (i.e. metering data) involve end-to-end encryption.
 9) 7 + 8 imply our competitors will be end-to-end encrypted.
 10) We can't consider the data centre (AWS/bare-metal) to be secure as it is out of our control.
-11) True end-to-end encryption is table-stakes for a secure metering application.
+11a) "Dont trust services"; We can't trust a data centre to be secure.
+11b) "Principle of least privelage"; The communications portions of our network don't need to see the plaintext data, therefore they shouldn't.
+11c) "Minimise attack surface area"; We have the opportunity to remove an exposed surface (security endpoint terminating at NMS) therefore we should.
+12) True end-to-end encryption is table-stakes for a secure metering application.
 
 
 MID requirement: "Any network that contains legally controlled devices with IR or wireless network communications
