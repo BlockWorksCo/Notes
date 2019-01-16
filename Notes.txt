@@ -12441,6 +12441,13 @@ Features of NMS are:
 12) True end-to-end encryption is table-stakes for a secure metering application.
 
 
+Factors to consider for determining split?
+- security
+- performance
+- Grouping of features
+
+
+
 MID requirement: "Any network that contains legally controlled devices with IR or wireless network communications
 interfaces shall be considered to be an open network."
 
