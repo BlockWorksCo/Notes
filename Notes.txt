@@ -12423,10 +12423,10 @@ Data types:
 - PKI credentials               - closed/authenticated.
 
 Features of NMS are: 
-- job management                        - unprivilaged.
+- job management                        - unprivilaged coupled with node-data-transfer.
 - PKI management                        - privilaged coupled with transport security.
-- data transfer with nodes              -
-- (external) transport security (DTLS)  -
+- node data transfer                    - unprivelaged, coupled with job management/asynchronous comms.
+- (external) transport security (DTLS)  - privilaged, coupled with CoAP/HTTP proxy (?)
 - configuration management              - privilaged,
 - event handling                        - privilaged, coupled with other management features.
 - CoAP/HTTP proxy                       - unprivilaged, entirely decoupled.
