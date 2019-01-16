@@ -12431,6 +12431,9 @@ Features of NMS are:
 3) True end-to-end encryption is table-stakes for a secure application.
 
 
+MID requirement: "Any network that contains legally controlled devices with IR or wireless network communications
+interfaces shall be considered to be an open network."
+
 
 
 
