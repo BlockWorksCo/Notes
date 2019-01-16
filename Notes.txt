@@ -12420,7 +12420,7 @@ Features of NMS are:
 - transport security endpoint
 - configuration management
 - event handling
-- shuttling requests between nodes and SMA.
+- shuttling requests between nodes and SMA (CoAP/HTTP proxy).
 
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
@@ -12440,11 +12440,14 @@ Features of NMS are:
 11e) "No segment or tier of a service should implicitly trust requests from other segments." Currently our NMS/SMA implicitly trust each other, they shouldn't.
 12) True end-to-end encryption is table-stakes for a secure metering application.
 
+13) Network data transfer infrastructure should be un-privelaged (opaque data/payloads).
+14) Management features should be privelaged (transparent data/payloads).
 
 Factors to consider for determining split?
-- security
+- security/privelage separation.
 - performance
 - Grouping of features
+- use-case
 
 
 
