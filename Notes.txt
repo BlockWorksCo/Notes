@@ -12429,6 +12429,7 @@ Features of NMS are:
 3b) Welmec/MID (European metering standards) software requirements for metering *strongly* imply end-to-end encryption.
 3c) CPA requirements (GB security/robistness standards related to metering) for metering *specify* end-to-end encryption.
 3d) Welmec would consider Omnimesh to be an "open network".
+3e) Most/all(?) deployed DLMS systems use end-to-end encryption.
 3) True end-to-end encryption is table-stakes for a secure application.
 
 
