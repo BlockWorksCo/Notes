@@ -12437,6 +12437,15 @@ So NMS becomes:
 - Asynchronous Communications Manager (ACM).
 
 
+Secure Transport Endpoint (STE): 
+- Secure CoAP/HTTP proxy. 
+- VPN between our data centre and secure data centre (MDMS).
+- SMA co-located with MDMS.
+- STE co-located with MDMS.
+- Nodes can target STE over IPv6/VPN, physically located in secure data centre.
+- decrypting avoided until physically inside secure data centre with SMA and MDMS.
+- Could be co-located with MDMS over a VPN providing a secure endpoint to SMA (not HTTPS over open network which would require re-encrypting), bypssing NMA (old NMS).
+
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
 2) Communications facility should be (able to be) shared between multiple applications (application independence).
