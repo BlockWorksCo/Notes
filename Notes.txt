@@ -12337,6 +12337,43 @@ Hard fault:  Hsch BF200543f5@633beL63383S2000e958
 - Got picture of sequence to document.
 
 
+----------------------------------------------------------
+
+
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4000 -listen 4242 -loglevel debug
+
+
+gdb --args ./build/host-lnt-insecure/bin/agent -eui64 00-00-00-00-00-00-00-01 \
+ -meter /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 \
+ -initrtc \
+ -ctrlhub 127.0.0.1 \
+ -ctrlhubport 4242 \
+ -loglevel debug \
+ -param device.dlms.lls_password=lnt1 \
+ -param device.dlms.authentication_key=31323334353637383930313233343536 \
+ -param device.dlms.encryption_key=31323334353637383930313233343536 \
+ -param device.dlms.hls_key=30303030303030303031303335383230 \
+ -param device.time.sync_timer=1 \
+ -param server.ip=fd00::1 \
+ -param server.port=5684 \
+ -param modem.tun6.ip=127.0.0.1 \
+ -param modem.tun6.secret=whatsfordinner \
+ -param modem.apn=4g.tele2.se \
+ -param server.mq.push_now=1 \
+ -param server.mq.push_delay=30 \
+ -param device.capabilities.dlmspipe.push=0 \
+ -param device.dlms.pipe_enabled=0 \
+ -rootcert /Data/Temp/KeyTest/root.crt.der \
+ -cert /Data/Temp/KeyTest/node.crt.der \
+ -key /Data/Temp/KeyTest/node.key.der \
+ -mackey /Data/Temp/KeyTest/mac-keys.txt \
+ -gateway \
+ -statedir AgentState \
+ -socket
+
+
+
+
 
 
 
