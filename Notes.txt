@@ -12415,12 +12415,12 @@ NMS split:
 
 Features of NMS are: 
 - job management
-- PKI management
+- PKI management                - privelaged.
 - transactions with nodes
 - transport security endpoint
-- configuration management
-- event handling
-- shuttling requests between nodes and SMA (CoAP/HTTP proxy).
+- configuration management      - privelaged,
+- event handling                - privelaged, coupled with other management features.
+- CoAP/HTTP proxy               - unprivelaged, entirely decoupled.
 
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
@@ -12442,6 +12442,9 @@ Features of NMS are:
 
 13) Network data transfer infrastructure should be un-privelaged (opaque data/payloads).
 14) Management features should be privelaged (transparent data/payloads).
+15) CoAP/HTTP proxy simply performs protocol translation, entirely decoupled from rest of system, therefore can be entirely standalone.
+16) PKI management is obviously privelaged.
+17) Event handling may need to trigger privelaged actions, therefore privelaged.
 
 Factors to consider for determining split?
 - security/privelage separation.
