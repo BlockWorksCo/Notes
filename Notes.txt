@@ -12389,7 +12389,8 @@ Regarding low-power
 11) Low-power networks such as ZigBee, BLE or LoRA cannot support the overhead of IPv6 (or rather they can, but generally choose not to). There are good reasons for this.
 12) 9 + 10 + 11 implies IPv6 is not a given in Ommnimesh's future.
 13) 12 implies IPv6 is not suitable for addressing nodes looking forward.
-14) In this low-power future, it would be desirable to support mixed always-on/mostly-off networks, i.e. Elec/Gas/Water.
+14) In this (eventual) low-power future, it would be desirable to support mixed always-on/mostly-off networks, i.e. Elec/Gas/Water.
+15) 14 implies a hybrid network (e.g. mesh-of-stars) is a good fit for Omnimesh in the future (almost ZigBee model).
 
 Primary node addressing scheme:
 
