@@ -12373,6 +12373,46 @@ gdb --args ./build/host-lnt-insecure/bin/agent -eui64 00-00-00-00-00-00-00-01 \
  -socket
 
 
+------------------------------------------------------------
+
+
+
+Regarding low-power
+
+9) low-power is in Omnimeshs's future (however distant).
+9b) sleepy-nodes will always be lower-power than mostly-on nodes, reagrdless of technology.
+9c) High-power (always-on) is a special-case of low-power.
+9c) 9 + 9b + 9c imply that we can design for sleepy-nodes now without losing any features.
+10) Non-mesh networks such as stars are inherently better for low-power.
+11) Low-power networks such as ZigBee, BLE or LoRA cannot support the overhead of IPv6 (or rather they can, but choose not to).
+12) 9 + 10 + 11 implies IPv6 is not a given in Ommnimesh's future.
+13) 12 implies IPv6 is not suitable for addressing nodes looking forward.
+14) In this low-power future, it would be desirable to support mixed always-on/mostly-off networks, i.e. Elec/Gas/Water.
+
+Primary node addressing scheme:
+
+0) Addressing-scheme is a critical architectural point that dictates available technologies in the future.
+0b) addressing is difficult to change.
+1) IPv6 addresses under Omnimesh are dynamic (mesh hopping).
+1b) IPv6 addresses are arbitrary and composed by our code from "prefix##eui64".
+2) Individual transactions are long-duration, thus may cross dynamic IP boundaries, i.e. a node can change IP in the middle of a transfer.
+2b) different technologies will have (potentially) hardcoded addressing schemes (e.g. based on manufacturer-specified MAC address).
+3) 1 + 2 + 2b imply IPv6 addresses are not suitable to uniquely identify a node.
+4) 1 + 2 also imply a DTLS session (between IPv6 endpoints) will not be efficient as the session may be torn down and restarted mid-transaction.
+4) IPv6 is an implementation detail. You can imagine a ZigBee or LoRAWAN based network with different addressing needs.
+5) Device EUI is static, uniquely identifies a node and is assigned by us, independent of communication technology.
+6) 4 + 5 imply the real unique identifiers of nodes for communication purposes should be EUI-64.
+7) DTLS may be appropriate for some applications, so no problem keeping it as an option for those (and for backward compatibility).
+
+
+NMA split:
+
+1) Nodes are primarily addressed by EUI-64 (following from above).
+2) Communications facility should be (able to be) shared between multiple applications (application independence).
+3) 
+
+
+
 
 
 
