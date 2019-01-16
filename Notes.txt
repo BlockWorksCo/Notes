@@ -12436,13 +12436,15 @@ Features of NMS are:
 11a) "Dont trust services"; We can't trust a data centre to be secure.
 11b) "Principle of least privelage"; The communications portions of our network don't need to see the plaintext data, therefore they shouldn't.
 11c) "Minimise attack surface area"; We have the opportunity to remove an exposed surface (security endpoint terminating at NMS) therefore we should.
+11d) "limit the impact of any compromise". If the data centre gets exposed, *all* metering data for the *whole* population would be exposed (and could be exfiltrated with e.g. tcpdump on a running server).
 12) True end-to-end encryption is table-stakes for a secure metering application.
 
 
 MID requirement: "Any network that contains legally controlled devices with IR or wireless network communications
 interfaces shall be considered to be an open network."
 
-https://www.owasp.org/index.php/Security_by_Design_Principles
+Welmec: https://www.owasp.org/index.php/Security_by_Design_Principles
+NCSC: https://www.ncsc.gov.uk/blog-post/how-ncsc-thinks-about-security-architecture
 
 
 
