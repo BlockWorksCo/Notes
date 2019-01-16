@@ -12431,6 +12431,12 @@ Features of NMS are:
 - configuration management              - privileged, coupled with other management features,
 - event handling                        - privileged, coupled with other management features.
 
+So NMS becomes:
+- Network Management Application (NMA). Network configuration and event handling.
+- Secure Transport Endpoint (STE). Secure CoAP/HTTP proxy.
+- Asynchronous Communications Manager (ACM).
+
+
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
 2) Communications facility should be (able to be) shared between multiple applications (application independence).
