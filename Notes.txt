@@ -12409,9 +12409,18 @@ Primary node addressing scheme:
 
 NMS split:
 
+Features of NMS are: 
+- job management
+- PKI management
+- transactions with nodes
+- transport security endpoint
+- configuration management
+- event handling
+- shuttling requests between nodes and SMA.
+
+
 1) Nodes are primarily addressed by EUI-64 (following from above).
 2) Communications facility should be (able to be) shared between multiple applications (application independence).
-3) 
 
 
 
