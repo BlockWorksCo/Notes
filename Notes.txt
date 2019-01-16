@@ -12421,6 +12421,7 @@ Data types:
 - event data                    - closed/authenticated.
 - metering data                 - closed/authenticated.
 - PKI credentials               - closed/authenticated.
+- monitoring data               - open.
 
 Features of NMS are: 
 - job management                        - unprivileged, coupled with node-data-transfer.
@@ -12430,9 +12431,10 @@ Features of NMS are:
 - CoAP/HTTP proxy                       - unprivileged, coupled with DTLS and PKI.
 - configuration management              - privileged, coupled with other management features,
 - event handling                        - privileged, coupled with other management features.
+- network monitoring                    - unprivileged, coupled with other management features.
 
-So NMS becomes:
-- Network Management Application (NMA). Network configuration and event handling.
+So NMS becomes 3 submodules:
+- Network Management Application (NMA). Network configuration,  event handling and monitoring.
 - Secure Transport Endpoint (STE). Secure CoAP/HTTP proxy. Could be co-located with MDMS over a VPN providing a secure endpoint to SMA (not HTTPS over open network which would require re-encrypting), bypssing NMA (old NMS).
 - Asynchronous Communications Manager (ACM).
 
@@ -12444,7 +12446,15 @@ Secure Transport Endpoint (STE):
 - STE co-located with MDMS.
 - Nodes can target STE over IPv6/VPN, physically located in secure data centre.
 - decrypting avoided until physically inside secure data centre with SMA and MDMS.
-- Could be co-located with MDMS over a VPN providing a secure endpoint to SMA (not HTTPS over open network which would require re-encrypting), bypssing NMA (old NMS).
+
+Network Management Application (NMA).
+- Network configuration
+- event handling and notfication.
+- Network Monitoring and notification..
+
+Asynchronous Communications Manager (ACM):
+- 
+
 
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
