@@ -12432,13 +12432,14 @@ Features of NMS are:
 7) Most/all(?) deployed DLMS systems use end-to-end encryption.
 8) Accepted techniques for secure end-to-end transfer of private information (i.e. metering data) involve end-to-end encryption.
 9) 7 + 8 imply our competitors will be end-to-end encrypted.
-10) 
+10) We can't consider the data centre (AWS/bare-metal) to be secure as it is out of our control.
 11) True end-to-end encryption is table-stakes for a secure metering application.
 
 
 MID requirement: "Any network that contains legally controlled devices with IR or wireless network communications
 interfaces shall be considered to be an open network."
 
+https://www.owasp.org/index.php/Security_by_Design_Principles
 
 
 
