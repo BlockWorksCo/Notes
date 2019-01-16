@@ -12416,16 +12416,20 @@ NMS split:
 Data types:
 - IPv6                          - open.
 - EUI64                         - open.
-- meterID                       - open
+- meterID                       - open.
+- Configuration data            - authenticated.
+- event data                    - closed/authenticated.
+- metering data                 - closed/authenticated.
+- PKI credentials               - closed/authenticated.
 
 Features of NMS are: 
-- job management                -
-- PKI management                - privelaged.
-- data transfer with nodes      -
-- transport security endpoint   -
-- configuration management      - privelaged,
-- event handling                - privelaged, coupled with other management features.
-- CoAP/HTTP proxy               - unprivelaged, entirely decoupled.
+- job management                        - unprivilaged.
+- PKI management                        - privilaged coupled with transport security.
+- data transfer with nodes              -
+- (external) transport security (DTLS)  -
+- configuration management              - privilaged,
+- event handling                        - privilaged, coupled with other management features.
+- CoAP/HTTP proxy                       - unprivilaged, entirely decoupled.
 
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
