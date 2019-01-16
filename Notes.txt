@@ -12463,6 +12463,10 @@ Asynchronous Communications Manager (ACM):
 - multi-packet response collation.
 - Has to be a man-in-the-middle in order to perform aggregation and collation of multi-packet responses.
 - Single ACM instance serves multiple applications, can optimise across applications.
+- ACM has a new API that we can migrate to slowly
+- Has to be ouside of DTLS as an ACM inside DTLS would have no visibility of other DTLS streams.
+- ACM has to deal with raw UDP packets to be able to transport DTLS streams.
+- ACM can have no API.
 
 
 
