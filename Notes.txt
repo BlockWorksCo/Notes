@@ -12391,6 +12391,7 @@ Regarding low-power
 13) 12 implies IPv6 is not suitable for addressing nodes looking forward.
 14) In this (eventual) low-power future, it would be desirable to support mixed always-on/mostly-off networks, i.e. Elec/Gas/Water.
 15) 14 implies a hybrid network (e.g. mesh-of-stars) is a good fit for Omnimesh in the future (almost ZigBee model).
+16) implies there is an elephant in the room
 
 Primary node addressing scheme:
 
