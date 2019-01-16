@@ -12381,9 +12381,11 @@ Regarding low-power
 
 9) low-power is in Omnimeshs's future (however distant).
 9b) sleepy-nodes will always be lower-power than mostly-on nodes, reagrdless of technology.
-9c) High-power (always-on) is a special-case of low-power.
-9c) 9 + 9b + 9c imply that we can design for sleepy-nodes now without losing any features.
-10) Non-mesh networks such as stars are inherently better for low-power.
+9c) High-power (always-on) is a special-case of low-power (i.e. a high-power node can just do nothing with the 'off' time).
+9d) The architectural requirements of sleepy-nodes dictate a large part of the architeture of the system as a whole.
+9c) 9 + 9b + 9c  imply that we *can* design for sleepy-nodes now without losing any features.
+9e) 9d + 9c imply that we *should* design for low power now.
+10) Non-mesh networks such as stars are inherently better for low-power than meshes.
 11) Low-power networks such as ZigBee, BLE or LoRA cannot support the overhead of IPv6 (or rather they can, but choose not to).
 12) 9 + 10 + 11 implies IPv6 is not a given in Ommnimesh's future.
 13) 12 implies IPv6 is not suitable for addressing nodes looking forward.
@@ -12405,7 +12407,7 @@ Primary node addressing scheme:
 7) DTLS may be appropriate for some applications, so no problem keeping it as an option for those (and for backward compatibility).
 
 
-NMA split:
+NMS split:
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
 2) Communications facility should be (able to be) shared between multiple applications (application independence).
