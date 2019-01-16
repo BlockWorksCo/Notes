@@ -12426,6 +12426,8 @@ Features of NMS are:
 1) Nodes are primarily addressed by EUI-64 (following from above).
 2) Communications facility should be (able to be) shared between multiple applications (application independence).
 3) Some metering networks (e.g. SMETS) exist where end-to-end encryption is assumed.
+3b) Welmec/MID (European metering standards) software requirements for metering *strongly* imply end-to-end encryption.
+3c) CPA requirements (GB security/robistness standards related to metering) for metering *specify* end-to-end encryption.
 3) True end-to-end encryption is table-stakes for a secure application.
 
 
