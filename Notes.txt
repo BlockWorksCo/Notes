@@ -12355,7 +12355,7 @@ gdb --args ./build/host-lnt-insecure/bin/agent -eui64 00-00-00-00-00-00-00-01 \
  -param device.dlms.encryption_key=31323334353637383930313233343536 \
  -param device.dlms.hls_key=30303030303030303031303335383230 \
  -param device.time.sync_timer=1 \
- -param server.ip=2a03:a000:5:192:7df3:a92b:2700:1fb6 \
+ -param server.ip=2a03:a000:5:192:e437:5170:6f78:cfc5 \
  -param server.port=5684 \
  -param modem.tun6.ip=127.0.0.1 \
  -param modem.tun6.secret=whatsfordinner \
@@ -12423,7 +12423,7 @@ Data types:
 - PKI credentials               - closed/authenticated.
 - monitoring data               - open.
 
-Features of NMS are: 
+Features of NMS are:
 - job management                        - unprivileged, coupled with node-data-transfer.
 - node data transfer                    - unpriveleged, coupled with job management/asynchronous comms.
 - DTLS PKI management                   - privileged coupled with transport security (DTLS).
@@ -12441,8 +12441,8 @@ So NMS becomes 3 submodules:
 
 
 
-Secure Transport Endpoint (STE): 
-- Secure CoAP/HTTP proxy. 
+Secure Transport Endpoint (STE):
+- Secure CoAP/HTTP proxy.
 - VPN between our data centre and secure data centre (MDMS).
 - SMA co-located with MDMS.
 - STE co-located with MDMS.
