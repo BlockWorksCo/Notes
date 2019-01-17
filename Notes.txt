@@ -12473,6 +12473,12 @@ Asynchronous Communications Manager (ACM):
 - incoming packets are aggregated according to network topology obtained from tun6.
 
 
+- packet aggregation can be done outside DTLS
+- async API needs to be inside DTLS
+- request aggregation needs to be done instide DTLS.
+- reponse collation needs visibility of data, therfore has to be inside of DTLS.
+
+
 
 1) Nodes are primarily addressed by EUI-64 (following from above).
 2) Communications facility should be (able to be) shared between multiple applications (application independence).
