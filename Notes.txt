@@ -12541,6 +12541,7 @@ Load balancing:
 - Agent opens uplink with tunnel, gets forwaded to tunnelA.
 - Agent opens DTLS session with fd00::1, get forwarded to fd00:B.
 
+- by sharing a prefix file, tunnelA and tunnelB can allocate the same IP address
 
 
 
