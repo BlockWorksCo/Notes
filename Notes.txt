@@ -12524,6 +12524,24 @@ NCSC: https://www.ncsc.gov.uk/blog-post/how-ncsc-thinks-about-security-architect
 
 
 
+------------------------------------------------
+
+Load balancing:
+
+
+    TunnelA -|
+             --- Tunnel
+    TunnelB -|
+
+
+    fd00::a -|
+             ---- fd00::1
+    fd00::b -|
+
+- Agent opens uplink with tunnelA
+- Agent opens DTLS session with fd00::a
+
+
 
 
 
