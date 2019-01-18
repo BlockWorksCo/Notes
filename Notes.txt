@@ -12543,6 +12543,18 @@ Load balancing:
 
 - by sharing a prefix file, tunnelA and tunnelB can allocate the same IP address
 
+----------------------------------------------------
+
+prefer IPv4 over IPv6
+getaddrinfo
+
+/etc/gai.conf
+
+
+https://community.rackspace.com/products/f/public-cloud-forum/5110/how-to-prefer-ipv4-over-ipv6-in-ubuntu-and-centos
+
+precedence ::ffff:0:0/96  100
+
 
 
 
