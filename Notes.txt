@@ -12555,6 +12555,14 @@ https://community.rackspace.com/products/f/public-cloud-forum/5110/how-to-prefer
 
 precedence ::ffff:0:0/96  100
 
+------------------------------------------------------
+
+
+__ram_start = 536888834 __ram_end = 406209674
+stackVar= 536938872 heapVar=536942368
+
+
+
 
 
 
