@@ -12561,7 +12561,10 @@ precedence ::ffff:0:0/96  100
 __ram_start = 536888834 __ram_end = 406209674
 stackVar= 536938872 heapVar=536942368
 
-
+__ram_start = 0x20004602
+__ram_end   = 0x1836448a
+stackVar    = 0x20010978
+heapVar     = 0x20011720
 
 
 
