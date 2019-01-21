@@ -12566,6 +12566,50 @@ __ram_end   = 0x1836448a
 stackVar    = 0x20010978
 heapVar     = 0x20011720
 
+#include "platform/core/pointer-checks.h"
+#include <inttypes.h>
+#include "platform/core/memory.h"
+
+void prodmodeEnterIfNotCommissioned(void)
+{
+    logSetLevel(LogLevelDebug);
+
+    uint8_t     stackVar[16];
+    uint8_t*    heapVar = MALLOC(10);
+    //LOG_INFO("__ram_start = %"PRIu32" __ram_end = %"PRIu32"",__ram_start,__ram_end);
+    //LOG_INFO("stackVar= %"PRIu32" heapVar=%"PRIu32"",(uint32_t)&stackVar[0],(uint32_t)&heapVar[0]);
+    LOG_INFO(">>> doing test...");
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_READABLE( &stackVar[0] );
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_WRITABLE( &stackVar[0] );
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_READABLE( &heapVar[0] );
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_WRITABLE( &heapVar[0] );
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_WITHIN_BUFFER( &stackVar[1], &stackVar[0],&stackVar[0]+sizeof(stackVar));
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_WITHIN_BUFFER( &stackVar[0], &stackVar[0],&stackVar[0]+sizeof(stackVar));
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+    CHECK_POINTER_IS_WITHIN_BUFFER( &stackVar[15], &stackVar[0],&stackVar[0]+sizeof(stackVar));
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+
+    //CHECK_POINTER_IS_WITHIN_BUFFER( &stackVar[16], &stackVar[0],&stackVar[0]+sizeof(stackVar));
+
+    LOG_INFO(">>> %d",__LINE__);
+    OS_sleepSec(1);
+
+
+
+----------------------------
 
 
 
