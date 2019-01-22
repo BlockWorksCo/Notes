@@ -12626,6 +12626,211 @@ EUI of gateway 00-1b-c5-0c-60-00-27-11
 64 bytes from fd7e:ce88:ce59:0:21b:c50c:6000:2711: icmp_seq=10 ttl=32 time=72.9 ms
 64 bytes from fd7e:ce88:ce59:0:21b:c50c:6000:2711: icmp_seq=11 ttl=32 time=72.9 ms
 
+hello
+
+The following information may be useful if you are connected to this computer.
+
+
+Serial port:
+
+
+ttyACM0 is Gateway
+ttyACM1 is IPA3 module
+
+The IPA3 Module is not connected to the gateway.
+
+
+my computer password:tianmei
+
+
+the following two board are old version RF mesh
+
+fd7e:ce88:ce59:0:21b:c50c:6000:2791
+fd7e:ce88:ce59:0:21b:c50c:6000:2793
+
+
+thank you and good luck!
+Thanks!
+ok
+
+
+
+pls go on
+
+tianmei@user:~/CoAPTools$ ./coap_tool.py --config-list
+
+agent:
+2019-01-22 19:19:46,640 ctrlport : Connecting to ctrlporthub on localhost:4000
+prod.prodtime                            : 1544457897
+prod.alias.id                            :
+prod.ethernet.macaddr                    :
+prod.lowpan.eui64                        : 00-1B-C5-0C-60-04-FD-D9
+prod.hw.version                          :
+rpl.enabled                              : 1
+rpl.br.dio.imin                          : 12
+rpl.br.dio.imax                          : 8
+rpl.br.dio.k                             : 6
+rpl.br.routelife                         : 1200
+rpl.br.ocp                               : 1
+rpl.dis.trickle.min.ms                   : 10000
+rpl.dis.trickle.doublings                : 4
+rpl.probe.interval.min.ms                : 1500
+rpl.probe.doublings                      : 6
+rpl.instance_id                          : 0
+rpl.etx.weight_factor                    : 64
+rpl.mrhof.pp_hysteresis                  : 75
+rpl.dag_switch.hysteresis                : 150
+rpl.dag_switch.time                      : 7200
+rpl.routes.max                           : 10000
+rpl.dao.deferred_ack                     : 1
+rpl.netsize_penalty                      : 64
+^[[Alowpan.txpower.max                       : 10
+lowpan.hop_limit                         : 32
+lowpan.frame_retries                     : 3
+lowpan.powercontrol.interval             : 480
+lowpan.powercontrol.target               : -90
+lowpan.powercontrol                      : 1
+lowpan.cca.threshold                     : -94
+lowpan.channelplan                       : 7
+lowpan.channel                           : 0
+lowpan.autochannel                       : 0
+lowpan.highgainmode                      : 0
+server.ip                                : fd00:c4::1
+server.port                              : 5684
+server.mq.push_now                       : 0
+server.mq.push_delay                     : 3600
+server.mq.more_delay                     : 600
+modem.uplink.max_failures_before_reset   : 5
+mac.lbt.min.be                           : 3
+mac.lbt.max.be                           : 8
+mac.lbt.max.backoffs                     : 20
+mac.dutycycle.limit                      : 10
+mac.dutycycle.buffer                     : 1000
+mac.frame_size                           : 253
+dtls.timeout.initial.s                   : 8
+dtls.timeout.max.s                       : 127
+dtls.heartbeat.period.s                  : 3600
+dtls.heartbeat.retry.s                   : 120
+dtls.heartbeat.max.retries               : 4
+monitor.profile.default.enabled          : 1
+monitor.profile.default.sample.interval  : 86400
+monitor.profile.radio.enabled            : 0
+monitor.profile.radio.sample.interval    : 3600
+monitor.profile.network.enabled          : 0
+monitor.profile.network.sample.interval  : 3600
+monitor.profile.ip.enabled               : 0
+monitor.profile.ip.sample.interval       : 3600
+time.tz                                  : CET-1CEST,M3.5.0/2,M10.5.0/3
+time.max.diff                            : 30
+time.mesh.fail.event.interval            : 1800
+time.mesh.period                         : 3600
+time.ref.period                          : 43200
+time.ref.rtt.max                         : 30
+coap.retry.timeout                       : 10
+coap.session.timeout                     : 60
+coap.attempts                            : 3
+device.error.rate_limit.s                : 7200
+device.dlms.lls_password                 : hello
+device.dlms.data_profiles                : 1
+device.time.set.enabled                  : 1
+device.instant.default_period            : 15
+device.time.min_deviation                : 10
+device.time.max_deviation                : 180
+device.time.sync_timer                   : 240
+device.dlms.pipe_enabled                 : 1
+device.capabilities.dlmspipe.push        : 0
+node.power_fail.gracetime                : 0
+node.production.rssisource.enabled       : 0
+node.production.rssisource.power         : 10
+node.production.rssisource.period        : -500
+node.production.meter_update_period      : 5
+capabilities.meter.reverse_ESW           : 0
+capabilities.meter.device_testing        : 1
+capabilities.dlmspipe.session_close_detection : 0
+
+
+gw:
+
+activity
+activity.report.enabled 1
+coap
+coap.attempts   3
+coap.retry.timeout  10
+coap.session.timeout    60
+device
+device.error.rate_limit.s   7200
+device.dlms.lls_password    hello
+dtls
+dtls.timeout.initial.s  8
+dtls.heartbeat.retry.s  120
+dtls.heartbeat.period.s 3600
+dtls.timeout.max.s  127
+dtls.heartbeat.max.retries  4
+lowpan
+lowpan.cca.threshold    -94
+lowpan.frame_retries    3
+lowpan.frequency    0
+lowpan.channel  27
+lowpan.hop_limit    32
+lowpan.autochannel  0
+lowpan.phymode  0
+lowpan.powercontrol.target  -90
+lowpan.txpower.max  38
+lowpan.powercontrol 1
+lowpan.powercontrol.interval    480
+mac
+mac.frame_size  253
+mac.lbt.max.backoffs    20
+mac.filter.src.iid.1    00-00-00-00-00-00-00-00
+mac.filter.src.iid.2    00-00-00-00-00-00-00-00
+mac.dutycycle.buffer    1000
+mac.lbt.min.be  3
+mac.dutycycle.limit 10
+mac.lbt.max.be  8
+modem
+modem.tun6.secret   yooheem6eeBe
+modem.tun6.port 8050
+modem.tun6.ip   10.32.31.121
+monitor
+monitor.profile.radio.enabled   0
+monitor.profile.network.sample.interval 3600
+monitor.profile.ip.enabled  0
+monitor.profile.network.enabled 0
+monitor.profile.ip.sample.interval  3600
+monitor.profile.default.enabled 1
+monitor.profile.radio.sample.interval   3600
+monitor.profile.default.sample.interval 3600
+rpl
+rpl.dis.trickle.doublings   4
+rpl.br.dio.k    6
+rpl.instance_id 0
+rpl.br.routelife    1200
+rpl.br.mrhof.max_rank_increase  384
+rpl.br.mrhof.min_rank_increase  128
+rpl.probe.doublings 6
+rpl.dis.trickle.min.ms  10000
+rpl.probe.interval.min.ms   1500
+rpl.br.dio.imin 12
+rpl.dag_switch.time 7200
+rpl.dag_switch.hysteresis   150
+rpl.br.ocp  1
+rpl.mrhof.pp_hysteresis 75
+rpl.br.dio.imax 8
+rpl.etx.weight_factor   64
+rpl.enabled 1
+server
+server.mq.push_delay    3600
+server.mq.push_now  0
+server.ip   fd00:c4::1
+server.port 5684
+server.mq.more_delay    600
+time
+time.ref.rtt.max    30
+time.ref.period 43200
+time.mesh.period    3600
+time.mesh.fail.event.interval   1800
+time.max.diff   30
+time.tz CET-1CEST,M3.5.0/2,M10.5.0/3
 
 
 
