@@ -12846,3 +12846,12 @@ v45 on Panmesh server
 v14x on IPA3b.
 
 
+channel 27 == plan 0, channel 27
+
+On Mesh , can ping
+fd7e:ce88:ce59:0:21b:c50c:6004:fdd9
+
+eui: 00-1b-c5-0c-60-04-fd-d9
+
+
+
