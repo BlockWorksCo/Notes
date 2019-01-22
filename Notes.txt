@@ -12834,4 +12834,11 @@ time.tz CET-1CEST,M3.5.0/2,M10.5.0/3
 
 
 
+echo -n 0 `xxd -ps mac_key` > mac_keys.txt.mine
+diff mac_keys.txt mac_keys.txt.mine
+
+
+./tools/c4-tools/coap_request.py ---eui64 <eui64> --fs_read dp_config
+
+
 
