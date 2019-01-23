@@ -12952,6 +12952,14 @@ RSA public key    rsa.pub    Import to Server Security Pair/Public key
 RSA private key password    rsa_pass.txt    Copy the content to Server Security Pair/Password
 
 
+-----------------------------------------------------------
+
+IPA1: STM32F217
+SPA3: stm32f401ce
+
+
+
+
 
 
 
