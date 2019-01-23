@@ -12857,6 +12857,14 @@ eui: 00-1b-c5-0c-60-04-fd-d9
 
 CNDFS
 
+Meter configuration hash.
+
+Also... thinking about the "right" way to do this... we should really perform a configuration-discovery operation on startup in the same manner as we do a profile-discovery to obtain the profile-hash.
+
+The configuration-discovery would produce a "meter config hash" that goes up to the server. The server can then perform a change-detect on the configuration and initiate a recovery operation if needed.
+
+This mirrors what we do for the profiles and would close a significant gap in that we have no guarantee of the meter-configuration at any point in time (and this can have significant effects on the billing which would be noticed by an MDMS in theory).
+
 
 
 
