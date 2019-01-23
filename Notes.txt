@@ -12859,6 +12859,65 @@ eui: 00-1b-c5-0c-60-04-fd-d9
 - Conversation ends with "no server certificate available"
 
 
+
+2019-01-24 00:07:22,083 TRACE [dtls-pool-4] DTLSConnection - DTLS packet 5d3963b7 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), migrating=false
+2019-01-24 00:07:22,083 TRACE [dtls-pool-4] DTLSConnection - Wrong epoch address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, gotEpoch=1, gotSeqNo=0
+2019-01-24 00:08:13,413 TRACE [dtls] DTLSConnectionRegistry - New connection address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684
+2019-01-24 00:08:13,413 TRACE [dtls] DTLSConnection - DTLS packet bf12b9f0 added to queue, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=null, migrating=false
+2019-01-24 00:08:13,414 TRACE [dtls-pool-1] DTLSConnection - DTLS packet bf12b9f0 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=null, migrating=false
+2019-01-24 00:08:13,415 TRACE [dtls-pool-1] DTLSConnection - Start handshake address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, serverSessionId=null
+2019-01-24 00:08:13,415 TRACE [dtls-pool-1] DTLSServerHandshake - Handshake fragment address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=client_hello, messageSeq=0
+2019-01-24 00:08:13,415 TRACE [dtls-pool-1] DTLSHandshakeProcedureFactory - isResuming address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=null, clientRandom=Random(6c3a20316e53baca519e656eb8d41e122ae2036fda5dd41df29e9b43033aba2c), remoteCookie=null
+2019-01-24 00:08:13,417 TRACE [dtls-pool-1] NodeStorageProvider - Session info null
+2019-01-24 00:08:13,418 TRACE [dtls-pool-1] DTLSHandshakeProcedureFactory - Cannot read session info from the database - reverting to full handshake, clientSessionId=Cannot read session info from the database
+2019-01-24 00:08:13,418 TRACE [dtls-pool-1] DTLSHandshakeProcedureFactory - isResuming address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), resuming=false
+2019-01-24 00:08:13,419 TRACE [dtls-pool-1] DTLSHandshakeProcedure - Handshake message address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=client_hello, expectedMessageSeq=0, messageSeq=0
+2019-01-24 00:08:13,419 TRACE [dtls-pool-1] DTLSHandshakeProcedure - receiveInitialClientHello address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=null, cookie=12744cbd011fb530b30eaf6a4700c8155da9a7b0e6769e3bd69994b3d5d1
+2019-01-24 00:08:13,634 TRACE [dtls] DTLSConnection - DTLS packet 1a4e7352 added to queue, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=null, migrating=false
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSConnection - DTLS packet 1a4e7352 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=null, migrating=false
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSConnection - Record packet address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, contentType=ContentType=handshake, epoch=0, nextSeqNo=2, gotEpoch=0, gotSeqNo=1
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSServerHandshake - Handshake fragment address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=client_hello, messageSeq=1
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSHandshakeProcedure - Handshake message address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=client_hello, expectedMessageSeq=1, messageSeq=1
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - receiveClientHelloWithCookie address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=null, clientRandom=Random(6c3a20316e53baca519e656eb8d41e122ae2036fda5dd41df29e9b43033aba2c), remoteCookie=12744cbd011fb530b30eaf6a4700c8155da9a7b0e6769e3bd69994b3d5d1
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - protocolVersion version=DTLS_PROTOCOL_VERSION_1_2
+2019-01-24 00:08:13,635 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - trustedCaKeys x509Name=null, keySha1Hash=bd0adc9791da7b4ac2e4cf1fc364217114f23205
+2019-01-24 00:08:13,636 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - sendServerHello address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), serverRandom=Random(bd677a7513f3ad531d51f214385195381ab05e7e10bcff88fa778680fe272bdc), cipherSuite=TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
+2019-01-24 00:08:13,636 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - sendCertificate address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525)
+2019-01-24 00:08:13,657 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - sendServerKeyExchange address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525)
+2019-01-24 00:08:13,662 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - sendCertificateRequest address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), authorities=null
+2019-01-24 00:08:13,663 TRACE [dtls-pool-3] DTLSFullHandshakeProcedure - sendServerHelloDone address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, clientSessionId=SessionId(781dc1955974417547b817a32e5a53829a48416742a675d0b78b2b0914ec9b46), serverSessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525)
+2019-01-24 00:09:59,539 TRACE [dtls] DTLSConnection - DTLS packet 41972fa1 added to queue, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), migrating=false
+2019-01-24 00:09:59,539 TRACE [dtls-pool-2] DTLSConnection - DTLS packet 41972fa1 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), migrating=false
+2019-01-24 00:09:59,539 TRACE [dtls-pool-2] DTLSConnection - Record packet address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, contentType=ContentType=handshake, epoch=0, nextSeqNo=3, gotEpoch=0, gotSeqNo=2
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSServerHandshake - Handshake fragment address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=certificate, messageSeq=2
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSConnection - DTLS packet 41972fa1 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), migrating=false
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSConnection - Record packet address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, contentType=ContentType=handshake, epoch=0, nextSeqNo=4, gotEpoch=0, gotSeqNo=3
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSServerHandshake - Handshake fragment address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=client_key_exchange, messageSeq=3
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSConnection - DTLS packet 41972fa1 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), migrating=false
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSConnection - Record packet address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, contentType=ContentType=handshake, epoch=0, nextSeqNo=5, gotEpoch=0, gotSeqNo=4
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSServerHandshake - Handshake fragment address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=certificate_verify, messageSeq=4
+2019-01-24 00:09:59,540 TRACE [dtls-pool-2] DTLSHandshakeProcedure - Handshake message address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, handshakeType=HandshakeType=certificate, expectedMessageSeq=2, messageSeq=2
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] DTLSFullHandshakeProcedure - receiveCertificate address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, length=1
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] PKIManagement - Extracting identifier from certificate issued by CN=poc.cyanconnode.com,OU=R&D,O=Connode AB,L=Stockholm,ST=Stockholm,C=SE with serial number 10305341667164315852.
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] CommonNameCertificateIdentifierExtractor - Extracting identifier from certificate issued by CN=poc.cyanconnode.com,OU=R&D,O=Connode AB,L=Stockholm,ST=Stockholm,C=SE with serial number 10305341667164315852.
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] CommonNameCertificateIdentifierExtractor - 1 CNs found.
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] CommonNameCertificateIdentifierExtractor - First CN is 00-1B-C5-0C-60-04-FD-D9
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] CommonNameCertificateIdentifierExtractor - Certificate issued by CN=poc.cyanconnode.com,OU=R&D,O=Connode AB,L=Stockholm,ST=Stockholm,C=SE with serial number 10305341667164315852 yielded identifier 00-1B-C5-0C-60-04-FD-D9.
+2019-01-24 00:09:59,541 TRACE [dtls-pool-2] PKIManagement - Extracted identifier 00-1B-C5-0C-60-04-FD-D9 from certificate issued by CN=poc.cyanconnode.com,OU=R&D,O=Connode AB,L=Stockholm,ST=Stockholm,C=SE with serial number 10305341667164315852.
+2019-01-24 00:09:59,542 TRACE [dtls-pool-2] ClientDTLSDomain - Domain node_default does not trust certificate issued by CN=poc.cyanconnode.com,OU=R&D,O=Connode AB,L=Stockholm,ST=Stockholm,C=SE with serial number 10305341667164315852 and subject CN=00-1B-C5-0C-60-04-FD-D9, due to: java.security.cert.CertPathBuilderException: No issuer certificate for certificate in certification path found.
+2019-01-24 00:09:59,543 TRACE [dtls-pool-2] ClientDTLSDomain - Domain kaifa_nodes does not trust certificate issued by CN=poc.cyanconnode.com,OU=R&D,O=Connode AB,L=Stockholm,ST=Stockholm,C=SE with serial number 10305341667164315852 and subject CN=00-1B-C5-0C-60-04-FD-D9, due to: java.security.cert.CertPathBuilderException: No issuer certificate for certificate in certification path found.
+2019-01-24 00:09:59,544 TRACE [dtls-pool-2] DTLSECDHKeyExchange - Cannot validate client certificate: Node certificate is not trusted by any node DTLS domain.
+2019-01-24 00:09:59,544 TRACE [dtls-pool-2] DTLSConnection - DTLS alert address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), level=fatal, description=certificate_unknown, message=Node certificate is not trusted by any node DTLS domain.
+2019-01-24 00:09:59,544 TRACE [dtls-pool-2] ServiceRegistry - CoAP layer signaled closing of remote address /fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684.
+2019-01-24 00:09:59,544 TRACE [dtls-pool-2] TerminalProxiesRegistry - Logged out remote address /fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684 which resolved to node null.
+2019-01-24 00:09:59,545 TRACE [dtls-pool-2] DTLSConnection - Send fatal alert, closing connection address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525)
+2019-01-24 00:09:59,545 TRACE [dtls-pool-2] DTLSConnection - DTLS packet 41972fa1 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), migrating=false
+2019-01-24 00:09:59,545 TRACE [dtls-pool-2] DTLSConnection - Record packet address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, contentType=ContentType=change_cipher_spec, epoch=0, nextSeqNo=6, gotEpoch=0, gotSeqNo=5
+2019-01-24 00:09:59,545 TRACE [dtls-pool-2] DTLSConnection - DTLS packet 41972fa1 being processed, address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, sessionId=SessionId(441def1dc2df18dbcb178d823d0e83fe58e4447c7f129e43f1e86fd9795d2525), migrating=false
+2019-01-24 00:09:59,545 TRACE [dtls-pool-2] DTLSConnection - Wrong epoch address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684, gotEpoch=1, gotSeqNo=0
+2019-01-24 00:10:07,550 TRACE [dtls] DTLSConnectionRegistry - New connection address=/fd7e:ce88:ce59:0:21b:c50c:6004:fdd9:5684
+
+
 ------------------------------------------
 
 CNDFS
