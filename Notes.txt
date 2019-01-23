@@ -12883,6 +12883,15 @@ RSA public key          rsa.pub Import to Server Security Pair/Public key
 RSA private key         password    rsa_pass.txt    Copy the content to Server Security Pair/Password
 
 
+Name    File_name    Comment
+CA certificate    poc.crt.crt    Import to Server DTLS domain/"Issuer Certificate" and Node DTLS domain/Trusted certificates
+CA private key    poc.crt.key    Optional, Import to Node DTLS domain/CA private key, only csr renew require this
+Server certificate    kaifa_development.crt.pem    Import to Server DTLS domain/Certificate
+Server private key    kaifa_development.key.pem    Import to Server DTLS domain/Private key
+RSA private key    rsa.priv    Import to Server Security Pair/Private key
+RSA public key    rsa.pub    Import to Server Security Pair/Public key
+RSA private key password    rsa_pass.txt    Copy the content to Server Security Pair/Password
+
 
 
 
