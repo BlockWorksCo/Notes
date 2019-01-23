@@ -12853,6 +12853,12 @@ fd7e:ce88:ce59:0:21b:c50c:6004:fdd9
 
 eui: 00-1b-c5-0c-60-04-fd-d9
 
+
+/opt/panmesh/current
+- Can see DTLS conversation happening on Panmesh server.
+- Conversation ends with "no server certificate available"
+
+
 ------------------------------------------
 
 CNDFS
@@ -12864,6 +12870,17 @@ Also... thinking about the "right" way to do this... we should really perform a 
 The configuration-discovery would produce a "meter config hash" that goes up to the server. The server can then perform a change-detect on the configuration and initiate a recovery operation if needed.
 
 This mirrors what we do for the profiles and would close a significant gap in that we have no guarantee of the meter-configuration at any point in time (and this can have significant effects on the billing which would be noticed by an MDMS in theory).
+
+
+--------------------------------------------------------
+
+CA certificate          ca_demo-poc.crt.crt Import to Server DTLS domain/"Issuer Certificate" and Node DTLS domain/Trusted certificates
+CA private key          ca_demo-poc.crt.key Optional, Import to Node DTLS domain/CA private key, only csr renew require this
+Server certificate      omnitube-demo-poc.crt.pem   Import to Server DTLS domain/Certificate
+Server private key      omnitube-demo-poc.key.pem   Import to Server DTLS domain/Private key
+RSA private key         rsa.priv    Import to Server Security Pair/Private key
+RSA public key          rsa.pub Import to Server Security Pair/Public key
+RSA private key         password    rsa_pass.txt    Copy the content to Server Security Pair/Password
 
 
 
