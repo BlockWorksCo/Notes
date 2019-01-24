@@ -12964,6 +12964,13 @@ oMicrocontroller: EFR32MG1P132F256GM32
 Crystal: 38.4 MHz
 
 
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key client-key /Data/Temp/00-1B-C5-0C-60-04-FD-D9/node.key.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key client-cert /Data/Temp/00-1B-C5-0C-60-04-FD-D9/node.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key root-cert /Data/Temp/00-1B-C5-0C-60-04-FD-D9/ca.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --rll-key /Data/Temp/00-1B-C5-0C-60-04-FD-D9/mac_keys.txt
+
+
+
 
 
 
