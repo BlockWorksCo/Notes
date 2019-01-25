@@ -13013,14 +13013,31 @@ The detail for the first task is to remove the dependence on transport-level-rel
 
 
 
-Stage 1:
-Application-level reliability mechanism:
+Stage 1: Application-level reliability mechanism:
 - Agent to stop using filesystem for 'lastDriverTimestamp'. This becomes simply a global var with no persistence over resets.
-- When Agent registers,
+- When Agent registers with SMA, the SMA needs to get the timestamp of the last-received timestamp for each profile and return it to the Agent. Probably
+needs to hook up with the profile-registering mechanism.
+- The interface between Agent/SMA needs to provide protobuf structures for this new message.
+- Agent should not start sampling a profile until it receives the last-received-timestamp for it.
+- When SMA receives a sample, it should perform a validation of it prior to putting it into the db (e.g. check number and type of fields).
+
+At this stage, the data is still being put into the MQ on FLASH, but we remove the reliance on it for sampling-reliability.
+
+
+Stage 2: Make a transitional 'RAM' MQ on Agent.
+- Duplicate mq.c into ram_mq.c and make the storagei layer an OS_Queue.
 
 
 
 
+
+
+-----------------------
+
+4133584 42047   22.0    node.boot                           PUSH    S~restart   04/12/18 17:07:08   04/12/18 17:12:13
+4133583 42046   15.0    firmwareupdate.restart              PUSH    13          04/12/18 17:05:32   04/12/18 17:12:13
+4130297 41981   14.3    filedistribution.downloadFinished   PUSH    1           04/12/18 09:13:45   04/12/18 09:18:40
+4119680 41794   14.2    filedistribution.downloadStarted    PUSH                03/12/18 10:04:23   03/12/18 10:06:02
 
 
 
