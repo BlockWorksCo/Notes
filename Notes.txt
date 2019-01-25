@@ -13013,7 +13013,7 @@ The detail for the first task is to remove the dependence on transport-level-rel
 
 -------------------------------------------------------------
 
-FLASH removal.
+FLASH removal, initially focus on one processor family (EFR32) then bring in STM32 builds.
 
 Stage 0: Get some tests in place for sampling-correctness in presence of restarts/power-cycles/watchdogs/long-delays.
 
@@ -13040,8 +13040,34 @@ has not come via the real mq or perhaps easier to have a new "NewSample" message
 At this stage, meter sample data is not being stored on FLASH, yet should be reliably received on SMA in presence of restarts/power-cycles/watchdogs/long-delays.
 
 
-Stage 3:
+Stage 3: Move File-distribution storage.
+- Reduce size of filesystem on FLASH and allocate space for file-distribution (512KB?)
+- Change filedl_storage to store data in new partion in a 'raw' format, no fs (this will eventually be moved to internal FLASH).
+- May need to change from whole-file encryption to block-by block encryption to make this usable in-place.
 
+Stage 4: Move file distribution to internal-FLASH.
+- Move filedl_storage to (efr32-internal-flash/stm32f2xx_flash).
+- Think about whether we need bad-block-management/wear-levelling in this area as we have 100'000 erase cycles available.
+If we do, use a simple rotation/circular-buffer mechanism nothing complicated.
+- Test thoroughly.
+
+Stage 5: Move node-events into internal-FLASH
+- Allocate a very-small area/partition in internal-FLASH to store a circular-buffer of events structures.
+- Create a small persistent-circular-buffer mechanism in this area. Each element is (say 16 bytes) and buffer size of (say) 16 elements.
+- Add an 'eventStore' compatible API onto this circular-buffer.
+- On a schedule, read events from the persistent-circular-buffer and send them via CoAP.
+- Sending via CoAP will likely need a new 'NewEvent' message created to the NMS to bypass the current mq mechanism.
+- Make this an 'interlocked' operation, i.e Only mark element in circular-buffer as sent when Agent gets CoAP response.
+
+Stage 6: Make metrics 'unreliable' by moving them to CoAP out of the flash-mq.
+-
+
+Stage 5: Read events and store them in an interlocked fashion
+
+Stage x: Cleanup.
+- Remove FLASH driver.
+- Remove CNDFS.
+- Remove MQ.
 
 
 
