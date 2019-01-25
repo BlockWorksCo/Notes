@@ -13011,7 +13011,11 @@ The detail for the first task is to remove the dependence on transport-level-rel
 - SMA must handle potential duplicated messages for same timestamps via db update. This is because our delivery mechanism is now an "at-least-once" rather than "at-most-once".
 - Testing needs to cover normal usage over time with power-cycles for recovery, ensuring all samples are retrieved.
 
+-------------------------------------------------------------
 
+FLASH removal.
+
+Stage 0: Get some tests in place for sampling-correctness in presence of restarts/power-cycles/watchdogs/long-delays.
 
 Stage 1: Application-level reliability mechanism:
 - Agent to stop using filesystem for 'lastDriverTimestamp'. This becomes simply a global var with no persistence over resets.
@@ -13020,14 +13024,23 @@ needs to hook up with the profile-registering mechanism.
 - The interface between Agent/SMA needs to provide protobuf structures for this new message.
 - Agent should not start sampling a profile until it receives the last-received-timestamp for it.
 - When SMA receives a sample, it should perform a validation of it prior to putting it into the db (e.g. check number and type of fields).
+- Test thoroughly.
 
 At this stage, the data is still being put into the MQ on FLASH, but we remove the reliance on it for sampling-reliability.
 
 
 Stage 2: Make a transitional 'RAM' MQ on Agent.
-- Duplicate mq.c into ram_mq.c and make the storagei layer an OS_Queue.
+- Duplicate mq.c into ram_mq.c and make the storage layer an OS_Queue.
+- On a schedule (same as mq equivalent), check the queue and send (via CoAP) the messages from the queue sequentially.
+These CoAP messages will need to either have some indication in them to the server that the sequence number is not valid as it
+has not come via the real mq or perhaps easier to have a new "NewSample" message to the SMA to bypass the existing scheme.
+- Move the Agent sampling code over to using the RAM MQ instead of the FLASH MQ (API is same).
+- Test thoroughly.
+
+At this stage, meter sample data is not being stored on FLASH, yet should be reliably received on SMA in presence of restarts/power-cycles/watchdogs/long-delays.
 
 
+Stage 3:
 
 
 
