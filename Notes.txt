@@ -12970,6 +12970,55 @@ Crystal: 38.4 MHz
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --rll-key /Data/Temp/00-1B-C5-0C-60-04-FD-D9/mac_keys.txt
 
 
+--------------------------------------------------
+
+So, while its on my mind and since we also had the email from Alan regarding thinking about the cost reduction, I took the liberty to sketch out the tickets needed for entirely removing FLASH (since the MQ issue is step 1). The details for step 1 are at the bottom.
+
+This is in addition to Adams low-level "lossy-mq" changes.
+
+
+The stages are:
+
+- Implement end-to-end application-level reliability so we don't rely on transport-level reliability (MQ). This is what we discussed yesterday.
+- Implement a small RAM-backed mq, run in parallel. Duplicate existing mq code, change file-backing to RAM-backed (keep it small, can optimise this later, but for now keep semantics the same).
+- Move sample-data to RAM-MQ. Small-change, lots of testing.
+- Allocate space in internal FLASH for file-distribution, redirect file distribution to use this area. Encryption may need to be done a block-basis instead of whole-file.
+- Make small circular buffer (notification-queue) in internal-FLASH for node events, redirect eventStore API to use this area.
+- Move metrics to straight CoAP PUSH. Allow metrics to be unreliable? I think this is a good trade-off.
+- Move Storage of the Configuration PB to a simple small circular buffer. This is currently implemented with two-files as a (small) circular buffer (ish).
+- Add storage for configuration of instantaneous profile capture-period (in configuration circular buffer?). Remove DataProfileContext storage.
+- Move meter-push-alarm notifications to circular buffer notification-queue.
+
+At this point we have the FLASH requirement removed for the following types:
+- Profile samples (moved to RAM-MQ which can be further optimised given time).
+- Meter push alarm notifications (moved to notification-queue).
+- Node events (moved to notification-queue)
+- Metrics data changed to use direct CoAP PUSH mechanism rather than storing in MQ (change of semantics here).
+- File distribution (moved to designated area on internal-FLASH).
+- Configuration (moved to small circular-buffer on internal FLASH).
+- Meter-driver context storage (removed except for instantaneous-profile capture-period which moves into config).
+
+Which leaves the final step:
+- Make FLASH driver & CNDFS optional in build.
+- (optional) Optimise and remove RAM-MQ.
+
+
+The detail for the first task is to remove the dependence on transport-level-reliability by adding an application-level reliability mechanism.
+- SMA to validate incoming profile data against corresponding schema (number of fields, type of field).
+- Implement new pb sent from SMA to Agent containing tiemstamps for all profiles.
+- On device registration/login, SMA responds with new message containing last-known-good timestamps for all profiles.
+- On Agent, "DataProfileContext->timestamp", "dataprofile::storeConfig()", and "dataprofile::restoreConfig()" handle storage of the last timestamp, these will eventually be removed, but for now DataProfileContext->timestamp can be modified by receipt of a new message from SMA: SetLastKnownGoodProfileTimestamp.
+- SMA must handle potential duplicated messages for same timestamps via db update. This is because our delivery mechanism is now an "at-least-once" rather than "at-most-once".
+- Testing needs to cover normal usage over time with power-cycles for recovery, ensuring all samples are retrieved.
+
+
+
+Stage 1:
+Application-level reliability mechanism:
+- Agent to stop using filesystem for 'lastDriverTimestamp'. This becomes simply a global var with no persistence over resets.
+- When Agent registers,
+
+
 
 
 
