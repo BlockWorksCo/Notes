@@ -13044,6 +13044,8 @@ Stage 3: Enable concurrent FLASH-erase and program execution.
 - UART use may need use of a queue.
 
 Now, we're able to start using internal FLASH for storage (without a filesystem).
+Note: This will only be needed on EFR32 devices with <512KB due to their ability to do read-while-write operations in
+separate banks.
 
 
 Stage 4: Move File-distribution storage.
@@ -13117,6 +13119,14 @@ Stage 11: Cleanup.
 - Remove MQ.
 - Remove production-mode FLASH test.
 
+
+From EFR32 reference doc:
+
+7.3.14.1 Read-While-Write
+Parts with 512 KB flash or more have the ability to read from the flash while writing to it. On these parts, reading from the lower half of
+the flash is possible while writing/erasing from the upper half of the flash and vice versa. Enable read-while-write by setting RWWEN in
+MSC_WRITECTRL.
+The information pages can be written and erased while running from the lower half of the flash
 
 
 -----------------------
