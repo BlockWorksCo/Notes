@@ -13039,6 +13039,7 @@ has not come via the real mq or perhaps easier to have a new "NewSample" message
 
 At this stage, meter sample data is not being stored on FLASH, yet should be reliably received on SMA in presence of restarts/power-cycles/watchdogs/long-delays.
 
+Stage 2.5: Move interrupt-handlers into RAM to allow running while internal-FLASH is being erased.
 
 Stage 3: Move File-distribution storage.
 - Reduce size of filesystem on FLASH and allocate space for file-distribution (512KB?)
@@ -13058,11 +13059,17 @@ Stage 5: Move node-events into internal-FLASH
 - On a schedule, read events from the persistent-circular-buffer and send them via CoAP.
 - Sending via CoAP will likely need a new 'NewEvent' message created to the NMS to bypass the current mq mechanism.
 - Make this an 'interlocked' operation, i.e Only mark element in circular-buffer as sent when Agent gets CoAP response.
+- Test
 
 Stage 6: Make metrics 'unreliable' by moving them to CoAP out of the flash-mq.
--
+- Change monitor.c:sample() to perform a direct CoAP request instead of putting the data into the mq.
+- Will likely need a new message to bypass the flas-mq mechanism.
+- Test.
 
-Stage 5: Read events and store them in an interlocked fashion
+Stage 7: Move configuration-storage internal.
+- Allocate space for a small persistent-circular-buffer in internal FLASH (3x1KB?)
+- Implement a persistent-circular-buffer in internal-FLASH
+- Move Storage of the Configuration PB to a simple small circular buffer. This is currently implemented with two-files as a (small) circular buffer (ish).
 
 Stage x: Cleanup.
 - Remove FLASH driver.
