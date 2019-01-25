@@ -13039,22 +13039,29 @@ has not come via the real mq or perhaps easier to have a new "NewSample" message
 
 At this stage, meter sample data is not being stored on FLASH, yet should be reliably received on SMA in presence of restarts/power-cycles/watchdogs/long-delays.
 
-Stage 2.5: Enable concurrent FLASH-erase and program execution.
+Stage 3: Enable concurrent FLASH-erase and program execution.
 - Move interrupt-handlers into RAM to allow running while internal-FLASH is being erased.
 - UART use may need use of a queue.
 
-Stage 3: Move File-distribution storage.
-- Reduce size of filesystem on FLASH and allocate space for file-distribution (512KB?)
+Now, we're able to start using internal FLASH for storage (without a filesystem).
+
+
+Stage 4: Move File-distribution storage.
+- Reduce size of filesystem on FLASH and allocate space for file-distribution (512KB? or just under)
 - Change filedl_storage to store data in new partion in a 'raw' format, no fs (this will eventually be moved to internal FLASH).
 - May need to change from whole-file encryption to block-by block encryption to make this usable in-place.
 
-Stage 4: Move file distribution to internal-FLASH.
+Stage 5: Move file distribution to internal-FLASH.
 - Move filedl_storage to (efr32-internal-flash/stm32f2xx_flash).
 - Think about whether we need bad-block-management/wear-levelling in this area as we have 10'000 erase cycles available.
 If we do, use a simple rotation/circular-buffer mechanism nothing complicated.
 - Test thoroughly.
 
-Stage 5: Move node-events into internal-FLASH
+At this point, we should be able to perform meter-upgrade and node-upgrade just using internal FLASH.
+
+
+
+Stage 6: Move node-events into internal-FLASH (notification-queue)
 - Allocate a very-small area/partition in internal-FLASH to store a circular-buffer of events structures.
 - Create a small persistent-circular-buffer mechanism in this area. Each element is (say 16 bytes) and buffer size of (say) 16 elements.
 - Add an 'eventStore' compatible API onto this circular-buffer.
@@ -13063,21 +13070,52 @@ Stage 5: Move node-events into internal-FLASH
 - Make this an 'interlocked' operation, i.e Only mark element in circular-buffer as sent when Agent gets CoAP response.
 - Test
 
-Stage 6: Make metrics 'unreliable' by moving them to CoAP out of the flash-mq.
+Now node-events should be stored persistent and have reliable delivery up to the NMS event with power-cycle/watchdogs/etc.
+
+
+Stage 7: Make metrics 'unreliable' by moving them to CoAP out of the flash-mq.
 - Change monitor.c:sample() to perform a direct CoAP request instead of putting the data into the mq.
 - Will likely need a new message to bypass the flas-mq mechanism.
 - Test.
 
-Stage 7: Move configuration-storage internal.
+Here, we lose persistence on delivery of metrics, but this is (probably) not critical and under-used anyway.
+
+
+
+Stage 8: Move configuration-storage internal.
 - Allocate space for a small persistent-circular-buffer in internal FLASH (3x1KB?)
 - Implement a persistent-circular-buffer in internal-FLASH
 - Move Storage of the Configuration to this persistent-circular-buffer in internal-FLASH.
 - Create a new configuration "backend" to store data in the circular-buffer instead of a file (config_backend.h)
 
-Stage x: Cleanup.
+Now configuration should be stored in internal-FLASH and rollback can happen if corrupted by virtue of circular-buffer.
+
+
+
+Stage 9: Add a small 'local-configuration' struct into the configuration pb.
+- We have a need to store a small amount of data for configuration of local services (e.g. instantaneous profile read).
+So we can add a pb structure into the configuration storage for this purpose.
+- Test
+
+Now storage of the instantaneous capture-period and other small miscellaneous items should be in internal-FLASH.
+
+
+Stage 10: Move meter-push-alarm notification into node-event queue
+- Give the node event queue (notification queue) the ability to target multiple API endpoints (e.g. NMS & SMA APIs)
+- Move device_alarms usage of FLASH mq into notification-queue (circular buffer).
+- Make PUSH operations (from meter) an interlocked operation with insertion into the notification-queue.
+- Test.
+
+Now push-alarms from the meter will be persistently stored in the notification-queue and sent to SMA periodically.
+
+We should now have removed all the usage of the filesystem from the Agent, allowing us to...
+
+
+Stage 11: Cleanup.
 - Remove FLASH driver.
 - Remove CNDFS.
 - Remove MQ.
+- Remove production-mode FLASH test.
 
 
 
