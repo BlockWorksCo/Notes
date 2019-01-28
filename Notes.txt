@@ -13049,7 +13049,7 @@ separate banks.
 
 
 Stage 4: Move File-distribution storage.
-- Reduce size of filesystem on FLASH and allocate space for file-distribution (512KB? or just under)
+- Reduce size of filesystem on FLASH and allocate space for file-distribution (512KB? or just under) (storage_flash.c)
 - Change filedl_storage to store data in new partion in a 'raw' format, no fs (this will eventually be moved to internal FLASH).
 - May need to change from whole-file encryption to block-by block encryption to make this usable in-place.
 
