@@ -13136,6 +13136,21 @@ The information pages can be written and erased while running from the lower hal
 4130297 41981   14.3    filedistribution.downloadFinished   PUSH    1           04/12/18 09:13:45   04/12/18 09:18:40
 4119680 41794   14.2    filedistribution.downloadStarted    PUSH                03/12/18 10:04:23   03/12/18 10:06:02
 
+----------------------------------------
+
+flashGetInfo:
+
+const FlashInfo* flashGetInfo(void)
+{
+    static const FlashInfo fi = {
+            .pageSize = FLASH_PAGE_SIZE (512),           (512)
+            .spareSize = 0,                              (0)
+            .pagesPerBlock = PAGES_PER_BLOCK (4096/512), (8)
+            .blocks = BLOCK_COUNT ( (4096*1024))/4096 }; (1024)
+    return &fi;
+}
+
+
 
 
 
