@@ -13151,6 +13151,12 @@ const FlashInfo* flashGetInfo(void)
 }
 
 
+at45GetInfo()
+
+
+
+
+
 
 
 
