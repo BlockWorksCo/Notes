@@ -13159,6 +13159,36 @@ at45GetInfo()
 
 08cd01121a6d5f696d675f6d6574657246775570677261646533312e62696e18012080012a3c66696c65747970653d6d6574657266772c7461726765746465766963653d55535320303030323030342c6d6574657266775f69643d3132333435363730d8043a10b10a8db164e0754105b7a99be72e3fe542240a10580f79b15b2453a53c3e9b18771ee2661210918eded9ecf11c56885e628025199ee1
 
+(gdb) p bytes->bytes
+$15 = 0x60c00001de28 "filetype=meterfw,targetdevice=USS 0002004,meterfw_id=1234567", '\265' <repeats 16 times>
+(gdb)
+
+
+(gdb) p *bytes
+$17 = {size = 60, bytes = 0x60c00001de28 "filetype=meterfw,targetdevice=USS 0002004,meterfw_id=1234567", '\265' <repeats 16 times>}
+(gdb)
+
+(gdb) p ((PbDecodeBytes*)*arg)->bytes
+$22 = 0x60c00001de28 "filetype=meterfw,targetdevice=USS 0002004,meterfw_id=1234567", '\265' <repeats 16 times>
+(gdb)
+
+(gdb) p ((PbDecodeBytes*)0x60c00001de20)->bytes
+$24 = 0x60c00001de28 "filetype=meterfw,targetdevice=USS 0002004,meterfw_id=1234567", '\265' <repeats 16 times>
+(gdb)
+
+decode_field (stream=0x7ffff3afeb70, wire_type=PB_WT_STRING, iter=0x7ffff3afea20) at build/3pp/nanopb/pb_decode.c:723
+723 }
+(gdb) p iter->pos->type
+$26 = 85 'U'
+(gdb) s
+
+
+
+
+
+
+
+
 
 
 ---------------------------------
