@@ -13267,6 +13267,7 @@ node-events   <-----> CM
 - Before Agent is logged-in, knowledge of time can be retrieved from latest time in queues.
 - Last-gasp therefore will provide the time on startup prior to login, so never have zero time.
 - Can have multiple messages with same time, rely on dedupe rather than exact sequence numbers.
+- Time cannot go backwards due to retrieval of time from circular buffers.
 - If too much overhead in dedupe, increase resolution of message-timestamps to make them more unique.
 
 
