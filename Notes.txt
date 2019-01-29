@@ -13339,6 +13339,19 @@ void performMeterPing()
     }
 }
 
+
+//
+// Association request.
+//
+void associateWithMeter()
+{
+    bool    llsRequired                     = true;
+    bool    hlsRequired                     = false;
+    bool    invocationCounterReadRequired   = false;
+}
+
+
+
 void deviceTask()
 {
     // Forever....
@@ -13387,6 +13400,11 @@ void deviceTask()
             // Get the current node time
             currentNodeTime = getNodeTime();
 
+            // Associate with meter once-per-cycle at the highest level required
+            // for this cycle. This is determined by looking at all the condition
+            // flags.
+            associateWithMeter();
+
             // Perform time sync if required.
             performTimeSync( currentNodeTime );
 
@@ -13417,6 +13435,9 @@ void deviceTask()
 
             //
             performMeterPing();
+
+            // Release the association.
+            releaseMeterAssociation();
         }
     }
 }
