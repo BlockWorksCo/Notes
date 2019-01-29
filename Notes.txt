@@ -13281,6 +13281,19 @@ node-events   <-----> CM
 
 bool pushHasBeenSignalled   = false;
 
+void pushISR()
+{
+    pushHasBeenSignalled    = true;
+}
+
+void readPushData()
+{
+    if( pushHasBeenSignalled == true) {
+        
+        pushHasBeenSignalled    = false;
+    }
+}
+
 void deviceTask()
 {
     // Forever....
@@ -13332,6 +13345,9 @@ void deviceTask()
 
             // If a 'push' event has been signalled, lets read the push data now..
             readPushData();
+
+            // Perform an on-demand profile read if requested.
+            performOnDemanRead();
 
         }
     }
