@@ -13283,7 +13283,9 @@ Purposes
 - Move away from a callback and state-machine approach.
 - Increase determinism.
 - Simplify!
-- In-place processing of responses.
+- In-place processing of DLMS requests & responses.
+- Use a blocking model to stay in the same context instead of using heap to save
+global data. Use stack instead of heap. Stack is more efficient and can be sanitised.
 
 
 //
@@ -13321,9 +13323,10 @@ void performMeterPing()
         // Block waiting for response (or timeout).
         AXDRStream* response    = dlmsWaitForResponseOrTimmeout();
 
-        // Parse response.
+        // Parse DLMS response.
         uint32_t value  = axdrGetUint32();
 
+        
         
     }
 }
