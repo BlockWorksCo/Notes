@@ -13185,6 +13185,12 @@ $26 = 85 'U'
 
 
 
+uffs_Mount (mount=mount@entry=0x807dcc0 "/") at build/3pp/uffs/src/uffs/uffs_mtb.c:192
+192     uffs_Perror(UFFS_MSG_NOISY, "mount partiton: %d,%d",
+(gdb)
+195     if (uffs_InitDevice(mtb->dev) != U_SUCC) {
+
+
 
 
 
@@ -13201,7 +13207,6 @@ void deviceTask()
     while(true) {
 
         //
-        // Forever (or until we need to reset the device task).
         // Note, this would probably be better handled as a full reset of the device
         // but that would take down the network-side also which is probably unavoidably
         // harsh (though cleaner).
@@ -13209,11 +13214,45 @@ void deviceTask()
         // we can clear at this point.
         //
 
+        // Clear out our application-heap.
         resetApplicationHeap();
 
+        //
+        performProfileDiscovery();
+
+        //
+        performMeterConfigurationDiscovery();
+
+        //
+        sendDiscoveredProfiles();
+        sendDiscoveredMeterConfiguration();
+
+        //
+        // Forever (or until we need to reset the device task).
+        //
+        // Note: No retry is needed on the operations here because the schedule
+        // naturally retries them.
+        //
         while( restartDeviceTask == false ) {
 
+            // Wait until our next allotted time (every 5 mins?)
+            waitUntilNextTimeSlotOrPushSignalled();
+
+            // Get the current node time
             currentNodeTime = getNodeTime();
+
+            // Perform time sync if required.
+            performTimeSync( currentNodeTime );
+
+            // Iterate thru all the profiles reading them if the time
+            // is appropriate for them.
+            for(profile in profiles) {
+                readProfile( profile, currentNodeTime );
+            }
+
+            // If a 'push' event has been signalled, lets read the push data now..
+            readPushData();
+
         }
     }
 }
