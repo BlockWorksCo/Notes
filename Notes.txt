@@ -13401,8 +13401,8 @@ void deviceTask()
 
         //
         // Note, this would probably be better handled as a full reset of the device
-        // but that would take down the network-side also which is probably unavoidably
-        // harsh (though cleaner).
+        // but that would take down the network-side also which is probably unnecessarily
+        // harsh (though cleaner as we can guarantee no state will be left behind).
         // As it is, we should probably have a dedicated heap for the application that
         // we can clear at this point.
         //
