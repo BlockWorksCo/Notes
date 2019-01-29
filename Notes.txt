@@ -13405,6 +13405,17 @@ void readProfile( Profile profile, uint32_t currentNodeTime )
         // Check that its time for this profile to be read.
         if( isItTimeForProfileRead( profile, currentNodeTime ) {
             
+            // Form request (selective access by time or index).
+
+            // Send request to meter.
+
+            // Block, waiting for response (or timeout).
+    
+            // Parse DLMS response.
+
+            // Form response to server.
+
+            // Send response to server.
         }
     }
 }
@@ -13442,6 +13453,10 @@ void deviceTask()
         //
         // Note: No retry is needed on the operations here because the schedule
         // naturally retries them.
+        // 
+        // Note: When we wish to apply a configuration, simply cause a restart by
+        // setting 'restartDeviceTask' to true. This will cause this loop to 
+        // terminate and the whole outer sequence to be re-run.
         //
         while( restartDeviceTask == false ) {
 
