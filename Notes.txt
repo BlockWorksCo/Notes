@@ -13398,11 +13398,12 @@ void associateWithMeter()
 //
 bool profileReadHasBeenSignalled    = false;
 
-void readProfile( Profile profile )
+void readProfile( Profile profile, uint32_t currentNodeTime )
 {
     if( profileReadHasBeenSignalled == true ) {
         
-        if( isItTimeForProfileRead( profile ) {
+        // Check that its time for this profile to be read.
+        if( isItTimeForProfileRead( profile, currentNodeTime ) {
             
         }
     }
@@ -13472,6 +13473,8 @@ void deviceTask()
 
             // Iterate thru all the profiles reading them if the time
             // is appropriate for them.
+            // NOTE: This profileList also contains the instantaneous profile which has
+            // been previously captured. This brings all profile-reading code together.
             for( profile in profileList ) {
                 readProfile( profile, currentNodeTime );
             }
