@@ -13255,6 +13255,7 @@ samples       <----------------->
 node-events   <-----> CM
 
 
+- Protocol is assymetric, at-least-once, deduped upstream. Downstream non-existent?
 - Delivers normal packets 
 - priorities?
 - window of acks?
