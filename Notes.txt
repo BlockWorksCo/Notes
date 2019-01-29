@@ -13279,6 +13279,13 @@ node-events   <-----> CM
 
 --------------------------------
 
+Purposes
+- Move away from a callback and state-machine approach.
+- Increase determinism.
+- Simplify!
+- In-place processing of responses.
+
+
 //
 // Push support.
 //
@@ -13300,14 +13307,25 @@ void readPushData()
 //
 // Meter ping
 //
+bool meterPingHasBeenSignalled  = false;
+
 void performMeterPing()
 {
-    // Request time object
-    dlmsSendGetRequest(8, timeRegisterObis, 2, NULL, 0);
+    if( meterPingHasBeenSignalled == true ) {
 
-    // Block waiting for response (or timeout).
-    dlmsWaitForResponseOrTimmeout();
+        meterPingHasBeenSignalled   = false;
+        
+        // Request time object
+        dlmsSendGetRequest(8, timeRegisterObis, 2, NULL, 0);
 
+        // Block waiting for response (or timeout).
+        AXDRStream* response    = dlmsWaitForResponseOrTimmeout();
+
+        // Parse response.
+        uint32_t value  = axdrGetUint32();
+
+        
+    }
 }
 
 void deviceTask()
