@@ -13259,7 +13259,8 @@ node-events   <-----> CM
 - window of acks?
 - sequence number == UTC 32bit uint?
 - Each element in circular buffer has a UTC time associated with it.
-- On login, time of last element received is sent down to Agent (for all queues).
+- On login, time (-a few seconds) of last element received is sent down to Agent (for all queues).
+- On server, messages are de-duped.
 - On Agent, removal of element from queue is interlocked with receipt of ACK.
 - Before Agent is logged-in, knowledge of time can be retrieved from latest time in queues.
 - Last-gasp therefore will provide the time on startup prior to login, so never have zero time.
