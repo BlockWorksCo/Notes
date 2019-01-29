@@ -13198,6 +13198,45 @@ _BuildTreeStepOne()
 
 
 
+#2  0x00000000 in ?? ()
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb) set exitLoop=true
+No symbol "true" in current context.
+(gdb) set exitLoop=1
+(gdb) s
+159 }
+(gdb)
+uffs_crc16update (data=0x2000fd20 <s_uffsPool+508>, length=length@entry=50331647, crc=41354,
+    crc@entry=65535) at build/3pp/uffs/src/uffs/uffs_crc.c:84
+84          CRC16(crc, *p);
+(gdb) where
+#0  uffs_crc16update (data=0x2000fd20 <s_uffsPool+508>, length=length@entry=50331647, crc=41354,
+    crc@entry=65535) at build/3pp/uffs/src/uffs/uffs_crc.c:84
+#1  0x080690d8 in uffs_crc16sum (data=<optimized out>, length=50331647)
+    at build/3pp/uffs/src/uffs/uffs_crc.c:92
+#2  0x0806c7da in uffs_MakeSum16 (p=<optimized out>, len=<optimized out>)
+    at build/3pp/uffs/src/uffs/uffs_public.c:255
+#3  0x0806d70a in _BuildValidTreeNode (st=<synthetic pointer>, bc=0x20011164 <s_uffsPool+5696>,
+    node=0x200119b4 <s_uffsPool+7824>, dev=0x2000f944 <s_flashDevice>)
+    at build/3pp/uffs/src/uffs/uffs_tree.c:426
+#4  _BuildTreeStepOne (dev=dev@entry=0x2000f944 <s_flashDevice>)
+    at build/3pp/uffs/src/uffs/uffs_tree.c:626
+#5  uffs_BuildTree (dev=dev@entry=0x2000f944 <s_flashDevice>)
+    at build/3pp/uffs/src/uffs/uffs_tree.c:1325
+#6  0x0806c06e in uffs_InitDevice (dev=0x2000f944 <s_flashDevice>)
+    at build/3pp/uffs/src/uffs/uffs_init.c:132
+#7  0x0806c296 in uffs_Mount (mount=mount@entry=0x807daf0 "/")
+    at build/3pp/uffs/src/uffs/uffs_mtb.c:195
+#8  0x0804affa in start () at src/services/fs/uffs/fs_service.c:86
+#9  0x0802017c in modulesStart (list=list@entry=0x807d228 <serviceModules>) at src/base/module.c:25
+#10 0x080496c6 in servicesStart () at src/services/services.c:64
+#11 0x08053762 in terminalBasicStart () at src/terminal/terminal.c:124
+#12 0x080537b0 in terminalTask (arg=0x20016d90 <s_terminalInitedSemaphore>)
+    at src/terminal/terminal.c:232
+#13 0x08065584 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4251
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb)
+
 
 
 
