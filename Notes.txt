@@ -13279,6 +13279,9 @@ node-events   <-----> CM
 
 --------------------------------
 
+//
+// Push support.
+//
 bool pushHasBeenSignalled   = false;
 
 void pushISR()
@@ -13292,6 +13295,19 @@ void readPushData()
         
         pushHasBeenSignalled    = false;
     }
+}
+
+//
+// Meter ping
+//
+void performMeterPing()
+{
+    // Request time object
+    dlmsSendGetRequest(8, timeRegisterObis, 2, NULL, 0);
+
+    // Block waiting for response (or timeout).
+    dlmsWaitForResponseOrTimmeout();
+
 }
 
 void deviceTask()
@@ -13334,6 +13350,9 @@ void deviceTask()
             //
             // Now do the time-sensitive reads.
             // No retries on these requests, just rely on the natural cycle to retry.
+            // This portion of the cycle should be as deterministic as possible.
+            // We allow a 'slack' period after the time-sensitive operations to do all
+            // the miscellaneous operations.
             //
 
             // Get the current node time
