@@ -13195,4 +13195,34 @@ $26 = 85 'U'
 
 
 
+void deviceTask()
+{
+    // Forever....
+    while(true) {
+
+        //
+        // Forever (or until we need to reset the device task).
+        // Note, this would probably be better handled as a full reset of the device
+        // but that would take down the network-side also which is probably unavoidably
+        // harsh (though cleaner).
+        // As it is, we should probably have a dedicated stack for the application that
+        // we can clear at this point.
+        //
+
+        resetApplicationHeap();
+
+        while( restartDeviceTask == false ) {
+
+            currentNodeTime = getNodeTime();
+        }
+    }
+}
+
+
+
+
+
+
+
+
 
