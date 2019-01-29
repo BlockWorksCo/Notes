@@ -13288,6 +13288,7 @@ Purposes
 global data. Use stack instead of heap. Stack is more efficient and can be sanitised.
 - Current code requires *way too much* cognitive overhead to keep track of context. Aim to 
 minimise this by staying in the one context as much as possible.
+- Reduce association overhead to once-per-cycle at highest required level.
 
 
 //
@@ -13348,6 +13349,8 @@ void associateWithMeter()
     bool    llsRequired                     = false;
     bool    hlsRequired                     = false;
     bool    invocationCounterReadRequired   = false;
+    bool    cipheringRequired               = false;
+    bool    fwUpgradeRequired               = false;
 
     //
     // Determine the highest level required for this operation cycle.
@@ -13373,12 +13376,20 @@ void associateWithMeter()
     //
     // Now perform the association.
     //
+
+    // Send AARQ
     if( hlsRequired == true ) {
         dlmsVariantSetupAA(DLMS_DRIVER_CONTEXT, true, isCiphering, fwUpgrade);
     }
     else if( llsRequired == true ) {
         dlmsVariantSetupAA(DLMS_DRIVER_CONTEXT, false, isCiphering, fwUpgrade);
     }
+
+    // Block waiting for response (or timeout).
+    AXDRStream* responseStream    = dlmsWaitForResponseOrTimmeout();
+
+    // Parse response.
+    parseAARE();
 }
 
 
@@ -13438,6 +13449,9 @@ void deviceTask()
 
             // Perform time sync if required.
             performTimeSync( currentNodeTime );
+
+            // Capture an Instantaneous profile if required.
+            performInstantaneousProfileCapture().
 
             // Iterate thru all the profiles reading them if the time
             // is appropriate for them.
