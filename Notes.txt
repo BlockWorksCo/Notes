@@ -13191,6 +13191,12 @@ uffs_Mount (mount=mount@entry=0x807dcc0 "/") at build/3pp/uffs/src/uffs/uffs_mtb
 195     if (uffs_InitDevice(mtb->dev) != U_SUCC) {
 
 
+uffs_InitDevice()
+uffs_BuildTree()
+_BuildTreeStepOne()
+
+
+
 
 
 
