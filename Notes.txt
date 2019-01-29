@@ -13286,6 +13286,8 @@ Purposes
 - In-place processing of DLMS requests & responses.
 - Use a blocking model to stay in the same context instead of using heap to save
 global data. Use stack instead of heap. Stack is more efficient and can be sanitised.
+- Current code requires *way too much* cognitive overhead to keep track of context. Aim to 
+minimise this by staying in the one context as much as possible.
 
 
 //
@@ -13390,7 +13392,7 @@ void deviceTask()
 
             // Iterate thru all the profiles reading them if the time
             // is appropriate for them.
-            for(profile in profiles) {
+            for( profile in profileList ) {
                 readProfile( profile, currentNodeTime );
             }
 
@@ -13415,7 +13417,6 @@ void deviceTask()
 
             //
             performMeterPing();
-
         }
     }
 }
