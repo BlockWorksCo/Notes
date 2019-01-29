@@ -13393,6 +13393,22 @@ void associateWithMeter()
 }
 
 
+//
+// Read a profile from the meter.
+//
+bool profileReadHasBeenSignalled    = false;
+
+void readProfile( Profile profile )
+{
+    if( profileReadHasBeenSignalled == true ) {
+        
+        if( isItTimeForProfileRead( profile ) {
+            
+        }
+    }
+}
+
+
 
 void deviceTask()
 {
@@ -13451,6 +13467,7 @@ void deviceTask()
             performTimeSync( currentNodeTime );
 
             // Capture an Instantaneous profile if required.
+            // NOTE: This is the capture only. Not the profile read.
             performInstantaneousProfileCapture().
 
             // Iterate thru all the profiles reading them if the time
