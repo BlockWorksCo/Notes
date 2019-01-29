@@ -13258,6 +13258,9 @@ node-events   <-----> CM
 - priorities?
 - window of acks?
 - sequence number == UTC 32bit uint?
+- Each element in circular buffer has a UTC time associated with it.
+- On login, time of last element received is sent down to Agent (for all queues).
+- On Agent, removal of element from queue is interlocked with receipt of ACK.
 
 
 --------------------------------
