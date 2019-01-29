@@ -13280,7 +13280,7 @@ node-events   <-----> CM
 --------------------------------
 
 Purposes
-- Move away from a callback and state-machine approach.
+- Move away from a callback and state-machine approach to a blocking model.
 - Increase determinism.
 - Simplify!
 - In-place processing of DLMS requests & responses.
@@ -13438,11 +13438,21 @@ void deviceTask()
         // Clear out our application-heap.
         resetApplicationHeap();
 
-        //
+        // Discover the capture-objects from the profile registers.
         performProfileDiscovery();
 
-        //
-        performMeterConfigurationDiscovery();
+        // Read, check and set the configuration registers to the expected values
+        //  before we do anything further.
+        do {
+            // read the contents of all configuration registers.
+            performMeterConfigurationDiscovery();
+
+            // Check validity of meter-configuration.
+            checkMeterConfiguration();
+
+            checkCount++;
+
+        } while( configIsValid == false && checkCount < 2 );
 
         // Report current state of profiles and meter-configuration to server.
         sendDiscoveredProfiles();
