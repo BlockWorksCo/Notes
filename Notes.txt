@@ -13261,6 +13261,8 @@ node-events   <-----> CM
 - Each element in circular buffer has a UTC time associated with it.
 - On login, time of last element received is sent down to Agent (for all queues).
 - On Agent, removal of element from queue is interlocked with receipt of ACK.
+- Before Agent is logged-in, knowledge of time can be retrieved from latest time in queues.
+- Last-gasp therefore will provide the time on startup prior to login, so never have zero time.
 
 
 --------------------------------
