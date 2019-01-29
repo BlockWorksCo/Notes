@@ -13269,7 +13269,10 @@ node-events   <-----> CM
 - Can have multiple messages with same time, rely on dedupe rather than exact sequence numbers.
 - Time cannot go backwards due to retrieval of time from circular buffers.
 - If too much overhead in dedupe, increase resolution of message-timestamps to make them more unique.
-- HOw to send multiple packets, and collate then into a single request??
+- How to send multiple packets, and collate then into a single request??
+- Include "message sequence number" along with time and dedupe on time##msgSeqNum?
+- Start sequence number at maximum and work downwards to zero.
+- Server identifies when a zero is hit and collates the full message for forwarding.
 
 
 
