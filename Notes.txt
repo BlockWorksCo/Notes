@@ -13307,6 +13307,8 @@ void readPushData()
         
         // Clear the request.
         pushHasBeenSignalled    = false;
+
+        // Collect push data.
     }
 }
 
@@ -13506,13 +13508,18 @@ void deviceTask()
 
             //
             // Now perform the asynchronous operations.
+            // These operations are not time-sensitive, so providing we leave enough slack
+            // time in the schedule, we should be ok for long reads.
+            // 
+            // This provides a good amount of determinism for the soft-real-time operations
+            // such as time-sync and IS capture.
             //
 
             // If a 'push' event has been signalled, lets read the push data now..
             readPushData();
 
             // Perform an on-demand profile read if requested.
-            performOnDemanRead();
+            performOnDemandRead();
 
             // Perform the 'get configuration' operation.
             performGetConfiguration();
