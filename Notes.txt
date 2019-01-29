@@ -13331,6 +13331,11 @@ void deviceTask()
             // Wait until our next allotted time (every 5 mins?)
             waitUntilNextTimeSlotOrPushSignalled();
 
+            //
+            // Now do the time-sensitive reads.
+            // No retries on these requests, just rely on the natural cycle to retry.
+            //
+
             // Get the current node time
             currentNodeTime = getNodeTime();
 
@@ -13343,11 +13348,27 @@ void deviceTask()
                 readProfile( profile, currentNodeTime );
             }
 
+            //
+            // Now perform the asynchronous operations.
+            //
+
             // If a 'push' event has been signalled, lets read the push data now..
             readPushData();
 
             // Perform an on-demand profile read if requested.
             performOnDemanRead();
+
+            // Perform the 'get configuration' operation.
+            performGetConfiguration();
+
+            // 
+            performMeterUpgrade();
+
+            //
+            performDisconnectorSet();
+
+            //
+            performMeterPing();
 
         }
     }
