@@ -13345,9 +13345,40 @@ void performMeterPing()
 //
 void associateWithMeter()
 {
-    bool    llsRequired                     = true;
+    bool    llsRequired                     = false;
     bool    hlsRequired                     = false;
     bool    invocationCounterReadRequired   = false;
+
+    //
+    // Determine the highest level required for this operation cycle.
+    //
+
+    if( meterPingHasBeenSignalled == true ) {
+        llsRequired = true;
+    }
+
+    if( meterSetHasBeenSignalled == true ) {
+        hlsRequired = true;
+        invocationCounterReadRequired   = true;
+    }
+
+    if( profileReadHasBeenSignalled == true ) {
+        llsRequired = true;
+    }
+
+    if( meterSetConfigurationHasBeenSignalled == true ) {
+        hlsRequired = true;
+    }
+
+    //
+    // Now perform the association.
+    //
+    if( hlsRequired == true ) {
+        dlmsVariantSetupAA(DLMS_DRIVER_CONTEXT, true, isCiphering, fwUpgrade);
+    }
+    else if( llsRequired == true ) {
+        dlmsVariantSetupAA(DLMS_DRIVER_CONTEXT, false, isCiphering, fwUpgrade);
+    }
 }
 
 
