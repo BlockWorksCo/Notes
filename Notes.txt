@@ -13289,7 +13289,7 @@ global data. Use stack instead of heap. Stack is more efficient and can be sanit
 
 
 //
-// Push support.
+// Push request.
 //
 bool pushHasBeenSignalled   = false;
 
@@ -13302,12 +13302,15 @@ void readPushData()
 {
     if( pushHasBeenSignalled == true) {
         
+        // Clear the request.
         pushHasBeenSignalled    = false;
     }
 }
 
+
+
 //
-// Meter ping
+// Meter ping request.
 //
 bool meterPingHasBeenSignalled  = false;
 
@@ -13315,19 +13318,22 @@ void performMeterPing()
 {
     if( meterPingHasBeenSignalled == true ) {
 
+        // Clear the request.
         meterPingHasBeenSignalled   = false;
         
         // Request time object
         dlmsSendGetRequest(8, timeRegisterObis, 2, NULL, 0);
 
         // Block waiting for response (or timeout).
-        AXDRStream* response    = dlmsWaitForResponseOrTimmeout();
+        AXDRStream* responseStream    = dlmsWaitForResponseOrTimmeout();
 
         // Parse DLMS response.
-        uint32_t value  = axdrGetUint32();
+        uint32_t value  = axdrGetUint32( responseStream );
 
-        
-        
+        // Send response to server.
+        MeterPingStatus msg = MeterPingStatus_init_zero;
+        msg.status = value;
+        coapSendResponseProtobuf(req->sessiondId, CoapResponseContent, MeterPingStatus_fields, &msg);
     }
 }
 
