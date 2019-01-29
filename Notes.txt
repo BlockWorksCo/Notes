@@ -13279,6 +13279,7 @@ node-events   <-----> CM
 
 --------------------------------
 
+bool pushHasBeenSignalled   = false;
 
 void deviceTask()
 {
@@ -13289,7 +13290,7 @@ void deviceTask()
         // Note, this would probably be better handled as a full reset of the device
         // but that would take down the network-side also which is probably unavoidably
         // harsh (though cleaner).
-        // As it is, we should probably have a dedicated stack for the application that
+        // As it is, we should probably have a dedicated heap for the application that
         // we can clear at this point.
         //
 
@@ -13302,7 +13303,7 @@ void deviceTask()
         //
         performMeterConfigurationDiscovery();
 
-        //
+        // Report current state of profiles and meter-configuration to server.
         sendDiscoveredProfiles();
         sendDiscoveredMeterConfiguration();
 
