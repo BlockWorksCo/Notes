@@ -13257,7 +13257,7 @@ node-events   <-----> CM
 
 - priorities?
 - window of acks?
-sequence number == UTC 32bit uint?
+- sequence number == UTC 32bit uint?
 
 
 --------------------------------
