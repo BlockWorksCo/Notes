@@ -13271,6 +13271,13 @@ $2 = {Init = 0x804ae0d <flashDeviceInitForUffs>, Release = 0x804af55 <flashDevic
   cfg = {bc_caches = 10, page_buffers = 10, dirty_pages = 8, dirty_groups = 3,
     reserved_free_blocks = 2}, ref_count = 0, dev_num = 1}
 
+at call to uffs_MakeSum16()
+info =
+(gdb) p *(uffs_FileInfo *) (buf->data)
+$4 = {attr = 4294967295, create_time = 4294967295, last_modify = 4294967295, access = 4294967295,
+  reserved = 4294967295, name_len = 50331647,
+  name = "macs", '\377' <repeats 66 times>, "\000\000\000\377", '\000' <repeats 53 times>}
+(gdb)
 
 
 
