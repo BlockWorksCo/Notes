@@ -13424,6 +13424,19 @@ void readProfile( Profile profile, uint32_t currentNodeTime )
 
 
 
+//
+// This is the main superloop for all the meter-facing activity.
+//
+// - Everything is driven from the one loop, flags and current-time indicate
+// whether operations should be performed or not.
+// - Asynchronous operationsi (i.e. from ISR or CoAP)  are signalled via flags.
+// - Operations are blocking, so request and response sent within the same context. This really
+// simplifies the code and will greately benefit ease-of-development.
+// - Associations are performed once-per-cycle.
+// - Meter-configuration is performed once prior to entering the superloop.
+// - Meter re-configuration is performed by setting a flag to make the superloop restart.
+// - meter-configuration is checked against expected values prior to entering superloop.
+//
 void deviceTask()
 {
     // Forever....
