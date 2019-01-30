@@ -13436,6 +13436,13 @@ void readProfile( Profile profile, uint32_t currentNodeTime )
 // - Meter-configuration is performed once prior to entering the superloop.
 // - Meter re-configuration is performed by setting a flag to make the superloop restart.
 // - meter-configuration is checked against expected values prior to entering superloop.
+// - Time sensitive operation are performed immediately after the cycle starts, in this deterministic
+// phase of the superloop requests are not retried. The cycle will naturally retry the operation.
+// - The second phase of the superloop is the non-deterministic phase. Sufficient slack time needs
+// to be planned into the schedule to allow this to run to worst-case otherwise the following 
+// deterministic phase will be commprimised.
+// - Messages are processed in-place (zero-copy style) via the use of AXDRStreams, reducing
+// RAM usage.
 //
 void deviceTask()
 {
