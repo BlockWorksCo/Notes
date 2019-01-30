@@ -13599,6 +13599,13 @@ void deviceTask()
 }
 
 
+---------------------------------------
+
+
+kaifa_ma304 time
+
+CLOCK_UPDATE_STATE_TIME
+
 
 
 
