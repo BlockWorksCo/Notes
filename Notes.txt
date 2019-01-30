@@ -13237,8 +13237,47 @@ uffs_crc16update (data=0x2000fd20 <s_uffsPool+508>, length=length@entry=50331647
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 (gdb)
 
+uffs_crc16update asked to do CRC on 50331647 bytes (50MB).
 
+in _BuildValidTreeNode()
 
+(gdb) p *dev
+$2 = {Init = 0x804ae0d <flashDeviceInitForUffs>, Release = 0x804af55 <flashDeviceReleaseForUffs>,
+  _private = 0x0, attr = 0x20000464 <s_attr>, par = {start = 164, end = 1023},
+  ops = 0x807da44 <s_flashOps>, bc = {head = 0x2001117c <s_uffsPool+5720>,
+    tail = 0x20011164 <s_uffsPool+5696>, mem_pool = 0x20011104 <s_uffsPool+5600>}, lock = {sem = 0x0,
+    task_id = 0, counter = 0}, buf = {head = 0x2000fb9c <s_uffsPool+120>,
+    tail = 0x2000fcdc <s_uffsPool+440>, clone = 0x0, dirtyGroup = {{count = 0, lock = 0, dirty = 0x0},
+      {count = 0, lock = 0, dirty = 0x0}, {count = 0, lock = 0, dirty = 0x0}}, buf_max = 10,
+    dirty_buf_max = 8, pool = 0x2000fb74 <s_uffsPool+80>}, com = {pg_data_size = 508, header_size = 4,
+    pg_size = 512}, tree = {erased = 0x200116f4 <s_uffsPool+7120>,
+    erased_tail = 0x200119a4 <s_uffsPool+7808>, erased_count = 35, suspend = 0x0, bad = 0x0,
+    bad_count = 0, dir_entry = {65535 <repeats 32 times>}, file_entry = {65535, 65535, 38, 21, 65535,
+      65535, 65535, 65535}, data_entry = {18, 65535, 34, 39, 65535 <repeats 23 times>, 28, 65535, 33,
+      65535, 65535}, max_serial = 0}, pending = {count = 1, list = {{block = 208, mark = 3 '\003'}, {
+        block = 0, mark = 0 '\000'}, {block = 0, mark = 0 '\000'}, {block = 0, mark = 0 '\000'}},
+    block_in_recovery = 65534}, st = {block_erase_count = 0, page_write_count = 0,
+    page_read_count = 59, page_header_read_count = 55, spare_write_count = 0, spare_read_count = 83,
+    io_read = 3596, io_write = 0}, mem = {init = 0x0, release = 0x0,
+    malloc = 0x806c0d1 <static_malloc>, free = 0x0, blockinfo_pool_buf = 0x20011104 <s_uffsPool+5600>,
+    pagebuf_pool_buf = 0x2000fb74 <s_uffsPool+80>, tree_nodes_pool_buf = 0x200116f4 <s_uffsPool+7120>,
+    spare_pool_buf = 0x2000fb24 <s_uffsPool>, blockinfo_pool_size = 1520, pagebuf_pool_size = 5520,
+    tree_nodes_pool_size = 13760, spare_pool_size = 80, tree_pool = {
+      mem = 0x200116f4 <s_uffsPool+7120> "\004\027\001 ", buf_size = 16, num_bufs = 860,
+      free_list = 0x200119c4 <s_uffsPool+7840>, sem = 0x0}, spare_pool = {
+      mem = 0x2000fb24 <s_uffsPool> <incomplete sequence \373>, buf_size = 16, num_bufs = 5,
+      free_list = 0x2000fb24 <s_uffsPool>, sem = 0x0}, spare_data_size = 16,
+    buf_start = 0x2000fb24 <s_uffsPool> <incomplete sequence \373>, buf_size = 20880, pos = 20880},
+  cfg = {bc_caches = 10, page_buffers = 10, dirty_pages = 8, dirty_groups = 3,
+    reserved_free_blocks = 2}, ref_count = 0, dev_num = 1}
+
+at call to uffs_MakeSum16()
+info =
+(gdb) p *(uffs_FileInfo *) (buf->data)
+$4 = {attr = 4294967295, create_time = 4294967295, last_modify = 4294967295, access = 4294967295,
+  reserved = 4294967295, name_len = 50331647,
+  name = "macs", '\377' <repeats 66 times>, "\000\000\000\377", '\000' <repeats 53 times>}
+(gdb)
 
 
 
@@ -13246,7 +13285,7 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 - Application-level reliability covers samples from meter.
 - Other events aren't covered, so need a mechanism.
-- 
+-
 
 
 
@@ -13256,7 +13295,7 @@ node-events   <-----> CM
 
 
 - Protocol is assymetric, at-least-once, deduped upstream. Downstream non-existent?
-- Delivers normal packets 
+- Delivers normal packets
 - priorities?
 - window of acks?
 - sequence number == UTC 32bit uint?
@@ -13286,7 +13325,7 @@ Purposes
 - In-place processing of DLMS requests & responses.
 - Use a blocking model to stay in the same context instead of using heap to save
 global data. Use stack instead of heap. Stack is more efficient and can be sanitised.
-- Current code requires *way too much* cognitive overhead to keep track of context. Aim to 
+- Current code requires *way too much* cognitive overhead to keep track of context. Aim to
 minimise this by staying in the one context as much as possible.
 - Reduce association overhead to once-per-cycle at highest required level.
 
@@ -13304,7 +13343,7 @@ void pushISR()
 void readPushData()
 {
     if( pushHasBeenSignalled == true) {
-        
+
         // Clear the request.
         pushHasBeenSignalled    = false;
 
@@ -13325,7 +13364,7 @@ void performMeterPing()
 
         // Clear the request.
         meterPingHasBeenSignalled   = false;
-        
+
         // Request time object
         dlmsSendGetRequest(8, timeRegisterObis, 2, NULL, 0);
 
@@ -13403,16 +13442,16 @@ bool profileReadHasBeenSignalled    = false;
 void readProfile( Profile profile, uint32_t currentNodeTime )
 {
     if( profileReadHasBeenSignalled == true ) {
-        
+
         // Check that its time for this profile to be read.
         if( isItTimeForProfileRead( profile, currentNodeTime ) {
-            
+
             // Form request (selective access by time or index).
 
             // Send request to meter.
 
             // Block, waiting for response (or timeout).
-    
+
             // Parse DLMS response.
 
             // Form response to server.
@@ -13439,7 +13478,7 @@ void readProfile( Profile profile, uint32_t currentNodeTime )
 // - Time sensitive operation are performed immediately after the cycle starts, in this deterministic
 // phase of the superloop requests are not retried. The cycle will naturally retry the operation.
 // - The second phase of the superloop is the non-deterministic phase. Sufficient slack time needs
-// to be planned into the schedule to allow this to run to worst-case otherwise the following 
+// to be planned into the schedule to allow this to run to worst-case otherwise the following
 // deterministic phase will be commprimised.
 // - Messages are processed in-place (zero-copy style) via the use of AXDRStreams, reducing
 // RAM usage.
@@ -13485,9 +13524,9 @@ void deviceTask()
         //
         // Note: No retry is needed on the operations here because the schedule
         // naturally retries them.
-        // 
+        //
         // Note: When we wish to apply a configuration, simply cause a restart by
-        // setting 'restartDeviceTask' to true. This will cause this loop to 
+        // setting 'restartDeviceTask' to true. This will cause this loop to
         // terminate and the whole outer sequence to be re-run.
         //
         while( restartDeviceTask == false ) {
@@ -13530,7 +13569,7 @@ void deviceTask()
             // Now perform the asynchronous operations.
             // These operations are not time-sensitive, so providing we leave enough slack
             // time in the schedule, we should be ok for long reads.
-            // 
+            //
             // This provides a good amount of determinism for the soft-real-time operations
             // such as time-sync and IS capture.
             //
@@ -13544,7 +13583,7 @@ void deviceTask()
             // Perform the 'get configuration' operation.
             performGetConfiguration();
 
-            // 
+            //
             performMeterUpgrade();
 
             //
@@ -13559,6 +13598,13 @@ void deviceTask()
     }
 }
 
+
+---------------------------------------
+
+
+kaifa_ma304 time
+
+CLOCK_UPDATE_STATE_TIME
 
 
 
