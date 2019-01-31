@@ -13607,6 +13607,41 @@ kaifa_ma304 time
 CLOCK_UPDATE_STATE_TIME
 
 Bad:
+
+7e
+a021
+0201
+41
+93
+9e86
+81801405020100060201000704000000
+01080400000001
+696d
+7e
+e = 3, 1 **
+7ea02141020173e8fb81801405020100
+06020100070400000001080400000001
+696d7e
+7e
+a042
+0201
+41
+10
+728c
+e6e600
+6033a1090607608574050801018a0207
+808b0760857405080201ac0780056865
+6c6c6fbe10040e01000000065f1f0400
+001f1fffff
+e741
+7e
+for HDLC event (60000ms) **
+e = 3, 1 **
+7ea03841020130536ee6e7006129a109
+060760857405080101a203020100a305
+a103020100be10040e0800065f1f0400
+00101c020000079cdf7e
+
  [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch
  [meter/time_synch] {timeSynch}: Clock drift is -112 seconds
  [        dlms] {timeSynch}: Action 0-0:1.0.0*255 ic 8 methodId 6 actionLen: 3 B
@@ -13640,6 +13675,183 @@ Bad:
  [        hdlc] {timeSynch}: tx: (1/1): 53
  [        hdlc] {timeSynch}: tx: (1/1): 6771
  [        hdlc] {timeSynch}: tx: (1/1): 7e
+
+7e
+a021
+0201
+41
+93
+9e86
+81801405020100060201000704000000
+01080400000001
+696d
+7e
+7ea02141020173e8fb81801405020100
+06020100070400000001080400000001
+696d7e
+7e
+a042
+0201
+41
+10
+728c
+e6e600
+6033a1090607608574050801018a0207
+808b0760857405080201ac0780056865
+6c6c6fbe10040e01000000065f1f0400
+001f1fffff
+e741
+7e
+7ea03841020130536ee6e7006129a109
+060760857405080101a203020100a305
+a103020100be10040e0800065f1f0400
+00101c020000079cdf7e
+
+7e
+a01d
+0201
+41
+32
+fc91
+e6e600
+c3018100080000010000ff060110ff90
+59ad
+7e
+7ea012410201527e02e6e700c7018103
+00e2987e
+
+
+Bad:
+
+<HDLC len="32" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--SNRM frame.-->
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+</PDU>
+</HDLC>
+
+<HDLC len="32" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--UA frame.-->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+
+<HDLC len="65" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--AARQ frame.-->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="Low" />
+  <CallingAuthentication Value="68656C6C6F" />
+  <InitiateRequest>
+    <ProposedDlmsVersionNumber Value="6" />
+    <ProposedConformance>
+      <ConformanceBit Name="Action" />
+      <ConformanceBit Name="EventNotification" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="InformationReport" />
+      <ConformanceBit Name="MultipleReferences" />
+      <ConformanceBit Name="BlockTransferWithAction" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </ProposedConformance>
+    <ProposedMaxPduSize Value="65535" />
+  </InitiateRequest>
+</AssociationRequest>
+</PDU>
+</HDLC>
+
+<HDLC len="55" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--AARE frame.-->
+<FrameType Value="30" />
+<PDU>
+<AssociationResponse>
+  <ApplicationContextName Value="LN" />
+  <AssociationResult Value="0" />
+  <ResultSourceDiagnostic>
+    <ACSEServiceUser Value="0" />
+  </ResultSourceDiagnostic>
+  <InitiateResponse>
+    <NegotiatedDlmsVersionNumber Value="6" />
+    <NegotiatedConformance>
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </NegotiatedConformance>
+    <NegotiatedMaxPduSize Value="512" />
+    <VaaName Value="7" />
+  </InitiateResponse>
+</AssociationResponse>
+</PDU>
+</HDLC>
+
+<HDLC len="28" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--I frame.-->
+<FrameType Value="32" />
+<PDU>
+<ActionRequest>
+  <ActionRequestNormal>
+    <InvokeIdAndPriority Value="129" />
+    <MethodDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="8" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <MethodId Value="6" />
+    </MethodDescriptor>
+    <MethodInvocationParameters>
+      <Int16 Value="-112" />
+    </MethodInvocationParameters>
+  </ActionRequestNormal>
+</ActionRequest>
+</PDU>
+</HDLC>
+
+<HDLC len="17" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--I frame.-->
+<FrameType Value="52" />
+<PDU>
+<ActionResponse>
+  <ActionResponseNormal>
+    <InvokeIdAndPriority Value="129" />
+    <Result Value="ReadWriteDenied" />
+  </ActionResponseNormal>
+</ActionResponse>
+</PDU>
+</HDLC>
+
+
+
 
 
 
