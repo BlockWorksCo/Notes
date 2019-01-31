@@ -13606,7 +13606,7 @@ kaifa_ma304 time
 
 CLOCK_UPDATE_STATE_TIME
 
-
+Bad:
  [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch
  [meter/time_synch] {timeSynch}: Clock drift is -112 seconds
  [        dlms] {timeSynch}: Action 0-0:1.0.0*255 ic 8 methodId 6 actionLen: 3 B
@@ -13641,6 +13641,186 @@ CLOCK_UPDATE_STATE_TIME
  [        hdlc] {timeSynch}: tx: (1/1): 6771
  [        hdlc] {timeSynch}: tx: (1/1): 7e
 
+
+
+
+Good:
+
+ [        hdlc] {     hdlc}: tx: (1/3): 7ea021020141939e8681801405020100
+ [        hdlc] {     hdlc}: tx: (2/3): 06020100070400000001080400000001
+ [        hdlc] {     hdlc}: tx: (3/3): 696d7e
+ [        hdlc] {     hdlc}: rx: (1/3): 7ea02141020173e8fb81801405020100
+ [        hdlc] {     hdlc}: rx: (2/3): 06020100070400000001080400000001
+ [        hdlc] {     hdlc}: rx: (3/3): 696d7e
+ [        hdlc] {     hdlc}: tx: (1/5): 7ea04202014110728ce6e6006033a109
+ [        hdlc] {     hdlc}: tx: (2/5): 0607608574050801018a0207808b0760
+ [        hdlc] {     hdlc}: tx: (3/5): 857405080201ac07800568656c6c6fbe
+ [        hdlc] {     hdlc}: tx: (4/5): 10040e01000000065f1f0400001f1fff
+ [        hdlc] {     hdlc}: tx: (5/5): ffe7417e
+ [        hdlc] {     hdlc}: rx: (1/4): 7ea03841020130536ee6e7006129a109
+ [        hdlc] {     hdlc}: rx: (2/4): 060760857405080101a203020100a305
+ [        hdlc] {     hdlc}: rx: (3/4): a103020100be10040e0800065f1f0400
+ [        hdlc] {     hdlc}: rx: (4/4): 00101c020000079cdf7e
+ [meter/kaifaMa304] {   device}: Request meter time update
+ [        hdlc] {     hdlc}: tx: (1/3): 7ea028020141327963e6e600c1018100
+ [        hdlc] {     hdlc}: tx: (2/3): 080000010000ff0200090c07e3011fff
+ [        hdlc] {     hdlc}: tx: (3/3): 0c3708ffffc400c9357e
+ [        hdlc] {     hdlc}: rx: (1/2): 7ea01141020152b21fe6e700c5018100
+ [        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+
+
+
+Good:
+
+7ea021020141939e8681801405020100
+06020100070400000001080400000001
+696d7e
+7ea02141020173e8fb81801405020100
+06020100070400000001080400000001
+696d7e
+7ea04202014110728ce6e6006033a109
+0607608574050801018a0207808b0760
+857405080201ac07800568656c6c6fbe
+10040e01000000065f1f0400001f1fff
+ffe7417e
+7ea03841020130536ee6e7006129a109
+060760857405080101a203020100a305
+a103020100be10040e0800065f1f0400
+00101c020000079cdf7e
+
+7ea028020141327963e6e600c1018100
+080000010000ff0200090c07e3011fff
+0c3708ffffc400c9357e
+7ea01141020152b21fe6e700c5018100
+36cf7e
+
+<HDLC len="32" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--SNRM frame.-->
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+
+</PDU>
+</HDLC>
+<HDLC len="32" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--UA frame.-->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+
+<HDLC len="65" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--AARQ frame.-->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="Low" />
+  <CallingAuthentication Value="68656C6C6F" />
+  <InitiateRequest>
+    <ProposedDlmsVersionNumber Value="6" />
+    <ProposedConformance>
+      <ConformanceBit Name="Action" />
+      <ConformanceBit Name="EventNotification" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="InformationReport" />
+      <ConformanceBit Name="MultipleReferences" />
+      <ConformanceBit Name="BlockTransferWithAction" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </ProposedConformance>
+    <ProposedMaxPduSize Value="65535" />
+  </InitiateRequest>
+</AssociationRequest>
+</PDU>
+</HDLC>
+
+<HDLC len="55" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--AARE frame.-->
+<FrameType Value="30" />
+<PDU>
+<AssociationResponse>
+  <ApplicationContextName Value="LN" />
+  <AssociationResult Value="0" />
+  <ResultSourceDiagnostic>
+    <ACSEServiceUser Value="0" />
+  </ResultSourceDiagnostic>
+  <InitiateResponse>
+    <NegotiatedDlmsVersionNumber Value="6" />
+    <NegotiatedConformance>
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </NegotiatedConformance>
+    <NegotiatedMaxPduSize Value="512" />
+    <VaaName Value="7" />
+  </InitiateResponse>
+</AssociationResponse>
+</PDU>
+</HDLC>
+
+<HDLC len="39" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--I frame.-->
+<FrameType Value="32" />
+<PDU>
+<SetRequest>
+  <SetRequestNormal>
+    <InvokeIdAndPriority Value="129" />
+    <AttributeDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="8" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="2" />
+    </AttributeDescriptor>
+    <Value>
+      <!--2019-01-31 12:55:08-->
+      <OctetString Value="07E3011FFF0C3708FFFFC400" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
+</PDU>
+</HDLC>
+
+<HDLC len="16" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--I frame.-->
+<FrameType Value="52" />
+<PDU>
+<SetResponse>
+  <SetResponseNormal>
+    <InvokeIdAndPriority Value="129" />
+    <Result Value="Success" />
+  </SetResponseNormal>
+</SetResponse>
+</PDU>
+</HDLC>
 
 
 
