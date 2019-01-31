@@ -13607,6 +13607,40 @@ kaifa_ma304 time
 CLOCK_UPDATE_STATE_TIME
 
 
+ [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch
+ [meter/time_synch] {timeSynch}: Clock drift is -112 seconds
+ [        dlms] {timeSynch}: Action 0-0:1.0.0*255 ic 8 methodId 6 actionLen: 3 B
+ [      mac_rx] {   mac_rx}: Received 43 B, unicast #113 from 02-1b-c5-0c-60-00-ea-10: rssi -61 dBm, sec 5, payload 13 B
+ [        icmp] {   mac_rx}: ICMPv6 unicast from fe80::21b:c50c:6000:ea10, Private (probe), 6 B
+ [        hdlc] {timeSynch}: tx: (1/1): 7e
+ [        hdlc] {timeSynch}: tx: (1/1): a01d
+ [        hdlc] {timeSynch}: tx: (1/1): 0201
+ [        hdlc] {timeSynch}: tx: (1/1): 41
+ [        hdlc] {timeSynch}: tx: (1/1): 32
+ [        hdlc] {timeSynch}: tx: (1/1): fc91
+ [        hdlc] {timeSynch}: tx: (1/1): e6e600
+ [        hdlc] {timeSynch}: tx: (1/1): c3018100080000010000ff060110ff90
+ [        hdlc] {timeSynch}: tx: (1/1): 59ad
+ [        hdlc] {timeSynch}: tx: (1/1): 7e
+ [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+ [        hdlc] {     hdlc}: rx: (1/2): 7ea012410201527e02e6e700c7018103
+ [        hdlc] {     hdlc}: rx: (2/2): 00e2987e
+ [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+ [        dlms] {     dlms}: Action Response result: r/w denied     <----
+ [        dlms] {     dlms}: processXDlmsApdu(5 B): failed
+ [        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+ [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=12 from time synch
+ [meter/time_synch] {timeSynch}: Broken response: check failed
+ [meter/time_synch] {timeSynch}: Failed to adjust time: check failed
+ [        dlms] {timeSynch}: Disconnect HDLC link
+ [        hdlc] {timeSynch}: tx: (1/1): 7e
+ [        hdlc] {timeSynch}: tx: (1/1): a008
+ [        hdlc] {timeSynch}: tx: (1/1): 0201
+ [        hdlc] {timeSynch}: tx: (1/1): 41
+ [        hdlc] {timeSynch}: tx: (1/1): 53
+ [        hdlc] {timeSynch}: tx: (1/1): 6771
+ [        hdlc] {timeSynch}: tx: (1/1): 7e
+
 
 
 
