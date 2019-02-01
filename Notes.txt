@@ -14041,6 +14041,135 @@ setMeterDstRule()
 0  1  2  3  4  5  6  7  8  9  10 11
 07 E3 01 1F FF 0C 37 08 FF FF C4 00
 
+[meter/time_synch] {timeSynch}: Clock drift is 2 seconds
+[meter/common] {timeSynch}: Setting time: 2019-02-01T14:30:36.000+01:00 0
+[        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 2 valueLen 14 B
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a028
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): 32
+[        hdlc] {timeSynch}: tx: (1/1): 7963
+[        hdlc] {timeSynch}: tx: (1/1): e6e600
+[        hdlc] {timeSynch}: tx: (1/2): c1018100080000010000ff0200090c07
+[        hdlc] {timeSynch}: tx: (2/2): e30201050e1e24ff003c00
+[        hdlc] {timeSynch}: tx: (1/1): 9bf4
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+[        hdlc] {     hdlc}: rx: (1/2): 7ea01141020152b21fe6e700c5018100
+[        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from ti
+
+[meter/time_synch] {timeSynch}: ** Setting DST deviation **
+[meter/time_synch] {timeSynch}: Request meter DST deviation update
+[        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 7 valueLen 2 B
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a01c
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): 54
+[        hdlc] {timeSynch}: tx: (1/1): 889c
+[        hdlc] {timeSynch}: tx: (1/1): e6e600
+[        hdlc] {timeSynch}: tx: (1/1): c1018100080000010000ff07000f3c
+[        hdlc] {timeSynch}: tx: (1/1): c2e8
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+[        hdlc] {     hdlc}: rx: (1/2): 7ea01141020174865be6e700c5018100
+[        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[    modemdrv] {    modem}: Not present
+[       modem] {    modem}: Unknown -> Unknown
+[    modemdrv] {    modem}: Not present
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from ti
+
+[meter/time_synch] {timeSynch}: ** Setting DST enabled flag **
+[meter/time_synch] {timeSynch}: Request meter DST enabled update
+[        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 8 valueLen 2 B
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a01c
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): 76
+[        hdlc] {timeSynch}: tx: (1/1): 989e
+[        hdlc] {timeSynch}: tx: (1/1): e6e600
+[        hdlc] {timeSynch}: tx: (1/1): c1018100080000010000ff08000301
+[        hdlc] {timeSynch}: tx: (1/1): fd19
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+[        hdlc] {     hdlc}: rx: (1/2): 7ea011410201969a9fe6e700c5018100
+[        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from ti
+
+[meter/time_synch] {timeSynch}: ** Setting DST daylight_savings_begin **
+[        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 5 valueLen 14 B
+[      mac_rx] {   mac_rx}: Received 113 B, broadcast #90 from 02-1b-c5-0c-
+
+[        icmp] {   mac_rx}: ICMPv6 multicast from fe80::21b:c50c:6000:e9fc,
+
+[    rpl/core] {      rpl}: 0: process DIO from fe80::21b:c50c:6000:e9fc (f
+
+[    rpl/core] {      rpl}: Neighbor info: fde4:731d:dfa6:0:21b:c50c:6000:e
+
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a028
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): 98
+[        hdlc] {timeSynch}: tx: (1/1): 2969
+[        hdlc] {timeSynch}: tx: (1/1): e6e600
+[        hdlc] {timeSynch}: tx: (1/2): c1018100080000010000ff0500090cff
+[        hdlc] {timeSynch}: tx: (2/2): ff03fe07020000ff800000
+[        hdlc] {timeSynch}: tx: (1/1): d817
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+[        hdlc] {     hdlc}: rx: (1/2): 7ea011410201b8e657e6e700c5018100
+[        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from ti
+
+[meter/time_synch] {timeSynch}: ** Setting DST daylight_savings_end **
+[        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 6 valueLen 14 B
+[      mac_rx] {   mac_rx}: Received 113 B, broadcast #41 from 02-1b-c5-0c-
+
+[        icmp] {   mac_rx}: ICMPv6 multicast from fe80::21b:c50c:6001:8dff,
+
+[    rpl/core] {      rpl}: 0: process DIO from fe80::21b:c50c:6001:8dff (f
+
+[    rpl/core] {      rpl}: Neighbor info: fde4:731d:dfa6:0:21b:c50c:6001:8
+
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a028
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): ba
+[        hdlc] {timeSynch}: tx: (1/1): 396b
+[        hdlc] {timeSynch}: tx: (1/1): e6e600
+[        hdlc] {timeSynch}: tx: (1/2): c1018100080000010000ff0600090cff
+[        hdlc] {timeSynch}: tx: (2/2): ff0afe07030000ff800000
+[        hdlc] {timeSynch}: tx: (1/1): 2257
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[    modemdrv] {    modem}: Not present
+[       modem] {    modem}: Unknown -> Unknown
+[    modemdrv] {    modem}: Not present
+[        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+[        hdlc] {     hdlc}: rx: (1/2): 7ea011410201daf217e6e700c5018100
+[        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[    hdlclock] {   device}: -- HDLC locked --
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from ti
+
+[      cc1200] {   cc1200}: RX FIFO overflow, flushed
+[meter/time_synch] {timeSynch}: ** Time sync complete **
+
+
+
 
 
 
