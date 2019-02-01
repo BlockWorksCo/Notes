@@ -14169,8 +14169,90 @@ setMeterDstRule()
 [meter/time_synch] {timeSynch}: ** Time sync complete **
 
 
+---------------------------------------
+
+LNT Good:
+
+7e
+a020
+03
+61
+93
+1b9f
+81801405020080060200800704000000
+01080400000001
+ce6a
+7e
+
+7ea01e610373b57c8180120501800601
+80070400000001080400000001533b7e
+7e
+a07c
+03
+61
+10
+aa6b
+e6e600
+606ea109060760857405080103a60a04
+084c54434c49454e548a0207808b0760
+857405080202ac128010306545374563
+63633938356635344342be3404322130
+30003631c5d89b4d29755a43c6439a7f
+28c09319b1c15ea65ba24be2effc15e9
+9bee0affe71c2036afb55ef347a4b229
+8bf7
+7e
+
+7ea077610330ad6ce6e7006169a10906
+0760857405080103a203020100a305a1
+0302010ea40a04084c4e543030303030
+88020780890760857405080202aa1280
+10000000000000000000000000000000
+00be230421281f3000013ff62f3540f1
+2dd92b8a6bf1c30edb7d1941fa66b849
+a1e1d90342cf7c767e
+
+<Snrm>
+  <MaxInfoTX Value="128" />
+  <MaxInfoRX Value="128" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+
+<Ua>
+  <MaxInfoTX Value="128" />
+  <MaxInfoRX Value="128" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+
+<AssociationRequest>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <CallingAPTitle Value="4C54434C49454E54" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="High" />
+  <CallingAuthentication Value="30654537456363633938356635344342" />
+  <glo_InitiateRequest Value="30003631C5D89B4D29755A43C6439A7F28C09319B1C15EA65BA24BE2EFFC15E99BEE0AFFE71C2036AFB55EF347A4B229" />
+</AssociationRequest>
+
+<AssociationResponse>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <AssociationResult Value="0" />
+  <ResultSourceDiagnostic>
+    <!--AUTHENTICATION_REQUIRED-->
+    <ACSEServiceUser Value="14" />
+  </ResultSourceDiagnostic>
+  <RespondingAPTitle Value="4C4E543030303030" />
+  <ResponderACSERequirement Value="1" />
+  <MechanismName Value="High" />
+  <RespondingAuthentication Value="00000000000000000000000000000000" />
+  <glo_InitiateResponse Value="3000013FF62F3540F12DD92B8A6BF1C30EDB7D1941FA66B849A1E1D90342CF" />
+</AssociationResponse>
 
 
+
+
+LNT Bad:
 
 
 
