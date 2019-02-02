@@ -1,0 +1,840 @@
+2019-02-01 23:08:18.240                       <HUB> 0:00:00.000 Waiting for nodes on port 4242...
+2019-02-01 23:08:18.241                       <HUB> 0:00:00.000 Waiting for controllers on port 4000...
+2019-02-01 23:08:29.665 #1   0000000000000000 <hub> 0:00:00.000 [ info] New node connected from 127.0.0.1:50660
+2019-02-01 23:08:29.665 #1   0000000000000000 <log> 0:00:00.001 [debug] [      module] { terminal}: Initing configService
+2019-02-01 23:08:29.665 #1   0000000000000000 <log> 0:00:00.001 [debug] [      module] { terminal}: Initing timeService
+2019-02-01 23:08:29.676 #1   0000000000000000 <log> 0:00:00.001 [debug] [      module] { terminal}: Starting platform
+2019-02-01 23:08:29.676 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting asyncio
+2019-02-01 23:08:29.676 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting powerdown
+2019-02-01 23:08:29.676 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting random
+2019-02-01 23:08:29.676 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting services
+2019-02-01 23:08:29.676 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting scheduleService
+2019-02-01 23:08:29.677 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting logService
+2019-02-01 23:08:29.677 #1   0000000000000000 <log> 0:00:00.012 [debug] [      module] { terminal}: Starting ctrlportService
+2019-02-01 23:08:29.681 #1   0000000000000000 <log> 0:00:00.013 [debug] [      module] { terminal}: Starting uiService
+2019-02-01 23:08:29.681 #1   0000000000000000 <log> 0:00:00.013 [debug] [      module] { terminal}: Starting configService
+2019-02-01 23:08:29.681 #1   0000000000000000 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsOpen (/configuration-1.pb, , fd=9)
+2019-02-01 23:08:29.681 #1   0000000000000000 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.681 #1   0000000000000000 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsOpen (/configuration-2.pb, , fd=9)
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [ info] [   config/pb] { terminal}: Config generations: 730, 729
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsOpen (/configuration-1.pb, , fd=9)
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [ info] [   config/pb] { terminal}: Read slot 0, generation 730
+2019-02-01 23:08:29.682 #1   0000000000000000 <hub> 0:00:00.013 [ info] Received msg# 20 from node, sending settings
+2019-02-01 23:08:29.682 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-02-01 23:08:29.682 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-02-01 23:08:29.682 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [debug] [      module] { terminal}: Starting srcRestrictedCfgService
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [debug] [      module] { terminal}: Starting timeService
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+2019-02-01 23:08:29.682 #1   0000000000000000 <log> 0:00:00.013 [ info] [        time] { terminal}: Uptime: 13, local time: 2019-02-02  0:08:29.677, UTC: 1549062509.677, status: 1
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.017 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.lls_password = lnt1
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.017 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.authentication_key = 31323334353637383930313233343536
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.encryption_key = 31323334353637383930313233343536
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.hls_key = 30303030303030303031303335383230
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.time.sync_timer = 1
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.ip = 2a03:a000:5:192:39ea:35f3:46da:9087
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.port = 5684
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: modem.tun6.ip = 127.0.0.1
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: modem.tun6.secret = whatsfordinner
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: modem.apn = 4g.tele2.se
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.mq.push_now = 1
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.mq.push_delay = 30
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.capabilities.dlmspipe.push = 0
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.pipe_enabled = 0
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [ info] [    log_ring] { terminal}: Filter level: WARN, module: (null), task: (null), fw: posix-genus:v143-24-g245d7c2 on linux
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [event] [    terminal] { terminal}: Starting version posix-genus:v143-24-g245d7c2 on hardware linux
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing communication
+2019-02-01 23:08:29.721 #1   0000000000000000 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing mac
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [ info] [         mac] { terminal}: Using IID 02-00-00-00-00-00-00-01 from EUI-64 00-00-00-00-00-00-00-01
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing macDutycycle
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing macTx
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing macReceive
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing macDeviceTable
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing macSecurity
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [ info] [mac_security] { terminal}: Using key from /Data/Temp/KeyTest/mac-keys.txt
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      fs_api] { terminal}: fsOpen (/keys/mac_1, newfile, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.018 [debug] [      fs_api] { terminal}: fsOpen (/keys/mac_2, newfile, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <hub> 0:00:00.018 [debug] Got ack
+2019-02-01 23:08:29.721 #1   0000000000000001 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [ info] [mac_security] { terminal}: MAC Layer key saved
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      fs_api] { terminal}: fsOpen (/keys/mac_1, , fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [ info] [mac_security] { terminal}: Keys loaded: 0p 
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      fs_api] { terminal}: fsOpen (/macsec_state, read, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [ info] [mac_security] { terminal}: Read frame counter 550000
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing macRadio
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing radioDriver
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [ERROR] [   mac_radio] { terminal}: Unsupported channel plan 0
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing radiotest
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing lowpan
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing ipCore
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing cndNet
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing coap
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing coapLocal
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing rpl
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [rpl/routelist] { terminal}: Init list with IID context 02-00-00-00-00-00-00-01
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.042 [debug] [      module] { terminal}: Initing uplink
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing uplinkRx
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing uplinkTx
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing conman
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing icmp
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing perftest
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing ipv4SocketUplink
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing modem
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [ info] [       modem] { terminal}: -modem option missing, skipping modem
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Initing ipv4
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting communication
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting mac
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting macDutycycle
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting macReceive
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      fs_api] { schedule}: fsOpen (/macsec_state, modify, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      fs_api] { schedule}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [ info] [mac_security] { schedule}: Wrote frame counter 551000
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting macRadio
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting radioDriver
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting radiotest
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [   radiotest] { terminal}: ** Starting rssi packet source **
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [   radiotest] { terminal}: production mode RSSISource task *NOT* enabled.
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.043 [debug] [      module] { terminal}: Starting lowpan
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.045 [debug] [      module] { terminal}: Starting coap
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.045 [debug] [      module] { terminal}: Starting dtls
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.046 [debug] [  dtls/cache] { terminal}: dtlsSessionCacheLoad: Loading 784 bytes
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.046 [debug] [      fs_api] { terminal}: fsOpen (/dtls_state, , fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.046 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.046 [ info] [  dtls/cache] { terminal}: DTLS session restored
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.046 [debug] [      module] { terminal}: Starting rpl
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.047 [debug] [      module] { terminal}: Starting uplink
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.047 [debug] [      module] { terminal}: Starting uplinkRx
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.047 [debug] [      module] { terminal}: Starting uplinkTx
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.048 [debug] [      fs_api] {     dtls}: fsOpen (/keys/ca_cert.der, newfile, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.049 [ info] [        dtls] {     dtls}: Saved /keys/ca_cert.der, size: 554, md5: 7bac2e8d...
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.049 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.049 [debug] [      module] { terminal}: Starting powercontrol
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.049 [debug] [      module] { terminal}: Starting transportSwitch
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.050 [debug] [      module] { terminal}: Starting conman
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.050 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_cert.der, newfile, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.050 [ info] [        dtls] {     dtls}: Saved /keys/agent_cert.der, size: 390, md5: 3c2a2866...
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.050 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.050 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_key.der, newfile, fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [ info] [        dtls] {     dtls}: Saved /keys/agent_key.der, size: 121, md5: e5ebf5a0...
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [debug] [      fs_api] {     dtls}: fsOpen (/keys/ca_cert.der, , fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [ info] [        dtls] {     dtls}: Loaded /keys/ca_cert.der, size: 554, md5: 7bac2e8d...
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_cert.der, , fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.051 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.052 [ info] [        dtls] {     dtls}: Loaded /keys/agent_cert.der, size: 390, md5: 3c2a2866...
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.052 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_key.der, , fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.052 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.052 [ info] [        dtls] {     dtls}: Loaded /keys/agent_key.der, size: 121, md5: e5ebf5a0...
+2019-02-01 23:08:29.721 #1   0000000000000001 <log> 0:00:00.052 [ info] [    rpl/task] {      rpl}: 0: Trying to get to disabled (currently disabled)
+2019-02-01 23:08:29.760 #1   0000000000000001 <log> 0:00:00.057 [ info] [      uplink] { ctrlport}: Received LoWPAN prefix: ::
+2019-02-01 23:08:29.760 #1   0000000000000001 <hub> 0:00:00.057 [debug] Got ack
+2019-02-01 23:08:30.216 #1   0000000000000001 <log> 0:00:00.551 [debug] [      module] { terminal}: Starting icmp
+2019-02-01 23:08:30.216 #1   0000000000000001 <log> 0:00:00.551 [debug] [      module] { terminal}: Starting ipv4SocketUplink
+2019-02-01 23:08:30.216 #1   0000000000000001 <log> 0:00:00.551 [debug] [      module] { terminal}: Starting modem
+2019-02-01 23:08:30.216 #1   0000000000000001 <hub> 0:00:00.552 [ info] Node registering: firmware posix-genus:v143-24-g245d7c2, hardware linux. 
+2019-02-01 23:08:30.216 #1   0000000000000001 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-02-01 23:08:30.216 #1   0000000000000001 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-02-01 23:08:30.216 #1   0000000000000001 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-02-01 23:08:30.216 #1   0000000000000001 <log> 0:00:00.552 [ info] [   ipv4/core] {socketUplink}: eth_up: address 0.0.0.1/32 gw 0.0.0.0 dns 127.0.0.1
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [event] [      conman] {socketUplink}: eth4 is now up
+2019-02-01 23:08:30.256 #1   0000000000000001 <hub> 0:00:00.552 [debug] Got ack
+2019-02-01 23:08:30.256 #1   0000000000000001 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing management
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing ping
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing digitalio
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing login
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing configuration
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing datarate
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing restart
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing mqstorage
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing mqcoap
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing monitor
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing status
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing statusapi
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing readings
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing device
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing hdlc
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing hdlcLocker
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing dlms
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      fs_api] { terminal}: fsOpen (/dlms_state, read, fd=9)
+2019-02-01 23:08:30.256 #1   0000000000000001 <log> 0:00:00.552 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [ info] [        dlms] { terminal}: Read frame counter 3857049
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing deviceConfig
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing deviceDlms
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing timeSynch
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing cron
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing filedl
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing netinfo
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing activity
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing powerSwitch
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing deviceAlarms
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.552 [debug] [      module] { terminal}: Initing preferredParent
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      module] { terminal}: Initing logCoap
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      module] { terminal}: Initing dlmsPipe
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      module] { terminal}: Initing dataProfile
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/dp_config, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [ dataProfile] { terminal}: Data profile config restored
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      module] { terminal}: Starting management
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      module] { terminal}: Starting login
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [ uplink-tun6] { schedule}: Set state on eth_up DOWN -> STARTING
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { schedule}: fsOpen (/dlms_state, modify, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { schedule}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [ info] [        dlms] { schedule}: Wrote frame counter 3858049
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      module] { terminal}: Starting mqstorage
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/000.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/000.mq: First m#: 3841, size: 65292
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/001.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/001.mq: First m#: 4289, size: 65509
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/002.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/002.mq: First m#: 4577, size: 65535
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/003.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/003.mq: First m#: 4981, size: 65398
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/004.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/004.mq: First m#: 5409, size: 65485
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/005.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/005.mq: First m#: 5879, size: 65485
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/006.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/006.mq: First m#: 6373, size: 57725
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/007.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/007.mq: First m#: 3030, size: 65513
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsOpen (/mq/008.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.553 [debug] [   mqstorage] { terminal}: /mq/008.mq: First m#: 3154, size: 65520
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      fs_api] { terminal}: fsOpen (/mq/009.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [   mqstorage] { terminal}: /mq/009.mq: First m#: 3492, size: 65215
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      fs_api] { terminal}: fsOpen (/mq/006.mq, read, fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [ info] [   mqstorage] { terminal}: Current file: /mq/006.mq, last m#: 6773, size: 57725
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      module] { terminal}: Starting events
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      module] { terminal}: Starting monitor
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [ info] [     monitor] { terminal}: Profile default is enabled (interval 86400 s)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [ info] [     monitor] { terminal}: Profile radio is disabled (interval 0 s)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [ info] [     monitor] { terminal}: Profile network is disabled (interval 0 s)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [ info] [     monitor] { terminal}: Profile ip is disabled (interval 0 s)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [ info] [     monitor] { terminal}: Profile modem is disabled (interval 0 s)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.554 [debug] [      module] { terminal}: Starting readings
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.555 [debug] [      module] { terminal}: Starting device
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.555 [debug] [      module] { terminal}: Starting hdlc
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.555 [debug] [      module] { terminal}: Starting dlms
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.555 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [      module] { terminal}: Starting deviceDlms
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [ info] [    readings] { readings}: Restoring metering profiles configuration
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [      fs_api] { readings}: fsOpen failed (/metering_profiles, read): No such file or directory
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [    readings] { readings}: Failed to open /metering_profiles file, errno: 14
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [      fs_api] { readings}: fsOpen failed (/metering_series, read): No such file or directory
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [    readings] { readings}: Failed to open /metering_series file, errno: not found
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [      fs_api] { readings}: fsOpen (/device_config, read, fd=10)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.556 [debug] [      fs_api] { readings}: fsClose (fd=10)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.558 [debug] [  meter/dlms] {   device}: -- waiting on the userQueue for 90000ms --
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.559 [debug] [      module] { terminal}: Starting timeSynch
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.559 [debug] [      module] { terminal}: Starting cron
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.559 [debug] [      module] { terminal}: Starting filedl
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.560 [debug] [      module] { terminal}: Starting deviceAlarms
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.560 [debug] [      fs_api] { terminal}: fsOpen failed (/device_alarms_profiles, read): No such file or directory
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.560 [debug] [device_alarms] { terminal}: Failed to open /device_alarms_profiles file: not found
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.560 [debug] [      module] { terminal}: Starting dlmsPipe
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.561 [debug] [    dlmspipe] { dlmspipe}: ** dlmspipe task waiting to be triggered (4294967295) **
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.561 [ info] [    terminal] { terminal}: Reboot reason: Booted (posix-genus:v143-24-g245d7c2)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.561 [debug] [      fs_api] { terminal}: fsOpen (/mq/006.mq, append, fd=10)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.561 [debug] [      fs_api] { terminal}: fsClose (fd=10)
+2019-02-01 23:08:30.257 #1   0000000000000001 <log> 0:00:00.561 [debug] [   mqstorage] { terminal}: Wrote m# 6774 of size 54 to file /mq/006.mq size 57781
+2019-02-01 23:08:30.298 #1   0000000000000001 <log> 0:00:00.593 [ info] [      uplink] { ctrlport}: Received LoWPAN prefix: ::
+2019-02-01 23:08:30.298 #1   0000000000000001 <hub> 0:00:00.593 [debug] Got ack
+2019-02-01 23:08:31.218 #1   0000000000000001 <log> 0:00:01.553 [debug] [ uplink-tun6] { schedule}: Establishing tunnel on eth_up to 127.0.0.1:8050 
+2019-02-01 23:08:31.219 #1   0000000000000001 <log> 0:00:01.554 [debug] [   ipv4/core] { schedule}: eth_up: tx 0.0.0.1 -> 127.0.0.1 24B proto=17
+2019-02-01 23:08:31.219 #1   0000000000000001 <log> 0:00:01.554 [debug] [ uplink-tun6] { schedule}: Set state on eth_up STARTING -> HELLO_SENT
+2019-02-01 23:08:31.220 #1   0000000000000001 <log> 0:00:01.555 [debug] [   ipv4/core] {socketUplink}: eth_up: rx 127.0.0.1 -> 127.0.0.1 36B proto=17
+2019-02-01 23:08:31.220 #1   0000000000000001 <log> 0:00:01.555 [debug] [    ipv4/udp] {socketUplink}: Got UDP 127.0.0.1:8050 -> 127.0.0.1:50412
+2019-02-01 23:08:31.221 #1   0000000000000001 <log> 0:00:01.556 [debug] [ uplink-tun6] {socketUplink}: Got handshake packet on eth_up from 127.0.0.1:8050 28B
+2019-02-01 23:08:31.221 #1   0000000000000001 <log> 0:00:01.556 [debug] [ uplink-tun6] {socketUplink}: Got Hello response on eth_up, 20B challenge
+2019-02-01 23:08:31.221 #1   0000000000000001 <log> 0:00:01.556 [debug] [ uplink-tun6] {socketUplink}: Set state on eth_up HELLO_SENT -> GOT_CHALLENGE
+2019-02-01 23:08:31.221 #1   0000000000000001 <log> 0:00:01.557 [debug] [   ipv4/core] { schedule}: eth_up: tx 127.0.0.1 -> 127.0.0.1 46B proto=17
+2019-02-01 23:08:31.222 #1   0000000000000001 <log> 0:00:01.557 [debug] [ uplink-tun6] { schedule}: Set state on eth_up GOT_CHALLENGE -> RESPONSE_SENT
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.558 [debug] [   ipv4/core] {socketUplink}: eth_up: rx 127.0.0.1 -> 127.0.0.1 29B proto=17
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.558 [debug] [    ipv4/udp] {socketUplink}: Got UDP 127.0.0.1:8050 -> 127.0.0.1:50412
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.558 [debug] [ uplink-tun6] {socketUplink}: Got handshake packet on eth_up from 127.0.0.1:8050 21B
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [ info] [ uplink-tun6] {socketUplink}: Using server address for keepalive
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [debug] [ uplink-tun6] {socketUplink}: Set state on eth_up RESPONSE_SENT -> UP
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [ info] [ uplink-tun6] {socketUplink}: Tunnel is up on eth_up: prefix fd51:3c22:ee1f::, keepalive every 25s to 2a03:a000:5:192:39ea:35f3:46da:9087, timeout after 300s
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [event] [      conman] {socketUplink}: uplink is now up
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [debug] [      cndnet] {socketUplink}: Reporting network up
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [ info] [    rpl/task] {      rpl}: 0: Trying to get to attached as BR (currently disabled)
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [ info] [    rpl/core] {      rpl}: 0: Starting border router for fd51:3c22:ee1f:0:200::1, v=240
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [event] [    rpl/core] {      rpl}: Join as BR: fd51:3c22:ee1f:0:200::1, rank=128, v=240, dtsn=241
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [debug] [    rpl/task] {      rpl}: 0: Change state disabled->attached as BR
+2019-02-01 23:08:31.225 #1   0000000000000001 <log> 0:00:01.559 [debug] [      conman] {      rpl}: LoWPAN prefix from RPL: fd51:3c22:ee1f::
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.559 [event] [      lowpan] {      rpl}: LoWPAN address: fd51:3c22:ee1f:0:200::1
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.559 [debug] [ rpl/trickle] {      rpl}: create timer DIO, imin=4096, imax=8, k=6
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.559 [event] [      conman] {      rpl}: lowpan is now up
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.560 [event] [    rpl/core] {      rpl}: Hop count: 0
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.560 [ info] [       login] { schedule}: Re-login (type 1) request in state wait
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.560 [debug] [    hdlclock] {   device}: -- HDLC locked --
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.560 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-02-01 23:08:31.226 #1   0000000000000001 <log> 0:00:01.561 [debug] [        dlms] {   device}: Setup AA with No Security
+2019-02-01 23:08:31.276 #1   0000000000000001 <log> 0:00:01.611 [debug] [        hdlc] {   device}: Connect HDLC link
+2019-02-01 23:08:31.276 #1   0000000000000001 <log> 0:00:01.611 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.276 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (1/1): a020
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (1/1): 93
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (1/1): 7dd9
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (1/2): 8180140502015e0602015e0704000000
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.612 [debug] [        hdlc] {   device}: tx: (2/2): 01080400000001
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.613 [debug] [        hdlc] {   device}: tx: (1/1): 51af
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.613 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.277 #1   0000000000000001 <log> 0:00:01.613 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 64000ms --
+2019-02-01 23:08:31.358 #1   0000000000000001 <log> 0:00:01.694 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:31.358 #1   0000000000000001 <log> 0:00:01.694 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea01e210373c37a8180120501800601
+2019-02-01 23:08:31.358 #1   0000000000000001 <log> 0:00:01.694 [debug] [        hdlc] {     hdlc}: rx: (2/2): 80070400000001080400000001533b7e
+2019-02-01 23:08:31.358 #1   0000000000000001 <log> 0:00:01.694 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-02-01 23:08:31.359 #1   0000000000000001 <log> 0:00:01.694 [debug] [        hdlc] {     hdlc}: tx: (1/1): a02b
+2019-02-01 23:08:31.359 #1   0000000000000001 <log> 0:00:01.694 [debug] [        hdlc] {     hdlc}: tx: (1/1): 03
+2019-02-01 23:08:31.359 #1   0000000000000001 <log> 0:00:01.695 [debug] [        hdlc] {     hdlc}: tx: (1/1): 21
+2019-02-01 23:08:31.359 #1   0000000000000001 <log> 0:00:01.695 [debug] [        hdlc] {     hdlc}: tx: (1/1): 10
+2019-02-01 23:08:31.359 #1   0000000000000001 <log> 0:00:01.695 [debug] [        hdlc] {     hdlc}: tx: (1/1): fbaf
+2019-02-01 23:08:31.359 #1   0000000000000001 <log> 0:00:01.695 [debug] [        hdlc] {     hdlc}: tx: (1/1): e6e600
+2019-02-01 23:08:31.360 #1   0000000000000001 <log> 0:00:01.695 [debug] [        hdlc] {     hdlc}: tx: (1/2): 601da109060760857405080101be1004
+2019-02-01 23:08:31.360 #1   0000000000000001 <log> 0:00:01.695 [debug] [        hdlc] {     hdlc}: tx: (2/2): 0e01000000065f1f0400001f1fffff
+2019-02-01 23:08:31.360 #1   0000000000000001 <log> 0:00:01.696 [debug] [        hdlc] {     hdlc}: tx: (1/1): c64d
+2019-02-01 23:08:31.360 #1   0000000000000001 <log> 0:00:01.696 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-02-01 23:08:31.360 #1   0000000000000001 <log> 0:00:01.696 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.805 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.805 [debug] [        hdlc] {     hdlc}: rx: (1/4): 7ea0372103306c7ce6e7006129a10906
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.805 [debug] [        hdlc] {     hdlc}: rx: (2/4): 0760857405080101a203020100a305a1
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.805 [debug] [        hdlc] {     hdlc}: rx: (3/4): 03020100be10040e0800065f1f040000
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.805 [debug] [        hdlc] {     hdlc}: rx: (4/4): 001002300007b26c7e
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [        dlms] {     dlms}: COSEM AA with No Security setup is accepted
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [        dlms] {     dlms}: extracted server max pdu size is 560
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [   meter/lnt] {   device}: Send IC read request for 1
+2019-02-01 23:08:31.470 #1   0000000000000001 <log> 0:00:01.806 [debug] [        dlms] {   device}: Get 0-0:43.1.3*255 ic 1 attr 2 normal access
+2019-02-01 23:08:31.520 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): a019
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): 32
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): 6fd8
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.856 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.857 [debug] [        hdlc] {   device}: tx: (1/1): c00181000100002b0103ff0200
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.857 [debug] [        hdlc] {   device}: tx: (1/1): b567
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.857 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.521 #1   0000000000000001 <log> 0:00:01.857 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 64000ms --
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea0152103525d8ae6e700c401810006
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [        hdlc] {     hdlc}: rx: (2/2): 003ad8df2e957e
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [        dlms] {     dlms}: DLMS result is 5 bytes with code 0
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+2019-02-01 23:08:31.582 #1   0000000000000001 <log> 0:00:01.917 [ info] [   meter/lnt] {   device}: IC value is:3856607
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        dlms] {   device}: Disconnect HDLC link
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): a007
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): 53
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): 03c7
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.633 #1   0000000000000001 <log> 0:00:01.969 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 64000ms --
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea01e210373c37a8180120501800601
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {     hdlc}: rx: (2/2): 80070400000001080400000001533b7e
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {     hdlc}: HDLC link disconnected
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [    hdlclock] {   device}: -- unlocking HDLC --
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [  meter/dlms] {   device}: -- waiting on the userQueue for 90000ms --
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [    hdlclock] {   device}: -- HDLC locked --
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [  meter/dlms] {   device}: Setup AA using HLS with ciphering, without fw upgrade
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.013 [debug] [        dlms] {   device}: frameCounter:3856607
+2019-02-01 23:08:31.678 #1   0000000000000001 <log> 0:00:02.014 [debug] [        dlms] {   device}: Setup AA with HLS
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: Connect HDLC link
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: tx: (1/1): a020
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: tx: (1/1): 61
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: tx: (1/1): 93
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.064 [debug] [        hdlc] {   device}: tx: (1/1): 1b9f
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.065 [debug] [        hdlc] {   device}: tx: (1/2): 81801405020080060200800704000000
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.065 [debug] [        hdlc] {   device}: tx: (2/2): 01080400000001
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.065 [debug] [        hdlc] {   device}: tx: (1/1): ce6a
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.065 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:31.729 #1   0000000000000001 <log> 0:00:02.065 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 64000ms --
+2019-02-01 23:08:31.805 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:31.805 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea01e610373b57c8180120501800601
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: rx: (2/2): 80070400000001080400000001533b7e
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): a07c
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): 03
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): 61
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): 10
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): aa6b
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/1): e6e600
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (1/7): 606ea109060760857405080103a60a04
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (2/7): 084c54434c49454e548a0207808b0760
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (3/7): 857405080202ac128010306545374563
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (4/7): 63633938356635344342be3404322130
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (5/7): 30003ad8dfe6bc287074ea3387383597
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.141 [debug] [        hdlc] {     hdlc}: tx: (6/7): 610d967081ae3b1749c66f4a2776cdca
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.142 [debug] [        hdlc] {     hdlc}: tx: (7/7): 767d786f1bc534e79d4b641d645b7453
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.142 [debug] [        hdlc] {     hdlc}: tx: (1/1): d116
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.142 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-02-01 23:08:31.806 #1   0000000000000001 <log> 0:00:02.142 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.412 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (1/8): 7ea077610330ad6ce6e7006169a10906
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (2/8): 0760857405080103a203020100a305a1
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (3/8): 0302010ea40a04084c4e543031313830
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (4/8): 88020780890760857405080202aa1280
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (5/8): 106162636465666768696a6b6c6d6e6f
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (6/8): 70be230421281f30000081d9f6a16f35
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (7/8): a11a0f3c666281af1e458c05a818a8cb
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: rx: (8/8): ca9290d0149df6cf7e
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        dlms] {     dlms}: rx decrypted: (1/1): 0800065f1f040000181d02300007
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        dlms] {     dlms}: extracted server max pdu size is 1024
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        dlms] {     dlms}: Action 0-0:40.0.0*255 ic 15 methodId 1 actionLen: 18 B
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        dlms] {     dlms}: tx unencrypted: (1/2): c30181000f0000280000ff01010910aa
+2019-02-01 23:08:32.077 #1   0000000000000001 <log> 0:00:02.413 [debug] [        dlms] {     dlms}: tx unencrypted: (2/2): 285231c6a65ee7fc5428be168dbc69
+2019-02-01 23:08:32.128 #1   0000000000000001 <log> 0:00:02.463 [debug] [        hdlc] {     dlms}: tx: (1/1): 7e
+2019-02-01 23:08:32.128 #1   0000000000000001 <log> 0:00:02.463 [debug] [        hdlc] {     dlms}: tx: (1/1): a03e
+2019-02-01 23:08:32.129 #1   0000000000000001 <log> 0:00:02.464 [debug] [        hdlc] {     dlms}: tx: (1/1): 03
+2019-02-01 23:08:32.129 #1   0000000000000001 <log> 0:00:02.464 [debug] [        hdlc] {     dlms}: tx: (1/1): 61
+2019-02-01 23:08:32.129 #1   0000000000000001 <log> 0:00:02.464 [debug] [        hdlc] {     dlms}: tx: (1/1): 32
+2019-02-01 23:08:32.130 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (1/1): 7b46
+2019-02-01 23:08:32.130 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (1/1): e6e600
+2019-02-01 23:08:32.130 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (1/4): cb3030003ad8e00d06375f6cd8151ed5
+2019-02-01 23:08:32.130 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (2/4): 354dda2b40a4b4a4d33ea9ee589acfab
+2019-02-01 23:08:32.130 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (3/4): e769322e89eeeaaa70dd4f985ded8998
+2019-02-01 23:08:32.131 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (4/4): b777
+2019-02-01 23:08:32.131 #1   0000000000000001 <log> 0:00:02.465 [debug] [        hdlc] {     dlms}: tx: (1/1): 177c
+2019-02-01 23:08:32.131 #1   0000000000000001 <log> 0:00:02.466 [debug] [        hdlc] {     dlms}: tx: (1/1): 7e
+2019-02-01 23:08:32.225 #1   0000000000000001 <log> 0:00:02.561 [debug] [      status] { schedule}: Calling connection state callbacks: gateway: 1, state: 2
+2019-02-01 23:08:32.226 #1   0000000000000001 <log> 0:00:02.561 [debug] [       login] { schedule}: Starting login procedure
+2019-02-01 23:08:32.226 #1   0000000000000001 <log> 0:00:02.561 [debug] [        dtls] { schedule}: Session 1: Created
+2019-02-01 23:08:32.226 #1   0000000000000001 <log> 0:00:02.561 [debug] [       login] { schedule}: Changing state: wait -> negotiating DTLS
+2019-02-01 23:08:32.227 #1   0000000000000001 <log> 0:00:02.563 [debug] [          ip] {     dtls}: Send IP on uplink, 156 B, type 17, ttl 32: fd51:3c22:ee1f:0:200::1 -> 2a03:a000:5:192:39ea:35f3:46da:9087
+2019-02-01 23:08:32.228 #1   0000000000000001 <log> 0:00:02.563 [debug] [   ipv4/core] {uplink_tx}: eth_up: tx 127.0.0.1 -> 127.0.0.1 204B proto=17
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        hdlc] {     hdlc}: rx: (1/4): 7ea0376103520e3ae6e700cf29300000
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        hdlc] {     hdlc}: rx: (2/4): 81da71440242b20ce5cabaffe162512d
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        hdlc] {     hdlc}: rx: (3/4): 59f21e7f5a666a2a5637b5a0ce15ae54
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        hdlc] {     hdlc}: rx: (4/4): b2807798d363e05b7e
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: Encrypted:: (1/3): 2930000081da71440242b20ce5cabaff
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: Encrypted:: (2/3): e162512d59f21e7f5a666a2a5637b5a0
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: Encrypted:: (3/3): ce15ae54b2807798d363
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: rx decrypted: (1/2): c701810001000910c0bba41b053b9b78
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: rx decrypted: (2/2): 4cec183f552e8ad6
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: COSEM AA with HLS setup is accepted
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.620 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.621 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.621 [debug] [   meter/lnt] {   device}: Set meter hop count: 0
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.621 [debug] [        dlms] {   device}: Set 0-128:96.0.8*255 ic 1 attr 2 valueLen 2 B
+2019-02-01 23:08:32.285 #1   0000000000000001 <log> 0:00:02.621 [debug] [        dlms] {   device}: tx unencrypted: (1/1): c1018100010080600008ff02001100
+2019-02-01 23:08:32.335 #1   0000000000000001 <log> 0:00:02.671 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:32.335 #1   0000000000000001 <log> 0:00:02.671 [debug] [        hdlc] {   device}: tx: (1/1): a02e
+2019-02-01 23:08:32.336 #1   0000000000000001 <log> 0:00:02.671 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:08:32.336 #1   0000000000000001 <log> 0:00:02.671 [debug] [        hdlc] {   device}: tx: (1/1): 61
+2019-02-01 23:08:32.336 #1   0000000000000001 <log> 0:00:02.671 [debug] [        hdlc] {   device}: tx: (1/1): 54
+2019-02-01 23:08:32.336 #1   0000000000000001 <log> 0:00:02.671 [debug] [        hdlc] {   device}: tx: (1/1): ea83
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [        hdlc] {   device}: tx: (1/3): c92030003ad8e184a0d74b3c49b1b6b1
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [        hdlc] {   device}: tx: (2/3): d58bfb1ac53b0047188fe06e19f3414e
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [        hdlc] {   device}: tx: (3/3): 13a2
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [        hdlc] {   device}: tx: (1/1): 446e
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:32.337 #1   0000000000000001 <log> 0:00:02.672 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 64000ms --
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea02361037477cfe6e700cd15300000
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        hdlc] {     hdlc}: rx: (2/3): 81db459a0ebaa42a0a26850fdd794fbf
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        hdlc] {     hdlc}: rx: (3/3): 9704400a7e
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        dlms] {     dlms}: Encrypted:: (1/2): 1530000081db459a0ebaa42a0a26850f
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        dlms] {     dlms}: Encrypted:: (2/2): dd794fbf9704
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        dlms] {     dlms}: rx decrypted: (1/1): c5018100
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2019-02-01 23:08:32.444 #1   0000000000000001 <log> 0:00:02.780 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.830 [debug] [        dlms] {   device}: Disconnect HDLC link
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.830 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.830 [debug] [        hdlc] {   device}: tx: (1/1): a007
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.830 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.830 [debug] [        hdlc] {   device}: tx: (1/1): 61
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.831 [debug] [        hdlc] {   device}: tx: (1/1): 53
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.831 [debug] [        hdlc] {   device}: tx: (1/1): 6581
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.831 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:08:32.495 #1   0000000000000001 <log> 0:00:02.831 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 64000ms --
+2019-02-01 23:08:32.541 #1   0000000000000001 <log> 0:00:02.876 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:08:32.541 #1   0000000000000001 <log> 0:00:02.876 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea01e610373b57c8180120501800601
+2019-02-01 23:08:32.541 #1   0000000000000001 <log> 0:00:02.876 [debug] [        hdlc] {     hdlc}: rx: (2/2): 80070400000001080400000001533b7e
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.876 [debug] [        hdlc] {     hdlc}: HDLC link disconnected
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.876 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.877 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.877 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.877 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.877 [debug] [    hdlclock] {   device}: -- unlocking HDLC --
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.877 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-02-01 23:08:32.542 #1   0000000000000001 <log> 0:00:02.877 [debug] [  meter/dlms] {   device}: -- waiting on the userQueue for 90000ms --
+2019-02-01 23:08:34.460 #1   0000000000000001 <log> 0:00:04.795 [debug] [    rpl/core] {      rpl}: 0: transmit DIO to ff02::1a (rank=128, version=240)
+2019-02-01 23:08:34.460 #1   0000000000000001 <log> 0:00:04.795 [debug] [        icmp] {      rpl}: ICMPv6 multicast to ff02::1a, RPL control message (DIO), 80 B
+2019-02-01 23:08:34.460 #1   0000000000000001 <log> 0:00:04.796 [debug] [          ip] {      rpl}: Send IP on lowpan, 84 B, type 58, ttl 32: fe80::200:0:0:1 -> ff02::1a
+2019-02-01 23:08:34.462 #1   0000000000000001 <log> 0:00:04.797 [debug] [      mac_tx] {lowpan_tx}: Tx 113 B at 20 dBm as #174 to fd-ff-ff-ff-ff-ff-ff-ff: Failed: Radio error
+2019-02-01 23:08:34.462 #1   0000000000000001 <log> 0:00:04.797 [debug] [   lowpan_tx] {lowpan_tx}: Failed to send fragment 1, dropping frame
+2019-02-01 23:08:40.352 #1   0000000000000001 <hub> 0:00:00.000 [ info] closing connection
+2019-02-01 23:19:58.262 #2   0000000000000000 <hub> 0:00:00.000 [ info] New node connected from 127.0.0.1:50674
+2019-02-01 23:19:58.263 #2   0000000000000000 <log> 0:00:00.001 [debug] [      module] { terminal}: Initing configService
+2019-02-01 23:19:58.263 #2   0000000000000000 <log> 0:00:00.001 [debug] [      module] { terminal}: Initing timeService
+2019-02-01 23:19:58.263 #2   0000000000000000 <log> 0:00:00.001 [debug] [      module] { terminal}: Starting platform
+2019-02-01 23:19:58.263 #2   0000000000000000 <log> 0:00:00.002 [debug] [      module] { terminal}: Starting asyncio
+2019-02-01 23:19:58.264 #2   0000000000000000 <log> 0:00:00.002 [debug] [      module] { terminal}: Starting powerdown
+2019-02-01 23:19:58.264 #2   0000000000000000 <log> 0:00:00.002 [debug] [      module] { terminal}: Starting random
+2019-02-01 23:19:58.264 #2   0000000000000000 <log> 0:00:00.002 [debug] [      module] { terminal}: Starting services
+2019-02-01 23:19:58.264 #2   0000000000000000 <log> 0:00:00.002 [debug] [      module] { terminal}: Starting scheduleService
+2019-02-01 23:19:58.265 #2   0000000000000000 <log> 0:00:00.003 [debug] [      module] { terminal}: Starting logService
+2019-02-01 23:19:58.265 #2   0000000000000000 <log> 0:00:00.003 [debug] [      module] { terminal}: Starting ctrlportService
+2019-02-01 23:19:58.266 #2   0000000000000000 <log> 0:00:00.004 [debug] [      module] { terminal}: Starting uiService
+2019-02-01 23:19:58.266 #2   0000000000000000 <log> 0:00:00.004 [debug] [      module] { terminal}: Starting configService
+2019-02-01 23:19:58.266 #2   0000000000000000 <log> 0:00:00.004 [debug] [      fs_api] { terminal}: fsOpen (/configuration-1.pb, , fd=9)
+2019-02-01 23:19:58.267 #2   0000000000000000 <log> 0:00:00.005 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.267 #2   0000000000000000 <log> 0:00:00.005 [debug] [      fs_api] { terminal}: fsOpen (/configuration-2.pb, , fd=9)
+2019-02-01 23:19:58.267 #2   0000000000000000 <log> 0:00:00.005 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.268 #2   0000000000000000 <log> 0:00:00.006 [ info] [   config/pb] { terminal}: Config generations: 22, 23
+2019-02-01 23:19:58.268 #2   0000000000000000 <log> 0:00:00.006 [debug] [      fs_api] { terminal}: fsOpen (/configuration-2.pb, , fd=9)
+2019-02-01 23:19:58.268 #2   0000000000000000 <log> 0:00:00.006 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.269 #2   0000000000000000 <log> 0:00:00.007 [ info] [   config/pb] { terminal}: Read slot 1, generation 23
+2019-02-01 23:19:58.269 #2   0000000000000000 <hub> 0:00:00.007 [ info] Received msg# 20 from node, sending settings
+2019-02-01 23:19:58.269 #2   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-02-01 23:19:58.269 #2   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-02-01 23:19:58.269 #2   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-02-01 23:19:58.310 #2   0000000000000000 <hub> 0:00:00.007 [debug] Got ack
+2019-02-01 23:19:58.310 #2   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-02-01 23:19:58.310 #2   0000000000000000 <log> 0:00:00.007 [debug] [      module] { terminal}: Starting srcRestrictedCfgService
+2019-02-01 23:19:58.310 #2   0000000000000000 <log> 0:00:00.008 [debug] [      module] { terminal}: Starting timeService
+2019-02-01 23:19:58.310 #2   0000000000000000 <log> 0:00:00.008 [ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+2019-02-01 23:19:58.310 #2   0000000000000000 <log> 0:00:00.008 [ info] [        time] { terminal}: Uptime: 8, local time: 2019-02-02  0:19:58.269, UTC: 1549063198.269, status: 1
+2019-02-01 23:19:58.310 #2   0000000000000000 <log> 0:00:00.008 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.lls_password = lnt1
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.008 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.authentication_key = 31323334353637383930313233343536
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.009 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.encryption_key = 31323334353637383930313233343536
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.009 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.hls_key = 30303030303030303031303335383230
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.009 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.time.sync_timer = 1
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.009 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.ip = 2a03:a000:5:192:39ea:35f3:46da:9087
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.009 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.port = 5684
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.009 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: modem.tun6.ip = 127.0.0.1
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: modem.tun6.secret = whatsfordinner
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: modem.apn = 4g.tele2.se
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.mq.push_now = 1
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: server.mq.push_delay = 30
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.capabilities.dlmspipe.push = 0
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [ terminal-pl] { terminal}: Setting parameter from command line: device.dlms.pipe_enabled = 0
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.010 [ info] [    log_ring] { terminal}: Filter level: WARN, module: (null), task: (null), fw: meter-driver:v143-22-ge8c939cM on linux
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.011 [event] [    terminal] { terminal}: Starting version meter-driver:v143-22-ge8c939cM on hardware linux
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.011 [debug] [      module] { terminal}: Initing communication
+2019-02-01 23:19:58.311 #2   0000000000000000 <log> 0:00:00.011 [debug] [      module] { terminal}: Initing mac
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.011 [ info] [         mac] { terminal}: Using IID 02-00-00-00-00-00-00-01 from EUI-64 00-00-00-00-00-00-00-01
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.011 [debug] [      module] { terminal}: Initing macDutycycle
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.012 [debug] [      module] { terminal}: Initing macTx
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.012 [debug] [      module] { terminal}: Initing macReceive
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.013 [debug] [      module] { terminal}: Initing macDeviceTable
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.013 [debug] [      module] { terminal}: Initing macSecurity
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.013 [ info] [mac_security] { terminal}: Using key from /Data/Temp/KeyTest/mac-keys.txt
+2019-02-01 23:19:58.311 #2   0000000000000001 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsOpen (/keys/mac_1, newfile, fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.013 [debug] [      fs_api] { terminal}: fsOpen (/keys/mac_2, newfile, fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.014 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.014 [ info] [mac_security] { terminal}: MAC Layer key saved
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.014 [debug] [      fs_api] { terminal}: fsOpen (/keys/mac_1, , fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.014 [ info] [mac_security] { terminal}: Keys loaded: 0p 
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.014 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.014 [debug] [      fs_api] { terminal}: fsOpen (/macsec_state, read, fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.015 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.015 [ info] [mac_security] { terminal}: Read frame counter 34000
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.015 [debug] [      module] { terminal}: Initing macRadio
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.015 [debug] [      module] { terminal}: Initing radioDriver
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.015 [ERROR] [   mac_radio] { terminal}: Unsupported channel plan 0
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.015 [debug] [      module] { terminal}: Initing radiotest
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.016 [debug] [      module] { terminal}: Initing lowpan
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.016 [debug] [      module] { terminal}: Initing ipCore
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.016 [debug] [      module] { terminal}: Initing coap
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.016 [debug] [      module] { terminal}: Initing coapLocal
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.016 [debug] [      module] { terminal}: Initing rpl
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.016 [debug] [      fs_api] { schedule}: fsOpen (/macsec_state, modify, fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.017 [debug] [      fs_api] { schedule}: fsClose (fd=9)
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.017 [ info] [mac_security] { schedule}: Wrote frame counter 35000
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.017 [debug] [rpl/routelist] { terminal}: Init list with IID context 02-00-00-00-00-00-00-01
+2019-02-01 23:19:58.312 #2   0000000000000001 <log> 0:00:00.017 [debug] [      module] { terminal}: Initing conman
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.017 [debug] [      module] { terminal}: Initing icmp
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.017 [debug] [      module] { terminal}: Initing perftest
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.017 [debug] [      module] { terminal}: Initing ipv4SocketUplink
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.017 [debug] [      module] { terminal}: Initing modem
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.018 [ info] [       modem] { terminal}: -modem option missing, skipping modem
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Initing ipv4
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Starting communication
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Starting mac
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Starting macDutycycle
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.018 [debug] [      module] { terminal}: Starting macReceive
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.019 [debug] [      module] { terminal}: Starting macRadio
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.019 [debug] [      module] { terminal}: Starting radioDriver
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.019 [debug] [      module] { terminal}: Starting radiotest
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.019 [debug] [   radiotest] { terminal}: ** Starting rssi packet source **
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.020 [debug] [   radiotest] { terminal}: production mode RSSISource task *NOT* enabled.
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.020 [debug] [      module] { terminal}: Starting lowpan
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.020 [debug] [      module] { terminal}: Starting coap
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.020 [debug] [      module] { terminal}: Starting dtls
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.021 [debug] [  dtls/cache] { terminal}: dtlsSessionCacheLoad: Loading 784 bytes
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.021 [debug] [      fs_api] { terminal}: fsOpen failed (/dtls_state, ): No such file or directory
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.021 [ info] [  dtls/cache] { terminal}: Failed to open session: not found
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.021 [debug] [      module] { terminal}: Starting rpl
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsOpen (/keys/ca_cert.der, newfile, fd=9)
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [ info] [        dtls] {     dtls}: Saved /keys/ca_cert.der, size: 554, md5: 7bac2e8d...
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_cert.der, newfile, fd=9)
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [ info] [        dtls] {     dtls}: Saved /keys/agent_cert.der, size: 390, md5: 3c2a2866...
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_key.der, newfile, fd=9)
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [ info] [        dtls] {     dtls}: Saved /keys/agent_key.der, size: 121, md5: e5ebf5a0...
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:19:58.313 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsOpen (/keys/ca_cert.der, , fd=9)
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [ info] [        dtls] {     dtls}: Loaded /keys/ca_cert.der, size: 554, md5: 7bac2e8d...
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_cert.der, , fd=9)
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [debug] [      module] { terminal}: Starting powercontrol
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [ info] [        dtls] {     dtls}: Loaded /keys/agent_cert.der, size: 390, md5: 3c2a2866...
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [debug] [      fs_api] {     dtls}: fsOpen (/keys/agent_key.der, , fd=9)
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.022 [debug] [      module] { terminal}: Starting transportSwitch
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.023 [debug] [      module] { terminal}: Starting conman
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.023 [debug] [      fs_api] {     dtls}: fsClose (fd=9)
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.023 [ info] [        dtls] {     dtls}: Loaded /keys/agent_key.der, size: 121, md5: e5ebf5a0...
+2019-02-01 23:19:58.314 #2   0000000000000001 <log> 0:00:00.023 [ info] [    rpl/task] {      rpl}: 0: Trying to get to disabled (currently disabled)
+2019-02-01 23:19:58.348 #2   0000000000000001 <hub> 0:00:00.048 [debug] Got ack
+2019-02-01 23:19:58.785 #2   0000000000000001 <log> 0:00:00.524 [debug] [      module] { terminal}: Starting icmp
+2019-02-01 23:19:58.785 #2   0000000000000001 <log> 0:00:00.524 [debug] [      module] { terminal}: Starting ipv4SocketUplink
+2019-02-01 23:19:58.786 #2   0000000000000001 <log> 0:00:00.525 [debug] [      module] { terminal}: Starting modem
+2019-02-01 23:19:58.786 #2   0000000000000001 <hub> 0:00:00.525 [ info] Node registering: firmware meter-driver:v143-22-ge8c939cM, hardware linux. 
+2019-02-01 23:19:58.786 #2   0000000000000001 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-02-01 23:19:58.786 #2   0000000000000001 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-02-01 23:19:58.787 #2   0000000000000001 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-02-01 23:19:58.787 #2   0000000000000001 <log> 0:00:00.525 [debug] [      module] { terminal}: Initing management
+2019-02-01 23:19:58.824 #2   0000000000000001 <hub> 0:00:00.526 [debug] Got ack
+2019-02-01 23:19:58.824 #2   0000000000000001 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing ping
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing digitalio
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing login
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing configuration
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing datarate
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing restart
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing mqstorage
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing mqcoap
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing monitor
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.526 [debug] [      module] { terminal}: Initing status
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [ info] [   ipv4/core] {socketUplink}: eth_up: address 0.0.0.1/32 gw 0.0.0.0 dns 127.0.0.1
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [event] [      conman] {socketUplink}: eth4 is now up
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      module] { terminal}: Initing readings
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      module] { terminal}: Initing device
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      module] { terminal}: Initing hdlc
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      module] { terminal}: Initing hdlcLocker
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      module] { terminal}: Initing dlms
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      fs_api] { terminal}: fsOpen (/dlms_state, read, fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [ info] [        dlms] { terminal}: Read frame counter 34000
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.527 [debug] [      module] { terminal}: Initing deviceConfig
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.528 [debug] [      module] { terminal}: Initing deviceMeterDriver
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.528 [debug] [      fs_api] { schedule}: fsOpen (/dlms_state, modify, fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.528 [debug] [      fs_api] { schedule}: fsClose (fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.528 [ info] [        dlms] { schedule}: Wrote frame counter 35000
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.529 [debug] [      module] { terminal}: Initing cron
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.529 [debug] [      module] { terminal}: Initing filedl
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.529 [debug] [      module] { terminal}: Initing netinfo
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Initing activity
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Initing powerSwitch
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Initing deviceAlarms
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Initing preferredParent
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Initing logCoap
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Starting management
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Starting login
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      module] { terminal}: Starting mqstorage
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen (/mq/000.mq, read, fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [   mqstorage] { terminal}: /mq/000.mq: First m#: 1, size: 1981
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/001.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/002.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/003.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/004.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/005.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/006.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.530 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/007.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.531 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/008.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.531 [debug] [      fs_api] { terminal}: fsOpen failed (/mq/009.mq, read): No such file or directory
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.531 [debug] [      fs_api] { terminal}: fsOpen (/mq/000.mq, read, fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.531 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.531 [ info] [   mqstorage] { terminal}: Current file: /mq/000.mq, last m#: 34, size: 1981
+2019-02-01 23:19:58.824 #2   0000000000000001 <log> 0:00:00.531 [debug] [      module] { terminal}: Starting events
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [debug] [      module] { terminal}: Starting monitor
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [ info] [     monitor] { terminal}: Profile default is enabled (interval 86400 s)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [ info] [     monitor] { terminal}: Profile radio is disabled (interval 0 s)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [ info] [     monitor] { terminal}: Profile network is disabled (interval 0 s)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [ info] [     monitor] { terminal}: Profile ip is disabled (interval 0 s)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [ info] [     monitor] { terminal}: Profile modem is disabled (interval 0 s)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.531 [debug] [      module] { terminal}: Starting readings
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [      module] { terminal}: Starting device
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [      module] { terminal}: Starting hdlc
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [ info] [    readings] { readings}: Restoring metering profiles configuration
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [      fs_api] { readings}: fsOpen failed (/metering_profiles, read): No such file or directory
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [    readings] { readings}: Failed to open /metering_profiles file, errno: 14
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [      fs_api] { readings}: fsOpen failed (/metering_series, read): No such file or directory
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [    readings] { readings}: Failed to open /metering_series file, errno: not found
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [      fs_api] { readings}: fsOpen failed (/device_config, read): No such file or directory
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [device_config] { readings}: Failed to open /device_config file, errno: not found
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [    readings] { readings}: Failed to restore last execution time
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.532 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.533 [debug] [      module] { terminal}: Starting dlms
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.533 [debug] [      module] { terminal}: Starting deviceMeterDriver
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.533 [debug] [      module] { terminal}: Starting cron
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.533 [debug] [meter/driver] {   device}: Meter-driver cycle initialise start
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.533 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.533 [debug] [        dlms] {   device}: Setup AA with No Security
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [      module] { terminal}: Starting filedl
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [      module] { terminal}: Starting deviceAlarms
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [      fs_api] { terminal}: fsOpen failed (/device_alarms_profiles, read): No such file or directory
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [device_alarms] { terminal}: Failed to open /device_alarms_profiles file: not found
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [ info] [    terminal] { terminal}: Reboot reason: Booted (meter-driver:v143-22-ge8c939cM)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [      fs_api] { terminal}: fsOpen (/mq/000.mq, append, fd=9)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [      fs_api] { terminal}: fsClose (fd=9)
+2019-02-01 23:19:58.825 #2   0000000000000001 <log> 0:00:00.534 [debug] [   mqstorage] { terminal}: Wrote m# 35 of size 56 to file /mq/000.mq size 2039
+2019-02-01 23:19:58.868 #2   0000000000000001 <hub> 0:00:00.563 [debug] Got ack
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: Connect HDLC link
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): a020
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 93
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 7dd9
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/2): 8180140502015e0602015e0704000000
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (2/2): 01080400000001
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 51af
+2019-02-01 23:19:58.868 #2   0000000000000001 <log> 0:00:00.585 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:19:58.921 #2   0000000000000001 <log> 0:00:00.660 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:19:58.921 #2   0000000000000001 <log> 0:00:00.660 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea01e210373c37a8180120501800601
+2019-02-01 23:19:58.921 #2   0000000000000001 <log> 0:00:00.660 [debug] [        hdlc] {     hdlc}: rx: (2/2): 80070400000001080400000001533b7e
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): a03c
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): 03
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): 21
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): 10
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7b3b
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/1): e6e600
+2019-02-01 23:19:58.922 #2   0000000000000001 <log> 0:00:00.661 [debug] [        hdlc] {     hdlc}: tx: (1/3): 602ea109060760857405080101be2104
+2019-02-01 23:19:58.923 #2   0000000000000001 <log> 0:00:00.662 [debug] [        hdlc] {     hdlc}: tx: (2/3): 1f010110787878787878787878787878
+2019-02-01 23:19:58.923 #2   0000000000000001 <log> 0:00:00.662 [debug] [        hdlc] {     hdlc}: tx: (3/3): 787878780000065f1f0400001f1fffff
+2019-02-01 23:19:58.923 #2   0000000000000001 <log> 0:00:00.662 [debug] [        hdlc] {     hdlc}: tx: (1/1): 4470
+2019-02-01 23:19:58.923 #2   0000000000000001 <log> 0:00:00.662 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-02-01 23:19:58.923 #2   0000000000000001 <log> 0:00:00.662 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea02d2103306363e6e700611fa10906
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [        hdlc] {     hdlc}: rx: (2/3): 0760857405080101a203020101a305a1
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [        hdlc] {     hdlc}: rx: (3/3): 03020101be0604040e010600ca207e
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [ WARN] [        dlms] {     dlms}: COSEM AA is rejected: no reason given
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [ WARN] [        dlms] {     dlms}: processAcseApdu(33 B): failed
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [meter/dlmscomms] {     dlms}: dlmsReceiveCb called
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [meter/dlmscomms] {   device}: Got response from meter.
+2019-02-01 23:19:59.049 #2   0000000000000001 <log> 0:00:00.788 [debug] [ meter/assoc] {   device}: Association failed, waiting before retrying...
+2019-02-01 23:20:00.049 #2   0000000000000001 <log> 0:00:01.788 [debug] [        dlms] {   device}: Setup AA with No Security
+2019-02-01 23:20:00.100 #2   0000000000000001 <log> 0:00:01.839 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:20:00.100 #2   0000000000000001 <log> 0:00:01.839 [debug] [        hdlc] {   device}: tx: (1/1): a03c
+2019-02-01 23:20:00.100 #2   0000000000000001 <log> 0:00:01.839 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:20:00.100 #2   0000000000000001 <log> 0:00:01.839 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:20:00.100 #2   0000000000000001 <log> 0:00:01.839 [debug] [        hdlc] {   device}: tx: (1/1): 32
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.839 [debug] [        hdlc] {   device}: tx: (1/1): 6b39
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.840 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.840 [debug] [        hdlc] {   device}: tx: (1/3): 602ea109060760857405080101be2104
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.840 [debug] [        hdlc] {   device}: tx: (2/3): 1f010110787878787878787878787878
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.840 [debug] [        hdlc] {   device}: tx: (3/3): 787878780000065f1f0400001f1fffff
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.840 [debug] [        hdlc] {   device}: tx: (1/1): 4470
+2019-02-01 23:20:00.101 #2   0000000000000001 <log> 0:00:01.840 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea02d2103527723e6e700611fa10906
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [        hdlc] {     hdlc}: rx: (2/3): 0760857405080101a203020101a305a1
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [        hdlc] {     hdlc}: rx: (3/3): 03020101be0604040e010600ca207e
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [ WARN] [        dlms] {     dlms}: COSEM AA is rejected: no reason given
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [ WARN] [        dlms] {     dlms}: processAcseApdu(33 B): failed
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [meter/dlmscomms] {     dlms}: dlmsReceiveCb called
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [meter/dlmscomms] {   device}: Got response from meter.
+2019-02-01 23:20:00.231 #2   0000000000000001 <log> 0:00:01.970 [debug] [ meter/assoc] {   device}: Association failed, waiting before retrying...
+2019-02-01 23:20:01.232 #2   0000000000000001 <log> 0:00:02.971 [debug] [        dlms] {   device}: Setup AA with No Security
+2019-02-01 23:20:01.284 #2   0000000000000001 <log> 0:00:03.022 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:20:01.285 #2   0000000000000001 <log> 0:00:03.022 [debug] [        hdlc] {   device}: tx: (1/1): a03c
+2019-02-01 23:20:01.285 #2   0000000000000001 <log> 0:00:03.023 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:20:01.286 #2   0000000000000001 <log> 0:00:03.024 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:20:01.286 #2   0000000000000001 <log> 0:00:03.024 [debug] [        hdlc] {   device}: tx: (1/1): 54
+2019-02-01 23:20:01.286 #2   0000000000000001 <log> 0:00:03.024 [debug] [        hdlc] {   device}: tx: (1/1): 5b3f
+2019-02-01 23:20:01.287 #2   0000000000000001 <log> 0:00:03.025 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2019-02-01 23:20:01.287 #2   0000000000000001 <log> 0:00:03.025 [debug] [        hdlc] {   device}: tx: (1/3): 602ea109060760857405080101be2104
+2019-02-01 23:20:01.287 #2   0000000000000001 <log> 0:00:03.025 [debug] [        hdlc] {   device}: tx: (2/3): 1f010110787878787878787878787878
+2019-02-01 23:20:01.288 #2   0000000000000001 <log> 0:00:03.026 [debug] [        hdlc] {   device}: tx: (3/3): 787878780000065f1f0400001f1fffff
+2019-02-01 23:20:01.289 #2   0000000000000001 <log> 0:00:03.026 [debug] [        hdlc] {   device}: tx: (1/1): 4470
+2019-02-01 23:20:01.289 #2   0000000000000001 <log> 0:00:03.027 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea02d2103744367e6e700611fa10906
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [        hdlc] {     hdlc}: rx: (2/3): 0760857405080101a203020101a305a1
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [        hdlc] {     hdlc}: rx: (3/3): 03020101be0604040e010600ca207e
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [ WARN] [        dlms] {     dlms}: COSEM AA is rejected: no reason given
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [ WARN] [        dlms] {     dlms}: processAcseApdu(33 B): failed
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [meter/dlmscomms] {     dlms}: dlmsReceiveCb called
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [meter/dlmscomms] {   device}: Got response from meter.
+2019-02-01 23:20:01.413 #2   0000000000000001 <log> 0:00:03.151 [debug] [ meter/assoc] {   device}: Association failed, waiting before retrying...
+2019-02-01 23:20:02.414 #2   0000000000000001 <log> 0:00:04.152 [debug] [        dlms] {   device}: Setup AA with No Security
+2019-02-01 23:20:02.465 #2   0000000000000001 <log> 0:00:04.203 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:20:02.465 #2   0000000000000001 <log> 0:00:04.203 [debug] [        hdlc] {   device}: tx: (1/1): a03c
+2019-02-01 23:20:02.466 #2   0000000000000001 <log> 0:00:04.204 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-02-01 23:20:02.466 #2   0000000000000001 <log> 0:00:04.204 [debug] [        hdlc] {   device}: tx: (1/1): 21
+2019-02-01 23:20:02.466 #2   0000000000000001 <log> 0:00:04.204 [debug] [        hdlc] {   device}: tx: (1/1): 76
+2019-02-01 23:20:02.466 #2   0000000000000001 <log> 0:00:04.204 [debug] [        hdlc] {   device}: tx: (1/1): 4b3d
+2019-02-01 23:20:02.466 #2   0000000000000001 <log> 0:00:04.204 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2019-02-01 23:20:02.466 #2   0000000000000001 <log> 0:00:04.204 [debug] [        hdlc] {   device}: tx: (1/3): 602ea109060760857405080101be2104
+2019-02-01 23:20:02.467 #2   0000000000000001 <log> 0:00:04.205 [debug] [        hdlc] {   device}: tx: (2/3): 1f010110787878787878787878787878
+2019-02-01 23:20:02.467 #2   0000000000000001 <log> 0:00:04.205 [debug] [        hdlc] {   device}: tx: (3/3): 787878780000065f1f0400001f1fffff
+2019-02-01 23:20:02.467 #2   0000000000000001 <log> 0:00:04.205 [debug] [        hdlc] {   device}: tx: (1/1): 4470
+2019-02-01 23:20:02.467 #2   0000000000000001 <log> 0:00:04.205 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-02-01 23:20:02.595 #2   0000000000000001 <log> 0:00:04.333 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-02-01 23:20:02.595 #2   0000000000000001 <log> 0:00:04.333 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea02d2103965fa3e6e700611fa10906
+2019-02-01 23:20:02.595 #2   0000000000000001 <log> 0:00:04.333 [debug] [        hdlc] {     hdlc}: rx: (2/3): 0760857405080101a203020101a305a1
+2019-02-01 23:20:02.595 #2   0000000000000001 <log> 0:00:04.333 [debug] [        hdlc] {     hdlc}: rx: (3/3): 03020101be0604040e010600ca207e
+2019-02-01 23:20:02.595 #2   0000000000000001 <log> 0:00:04.333 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-02-01 23:20:02.596 #2   0000000000000001 <log> 0:00:04.333 [ WARN] [        dlms] {     dlms}: COSEM AA is rejected: no reason given
+2019-02-01 23:20:02.596 #2   0000000000000001 <log> 0:00:04.334 [ WARN] [        dlms] {     dlms}: processAcseApdu(33 B): failed
+2019-02-01 23:20:02.596 #2   0000000000000001 <log> 0:00:04.334 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+2019-02-01 23:20:02.596 #2   0000000000000001 <log> 0:00:04.334 [debug] [meter/dlmscomms] {     dlms}: dlmsReceiveCb called
+2019-02-01 23:20:02.596 #2   0000000000000001 <log> 0:00:04.334 [debug] [meter/dlmscomms] {   device}: Got response from meter.
+2019-02-01 23:20:02.596 #2   0000000000000001 <log> 0:00:04.334 [debug] [ meter/assoc] {   device}: Association failed, waiting before retrying...
+2019-02-01 23:21:17.322 #2   0000000000000001 <hub> 0:00:00.000 [ info] closing connection
