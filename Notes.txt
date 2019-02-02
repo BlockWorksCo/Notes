@@ -14288,6 +14288,7 @@ LNT Bad:
 </AssociationRequest>
 </PDU>
 </HDLC>
+
 <HDLC len="44" >
 <TargetAddress Value="16" />
 <SourceAddress Value="1" />
