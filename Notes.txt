@@ -14527,6 +14527,8 @@ static void coapSendNodeRegistrationCb(const CoapMessageInfo* messageInfo,
 
 Suspected bad messageInfo pointer that isn't checked.
 
+Seems to be another case of https://gerrit.cyco.io/#/c/12042/
+
 
 
 
