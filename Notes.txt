@@ -14455,7 +14455,77 @@ ubuntu@ubuntu-VirtualBox:/Data/Projects/terminal$ ag -B 2 "=== Hard" ~/node62.lo
 1652068:2019-02-04 10:16:08.118 #1   001bc50c6000cad0 <log> 0:18:44.577 ======== Hard fault ========
 
 
+00026740 <coapSendNodeRegistrationCb>:
+{
+   26740:   b538        push    {r3, r4, r5, lr}
+   26742:   460d        mov r5, r1
+   26744:   4604        mov r4, r0
+    OS_mutexTake(&s_mutex);
+   26746:   4811        ldr r0, [pc, #68]   ; (2678c <coapSendNodeRegistrationCb+0x4c>)
+   26748:   f022 ffa4   bl  49694 <OS_mutexTake>
+    if ((requestResultCode == CoapResultGotResponse &&
+   2674c:   2d15        cmp r5, #21
+   2674e:   d10c        bne.n   2676a <coapSendNodeRegistrationCb+0x2a>
+            (messageInfo->header.code != CoapResponseCreated &&
+   26750:   f894 3027   ldrb.w  r3, [r4, #39]   ; 0x27
+    if ((requestResultCode == CoapResultGotResponse &&
+   26754:   2b41        cmp r3, #65 ; 0x41
+   26756:   d003        beq.n   26760 <coapSendNodeRegistrationCb+0x20>
+            (messageInfo->header.code != CoapResponseCreated &&
+   26758:   2b44        cmp r3, #68 ; 0x44
+   2675a:   d001        beq.n   26760 <coapSendNodeRegistrationCb+0x20>
+             messageInfo->header.code != CoapResponseChanged &&
+   2675c:   2b84        cmp r3, #132    ; 0x84
+   2675e:   d106        bne.n   2676e <coapSendNodeRegistrationCb+0x2e>
+}
+   26760:   e8bd 4038   ldmia.w sp!, {r3, r4, r5, lr}
+    OS_mutexGive(&s_mutex);
+   26764:   4809        ldr r0, [pc, #36]   ; (2678c <coapSendNodeRegistrationCb+0x4c>)
+   26766:   f022 bf65   b.w 49634 <OS_mutexGive>
+             messageInfo->header.code != CoapResponseNotFound)) ||
+   2676a:   2d16        cmp r5, #22
+   2676c:   d1f8        bne.n   26760 <coapSendNodeRegistrationCb+0x20>
+        LOG_WARNING("Unexpected response %u from server,"
+   2676e:   f894 3027   ldrb.w  r3, [r4, #39]   ; 0x27                                  <-------- crash here.
+   26772:   4a07        ldr r2, [pc, #28]   ; (26790 <coapSendNodeRegistrationCb+0x50>)
+   26774:   4907        ldr r1, [pc, #28]   ; (26794 <coapSendNodeRegistrationCb+0x54>)
+   26776:   2004        movs    r0, #4
+   26778:   f01f f872   bl  45860 <logFormatted>
+        scheduleChangeOrAdd(&s_retrySendNodeRegistration, nodeRegistration,
+   2677c:   4b06        ldr r3, [pc, #24]   ; (26798 <coapSendNodeRegistrationCb+0x58>)
+   2677e:   2200        movs    r2, #0
+   26780:   4906        ldr r1, [pc, #24]   ; (2679c <coapSendNodeRegistrationCb+0x5c>)
+   26782:   4807        ldr r0, [pc, #28]   ; (267a0 <coapSendNodeRegistrationCb+0x60>)
+   26784:   f01d f8fa   bl  4397c <scheduleChangeOrAdd>
+   26788:   e7ea        b.n 26760 <coapSendNodeRegistrationCb+0x20>
+   2678a:   bf00        nop
+   2678c:   20007ea8    .word   0x20007ea8
+   26790:   0006c581    .word   0x0006c581
+   26794:   0006c5c9    .word   0x0006c5c9
+   26798:   0001d4c0    .word   0x0001d4c0
+   2679c:   00026c35    .word   0x00026c35
+   267a0:   20007f0c    .word   0x20007f0c
 
+
+static void coapSendNodeRegistrationCb(const CoapMessageInfo* messageInfo,
+        ResultCode requestResultCode, const void* payload, int payloadSize,
+        void* requestCallbackData)
+{
+    OS_mutexTake(&s_mutex);
+    if ((requestResultCode == CoapResultGotResponse &&
+            (messageInfo->header.code != CoapResponseCreated &&
+             messageInfo->header.code != CoapResponseChanged &&
+             messageInfo->header.code != CoapResponseNotFound)) ||
+        (requestResultCode == CoapResultNoResponse)) {
+        LOG_WARNING("Unexpected response %u from server,"
+                "reschedule sending node registration", messageInfo->header.code);
+        scheduleChangeOrAdd(&s_retrySendNodeRegistration, nodeRegistration,
+                NULL, RETRY_SEND_NODE_REGISTRATION_DELAY);
+    }
+    OS_mutexGive(&s_mutex);
+}
+
+Suspected bad messageInfo pointer that isn't checked.
 
 
 
