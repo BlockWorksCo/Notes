@@ -14530,9 +14530,20 @@ Suspected bad messageInfo pointer that isn't checked.
 Seems to be another case of https://gerrit.cyco.io/#/c/12042/
 
 
+----------------------------------------------------------------------
+
+MQ
+
+1) Corrupt messages transferred correctly through the mq to NMS... NMS continuously loops as it faults.
+2) On Agent, an entire mq file goes bad, causing the mq to rollback a *long* way. Agent has to fill up the queue before the NMS recognises
+that its back at a good position and starts letting the messages thru again.
 
 
 
+Agent-old, NMS-new
+Agent-new, NMS-old
+Agent-new, NMS-new
+Agent-old, NMS-old (Same as above, with repeated samples retrieved).
 
 
 
