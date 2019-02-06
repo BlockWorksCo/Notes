@@ -14556,6 +14556,22 @@ Agent-old, NMS-old (Same as above, with repeated samples retrieved).
 
 IS 802.15.4 spec
 
+ONodes must implement the User Datagram Protocol as defined in [RFC768].
+385 Nodes may also implement the Transport Control Protocol as defined in [RFC793].
+386 Nodes must implement Internet Protocol Version 6 as described in [RFC2460].
+387 Nodes must implement ICMPv6 message processing as described in [RFC4443].
+388 Nodes must implement Neighbour Cache Management as described in [RFC6775].
+389 Nodes must implement [RFC6775] Neighbour Solicitation with Address Registration Option
+390 (ARO) to resolve link layer addresses.
+391 Nodes use the techniques described in [RFC6775] and [RFC6550] to optimize IPv6 Neighbour
+392 Discovery.
+393 Nodes should auto configure a link-local IPv6 address as described in [RFC4862]
+394 Node should support Duplicate Address Detection, as described in [RFC4861].
+395 Nodes may originate multicast ICMPv6 or UDP messaging.
+396 A Router Node may support the DHCPv6 Relay Agent mechanism as described in [RFC3315].
+397 Nodes implement DHCPv6 [RFC3315] to provide automated management of IPv6 GUA and
+398 ULA address assignments
+
 
 ---------------------------------------
 meter fw upgrade:
