@@ -14558,8 +14558,47 @@ IS 802.15.4 spec
 
 
 ---------------------------------------
+meter fw upgrade:
+
+[filetype = meterfw]
+setFileTypeFromMetadata( meterfw )
+[targetdevice = KT026818]
+[meterfw_id = 1234567]
+setMeterFwIdFromMetadata( 1234567 )
+fw Identifier = [1234567]
+
 
 2019-02-06  7:59:40.079 #1   001bc50c6000cad0 <log> 6:40:20.589 [debug] [      filedl] {   filedl}: No more missing blocks; we are finished!
+2019-02-06  8:00:12.262 #1   001bc50c6000cad0 <log> 6:40:52.763 [debug] [  meter/upgr] {   filedl}: --- Upgrade result: File received, meter-upgrade starting ---
+
+[        hdlc] {     dlms}: tx: (1/1): 7e
+[        hdlc] {     dlms}: tx: (1/1): a02b
+[        hdlc] {     dlms}: tx: (1/1): 03
+[        hdlc] {     dlms}: tx: (1/1): 61
+[        hdlc] {     dlms}: tx: (1/1): 32
+[        hdlc] {     dlms}: tx: (1/1): 8deb
+[        hdlc] {     dlms}: tx: (1/1): e6e600
+[        hdlc] {     dlms}: tx: (1/2): c30181000f0000280000ff0101091020
+[        hdlc] {     dlms}: tx: (2/2): b7df32af70d9ced08102820ae3ed17
+[  fs/service] {   filedl}: flashopErase 163:0x0 4096 B
+[        hdlc] {     dlms}: tx: (1/1): a304
+[        hdlc] {     dlms}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+[        hdlc] {     hdlc}: rx: (1/2): 7ea011610352c7fee6e700c701c1010c
+[  fs/service] {   filedl}: flashopErase 164:0x0 4096 B
+[        hdlc] {     hdlc}: rx: (2/2): 48677e
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: Action Response result: hw fault
+[        dlms] {     dlms}: processXDlmsApdu(5 B): failed
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+[  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+[  meter/dlms] {   device}: ** processDlmsPayload (12) **
+[  meter/dlms] {   device}: Broken response: check failed
+[meter/device] {   device}: Error from KT026818: comm: broken rsp
+[  fs/service] {   filedl}: flashopErase 165:0x0 4096 B
+
+
+2019-02-06  8:00:17.907 #1   001bc50c6000cad0 <log> 6:40:58.424 [debug] [  meter/upgr] {   device}: --- Upgrade result: Meter-upgrade termination ---
 
 
 
