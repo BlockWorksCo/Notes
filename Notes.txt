@@ -14562,7 +14562,7 @@ IS 802.15.4 spec
 387 Nodes must implement ICMPv6 message processing as described in [RFC4443].                   <--- Yes.
 388 Nodes must implement Neighbour Cache Management as described in [RFC6775].                  <--- No, and its a *must*
 389 Nodes must implement [RFC6775] Neighbour Solicitation with Address Registration Option
-390 (ARO) to resolve link layer addresses.                                                      <--- No.
+390 (ARO) to resolve link layer addresses.                                                      <--- No. SLAAC-optimisations.
 391 Nodes use the techniques described in [RFC6775] and [RFC6550] to optimize IPv6 Neighbour
 392 Discovery.                                                                                  <--- RFC-6550 yes (RPL), RFC-6775, no.
 393 Nodes should auto configure a link-local IPv6 address as described in [RFC4862]             <--- Yes on ethernet, not needed on mesh as IPs are allocated using EUI-64.
