@@ -14941,6 +14941,22 @@ fw Identifier = [1234567]
 
 2019-02-06  8:00:17.907 #1   001bc50c6000cad0 <log> 6:40:58.424 [debug] [  meter/upgr] {   device}: --- Upgrade result: Meter-upgrade termination ---
 
+----------------------------------------
+
+Generate certs
+
+"release" repo
+
+sudo apt install libio-all-perl
+sudo apt-get install libxml-libxml-perl libxml-simple-perl libexpect-perl libsoap-lite-perl libjson-perl libchart-clicker-perl libwww-perl libterm-readline-gnu-perl libdate-simple-perl libgraph-easy-perl libproc-simple-perl libproc-processtable-perl libipc-run-perl liblog-log4perl-perl libio-all-perl libcapture-tiny-perl libtext-asciitable-perl libyaml-perl libfile-find-rule-perl libstring-random-perl libdate-calc-perl libnet-smtp-tls-perl libio-all-perl libparse-recdescent-perl libio-captureoutput-perl libdata-structure-util-perl libfile-chdir-perl libmoo-perl libdevice-serialport-perl libnet-sftp-foreign-perl libdbd-sqlite3-perl libcrypt-ssleay-perl libio-interface-perl libdancer-perl libnet-rawip-perl libnetpacket-perl libnet-libdnet-perl libnetwork-ipv4addr-perl libnet-ipv6addr-perl libnet-write-perl libnet-frame-perl libnet-ssh-perl libnet-oping-perl libdbd-mysql-perl libbarcode-code128-perl libswitch-perl libio-socket-inet6-perl libdatetime-format-dateparse-perl
+
+
+./utils/gen_certs.pl 00-00-00-00-00-00-00-01
+
+
+
+
+
 
 
 
