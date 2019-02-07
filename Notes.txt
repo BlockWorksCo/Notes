@@ -14888,7 +14888,8 @@ Not supported.
 > Router revoking the node’s pairwise keys, followed by distribution of
 > new group keys to the remaining end nodes.
 
-Not sure what to say for all of the above. It basically re-iterates the 802.1X standard which we skipped because it would require to much cpu resources and wouldn't really give us much.
+Not sure what to say for all of the above. It basically re-iterates the 802.1X
+standard which we skipped because it would require to much cpu resources and wouldn't really give us much.
 
 
 
