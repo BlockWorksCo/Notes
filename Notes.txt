@@ -14573,7 +14573,7 @@ IS 802.15.4 spec
 398 ULA address assignments
 
 a) Mutual authentication of a node and the node to which the node connects must be
-416 supported.                                                                                  <--- encryption, yes, authentication... IPSEC? DTLS over mesh to server.
+416 supported.                                                                                  <--- Generally no, encryption, yes, authentication... IPSEC? DTLS over mesh to server.
 417 b) The Node must provide a means to restrict traffic from non-authenticated nodes.          <--- Yes, RLL key
 418 c) The Node must support establishment, refresh, and revocation of pairwise keys
 419 between Border Routers and non-Border Router nodes.                                         <--- No, RLL keys are currently re shared.
