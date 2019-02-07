@@ -14615,9 +14615,11 @@ in the EFR32 that would seem to be appropriate tho. Adding these would require a
 7 PHY requirements
 - Assumed h/w wise the part is compliant.
 
-Additionally, we need some logic around variant handling; i.e. making the code sufficiently flexible to handle multiple variants in this part of the codebase. Potentially at runtime where it is currently hardcoded.
+Additionally, we need some logic around variant handling; i.e. making the code sufficiently flexible to handle multiple variants in this part of the codebase.
+Potentially at runtime where it is currently hardcoded.
 
-Estimate: 1 weeks work to determine the details and implement with minimal dev-testing + 1 week for testing to ensure the effects of the changes are as required + a period of interoperability testing which could last as long as desired.
+Estimate: 1 weeks work to determine the details and implement with minimal dev-testing + 1 week for testing to ensure the effects of the
+changes are as required + a period of interoperability testing which could last as long as desired.
 Limitations: Need a suitable device for interop testing.  Is FEC needed? This would be roughly an additional few days to implement.
 
 
