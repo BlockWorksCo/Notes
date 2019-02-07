@@ -14576,13 +14576,13 @@ a) Mutual authentication of a node and the node to which the node connects must 
 416 supported.                                                                                  <--- encryption, yes, authentication... IPSEC? DTLS over mesh to server.
 417 b) The Node must provide a means to restrict traffic from non-authenticated nodes.          <--- Yes, RLL key
 418 c) The Node must support establishment, refresh, and revocation of pairwise keys
-419 between Border Routers and non-Border Router nodes.                                         <--- Yes, Nodes are all the same in that regard.
+419 between Border Routers and non-Border Router nodes.                                         <--- No, RLL keys are currently re shared.
 420 d) The Node must support establishment, refresh, and revocation of group keys to nodes.     <--- hmm, is the RLL key considered a 'group' key?
 421 e) The Node may support establishment, refresh, and revocation of pairwise keys
 422 between any two nodes.                                                                      <--- Yes.
 423 f) The Node must support encryption of transmitted frames and decryption of received
 424 frames.                                                                                     <--- Yes.
-425 g) The Node must support integrity checking of transmitted frames.                          <--- Yes.
+425 g) The Node must support integrity checking of transmitted frames.                          <--- Yes (assuming it means received frames).
 
 446 i) Misbehaving nodes are removed from the network by the Border Router revoking the node’s
 447 pairwise keys, followed by distribution of new group keys to the remaining end nodes.       <--- We currently can't do this I don't think.
