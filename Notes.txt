@@ -14595,6 +14595,302 @@ CoAP over DTLS.
 481 - USIL Layer: 6LoWPAN, RPL                                                                  <--- Yes, RPL and 6LoWPAN.
 
 
+
+Ok, I've had a look at the BIS PHY standard and the delta between it and what we currently have:
+
+
+
+6.1: PPDU Format:
+- Preamble field; some changes needed to length coding & decoding.
+- SFD; Assuming no FEC, a simple constant change. Addition of FEC is a simple alternative value.
+- PHR; Minor changes to logic regarding handling and rejection of frames without whitening enabled
+also have to enable data whitening on transmit (EFR32 and CC1200 support this). Other fields such
+as frame length can be updated to match.
+6.2 FEC; This is optional, so yes we can support the 'no FEC' option. There are FEC options available
+in the EFR32 that would seem to be appropriate tho. Adding these would require additional implementation and testing time.
+6.3 Modulation and Coding
+- Symbol rate and modulation index; Currently we support the 50 Ksym/sec for operating mode 1.
+- Frequency Bands and Channel Parameters; We support a wide range of frequencies already, these lie within that range.
+6.4 Data whitening; supporting this is a matter of turning on the facility in the EFR32 and marking the flags in the packet likewise.
+7 PHY requirements
+- Assumed h/w wise the part is compliant.
+
+Additionally, we need some logic around variant handling; i.e. making the code sufficiently flexible to handle multiple variants in this part of the codebase. Potentially at runtime where it is currently hardcoded.
+
+Estimate: 1 weeks work to determine the details and implement with minimal dev-testing + 1 week for testing to ensure the effects of the changes are as required + a period of interoperability testing which could last as long as desired.
+Limitations: Need a suitable device for interop testing.  Is FEC needed? This would be roughly an additional few days to implement.
+
+
+
+
+> *PHY LAYER*
+>
+>
+> The PHY layer is derived from a sub-set of [IEEE802.15.4u].
+>
+> 2-FSK modulation schemes, with channel spacing range from 100 to 200
+> kHz, are defined to provide uncoded data rates from 50 to 150 kbps.
+> FEC is optional and based upon NRNSC code.
+>
+> The PHY Protocol Data Unit (PPDU) structure is as defined in
+> [IEEE802.15.4u]. Coded and uncoded transmissions are discriminated by
+> separate Start Words. Preamble lengths are predefined to achive the
+> interoperability requirements. PHY header options are simplified by
+> enforcing no Mode Switch, Data Whitening enabled and use of 4-octet FCS.
+>
+> ____________________________________
+>
+> *MAC LAYER*
+>
+> The MAC sub-layer uses data structures defined an [IEEE802.15.4].
+>
+> The MAC sub-layer operates in non-beacon enabled mode (no periodic
+> beacon frames are defined) and hence no contention free period exists.
+> All channel access operates using contention access mode. The
+> [IEEE802.15.4] association procedures are not used.  Short addressing
+> is not within scope of this specification.
+>
+> Nodes use EUI-64 based MAC address as defined in [IEEE802.15.4].  The
+> Data and Enhanced Acknowledge frames are used and extended with a set
+> of Information Elements.  Further, all MAC payload is encapsulated in
+> an [IEEE802.15.9] MPX-IE, which enables LLC protocol dispatch.
+I think we stopped using the enhanced ack frames some years ago. We don't use MPX-IE.
+
+>
+>
+> ______________________________________
+>
+> *6LOWPAN*
+>
+> Nodes support transmission and reception of IPv6 packets over IEEE
+> 802.15.4 networks as described in [RFC4944] and amended by [RFC 6282].
+> Specifically:
+>
+> 1.     Nodes MUST implement reception for the NALP Header Type as
+> defined in [RFC4944].
+I think we do the right thing here, i.e. drop the packet.
+
+>
+> 2.     Nodes MUST implement generation and reception for the IPv6
+> Header Type as defined in [RFC4944].
+I think we support uncompressed as well, but it's not really used.
+
+>
+> 3.     Nodes MUST implement generation and reception for IPv6 Header
+> Compression (LOWPAN_IPHC) as defined in [RFC6282].  Nodes are not
+> required to implement stateful context based source, destination, or
+> multicast address compression.
+Yes we do.
+
+>
+> 4.     Nodes MUST implement generation and reception of IPv6 Extension
+> Header Compression (LOWPAN_NHC) as defined in [RFC6282] (supporting
+> IP-in-IP tunneling for packet forwarding).
+I don't think we support IP-in-IP header compression.
+
+>
+> 5.     Nodes MUST implement reception of UDP header compression as
+> defined in [RFC6282].
+Yes, we do.
+
+>
+> 6.     Nodes MUST implement support for the FRAG1 and FRAGN Header
+> Types as described in [RFC4944] (regardless of the FAN’s minimum IPv6
+> MTU size, fragmentation support is desirable  for high noise environments).
+> Fragmentation and re-assembly MUST be performed on a hop-by-hop basis.
+> Fragments MUST be transmitted in order, and indication of successful
+> fragment delivery MUST be received before the next fragment is
+> transmitted.
+Yes, we support this.
+
+>
+> 7.     Multicast packets SHOULD not be fragmented.  Fragmented
+> multicast packets MUST be ignored on receipt (as layer 2 broadcast
+> frames are unacknowledged).
+I assume this mean IPv6 layer fragmentation and not 6LowPAN fragmentation. We don't support IPv6 fragmentation at all.
+
+>
+> 8.     Nodes MUST drop any frame containing an unknown 6LoWPAN Header Type.
+We should do that.
+
+>
+>
+> _______________________________________
+>
+> *ROUTING AND IPv6*
+>
+> Nodes MUST implement the non-storing downward mode of RPL as described
+> in [RFC6550]
+Yes we do.
+
+>
+> Nodes MUST implement Neighbor Cache Management as described in [RFC6775].
+We don't do neighbor hood discovery on the radio.
+
+>
+> Nodes MUST implement [RFC6775] Neighbor Solicitation with Address
+> Registration Option (ARO) to resolve link layer addresses.
+We don't.
+
+>
+> Nodes use the techniques described in [RFC6775] and [RFC6550] to
+> optimize IPv6 Neighbor Discovery.
+We don't.
+
+>
+> Nodes MUST auto configure a link-local IPv6 address as described in
+> [RFC4862]
+Yes we do.
+
+>
+> Node MUST support Duplicate Address Detection, as described in [RFC4861].
+We don't, not on mesh radio. When using IPv6 over Ethernet we support it.
+
+>
+> Nodes MAY originate multicast ICMPv6 or UDP messaging.
+We do.
+
+>
+>
+> This next one may be applicable to our Gateway ... Do we support
+> DHCPv6 Relay agent ?
+No, we don't.
+
+>
+>
+> A Router Node MUST support the DHCPv6 Relay Agent mechanism as
+> described in [RFC3315].
+No.
+
+>
+> Nodes implement DHCPv6 [RFC3315] to provide automated management of
+> IPv6 GUA and ULA address assignments.
+Our GW has limited support for DHCPv6. HMP is using that for some deployment. There is a user story about improving the DHCPv6 support.
+
+>
+>
+> _______________________________________________
+>
+> *SECURITY**
+> *
+> let me know what we do not support / like ... I wonder if the first
+> one can be interpreted as a node being a mesh node in one side and our
+> server on the other side or if they envision mutual authentication
+> between every single mesh link in a mesh network... Which I guess we
+> do not supportAuthentication is based on the fact that the other end
+> knows about the
+RLL key and is therefor trusted.
+
+>
+>
+> Security functionalities (authentication, key management, and so on)
+> is important pieaces of this document. The BIS – LMCP supports the
+> following set of security mechanisms:
+>
+> The following section presents the technical requirements related to
+> security.
+>
+> 1.     Mutual authentication of a node and the node to which the node
+> connects MUST be supported.
+Not supported, it's only end-to-end security.
+
+>
+> 2.     The Node MUST provide a means to restrict traffic from
+> non-authenticated nodes.
+If you don't have the correct RLL-key packets will be dropped. There is support for a restricted rll-key as implemented for smip.
+
+>
+> 3.     The Node MUST support establishment, refresh, and revocation of
+> pairwise keys between Border Routers and non Border Router nodes.
+Not supported. It's a shared rll-key.
+
+>
+> 4.     The Node MUST support establishment, refresh, and revocation of
+> group keys to nodes.
+Not supported.
+
+>
+> 5.     The Node MAY support establishment, refresh, and revocation of
+> pairwise keys between any two nodes.
+Not supported.
+
+>
+> 6.     The Node MUST support encryption of transmitted frames and
+> decryption of received frames.
+That we support.
+
+>
+> 7.     The N ode MUST support integrity checking of transmitted frames.
+Should we check the integrity of frames sent? It makes more sense to check it on received frames and that we do.
+
+>
+>
+> _________________________________________________________
+>
+> *SECURITY - PART 2
+>
+> *Finally I found this from that spec and there are a number of items I
+> do not like as being far away from what we do like 802.1X.
+> Should our Gateway be considered a Border Router and is there any kind
+> of node-to-node mutual authentication, group key or node-to-node key
+> in the standards we follow or in our implementation  .
+Our Gateway is a RPL Boarder Router.
+
+> All of this below sounds like a rewrite of our RLL Management Key solution..
+A little, it's a different approach to it.
+
+>
+> So what are your comments for the text below ?
+>
+> Below are the component of the security to be implemented.
+>
+> 1.     Layer 2 network access control, mutual authentication, and
+> establishment of a secure pairwise link between a End Node and its
+> Border Router is implemented with an adaptation of [IEEE802.1X] and
+> [RFC5216] for [IEEE802.15.4].
+Not supported.
+
+>
+> 2.     Below are the role of different roles of the devices in network
+>
+> a.     Joining nodes should assume the role of SUP
+>
+> b.     Border Routers assume the role of Authenticator
+>
+> c.     A AAA service (such as RADIUS) fulfills the role of the
+> Authentication Service.
+>
+> 2.     An EAPOL Relay mechanism is defined to provide EAPOL messaging
+> between Supplicant and Authenticator when the two are not within radio
+> range of each another.
+>
+> 3.     Mutual authentication is based on [IEEE802.1AR] secure device
+> identity.
+>
+> 4.     The BIS-LMCP will support the PKI.
+>
+> 3.     An adaptation of the [IEEE802.11] 4-Way Handshake establishes a
+> shorter-lived secure pairwise link between the joining node and the
+> Border Router; the 4-Way Handshake also establishes the network group
+> security between all nodes of the network.
+>
+> 4.     Secure node to node (pairwise) links are supported between
+> one-hop neighbors using an adaptation of [ETSI-TS-102-887-2].
+>
+> 5.     BIS-LMCP nodes implements frame Security as specified in
+> section
+> 9 of [IEEE802.15.4], using either the group or node to node pairwise
+> keys previously established.
+>
+> 6.     Misbehaving nodes are removed from the network by the Border
+> Router revoking the node’s pairwise keys, followed by distribution of
+> new group keys to the remaining end nodes.
+
+Not sure what to say for all of the above. It basically re-iterates the 802.1X standard which we skipped because it would require to much cpu resources and wouldn't really give us much.
+
+
+
+
 neighbour discovery
 https://confluence.cyco.io/display/ENG/C4+-+Design?preview=%2F1179851%2F2097164%2FIPSO_NeighborDiscovery.pdf
 
