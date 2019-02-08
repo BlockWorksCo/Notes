@@ -14954,6 +14954,26 @@ sudo apt-get install libxml-libxml-perl libxml-simple-perl libexpect-perl libsoa
 ./utils/gen_certs.pl 00-00-00-00-00-00-00-01
 
 
+------------------------------------------------
+
+LMCP series of standards
+
+- "Nodes must implement RPL". A significant point of the optimisation of neighbour-discovery ([RFC6775] and [RFC6550]) is to allow sleepy-nodes. Also the supported device-types indicate support for
+battery-powered devices, yet RPL does not currently have any provision for sleepy-nodes, is there any consideration at this level for those types of devices?
+
+- Is neighbour-cache-management necessary when the product in question has an alternative method of determining node address (i.e. static or deterministic allocation of addresses).
+
+- To what extent is the standard flexible for producets that do not require interoperability (i.e. closed systems)
+
+- Is Duplicate-Address-Detection necessary in networks of statically-allocated nodes?
+
+- "Nodes implement DHCPv6 [RFC3315]" Is this a "must"? what if we have a system of static (or deterministic) addressed nodes?
+
+- "Nodes must provide a means to restrict traffic from non-authenticated nodes". If a node can filter traffic (drop packets) that does not decrypt, is this sufficient? i.e. Is this
+a requirement for authentication or a filtering function?
+
+- "The Node must support establishment, refresh, and revocation of group keys to nodes". If a product does not support the concept of groups, is this feature still required?
+
 
 
 
