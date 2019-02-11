@@ -15001,6 +15001,30 @@ protoc --encode=MqEntry interface/proto/mq.proto -I./interface/proto  < mq.text 
 cat <hex_string> | xxd -r -p > pb.bin
 protoc --decode=MqEntry interface/proto/mq.proto -I./interface/proto  < pb.bin  > pb.text
 
+------------------------------
+
+TI SensorController
+
+Ok, so out application would be running on the M4F core.
+In that sense it has 80KB SRAM & 350KB of FLASH.
+
+Problems:
+- 80KB SRAM... would *hope* we would be able to cut down our app to run in that. Not a given tho.
+- 350KB FLASH... Our app is around that size, so nothing available for firmware (or meter) upgrade unless
+we get an external SPI FLASH also. Again, we can do something about this, but we aren't right now
+(with the prospect of more security protocol modules coming up) this is likely to *increase* rather
+than stay static (or reduce).
+- The low-power 16-bit processor (SC) is currently useless to us (tho when we get into gas & water
+meters it would become *very* useful).
+
+
+
+
+
+
+
+
+
 
 
 
