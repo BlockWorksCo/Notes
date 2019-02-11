@@ -14975,6 +14975,22 @@ a requirement for authentication or a filtering function?
 - "The Node must support establishment, refresh, and revocation of group keys to nodes". If a product does not support the concept of groups, is this feature still required?
 
 
+-----------------------------------------------------------
+
+MQ issue
+
+Some MQ entries lost, server wants 7221, only 3154 to 7219 are available
+Skipping missing mq #7220
+Push re-scheduled in 7 s
+Some MQ entries lost, server wants 7221, only 3154 to 7219 are available
+Skipping missing mq #7220
+Push re-scheduled in 28 s
+Version: posix-kaifa:v144-4-g1efa345 on hw linux
+IID: 02-00-00-00-00-00-00-01
+
+sanitizePushLaterSeqNum();
+
+
 
 
 
