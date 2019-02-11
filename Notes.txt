@@ -15017,6 +15017,22 @@ than stay static (or reduce).
 - The low-power 16-bit processor (SC) is currently useless to us (tho when we get into gas & water
 meters it would become *very* useful).
 
+Other points:
+- If we needed to use that processor, the quickest way would be to take advantage of the fact that
+they already have Thread (https://www.threadgroup.org/) running on it and simple port our application
+to Thread. This would efectively remove the Connode IPv6/LoWPAN stack and you could argue would be
+better in the long-run anyway (because we can't compete with Google, ARM, TI, etc who all throw their
+money behind Thread).
+- An interesting idea would be to port the low-level radio stack to the ultra-low-power processor
+(the SC) on that device and allow the main Cortex-M4F to be turned off. This would resolve a number
+of issues we will have when going low-power (in the future).
+
+
+
+https://site.eettaiwan.com/events/iot_embed_2018/sources/05_TI_WT.pdf
+
+
+
 
 
 
