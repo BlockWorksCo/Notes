@@ -14990,7 +14990,16 @@ IID: 02-00-00-00-00-00-00-01
 
 sanitizePushLaterSeqNum();
 
+Generate protobuf (pb) binary files.
+https://medium.com/@at_ishikawa/cli-to-generate-protocol-buffers-c2cfdf633dce
 
+cat mq.text
+time: 1234
+
+protoc --encode=MqEntry interface/proto/mq.proto -I./interface/proto  < mq.text > mq.data
+
+cat <hex_string> | xxd -r -p > pb.bin
+protoc --decode=MqEntry interface/proto/mq.proto -I./interface/proto  < pb.bin  > pb.text
 
 
 
