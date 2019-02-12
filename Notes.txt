@@ -15052,6 +15052,17 @@ NUMBER UTC TIME                 T-STATUS  - ENTRY
  60940 Sun Feb 10 06:30:31 2019 in sync   - Data profile sample: USS 0000483 Sun Feb 10 06:30:34 2019 1.0.94.91.0.255: "2019-02-10T12:00:34 dev 330 status: 0x0","254.6699981689453","0.0","0.0","0.0","50.0890007019043","0.0","0.0","32238.0","60442.0","0.0","b'ffffffffffffffffff014a00'","0.0","b'ffffffffffffffffff014a00'","444150.0","0","12","2","0.0","0.0","1","16560"
 
 
+-------------------------
+
+
+2019-02-12 12:39:13.809 [debug] [          hdlclock] {   timeSynch}: -- unlocking HDLC --
+2019-02-12 12:39:13.809 [debug] [              hdlc] {   timeSynch}: disconnectLink 0x0
+2019-02-12 12:39:14.652 [ WARN] [            mqcoap] {    schedule}: Some MQ entries lost, server wants 46624, only 5879 to 21234 are available
+2019-02-12 12:39:14.653 [ WARN] [            mqcoap] {    schedule}: Skipping missing mq #21235
+
+
+
+
 
 
 
