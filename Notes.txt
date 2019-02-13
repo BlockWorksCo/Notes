@@ -15064,6 +15064,68 @@ NUMBER UTC TIME                 T-STATUS  - ENTRY
 
 
 
+------------------------------
+
+ ** Reading PFAIL BLOB **
+ -- HDLC locked --
+ GPIO Push Start (send HDLC RR)
+ Setup AA using LLS without ciphering
+ Setup AA with LLS
+ Storing configuration
+ fsOpen (/configuration-1.pb, newfile, fd=11)
+ fsClose (fd=11)
+ s_currentContextId = 3
+ Connect HDLC link
+ tx: (1/1): 7e
+ tx: (1/1): a020
+ tx: (1/1): 03
+ tx: (1/1): 41
+ tx: (1/1): 93
+ tx: (1/1): 28bc
+ tx: (1/2): 8180140502015e0602015e0704000000
+ tx: (2/2): 01080400000001
+ tx: (1/1): 51af
+ tx: (1/1): 7e
+ ** dlmspipe task waiting to be triggered (30000) **
+ ** giveCause = 3, 1 **
+ rx: (1/3): 7ea0204103733e9d8180140502015e06
+ rx: (2/3): 02015e07040000000108040000000151
+ rx: (3/3): af7e
+ tx: (1/1): 7e
+ tx: (1/1): a044
+ tx: (1/1): 03
+ tx: (1/1): 41
+ tx: (1/1): 10
+ tx: (1/1): b3e1
+ tx: (1/1): e6e600
+ tx: (1/4): 6036a1090607608574050801018a0207
+ tx: (2/4): 808b0760857405080201ac0a80083141
+ tx: (3/4): 324233433444be10040e01000000065f
+ tx: (4/4): 1f0400001f1fffff
+ tx: (1/1): dd04
+ tx: (1/1): 7e
+ ** Waiting for HDLC event (10000ms) **
+ ** giveCause = 3, 1 **
+ rx: (1/4): 7ea0374103302179e6e7006129a10906
+ rx: (2/4): 0760857405080101a203020101a305a1
+ rx: (3/4): 0302010dbe10040e0800065f1f040000
+ rx: (4/4): 1014015e00079a8a7e
+ DLMS:receiveCb (0)
+ ** Waiting for HDLC event (10000ms) **
+ COSEM AA is rejected: authentication failure
+ processAcseApdu(43 B): failed
+ DLMS result is 0 bytes with code 12
+ ** dlmsReceiveCb **
+ ** triggering dlmspipe task **
+ ** dlmspipe task triggered **
+ ** Waiting for DLMS report (14000) **
+ ** processDlmsPayload **
+ processDlmsPayload = 4, 12
+ Broken response: check failed
+ GPIO Push Finished
+
+
+
 
 
 
