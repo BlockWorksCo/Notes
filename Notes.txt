@@ -15221,6 +15221,9 @@ which decodes as:
   </GetResponseNormal>
 </GetResponse>
 
+
+
+
 In there, you can see the ESW (Equipment Status Word).
 
 
@@ -15239,5 +15242,75 @@ In there, you can see the ESW (Equipment Status Word).
 
 
 
+
+
+
+-------------------------------------
+
+
+
+@Bhavana Kotagiri @Steve Tickle @James Charlton
+Hi all.
+I tried to parse log where agent has been crashed and it seems to me that some content is a lot of strange. When agent sends request for get Profile Daily load (Get 1-0:99.2.0*255 ic 7 attr 2) then meter sends response where the length of array is a lot of size and it is 65319.  Please take a look to chunk of log
+
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [debug] [              dlms] {      device}: Get 1-0:99.2.0*255 ic 7 attr 2 by range:
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [ info] [              dlms] {      device}: Profile Daily load: From time: 2018-12-27 11:09:58
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [ info] [              dlms] {      device}: Profile Daily load: To time: 2019-01-16 11:09:58
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [debug] [              dlms] {      device}: tx unencrypted: (1/4): c0018100070100630200ff0201010204
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [debug] [              dlms] {      device}: tx unencrypted: (2/4): 020412000809060000010000ff0f0212
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [debug] [              dlms] {      device}: tx unencrypted: (3/4): 0000090c07e20c1b040b093aff014a00
+[36mlnt3ph_1  |[0m 2019-01-16 15:27:23.750 [debug] [              dlms] {      device}: tx unencrypted: (4/4): 090c07e30110030b093aff014a000100
+[36mlnt3ph_1  |[0m 2019-01-16  4:22:27.117 [debug] [              dlms] {        dlms}: rx decrypted: (1/62): c402810000000001008203d0 01 82 ff27 <---length
+[36mlnt3ph_1  |[0m 2019-01-16  4:22:27.117 [debug] [              dlms] {        dlms}: rx decrypted: (2/62): 0205090c00000000ff0000ffff014a00
+..............................................................................................................................................
+
+<GetRequest>
+  <GetRequestNormal>
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!--PROFILE_GENERIC-->
+      <ClassId Value="0007" />
+      <!--1.0.99.2.0.255-->
+      <InstanceId Value="0100630200FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+    <AccessSelection>
+      <AccessSelector Value="01" />
+      <AccessParameters>
+        <Structure Qty="04" >
+          <Structure Qty="04" >
+            <UInt16 Value="0008" />
+            <!--0.0.1.0.0.255-->
+            <OctetString Value="0000010000FF" />
+            <Int8 Value="02" />
+            <UInt16 Value="0000" />
+          </Structure>
+          <!--2018-12-27 11:09:58-->
+          <OctetString Value="07E20C1B040B093AFF014A00" />
+          <!--2019-01-16 11:09:58-->
+          <OctetString Value="07E30110030B093AFF014A00" />
+          <Array Qty="00" >
+          </Array>
+        </Structure>
+      </AccessParameters>
+    </AccessSelection>
+  </GetRequestNormal>
+</GetRequest>
+
+
+
+<GetResponse>
+  <GetResponsewithDataBlock>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <LastBlock Value="00" />
+      <BlockNumber Value="00000001" />
+      <Result>
+        <!--Block is not complete.20/976.-->
+        <RawData Value="0182FF270205090C00000000FF0000FFFF014A00" />
+      </Result>
+    </Result>
+  </GetResponsewithDataBlock>
+</GetResponse>
 
 
