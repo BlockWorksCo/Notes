@@ -15125,6 +15125,116 @@ NUMBER UTC TIME                 T-STATUS  - ENTRY
  GPIO Push Finished
 
 
+- GPIO level triggers ISR.
+- Send RR frame for alarm request
+tx: (1/3): 7ea02003819382768180140502015e06
+tx: (2/3): 02015e07040000000108040000000151
+tx: (3/3): af7e
+
+(Decodes as an SNRM frame, the RR flags are set).
+<HDLC len="31" >
+<TargetAddress Value="1" />
+<SourceAddress Value="64" />
+<!--SNRM frame.-->
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="350" />
+  <MaxInfoRX Value="350" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+</PDU>
+</HDLC>
+
+
+- receipt of UA for the above.
+rx: (1/3): 7ea020810373a4978180140502015e06
+rx: (2/3): 02015e07040000000108040000000151
+rx: (3/3): af7e
+
+(decodes as follows)
+<HDLC len="31" >
+<TargetAddress Value="64" />
+<SourceAddress Value="1" />
+<!--UA frame.-->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="350" />
+  <MaxInfoRX Value="350" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+
+
+The pushed,encrypted data is then received on the node (pushed by the meter).
+rx: (1/7): 7ea0688103105635e6e700db08474f45
+rx: (2/7): 0000018e8e82004f200000000117b22c
+rx: (3/7): 1cf312162ff40e7f2cedc8e3f0b72b95
+rx: (4/7): 1f4894f767824259a64b60b746afdb9e
+rx: (5/7): c4bf953575f54836a45c0a8c3aa3f700
+rx: (6/7): dfeb96e030a65b073722e0789efe2f2e
+rx: (7/7): cda8da1a7fb4bf05c17e
+
+
+After decryption of the pushed,encrypted data, we get the unencrypted "pushed" payload...
+09060004190900ff090c07e20816030b
+031aff014a0004820080900000000050
+00000000000000000000
+
+which decodes as:
+<GetResponse>
+  <GetResponseNormal>
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <Array Qty="01" >
+          <Structure Qty="19" >
+            <Structure Qty="02" >
+              <Int8 Value="00" />
+              <Enum Value="FF" />
+            </Structure>
+            <Structure Qty="02" >
+              <Int8 Value="FE" />
+              <Enum Value="FF" />
+            </Structure>
+            <Structure Qty="02" >
+              <Int8 Value="01" />
+              <Enum Value="1E" />
+            </Structure>
+            <Structure Qty="02" >
+              <Int8 Value="01" />
+              <Enum Value="1E" />
+            </Structure>
+            <!--0.4.25.9.0.255-->
+            <OctetString Value="0004190900FF" />
+            <!--2018-08-22 11:03:26-->
+            <OctetString Value="07E20816030B031AFF014A00" />
+            <BitString Value="10010000000000000000000000000000000000000101000000000000000000000000000000000000000000000000000000000000000000000000000000000000" />
+          </Structure>
+        </Array>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+
+In there, you can see the ESW (Equipment Status Word).
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------
 
 
 
