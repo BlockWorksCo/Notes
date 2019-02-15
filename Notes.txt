@@ -15318,3 +15318,8 @@ I tried to parse log where agent has been crashed and it seems to me that some c
 
 7ea02003819382768180140502015e0602015e07040000000108040000000151af7e`
 
+--------------------------------------
+
+CVE-2019-5736 generic container break-out exploit.
+CVE-2019-7304 Ubuntu snapd API privelage-escalation
+
