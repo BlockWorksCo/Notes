@@ -15328,6 +15328,15 @@ METRIC_RADIO_MAC_CONTENTION_PERCENTAGE:
 numSendErrorsAllTries
 
 
+CND-9058 Set Time-sync support for DST
+
+The current timesync mechanism does not take account of meters that
+don't support time-update (as opposed to time-set).
+Also, we need to set DST (deviation, enabled flags, period) on Kaifa meters
+and any others that may require this in future.
+
+Change-Id: I5ecb6d5a9ac1a492f56b56b643367d554a1c5057
+
 
 
 
