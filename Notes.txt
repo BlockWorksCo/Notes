@@ -15355,12 +15355,14 @@ Asynchronous Comms Manager (ACM)
 - Packets are opaque.
 - ACM has knowledge of how nodes are allocated to gateways, number of hops to a node, current
 throughput on mesh and cellular link (per gateway, possibly cell-id is useful here also).
-- Works using EUI-64 addressing.
+- Works using EUI-64 node-addressing.
 
 NMS uses ACM by:
 - Creation of packets and list of nodes (EUI-64s).
+- Notified of response packets by ACM.
+- Retrieval of response packets from ACM.
 
-
+SMA uses ACM by:
 
 
 
