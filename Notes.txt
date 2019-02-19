@@ -15399,6 +15399,11 @@ Do we need transparent data to optimise comms? Can we do the same with opawue da
 - Packets are unique, but can be coalesced if going towards a common gateway.
 - Required metadata? destination-EUI, jobId.
 
+Purpose of ACM:
+- To perform asychronous communications with the mesh on behalf of the application.
+- API presented to the application(s) allows large-scale multicast operations to be submitted. Responses from nodes
+will be multi-part (completion indicated by node). Job status may be polled using a unique job id allocated by ACM.
+Job statuses will show progress (packets received from node) and completion status (final packet received?)
 
 Optimisations by ACM:
 - Mesh loading; maintain throughput on the mesh by limiting activity in file-distributions, i.e. don't send
