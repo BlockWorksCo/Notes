@@ -15386,6 +15386,10 @@ means CC would be a target for and liable for data theft.
 - Pen testing of the servers.
 - AWS is a big target.
 - Shared tenency can lead to side-channel attacks such as spectre/meltdown.
+- M2M credentials as well as user credentials are targets (i.e. Ansible creds).
+- A shared ACM is required for multi-applications. This is a single point where all data is plaintext and mixed in the
+one application.
+- Differen servers should have different credentials.
 
 -----------------------------------------------
 
