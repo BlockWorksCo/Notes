@@ -15414,6 +15414,8 @@ children. Order based on outer-first and work-inwards.
 - Packet aggregation and mesh laoding; broadcast on mesh whenever possible. If packets are targetted at multiple 
 EUIs on a mesh, broadcast the packet. 
 - Takes into account the network metrics (live) from nodes & gateways.
+- Jobs can run in parallel, depending on optimisations, i.e. part of a mesh performing one job-id while the othe
+part performing a separate job-id.
 
 Addressing:
 - Nodes are addressed by EUI.
