@@ -15391,9 +15391,8 @@ means CC would be a target for and liable for data theft.
 one application.
 - Different servers should have different credentials. The system should not have one set for everything.
 - Central point for communications should be isolated from applications credential-wise.
-
-"The default privacy setting for AWS S3 buckets is owner-only. Most AWS breaches involve organizations choosing the “all authorized users” setting when expanding access to their buckets, not realizing that this setting includes all authorized users of Amazon Web Services, not just their account. This means that anyone with an AWS account can access that bucket with whatever permissions are granted to that level of access. It’s a free-for-all."
-
+- "The default privacy setting for AWS S3 buckets is owner-only. Most AWS breaches involve organizations choosing the “all authorized users” setting when expanding access to their buckets, not realizing that this setting includes all authorized users of Amazon Web Services, not just their account. This means that anyone with an AWS account can access that bucket with whatever permissions are granted to that level of access. It’s a free-for-all."
+- Principle of "least privelage", the ACM does not need to know the contents of the data so should not.
 
 -----------------------------------------------
 
