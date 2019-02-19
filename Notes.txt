@@ -15397,6 +15397,7 @@ one application.
 Do we need transparent data to optimise comms? Can we do the same with opawue data?
 - Metadata can contain the required source and destination info, payload can be encrypted.
 - Packets are unique, but can be coalesced if going towards a common gateway.
+- Required metadata? destination-EUI, jobId.
 
 
 -----------------------------------------------
