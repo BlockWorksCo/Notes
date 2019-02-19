@@ -15418,6 +15418,8 @@ Addressing:
 - For SM product, nodes register meter-id with SMA. SMA maintains EUI<->meter-id mapping, NMA has no need for this
 information.
 - UI can perform data fusion between NMA and SMA (EUI/meter-id) to present the UI.
+- ACM takes EUIs as input (destination adresses).
+- ACM provides response packets as output to applicationi, addressed by EUI to avoid dynamic IP issues.
 
 
 Phase 1: 
