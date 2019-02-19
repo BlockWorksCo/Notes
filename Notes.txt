@@ -15370,7 +15370,10 @@ ACM API:
 - POST /job         Create a multicast-job returns jobId.
 - GET /jobStatus    Get status of all multicast targets in the job.
 
-ACM encrypts on output (i.e. uses DTLS transport).
+Problem:
+- ACM encrypts on output (i.e. uses DTLS transport). If packets are encrypted
+on entry to the ACM, they cannot be multicast (as they will all be unique).
+- If ACM takes enrypted input, no multicast is possilble.
 
 -----------------------------------------------
 
