@@ -15375,6 +15375,15 @@ Problem:
 on entry to the ACM, they cannot be multicast (as they will all be unique).
 - If ACM takes enrypted input, no multicast is possilble.
 
+
+AWS security issues:
+
+- AWS doesn't protect against insider-exploits. If a bad-actor can get inside the CC or AWS, then all packets are
+wide open to tcpdump and the like. 
+- Application security is not in the domain of AWS security, we need to fuzz and lock it all down.
+- Pen testing of the servers.
+- AWS is a big target.
+
 -----------------------------------------------
 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-key /Data/Temp/00-1B-C5-0C-60-04-FD-D6/node.key.der
