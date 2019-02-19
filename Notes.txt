@@ -15413,6 +15413,7 @@ distribution requests to all nodes on a mesh, sequence them instead.
 children. Order based on outer-first and work-inwards.
 - Packet aggregation and mesh laoding; broadcast on mesh whenever possible. If packets are targetted at multiple 
 EUIs on a mesh, broadcast the packet. 
+- Takes into account the network metrics (live) from nodes & gateways.
 
 Addressing:
 - Nodes are addressed by EUI.
