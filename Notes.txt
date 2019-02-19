@@ -15419,7 +15419,7 @@ Addressing:
 information.
 - UI can perform data fusion between NMA and SMA (EUI/meter-id) to present the UI.
 - ACM takes EUIs as input (destination adresses).
-- ACM provides response packets as output to applicationi, addressed by EUI to avoid dynamic IP issues.
+- ACM provides response packets as output to application, addressed by EUI to avoid dynamic IP issues.
 
 
 Phase 1: 
