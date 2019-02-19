@@ -15409,7 +15409,15 @@ children. Order based on outer-first and work-inwards.
 - Packet aggregation and mesh laoding; broadcast on mesh whenever possible. If packets are targetted at multiple 
 EUIs on a mesh, broadcast the packet. 
 
-
+Addressing:
+- Nodes are addressed by EUI.
+- IP addresses are dynamic, based on environmental conditions, not suitable for application-level addressing.
+- IP isn't a given in future protocols, e..g ZigBee, LoRAWAN, SigFox, etc.
+- EUIs are allocated by CC in a controlled manner.
+- EUIs are static.
+- For SM product, nodes register meter-id with SMA. SMA maintains EUI<->meter-id mapping, NMA has no need for this
+information.
+- UI can perform data fusion between NMA and SMA (EUI/meter-id) to present the UI.
 
 
 Phase 1: 
