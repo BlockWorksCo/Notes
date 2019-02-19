@@ -15344,5 +15344,33 @@ Change-Id: I5ecb6d5a9ac1a492f56b56b643367d554a1c5057
 0A0B5553532030303034373133120517438260001A0E090C07E30210FF160F00FF014A001A0517419800001A051741F000001A0517000000001A0517000000001A05173EE666661A05173EE666661A0312000022100A2CC11589B722195076D70FF6FF8754288CFCA0E305
 
 
+---------------------------------------
+
+Asynchronous Comms Manager (ACM)
+- Maintain mesh in stable state, i.e. minimise disruption to mesh thru reboots, etc.
+- Optimise throughput of cellular and mesh.
+- Input is unoptimised list of nodes to send BLOBs to and topology of network.
+- Output is packets sent to nodes, scheduled according to network conditions.
+- Has to maintain estimate of current gateway load given changing topology.
+- Packets are opaque.
+- ACM has knowledge of how nodes are allocated to gateways, number of hops to a node, current
+throughput on mesh and cellular link (per gateway, possibly cell-id is useful here also).
+- Works using EUI-64 addressing.
+
+NMS uses ACM by:
+- Creation of packets and list of nodes (EUI-64s).
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
