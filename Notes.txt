@@ -15400,6 +15400,14 @@ Do we need transparent data to optimise comms? Can we do the same with opawue da
 - Required metadata? destination-EUI, jobId.
 
 
+Optimisations by ACM:
+- Mesh loading; maintain throughput on the mesh by limiting activity in file-distributions, i.e. don't send
+distribution requests to all nodes on a mesh, sequence them instead.
+- Packet aggregation; combine packets for the same gateway into one transfer over cellular to optimise bandwidth.
+- Mesh stability; order activities on mesh such that mesh stability is maintained, i.e don't reboot a node that has
+children. Order based on outer-first and work-inwards.
+
+
 -----------------------------------------------
 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-key /Data/Temp/00-1B-C5-0C-60-04-FD-D6/node.key.der
