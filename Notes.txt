@@ -15358,12 +15358,12 @@ throughput on mesh and cellular link (per gateway, possibly cell-id is useful he
 - Works using EUI-64 node-addressing.
 
 NMS uses ACM by:
-- Creation of packets and list of nodes (EUI-64s).
+- Creation of packets and list of nodes (multicast to EUI-64s).
 - Notified of response packets by ACM.
 - Retrieval of response packets from ACM.
 
 SMA uses ACM by:
-
+- Same as NMS.
 
 
 
