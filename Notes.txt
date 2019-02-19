@@ -15413,6 +15413,7 @@ Addressing:
 - Nodes are addressed by EUI.
 - IP addresses are dynamic, based on environmental conditions, not suitable for application-level addressing.
 - IP isn't a given in future protocols, e..g ZigBee, LoRAWAN, SigFox, etc.
+- Request-response durations are expected to be long, increasing the chance of changing IP during the cycle.
 - EUIs are allocated by CC in a controlled manner.
 - EUIs are static.
 - For SM product, nodes register meter-id with SMA. SMA maintains EUI<->meter-id mapping, NMA has no need for this
@@ -15420,6 +15421,8 @@ information.
 - UI can perform data fusion between NMA and SMA (EUI/meter-id) to present the UI.
 - ACM takes EUIs as input (destination adresses).
 - ACM provides response packets as output to application, addressed by EUI to avoid dynamic IP issues.
+- EUI<->IP mapping is performed on output/input to ACM (mesh-side) and is closely linked to tund to minimise chance
+of misdirected packets during mesh hopping.
 
 
 Phase 1: 
@@ -15427,6 +15430,8 @@ Phase 1:
 
 Phase 2:
 - Use application encryption.
+- At this point, packet aggregation is difficult to perform, but we could then move to a local distribution model
+as the file-distribution mechanism currently does. This would send the bulk to the gw where it gets broadcast.
 
 -----------------------------------------------
 
