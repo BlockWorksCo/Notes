@@ -15365,6 +15365,11 @@ NMS uses ACM by:
 SMA uses ACM by:
 - Same as NMS.
 
+
+ACM API:
+- POST /job         Create a multicast-job returns jobId.
+- GET /jobStatus    Get status of all multicast targets in the job.
+
 -----------------------------------------------
 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-key /Data/Temp/00-1B-C5-0C-60-04-FD-D6/node.key.der
