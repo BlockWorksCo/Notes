@@ -15406,7 +15406,17 @@ distribution requests to all nodes on a mesh, sequence them instead.
 - Packet aggregation; combine packets for the same gateway into one transfer over cellular to optimise bandwidth.
 - Mesh stability; order activities on mesh such that mesh stability is maintained, i.e don't reboot a node that has
 children. Order based on outer-first and work-inwards.
+- Packet aggregation and mesh laoding; broadcast on mesh whenever possible. If packets are targetted at multiple 
+EUIs on a mesh, broadcast the packet. 
 
+
+
+
+Phase 1: 
+- Use DTLS.
+
+Phase 2:
+- Use application encryption.
 
 -----------------------------------------------
 
