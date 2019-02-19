@@ -15380,9 +15380,12 @@ AWS security issues:
 
 - AWS doesn't protect against insider-exploits. If a bad-actor can get inside the CC or AWS, then all packets are
 wide open to tcpdump and the like. 
+- Most breakins occur due to credential theft. This means CC security is critical and the lack of end-to-end security
+means CC would be a target for and liable for data theft.
 - Application security is not in the domain of AWS security, we need to fuzz and lock it all down.
 - Pen testing of the servers.
 - AWS is a big target.
+- Shared tenency can lead to side-channel attacks such as spectre/meltdown.
 
 -----------------------------------------------
 
