@@ -15452,6 +15452,12 @@ as the file-distribution mechanism currently does. This would send the bulk to t
 
 -------------------------------------------------
 
+Hsch DV8@31c64L5a9a5S2000e2d8
+
+Schedule task, Data access violation, @31c64.
+
+Possible that discovery has not completed and s_alarmsProfile->deviceId has not been created yet.
+
 Alarm crash on startup:
 
 00031c2c <synthesizeMeterAlarm.part.13>:
