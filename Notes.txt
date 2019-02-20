@@ -15379,7 +15379,7 @@ on entry to the ACM, they cannot be multicast (as they will all be unique).
 AWS security issues:
 
 - AWS doesn't protect against insider-exploits. If a bad-actor can get inside the CC or AWS, then all packets are
-wide open to tcpdump and the like. 
+wide open to tcpdump and the like.
 - Most breakins occur due to credential theft. This means CC security is critical and the lack of end-to-end security
 means CC would be a target for and liable for data theft.
 - Application security is not in the domain of AWS security, we need to fuzz and lock it all down.
@@ -15411,8 +15411,8 @@ distribution requests to all nodes on a mesh, sequence them instead.
 - Packet aggregation; combine packets for the same gateway into one transfer over cellular to optimise bandwidth.
 - Mesh stability; order activities on mesh such that mesh stability is maintained, i.e don't reboot a node that has
 children. Order based on outer-first and work-inwards.
-- Packet aggregation and mesh laoding; broadcast on mesh whenever possible. If packets are targetted at multiple 
-EUIs on a mesh, broadcast the packet. 
+- Packet aggregation and mesh laoding; broadcast on mesh whenever possible. If packets are targetted at multiple
+EUIs on a mesh, broadcast the packet.
 - Takes into account the network metrics (live) from nodes & gateways.
 - Jobs can run in parallel, depending on optimisations, i.e. part of a mesh performing one job-id while the othe
 part performing a separate job-id.
@@ -15433,7 +15433,7 @@ information.
 of misdirected packets during mesh hopping.
 
 
-Phase 1: 
+Phase 1:
 - Use DTLS.
 
 Phase 2:
@@ -15448,6 +15448,51 @@ as the file-distribution mechanism currently does. This would send the bulk to t
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key root-cert /Data/Temp/00-1B-C5-0C-60-04-FD-D6/ca.crt.der
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --rll-key /Data/Temp/00-1B-C5-0C-60-04-FD-D6/mac_keys.txt
 
+
+
+-------------------------------------------------
+
+Alarm crash on startup:
+
+00031c2c <synthesizeMeterAlarm.part.13>:
+        DeviceAlarmsIndication* alarmsInd = MALLOCZ(sizeof(DeviceAlarmsIndication));
+   31c2c:   f241 1363   movw    r3, #4451   ; 0x1163
+static bool synthesizeMeterAlarm( uint32_t alarmId )
+   31c30:   b5f0        push    {r4, r5, r6, r7, lr}
+   31c32:   b085        sub sp, #20
+   31c34:   4607        mov r7, r0
+        DeviceAlarmsIndication* alarmsInd = MALLOCZ(sizeof(DeviceAlarmsIndication));
+   31c36:   9300        str r3, [sp, #0]
+   31c38:   2201        movs    r2, #1
+   31c3a:   4b1c        ldr r3, [pc, #112]  ; (31cac <synthesizeMeterAlarm.part.13+0x80>)
+   31c3c:   2110        movs    r1, #16
+   31c3e:   2000        movs    r0, #0
+   31c40:   f013 fcd2   bl  455e8 <reallocWrapper>
+        alarmsInd->numAlarms = 1;
+   31c44:   2601        movs    r6, #1
+        alarmsInd->raisedAlarms = MALLOCZ(alarmsInd->numAlarms * sizeof(uint32_t));
+   31c46:   f241 1365   movw    r3, #4453   ; 0x1165
+        DeviceAlarmsIndication* alarmsInd = MALLOCZ(sizeof(DeviceAlarmsIndication));
+   31c4a:   4604        mov r4, r0
+        alarmsInd->numAlarms = 1;
+   31c4c:   6006        str r6, [r0, #0]
+        alarmsInd->raisedAlarms = MALLOCZ(alarmsInd->numAlarms * sizeof(uint32_t));
+   31c4e:   4632        mov r2, r6
+   31c50:   2104        movs    r1, #4
+   31c52:   9300        str r3, [sp, #0]
+   31c54:   2000        movs    r0, #0
+   31c56:   4b15        ldr r3, [pc, #84]   ; (31cac <synthesizeMeterAlarm.part.13+0x80>)
+   31c58:   f013 fcc6   bl  455e8 <reallocWrapper>
+        alarmsInd->deviceId = s_alarmsProfile->deviceId;
+   31c5c:   4d14        ldr r5, [pc, #80]   ; (31cb0 <synthesizeMeterAlarm.part.13+0x84>)
+        alarmsInd->raisedAlarms = MALLOCZ(alarmsInd->numAlarms * sizeof(uint32_t));
+   31c5e:   6060        str r0, [r4, #4]
+        alarmsInd->deviceId = s_alarmsProfile->deviceId;
+   31c60:   682b        ldr r3, [r5, #0]
+        (void)driverGetMeterTime(&meterTime);
+   31c62:   a802        add r0, sp, #8
+        alarmsInd->deviceId = s_alarmsProfile->deviceId;
+   31c64:   689b        ldr r3, [r3, #8]                    <-------- crash here!
 
 
 
