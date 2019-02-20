@@ -15505,7 +15505,75 @@ static bool synthesizeMeterAlarm( uint32_t alarmId )
 
 stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
 stty -F /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0 9600 raw
-socat -vvv /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0,raw,echo=0,crnl
+socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0,raw,echo=0,crnl
+
+---------------------------------------------
+
+Kaifa IPA3b:
+
+baud rate over opto == 9600
+
+<HDLC len="32" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--SNRM frame.-->
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+</PDU>
+</HDLC>
+
+<HDLC len="32" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--UA frame.-->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+
+<HDLC len="65" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--AARQ frame.-->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="Low" />
+  <CallingAuthentication Value="68656C6C6F" />
+  <InitiateRequest>
+    <ProposedDlmsVersionNumber Value="6" />
+    <ProposedConformance>
+      <ConformanceBit Name="Action" />
+      <ConformanceBit Name="EventNotification" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="InformationReport" />
+      <ConformanceBit Name="MultipleReferences" />
+      <ConformanceBit Name="BlockTransferWithAction" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </ProposedConformance>
+    <ProposedMaxPduSize Value="65535" />
+  </InitiateRequest>
+</AssociationRequest>
+</PDU>
+</HDLC>
+
 
 
 
