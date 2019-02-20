@@ -15501,6 +15501,14 @@ static bool synthesizeMeterAlarm( uint32_t alarmId )
    31c64:   689b        ldr r3, [r3, #8]                    <-------- crash here!
 
 
+----------------------------------------------
+
+stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
+stty -F /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0 9600 raw
+socat -vvv /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0,raw,echo=0,crnl
+
+
+
 
 
 
