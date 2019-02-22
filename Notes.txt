@@ -15789,6 +15789,13 @@ good:
 
 
 
+-------------------------------------------
+performance monitoring:
+
+iostat -x -c -d -t 1
+mytop -umeshnet -pmeshnet sma
+
+
 
 
 
