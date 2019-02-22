@@ -15794,6 +15794,13 @@ performance monitoring:
 
 iostat -x -c -d -t 1
 mytop -umeshnet -pmeshnet sma
+while [ true ]; do mytop -umeshnet -pmeshnet -b sma && sleep 1; done
+
+/etc/mysql/mysql.conf.d/mysqld.cnf
+log_slow_queries        = /var/log/mysql/mysql-slow.log
+long_query_time = 1
+log-queries-not-using-indexes
+
 
 
 
