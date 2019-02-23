@@ -15835,10 +15835,13 @@ n device device1_ on devices0_.device_id=device1_.id where devices0_.device_prof
 
 
 
-  22376 select this_.id as id1_4_0_, this_.create_time as create_t2_4_0_, this_.alarm_hash as alarm_ha3_4_0_, this_.device_alarm_ids as device_a4_4_0_ from device_alarm_profile this_ where this_.alarm_hash='9cb1
-  22377 # Time: 2019-02-22T11:00:09.823912Z
-  22378 # User@Host: meshnet[meshnet] @ localhost [127.0.0.1]  Id:   638
-  22379 # Query_time: 0.023125  Lock_time: 0.000169 Rows_sent: 4110  Rows_examined: 8492
+243126 * 4 = 972504 (high point).
+
+ # Time: 2019-02-22T12:05:34.641576Z
+ # User@Host: meshnet[meshnet] @ localhost [127.0.0.1]  Id:   646
+ # Query_time: 0.375120  Lock_time: 0.000084 Rows_sent: 17954  Rows_examined: 50622
+ SET timestamp=1550837134;
+ select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, 
 
 
 
