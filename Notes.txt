@@ -15807,6 +15807,9 @@ log-queries-not-using-indexes
 
 grep -oP "Query_time: \K[\.0-9]+" | gnuplot -p -e 'set term pdf;set output "out.pdf";plot "/dev/stdin"'
 
+grep -oP "Query_time: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "query duration";plot "-" with points ps 0.5 '
+
+
 
 
 
