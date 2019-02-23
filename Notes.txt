@@ -15811,6 +15811,9 @@ grep -oP "Query_time: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;s
 
 grep -oP "Rows_sent: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rows sent";plot "-" with points ps 0.5 '
 
+cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 3
+
+
 
 select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, device1_.id as id1_2_1_, device1_.create_time as create_t2_2_1_, device1_.entity_version as entity_v3_2_1_, de
 vice1_.update_time as update_t4_2_1_, device1_.add_ons as add_ons5_2_1_, device1_.device_alarm_profile_id as device_10_2_1_, device1_.device_id as device_i6_2_1_, device1_.device_node_id as device_11_2_1
