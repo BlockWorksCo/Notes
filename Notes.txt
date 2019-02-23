@@ -15803,6 +15803,9 @@ long_query_time = 1
 log-queries-not-using-indexes
 
 
+----------------------------------------------------
+
+grep -oP "Query_time: \K[\.0-9]+" | gnuplot -p -e 'set term pdf;set output "out.pdf";plot "/dev/stdin"'
 
 
 
