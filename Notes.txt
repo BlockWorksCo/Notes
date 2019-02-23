@@ -15818,9 +15818,7 @@ cat sda.log | tr -s ' ' | cut -d ' ' -f 8  | gnuplot -p -e 'set term pdf;set out
 cat sda.log | tr -s ' ' | cut -d ' ' -f 7  | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rwkB/s";plot "-" with points ps 0.5 '
 
 cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 5 | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "iowait";plot "-" with points ps 0.5 '
-
 cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 4 | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "system cpu usage";plot "-" with points ps 0.5 '
-
 cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 2 | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "user cpu usage";plot "-" with points ps 0.5 '
 
 grep -oP "Rows_sent: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rows sent";plot "-" with points ps 0.5 '
