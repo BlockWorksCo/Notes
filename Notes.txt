@@ -15813,6 +15813,22 @@ grep -oP "Rows_sent: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;se
 
 cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 3
 
+cat sda.log | tr -s ' ' | cut -d ' ' -f 8  | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "avgrq-sz";plot "-" with points ps 0.5 '
+
+cat sda.log | tr -s ' ' | cut -d ' ' -f 7  | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rwkB/s";plot "-" with points ps 0.5 '
+
+cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 5 | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "iowait";plot "-" with points ps 0.5 '
+
+cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 4 | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "system cpu usage";plot "-" with points ps 0.5 '
+
+cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 2 | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "user cpu usage";plot "-" with points ps 0.5 '
+
+grep -oP "Rows_sent: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rows sent";plot "-" with points ps 0.5 '
+grep -oP "Lock_time: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "lock time";plot "-" with points ps 0.5 '
+grep -oP "Rows_examined: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rows examined";plot "-" with points ps 0.5 '
+
+grep -oP "Query_time: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "query duration";plot "-" with points ps 0.5 '
+
 
 
 select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, device1_.id as id1_2_1_, device1_.create_time as create_t2_2_1_, device1_.entity_version as entity_v3_2_1_, de
