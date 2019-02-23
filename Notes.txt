@@ -15826,7 +15826,6 @@ cat cpuStats.log | tr -s ' ' | cut -d ' ' -f 2 | gnuplot -p -e 'set term pdf;set
 grep -oP "Rows_sent: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rows sent";plot "-" with points ps 0.5 '
 grep -oP "Lock_time: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "lock time";plot "-" with points ps 0.5 '
 grep -oP "Rows_examined: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "rows examined";plot "-" with points ps 0.5 '
-
 grep -oP "Query_time: \K[\.0-9]+" mysql-slow.log | gnuplot -p -e 'set term pdf;set output "out.pdf";set title "query duration";plot "-" with points ps 0.5 '
 
 
