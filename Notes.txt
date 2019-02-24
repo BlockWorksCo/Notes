@@ -15864,6 +15864,10 @@ select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as dev
  SELECT version FROM db_version;
 
 
+# Time: 2019-02-22T14:06:40.332966Z
+
+# Time: 2019-02-22T17:37:03.965167Z
+
 
 
 
