@@ -15844,6 +15844,7 @@ n device device1_ on devices0_.device_id=device1_.id where devices0_.device_prof
  select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, 
 
 
+559695 * 4 = 2238780
 
 
 
