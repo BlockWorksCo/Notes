@@ -15844,7 +15844,25 @@ n device device1_ on devices0_.device_id=device1_.id where devices0_.device_prof
  select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, 
 
 
-559695 * 4 = 2238780
+Next high point.
+
+# Time: 2019-02-22T17:31:31.207473Z
+# User@Host: meshnet[meshnet] @ localhost [127.0.0.1]  Id:    58
+# Query_time: 0.293978  Lock_time: 0.000173 Rows_sent: 29599  Rows_examined: 79833
+SET timestamp=1550856691;
+select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, device1_.id as id1_2_1_, device1
+
+
+ use smc;
+ SET timestamp=1550857023;
+ SELECT version FROM db_version;
+ # Time: 2019-02-22T17:37:03.965202Z
+ # User@Host: meshnet[meshnet] @ localhost [127.0.0.1]  Id:    65
+ # Query_time: 0.001423  Lock_time: 0.001304 Rows_sent: 1  Rows_examined: 1
+ use sma;
+ SET timestamp=1550857023;
+ SELECT version FROM db_version;
+
 
 
 
