@@ -15841,7 +15841,7 @@ n device device1_ on devices0_.device_id=device1_.id where devices0_.device_prof
  # User@Host: meshnet[meshnet] @ localhost [127.0.0.1]  Id:   646
  # Query_time: 0.375120  Lock_time: 0.000084 Rows_sent: 17954  Rows_examined: 50622
  SET timestamp=1550837134;
- select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_, 
+ select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as device_i2_5_0_,
 
 
 Next high point.
@@ -15867,6 +15867,13 @@ select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as dev
 # Time: 2019-02-22T14:06:40.332966Z
 
 # Time: 2019-02-22T17:37:03.965167Z
+
+--------------------------------------------------------------
+
+SMIP CRT056 (RLL key support) analysis
+
+
+
 
 
 
