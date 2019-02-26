@@ -15872,30 +15872,44 @@ select devices0_.device_profile_id as device_p1_9_0_, devices0_.device_id as dev
 
 SMIP CRT056 (RLL key support) analysis
 
+Agent has low-level multiple rll-key support (mac_security), also with CoAP interface to set/get the keys/index/preferredIndex.
+Interface is defined (/rll-key & RllKeyMessage).
+Server has generated code for RllKey protobufs, but no application-level support either in UI or API.
+Tests do not exist for this functionality.
+
 Changes required:
 - Agent needs to read a table of keys and a preferred key index from the CH instead of a single key.
+- Agent needs robustness here, possibly a roll-back operation if no comms? That might not be secure, possible fallback
+- Agent needs to send event to C4 server on key-change operations.
+- Agent-side library integration API documentation.
+
+- CH needs mods to store table instead of single-key and we need updated code to be able to test against this.
+
 - Test case for first use of key after manufacture.
 - Test case for update of software from pre-mod to post-mod. Must maintain preferred key usage.
 - Test case for refurbished/sanitised CH.
 - Test case for key update test case.
 - Test case for messages from unknown index to be dropped.
+- Test case(s) for interrupted key update and recovery.
+- Fuzz testing on agent (software).
+- Fuzz testing of radio interface (CPA will want this with this change).
+- Test for events received on server for key update.
+- Test for end-to-end behaviour when update process interrupted at various points, in-transit, on Agent, loss of update events in transit?
+- What level of testing have we currently done on C4 server regards CPA? Dont want to pull a thread here.
+- Test effect on RPL with changing keys.
+- Test effect on RPL with changing keys while mesh hopping (could be dragons here?).
+
 - Interface protos need to have a key-config message. Should contain up to 8 keys/indices and a preferred key index.
-All data to be sent as one to maintain atomic-update/rollback.
-- Agent needs to implement a key-config message set/get op. Must have immediate action (/rll-key).
-- Agent needs robustness here, possibly a roll-back operation if no comms? That might not be secure, possible fallback
-to default key? or always leave default key in table? never overwrite?
-- CH needs mods to store table instead of single-key and we need updated code to be able to test against this.
-- Agent needs to send event to C4 server on key-change operations.
+
 - Server needs a new API (SOAP) endpoint to allow get/set of key-table. This needs to be restricted to a specific user-role (RllKeyProtos.java).
 - Server needs a corresponding UI mod to provide ability to set/get key-table (upload/download file? no, file-get doesn't exist).
 - Server needs to perform action on key-change event? not specified tho.
-- Documentation. What do we currently have? For CPA AMP requirements, we need to justify all diffs. Failure scenarios
-and recovery documentation. Test evidence, etc.
 - Server-side API documentation.
-- Agent-side library integration API documentation.
-- Testing. Fuzz testing on agent. What level of testing have we currently done on C4 server regards CPA? Dont want to
-pull a thread regarding this.
 
+- System Documentation. What do we currently have? For CPA AMP requirements, we need to justify all diffs. Failure scenarios
+and recovery documentation. Test evidence, etc.
+
+All data to be sent as one to maintain atomic-update/rollback.  to default key? or always leave default key in table? never overwrite?
 
 RPL implications of multiple RLL key usage.
 
