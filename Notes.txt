@@ -15885,6 +15885,7 @@ Changes required:
 
 - CH needs mods to store table instead of single-key and we need updated code to be able to test against this.
 
+- Regression tests for existing functionality given the current (untested) state.
 - Test case for first use of key after manufacture.
 - Test case for update of software from pre-mod to post-mod. Must maintain preferred key usage.
 - Test case for refurbished/sanitised CH.
