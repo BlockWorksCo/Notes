@@ -15986,3 +15986,12 @@ Got time: 2019-02-26T12:51:47.000+01:00 0
 Setting time: 2019-02-26T14:51:50.000+01:00 0
 
 
+Central European Time, 1 hour east from Greenwich, daylight saving starts
+on  the  last  Sunday  in  March  at  2 AM and ends on the last Sunday in
+October at 3 AM:
+
+          TZ='CET-1CEST,M3.5.0/2,M10.5.0/3'
+
+
+
+
