@@ -16022,6 +16022,34 @@ $3 = {ch = 77 'M', m = 10, n = 5, d = 0, s = 10800, change = 1572138000, offset 
 07E3 02 1C 04 0E 0A 0E FF FFC4 00
 
 
+--------------------------------------------
+
+7e a0 1d 02 01 41 54 cc 97 e6 e6 00 c1 01 81 00 08 00 00 01 00 00 ff 03 00 10 00 3c 21 13 7e
+
+<HDLC len="28" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--I frame.-->
+<FrameType Value="54" />
+<PDU>
+<SetRequest>
+  <SetRequestNormal>
+    <InvokeIdAndPriority Value="129" />
+    <AttributeDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="8" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="3" />
+    </AttributeDescriptor>
+    <Value>
+      <Int16 Value="60" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
+</PDU>
+</HDLC>
+
 
 
 
