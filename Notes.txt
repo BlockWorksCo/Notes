@@ -16019,6 +16019,7 @@ $2 = {ch = 77 'M', m = 3, n = 5, d = 0, s = 7200, change = 1553994000, offset = 
 (gdb) p s_tzinfo->rule[1]
 $3 = {ch = 77 'M', m = 10, n = 5, d = 0, s = 10800, change = 1572138000, offset = -7200}
 
+07E3 02 1C 04 0E 0A 0E FF FFC4 00
 
 
 
