@@ -16004,6 +16004,17 @@ vListInsert crash.
 
 16919 2019-02-28 10:33:57.749 #1   001bc50c6004fdd6 <log> 0:13:53.887 [debug] [meter/time_synch] {timeSynch}:  s_timeOfMeterGetRequest = 1551350032
 
+CET-1CEST,M3.5.0/2,M10.5.0/3
+
+CET = UTC+1
+CET-1 = UTC
+
+(gdb) p s_tzinfo->rule[0]
+$2 = {ch = 77 'M', m = 3, n = 5, d = 0, s = 7200, change = 1553994000, offset = -3600}
+(gdb) p s_tzinfo->rule[1]
+$3 = {ch = 77 'M', m = 10, n = 5, d = 0, s = 10800, change = 1572138000, offset = -7200}
+
+
 
 
 
