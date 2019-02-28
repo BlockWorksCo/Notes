@@ -16006,8 +16006,13 @@ vListInsert crash.
 
 CET-1CEST,M3.5.0/2,M10.5.0/3
 
+Standard time:
 CET = UTC+1
-CET-1 = UTC
+CET-1 = UTC+2
+
+SummerTime:
+CEST
+
 
 (gdb) p s_tzinfo->rule[0]
 $2 = {ch = 77 'M', m = 3, n = 5, d = 0, s = 7200, change = 1553994000, offset = -3600}
