@@ -16051,6 +16051,31 @@ $3 = {ch = 77 'M', m = 10, n = 5, d = 0, s = 10800, change = 1572138000, offset 
 </HDLC>
 
 
+---------------------------------------------------------------
+
+tObisCode (format=<optimized out>, value=<optimized out>, writer=<optimized out>)
+    at src/platform/core/jprintf.c:262
+262     formatUnsignedLongLongDecimal(writer, value[0], format);
+(gdb) where
+#0  formatObisCode (format=<optimized out>, value=<optimized out>, writer=<optimized out>)
+    at src/platform/core/jprintf.c:262
+#1  jvsprintf (args=..., formatString=0x701cb "On demand response failed for profile %po: %s",
+    writer=0x2000a454 <s_deviceStack+2716>) at src/platform/core/jprintf.c:534
+#2  jvsnprintf (buf=buf@entry=0x2000e555 <s_logBuf> "On demand response failed for profile  B/entry)",
+    bufSize=bufSize@entry=200, formatString=0x701cb "On demand response failed for profile %po: %s",
+    formatString@entry=0x20012198 "", args=..., args@entry=...) at src/platform/core/jprintf.c:579
+#3  0x000453d4 in logFormatted (level=level@entry=cnd_LogLevelDebug,
+    module=module@entry=0x6ff67 "meter/dlms",
+    format=0x701cb "On demand response failed for profile %po: %s") at src/platform/core/log.c:194
+#4  0x000308ae in onDemandResponseRegesterFillError (
+    message=0x701f9 "Response is timeout on OnDemandRequest", msg=0x20013190)
+    at src/device/drivers/dlms/device-dlms.c:1369
+#5  dropMessage (msg=0x20013190) at src/device/drivers/dlms/device-dlms.c:715
+#6  0x0003094c in requestCompleted (drop=drop@entry=true) at src/device/drivers/dlms/device-dlms.c:801
+#7  0x00032796 in deviceTask (arg=<optimized out>) at src/device/drivers/dlms/device-dlms.c:4308
+#8  0x0005b920 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4251
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
 
 
 
