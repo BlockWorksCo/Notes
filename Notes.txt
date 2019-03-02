@@ -16089,4 +16089,11 @@ or from server:
 ./tools/c4-tools/coap_request.py --server localhost:8080 --agent <ipv6> --log
 
 
+--------------------------
+
+extend display
+
+xrandr --output HDMI-1 --auto --right-of eDP-1
+
+
 
