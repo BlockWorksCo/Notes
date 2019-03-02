@@ -16077,7 +16077,16 @@ tObisCode (format=<optimized out>, value=<optimized out>, writer=<optimized out>
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
+---------------------------------------------------------
 
+./tools/c4-tools/coap_request.py --logmatch 1 "mac_tx" ""
+./tools/c4-tools/coap_request.py --log
+
+
+or from server:
+
+./tools/c4-tools/coap_request.py --server localhost:8080 --agent <ipv6> --logmatch 1 "mac_tx" ""
+./tools/c4-tools/coap_request.py --server localhost:8080 --agent <ipv6> --log
 
 
 
