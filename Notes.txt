@@ -16110,6 +16110,17 @@ reboot ordering.
 -
 
 
+------------------------
+
+Sniffer
+
+make host-agent
+builds CONFIG_EXAMPLE_APPS
+sniffer in:
+src/c4-examples/sniffer/
+build/hw1/bin/sniffer.elf
+
+
 
 
 
