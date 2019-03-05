@@ -16095,5 +16095,24 @@ extend display
 
 xrandr --output HDMI-1 --auto --right-of eDP-1
 
+-----------------------------------------------
+
+File distribution improvements:
+
+- more broadcast, less fill-in
+- order by hop? inside->out or outside->in? attempt to minimise mesh disturbance.
+- timed/synchronised activation.
+- Drip-feed broadcast to minimise disturbance of upstream traffic.
+- "per-gateway" timing parameters. The optimal will be different in every environment & topology.
+- On NMS, per-gateway concurrency, not per-node.
+- Putting a limit on max nodes per-gateway also limits the efficiency, instead we should strictly control the
+reboot ordering.
+
+
+
+
+
+
+
 
 
