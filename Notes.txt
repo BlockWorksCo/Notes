@@ -16120,7 +16120,10 @@ sniffer in:
 src/c4-examples/sniffer/
 build/hw1/bin/sniffer.elf
 
+New ipa3-sniffer or ipa1-sniffer:
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4001 -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DKEY-if00-port0 -loglevel debug -radiocapture radio.pcap -loglevel debug -inetcapture inet.bin
 
+use WireShark to open radio.pcap
 
 
 
