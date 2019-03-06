@@ -16126,6 +16126,38 @@ New ipa3-sniffer or ipa1-sniffer:
 use WireShark to open radio.pcap
 
 
+---------------------------------
+
+2019-03-06 11:12:49.036 #1   001bc50c6001df12 <log> 41:36:30.325 [debug] [        hdlc] {     hdlc}: tx: (1/1): a042
+2019-03-06 11:12:49.036 #1   001bc50c6001df12 <log> 41:36:30.332 [debug] [        hdlc] {     hdlc}: tx: (1/1): 0201
+2019-03-06 11:12:49.037 #1   001bc50c6001df12 <log> 41:36:30.338 [debug] [        hdlc] {     hdlc}: tx: (1/1): 41
+2019-03-06 11:12:49.037 #1   001bc50c6001df12 <log> 41:36:30.345 [debug] [        hdlc] {     hdlc}: tx: (1/1): 10
+2019-03-06 11:12:49.037 #1   001bc50c6001df12 <log> 41:36:30.351 [debug] [        hdlc] {     hdlc}: tx: (1/1): 728c
+2019-03-06 11:12:49.037 #1   001bc50c6001df12 <log> 41:36:30.358 [debug] [        hdlc] {     hdlc}: tx: (1/1): e6e600
+2019-03-06 11:12:49.089 #1   001bc50c6001df12 <log> 41:36:30.365 [debug] [        hdlc] {     hdlc}: tx: (1/4): 6033a1090607608574050801018a0207
+2019-03-06 11:12:49.089 #1   001bc50c6001df12 <log> 41:36:30.374 [debug] [        hdlc] {     hdlc}: tx: (2/4): 808b0760857405080201ac0780054a70
+2019-03-06 11:12:49.089 #1   001bc50c6001df12 <log> 41:36:30.383 [debug] [        hdlc] {     hdlc}: tx: (3/4): 733337be10040e01000000065f1f0400
+2019-03-06 11:12:49.089 #1   001bc50c6001df12 <log> 41:36:30.392 [debug] [        hdlc] {     hdlc}: tx: (4/4): 001f1fffff
+2019-03-06 11:12:49.089 #1   001bc50c6001df12 <log> 41:36:30.400 [debug] [        hdlc] {     hdlc}: tx: (1/1): bf69
+2019-03-06 11:12:49.089 #1   001bc50c6001df12 <log> 41:36:30.406 [debug] [        hdlc] {     hdlc}: tx: (1/1): 7e
+2019-03-06 11:12:49.115 #1   001bc50c6001df12 <log> 41:36:30.430 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-03-06 11:12:49.181 #1   001bc50c6001df12 <log> 41:36:30.473 [debug] [        hdlc] {     hdlc}: ** giveCause = 3, 1 **
+2019-03-06 11:12:49.181 #1   001bc50c6001df12 <log> 41:36:30.480 [debug] [        hdlc] {     hdlc}: rx: (1/4): 7ea03841020130536ee6e7006129a109
+2019-03-06 11:12:49.181 #1   001bc50c6001df12 <log> 41:36:30.490 [debug] [        hdlc] {     hdlc}: rx: (2/4): 060760857405080101a203020100a305
+2019-03-06 11:12:49.181 #1   001bc50c6001df12 <log> 41:36:30.499 [debug] [        hdlc] {     hdlc}: rx: (3/4): a103020100be10040e0800065f1f0400
+2019-03-06 11:12:49.181 #1   001bc50c6001df12 <log> 41:36:30.508 [debug] [        hdlc] {     hdlc}: rx: (4/4): 00101c020000079cdf7e
+2019-03-06 11:12:49.224 #1   001bc50c6001df12 <log> 41:36:30.516 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-03-06 11:12:49.224 #1   001bc50c6001df12 <log> 41:36:30.525 [debug] [        dlms] {     dlms}: COSEM AA with LLS setup is accepted
+2019-03-06 11:12:49.224 #1   001bc50c6001df12 <log> 41:36:30.533 [debug] [        dlms] {     dlms}: extracted server max pdu size is 512
+2019-03-06 11:12:49.224 #1   001bc50c6001df12 <log> 41:36:30.542 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.550 [debug] [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch
+2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.560 [debug] [meter/time_synch] {timeSynch}: localDeviation = -7200 meterDeviation=7200
+2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.570 [debug] [meter/time_synch] {timeSynch}: localNow = 1554552582 meterNow = 1554541780 diff=10802 utc=1554545382
+2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.582 [debug] [meter/time_synch] {timeSynch}: s_timeOfMeterSetRequest = 1554545382
+2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.591 [debug] [meter/time_synch] {timeSynch}: timeBetweenGetAndSet = 1
+2019-03-06 11:12:49.304 #1   001bc50c6001df12 <log> 41:36:30.599 [debug] [meter/time_synch] {timeSynch}: Clock drift is 3601 seconds
+
+
 
 
 
