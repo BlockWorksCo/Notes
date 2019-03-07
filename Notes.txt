@@ -16197,6 +16197,15 @@ meterNow - localNow = 3602
 (gdb) p s_meterTime
 $2 = {time = 1554541780, timeDeviation = 120, isTimeOk = true}
 
+(gdb) p *dateTime
+$8 = {date = {year = 2019, month = 4 '\004', dom = 6 '\006', dow = 6 '\006'}, time = {hour = 11 '\v', min = 9 '\t', sec = 40 '(',
+    hund = 0 '\000'}, dev = 120, clockStatus = 128 '\200'}
+
+32          meterTime->time = dlmsGetEpochTime(&tsMeter);
+(gdb) p tsMeter
+$10 = {date = {year = 2019, month = 4 '\004', dom = 6 '\006', dow = 6 '\006'}, time = {hour = 11 '\v', min = 9 '\t', sec = 40 '(',
+    hund = 0 '\000'}, dev = 120, clockStatus = 128 '\200'}
+
 
 
 2019-03-06 11:12:49.369 #1   001bc50c6001df12 <log> 41:36:30.681 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7e
