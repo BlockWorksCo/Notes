@@ -16280,6 +16280,10 @@ Set operation was:
 
 --------------------------------------
 
+unit test
+
+b testRecordFailure
+
 
 
 
