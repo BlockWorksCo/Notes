@@ -16153,18 +16153,18 @@ use WireShark to open radio.pcap
 <TargetAddress Value="32" />
 <SourceAddress Value="128" />
 <!--I frame.-->
-<FrameType Value="52" />
+
 <PDU>
 <GetResponse>
-  <GetResponseNormal>
-    <InvokeIdAndPriority Value="129" />
-    <Result>
-      <Data>
-        <!--2019-04-06 11:09:40-->
-        <OctetString Value="07E30406060B0928FF007880" />
-      </Data>
-    </Result>
-  </GetResponseNormal>
+<GetResponseNormal>
+<InvokeIdAndPriority Value="129" />
+<Result>
+  <Data>
+    <!--2019-04-06 11:09:40-->
+    <OctetString Value="07E30406060B0928FF007880" />
+  </Data>
+</Result>
+</GetResponseNormal>
 </GetResponse>
 </PDU>
 </HDLC>
@@ -16196,6 +16196,48 @@ meterNow - localNow = 3602
 
 (gdb) p s_meterTime
 $2 = {time = 1554541780, timeDeviation = 120, isTimeOk = true}
+
+
+
+2019-03-06 11:12:49.369 #1   001bc50c6001df12 <log> 41:36:30.681 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7e
+2019-03-06 11:12:49.369 #1   001bc50c6001df12 <log> 41:36:30.688 [debug] [        hdlc] {timeSynch}: tx: (1/1): a028
+2019-03-06 11:12:49.369 #1   001bc50c6001df12 <log> 41:36:30.694 [debug] [        hdlc] {timeSynch}: tx: (1/1): 0201
+2019-03-06 11:12:49.412 #1   001bc50c6001df12 <log> 41:36:30.701 [debug] [        hdlc] {timeSynch}: tx: (1/1): 41
+2019-03-06 11:12:49.412 #1   001bc50c6001df12 <log> 41:36:30.707 [debug] [        hdlc] {timeSynch}: tx: (1/1): 32
+2019-03-06 11:12:49.412 #1   001bc50c6001df12 <log> 41:36:30.714 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7963
+2019-03-06 11:12:49.412 #1   001bc50c6001df12 <log> 41:36:30.721 [debug] [        hdlc] {timeSynch}: tx: (1/1): e6e600
+2019-03-06 11:12:49.412 #1   001bc50c6001df12 <log> 41:36:30.728 [debug] [        hdlc] {timeSynch}: tx: (1/2): c1018100080000010000ff0200090c07
+2019-03-06 11:12:49.412 #1   001bc50c6001df12 <log> 41:36:30.737 [debug] [        hdlc] {timeSynch}: tx: (2/2): e30406060c092aff007880
+2019-03-06 11:12:49.433 #1   001bc50c6001df12 <log> 41:36:30.745 [debug] [        hdlc] {timeSynch}: tx: (1/1): 17d2
+2019-03-06 11:12:49.433 #1   001bc50c6001df12 <log> 41:36:30.751 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7e
+
+
+
+
+ len="39" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--I frame.-->
+<FrameType Value="32" />
+<PDU>
+<SetRequest>
+  <SetRequestNormal>
+    <InvokeIdAndPriority Value="129" />
+    <AttributeDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="8" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="2" />
+    </AttributeDescriptor>
+    <Value>
+      <!--2019-04-06 12:09:42-->
+      <OctetString Value="07E30406060C092AFF007880" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
+</PDU>
+</HDLC>
 
 
 
