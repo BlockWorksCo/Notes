@@ -16250,19 +16250,26 @@ $10 = {date = {year = 2019, month = 4 '\004', dom = 6 '\006', dow = 6 '\006'}, t
 
 
 
+2019-03-06 11:12:48.500 #1   001bc50c6001df12 <log> 41:36:29.807 [ info] [meter/common] {timeSynch}: Got time: 2019-04-06T11:09:40.000+02:00 0
 
 time from meter = 11:09 + 2     (local)
                 =  9:09         (UTC)
 
 
+2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.570 [debug] [meter/time_synch] {timeSynch}: localNow = 1554552582 meterNow = 1554541780 diff=10802 utc= 1554545382
+(Saturday, 6 April 2019 10:09:42)
+
 Time on node (truth)    = 12:09 (local)
                         = 10:09 (UTC)
 
 
-Therefore meter has drift of 12:09->11:09 = -3600
+Therefore meter has drift of 12:09->11:09 = -3600 (its gone back 1 hr).
 
 So, relative difference = -3600 (for adjust operation)
 or  absolute value      = 12:09 + 2     (local)
+
+Set operation was:
+2019-03-06 11:12:49.304 #1   001bc50c6001df12 <log> 41:36:30.607 [ info] [meter/common] {timeSynch}: Setting time: 2019-04-06T12:09:42.000+02:00 0
 
 
 
