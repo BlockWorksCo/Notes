@@ -16250,6 +16250,27 @@ $10 = {date = {year = 2019, month = 4 '\004', dom = 6 '\006', dow = 6 '\006'}, t
 
 
 
+
+time from meter = 11:09 + 2     (local)
+                =  9:09         (UTC)
+
+
+Time on node (truth)    = 12:09 (local)
+                        = 10:09 (UTC)
+
+
+Therefore meter has drift of 12:09->11:09 = -3600
+
+So, relative difference = -3600 (for adjust operation)
+or  absolute value      = 12:09 + 2     (local)
+
+
+
+
+
+
+
+
 --------------------------------------
 
 
