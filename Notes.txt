@@ -16184,10 +16184,22 @@ use WireShark to open radio.pcap
 2019-03-06 11:12:49.267 #1   001bc50c6001df12 <log> 41:36:30.591 [debug] [meter/time_synch] {timeSynch}: timeBetweenGetAndSet = 1
 2019-03-06 11:12:49.304 #1   001bc50c6001df12 <log> 41:36:30.599 [debug] [meter/time_synch] {timeSynch}: Clock drift is 3601 seconds
 
+localNow = 1554552582
+meterNow = 1554541780
+diff=10802
+utc = 1554545382
+
 meterNow - utcNow = 10802
 localNow - utcNow = 7200
 meterNow - localNow = 3602
 
+
+(gdb) p s_meterTime
+$2 = {time = 1554541780, timeDeviation = 120, isTimeOk = true}
+
+
+
+--------------------------------------
 
 
 
