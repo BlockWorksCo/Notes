@@ -16322,6 +16322,77 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
 
+<HDLC len="35" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--I frame.-->
+<FrameType Value="54" />
+<NextFrame Value="6215800100BE10040E01000000065F1F0400001F1FFFFF" />
+</HDLC>
+
+<HDLC len="35" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--I frame.-->
+<FrameType Value="74" />
+<PDU>
+<ReleaseResponse>
+  <Reason Value="Normal" />
+  <InitiateResponse>
+    <NegotiatedDlmsVersionNumber Value="6" />
+    <ProposedConformance>
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </NegotiatedConformance>
+    <NegotiatedMaxPduSize Value="512" />
+    <VaaName Value="7" />
+  </InitiateResponse>
+</ReleaseResponse>
+</PDU>
+</HDLC>
+
+<HDLC len="31" >
+<TargetAddress Value="0" />
+<SourceAddress Value="0" />
+<!--SNRM frame.-->
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+</PDU>
+</HDLC>
+
+<HDLC len="31" >
+<TargetAddress Value="0" />
+<SourceAddress Value="0" />
+<!--UA frame.-->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="256" />
+  <MaxInfoRX Value="256" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+
+<HDLC len="9" >
+<TargetAddress Value="0" />
+<SourceAddress Value="0" />
+<!--S frame.-->
+<FrameType Value="13" />
+<Command Value="NextFrame" />
+</HDLC>
+
+
+requestAlarmsMask();
 
 
 
