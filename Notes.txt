@@ -16396,4 +16396,101 @@ requestAlarmsMask();
 
 
 
+-----------------------------------------------------------
+
+[meter/time_synch] {timeSynch}: ** Setting DST daylight_savings_end **
+[        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 6 valueLen 14 B
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a028
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): ba
+[        hdlc] {timeSynch}: tx: (1/1): 396b
+[        hdlc] {timeSynch}: tx: (1/1): e6e600
+[        hdlc] {timeSynch}: tx: (1/2): c1018100080000010000ff0600090cff
+[        hdlc] {timeSynch}: tx: (2/2): ff0afe07030000ff800000
+[        hdlc] {timeSynch}: tx: (1/1): 2257
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[meter/time_synch] {timeSynch}: (out) s_clockState = 5
+[        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+[        hdlc] {     hdlc}: rx: (1/2): 7ea011410201daf217e6e700c5018100
+[        hdlc] {     hdlc}: rx: (2/2): 36cf7e
+[        hdlc] {     hdlc}: HDLC_TYPE_I
+[        hdlc] {     hdlc}: Passing IFrame up the stack to the DLMS task.
+[        hdlc] {     hdlc}: !! Result == ResultOK !!
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch (0b 0x0)
+[meter/time_synch] {timeSynch}: Previous step was ok, continuing with sequence.
+[meter/time_synch] {timeSynch}: ** Time sync complete **
+
+At this point, everything is good, time-sync has just finished, so we disconnect the link.
+
+[    modemdrv] {    modem}: Not present
+[       modem] {    modem}: Unknown -> Unknown
+[    modemdrv] {    modem}: Not present
+[        dlms] {timeSynch}: Disconnect HDLC link
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+[        hdlc] {timeSynch}: tx: (1/1): a008
+[        hdlc] {timeSynch}: tx: (1/1): 0201
+[        hdlc] {timeSynch}: tx: (1/1): 41
+[        hdlc] {timeSynch}: tx: (1/1): 53
+[        hdlc] {timeSynch}: tx: (1/1): 6771
+[        hdlc] {timeSynch}: tx: (1/1): 7e
+
+Disconnect request sent
+
+
+[meter/time_synch] {timeSynch}: (out) s_clockState = 0
+[        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+[        hdlc] {     hdlc}: rx: (1/3): 7ea02141020173e8fb81801405020100
+[        hdlc] {     hdlc}: rx: (2/3): 06020100070400000001080400000001
+[        hdlc] {     hdlc}: rx: (3/3): 696d7e
+[        hdlc] {     hdlc}: HDLC_TYPE_UA
+[        hdlc] {     hdlc}: HDLC link disconnected
+[        hdlc] {     hdlc}: !! Result == ResultOK !!
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+[meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch (0b 0x0)
+[    hdlclock] {timeSynch}: -- unlocking HDLC --
+[        hdlc] {timeSynch}: disconnectLink 0x0
+[        hdlc] {   device}: disconnectLink 0x0
+[        hdlc] {   device}: Connect HDLC link
+[        hdlc] {   device}: tx: (1/1): 7e
+[        hdlc] {   device}: tx: (1/1): a020
+[        hdlc] {   device}: tx: (1/1): 01
+[        hdlc] {   device}: tx: (1/1): 01
+[        hdlc] {   device}: tx: (1/1): 93
+[        hdlc] {   device}: tx: (1/1): f64f
+[        hdlc] {   device}: tx: (1/2): 81801405020100060201000704000000
+[        hdlc] {   device}: tx: (2/2): 01080400000001
+[        hdlc] {   device}: tx: (1/1): 696d
+[        hdlc] {   device}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+[        hdlc] {     hdlc}: rx: (1/3): 7ea020010173f8a88180140502010006
+[        hdlc] {     hdlc}: rx: (2/3): 02010007040000000108040000000169
+[        hdlc] {     hdlc}: rx: (3/3): 6d7e
+[        hdlc] {     hdlc}: HDLC_TYPE_UA
+[        hdlc] {     hdlc}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: tx: (1/1): a007
+[        hdlc] {     hdlc}: tx: (1/1): 01
+[        hdlc] {     hdlc}: tx: (1/1): 01
+[        hdlc] {     hdlc}: tx: (1/1): 13
+[        hdlc] {     hdlc}: tx: (1/1): 8c13
+[        hdlc] {     hdlc}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: !! Result == ResultOK !!
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+[        hdlc] {     hdlc}: rx: (1/1): 7ea00c01011002e1e6e7009eb47e
+[        hdlc] {     hdlc}: HDLC_TYPE_I
+[        hdlc] {     hdlc}: Passing IFrame up the stack to the DLMS task.
+[meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0 from dev dlms (0b 0x0)
+[meter/kaifaMa304] {     hdlc}: previous message *NOT* processed, *NOT* ok to proceed.
+
+
+
+
+
+
+
 
