@@ -16543,4 +16543,19 @@ NextFrame->
 
 
 
+7ea020010173f8a88180140502010006 02010007040000000108040000000169 6d7e
+
+at receiveCb when previous message has not been processed:
+
+#0  receiveCb (payload=0x20019d88 "\017@", len=34, res=<optimized out>) at src/device/drivers/kaifa_ma304/device-kaifa_ma304.c:584
+#1  0x08047510 in processHdlcUAFrame (header=<optimized out>) at src/device/communication/hdlc/hdlc.c:1077
+#2  processHdlcMacFrame (header=0x2000dbc8 <s_hdlcStack+1136>) at src/device/communication/hdlc/hdlc.c:1178
+#3  parseMac (bb=0x20019de8) at src/device/communication/hdlc/hdlc.c:1356
+#4  processRxMessage () at src/device/communication/hdlc/hdlc.c:1377
+#5  hdlcReaderTask (arg=<optimized out>) at src/device/communication/hdlc/hdlc.c:1452
+#6  0x080660b4 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4251
+
+
+
+
 
