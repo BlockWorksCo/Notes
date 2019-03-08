@@ -16439,7 +16439,7 @@ At this point, everything is good, time-sync has just finished, so we disconnect
 [        hdlc] {timeSynch}: tx: (1/1): 7e
 
 Disconnect request sent
-
+We now expect a UA from the meter in response.
 
 [meter/time_synch] {timeSynch}: (out) s_clockState = 0
 [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
@@ -16448,6 +16448,9 @@ Disconnect request sent
 [        hdlc] {     hdlc}: rx: (3/3): 696d7e
 [        hdlc] {     hdlc}: HDLC_TYPE_UA
 [        hdlc] {     hdlc}: HDLC link disconnected
+
+UA received from meter, we're now disconnected.
+
 [        hdlc] {     hdlc}: !! Result == ResultOK !!
 [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
 [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
@@ -16455,6 +16458,9 @@ Disconnect request sent
 [    hdlclock] {timeSynch}: -- unlocking HDLC --
 [        hdlc] {timeSynch}: disconnectLink 0x0
 [        hdlc] {   device}: disconnectLink 0x0
+
+duplicate disconnectLink here.
+
 [        hdlc] {   device}: Connect HDLC link
 [        hdlc] {   device}: tx: (1/1): 7e
 [        hdlc] {   device}: tx: (1/1): a020
@@ -16466,11 +16472,17 @@ Disconnect request sent
 [        hdlc] {   device}: tx: (2/2): 01080400000001
 [        hdlc] {   device}: tx: (1/1): 696d
 [        hdlc] {   device}: tx: (1/1): 7e
+
+SNRM sent.
+
 [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
 [        hdlc] {     hdlc}: rx: (1/3): 7ea020010173f8a88180140502010006
 [        hdlc] {     hdlc}: rx: (2/3): 02010007040000000108040000000169
 [        hdlc] {     hdlc}: rx: (3/3): 6d7e
 [        hdlc] {     hdlc}: HDLC_TYPE_UA
+
+UA received, we're now disconnected.
+
 [        hdlc] {     hdlc}: tx: (1/1): 7e
 [        hdlc] {     hdlc}: tx: (1/1): a007
 [        hdlc] {     hdlc}: tx: (1/1): 01
@@ -16478,11 +16490,40 @@ Disconnect request sent
 [        hdlc] {     hdlc}: tx: (1/1): 13
 [        hdlc] {     hdlc}: tx: (1/1): 8c13
 [        hdlc] {     hdlc}: tx: (1/1): 7e
+
+
+We sent the special frame to retrieve the push data.
+
+<HDLC len="9" >
+<TargetAddress Value="0" />
+<SourceAddress Value="0" />
+<!--S frame.-->
+<FrameType Value="13" />
+<Command Value="NextFrame" />
+</HDLC>
+
+
 [        hdlc] {     hdlc}: !! Result == ResultOK !!
 [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
 [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
 [        hdlc] {     hdlc}: rx: (1/1): 7ea00c01011002e1e6e7009eb47e
 [        hdlc] {     hdlc}: HDLC_TYPE_I
+
+In response to the special message, we get this packet, presumably the push data.
+7e a00c 01 011002e1 e6e700 9eb4 7e
+
+./HDLCToPDU.py 7ea00c01011002e1e6e7009eb47e
+<HDLC>
+  <controlField value="10" />
+  <frameFormat value="a000,12" />
+  <src value="1" />
+  <dst value="1" />
+  <LLC value="e6" />
+  <HCS value="2e1" />
+  <PDU value="" />
+  <FCS value="9eb4" />
+</HDLC>
+
 [        hdlc] {     hdlc}: Passing IFrame up the stack to the DLMS task.
 [meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0 from dev dlms (0b 0x0)
 [meter/kaifaMa304] {     hdlc}: previous message *NOT* processed, *NOT* ok to proceed.
