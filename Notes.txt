@@ -16309,6 +16309,19 @@ Kaifa HW1
 2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.060 [debug] [        hdlc] {   device}: tx: (1/1): 7e
 2019-03-08 10:16:52.876 #1   001bc50c6004fdd6 <log> 0:38:20.066 [debug]
 
+--------------------------------------------------
+
+(gdb) where
+#0  0x0806f294 in memcmp ()
+#1  0x08048966 in dlmsGetDateTime (payload=payload@entry=0x0, payloadLen=payloadLen@entry=0, dateTime=dateTime@entry=0x2000d51c <s_timeSynchStack+2988>) at src/device/communication/dlms/dlms.c:2021
+#2  0x08046546 in handleMeterTime (data=0x0, dataLen=0, meterTime=meterTime@entry=0x2000c938 <s_meterTime>) at src/device/drivers/dlms-common/device-dlms-common.c:30
+#3  0x0804635e in processDlmsPayload () at src/device/drivers/dlms/time-synch/time_synch.c:324
+#4  timeSynchTask (arg=<optimized out>) at src/device/drivers/dlms/time-synch/time_synch.c:398
+#5  0x08065a38 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4251
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
+
 
 
 
