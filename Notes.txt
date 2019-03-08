@@ -16288,6 +16288,8 @@ b testRecordFailure
 
 ---------------------------------
 
+Kaifa HW1
+~/node83.log
 019-03-08 10:16:52.698 #1   001bc50c6004fdd6 <log> 0:38:19.920 [debug] [meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0
 2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.929 [debug] [meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0
 2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.938 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
