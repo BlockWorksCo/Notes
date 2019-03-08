@@ -16530,6 +16530,15 @@ In response to the special message, we get this packet, presumably the push data
 
 
 
+---------------
+
+ !! (probably) ISR triggered hdlcSend  !!
+
+SNRM->
+<-UA
+
+NextFrame->
+<-PushData
 
 
 
