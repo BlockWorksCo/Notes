@@ -16286,6 +16286,28 @@ b testRecordFailure
 
 
 
+---------------------------------
+
+019-03-08 10:16:52.698 #1   001bc50c6004fdd6 <log> 0:38:19.920 [debug] [meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0
+2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.929 [debug] [meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0
+2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.938 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.946 [debug] [meter/kaifaMa304] {   device}: Received Alarm Indication Mask 83910853
+2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.956 [debug] [device_alarms] {   device}: Alarms state changed for device 7340157030078388
+2019-03-08 10:16:52.746 #1   001bc50c6004fdd6 <log> 0:38:19.970 [debug] [      fs_api] {   device}: fsOpen (/mq/009.mq, mode=3, fd=4)
+2019-03-08 10:16:52.790 #1   001bc50c6004fdd6 <log> 0:38:19.979 [ WARN] [        uffs] {   device}: pbuf: parent or serial in dirty pages buffer are not the same ?
+2019-03-08 10:16:52.790 #1   001bc50c6004fdd6 <log> 0:38:19.989 [ WARN] [        uffs] {   device}: fs  : write inter data fail!
+2019-03-08 10:16:52.790 #1   001bc50c6004fdd6 <log> 0:38:19.997 [ WARN] [        uffs] {   device}: pbuf: parent or serial in dirty pages buffer are not the same ?
+2019-03-08 10:16:52.790 #1   001bc50c6004fdd6 <log> 0:38:20.008 [debug] [      fs_api] {   device}: fsClose (fd=4)
+2019-03-08 10:16:52.790 #1   001bc50c6004fdd6 <log> 0:38:20.015 [ERROR] [   mqstorage] {   device}: Failed to write m# 2285340 of size 44 to /mq/009.mq
+2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.025 [debug] [    hdlclock] {   device}: -- unlocking HDLC --
+2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.032 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.039 [debug] [        hdlc] {   device}: Disconnect HDLC link
+2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.046 [debug] [    hdlclock] {   device}: -- HDLC locked --
+2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.053 [debug] [        hdlc] {   device}: Connect HDLC link
+2019-03-08 10:16:52.833 #1   001bc50c6004fdd6 <log> 0:38:20.060 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-03-08 10:16:52.876 #1   001bc50c6004fdd6 <log> 0:38:20.066 [debug]
+
+
 
 
 
