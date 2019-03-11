@@ -16555,6 +16555,30 @@ at receiveCb when previous message has not been processed:
 #5  hdlcReaderTask (arg=<optimized out>) at src/device/communication/hdlc/hdlc.c:1452
 #6  0x080660b4 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4251
 
+-----------------------------------
+
+
+void test()
+{
+    ASSERT( timeIsNearDSTBoundary( 1552126538, 100 ) == false );
+    ASSERT( timeIsNearDSTBoundary( 1572145200, 100 ) == true );
+    ASSERT( timeIsNearDSTBoundary( 1554001200, 100 ) == true );
+
+    ASSERT( timeIsNearDSTBoundary( 1572145200-101, 100 ) == false );
+    ASSERT( timeIsNearDSTBoundary( 1554001200-101, 100 ) == false );
+
+    ASSERT( timeIsNearDSTBoundary( 1572145200+101, 100 ) == false );
+    ASSERT( timeIsNearDSTBoundary( 1554001200+101, 100 ) == false );
+
+    ASSERT( timeIsNearDSTBoundary( 1572145200-99, 100 ) == true );
+    ASSERT( timeIsNearDSTBoundary( 1554001200-99, 100 ) == true );
+
+    ASSERT( timeIsNearDSTBoundary( 1572145200+99, 100 ) == true );
+    ASSERT( timeIsNearDSTBoundary( 1554001200+99, 100 ) == true );
+}
+
+
+
 
 
 
