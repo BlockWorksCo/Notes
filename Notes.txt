@@ -16682,5 +16682,41 @@ $2 = {tm_sec = 22, tm_min = 53, tm_hour = 0, tm_mday = 31, tm_mon = 2, tm_year =
   tm_yday = 89, tm_isdst = 0, tm_gmtoff = 0, tm_zone = 0x0}
 
 
+------------------------------------------
+
+Profile read from Kaifa meter:
+
+[ cndfs/utils] {   device}: Found metadata #0 for /mq/002.mq: id=19 st=320 sz=11053 refs=0
+[   mqstorage] {   device}: Wrote m# 16284 of size 74 to file /mq/002.mq size 11053
+[meter/kaifaMa304] {   device}: Profile 1-0:99.1.0*255: Fetching row 1827
+[        hdlc] {   device}: tx: (1/1): 7e
+[        hdlc] {   device}: tx: (1/1): a02d
+[        hdlc] {   device}: tx: (1/1): 0201
+[        hdlc] {   device}: tx: (1/1): 41
+[        hdlc] {   device}: tx: (1/1): 76
+[        hdlc] {   device}: tx: (1/1): 0d41
+[        hdlc] {   device}: tx: (1/1): e6e600
+[        hdlc] {   device}: tx: (1/2): c0018100070100630100ff0201020204
+[        hdlc] {   device}: tx: (2/2): 06000007230600000723120000120000
+[        hdlc] {   device}: tx: (1/1): c04f
+[        hdlc] {   device}: tx: (1/1): 7e
+[        hdlc] {     hdlc}: rx: (1/4): 7ea039410201962ba5e6e700c4018100
+[        hdlc] {     hdlc}: rx: (2/4): 01010206090c07e3030c020e1e00ff00
+[        hdlc] {     hdlc}: rx: (3/4): 3c001100060000000006000000000600
+[        hdlc] {     hdlc}: rx: (4/4): 000000060000000000bb7e
+[meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0
+[meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0
+[        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+[meter/kaifaMa304] {   device}: Profile 1-0:99.1.0*255: Timestamp: 2019-03-12 14:30:00 at row 1827
+[ dataProfile] {   device}: New data profile sample from 7340157030078388
+[ cndfs/utils] {   device}: Found metadata #0 for /mq/002.mq: id=19 st=320 sz=11053 refs=0
+[ cndfs/utils] {   device}: Found metadata #0 for /mq/002.mq: id=19 st=320 sz=11053 refs=0
+[      fs/api] {   device}: fsOpen (/mq/002.mq, mode=3, fd=0)
+[       cndfs] {   device}: Committing 76 B at 11053 (filesize 11053)
+[  fs/service] {   device}: flashopProgram 323:0x0 40 B
+[  fs/service] {   device}: flashopProgram 323:0xbaf 76 B
+[ cndfs/utils] {   device}: Found metadata #0 for /mq/002.mq: id=19 st=320 sz=11129 refs=0
+[   mqstorage] {   device}: Wrote m# 16285 of size 74 to file /mq/002.mq size 11129
+
 
 
