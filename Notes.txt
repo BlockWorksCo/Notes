@@ -16660,11 +16660,27 @@ void test()
 </HDLC>
 
 07E3 03 1F 00 00 35 16 FF 003C 00
-07e3 03 1f 00 03 35 16 ff 0078 00
+07e3 03 1f 00 00 35 16 ff 003c 00
+
+07e3 03 0b 01 0c 2f 16 ff 003c 00
 
 bbWriteU8(bb, t.tm_wday);
 time_t tm_wday
 should be 0xff;
+
+should be:
+Setting time: 2019-03-31T00:53:22.000+01:00 0
+              2019-03-31T00:53:22.000+01:00 0
+
+
+(gdb) p localNowTm
+$1 = {tm_sec = 22, tm_min = 53, tm_hour = 23, tm_mday = 30, tm_mon = 2, tm_year = 119, tm_wday = 6,
+  tm_yday = 88, tm_isdst = 0, tm_gmtoff = 0, tm_zone = 0x0}
+
+(gdb) p t
+$2 = {tm_sec = 22, tm_min = 53, tm_hour = 0, tm_mday = 31, tm_mon = 2, tm_year = 119, tm_wday = 0,
+  tm_yday = 89, tm_isdst = 0, tm_gmtoff = 0, tm_zone = 0x0}
+
 
 
 
