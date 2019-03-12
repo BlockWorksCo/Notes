@@ -16580,6 +16580,90 @@ void test()
 
 
 
+-------------------------------------
+
+2019-03-11 17:40:30.040 #4   001bc50c6001df12 <log> 2:46:15.911 [debug] [        dlms] {     dlms}: COSEM AA with LLS setup is accepted
+2019-03-11 17:40:30.040 #4   001bc50c6001df12 <log> 2:46:15.919 [debug] [        dlms] {     dlms}: extracted server max pdu size is 512
+2019-03-11 17:40:30.041 #4   001bc50c6001df12 <log> 2:46:15.928 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2019-03-11 17:40:30.083 #4   001bc50c6001df12 <log> 2:46:15.936 [debug] [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=0 from time synch (0 bytes 0x0)
+2019-03-11 17:40:30.084 #4   001bc50c6001df12 <log> 2:46:15.947 [debug] [meter/time_synch] {timeSynch}: localDeviation = -3600 meterDeviation=3600
+2019-03-11 17:40:30.084 #4   001bc50c6001df12 <log> 2:46:15.957 [debug] [meter/time_synch] {timeSynch}: localNow = 1553993602 meterNow = 1553983237 diff=10365 utc=1553990002
+2019-03-11 17:40:30.084 #4   001bc50c6001df12 <log> 2:46:15.969 [debug] [meter/time_synch] {timeSynch}: s_timeOfMeterSetRequest = 1553990002
+2019-03-11 17:40:30.125 #4   001bc50c6001df12 <log> 2:46:15.978 [debug] [meter/time_synch] {timeSynch}: timeBetweenGetAndSet = 1
+2019-03-11 17:40:30.126 #4   001bc50c6001df12 <log> 2:46:15.986 [debug] [meter/time_synch] {timeSynch}: Clock drift is -6764 seconds
+2019-03-11 17:40:30.126 #4   001bc50c6001df12 <log> 2:46:15.994 [ info] [meter/common] {timeSynch}: Setting time: 2019-03-31T00:53:22.000+01:00 0
+2019-03-11 17:40:30.126 #4   001bc50c6001df12 <log> 2:46:16.004 [debug] [        dlms] {timeSynch}: Set 0-0:1.0.0*255 ic 8 attr 2 valueLen 14 B
+2019-03-11 17:40:30.206 #4   001bc50c6001df12 <log> 2:46:16.063 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7e
+2019-03-11 17:40:30.206 #4   001bc50c6001df12 <log> 2:46:16.069 [debug] [        hdlc] {timeSynch}: tx: (1/1): a028
+2019-03-11 17:40:30.206 #4   001bc50c6001df12 <log> 2:46:16.076 [debug] [        hdlc] {timeSynch}: tx: (1/1): 0201
+2019-03-11 17:40:30.206 #4   001bc50c6001df12 <log> 2:46:16.082 [debug] [        hdlc] {timeSynch}: tx: (1/1): 41
+2019-03-11 17:40:30.206 #4   001bc50c6001df12 <log> 2:46:16.089 [debug] [        hdlc] {timeSynch}: tx: (1/1): 32
+2019-03-11 17:40:30.206 #4   001bc50c6001df12 <log> 2:46:16.095 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7963
+2019-03-11 17:40:30.253 #4   001bc50c6001df12 <log> 2:46:16.102 [debug] [        hdlc] {timeSynch}: tx: (1/1): e6e600
+2019-03-11 17:40:30.254 #4   001bc50c6001df12 <log> 2:46:16.109 [debug] [        hdlc] {timeSynch}: tx: (1/2): c1018100080000010000ff0200090c07
+2019-03-11 17:40:30.254 #4   001bc50c6001df12 <log> 2:46:16.118 [debug] [        hdlc] {timeSynch}: tx: (2/2): e3031f00003516ff003c00
+2019-03-11 17:40:30.254 #4   001bc50c6001df12 <log> 2:46:16.126 [debug] [        hdlc] {timeSynch}: tx: (1/1): a187
+2019-03-11 17:40:30.254 #4   001bc50c6001df12 <log> 2:46:16.133 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7e
+2019-03-11 17:40:30.269 #4   001bc50c6001df12 <log> 2:46:16.150 [debug] [meter/time_synch] {timeSynch}: (out) s_clockState = 1
+2019-03-11 17:40:30.322 #4   001bc50c6001df12 <log> 2:46:16.178 [debug] [        hdlc] {     hdlc}: rx: (1/2): 7ea01141020152b21fe6e700c50181fa
+2019-03-11 17:40:30.322 #4   001bc50c6001df12 <log> 2:46:16.187 [debug] [        hdlc] {     hdlc}: rx: (2/2): e3977e
+2019-03-11 17:40:30.322 #4   001bc50c6001df12 <log> 2:46:16.194 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-03-11 17:40:30.322 #4   001bc50c6001df12 <log> 2:46:16.203 [ WARN] [        dlms] {     dlms}: Data access result: other reason
+2019-03-11 17:40:30.322 #4   001bc50c6001df12 <log> 2:46:16.211 [ WARN] [        dlms] {     dlms}: processXDlmsApdu(4 B): failed
+2019-03-11 17:40:30.369 #4   001bc50c6001df12 <log> 2:46:16.219 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 12
+2019-03-11 17:40:30.369 #4   001bc50c6001df12 <log> 2:46:16.228 [debug] [meter/time_synch] {     dlms}: dlmsReceiveCb called with s_rxRes=12 from time synch (0 bytes 0x0)
+2019-03-11 17:40:30.369 #4   001bc50c6001df12 <log> 2:46:16.239 [ WARN] [meter/time_synch] {timeSynch}: Broken response: check failed
+2019-03-11 17:40:30.370 #4   001bc50c6001df12 <log> 2:46:16.247 [ WARN] [meter/time_synch] {timeSynch}: Time-sync step 1 failed (check failed)
+2019-03-11 17:40:30.450 #4   001bc50c6001df12 <log> 2:46:16.307 [debug] [        dlms] {timeSynch}: Disconnect HDLC link
+2019-03-11 17:40:30.450 #4   001bc50c6001df12 <log> 2:46:16.314 [debug] [        hdlc] {timeSynch}: tx: (1/1): 7e
+2019-03-11 17:40:30.450 #4   001bc50c6001df12 <log> 2:46:16.320 [debug] [        hdlc] {timeSynch}: tx: (1/1): a008
+
+
+<HDLC len="39" >
+<TargetAddress Value="128" />
+<SourceAddress Value="32" />
+<!--I frame.-->
+<FrameType Value="32" />
+<PDU>
+<SetRequest>
+  <SetRequestNormal>
+    <InvokeIdAndPriority Value="129" />
+    <AttributeDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="8" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="2" />
+    </AttributeDescriptor>
+    <Value>
+      <!--2019-03-31 00:53:22-->
+      <OctetString Value="07E3031F00003516FF003C00" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
+</PDU>
+
+</HDLC>
+<HDLC len="16" >
+<TargetAddress Value="32" />
+<SourceAddress Value="128" />
+<!--I frame.-->
+<FrameType Value="52" />
+<PDU>
+<SetResponse>
+  <SetResponseNormal>
+    <InvokeIdAndPriority Value="129" />
+    <Result Value="OtherReason" />
+  </SetResponseNormal>
+</SetResponse>
+</PDU>
+</HDLC>
+
+07E3 03 1F 00 00 35 16 FF 003C 00
+
+bbWriteU8(bb, t.tm_wday);
+time_t tm_wday
+should be 0xff;
 
 
 
