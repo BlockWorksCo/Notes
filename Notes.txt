@@ -16719,4 +16719,18 @@ Profile read from Kaifa meter:
 [   mqstorage] {   device}: Wrote m# 16285 of size 74 to file /mq/002.mq size 11129
 
 
+--------------------------------------
+
+
+// EM-DTR pin(PA4) is Meter output signal. When it is high level voltage, then
+// Alarm Push is ready. Driver must request Alarm Mask from Meter on that.
+
+
+// EM-CTS pin(PB0) is Driver output signal. When it is low level voltage, then Meter can
+// trigger Alarm Push, otherwise Meter must postpone Alarm Push.
+
+
+
+
+
 
