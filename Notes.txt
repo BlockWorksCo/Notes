@@ -16731,6 +16731,18 @@ Profile read from Kaifa meter:
 
 
 
+gpioSetInput(desc->ctsPin);
+gpioSetOutput(desc->rtsPin, false);
+
+void uartSetRts(int port, bool value)
+bool uartGetCts(int port)
+
+UART0:
+rts = { gpioPortA, 5 }, cts = { gpioPortA, 4 }
+
+UART1:
+
+
 
 
 
