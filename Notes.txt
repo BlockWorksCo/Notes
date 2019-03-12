@@ -16660,6 +16660,7 @@ void test()
 </HDLC>
 
 07E3 03 1F 00 00 35 16 FF 003C 00
+07e3 03 1f 00 03 35 16 ff 0078 00
 
 bbWriteU8(bb, t.tm_wday);
 time_t tm_wday
