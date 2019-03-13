@@ -16747,6 +16747,9 @@ GPIO5 on dev board == alarm pin.
 
 ----------------------------------------
 
+sudo mount -t cifs -o guest,vers=1.0  //192.168.2.1/RouterUSBDisk /mnt/RouterUSBDisk
+
+
 
 
 
