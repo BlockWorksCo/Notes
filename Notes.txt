@@ -16743,6 +16743,10 @@ rts = { gpioPortA, 5 }, cts = { gpioPortA, 4 }
 UART1:
 
 
+GPIO5 on dev board == alarm pin.
+
+----------------------------------------
+
 
 
 
