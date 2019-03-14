@@ -16750,6 +16750,46 @@ GPIO5 on dev board == alarm pin.
 sudo mount -t cifs -o guest,vers=1.0  //192.168.2.1/RouterUSBDisk /mnt/RouterUSBDisk
 
 
+----------------------------
+
+       hdlc] {     hdlc}: rx: (1/3): 7ea02e0101102757e6e7000f40000000
+[        hdlc] {     hdlc}: rx: (2/3): 090c07e3030d03111331ff8000000202
+[        hdlc] {     hdlc}: rx: (3/3): 09060000616200ff06050060c574c97e
+
+
+7ea02e0101102757e6e7000f40000000090c07e3030d03111331ff800000020209060000616200ff06050060c574c97e
+
+ubuntu@ubuntu-VirtualBox:/Data/Projects/DLMSPlayground$ ./HDLCToPDU.py 7ea02e0101102757e6e7000f40000000090c07e3030d03111331ff800000020209060000616200ff06050060c574c97e
+<HDLC>
+  <controlField value="10" />
+  <frameFormat value="a000,46" />
+  <src value="1" />
+  <dst value="1" />
+  <LLC value="e6" />
+  <HCS value="2757" />
+  <PDU value="0f40000000090c07e3030d03111331ff800000020209060000616200ff06050060c5" />
+  <FCS value="74c9" />
+</HDLC>
+
+Paste 0f40000000090c07e3030d03111331ff800000020209060000616200ff06050060c5 into a text file "t"
+
+ubuntu@ubuntu-VirtualBox:/Data/Projects/DLMSPlayground$ python ParseAXDR.py t
+   <Data>
+     <Int8 offset="1">40</Int8>
+     <OctetString offset="6" datetime="17:19:49:255 13/3/2019">07e3030d03111331ff800000</OctetString>
+     <Structure length="2" offset="20">
+     <Field index="0" offset="21">
+       <OctetString offset="22">0000616200ff</OctetString>
+     </Field>
+     <Field index="1" offset="29">
+       <Uint32 offset="30">050060c5</Float32>
+     </Field>
+     </Structure>
+   </Data>
+
+
+
+
 
 
 
