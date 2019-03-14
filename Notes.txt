@@ -16787,6 +16787,21 @@ ubuntu@ubuntu-VirtualBox:/Data/Projects/DLMSPlayground$ python ParseAXDR.py t
      </Structure>
    </Data>
 
+---------------------------------------------
+
+Agent downsizing reduce size space
+
+https://confluence.cyco.io/display/ENG/C4+Agent+downsizing
+
+- remove log-ring
+- ctrlport allocation of buffers (2x1280)? still there?
+- WolfSSL uses around 14KB during handshake but settles down to ~2KB
+- Removal of callbacks and their storage.
+- RPL route storage.
+- MAC neighbour table.
+- Remove CoAP-BlockWise support.
+
+
 
 
 
