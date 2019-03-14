@@ -16801,6 +16801,11 @@ https://confluence.cyco.io/display/ENG/C4+Agent+downsizing
 - MAC neighbour table.
 - Remove CoAP-BlockWise support.
 
+--------------------------------------------
+
+Wireshark encryption key:
+https://confluence.cyco.io/display/ENG/flash+and+config+agent+on+hw1+and+ipa1?preview=/44007800/44007814/Screenshot%20from%202017-06-21%2017-22-57.png
+
 
 
 
