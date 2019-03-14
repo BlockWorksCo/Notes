@@ -16807,6 +16807,12 @@ Wireshark encryption key:
 https://confluence.cyco.io/display/ENG/flash+and+config+agent+on+hw1+and+ipa1?preview=/44007800/44007814/Screenshot%20from%202017-06-21%2017-22-57.png
 
 
+Wireshark IEEE 802.15.4 preferences:
+- Decryption key: c4:2a:c6:f7:5e:bc:3a:ff:5e:f3:db:91:8e:3d:69:0c
+- TI CC24xx FCS format
+
+
+
 
 
 
