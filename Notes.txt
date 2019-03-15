@@ -16869,14 +16869,14 @@ P=PanMesh, O=OmniMesh
 
 
 - P/O Time sync with Kafa MA304 with DST & timezone. (CND-9058)
-- P   Alarm polling for Kaifa on IPA3b.
-- P/O HDLC/DLMS race condition in time sync fix.
-- P/O No timesync in DST changeover window.
+- P   Alarm polling for Kaifa on IPA3b (CND-9331).
+- P/O HDLC/DLMS race condition in time sync fix (CND-9332).
+- P/O No timesync in DST changeover window (CND-9333).
 - P/O Prevent retries during time-sync to improve accuracy (CND-9285).
 - P   Node boot event on login shouldnt be repeated (HMP-15).
-- P/O Enable time-sync in pipe-mode.
-- P   HDLC inter-byte timing improvement for Kaifa.
-- P   Add support for IPA3b LEDs.
+- P/O Enable time-sync in pipe-mode (CND-9334).
+- P   HDLC inter-byte timing improvement for Kaifa (CND-9232).
+- P   Add support for IPA3b LEDs (CND-9335).
 - P/O Prevent filesystem corruption with hard-power-off (CND-9266).
 
 
