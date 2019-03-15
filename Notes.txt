@@ -16820,8 +16820,56 @@ CTS=C9=s_alarmPushAllowPin=GPIO6
 ----------------------------------------------------------
 git log v140..v148.1
 
+P=PanMesh, O=OmniMesh
 
+- P/O Time sync with Kafa MA304 with DST & timezone.
+- P   Alarm polling for Kaifa on IPA3b.
+- P/O HDLC/DLMS race condition in time sync fix.
+- P/O No timesync in DST changeover window.
+- P   Meter-upgrade protection against multiple simultaneous jobs.
+- P/O Debugging improvements for filesystem issues.
+-   O HPL driver implementation.
+- P/O Prevent retries during time-sync to improve accuracy.
+-   O Meter-upgrade events for job success.
+- P   Node boot event on login shouldnt be repeated.
+-   O Activity calendar on L&T LT/CT meters.
+- P   Improve DLMS timeout mechanism.
+- P/O Enter filesystem-safe-mode around known reset points.
+- P/O Enable time-sync in pipe-mode.
+-   O L&T LT/CT meters load-curtailment fix.
+- P   HDLC inter-byte timing improvement for Kaifa.
+-   O Synthesize first-breath without discovery crash fix.
+-   O Meter-upgrade robustness improvements.
+-   O Improved error reporting for meter-upgrade.
+- P/O Fix for cron event around time-sync-adjustment causing extra sample reading.
+- P/O Allow DLMS-pipe source-port changes in-session for compatibility with Kalkitech.
+-   O L&T alarm fixes.
+-   O Atomic payment display update.
+-   O Add GET&SET current-limit configuration.
+- P/O DLMS-pipe mode timeout changes to support push-association.
+-   O Fix crash when DTLS times out during registration.
+-   O Factory-mode writing of ipv6 address into meter.
+-   O Load-curtailment on L&T 3ph meters.
+-   O Prevent double samplings of IS.
+-   O Fix week-profile parsing on L&T.
+- P/O Fix filedl metadata parsing.
+-   O Alarm-filter mask set with invalid bit.
+- P/O Add pointer checks.
+- P   Add support for IPA3b LEDs.
+- P/O Prevent filesystem corruption with hard-power-off.
+-   O Profile sampling improvements.
+-   O L&T rate-calendar fixes.
+-   O Change sampling from relative to absolute (cron) timing.
+- P/O Enforce single in-flight request handling.
+-   O Support for extended security on DLMS-side.
+-   O Meter-configuuration get/set improvements.
 
+--------------------------------------
+
+MA304H4 pinout.
+
+EM-CTS = pin 7  ('allow event' signal from node)
+EM-DTR = pin 11 (event interrupt from meter)
 
 
 
