@@ -16890,3 +16890,16 @@ EM-DTR = pin 11 (event interrupt from meter)
 
 
 
+print('<HDLC>')
+print('  <controlField value=\"%x\" />'%(controlField))
+print('  <frameFormat value=\"%x,%d\" />'%(frameType,length))
+print('  <src value=\"%x\" />'%(srcAddress))
+print('  <dst value=\"%x\" />'%(dstAddress))
+print('  <LLC value=\"%x\" />'%(LLC))
+print('  <HCS value=\"%x\" />'%(HCS))
+print('  <PDU value=\"%s\" />'%(binascii.hexlify(pdu)))
+print('  <FCS value=\"%x\" />'%(FCS))
+print('</HDLC>')
+
+
+
