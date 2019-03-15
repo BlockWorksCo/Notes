@@ -16901,5 +16901,12 @@ print('  <PDU value=\"%s\" />'%(binascii.hexlify(pdu)))
 print('  <FCS value=\"%x\" />'%(FCS))
 print('</HDLC>')
 
+--------------------------------------
+
+
+7ea03e0361327b46e6e600cb3030003e93820bc1d201afdda618d580dac69f0f236e0239fc85b8126ffffaad3e2a9d9ced9a19d14efaddb5e82534738c244e7e
+
+7ea0376103520e3ae6e700cf293000016cea5846745b476df36cd700029f407edb6b66edb92ac6a256064aed0fa46404912b646e7be5cef27e
+
 
 
