@@ -16941,6 +16941,45 @@ print('</HDLC>')
 <NextFrame Value="CC81953000009439489B85F2144831DFE4BDB190FC99F5D00E7A07C79AA5145E2EEF17188BF10C066F68A3C73757A905278E664E89DF56DF7ECCE58B8FD5D4211FF3522F42501249AF937B31B5929082EB3F5E1539CF369C63C42C8C32DFD0C21FA8BBA2E6627212C081AAEAF380E9C048F5617E36AFA300CDC4799BDF" />
 </HDLC>
 
+
+
+
+7ea0200361931b9f8180140502008006020080070400000001080400000001ce6a7e
+<HDLC len="31" >
+<TargetAddress Value="1" />
+<SourceAddress Value="48" />
+<!--SNRM frame.-->
+<FrameType Value="93" />
+<PDU>
+<Snrm>
+  <MaxInfoTX Value="128" />
+  <MaxInfoRX Value="128" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Snrm>
+</PDU>
+</HDLC>
+
+7ea01e610373b57c818012050180060180070400000001080400000001533b7e7e
+<HDLC len="29" >
+<TargetAddress Value="48" />
+<SourceAddress Value="1" />
+<!--UA frame.-->
+<FrameType Value="73" />
+<PDU>
+<Ua>
+  <MaxInfoTX Value="128" />
+  <MaxInfoRX Value="128" />
+  <WindowSizeTX Value="1" />
+  <WindowSizeRX Value="1" />
+</Ua>
+</PDU>
+</HDLC>
+
+
+
+
+
 ---------------------------------------------------
 
 gateway crash: receipt of packet with unknown indexes prior to s_mutex being setup, causing hard-fault.
