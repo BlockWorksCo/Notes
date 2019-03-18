@@ -16978,6 +16978,15 @@ print('</HDLC>')
 
 
 7ea00703215303c77e
+<HDLC len="9" >
+<TargetAddress Value="1" />
+<SourceAddress Value="16" />
+<!--S frame.-->
+<FrameType Value="53" />
+<DisconnectRequest>
+</DisconnectRequest>
+</HDLC>
+
 
 7ea01e210373c37a818012050180060180070400000001080400000001533b7e
 
