@@ -16941,4 +16941,27 @@ print('</HDLC>')
 <NextFrame Value="CC81953000009439489B85F2144831DFE4BDB190FC99F5D00E7A07C79AA5145E2EEF17188BF10C066F68A3C73757A905278E664E89DF56DF7ECCE58B8FD5D4211FF3522F42501249AF937B31B5929082EB3F5E1539CF369C63C42C8C32DFD0C21FA8BBA2E6627212C081AAEAF380E9C048F5617E36AFA300CDC4799BDF" />
 </HDLC>
 
+---------------------------------------------------
+
+gateway crash: receipt of packet with unknown indexes prior to s_mutex being setup, causing hard-fault.
+
+Yen Hiew [2:39 PM]
+(gdb) where
+#0  0x0004a870 in vListInsert (pxList=pxList@entry=0x2000abcc <s_mutex+36>, pxNewListItem=0x2000c4bc <s_scheduleTask+24>) at build/3pp/freertos/FreeRTOS/Source/list.c:192
+#1  0x0004b3da in vTaskPlaceOnEventList (pxEventList=pxEventList@entry=0x2000abcc <s_mutex+36>, xTicksToWait=120000) at build/3pp/freertos/FreeRTOS/Source/tasks.c:2860
+#2  0x0004ad24 in xQueueGenericReceive (xQueue=xQueue@entry=0x2000aba8 <s_mutex>, pvBuffer=pvBuffer@entry=0x0, xTicksToWait=<optimized out>, xTicksToWait@entry=120000, xJustPeeking=xJustPeeking@entry=0)
+   at build/3pp/freertos/FreeRTOS/Source/queue.c:1397
+#3  0x0003965a in OS_mutexTake (m=m@entry=0x2000aba8 <s_mutex>) at src/platform/osal/osal-freertos/osal_freertos.c:365
+#4  0x0002ca66 in mqStorageWrite (data=data@entry=0x20011260, size=17) at src/management/messagequeue/mqstorage.c:80
+#5  0x0002d4a6 in mqCreateAtTime (type=type@entry=10, fields=fields@entry=0x66058 <MqEvent_fields>, msg=msg@entry=0x2000ca28 <s_scheduleTaskStack+1320>, time=837, timeUncertain=timeUncertain@entry=true)
+   at src/management/messagequeue/mq.c:44
+#6  0x0002d4f6 in mqCreate (type=type@entry=10, fields=0x66058 <MqEvent_fields>, msg=msg@entry=0x2000ca28 <s_scheduleTaskStack+1320>) at src/management/messagequeue/mq.c:64
+#7  0x00028e14 in eventStore (event=event@entry=0x2000ca48 <s_scheduleTaskStack+1352>) at src/management/events/events.c:83
+#8  0x0001cf7c in reportUnknownIndexes (id=<optimized out>, data=<optimized out>) at src/communication/mac/mac_security.c:475
+#9  0x00032a3c in scheduleTask (arg=<optimized out>) at src/services/schedule/schedule_service.c:193
+#10 0x0004b77c in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4251
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb) p event
+$7 = {code = EVENT_MAC_UNKNOWNKEY, arg = {{string = 0x0, integer = 0, ipv6 = 0x0}, {string = 0x0, integer = 0, ipv6 = 0x0}, {string = 0x0, integer = 0, ipv6 = 0x0}}}
+
 
