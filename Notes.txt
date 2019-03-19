@@ -17027,194 +17027,62 @@ kaifa_ma304 v97.3 -> kaifa_ma304 v148.1
 
 These deprecated items have been removed:
 
-terminal.id" type="integer" readonly="true" pp="true" unused="true"/>
-terminal.type" type="string" length="8" readonly="true" pp="true" unused="true"/>
-iid.lowpan" type="string" length="&iidlen;" readonly="true" pp="true" unused="true"/>
+prod.terminal.id
+prod.terminal.type
+prod.iid.lowpan
 
-<!-- Only old deprecated parameters in this module:
-terminal">
-version.fw" type="string" length="20" readonly="true" unused="true"/>
-version.hw" type="string" length="16" readonly="true" unused="true"/>
-latitude" type="string" length="10" unused="true"/>
-longitude" type="string" length="10" unused="true"/>
+terminal.version.fw
+terminal.version.hw
+terminal.latitude
+terminal.longitude
 
-amr">
-reading.interval" type="integer" min="10" max="3600*24*31" unused="true"/>
-powerswitch.admstate" type="integer" min="-1" max="1" readonly="true" unused="true"/>
+amr.reading.interval
+amr.powerswitch.admstate
 
 
 These have been added:
-routes.max" type="integer" min="0">
-dao.deferred_ack" type="boolean">
 
+rpl.routes.max
+rpl.dao.deferred_ack
 
-<param id="12" name="channelplan" type="integer" min="0" max="10">
-<desc>Channel plan to adhere to:
-0 - 802.15.4 SUN FSK, band 863-870, mode #1 (2-FSK 50 kb/s, 200 kHz channel), c0=863.125, channels 0-33;
-1 - 802.15.4 SUN FSK, band 863-870, mode #2 (2-FSK 100 kb/s, 400 kHz channel), c0=863.225, channels 0-16;
-2 - WPC (India) band 865-867, 2-FSK 50 kb/s, 55 kHz deviation, 190 kHz channel, c1=865.145, channels 1-10;
-3 - 433-434 MHz, 2-FSK 50 kb/s, 55 kHz deviation, 180 kHz channel, c1=433.200, channels 0-8;
-4 - 470-509 MHz, 2-FSK 50 kb/s, 50 kHz deviation, 250 kHz channel, c1=470.300, channels 0-155;
-5 - reserved;
-6 - 915 Brazil; 2-FSK 50 kb/2, 150 kHz deviation, 1000 kHz channel, c1=903.250, channels 0-14;
-7 - 802.15.4 SUN FSK, band 869.525, mode #1 (2-FSK 50 kb/s, 100 kHz channel), c1=869.525, channels 0;
-8 - 802.15.4 SUN FSK, band 870-873, mode #1 (2-FSK 50 kb/s, 100 kHz channel), c1=870.1, channels 0-28;
-9 - 802.15.4 SUN FSK, band 870-873, mode #2 (2-FSK 100 kb/s, 200 kHz channel), c1=870.1, channels 0-14;
-10 - 802.15.4 SUN FSK, band 870-873, mode #3 (2-FSK 150 kb/s, 200 kHz channel), c1=870.1, channels 0-14;
-</desc>
+lowpan.channelplan
 
+modem.uplink.gracetime
+modem.username
+modem.password
+modem.authmethod
+modem.pin
+modem.uplink.max_failures_before_reset
 
-<param id="6" name="uplink.gracetime" type="integer" min="0" max="864000">
-<desc>Time delay before taking action on failed uplink [s]</desc>
-<default>900</default>
-</param>
-<param id="7" name="username" type="string" length="16">
-<desc>Modem APN username</desc>
-</param>
-<param id="8" name="password" type="string" length="16">
-<desc>Modem APN password</desc>
-</param>
-<param id="9" name="authmethod" type="string" length="4">
-<desc>Modem APN authentication method (PAP, CHAP or blank for none)</desc>
-</param>
-<param id="10" name="pin" type="string" length="8">
-<desc>SIM PIN</desc>
-</param>
-<param id="11" name="uplink.max_failures_before_reset" type="integer" min="0" max="1000">
-<desc>The maximum number of failure events before we reset the i/f.</desc>
-<default>5</default>
-</param>
+monitor.profile.modem.enabled
+monitor.profile.modem.sample.interval
 
+device.dlms.data_profiles
+device.time.set.enabled
+device.instant.default_period
+device.time.min_deviation
+device.time.max_deviation
+device.time.sync_timer
+device.dlms.pipe_enabled
+device.capabilities.dlmspipe.push
+device.dataprofile.polling_period
+device.dataprofile.polling_max_entries
 
-<param id="9" name="profile.modem.enabled" type="boolean">
-<desc>Monitoring Modem Profile, enable/disable state</desc>
-<default>0</default>
-</param>
-<param id="10" name="profile.modem.sample.interval" type="integer" min="10">
-<desc>Monitoring Modem Profile, sampling interval [s]</desc>
-<default>3600</default>
-</param>
+node.power_fail.gracetime
+node.node.production.rssisource.enabled
+node.production.rssisource.power
+node.production.rssisource.period
+node.production.meter_update_period
 
-    <param id="6" name="dlms.data_profiles" type="integer" min="0">
-        <desc>Profiles to sample, 1 = Load, 2 = Power Quality, 4 = M-Bus.
-        It is possible to enable multiple profiles by calculating the sum,
-        e.g. 5 to enable Load and M-Bus profiles.</desc>
-        <default>1</default>
-    </param>
-    <param id="7" name="time.set.enabled" type="boolean">
-        <desc>Update the current time and time offset on the meter</desc>
-        <default>1</default>
-    </param>
-    <param id="8" name="instant.default_period" type="integer" min="1">
-        <desc>Default capture period for Instantaneous profile in minutes.</desc>
-        <default>15</default>
-    </param>
-    <param id="9" name="time.min_deviation" type="integer" min="0" max="43200">
-        <desc>Min deviation of node and meter local times in [s].
-        Agent reads meter time. If the clock drift is less or equal to min_deviation
-        then the agent shall not adjust or set the clock on meter.</desc>
-        <default>10</default>
-    </param>
-    <param id="10" name="time.max_deviation" type="integer" min="0" max="43200">
-        <desc>Max deviation of node and meter local times in [s].
-        Agent reads meter local time. If the clock drift is more than min_deviation and
-        is less or equal to max_deviation then the agent shall adjust meter time.
-        Otherwise the time will be set.</desc>
-        <default>180</default>
-    </param>
-    <param id="11" name="time.sync_timer" type="integer" min="0" max="1440">
-        <desc>This is periodic timer which will read the meter clock to calculate drift
-        and either adjust it or set it. Value in [min].</desc>
-        <default>240</default>
-    </param>
-    <param id="12" name="dlms.pipe_enabled" type="boolean">
-      <desc>Enable/Disable the DLMS pipe feature</desc>
-      <default>1</default>
-    </param>
-    <param id="13" name="capabilities.dlmspipe.push" type="boolean">
-      <desc>Enable/Disable the DLMS pipe push feature</desc>
-      <default>0</default>
-    </param>
-    <param id="14" name="dataprofile.polling_period" type="integer" min="1">
-        <desc>Complex data profiles polling period in minutes.</desc>
-        <default>15</default>
-    </param>
-    <param id="15" name="dataprofile.polling_max_entries" type="integer" min="0">
-        <desc>Max number of entries for by_entry data profile polling.
-              0: No limitation. Read all buffered entries if needed.
-              Note: this is not for by_range data profile samples polling,
-              which will read all buffered samples if needed.
-              </desc>
-        <default>50</default>
-    </param>
-</module>
-<module id="24" name="node">
-    <param id="1" name="power_fail.gracetime" type="integer" min="0">
-        <desc>Number of seconds to wait before sending a last gasp message
-              and initiate shutdown process after a power failure.
-              If power comes back during this period the node will continue
-              to run and no last gasp message will be generated.
-              If the node runs out of power during this period, no last
-              gasp message will be generated.
-              </desc>
-        <default>0</default>
-    </param>
-    <param id="2" name="production.rssisource.enabled" type="boolean">
-      <desc>Enables the rapid broadcast of rssisource packets for the production line.</desc>
-      <default>0</default>
-    </param>
-    <param id="3" name="production.rssisource.power" type="integer" min="-26" max="20">
-      <desc>The transmit power for broadcast of rssisource packets.</desc>
-      <default>10</default>
-    </param>
-    <param id="4" name="production.rssisource.period" type="integer" min="10" max="60000">
-      <desc>The period between broadcast of rssisource packets.</desc>
-      <default>-500</default>
-    </param>
-    <param id="5" name="production.meter_update_period" type="integer" min="0" max="86400">
-        <desc>The period between updates of some meter specific registers.
-        Such as RSSI and RF channelNo for LNT meter. Value in [sec].</desc>
-        <default>5</default>
-    </param>
-</module>
-<module id="25" name="capabilities">
-    <param id="1" name="meter.reverse_ESW" type="boolean">
-      <desc>To handle as per bit orientation of ESW if reversed form meter as in UGVCL(1-Bit Reversed, 0-Bit As per standard).</desc>
-      <default>0</default>
-    </param>
-    <param id="2" name="meter.device_testing" type="boolean">
-      <desc>To handle Manufacture Feature enable and disable(1-Feature enabled, 0-Feature disabled).</desc>
-      <default>1</default>
-    </param>
-    <param id="3" name="meter.supports_Ipv6_setup" type="boolean">
-      <desc>To specify meters which support ipv6 setup class 48 configuration.</desc>
-      <default>1</default>
-    </param>
-    <param id="4" name="meter.supports_payment_management" type="boolean">
-      <desc>To specify meters which support Payment management configuration.</desc>
-      <default>0</default>
-    </param>
-    <param id="14" name="dlmspipe.session_close_detection" type="boolean">
-      <desc>Enable/Disable the detection of UDP session end via RLRQ</desc>
-      <default>0</default>
-    </param>
-    <param id="15" name="dlmspipe.session.source_port_change_allowed" type="boolean">
-      <desc>Allow/disallow the dropping of packets if the source-port of the UDP packet changes</desc>
-      <default>0</default>
-    </param>
-    <param id="16" name="meter.time_update" type="boolean">
-      <desc>Enable/Disable the use of time-update operations when setting meter time.</desc>
-      <default>0</default>
-    </param>
-    <param id="17" name="meter.timezone_set" type="boolean">
-      <desc>Enable/Disable the use of time-zone set operations.</desc>
-      <default>1</default>
-    </param>
-    <param id="18" name="meter.dst_set" type="boolean">
-      <desc>Enable/Disable the use of DST set operations.</desc>
-      <default>1</default>
-    </param>
-</module>
+capabilities.meter.reverse_ESW
+capabilities.meter.device_testing
+capabilities.meter.supports_Ipv6_setup
+capabilities.meter.supports_payment_management
+capabilities.dlmspipe.session_close_detection
+capabilities.dlmspipe.session.source_port_change_allowed
+capabilities.meter.time_update
+capabilities.meter.timezone_set
+capabilities.meter.dst_set
 
 
 
