@@ -17094,6 +17094,26 @@ capabilities.meter.timezone_set
 capabilities.meter.dst_set
 
 
+-------------------------------------------------------------
+
+rpl.dis.trickle.doublings 4
+rpl.br.dio.k 6
+rpl.instance_id 0
+rpl.br.routelife 1200
+rpl.routes.max 10000
+rpl.dao.deferred_ack 1
+rpl.probe.doublings 6
+rpl.dis.trickle.min.ms 10000
+rpl.probe.interval.min.ms 1500
+rpl.br.dio.imin 12
+rpl.dag_switch.time 7200
+rpl.dag_switch.hysteresis 150
+rpl.br.ocp 1
+rpl.mrhof.pp_hysteresis 75
+rpl.br.dio.imax 8
+rpl.etx.weight_factor 64
+rpl.enabled 1
+rpl.netsize_penalty 64
 
 
 
