@@ -17135,27 +17135,28 @@ Due to impact of changes, attempt to test/integrate-early.
 - Move key storage into config-storage (agent_cert.der agent_key.der ca_cert.der mac_1 mac_2)... or is separate partition a better bet? Atomic configuration is good reason to have all in config.
 
 - Create FileDistributionStorage on top of FLASHPartition (replacement for filedl_storage). Use a random starting point for a trivial wear-levelling mechanism.
-- Make Bootloader read from FileDistributionStorage (bl_fwimage_fs)
+- Make Bootloader read from FileDistributionStorage (bl_fwimage_fs) during upgrade.
+- Make meter-upgrade read from FileDistributionStorage during image-transfer.
 - Filedl will have to decrypt blocks during write to FLASH rather than current decrypt-file operation.
 - NMS to encrypt blocks rather than file.
 
-- Move metrics to an unreliable model to reduce load on the (now resource limited) mq.
-- NMS to add metrics CoAP endpoint.
-
 - Utility operations from ctrlporthub modified to restrict the 'erase' command, FLASH test, etc.
-
-- Make meter-push-alarms use NotificationQueue (interlocked insertion into NotificationQueue).
 
 - Add server->agent message to set last-read-timestamp for each profile.
 - SMA to determine last-read-timestamp from database.
 - SMA to inform agent of last-read-timestamp for each profile during registration.
 - SMA to perform sanity checks of samples prior to insertion in database. Number-of-fields, type of fields, sensible time-range etc.
 
-- Make FLASHEncryptedPartition from FLASHPartition (take a view on this, everything is on-device now so no external-bus access, keys already stored in internal-flash, devicekeys/fs_crypto).
+- Cleanup. removal of cndfs, spi, flash-test, etc.
 
-- Add bad-block-management to FileDistributionStorage by making it a circular-buffer and CRC-checked elements.
+- (Optional) Move metrics to an unreliable model to reduce load on the (now resource limited) mq.
+- (Optional) NMS to add metrics CoAP endpoint.
 
-- On-demand feature to use 'push-back' mechanism (i.e. set last-read-timestamp for profile) and let the normal operation take its course.
+- (optional) Make FLASHEncryptedPartition from FLASHPartition (take a view on this, everything is on-device now so no external-bus access, keys already stored in internal-flash, devicekeys/fs_crypto).
+
+- (optional) Add bad-block-management to FileDistributionStorage by making it a circular-buffer and CRC-checked elements.
+
+- (optional) On-demand feature to use 'push-back' mechanism (i.e. set last-read-timestamp for profile) and let the normal operation take its course.
 
 
 
