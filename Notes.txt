@@ -17120,12 +17120,25 @@ rpl.netsize_penalty 64
 
 - mqram (replacement for mqstorage).
 
-- Create Internal FLASH BlockDevice (efr32-internal-flash).
+- Create Internal FLASH BlockDevice abstraction with partition table. (pgmflash.h, devicekeys_efr32, bl_fwimage).
 - Make internal-FLASH driver usable concurrently with UART/Radio (Make executable region in SRAM for ISRs).
 - Create PersistentCircularBuffer on top of FLASHBlockDevice.
-- Create NotificationQueue on top of PersistentCircularBuffer.
+- Create NotificationQueue on top of PersistentCircularBuffer (interlocked send to server).
+- Move eventStore to NotificationQueue.
+- Create a new config_backend to use a PersistentCircularBuffer in internal FLASH (2x2KB elements (currently 560b each), config_backend_pb variant that uses circ-buf).
 
 - Create FileDistributionStorage on top of FLASHBlockDevice (replacement for filedl_storage).
+- Make Bootloader read from FileDistributionStorage (bl_fwimage_fs)o
+
+- Utility operations from ctrlporthub modified to restrict the 'erase' command, FLASH test, etc.
+
+- Make meter-push-alarms use NotificationQueue (interlocked insertion into NotificationQueue).
+
+- Add server->agent message to set last-read-timestamp for each profile.
+- SMA to determine last-read-timestamp from database.
+- SMA to inform agent of last-read-timestamp for each profile during registration.
+
+
 
 
 
