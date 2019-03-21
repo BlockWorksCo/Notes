@@ -17118,17 +17118,25 @@ rpl.netsize_penalty 64
 
 -----------------------------------------------------------------
 
+In general, maintain existing high-level interfaces to maintain working IPA1/HW1 boards functionality.
+Get interfaces in place and in-RAM functionality working quickly to enable early removal of CNDFS and SPI-FLASH drivers for RF testing.
+Due to impact of changes, attempt to test/integrate-early.
+
+
 - mqram (replacement for mqstorage).
 
-- Create Internal FLASH BlockDevice abstraction with partition table. (pgmflash.h, devicekeys_efr32, bl_fwimage).
+- Create Internal FLASH BlockDevice abstraction with partition table (FLASHPartition). (pgmflash.h, devicekeys_efr32, bl_fwimage).
 - Make internal-FLASH driver usable concurrently with UART/Radio (Make executable region in SRAM for ISRs).
-- Create PersistentCircularBuffer on top of FLASHBlockDevice.
-- Create NotificationQueue on top of PersistentCircularBuffer (interlocked send to server).
-- Move eventStore to NotificationQueue.
+- Make mq_internal_flash using mqram as a model but using FLASHPartition as a backing-store.
 - Create a new config_backend to use a PersistentCircularBuffer in internal FLASH (2x2KB elements (currently 560b each), config_backend_pb variant that uses circ-buf).
 
-- Create FileDistributionStorage on top of FLASHBlockDevice (replacement for filedl_storage).
+- Create FileDistributionStorage on top of FLASHPartition (replacement for filedl_storage).
 - Make Bootloader read from FileDistributionStorage (bl_fwimage_fs)o
+- Filedl will likely have to decrypt blocks during write to FLASH rather than current decrypt-file operation.
+- NMS to encrypt blocks rather than file.
+
+- Move metrics to an unreliable model to reduce load on the (now resource limited) mq.
+- NMS to add metrics CoAP endpoint.
 
 - Utility operations from ctrlporthub modified to restrict the 'erase' command, FLASH test, etc.
 
