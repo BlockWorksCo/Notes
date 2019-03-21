@@ -17123,16 +17123,20 @@ Get interfaces in place and in-RAM functionality working quickly to enable early
 Due to impact of changes, attempt to test/integrate-early.
 
 
-- mqram (replacement for mqstorage).
+- mqram (replacement for mqstorage). Quick win, immediate test for impact of resource-limited mq, frees up higher-level mods. Better model to base mq_internal_flash_storage on.
 
 - Create Internal FLASH BlockDevice abstraction with partition table (FLASHPartition). (pgmflash.h, devicekeys_efr32, bl_fwimage).
 - Make internal-FLASH driver usable concurrently with UART/Radio (Make executable region in SRAM for ISRs).
 - Make mq_internal_flash using mqram as a model but using FLASHPartition as a backing-store.
+- Make PersistentCircularBuffer as a simple circular buffer backed by FLASHPartition. CRC checked elements.
 - Create a new config_backend to use a PersistentCircularBuffer in internal FLASH (2x2KB elements (currently 560b each), config_backend_pb variant that uses circ-buf).
 
-- Create FileDistributionStorage on top of FLASHPartition (replacement for filedl_storage).
-- Make Bootloader read from FileDistributionStorage (bl_fwimage_fs)o
-- Filedl will likely have to decrypt blocks during write to FLASH rather than current decrypt-file operation.
+- Move miscellaneous small files into config-storage (dlms_state/activity_report/dp_config/macsec_state).
+- Move key storage into config-storage (agent_cert.der agent_key.der ca_cert.der mac_1 mac_2)... or is separate partition a better bet? Atomic configuration is good reason to have all in config.
+
+- Create FileDistributionStorage on top of FLASHPartition (replacement for filedl_storage). Use a random starting point for a trivial wear-levelling mechanism.
+- Make Bootloader read from FileDistributionStorage (bl_fwimage_fs)
+- Filedl will have to decrypt blocks during write to FLASH rather than current decrypt-file operation.
 - NMS to encrypt blocks rather than file.
 
 - Move metrics to an unreliable model to reduce load on the (now resource limited) mq.
@@ -17145,7 +17149,13 @@ Due to impact of changes, attempt to test/integrate-early.
 - Add server->agent message to set last-read-timestamp for each profile.
 - SMA to determine last-read-timestamp from database.
 - SMA to inform agent of last-read-timestamp for each profile during registration.
+- SMA to perform sanity checks of samples prior to insertion in database. Number-of-fields, type of fields, sensible time-range etc.
 
+- Make FLASHEncryptedPartition from FLASHPartition (take a view on this, everything is on-device now so no external-bus access, keys already stored in internal-flash, devicekeys/fs_crypto).
+
+- Add bad-block-management to FileDistributionStorage by making it a circular-buffer and CRC-checked elements.
+
+- On-demand feature to use 'push-back' mechanism (i.e. set last-read-timestamp for profile) and let the normal operation take its course.
 
 
 
