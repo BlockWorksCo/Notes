@@ -17116,6 +17116,16 @@ rpl.enabled 1
 rpl.netsize_penalty 64
 
 
+-----------------------------------------------------------------
+
+- mqram (replacement for mqstorage).
+
+- Create Internal FLASH BlockDevice (efr32-internal-flash).
+- Make internal-FLASH driver usable concurrently with UART/Radio (Make executable region in SRAM for ISRs).
+- Create PersistentCircularBuffer on top of FLASHBlockDevice.
+- Create NotificationQueue on top of PersistentCircularBuffer.
+
+- Create FileDistributionStorage on top of FLASHBlockDevice (replacement for filedl_storage).
 
 
 
