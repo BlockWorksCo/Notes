@@ -17159,6 +17159,24 @@ Due to impact of changes, attempt to test/integrate-early.
 - (optional) On-demand feature to use 'push-back' mechanism (i.e. set last-read-timestamp for profile) and let the normal operation take its course.
 
 
+-----------------------------------------------------------------------------
+
+gateway RPL improvement.
+
+A gateways "attractiveness" to nodes should be reduced based on available cellular bandwidth.
+Similar to the netsize_penalty confgurable which reduces the attractiveness of a gateway based
+on the number of nodes, this would attempt to keep the node-load to a level that is actually
+servicable by the mesh/uplink combination.
+This was probably the intention behind the netsize_penalty in the first place but I'm not
+convinced it would work that well in some cases, such as when a gateway has good mesh conditions
+but bad cellular. This would in effect be a honey-pot situation where we're attracting all the
+nodes to local-minimum. It may very well be that a neighbouring gateway may be able to service
+the nodes better due to a better uplink despite a bad-mesh.
+
+
+
+
+
 
 
 
