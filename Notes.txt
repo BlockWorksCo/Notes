@@ -17259,6 +17259,17 @@ The above RSP_UD data string, which contains neither DIFEs nor VIFEs, decodes as
 · Date/time (coded with F format): 5 May 96, 09h 16 mn.
 
 
+----------------------------------------------
+
+Laptop setup.
+
+- Get latest coap_tools from Jenkins (https://jenkins.cyco.io/view/Terminal/job/Omnimesh_Terminal_Release/lastSuccessfulBuild/artifact/terminal/build/tools/release)
+- Use a USB stick to copy c4-agent-tools to target machine home directory.
+- Open terminal.
+- "cd"
+- "tar jxvf ~/c4-agent-tools.tar.bz2"
+- "sudo apt install python3-pip libasan2"
+- "pip3 install serial"
 
 
 
