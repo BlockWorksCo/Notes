@@ -17263,6 +17263,7 @@ The above RSP_UD data string, which contains neither DIFEs nor VIFEs, decodes as
 
 Laptop setup.
 
+Install:
 - Get latest coap_tools from Jenkins (https://jenkins.cyco.io/view/Terminal/job/Omnimesh_Terminal_Release/lastSuccessfulBuild/artifact/terminal/build/tools/release)
 - Use a USB stick to copy c4-agent-tools to target machine home directory.
 - Open terminal.
@@ -17270,6 +17271,24 @@ Laptop setup.
 - "tar jxvf ~/c4-agent-tools.tar.bz2"
 - "sudo apt install python3-pip libasan2"
 - "pip3 install serial"
+
+
+Running:
+In one terminal, run one instance of "ctrlporthub" using USB-serial thats on "/dev/ttyUSB0":
+- "cd c4-agent-tools"
+- "./ctrlporthub -serial /dev/ttyUSB0"
+
+
+In another terminal:
+- "cd c4-agent-tools"
+- "./coap_request --config-list"
+- Then use whatever coap_request you like ("./coap_request --help")
+
+Examples:
+- "./coap_request.py --radio-test-id 7 --radio-send --radio-test-iid 02-1b-c5-0c-60-00-bc-2e --radio-test-power 54"
+- "./coap_request.py --ctrlporthub localhost:4000 --config prod.lowpan.eui64 00-1B-C5-0C-60-00-01-84"
+
+
 
 
 
