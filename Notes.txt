@@ -17199,7 +17199,20 @@ IMPORTANT NOTES:
    Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
    Donating to EFF:                    https://eff.org/donate-le
 
-root@playground:~# 
+root@playground:~#
+
+
+--------------------------------------------------------------------------
+
+update sequence number on server.
+
+select id from terminal where terminal_id="00-00-00-00-00-00-00-01";
+update message_queue_state set start_seq_no=last_received_seq_no+1, receive_bit_set="", entity_version=entity_version+1 where node_id=<from above>
+
+update message_queue_state set start_seq_no=1, last_received_seq_no=1, receive_bit_set="", entity_version=entity_version+1 where node_id=433;
+update message_queue_state set entity_version=entity_version+1 where node_id=433;
+
+update message_queue_state set start_seq_no=1, last_received_seq_no=1, receive_bit_set="", entity_version=entity_version+1 where node_id=433;
 
 
 
