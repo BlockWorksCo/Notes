@@ -17214,6 +17214,50 @@ update message_queue_state set entity_version=entity_version+1 where node_id=433
 
 update message_queue_state set start_seq_no=1, last_received_seq_no=1, receive_bit_set="", entity_version=entity_version+1 where node_id=4
 
+-----------------------------------
+
+MBus:
+
+- To read a meter, the master issues a REQ_UD2 command string to the slave. The slave replies in a RSP_UD data
+string, with the information previously selected by the master.
+
+The REQ_UD2 data string (Request for User Data type 2) is a data string of the type “short -frame”, sent by the
+master. It is composed of 5 bytes, by which the master asks the slave to send the previously selected information.
+The structure of the data string is:
+M®S: $10 $5B ADR CHK $16 where ADR = Primary address, CHK = ADR + $5B.
+The ADR byte depend on address mode:
+· Primary address: ADR specifies the bus number (between 1 and 250).
+· Secondary address: ADR = $FD. The meter that is addressed must have been selected previously by a
+SND_UD communication in which its secondary address has been specified.
+· Point-to-point address: ADR=$FE. (See the limitations on usage given in section 5).
+· Broadcast addressing within REQ_UD2 message is a nonsense.
+For primary and point -to-point addressing, sending first a SND_UD is unnecessary. If no parameter has been explicitly
+selected in a SND_UD communication, the slave will send at minimum the contents of its energy counter.
+The receipt of a REQ_UD2 provokes a response from the slave in the form of a data string of type RSP_UD in which
+the requested parameters are coded - see the following section.
+
+Example:
+Grouped reading of temperatures, power, flow rat e, date and hours in service for meter no. 03543109.
+M>S: $68 $1D $1D $68 $53 $FD $51 $09 $31 $54 $03 $B4 $05 $FF $FF $FF $FF $FF $FF
+$08 $2E $08 $3D $08 $5B $08 $5F $08 $63 $08 $22 $08 $6D $34 $16 (SND_UD)
+S>M: $E5 (ACK)
+M>S: $10 $5B $FD $58 $16 (REQ_UD2)
+S>M: $68 $38 $38 $68 $08 $C8 $72 $09 $31 $54 $03 $B4 $05 $B0 $04 $C9 $10 $FF $FF $03 $22 $9A $00
+$00 $05 $2E $A0 $C8 $51 $46 $05 $3E $B4 $E3 $D7 $42 $05 $5B $90 $D3 $07 $43 $05 $5F $0E $AA $E7 $41
+$05 $63 $9C $BC $D5 $42 $04 $6D $10 $09 $05 $C5 $77 $16
+
+The above RSP_UD data string, which contains neither DIFEs nor VIFEs, decodes as follows:
+· Bus number: 200, manufacturer's number: 03543109.
+· It concerns a Calec -MB, option Tariff (VER = 10110000b)
+· There is no alarm state, but the lock -bit is not set (STAT = 00010000b)
+· Hours in service (coded in binary in 3 bytes. DIF/VIF = $03/$22) = 154 ($00009A)
+· Power (in kW, coded in floating point. DIF/VIF=$05/$2E) = 13426.2
+· Flow rate (in m³/h, coded in floating point) = 107.945
+· Warm side temperature (in °C, bytes $4307D390, coded in floating point) = 135.82
+· Cold side temperature (°C) = 28.95
+· Temperature difference (K) = 106.87
+· Date/time (coded with F format): 5 May 96, 09h 16 mn.
+
 
 
 
