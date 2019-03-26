@@ -17306,6 +17306,7 @@ IEC 870 transmission parameters, telegram formats, addressing, data integrity
 
 libmbus: http://www.rscada.se/libmbus/ https://github.com/rscada/libmbus/tree/master/mbus
 License: free to use, but must give attribution.
+BSD 3-Clause License
 
 https://github.com/rscada/libmbus/blob/master/mbus/mbus-protocol.c
 
