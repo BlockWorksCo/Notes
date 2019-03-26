@@ -17317,7 +17317,7 @@ HMP/MBus work:
 - Scan for attached meters on startup.
 - Server side must handle multiple devices per node. NMS will see one node, SMA will see many.
 - sample data format in HMP format/special? dataProfileSampleCreate() sampleNextDataProfile() readProfileNEntries()
-- Device abstraction is not propoerly abstracted, most methods dont take a deviceId.
+- Device abstraction is not properly abstracted, most methods dont take a deviceId.
 - Discovery becomes a scan of the bus.
 
 
