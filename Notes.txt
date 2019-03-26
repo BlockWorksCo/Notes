@@ -17299,14 +17299,19 @@ Examples:
 
 EN13757 m-bus.com
 http://www.m-bus.com/
+EN 13757-2 physical and link layer,
+EN 13757-3 application layer for the remote reading of gas or electricity meters
+EN1434-3 Data structures, data types, actions
+IEC 870 transmission parameters, telegram formats, addressing, data integrity
+
 
 HMP/MBus work:
 
-- Multiple devices (255) per agent.
+- Multiple devices (253) per agent.
 - New protocol (MBus) to obtain data from meters.
 - Scan for attached meters on startup.
 - Server side must handle multiple devices per node. NMS will see one node, SMA will see many.
-
+- sample data format in HMP format/special? dataProfileSampleCreate() sampleNextDataProfile() readProfileNEntries()
 - Device abstraction is not propoerly abstracted, most methods dont take a deviceId.
 
 
