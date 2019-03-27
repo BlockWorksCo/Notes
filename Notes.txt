@@ -17323,4 +17323,18 @@ HMP/MBus work:
 
 
 
+---------------------------------------
+
+SMIP RLL Key estimation
+
+- Table storage via CH API
+- Table extraction from configuration
+- Message from NMS to Agent to set the preferred key index?
+- Send of KeyTableHash to server on login.
+
+
+
+
+
+
 
