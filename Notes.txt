@@ -17331,6 +17331,9 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 - Configuration needs to be split into node-specific and meter-specific. getParam-like calls such as getDeviceParam which take a deviceId.
 - MaxDemand calculation.
 - Single profile retrieval.
+- Antenna switch control via configuration.
+- On-demand request for data should be functional.
+- licensing/activity is currently per-node, not per-meter?
 
 
 
