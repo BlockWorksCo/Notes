@@ -17353,4 +17353,17 @@ SMIP RLL Key estimation
 
 
 
+Name    File_name   Comment
+CA certificate  ca_demo-poc.crt.crt Import to Server DTLS domain/"Issuer Certificate" and Node DTLS domain/Trusted certificates
+CA private key  ca_demo-poc.crt.key Optional, Import to Node DTLS domain/CA private key, only csr renew require this
+Server certificate  omnitube-demo-poc.crt.pem   Import to Server DTLS domain/Certificate
+Server private key  omnitube-demo-poc.key.pem   Import to Server DTLS domain/Private key
+RSA private key rsa.priv    Import to Server Security Pair/Private key
+RSA public key  rsa.pub Import to Server Security Pair/Public key
+RSA private key password    rsa_pass.txt    Copy the content to Server Security Pair/Password
+
+
+
+
+
 
