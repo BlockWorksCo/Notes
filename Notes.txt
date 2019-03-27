@@ -17329,6 +17329,7 @@ HMP/MBus work:
 - NodeRegistrationMessage: deviceHash could be hash over all detected meters, deviceAlarmHash tho is more device-specific as is globalProfileHash.
 therefore use individual NodeRegistrationMessage messages, rather than one for all, should be renamed DeviceRegistrationMessage.
 - Configuration needs to be split into node-specific and meter-specific. getParam-like calls such as getDeviceParam which take a deviceId.
+- Configuration-UI work to split into node-specific and device-specific. Is this reflected in schema also?
 - MaxDemand calculation.
 - Single profile retrieval.
 - Antenna switch control via configuration.
