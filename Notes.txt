@@ -17312,13 +17312,21 @@ https://github.com/rscada/libmbus/blob/master/mbus/mbus-protocol.c
 
 HMP/MBus work:
 
+- targetting a PanMesh server to be compatible with Kaifa driver? Omni will be significantly different.
 - Multiple devices (253) per agent.
 - New protocol (MBus) to obtain data from meters.
 - Scan for attached meters on startup.
 - Server side must handle multiple devices per node. NMS will see one node, SMA will see many.
 - sample data format in HMP format/special? dataProfileSampleCreate() sampleNextDataProfile() readProfileNEntries()
+- Sending at saveDataProfileSample();
 - Device abstraction is not properly abstracted, most methods dont take a deviceId.
 - Discovery becomes a scan of the bus.
+- Kaifa meter doesn't support profiles hash.
+- MqDataProfileSample has deviceId field.
+- Sample format is AXDR format structure from meter.
+- deviceId in mq-message is taken from deviceId field in DataProfileSample.
+- coapSendNodeRegistration()
+- NodeRegistrationMessage: deviceHash could be hash over all detected meters, deviceAlarmHash tho is more device-specific.
 
 
 
