@@ -17339,6 +17339,32 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 
 
 
+
+
+PanMesh:
+https://confluence.cyco.io/display/ENG/%5BDesignSpec%5D+C4+-+Device+management+add-on
+
+Device discovery
+The following outlines the device discovery procedure for the Connode server
+
+A node sends the devices hash message to the server in about 3 minutes after login.
+The server reads out the device hash property from the devices message.
+If the device hash sent from the node is different from the hash stored by the server for the node.
+The server sends a device list request to the node.
+The node responds with a list of attached devices to the server together with the hash for those devices.
+The server does the following for each device already stored in the database and associated with the node
+If a device with the same device id is not found in the device list returned by the node
+The device is disassociated from the node.
+The server does the following for each device returned in the list
+If a device with the same device id does not exist in the server database.
+The server creates the device in the database and associates it with the node
+Otherwise
+If any of the properties received from the node does not match device properties in the database
+The server updates the device in the database with the properties received from the node.
+If the device is not associated with the node
+The server associates the device with the node.
+The server stores the device hash reported by the node in the database.
+
 ---------------------------------------
 
 SMIP RLL Key estimation
