@@ -17336,11 +17336,18 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 - On-demand request for data should be functional.
 - licensing/activity is currently per-node, not per-meter?
 - Rreset of billing, instantaneous, simple and enhanced billing possible.
-- Read of serial number, identification number, version and manufacturer for name-plate.
+- Read of serial number, identification number, version, fabrication number and manufacturer for name-plate.
 - MBus types will generally map to AXDR types, BCD will need to be converted.
 - Generally, use libmbus to read mbus format, translate into a DLMS/AXDR format profile structure using axdr fns, transfer up in normal dataprofile manner.
 - Configuration: baud-rate,
 - selective access can be done? maybe. may have to read all and filter internally.
+- OBIS === DIF?
+- Special parsing of BCD values (special codes for rollover, etc) that we need to parse into AXDR.
+- Polling of alarms is time-critical.
+- Translation of alarms into node-alarms.
+- Time sync? DST, time zones?
+- Need to allocate appropriate OBIS codes for MBus fields. There is some standardisation through EN1434 (I think).
+- security? password field exists in doc.
 
 
 
