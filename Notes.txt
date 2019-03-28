@@ -17394,6 +17394,16 @@ SMIP RLL Key estimation
 - Message from NMS to Agent to set the preferred key index?
 - Send of KeyTableHash to server on login.
 
+-   Agent needs to read a table of keys and a preferred key index from the CH instead of a single key. (Agent 3d when CH has support).
+-   The process of distribution of the key-table and the application pf a key-table shall be separate operations.
+Key-tables shall be identified by a hash (of their contents) in order to avoid application of inappropriate keys.
+Use of configuration to distribute key-table & preferred key. Key-table hash separate from configuration-hash (3d).
+-   Agent needs a timed activation of key-table to allow coordination of change-over (?).
+-   Agent needs to send event to C4 server on key-change operations (1d).
+-   Agent-side library integration API documentation (2d).
+-   CH code will need updates to support key-table, and we need new code to integrate with (2d integration time for new code drop from Tosh).
+
+
 
 
 
