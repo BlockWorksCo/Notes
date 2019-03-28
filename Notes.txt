@@ -17335,6 +17335,12 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 - Antenna switch control via configuration.
 - On-demand request for data should be functional.
 - licensing/activity is currently per-node, not per-meter?
+- Rreset of billing, instantaneous, simple and enhanced billing possible.
+- Read of serial number, identification number, version and manufacturer for name-plate.
+- MBus types will generally map to AXDR types, BCD will need to be converted.
+- Generally, use libmbus to read mbus format, translate into a DLMS/AXDR format profile structure using axdr fns, transfer up in normal dataprofile manner.
+- Configuration: baud-rate,
+- selective access can be done? maybe. may have to read all and filter internally.
 
 
 
