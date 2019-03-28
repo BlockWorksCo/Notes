@@ -17310,6 +17310,8 @@ BSD 3-Clause License
 
 https://github.com/rscada/libmbus/blob/master/mbus/mbus-protocol.c
 
+http://www.m-bus.com/files/w4b21021.pdf
+
 HMP/MBus work:
 
 - targetting a PanMesh server to be compatible with Kaifa driver? Omni will be significantly different.
@@ -17350,6 +17352,8 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 - security? password field exists in doc.
 - selective access performed by "storage number" in cyclic storage (index into circular buffer).
 - "storage interval" == "capture period"
+- Process of reading profile is to select DIFEs (one of which should be time) to read at a given storage-number (this is the unifying point).
+- Need to define which parameters/DIFEs they want in a profile.
 
 
 
