@@ -17354,6 +17354,7 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 - "storage interval" == "capture period"
 - Process of reading profile is to select DIFEs (one of which should be time) to read at a given storage-number (this is the unifying point).
 - Need to define which parameters/DIFEs they want in a profile.
+- reading of capture-period from meter.
 
 
 
