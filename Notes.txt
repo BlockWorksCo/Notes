@@ -17348,6 +17348,7 @@ therefore use individual NodeRegistrationMessage messages, rather than one for a
 - Time sync? DST, time zones?
 - Need to allocate appropriate OBIS codes for MBus fields. There is some standardisation through EN1434 (I think).
 - security? password field exists in doc.
+- selective access performed by "storage number" in cyclic storage.
 
 
 
