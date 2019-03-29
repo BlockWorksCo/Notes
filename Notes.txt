@@ -17419,6 +17419,10 @@ RSA public key  rsa.pub Import to Server Security Pair/Public key
 RSA private key password    rsa_pass.txt    Copy the content to Server Security Pair/Password
 
 
+-----------------------------------------------
+
+pgmflashWrite( MemBlock* )
+pgmflashRead( MemBlock* )
 
 
 
