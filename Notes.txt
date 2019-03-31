@@ -17425,5 +17425,10 @@ pgmflashWrite( MemBlock* )
 pgmflashRead( MemBlock* )
 
 
+mqramstorage->blockdevice->flashblockdevice
+mqramstorage->blockdevice->flashpartitionblockdevice->flashblockdevice
+
+
+
 
 
