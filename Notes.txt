@@ -17501,6 +17501,8 @@ index d1ae06a1f..7d0076792 100644
 
 Removing DTLS session cache:
 
+CONFIG_DTLS_PERSISTENT_CACHE=n
+
 452808 Apr  1 18:34 agent.bin*
 
 
