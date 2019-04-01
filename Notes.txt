@@ -17551,6 +17551,19 @@ CONFIG_BUILD_AGENTLIB=n
  34516 Apr  1 20:53 bootloader.bin*
 
 
+----------------------------------------------
+
+ ARCH_CFLAGS += -flto  -fverbose-asm -fwhole-program  -fno-exceptions  -Xlinker -Map=output.map
+ 18 
+ 19 # Use a non-semihosted C library
+ 20 ARCH_LDFLAGS += --specs=nosys.specs
+ 21 # Use Newlib-nano, which leaves out support for float printf and other features
+ 22 ARCH_LDFLAGS += --specs=nano.specs
+ 23 
+ 24 ARCH_LDFLAGS += -mcpu=cortex-m3 -mthumb -Lsrc/hw/cortex-m3
+ 25 ARCH_LDFLAGS += -flto  -fverbose-asm -save-temps -fwhole-program -Xlinker -Map=output.map
+ 26 
+
 -------------------------------------------------
 
 Things to remove:
