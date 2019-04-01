@@ -17458,5 +17458,46 @@ ls build/ipa3-lnt-dlms-insecure/release/*.image
 
 478344 agent-ipa3-lnt-dlms-insecure-v143-22-gd5957f567.image
 
+454088 Apr  1 18:14 agent.bin*
+ 42440 Apr  1 18:14 bootloader.bin*
+
+
+LTO saves 24KB firmaware & 11KB bootloader.
+
+--- a/config/arch/arm-none-eabi-cortex_m3.mk
++++ b/config/arch/arm-none-eabi-cortex_m3.mk
+@@ -14,6 +14,7 @@ execsuffix := .elf
+ ARCH_CFLAGS += -mcpu=cortex-m3 -mthumb
+ ARCH_CFLAGS += -mno-unaligned-access
+ ARCH_CFLAGS += -Os
++ARCH_CFLAGS += -flto  -fverbose-asm 
+ 
+ # Use a non-semihosted C library
+ ARCH_LDFLAGS += --specs=nosys.specs
+@@ -21,6 +22,7 @@ ARCH_LDFLAGS += --specs=nosys.specs
+ ARCH_LDFLAGS += --specs=nano.specs
+ 
+ ARCH_LDFLAGS += -mcpu=cortex-m3 -mthumb -Lsrc/hw/cortex-m3
++ARCH_LDFLAGS += -flto  -fverbose-asm -save-temps
+ 
+ # Add the Definition for FreeRTOS ARM Cortex M3
+ ARCH_CPPFLAGS += -DGCC_ARMCM3
+diff --git a/src/hw/cortex-m3/startup.c b/src/hw/cortex-m3/startup.c
+index d1ae06a1f..7d0076792 100644
+--- a/src/hw/cortex-m3/startup.c
++++ b/src/hw/cortex-m3/startup.c
+@@ -69,7 +69,7 @@ static uint8_t stack[__STACK_SIZE] __attribute__ ((aligned(8), used, section(".s
+ /*----------------------------------------------------------------------------
+   Reset Handler called on controller reset
+  *----------------------------------------------------------------------------*/
+-void Reset_Handler(void)
++void __attribute__((__used__)) Reset_Handler(void)
+ {
+   // First, copy data from read only memory to RAM.
+   uint32_t* pDest = &__data_start__;
+
+
+
+
 
 
