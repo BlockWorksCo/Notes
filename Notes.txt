@@ -17551,6 +17551,21 @@ CONFIG_BUILD_AGENTLIB=n
  34516 Apr  1 20:53 bootloader.bin*
 
 
+-------------------------------------------------
+
+Things to remove:
+
+- cndfs
+- CONFIG_FLASH_SPI
+- CONFIG_FLASH_SPI25
+- CONFIG_STORAGE_FLASH
+- CONFIG_FS_CNDFS
+- CONFIG_FS_SECURE
+- CONFIG_POWERSWITCH
+- PanMesh
+
+
+
 
 
 
