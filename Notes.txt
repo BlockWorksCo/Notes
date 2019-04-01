@@ -17429,6 +17429,34 @@ mqramstorage->blockdevice->flashblockdevice
 mqramstorage->blockdevice->flashpartitionblockdevice->flashblockdevice
 
 
+--------------------------------------------------------
+
+60000   bootloader
+480000  running fw
+480000  filedl
+    2   activity_report
+  438   configuration-1.pb
+  133   device_alarms_profiles
+    4   dlms_state
+  197   dp_config
+  786   dtls_state      (-CONFIG_DTLS_PERSISTENT_CACHE will remove this)
+    4   macsec_state
+  142   metering_profiles
+
+  390   agent_cert.der
+  121   agent_key.der
+  554   ca_cert.der
+   26   mac_1
+
+
+CONFIG_DTLS_PERSISTENT_CACHE will remove dtls_state
+
+
+---------------------------------------------------
+
+ls build/ipa3-lnt-dlms-insecure/release/*.image
+
+478344 agent-ipa3-lnt-dlms-insecure-v143-22-gd5957f567.image
 
 
 
