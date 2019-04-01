@@ -17528,5 +17528,8 @@ CONFIG_REMOTE_MEMORY=n
   34516 Apr  1 18:45 bootloader.bin*
 
 
+-------------------------------------
+
+Insecure and no CONFIG_FLASH_STORAGE and no flash-test/erase in prodmode-common.c
 
 
