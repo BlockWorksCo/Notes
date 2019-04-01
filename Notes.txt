@@ -17530,6 +17530,10 @@ CONFIG_REMOTE_MEMORY=n
 
 -------------------------------------
 
-Insecure and no CONFIG_FLASH_STORAGE and no flash-test/erase in prodmode-common.c
+Secure and no flash-test/erase in prodmode-common.c
+
+446900 Apr  1 19:23 agent.bin*
+ 34516 Apr  1 19:23 bootloader.bin*
+
 
 
