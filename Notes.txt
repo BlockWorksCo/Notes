@@ -17535,5 +17535,14 @@ Secure and no flash-test/erase in prodmode-common.c
 446900 Apr  1 19:23 agent.bin*
  34516 Apr  1 19:23 bootloader.bin*
 
+------------------------------------------------
+
+-fwhole-program (No change).
+
+446900 Apr  1 19:27 agent.bin*
+ 34516 Apr  1 19:27 bootloader.bin*
+
+
+
 
 
