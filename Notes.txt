@@ -17517,9 +17517,15 @@ CONFIG_STRIP_BINARIES=y
 
 
 
+---------------------------
+
+(Good change)
+
 CONFIG_FS_SECURE=n
 CONFIG_REMOTE_MEMORY=n
 
+ 449464 Apr  1 18:45 agent.bin*
+  34516 Apr  1 18:45 bootloader.bin*
 
 
 
