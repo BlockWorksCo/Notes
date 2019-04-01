@@ -17563,6 +17563,8 @@ Things to remove:
 - CONFIG_FS_SECURE
 - CONFIG_POWERSWITCH
 - PanMesh
+- debug text
+
 
 
 
