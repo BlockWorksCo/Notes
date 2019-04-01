@@ -17506,6 +17506,21 @@ CONFIG_DTLS_PERSISTENT_CACHE=n
 452808 Apr  1 18:34 agent.bin*
 
 
+--------------------------------
+
+No change.
+CONFIG_STRIP_BINARIES=y
+
+
+452808 Apr  1 18:42 agent.bin*
+ 42440 Apr  1 18:42 bootloader.bin*
+
+
+
+CONFIG_FS_SECURE=n
+CONFIG_REMOTE_MEMORY=n
+
+
 
 
 
