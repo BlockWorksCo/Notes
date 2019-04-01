@@ -17538,6 +17538,7 @@ Secure and no flash-test/erase in prodmode-common.c
 ------------------------------------------------
 
 -fwhole-program (No change).
+-ffunction-sections, --fdata-sections and --gc-sections no change.
 
 446900 Apr  1 19:27 agent.bin*
  34516 Apr  1 19:27 bootloader.bin*
