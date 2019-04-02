@@ -17470,16 +17470,16 @@ LTO saves 24KB firmaware & 11KB bootloader.
  ARCH_CFLAGS += -mcpu=cortex-m3 -mthumb
  ARCH_CFLAGS += -mno-unaligned-access
  ARCH_CFLAGS += -Os
-+ARCH_CFLAGS += -flto  -fverbose-asm 
- 
++ARCH_CFLAGS += -flto  -fverbose-asm
+
  # Use a non-semihosted C library
  ARCH_LDFLAGS += --specs=nosys.specs
 @@ -21,6 +22,7 @@ ARCH_LDFLAGS += --specs=nosys.specs
  ARCH_LDFLAGS += --specs=nano.specs
- 
+
  ARCH_LDFLAGS += -mcpu=cortex-m3 -mthumb -Lsrc/hw/cortex-m3
 +ARCH_LDFLAGS += -flto  -fverbose-asm -save-temps
- 
+
  # Add the Definition for FreeRTOS ARM Cortex M3
  ARCH_CPPFLAGS += -DGCC_ARMCM3
 diff --git a/src/hw/cortex-m3/startup.c b/src/hw/cortex-m3/startup.c
@@ -17554,15 +17554,15 @@ CONFIG_BUILD_AGENTLIB=n
 ----------------------------------------------
 
  ARCH_CFLAGS += -flto  -fverbose-asm -fwhole-program  -fno-exceptions  -Xlinker -Map=output.map
- 18 
+ 18
  19 # Use a non-semihosted C library
  20 ARCH_LDFLAGS += --specs=nosys.specs
  21 # Use Newlib-nano, which leaves out support for float printf and other features
  22 ARCH_LDFLAGS += --specs=nano.specs
- 23 
+ 23
  24 ARCH_LDFLAGS += -mcpu=cortex-m3 -mthumb -Lsrc/hw/cortex-m3
  25 ARCH_LDFLAGS += -flto  -fverbose-asm -save-temps -fwhole-program -Xlinker -Map=output.map
- 26 
+ 26
 
 -------------------------------------------------
 
@@ -17579,6 +17579,11 @@ Things to remove:
 - debug text (68KB)
 
 
+--------------------------------------------
+
+message queue in flash:
+dd if=/dev/zero of=pgmFlash.bin bs=1024 count=1024
+od -j 921728 -A x -v -t x1 pgmFlash.bin
 
 
 
