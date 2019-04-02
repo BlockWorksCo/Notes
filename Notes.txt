@@ -17585,6 +17585,19 @@ message queue in flash:
 dd if=/dev/zero of=pgmFlash.bin bs=1024 count=1024
 od -j 921728 -A x -v -t x1 pgmFlash.bin
 
+------------------------------------------------------------
+
+Configuration:
+- from server, write-only from server.
+
+LocalState:
+- from node, writeable from node, not readable from server.
+
+
+
+
+
+
 
 
 
