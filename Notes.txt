@@ -17592,7 +17592,14 @@ Configuration:
 
 LocalState:
 - from node, writeable from node, not readable from server.
+- keys.
+- DTLS state.
+- profile state
+- frame counters
 
+
+
+-------------------------------------------------------------------
 
 
 
