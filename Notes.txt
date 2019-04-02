@@ -12954,8 +12954,8 @@ RSA private key password    rsa_pass.txt    Copy the content to Server Security 
 
 -----------------------------------------------------------
 
-IPA1: STM32F217 + FLASH + CC1200
-SPA3: stm32f401ce + CC1200
+IPA1: STM32F217 + FLASH + CC1200 (127KB SRAM)
+SPA3: stm32f401ce + CC1200 (96KB SRAM)
 
 tradfri hub:
 https://github.com/basilfx/TRADFRI-Hacking
