@@ -17601,6 +17601,9 @@ LocalState:
 
 -------------------------------------------------------------------
 
+config backend flash
+- takes config-struct and writes it to one of 3 slots.
+- slots are 4KB in size.
 
    
 
