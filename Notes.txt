@@ -17583,7 +17583,7 @@ Things to remove:
 
 message queue in flash:
 dd if=/dev/zero of=pgmFlash.bin bs=1024 count=1024
-od -j 921728 -A x -v -t x1 pgmFlash.bin
+od -j 921600 -A x -v -t x1 pgmFlash.bin
 
 ------------------------------------------------------------
 
@@ -17605,7 +17605,7 @@ config backend flash
 - takes config-struct and writes it to one of 3 slots.
 - slots are 4KB in size.
 
-   
+
 
 
 
