@@ -17618,10 +17618,13 @@ config backend flash
   142 metering_profiles
     0 metering_series
 
+Issues:
 - MAX Size of firmware us 448KB
 - Does bootloader erase top half of FLASH???
 - There is another FLASH at 0x0FE10000 that is normally used for a
 bootloader that we could use to install a new bootloader.
+- May want to increase size of internal mq for wear-levelling reasons (spread over more blocks).
+- What happens when server wants to read earlier than we have history for? ignore?
 
 
 
