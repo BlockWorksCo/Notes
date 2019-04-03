@@ -17583,7 +17583,7 @@ Things to remove:
 
 message queue in flash:
 dd if=/dev/zero of=pgmFlash.bin bs=1024 count=1024
-od -j 921600 -A x -v -t x1 pgmFlash.bin
+od -j 983040 -A x -v -t x1 pgmFlash.bin
 
 ------------------------------------------------------------
 
@@ -17606,6 +17606,22 @@ config backend flash
 - slots are 4KB in size.
 
 
+    2 activity_report
+  438 configuration-1.pb
+  438 configuration-2.pb
+  133 device_alarms_profiles
+    4 dlms_state
+  197 dp_config
+  786 dtls_state
+ 4096 keys/
+    4 macsec_state
+  142 metering_profiles
+    0 metering_series
+
+- MAX Size of firmware us 448KB
+- Does bootloader erase top half of FLASH???
+- There is another FLASH at 0x0FE10000 that is normally used for a
+bootloader that we could use to install a new bootloader.
 
 
 
