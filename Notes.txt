@@ -17618,6 +17618,11 @@ config backend flash
   142 metering_profiles
     0 metering_series
 
+typical config size (all-in) of ~4KB. Allow 8KB x2 = 16KB.
+
+
+------------------------------------------------------------------
+
 Issues:
 - MAX Size of firmware us 448KB
 - Does bootloader erase top half of FLASH??? yes... up to 896KB!!!!
@@ -17625,6 +17630,8 @@ Issues:
 bootloader that we could use to install a new bootloader.
 - May want to increase size of internal mq for wear-levelling reasons (spread over more blocks).
 - What happens when server wants to read earlier than we have history for? ignore?
+- Approach of saving everything to config worked until config-size was > 1024 then CoAP-BlockWise bugs
+hit when transferred to server (server exception). Avoided by not sending "hidden" config.
 
 
 
