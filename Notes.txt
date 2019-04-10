@@ -17634,6 +17634,7 @@ bootloader that we could use to install a new bootloader.
 - Approach of saving everything to config worked until config-size was > 1024 then CoAP-BlockWise bugs
 hit when transferred to server (server exception). Avoided by not sending "hidden" config.
 - Unit test breakage. Will be fixed when appropriate.
+- Need a small 1st-stage bootloader followed by full-fat 2nd stage to do upgrade. 2nd stage would be replacable.
 
 
 
