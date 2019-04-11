@@ -17658,5 +17658,12 @@ LLS shouldn't have a framecounter anyway, what two security levels are we switch
 ./tools/c4-tools/coap_request.py --ctrlporthub localhost:4001 --rll-key /Data/Temp/KeysAndCertsOmnireltest/00-1B-C5-0C-60-00-01-84/mac_keys.txt
 ./tools/c4-tools/coap_request.py --ctrlporthub localhost:4001 --config prod.lowpan.eui64 00-1B-C5-0C-60-00-01-84
 
+----------------------------------------
+
+pip install jupyter
+pip install jupyter-c-kernel
+install_c_kernel --user
+
+jupyter notebook
 
 
