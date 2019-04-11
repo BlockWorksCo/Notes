@@ -17663,6 +17663,7 @@ LLS shouldn't have a framecounter anyway, what two security levels are we switch
 pip install jupyter
 pip install jupyter-c-kernel
 install_c_kernel --user
+apt install pandoc xelatex
 
 jupyter notebook
 
