@@ -17678,7 +17678,7 @@ getEntryByDst():
 - If keyIndex is restricted, packet is not forwarded.
 
 - On receipt of a packet, if frameSecurityKeyMode == 0 (i.e. disabled) then frameSecurityKeyIndex is taken as zero.
-
+- On transmit,
 
 
 
