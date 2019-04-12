@@ -17670,5 +17670,17 @@ jupyter notebook
 
 -------------------------------------------------
 
+Same rules apply for tx as for rx.
+getEntryByDst():
+- keyIndex for encryption is always s_preferredKeyIndex.
+- If dst is not broadcast and dst has specific key in table, that is used instead.
+- If dst is broadcast, s_preferredKeyIndex is used.
+- If keyIndex is restricted, packet is not forwarded.
+
+- On receipt of a packet, if frameSecurityKeyMode == 0 (i.e. disabled) then frameSecurityKeyIndex is taken as zero.
+
+
+
+
 
 
