@@ -17729,6 +17729,30 @@ and the time that is searched for is:
 From time: 2019-04-08 00:01:32
 To time: 2019-04-08 05:01:31
 
+(Note 12:15am == 00:15)
+
+The range for our search *should* give us the data starting at that point in time (i.e. the earliest sample).
+What seems to be happening is that the meter is noting that our start-time is prior to its earliest sample and rejecting the selective-access-request.
+This is not correct behaviour, our search *starts* outside its range and *finishes* inside the range.
+The range therefore contains valid data and the meter should return as such.
+The meter is instead responding with a "ReadWriteDenied" error which is not correct.
+
+Because the search ended with an error (ReadWriteDenied), we do not move forward with the search and we're therefore stuck repeating this.
+
+The root cause of the problem is the bad result from the meter for a valid search-range.
+
+We can handle it by calculating our "from" timestamp more accurately (i.e. exactly on the earliest timestamp) or by ignoring the earliest element.
+Ignoring the ealiest element is not advisable obviously as we would just shift the problem.
+
+
+
+
+
+
+
+
+
+
 
 
 
