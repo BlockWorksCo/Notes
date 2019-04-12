@@ -17722,6 +17722,13 @@ now = 1555092034
 1555092034 - 583200
 
 
+Ok, if you look in the CSV file you supplied, the data is actually there in the meter.
+The first sample in the spreadsheet is:
+ 08/04/2019 12:15:__ AM
+and the time that is searched for is:
+From time: 2019-04-08 00:01:32
+To time: 2019-04-08 05:01:31
+
 
 
 
