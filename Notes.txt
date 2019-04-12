@@ -17667,4 +17667,10 @@ apt install pandoc xelatex
 
 jupyter notebook
 
+-------------------------------------------------
+
+mqblockdev:
+- When seqnum is obtained from server at login, we need to use that number for any subsequenyt writes to the mq.
+
+
 
