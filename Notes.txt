@@ -17635,6 +17635,7 @@ bootloader that we could use to install a new bootloader.
 hit when transferred to server (server exception). Avoided by not sending "hidden" config.
 - Unit test breakage. Will be fixed when appropriate.
 - Need a small 1st-stage bootloader followed by full-fat 2nd stage to do upgrade. 2nd stage would be replacable.
+- Transition process, copy external to internal. Need fs available.
 
 
 
@@ -17668,9 +17669,6 @@ apt install pandoc xelatex
 jupyter notebook
 
 -------------------------------------------------
-
-mqblockdev:
-- When seqnum is obtained from server at login, we need to use that number for any subsequenyt writes to the mq.
 
 
 
