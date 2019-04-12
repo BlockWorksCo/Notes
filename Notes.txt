@@ -17672,13 +17672,17 @@ jupyter notebook
 
 Same rules apply for tx as for rx.
 getEntryByDst():
-- keyIndex for encryption is always s_preferredKeyIndex.
-- If dst is not broadcast and dst has specific key in table, that is used instead.
-- If dst is broadcast, s_preferredKeyIndex is used.
-- If keyIndex is restricted, packet is not forwarded.
+1) keyIndex for encryption is always s_preferredKeyIndex.
+2) If dst is not broadcast and dst has specific key in table, that is used instead.
+3) If dst is broadcast, s_preferredKeyIndex is used.
+4) If keyIndex is restricted and dst is on mesh, packet is not forwarded.
 
-- On receipt of a packet, if frameSecurityKeyMode == 0 (i.e. disabled) then frameSecurityKeyIndex is taken as zero.
-- On transmit,
+5) On receipt of a packet, if frameSecurityKeyMode == 0 (i.e. disabled) then frameSecurityKeyIndex is taken as zero.
+6) On transmit, if the keyIndex is not zero, we set keyIndex mode.
+7) On transmit, if the keyIndex *is* zero, we set implicit mode.
+8) On receipt, if implicit-key mode is set (i.e. transmitted on key-zero) then key-zero is always used.
+
+9) (8) & (7) imply that key zero always needs to be the same on all nodes as this will not allow the table to be used on receipt.
 
 
 
