@@ -17704,3 +17704,25 @@ pw ubuntu
 
 
 
+
+now: 2019-04-12T18:00:34.000+05:30 0
+Profile 1-0:99.1.0*255: 648 entries in the profile buffer
+Selective read: by range
+Selective read: by range - read range for sampling
+Last sample was very long ago, to read all filled entries: 648
+Read limited (20) entries each time.
+Get 1-0:99.1.0*255 ic 7 attr 2 by range:
+Profile Block load: From time: 2019-04-06 00:00:34
+Profile Block load: To time: 2019-04-06 05:00:33
+
+
+648 * 900 = 583200 = 162 hourso
+
+now = 1555092034
+1555092034 - 583200
+
+
+
+
+
+
