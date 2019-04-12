@@ -17685,6 +17685,22 @@ getEntryByDst():
 9) (8) & (7) imply that key zero always needs to be the same on all nodes as this will not allow the table to be used on receipt.
 
 
+- RPL uses broadcasts (using preferred key) if that preferred key is *zero* then implicit-key-mode will be used. This would allow
+a virgin-node with a matching key-zero to join the mesh.
+- RPL uses broadcasts (using preferred key) if that preferred key is *non-zero* then key-index-mode will be used. This would not
+allow a virgin-node with a matching key-zero to join the mesh.
+- If a node without a key-table attempts to join a mesh with a key-table then it will be using key-zero and hence implicit-key
+mode. This means that the receiving node on the mesh will interpret its packets using *its* key-zero which *must* match.
+- If the above is a problem we could potentially initialise the nodes with a key-table with a non-zero-index preferred  key
+that matches the others. This would cause indexed-key-mode to be used and allows the flexibility of putting the preferred key
+anywhere in the table. Effectively we stop using implicit-key-mode, packets will always be encrypted and in indexed-key-mode and
+can never use key-zero.
+
+---------------------------------------------------------
+
+test server
+ssh ubuntu@hw-test-server
+pw ubuntu
 
 
 
