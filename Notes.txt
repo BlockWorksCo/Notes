@@ -17743,18 +17743,16 @@ The root cause of the problem is the bad result from the meter for a valid searc
 
 We can handle it by calculating our "from" timestamp more accurately (i.e. exactly on the earliest timestamp) or by ignoring the earliest element.
 Ignoring the ealiest element is not advisable obviously as we would just shift the problem.
+Or, we can ignore the error and continue, but this is unadvisable.
+Or we can calculate the earliest sample time by doing a reverse search (if sort_object works on this meter).
 
 
 
 
 --------------------------------------------
 
-
-
-
-
 Ok, this sequence shows the node attempting to catch up on the readings by determining
-how many entries are in the meter and attemptin gto start its retrieval by starting at
+how many entries are in the meter and attempting to start its retrieval by starting at
 the earliest and working forward.
 the search range does in fact contain samples with data, so we expect to get a non-empty
 set back from the meter.
@@ -17765,6 +17763,11 @@ rather than a set of samples.
 
 As a general point, if a search for a range of data lies outside of the data contained
 in the meter, the result should be an empty set, not an error.
+
+As a result of this error, we abort the process and do not move forward (this is correct
+behaviour as we need to retry on error).
+This results in a continuing issue where we retry the process from the same point as we
+consider this a failure rather than a 'no data'.
 
 
 Get 1-0:99.1.0*255 ic 7 attr 7 normal access
@@ -17901,7 +17904,6 @@ c401810103
     </Result>
   </GetResponseNormal>
 </GetResponse>
-
 
 
 
