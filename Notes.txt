@@ -17747,12 +17747,160 @@ Ignoring the ealiest element is not advisable obviously as we would just shift t
 
 
 
+--------------------------------------------
 
 
 
 
 
+Ok, this sequence shows the node attempting to catch up on the readings by determining
+how many entries are in the meter and attemptin gto start its retrieval by starting at
+the earliest and working forward.
+the search range does in fact contain samples with data, so we expect to get a non-empty
+set back from the meter.
+What seems to be happening is that in order to ensure we obtain the earliest sample, we
+start the search at a position prior to that element.
+This is still a valid search, but the result from the meter is a "ReadWriteDenied" error
+rather than a set of samples.
 
+As a general point, if a search for a range of data lies outside of the data contained
+in the meter, the result should be an empty set, not an error.
+
+
+Get 1-0:99.1.0*255 ic 7 attr 7 normal access
+
+<GetRequest>
+  <GetRequestNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!--PROFILE_GENERIC-->
+      <ClassId Value="0007" />
+      <!--1.0.99.1.0.255-->
+      <InstanceId Value="0100630100FF" />
+      <AttributeId Value="07" />
+    </AttributeDescriptor>
+  </GetRequestNormal>
+</GetRequest>
+
+before encryption:
+c0018100070100630100ff0700
+
+output:
+02c
+03
+41
+32
+9f9f
+e6e600
+c81e3000002c1ec9204257f6e3a7f47c
+f85c295f0afc8941c7ca9f2cf59b46dc
+6201
+7e
+
+response:
+7ea0284103526d48e6e700cc1a300000
+3b8bc4e9fcc1b8b119c3bba15bb80f95
+7c8dd38db9daf2bd8d7e
+
+Decrypted:
+c4018100060000026c
+
+<GetResponse>
+  <GetResponseNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <Data>
+        <UInt32 Value="0000026C" />
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+
+
+
+Last sample was very long ago, to read all filled entries: 620
+Read limited (20) entries each time.
+Get 1-0:99.1.0*255 ic 7 attr 2 by range:
+Profile Block load: From time: 2019-04-06 00:00:34
+Profile Block load: To time: 2019-04-06 05:00:33
+
+
+<GetRequest>
+  <GetRequestNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!--PROFILE_GENERIC-->
+      <ClassId Value="0007" />
+      <!--1.0.99.1.0.255-->
+      <InstanceId Value="0100630100FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+    <AccessSelection>
+      <AccessSelector Value="01" />
+      <AccessParameters>
+        <Structure Qty="04" >
+          <Structure Qty="04" >
+            <UInt16 Value="0008" />
+            <!--0.0.1.0.0.255-->
+            <OctetString Value="0000010000FF" />
+            <Int8 Value="02" />
+            <UInt16 Value="0000" />
+          </Structure>
+          <!--2019-04-06 00:00:34-->
+          <OctetString Value="07E3040606000022FF014A00" />
+          <!--2019-04-06 05:00:33-->
+          <OctetString Value="07E3040606050021FF014A00" />
+          <Array Qty="00" >
+          </Array>
+        </Structure>
+      </AccessParameters>
+    </AccessSelection>
+  </GetRequestNormal>
+</GetRequest>
+
+before encryption:
+c0018100070100630100ff0201010204
+020412000809060000010000ff0f0212
+0000090c07e3040606000022ff014a00
+090c07e3040606050021ff014a000100
+
+after encryption:
+7e
+a05f
+03
+41
+54
+27e6
+e6e600
+c8513000002c1fef51b333bb4f59df03
+001c1aa3ae8ff6f18d70453616489a98
+f2e244dbb71dfc510b0c033232cc5df9
+1a953506483685aab1bd8097fa89f99e
+81ecb77a2e7af5dd37d92de2a6467d37
+c1fe47
+683f
+7e
+
+response:
+7ea0244103746d9be6e700cc16300000
+3b8c62396d9eab3b6d92454e5e0a9b5e
+cc298543667e
+
+After decryption:
+c401810103
+
+<GetResponse>
+  <GetResponseNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <Result>
+      <DataAccessError Value="ReadWriteDenied" />
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
 
 
 
