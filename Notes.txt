@@ -17585,6 +17585,7 @@ Things to remove:
 message queue in flash:
 dd if=/dev/zero of=pgmFlash.bin bs=1024 count=1024
 od -j 983040 -A x -v -t x1 pgmFlash.bin
+od -j 0x000f2000 -A x -v -t x1 pgmFlash.bin
 
 ------------------------------------------------------------
 
