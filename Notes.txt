@@ -17637,6 +17637,7 @@ hit when transferred to server (server exception). Avoided by not sending "hidde
 - Unit test breakage. Will be fixed when appropriate.
 - Need a small 1st-stage bootloader followed by full-fat 2nd stage to do upgrade. 2nd stage would be replacable.
 - Transition process, copy external to internal. Need fs available.
+- Due to 8bit->16bit transition for nanopb, we can't downgrade firmware now. Its a one-way transition.
 
 
 
