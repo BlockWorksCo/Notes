@@ -17909,8 +17909,9 @@ c401810103
 
 
 ---------------------------------------------------------------------
-
+node setup
 Omnireltest2 setup:
+
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002  --config prod.lowpan.eui64  00-1B-C5-0C-60-04-FD-D6
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002  --config prod.prodtme 1
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.channel 7
@@ -17920,6 +17921,14 @@ Omnireltest2 setup:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-key /Data/Temp/00-1B-C5-0C-60-04-FD-D6/node.key.der
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-cert /Data/Temp/00-1B-C5-0C-60-04-FD-D6/node.crt.der
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key root-cert /Data/Temp/00-1B-C5-0C-60-04-FD-D6/ca.crt.der
+
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.lls_password lnt1
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.authentication_key 31323334353637383930313233343536
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.encryption_key 31323334353637383930313233343536
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.hls_key 30303030303030303031303335383230
+
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_now 1
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_delay 120
 
 
 
