@@ -17931,7 +17931,60 @@ Omnireltest2 setup:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_delay 120
 
 
+----------------------------------
+
+L&T time set:
+
+c1018100080000010000ff0200090c07e30410ff131b2dff014a00
+<SetRequest>
+  <SetRequestNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="0008" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+    <Value>
+      <!--2019-04-16 19:27:45-->
+      <OctetString Value="07E30410FF131B2DFF014A00" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
 
 
+DLMS DIRECTOR (SUCCESS)
+
+C101C100080000010000FF0200090C07E3041305081A39FFFFC480
+<SetRequest>
+  <SetRequestNormal>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="C1" />
+    <AttributeDescriptor>
+      <!--CLOCK-->
+      <ClassId Value="0008" />
+      <!--0.0.1.0.0.255-->
+      <InstanceId Value="0000010000FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+    <Value>
+      <!--2019-04-19 08:26:57-->
+      <OctetString Value="07E3041305081A39FFFFC480" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
+
+
+
+bad:  07E3 04 10 FF 131B2DFF014A00
+good: 07E3 04 13 05 081A39FFFFC480
+
+
+
+n differences i can see are
+ # The Invoke ID and Priority differ between the two requests : AGENT sends 0x81 . DIRECTOR sends 0xC1
+ # The AGENT is sending an unspecified Day of the week in the DLMS time string value (0xFF) and it is possible that the LnT meter (incorrectly) requires this to be set.
 
 
