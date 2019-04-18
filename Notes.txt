@@ -17987,4 +17987,14 @@ n differences i can see are
  # The Invoke ID and Priority differ between the two requests : AGENT sends 0x81 . DIRECTOR sends 0xC1
  # The AGENT is sending an unspecified Day of the week in the DLMS time string value (0xFF) and it is possible that the LnT meter (incorrectly) requires this to be set.
 
+---------------------------------------------------
+
+DTLS <--> CoAP <--> login
+               <--> RegisterWithSMA
+               <--> SamplesToSMA <--> AppendToFile
+
+
+
+
+
 
