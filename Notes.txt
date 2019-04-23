@@ -18003,6 +18003,7 @@ DTLS <--> CoAP <--> login
 - refactor configpart to use commonalities with mq.
 - remove spi, flash and fs drivers to make it usable without FLASH being present.
 - code-size reduction?
+- Rename config as KeyValueStore... not just for config but for all application-state.
 
 
 
