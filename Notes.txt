@@ -18019,6 +18019,9 @@ RAIL API supports CRC_32Q and ANSIX366_1979 32-bit crc algs. Which? ANSIX366_197
 - We need to use security-mode 1 (enabled), we currently don't enforce this.
 - (219) We currently use MAC_SECURITY_LEVEL_ENC_MIC32(5). We need to use MAC_SECURITY_LEVEL_ENC-MIC-64(6)
 - (225) "a. Key Source field MUST be omitted". (111,153) "...KeySource and KeyIndex fields MUST echo the corresponding fields of the frame being acknowledged". Which one?
+- (238) "...is the CCM* nonce, which is composed of the source address of the transmitter, the transmitter’s frame counter for the *specific key* used, "
+We currently have one frame-counter for all security levels, not *per* level.
+- (243) "A node MUST maintain a frame counter for each Key"
 
 - How do we roll out this change? only for new networks? Can't easily rollback as the config will be in the image.
 - Make it compatible with old? the frames *may* be compatible if flags are taken into account (i.e. parse both?).
