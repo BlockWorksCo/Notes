@@ -18011,6 +18011,14 @@ BIS review:
 - (88) Timing requirements, 5ms<latency<1ms. Why? this is application-dependent... (responsedelay & tAck)
 - How do we roll out this change? only for new networks? Can't easily rollback as the config will be in the image.
 - We don't do ACK frame addresses standard requires it.
+- (150->160) A few options need to be reflected from the received frame into the ack frame. Need to make sure we do this.
+- 6LoWPAN fragmentation is mandatory.
+- FCS is 32-bit, we have 16-bit (SUN-PHY) Currently we offload CRC calc to the radio-device. The
+RAIL API supports CRC_32Q and ANSIX366_1979 32-bit crc algs. Which? ANSIX366_1979 is 802.15.4g.
+- We disable data-whitening, need it enabled.
+- We don't process IEs, we may have to put effort in to ignore them.
+- We need to use security-mode 1 (enabled), we currently don't enforce this.
+- (219) We currently use MAC_SECURITY_LEVEL_NONE(0). We need to use MAC_SECURITY_LEVEL_xxx(6)
 
 
 
