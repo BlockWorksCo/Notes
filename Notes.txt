@@ -18010,6 +18010,7 @@ DTLS <--> CoAP <--> login
 BIS review:
 - (88) Timing requirements, 5ms<latency<1ms. Why? this is application-dependent... (responsedelay & tAck)
 - How do we roll out this change? only for new networks? Can't easily rollback as the config will be in the image.
+- We don't do ACK frame addresses standard requires it.
 
 
 
