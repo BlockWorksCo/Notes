@@ -18005,6 +18005,11 @@ DTLS <--> CoAP <--> login
 - code-size reduction?
 - Rename config as KeyValueStore... not just for config but for all application-state.
 
+-------------------------------------------------
+
+BIS review:
+- (88) Timing requirements, 5ms<latency<1ms. Why? this is application-dependent... (responsedelay & tAck)
+- How do we roll out this change? only for new networks? Can't easily rollback as the config will be in the image.
 
 
 
