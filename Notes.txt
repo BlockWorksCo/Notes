@@ -18030,5 +18030,17 @@ We currently have one frame-counter for all security levels, not *per* level.
 
 
 
+-------------------------------------------------------
+
+gcc GCC arm-none-eabi-gcc toolchain
+
+"sudo add-apt-repository ppa:team-gcc-arm-embedded/ppa"
+"sudo apt-get update"
+"sudo apt-get install gcc-arm-embedded"
+
+
+
+
+
 
 
