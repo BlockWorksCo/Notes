@@ -17930,6 +17930,7 @@ Omnireltest2 setup:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_now 1
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_delay 120
 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config capabilities.meter.device_testing 0
 
 ----------------------------------
 
