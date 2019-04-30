@@ -18039,6 +18039,18 @@ gcc GCC arm-none-eabi-gcc toolchain
 "sudo apt-get install gcc-arm-embedded"
 
 
+-----------------------------------------
+
+Ethernet PHY ENC424J6000
+
+Power down
+- Modular exponentiation engine
+- AES engine
+- packet reception
+- power down PHY (PSLEEP)
+- power down eth interface
+- disable LED stretching
+
 
 
 
