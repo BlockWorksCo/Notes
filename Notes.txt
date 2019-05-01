@@ -17932,6 +17932,8 @@ Omnireltest2 setup:
 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config capabilities.meter.device_testing 0
 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.txpower.max 20
+
 ----------------------------------
 
 L&T time set:
