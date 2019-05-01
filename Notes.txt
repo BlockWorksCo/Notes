@@ -17913,7 +17913,7 @@ node setup
 Omnireltest2 setup:
 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002  --config prod.lowpan.eui64  00-1B-C5-0C-60-04-FD-D6
-./tools/c4-tools/coap_request.py --ctrlporthub :4002  --config prod.prodtme 1
+./tools/c4-tools/coap_request.py --ctrlporthub :4002  --config prod.prodtime 1
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.channel 7
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.channelplan 2
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --rll-key /Data/Temp/mpwz_key.txt
