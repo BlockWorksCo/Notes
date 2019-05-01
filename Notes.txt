@@ -18054,6 +18054,15 @@ Power down
 - power down eth interface
 - disable LED stretching
 
+-----------------------------------------------
+
+DLT645:
+Gareths Cornflake.zip
+
+- If we need to add meters dynamically, may need to do slow background scan continuously.
+
+
+
 
 
 
