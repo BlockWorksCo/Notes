@@ -18062,6 +18062,19 @@ Gareths Cornflake.zip
 - If we need to add meters dynamically, may need to do slow background scan continuously.
 
 
+--------------------------------------
+
+Agent/Meter combo
+
+- Add HSM & FLASH (8MB) for meter-data + metrology
+- No display needed or buttons/UI on the meter.
+- Opto and DLMS stack & pipe could be optional add-ons, not necessary.
+- Handheld-node for p2p local comms instead of Opto.
+- One thing to upgrade.
+- No DLMS translations, no requirement for DLMS certification.
+- Add metrology driver, accumulations in blocks, ToU calendar, etc.
+- Prepayment? maybe not initially.
+
 
 
 
