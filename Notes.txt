@@ -18064,7 +18064,7 @@ Gareths Cornflake.zip
 
 --------------------------------------
 
-Agent/Meter combo
+Agent/Meter combo (OmniMeter)
 
 - Add HSM & FLASH (8MB) for meter-data + metrology
 - No display needed or buttons/UI on the meter.
@@ -18074,6 +18074,7 @@ Agent/Meter combo
 - No DLMS translations, no requirement for DLMS certification.
 - Add metrology driver, accumulations in blocks, ToU calendar, etc.
 - Prepayment? maybe not initially.
+- Configurable elec/gas/water metrology front-ends.
 
 
 
