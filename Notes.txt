@@ -18078,6 +18078,85 @@ Agent/Meter combo (OmniMeter)
 
 
 
+--------------------------------------------------------------------
+
+    <module id="25" name="capabilities">
+        <param id="1" name="meter.reverse_ESW" type="boolean">
+          <desc>To handle as per bit orientation of ESW if reversed form meter as in UGVCL(1-Bit Reversed, 0-Bit As per standard).</desc>
+#if defined(CONFIG_DEVICE_GENUS_DLMS)
+          <default>1</default>
+#else
+          <default>0</default>
+#endif
+        </param>
+        <param id="2" name="meter.device_testing" type="boolean">
+          <desc>To handle Manufacture Feature enable and disable(1-Feature enabled, 0-Feature disabled).</desc>
+#if defined(CONFIG_DEVICE_GENUS_DLMS)
+          <default>0</default>
+#else
+          <default>1</default>
+#endif
+        </param>
+        <param id="3" name="meter.supports_Ipv6_setup" type="boolean">
+          <desc>To specify meters which support ipv6 setup class 48 configuration.</desc>
+#if defined(CONFIG_DEVICE_GENUS_DLMS)
+          <default>0</default>
+#else
+          <default>1</default>
+#endif
+        </param>
+        <param id="4" name="meter.supports_payment_management" type="boolean">
+          <desc>To specify meters which support Payment management configuration.</desc>
+          <default>0</default>
+        </param>
+        <param id="5" name="meter.MeterUpgradeRequiresUpgradeCredentials" type="boolean">
+          <desc>To handle Meter Upgrade in FU assosiation or HLS (1-Meter Upgrade in FU , 0-Meter Upgrade in HLS).</desc>
+          <default>0</default>
+        </param>
+        <param id="14" name="dlmspipe.session_close_detection" type="boolean">
+          <desc>Enable/Disable the detection of UDP session end via RLRQ</desc>
+#if defined(CONFIG_DEVICE_KAIFA_MA304)
+          <default>0</default>
+#else
+          <default>1</default>
+#endif
+        </param>
+
+#if defined(CONFIG_DEVICE_KAIFA_MA304) || defined(CONFIG_DEVICE_DLMS)
+        <param id="15" name="dlmspipe.session.source_port_change_allowed" type="boolean">
+          <desc>Allow/disallow the dropping of packets if the source-port of the UDP packet changes</desc>
+          <default>0</default>
+        </param>
+#endif
+
+        <param id="16" name="meter.time_update" type="boolean">
+          <desc>Enable/Disable the use of time-update operations when setting meter time.</desc>
+#if defined(CONFIG_DEVICE_KAIFA_MA304)
+          <default>0</default>
+#else
+          <default>1</default>
+#endif
+        </param>
+
+
+       <param id="17" name="meter.timezone_set" type="boolean">
+         <desc>Enable/Disable the use of time-zone set operations.</desc>
+if defined(CONFIG_DEVICE_GENUS_DLMS) || defined(CONFIG_DEVICE_LNT_DLMS)
+         <default>0</default>
+else
+         <default>1</default>
+endif
+       </param>
+
+       <param id="18" name="meter.dst_set" type="boolean">
+         <desc>Enable/Disable the use of DST set operations.</desc>
+if defined(CONFIG_DEVICE_KAIFA_MA304)
+         <default>1</default>
+else
+         <default>0</default>
+endif
+       </param>
+
 
 
 
