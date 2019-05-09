@@ -18160,4 +18160,62 @@ endif
 
 
 
+---------------------------------------------------------
+
+
+Start of LSAP issue.
+
+ Request to retrieve time from meter
+ -- HDLC locked --
+ disconnectLink 0x0
+ Setup AA with No Security
+ Connect HDLC link
+ tx: (1/1): 7e
+ tx: (1/1): a020
+ tx: (1/1): 03
+ tx: (1/1): 21
+ tx: (1/1): 93
+ tx: (1/1): 7dd9
+ tx: (1/2): 8180140502015e0602015e0704000000
+ tx: (2/2): 01080400000001
+ tx: (1/1): 51af
+ tx: (1/1): 7e
+  -- waiting on s_dlmsSemaphore for 100000ms --
+ ACTION_WAIT_FOR_RESPONSE
+ rx: (1/2): 7ea01e210373c37a8180120501800601
+ rx: (2/2): 80070400000001080400000001533b7e
+ HDLC_TYPE_UA
+ tx: (1/1): 7e
+ tx: (1/1): a02b
+ tx: (1/1): 03
+ tx: (1/1): 21
+ tx: (1/1): 10
+ tx: (1/1): fbaf
+ tx: (1/1): e6e600
+ tx: (1/2): 601da109060760857405080101be1004
+ tx: (2/2): 0e01000000065f1f0400001f1fffff
+ tx: (1/1): c64d
+ tx: (1/1): 7e
+ !! Result == ResultOK !!
+ ** Waiting for HDLC event (60000ms) **
+ ACTION_WAIT_FOR_RESPONSE
+ rx: (1/4): 7ea03e2103300f85e63300613ca10906
+ rx: (2/4): 0760857405080103a203020101a305a1
+ rx: (3/4): 0302010dbe17041528132000016392f3
+ rx: (4/4): 14268a3910c1f2a5c5d189d8765ad77e
+ HDLC_TYPE_I
+ Incorrect HDLC src LSAP 33
+  (Bad result) Passing 0 bytes up the chain.
+ ** Waiting for HDLC event (60000ms) **
+ Broken HDLC (or timeout receiving response): (14) not found
+ Retry: send timed-out on an AARQ, requesting again
+
+
+
+
+End of LSAP issue is a timeout while sending an AARQ. After the timeout, its fine.
+
+
+
+
 
