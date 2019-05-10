@@ -18215,6 +18215,13 @@ Start of LSAP issue.
 
 End of LSAP issue is a timeout while sending an AARQ. After the timeout, its fine.
 
+--------------------------------------
+
+Disabling watchdog:
+
+//WDOGn_Enable(WDOG_TypeDef *wdog, bool enable);
+
+WDOGn_Enable( DEFAULT_WDOG, false );
 
 
 
