@@ -18227,7 +18227,66 @@ WDOGn_Enable( DEFAULT_WDOG, false );
 
 read profile selective access
 
-./coap_request.py --server 127.0.0.1:8080 --agent fdfc:2378:7b6c:0:21b:c50c:6001:a2a1 --device 20022002 --device-op GET 7 1.0.99.1.0.255 2 010204020412000809060000010000ff0f02120000090c07e30418ff06000000014a00090c07e30418ff060a0000014a000100
+./coap_request.py --server 127.0.0.1:8080 --agent fdfc:2378:7b6c:0:21b:c50c:6001:a2a1 --device 20022002 --device-op GET 7 1.0.99.1.0.255 2 \
+010204020412000809060000010000ff0f02120000090c07e30418ff06000000014a00090c07e30418ff060a0000014a000100
+
+
+01
+ 02 04
+  02 04
+   12 0008                          // class
+   09 06 0000010000ff               // OBIS
+   0f 02                            // attribute
+   12 0000
+ 09 0c 07e30418ff06000000014a00     // from
+ 09 0c 07e30418ff060a0000014a00     // to
+ 01 00
+
+
+
+for reference, the hex string is the value part from a PDU such as below:
+
+c0018100070100630100ff0201 010204020412000809060000010000ff0f02120000090c07e304060600001dff007800090c07e304060605001cff0078000100
+
+You can form a full APDU that can be decoded and re-encoded from GuruX Translator like below:
+c0018100070100630100ff0201 010204020412000809060000010000ff0f02120000090c07e30418ff06000000014a00090c07e30418ff060a0000014a000100
+                           ^
+                        Make the split here
+<GetRequest>
+  <GetRequestNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <AttributeDescriptor>
+      <!--PROFILE_GENERIC-->
+      <ClassId Value="0007" />
+      <!--1.0.99.1.0.255-->
+      <InstanceId Value="0100630100FF" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+    <AccessSelection>
+      <AccessSelector Value="01" />
+      <AccessParameters>
+        <Structure Qty="04" >
+          <Structure Qty="04" >
+            <UInt16 Value="0008" />
+            <!--0.0.1.0.0.255-->
+            <OctetString Value="0000010000FF" />
+            <Int8 Value="02" />
+            <UInt16 Value="0000" />
+          </Structure>
+          <!--2019-04-06 00:00:29-->
+          <OctetString Value="07E304060600001DFF007800" />
+          <!--2019-04-06 05:00:28-->
+          <OctetString Value="07E304060605001CFF007800" />
+          <Array Qty="00" >
+          </Array>
+        </Structure>
+      </AccessParameters>
+    </AccessSelection>
+  </GetRequestNormal>
+</GetRequest>
+
+
 
 
 
