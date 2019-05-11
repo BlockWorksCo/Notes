@@ -18286,6 +18286,113 @@ c0018100070100630100ff0201 010204020412000809060000010000ff0f02120000090c07e3041
   </GetRequestNormal>
 </GetRequest>
 
+------------------------------------------------------------
+
+steve@steveslaptop:~/Projects/DTLS-Examples/src$ ./MakeMe.sh 
+steve@steveslaptop:~/Projects/DTLS-Examples/src$ ./dtls_udp_echo -V -L fd00::1 -p 5684
+Received Record
+Header:
+  Version = DTLS 1.2 (0xfefd)
+  epoch=0, sequence_number=000000000000
+  Content Type = Handshake (22)
+  Length = 103
+    ClientHello, Length=91
+    message_seq=0, fragment_offset=0, fragment_length=91
+      client_version=0xfefd (DTLS 1.2)
+      Random:
+        gmt_unix_time=0xE903B8AE
+        random_bytes (len=28): CB0B219A2E2504C5ABD5E39FE5A62B5A814AEC8F5B3192C82F407AD4
+      session_id (len=0): 
+      cookie (len=0): 
+      cipher_suites (len=2)
+        {0xC0, 0xAE} TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
+      compression_methods (len=1)
+        No Compression (0x00)
+      extensions, length = 47
+        extension_type=signature_algorithms(13), length=4
+          ecdsa_secp256r1_sha256 (0x0403)
+        extension_type=trusted_ca_keys(3), length=21
+          0000 - 00 aa aa aa aa aa aa aa-aa aa aa aa aa aa aa   ...............
+          000f - aa aa aa aa aa aa                              ......
+        extension_type=ec_point_formats(11), length=2
+          uncompressed (0)
+        extension_type=supported_groups(10), length=4
+          secp256r1 (P-256) (23)
+
+Sent Record
+Header:
+  Version = DTLS 1.2 (0xfefd)
+  epoch=0, sequence_number=000000000000
+  Content Type = Handshake (22)
+  Length = 103
+Received Record
+Header:
+  Version = DTLS 1.2 (0xfefd)
+  epoch=0, sequence_number=000000000001
+  Content Type = Handshake (22)
+  Length = 123
+    ClientHello, Length=111
+    message_seq=1, fragment_offset=0, fragment_length=111
+      client_version=0xfefd (DTLS 1.2)
+      Random:
+        gmt_unix_time=0xE903B8AE
+        random_bytes (len=28): CB0B219A2E2504C5ABD5E39FE5A62B5A814AEC8F5B3192C82F407AD4
+      session_id (len=0): 
+      cookie (len=20): 0E0F2E2EC359E0FB826CC9D1C912926BBF81E7CB
+      cipher_suites (len=2)
+        {0xC0, 0xAE} TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
+      compression_methods (len=1)
+        No Compression (0x00)
+      extensions, length = 47
+        extension_type=signature_algorithms(13), length=4
+          ecdsa_secp256r1_sha256 (0x0403)
+        extension_type=trusted_ca_keys(3), length=21
+          0000 - 00 aa aa aa aa aa aa aa-aa aa aa aa aa aa aa   ...............
+          000f - aa aa aa aa aa aa                              ......
+        extension_type=ec_point_formats(11), length=2
+          uncompressed (0)
+        extension_type=supported_groups(10), length=4
+          secp256r1 (P-256) (23)
+
+    ClientHello, Length=111
+    message_seq=1, fragment_offset=0, fragment_length=111
+      client_version=0xfefd (DTLS 1.2)
+      Random:
+        gmt_unix_time=0xE903B8AE
+        random_bytes (len=28): CB0B219A2E2504C5ABD5E39FE5A62B5A814AEC8F5B3192C82F407AD4
+      session_id (len=0): 
+      cookie (len=20): 0E0F2E2EC359E0FB826CC9D1C912926BBF81E7CB
+      cipher_suites (len=2)
+        {0xC0, 0xAE} TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
+      compression_methods (len=1)
+        No Compression (0x00)
+      extensions, length = 47
+        extension_type=signature_algorithms(13), length=4
+          ecdsa_secp256r1_sha256 (0x0403)
+        extension_type=trusted_ca_keys(3), length=21
+          0000 - 00 aa aa aa aa aa aa aa-aa aa aa aa aa aa aa   ...............
+          000f - aa aa aa aa aa aa                              ......
+        extension_type=ec_point_formats(11), length=2
+          uncompressed (0)
+        extension_type=supported_groups(10), length=4
+          secp256r1 (P-256) (23)
+
+Sent Record
+Header:
+  Version = DTLS 1.2 (0xfefd)
+  epoch=0, sequence_number=000000000001
+  Content Type = Alert (21)
+  Length = 2
+    Level=fatal(2), description=handshake failure(40)
+
+SSL_accept: Success
+error:1417A0C1:SSL routines:tls_post_process_client_hello:no shared cipher
+Thread 7f7789699700: done, connection closed.
+
+
+
+
+
 
 
 
