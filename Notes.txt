@@ -18419,4 +18419,17 @@ mysql> select id,create_time,HEX(samples) from data_profile_sample;
 
 
 
+0206090C07E30515020B1E00FF003C0011000600000000060000000006000000000600000000
+
+02 06                           # Structure of 6 fields
+ 09 0C 07E30515020C1E00FF003C00 # Octet string of 12 bytes
+ 11 00                          # uint8
+ 06 00000000                    # uint32
+ 06 00000000                    # uint32
+ 06 00000000                    # uint32
+ 06 00000000                    # uint32
+
+
+
+
 
