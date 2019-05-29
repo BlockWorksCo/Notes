@@ -18461,8 +18461,10 @@ transmit from MAC layer, implementation of modes (specified by IE) for interacti
 - Configuration, distribution and parsing of channel-blacklists (IEs).
 
 Security:
-- 802.1x
-- EAP-TLS (RFC5216) overlap with DTLS regarding authentication, but not encryption.
+- 802.1x (EAPOL, EAP-Over-Lans)
+- EAP-TLS (RFC5216) overlap with DTLS regarding authentication, but not encryption. Do we use both? EAPTLS to get onto mesh,
+- EAP-TLS can be extended to transfer application-level packets over tge TLS connection? (i.e. replace DTLS?)
+- Customers will want RADIUS/AAA server under their control?
 - 802.1fi
 - ETSI-TS-102-887-2
 - "groups". Group-Transient-Keys (GTKs)
