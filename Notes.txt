@@ -18432,19 +18432,23 @@ mysql> select id,create_time,HEX(samples) from data_profile_sample;
 
 --------------------------------------
 
-General mesh:
+General mesh formation and routing:
 - IE parsing from packets.
 - Cleartext PAN-join frame forwarding to gateway.
 - Gateway to listen for local PAN-ids and choose a unique id for itself (PAN-solicit and PAN-advertisement frames).
 - Choice of PAN with lowest "cost" from available PAN-advertisements.
 - Configuration and transmission of PAN information. Interaction with new security model.
-- Interaction with RPL(?)
 - PANs can form a tree-of-PANs, i.e. multiple PANs per mesh (https://tools.ietf.org/id/draft-heile-lpwan-wisun-overview-00.html).
 This has implications for how nodes hop onto adjacent meshes (?) "cluster tree".
 - Non-storing mode RPL.
 - Source-routing RFC6554. Construction of source-routes on gw, usage of source-routes on all nodes (RFC 6554, not 6997). Loop detection in source-routes.
 - "If the SRH only specifies a subset of the path from source to destination, the router uses IPv6-in-IPv6 tunneling [RFC2473]
 and places the SRH in the outer IPv6 header." All our packets to/from the server will need to use IPv6-in-IPv6 tunnelling.
+- Issue: packets in transit during a mesh-hop will get lost due to address-prefix compression assuming they're the same (maybe).
+- Path MTU discovery may be needed to avoid fragmentation of packets along the length of the route (RFC8201).
+- "However, it is expected that much of the traffic on these types of networks consists of much smaller messages than the MTU, so performance
+   degradation through fragmentation would be limited." (Wrong optimisation for us?, we have relatively large data packets indeed, we attempt to form
+larger packets through aggregation of readings for example).
 
 Frequency hopping:
 - time sync, periodic packet, populated using cycle counter at point of transmit and RTC value. Receipt of
