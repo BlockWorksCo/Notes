@@ -18449,6 +18449,7 @@ and places the SRH in the outer IPv6 header." All our packets to/from the server
 - "However, it is expected that much of the traffic on these types of networks consists of much smaller messages than the MTU, so performance
    degradation through fragmentation would be limited." (Wrong optimisation for us?, we have relatively large data packets indeed, we attempt to form
 larger packets through aggregation of readings for example).
+- Need to use default MTU of 127 which will add overhead.
 
 Frequency hopping:
 - time sync, periodic packet, populated using cycle counter at point of transmit and RTC value. Receipt of
