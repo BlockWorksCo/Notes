@@ -18442,7 +18442,7 @@ General mesh:
 - PANs can form a tree-of-PANs, i.e. multiple PANs per mesh (https://tools.ietf.org/id/draft-heile-lpwan-wisun-overview-00.html).
 This has implications for how nodes hop onto adjacent meshes (?) "cluster tree".
 - Non-storing mode RPL.
-- Source-routing. Construction of source-routes on gw, usage of source-routes on all nodes (RFC6997).
+- Source-routing RFC6554. Construction of source-routes on gw, usage of source-routes on all nodes (RFC6997). Loop detection in source-routes.
 
 Frequency hopping:
 - time sync, periodic packet, populated using cycle counter at point of transmit and RTC value. Receipt of
