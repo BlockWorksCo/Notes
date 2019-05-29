@@ -18430,6 +18430,17 @@ mysql> select id,create_time,HEX(samples) from data_profile_sample;
  06 00000000                    # uint32
 
 
+--------------------------------------
+
+Frequency hopping:
+- time sync, periodic packet, populated using cycle counter at point of transmit and RTC value. Receipt of
+packet maintains delta between receivedCycleCounter and ownCycleCounter for RTC offset. Transmit of BTIE
+in packets, receipt of BTIE and passing up the stack.
+- Schedule parsing and maintenance on a node-basis, parsing of IEs from packets. Implementation of scheduled
+transmit from MAC layer, implementation of modes (specified by IE) for interaction with frequency-hopping.
+
+
+
 
 
 
