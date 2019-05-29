@@ -18450,6 +18450,7 @@ and places the SRH in the outer IPv6 header." All our packets to/from the server
    degradation through fragmentation would be limited." (Wrong optimisation for us?, we have relatively large data packets indeed, we attempt to form
 larger packets through aggregation of readings for example).
 - Need to use default MTU of 127 which will add overhead.
+- "The Wi-SUN MAC MTU is 2047 bytes as defined in IEEE802.15.4g, satisfying the IPv6 packet length requirement". 6LoWPAN fragmentation may not be needed.
 
 Frequency hopping:
 - time sync, periodic packet, populated using cycle counter at point of transmit and RTC value. Receipt of
@@ -18461,12 +18462,14 @@ transmit from MAC layer, implementation of modes (specified by IE) for interacti
 
 Security:
 - 802.1x
-- EAP-TLS
+- EAP-TLS (RFC5216) overlap with DTLS regarding authentication, but not encryption.
 - 802.1fi
 - ETSI-TS-102-887-2
 - "groups". Group-Transient-Keys (GTKs)
 - After selecting an EAPOL target node, the node is in Join State 2. It MUST perform the 802.1x/802.11i security flow via the
 selected EAPOL target node, to authenticate itself to the network and obtain its GTKs (group transient keys) from the PAN Border Router.
+- Group keys & pairwise-keys, not just mesh-keys (as we have now) or pairwise keys (as SMIP want).
+- Frame counter must be maintained per-group.
 
 
 
