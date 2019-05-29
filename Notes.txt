@@ -18432,23 +18432,34 @@ mysql> select id,create_time,HEX(samples) from data_profile_sample;
 
 --------------------------------------
 
+General mesh:
+- IE parsing from packets.
+- Cleartext PAN-join frame forwarding to gateway.
+- Gateway to listen for local PAN-ids and choose a unique id for itself (PAN-solicit and PAN-advertisement frames).
+- Choice of PAN with lowest "cost" from available PAN-advertisements.
+- Configuration and transmission of PAN information. Interaction with new security model.
+- Interaction with RPL(?)
+- PANs can form a tree-of-PANs, i.e. multiple PANs per mesh (https://tools.ietf.org/id/draft-heile-lpwan-wisun-overview-00.html).
+This has implications for how nodes hop onto adjacent meshes (?) "cluster tree".
+- Non-storing mode RPL.
+- Source-routing. Construction of source-routes on gw, usage of source-routes on all nodes (RFC6997).
+
 Frequency hopping:
 - time sync, periodic packet, populated using cycle counter at point of transmit and RTC value. Receipt of
 packet maintains delta between receivedCycleCounter and ownCycleCounter for RTC offset. Transmit of BTIE
 in packets, receipt of BTIE and passing up the stack.
 - Schedule parsing and maintenance on a node-basis, parsing of IEs from packets. Implementation of scheduled
 transmit from MAC layer, implementation of modes (specified by IE) for interaction with frequency-hopping.
-- Cleartext PAN-join frame forwarding to gateway.
-- Gateway to listen for local PAN-ids and choose a unique id for itself.
-- Configuration and transmission of PAN information. Interaction with new security model.
 - Configuration, distribution and parsing of channel-blacklists (IEs).
-- Interaction with RPL(?)
 
 Security:
 - 802.1x
 - EAP-TLS
 - 802.1fi
 - ETSI-TS-102-887-2
+- "groups". Group-Transient-Keys (GTKs)
+- After selecting an EAPOL target node, the node is in Join State 2. It MUST perform the 802.1x/802.11i security flow via the
+selected EAPOL target node, to authenticate itself to the network and obtain its GTKs (group transient keys) from the PAN Border Router.
 
 
 
