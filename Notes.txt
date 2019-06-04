@@ -18601,5 +18601,218 @@ https://developer.arm.com/tools-and-software/open-source-software/developer-tool
 ssh cyanconnode@cyan-emng104
 Sundbyb3rg
 
+-------------------------------------------
+
+2019-06-04 10:52:23.862                       <HUB> 0:00:00.000 Logging level: debug
+2019-06-04 10:52:23.862                       <HUB> 0:00:00.000 Log file: /Data/Logs/node114.log
+2019-06-04 10:52:23.866                       <HUB> 0:00:00.000 Node port was not opened because -listen was not specified.
+2019-06-04 10:52:23.866                       <HUB> 0:00:00.000 Waiting for controllers on port 4002...
+2019-06-04 10:52:23.867 #1   0000000000000000 <hub> 0:00:00.000 [ info] Serial port /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DKEY-if00-port0 opened
+2019-06-04 10:52:27.159 #1   0000000000000000 <hub> 0:01:36.849 [ info] <MISSING 86 MESSAGES> expected msg# 1 got 87
+2019-06-04 10:52:27.159 #1   0000000000000000 <hub> 0:01:36.849 [ info] Missing many (86) messages so hub will send new settings
+2019-06-04 10:52:27.159 #1   0000000000000000 <log> 0:01:36.849 [ info] [    prodmode] { terminal}: Production mode. fw: ipa3-lnt-dlms-insecure:v149.5-2-g1094917, hw: ipa3, debug unlocked
+2019-06-04 10:52:27.159 #1   0000000000000000 <hub> 0:01:36.849 [ info] Received msg# 87 from node, sending settings
+2019-06-04 10:52:27.159 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-04 10:52:27.159 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-04 10:52:27.159 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-04 10:52:27.159 #1   0000000000000000 <log> 0:01:36.862 [ info] [    prodmode] { terminal}: EUI-64: , UID: 000d6fff:fea86f7f
+2019-06-04 10:52:27.175 #1   0000000000000000 <hub> 0:01:36.886 [debug] Got ack
+2019-06-04 10:52:27.175 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-04 10:52:27.191 #1   0000000000000000 <hub> 0:01:36.906 [debug] Got ack
+2019-06-04 10:52:32.178 #1   0000000000000000 <log> 0:01:41.870 [ info] [    prodmode] { terminal}: Production mode. fw: ipa3-lnt-dlms-insecure:v149.5-2-g1094917, hw: ipa3, debug unlocked
+2019-06-04 10:52:32.178 #1   0000000000000000 <log> 0:01:41.883 [ info] [    prodmode] { terminal}: EUI-64: , UID: 000d6fff:fea86f7f
+2019-06-04 10:52:37.198 #1   0000000000000000 <log> 0:01:46.891 [ info] [    prodmode] { terminal}: Production mode. fw: ipa3-lnt-dlms-insecure:v149.5-2-g1094917, hw: ipa3, debug unlocked
+2019-06-04 10:52:37.198 #1   0000000000000000 <log> 0:01:46.904 [ info] [    prodmode] { terminal}: EUI-64: , UID: 000d6fff:fea86f7f
+2019-06-04 10:52:42.220 #1   0000000000000000 <log> 0:01:51.912 [ info] [    prodmode] { terminal}: Production mode. fw: ipa3-lnt-dlms-insecure:v149.5-2-g1094917, hw: ipa3, debug unlocked
+2019-06-04 10:52:42.220 #1   0000000000000000 <log> 0:01:51.925 [ info] [    prodmode] { terminal}: EUI-64: , UID: 000d6fff:fea86f7f
+2019-06-04 10:52:47.240 #1   0000000000000000 <log> 0:01:56.933 [ info] [    prodmode] { terminal}: Production mode. fw: ipa3-lnt-dlms-insecure:v149.5-2-g1094917, hw: ipa3, debug unlocked
+2019-06-04 10:52:47.240 #1   0000000000000000 <log> 0:01:56.946 [ info] [    prodmode] { terminal}: EUI-64: , UID: 000d6fff:fea86f7f
+2019-06-04 10:52:51.481 #1   0000000000000000 <log> 0:02:01.180 ======== Hard fault ========
+2019-06-04 10:52:51.481 #1   0000000000000000 <log> 0:02:01.180 schedule
+2019-06-04 10:52:51.481 #1   0000000000000000 <log> 0:02:01.180 Hsch DV0@5b670L5c237S2000e688
+2019-06-04 10:53:17.052 #1   0000000000000000 <hub> 0:00:00.004 [ info] Expected message# 102 but got 1, node restarted?
+2019-06-04 10:53:17.052 #1   0000000000000000 <log> 0:00:00.004 [ info] [       cndfs] { terminal}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2019-06-04 10:53:17.215 #1   0000000000000000 <log> 0:00:00.125 [ info] [       cndfs] { terminal}: Mounted: 14 sectors used, 14 files
+2019-06-04 10:53:17.215 #1   0000000000000000 <log> 0:00:00.134 [ info] [       cndfs] { terminal}: Flash map:
+2019-06-04 10:53:17.215 #1   0000000000000000 <log> 0:00:00.146 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.215 #1   0000000000000000 <log> 0:00:00.165 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- ------1- --------
+2019-06-04 10:53:17.284 #1   0000000000000000 <log> 0:00:00.183 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.284 #1   0000000000000000 <log> 0:00:00.201 [ info] [       cndfs] { terminal}:   -------- -------- =>------ -------- -------- -------- -------- --------
+2019-06-04 10:53:17.284 #1   0000000000000000 <log> 0:00:00.219 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.284 #1   0000000000000000 <log> 0:00:00.237 [ info] [       cndfs] { terminal}:   -------- -------- -------- ---:---- -------- -------- -------- --------
+2019-06-04 10:53:17.346 #1   0000000000000000 <log> 0:00:00.256 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.346 #1   0000000000000000 <log> 0:00:00.274 [ info] [       cndfs] { terminal}:   -------9 -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.346 #1   0000000000000000 <log> 0:00:00.292 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.415 #1   0000000000000000 <log> 0:00:00.310 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- ----45-6 78--23-- -------- <-------
+2019-06-04 10:53:17.415 #1   0000000000000000 <log> 0:00:00.329 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.415 #1   0000000000000000 <log> 0:00:00.347 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.415 #1   0000000000000000 <log> 0:00:00.365 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.475 #1   0000000000000000 <log> 0:00:00.383 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.475 #1   0000000000000000 <log> 0:00:00.401 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- ------;- -------- --------
+2019-06-04 10:53:17.476 #1   0000000000000000 <log> 0:00:00.420 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-04 10:53:17.476 #1   0000000000000000 <log> 0:00:00.431 [ info] [       cndfs] { terminal}:
+2019-06-04 10:53:17.476 #1   0000000000000000 <hub> 0:00:00.431 [ info] Received msg# 20 from node, sending settings
+2019-06-04 10:53:17.476 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-04 10:53:17.476 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-04 10:53:17.476 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-04 10:53:17.492 #1   0000000000000000 <hub> 0:00:00.451 [debug] Got ack
+2019-06-04 10:53:17.492 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-04 10:53:17.508 #1   0000000000000000 <hub> 0:00:00.472 [debug] Got ack
+2019-06-04 10:53:17.549 #1   0000000000000000 <log> 0:00:00.500 [debug] [       cndfs] { terminal}: Found file /configuration-1.pb at sector 621
+2019-06-04 10:53:17.660 #1   0000000000000000 <log> 0:00:00.611 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2019-06-04 10:53:17.733 #1   0000000000000000 <log> 0:00:00.685 [debug] [       cndfs] { terminal}: Found file /configuration-2.pb at sector 620
+2019-06-04 10:53:17.869 #1   0000000000000000 <log> 0:00:00.795 [debug] [      fs/api] { terminal}: fsOpen (/configuration-2.pb, mode=1, fd=0)
+2019-06-04 10:53:17.870 #1   0000000000000000 <log> 0:00:00.808 [ info] [   config/pb] { terminal}: Config generations: 10, 9
+2019-06-04 10:53:17.870 #1   0000000000000000 <log> 0:00:00.815 [debug] [ cndfs/utils] { terminal}: Found metadata #0 for /configuration-1.pb: id=3 st=621 sz=551 refs=0
+2019-06-04 10:53:17.870 #1   0000000000000000 <log> 0:00:00.827 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2019-06-04 10:53:17.870 #1   0000000000000000 <log> 0:00:00.836 [debug] [       cndfs] { terminal}: Rewinding
+2019-06-04 10:53:17.955 #1   0000000000000000 <log> 0:00:00.883 [ info] [   config/pb] { terminal}: Read slot 0, generation 10
+2019-06-04 10:53:17.955 #1   0000000000000000 <log> 0:00:00.891 [debug] [      module] { terminal}: Starting srcRestrictedCfgService
+2019-06-04 10:53:17.955 #1   0000000000000000 <log> 0:00:00.899 [debug] [      module] { terminal}: Starting timeService
+2019-06-04 10:53:17.955 #1   0000000000000000 <log> 0:00:00.906 [ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+2019-06-04 10:53:17.999 #1   0000000000000000 <log> 0:00:00.916 [ info] [        time] { terminal}: Uptime: 916, local time: 1970-01-01  1:02:26.615, UTC: 146.615, status: 0
+2019-06-04 10:53:17.999 #1   0000000000000000 <log> 0:00:00.928 [ info] [    log_ring] { terminal}: Filter level: WARN, module: (null), task: (null), fw: ipa3-lnt-dlms-insecure:v149.5-2-g1094917 on ipa3
+2019-06-04 10:53:17.999 #1   0000000000000000 <log> 0:00:00.942 [event] [    terminal] { terminal}: Starting version ipa3-lnt-dlms-insecure:v149.5-2-g1094917 on hardware ipa3
+2019-06-04 10:53:17.999 #1   0000000000000000 <log> 0:00:00.954 [debug] [      module] { terminal}: Initing communication
+2019-06-04 10:53:17.999 #1   0000000000000000 <log> 0:00:00.961 [debug] [      module] { terminal}: Initing mac
+2019-06-04 10:53:18.052 #1   001bc50c6004fdd6 <log> 0:00:00.968 [ info] [         mac] { terminal}: Using IID 02-1b-c5-0c-60-04-fd-d6 from EUI-64 00-1b-c5-0c-60-04-fd-d6
+2019-06-04 10:53:18.052 #1   001bc50c6004fdd6 <log> 0:00:00.979 [debug] [      module] { terminal}: Initing macDutycycle
+2019-06-04 10:53:18.052 #1   001bc50c6004fdd6 <log> 0:00:00.986 [debug] [      module] { terminal}: Initing macTx
+2019-06-04 10:53:18.052 #1   001bc50c6004fdd6 <log> 0:00:00.993 [debug] [      module] { terminal}: Initing macReceive
+2019-06-04 10:53:18.052 #1   001bc50c6004fdd6 <log> 0:00:01.000 [debug] [      module] { terminal}: Initing macDeviceTable
+2019-06-04 10:53:18.052 #1   001bc50c6004fdd6 <log> 0:00:01.007 [debug] [      module] { terminal}: Initing macSecurity
+2019-06-04 10:53:18.123 #1   001bc50c6004fdd6 <log> 0:00:01.075 [debug] [       cndfs] { terminal}: Found file /keys/mac_1 at sector 612
+2019-06-04 10:53:18.241 #1   001bc50c6004fdd6 <log> 0:00:01.185 [debug] [      fs/api] { terminal}: fsOpen (/keys/mac_1, mode=1, fd=0)
+2019-06-04 10:53:18.241 #1   001bc50c6004fdd6 <log> 0:00:01.196 [ info] [mac_security] { terminal}: Keys loaded: 0p
+2019-06-04 10:53:18.263 #1   001bc50c6004fdd6 <log> 0:00:01.214 [debug] [       cndfs] { terminal}: Found file /macsec_state at sector 118
+2019-06-04 10:53:18.396 #1   001bc50c6004fdd6 <log> 0:00:01.325 [debug] [      fs/api] { terminal}: fsOpen (/macsec_state, mode=0, fd=0)
+2019-06-04 10:53:18.396 #1   001bc50c6004fdd6 <log> 0:00:01.333 [ info] [mac_security] { terminal}: Read frame counter 692011
+2019-06-04 10:53:18.396 #1   001bc50c6004fdd6 <log> 0:00:01.341 [debug] [ cndfs/utils] { schedule}: Found metadata #3 for /macsec_state: id=1 st=118 sz=4 refs=0
+2019-06-04 10:53:18.396 #1   001bc50c6004fdd6 <log> 0:00:01.352 [debug] [ cndfs/utils] { schedule}: Found metadata #3 for /macsec_state: id=1 st=118 sz=4 refs=0
+2019-06-04 10:53:18.444 #1   001bc50c6004fdd6 <log> 0:00:01.362 [debug] [      fs/api] { schedule}: fsOpen (/macsec_state, mode=2, fd=0)
+2019-06-04 10:53:18.444 #1   001bc50c6004fdd6 <log> 0:00:01.371 [debug] [       cndfs] { schedule}: Committing 4 B at 0 (filesize 4)
+2019-06-04 10:53:18.444 #1   001bc50c6004fdd6 <log> 0:00:01.379 [debug] [       cndfs] { schedule}: Rewinding
+2019-06-04 10:53:18.444 #1   001bc50c6004fdd6 <log> 0:00:01.385 [debug] [      module] { terminal}: Initing macRadio
+2019-06-04 10:53:18.444 #1   001bc50c6004fdd6 <log> 0:00:01.392 [debug] [  fs/service] { schedule}: flashopProgram 119:0x28 13 B
+2019-06-04 10:53:18.444 #1   001bc50c6004fdd6 <log> 0:00:01.400 [debug] [      module] { terminal}: Initing radioDriver
+2019-06-04 10:53:18.483 #1   001bc50c6004fdd6 <log> 0:00:01.407 [debug] [  fs/service] { schedule}: flashopProgram 119:0x35 4 B
+2019-06-04 10:53:18.483 #1   001bc50c6004fdd6 <log> 0:00:01.415 [debug] [      module] { terminal}: Initing radiotest
+2019-06-04 10:53:18.483 #1   001bc50c6004fdd6 <log> 0:00:01.422 [debug] [      module] { terminal}: Initing lowpan
+2019-06-04 10:53:18.483 #1   001bc50c6004fdd6 <log> 0:00:01.429 [debug] [  fs/service] { schedule}: flashopProgram 119:0x0 40 B
+2019-06-04 10:53:18.483 #1   001bc50c6004fdd6 <log> 0:00:01.437 [debug] [      module] { terminal}: Initing ipCore
+2019-06-04 10:53:18.483 #1   001bc50c6004fdd6 <log> 0:00:01.443 [debug] [  fs/service] { schedule}: flashopErase 118:0x0 4096 B
+2019-06-04 10:53:18.527 #1   001bc50c6004fdd6 <log> 0:00:01.451 [debug] [      module] { terminal}: Initing cndNet
+2019-06-04 10:53:18.527 #1   001bc50c6004fdd6 <log> 0:00:01.458 [debug] [      module] { terminal}: Initing coap
+2019-06-04 10:53:18.527 #1   001bc50c6004fdd6 <log> 0:00:01.464 [debug] [      module] { terminal}: Initing coapLocal
+2019-06-04 10:53:18.527 #1   001bc50c6004fdd6 <log> 0:00:01.471 [debug] [      module] { terminal}: Initing rpl
+2019-06-04 10:53:18.527 #1   001bc50c6004fdd6 <log> 0:00:01.478 [debug] [rpl/routelist] { terminal}: Init list with IID context 02-1b-c5-0c-60-04-fd-d6
+2019-06-04 10:53:18.527 #1   001bc50c6004fdd6 <log> 0:00:01.488 [debug] [      module] { terminal}: Initing conman
+2019-06-04 10:53:18.570 #1   001bc50c6004fdd6 <log> 0:00:01.495 [debug] [       cndfs] { schedule}: Cloned s118 -> s119g2 (size=57, full=0)
+2019-06-04 10:53:18.570 #1   001bc50c6004fdd6 <log> 0:00:01.503 [ info] [mac_security] { schedule}: Wrote frame counter 693011
+2019-06-04 10:53:18.570 #1   001bc50c6004fdd6 <log> 0:00:01.511 [debug] [      module] { terminal}: Initing icmp
+2019-06-04 10:53:18.570 #1   001bc50c6004fdd6 <log> 0:00:01.517 [debug] [      module] { terminal}: Starting communication
+2019-06-04 10:53:18.570 #1   001bc50c6004fdd6 <log> 0:00:01.525 [debug] [      module] { terminal}: Starting mac
+2019-06-04 10:53:18.570 #1   001bc50c6004fdd6 <log> 0:00:01.531 [debug] [      module] { terminal}: Starting macDutycycle
+2019-06-04 10:53:18.620 #1   001bc50c6004fdd6 <log> 0:00:01.538 [debug] [      module] { terminal}: Starting macReceive
+2019-06-04 10:53:18.620 #1   001bc50c6004fdd6 <log> 0:00:01.546 [debug] [      module] { terminal}: Starting macRadio
+2019-06-04 10:53:18.620 #1   001bc50c6004fdd6 <log> 0:00:01.552 [debug] [      module] { terminal}: Starting radioDriver
+2019-06-04 10:53:18.620 #1   001bc50c6004fdd6 <log> 0:00:01.560 [ info] [       radio] {    radio}: RAIL version 1 5 0
+2019-06-04 10:53:18.620 #1   001bc50c6004fdd6 <log> 0:00:01.568 [ info] [       radio] {    radio}: Channel plan 2, channel 9 (866665 kHz)
+2019-06-04 10:53:18.744 #1   001bc50c6004fdd6 <log> 0:00:01.673 [debug] [      module] { terminal}: Starting radiotest
+2019-06-04 10:53:18.744 #1   001bc50c6004fdd6 <log> 0:00:01.680 [debug] [   radiotest] { terminal}: ** Starting rssi packet source **
+2019-06-04 10:53:18.744 #1   001bc50c6004fdd6 <log> 0:00:01.688 [debug] [   radiotest] { terminal}: production mode RSSISource task *NOT* enabled.
+2019-06-04 10:53:18.744 #1   001bc50c6004fdd6 <log> 0:00:01.698 [debug] [      module] { terminal}: Starting lowpan
+2019-06-04 10:53:18.744 #1   001bc50c6004fdd6 <log> 0:00:01.705 [debug] [      module] { terminal}: Starting coap
+2019-06-04 10:53:18.765 #1   001bc50c6004fdd6 <log> 0:00:01.711 [debug] [      module] { terminal}: Starting dtls
+2019-06-04 10:53:18.765 #1   001bc50c6004fdd6 <log> 0:00:01.718 [debug] [  dtls/cache] { terminal}: dtlsSessionCacheLoad: Loading 784 bytes
+2019-06-04 10:53:18.796 #1   001bc50c6004fdd6 <log> 0:00:01.748 [debug] [       cndfs] { terminal}: Found file /dtls_state at sector 208
+2019-06-04 10:53:18.948 #1   001bc50c6004fdd6 <log> 0:00:01.858 [debug] [      fs/api] { terminal}: fsOpen (/dtls_state, mode=1, fd=0)
+2019-06-04 10:53:18.948 #1   001bc50c6004fdd6 <log> 0:00:01.872 [ info] [  dtls/cache] { terminal}: DTLS session restored
+2019-06-04 10:53:18.948 #1   001bc50c6004fdd6 <log> 0:00:01.881 [debug] [      module] { terminal}: Starting rpl
+2019-06-04 10:53:18.948 #1   001bc50c6004fdd6 <log> 0:00:01.893 [debug] [      module] { terminal}: Starting powercontrol
+2019-06-04 10:53:18.948 #1   001bc50c6004fdd6 <log> 0:00:01.903 [debug] [      module] { terminal}: Starting transportSwitch
+2019-06-04 10:53:18.993 #1   001bc50c6004fdd6 <log> 0:00:01.913 [debug] [      module] { terminal}: Starting conman
+2019-06-04 10:53:18.993 #1   001bc50c6004fdd6 <log> 0:00:01.922 [ info] [      conman] { terminal}: Going to mesh mode
+2019-06-04 10:53:18.993 #1   001bc50c6004fdd6 <log> 0:00:01.930 [ info] [    rpl/task] {      rpl}: 0: Trying to get to attached (currently disabled)
+2019-06-04 10:53:18.993 #1   001bc50c6004fdd6 <log> 0:00:01.940 [debug] [    rpl/task] {      rpl}: 0: Change state disabled->soliciting
+2019-06-04 10:53:18.993 #1   001bc50c6004fdd6 <log> 0:00:01.948 [debug] [ rpl/trickle] {      rpl}: create timer DIS, imin=10000, imax=4, k=1
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <log> 0:00:01.957 [debug] [ rpl/trickle] {      rpl}: create timer probe, imin=1500, imax=6, k=0
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <log> 0:00:01.966 [debug] [       cndfs] {     dtls}: Found file /keys/ca_cert.der at sector 617
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <log> 0:00:01.976 [debug] [      module] { terminal}: Starting icmp
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <hub> 0:00:01.986 [ info] Node registering: firmware ipa3-lnt-dlms-insecure:v149.5-2-g1094917, hardware ipa3.
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <log> 0:00:01.996 [debug] [      module] { terminal}: Initing management
+2019-06-04 10:53:19.048 #1   001bc50c6004fdd6 <log> 0:00:02.005 [debug] [      module] { terminal}: Initing ping
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <log> 0:00:02.014 [debug] [      module] { terminal}: Initing login
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <log> 0:00:02.023 [debug] [      module] { terminal}: Initing configuration
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <hub> 0:00:02.023 [debug] Got ack
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <log> 0:00:02.033 [debug] [      module] { terminal}: Initing datarate
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <log> 0:00:02.043 [debug] [      module] { terminal}: Initing restart
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <log> 0:00:02.052 [debug] [      module] { terminal}: Initing mqstorage
+2019-06-04 10:53:19.104 #1   001bc50c6004fdd6 <log> 0:00:02.061 [debug] [      module] { terminal}: Initing mqcoap
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <log> 0:00:02.070 [debug] [      module] { terminal}: Initing monitor
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <log> 0:00:02.078 [debug] [      module] { terminal}: Initing status
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <hub> 0:00:02.084 [debug] Got ack
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <log> 0:00:02.085 [debug] [      fs/api] {     dtls}: fsOpen (/keys/ca_cert.der, mode=1, fd=0)
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <log> 0:00:02.096 [debug] [      module] { terminal}: Initing statusapi
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <log> 0:00:02.104 [ info] [        dtls] {     dtls}: Loaded /keys/ca_cert.der, size: 568, md5: 62f9c241...
+2019-06-04 10:53:19.154 #1   001bc50c6004fdd6 <log> 0:00:02.116 [debug] [      module] { terminal}: Initing readings
+2019-06-04 10:53:19.198 #1   001bc50c6004fdd6 <log> 0:00:02.125 [debug] [      module] { terminal}: Initing device
+2019-06-04 10:53:19.198 #1   001bc50c6004fdd6 <log> 0:00:02.134 [debug] [      module] { terminal}: Initing hdlc
+2019-06-04 10:53:19.198 #1   001bc50c6004fdd6 <log> 0:00:02.142 [debug] [      module] { terminal}: Initing hdlcLocker
+2019-06-04 10:53:19.198 #1   001bc50c6004fdd6 <log> 0:00:02.151 [debug] [      module] { terminal}: Initing dlms
+2019-06-04 10:53:19.225 #1   001bc50c6004fdd6 <log> 0:00:02.176 [debug] [       cndfs] {     dtls}: Found file /keys/agent_cert.der at sector 616
+2019-06-04 10:53:19.396 #1   001bc50c6004fdd6 <log> 0:00:02.348 [debug] [       cndfs] {     dtls}: Found file /keys/agent_key.der at sector 615
+2019-06-04 10:53:19.721 #1   001bc50c6004fdd6 <log> 0:00:02.661 [debug] [ cndfs/utils] {     dtls}: Found metadata #5 for /keys/agent_cert.der: id=7 st=616 sz=444 refs=0
+2019-06-04 10:53:19.721 #1   001bc50c6004fdd6 <log> 0:00:02.673 [debug] [      fs/api] {     dtls}: fsOpen (/keys/agent_cert.der, mode=1, fd=0)
+2019-06-04 10:53:19.766 #1   001bc50c6004fdd6 <log> 0:00:02.718 [debug] [       cndfs] { terminal}: Found file /dlms_state at sector 455
+2019-06-04 10:53:19.918 #1   001bc50c6004fdd6 <log> 0:00:02.829 [debug] [      fs/api] { terminal}: fsOpen (/dlms_state, mode=0, fd=1)
+2019-06-04 10:53:19.918 #1   001bc50c6004fdd6 <log> 0:00:02.840 [ info] [        dtls] {     dtls}: Loaded /keys/agent_cert.der, size: 396, md5: e96b08dc...
+2019-06-04 10:53:19.918 #1   001bc50c6004fdd6 <log> 0:00:02.852 [ info] [        dlms] { terminal}: Read frame counter 4406988
+2019-06-04 10:53:19.918 #1   001bc50c6004fdd6 <log> 0:00:02.863 [debug] [      module] { terminal}: Initing deviceConfig
+2019-06-04 10:53:19.918 #1   001bc50c6004fdd6 <log> 0:00:02.872 [debug] [      module] { terminal}: Initing deviceDlms
+2019-06-04 10:53:19.972 #1   001bc50c6004fdd6 <log> 0:00:02.884 [debug] [      module] { terminal}: Initing timeSynch
+2019-06-04 10:53:19.972 #1   001bc50c6004fdd6 <log> 0:00:02.893 [debug] [      module] { terminal}: Initing cron
+2019-06-04 10:53:19.972 #1   001bc50c6004fdd6 <log> 0:00:02.902 [debug] [      module] { terminal}: Initing filedl
+2019-06-04 10:53:19.972 #1   001bc50c6004fdd6 <log> 0:00:02.911 [debug] [      module] { terminal}: Initing netinfo
+2019-06-04 10:53:19.972 #1   001bc50c6004fdd6 <log> 0:00:02.918 [debug] [       cndfs] {     dtls}: Found file /keys/agent_key.der at sector 615
+2019-06-04 10:53:19.972 #1   001bc50c6004fdd6 <log> 0:00:02.929 [debug] [      module] { terminal}: Initing activity
+2019-06-04 10:53:20.032 #1   001bc50c6004fdd6 <log> 0:00:02.937 [debug] [      module] { terminal}: Initing powerSwitch
+2019-06-04 10:53:20.032 #1   001bc50c6004fdd6 <log> 0:00:02.947 [debug] [      module] { terminal}: Initing deviceAlarms
+2019-06-04 10:53:20.032 #1   001bc50c6004fdd6 <log> 0:00:02.956 [debug] [      module] { terminal}: Initing preferredParent
+2019-06-04 10:53:20.032 #1   001bc50c6004fdd6 <log> 0:00:02.966 [debug] [      module] { terminal}: Initing logCoap
+2019-06-04 10:53:20.032 #1   001bc50c6004fdd6 <log> 0:00:02.975 [debug] [      module] { terminal}: Initing dlmsPipe
+2019-06-04 10:53:20.032 #1   001bc50c6004fdd6 <log> 0:00:02.984 [debug] [      module] { terminal}: Initing dataProfile
+2019-06-04 10:53:20.101 #1   001bc50c6004fdd6 <log> 0:00:03.029 [debug] [      fs/api] {     dtls}: fsOpen (/keys/agent_key.der, mode=1, fd=0)
+2019-06-04 10:53:20.101 #1   001bc50c6004fdd6 <log> 0:00:03.039 [debug] [ cndfs/utils] { schedule}: Found metadata #3 for /dlms_state: id=9 st=455 sz=4 refs=0
+2019-06-04 10:53:20.101 #1   001bc50c6004fdd6 <log> 0:00:03.049 [debug] [ cndfs/utils] { schedule}: Found metadata #3 for /dlms_state: id=9 st=455 sz=4 refs=0
+2019-06-04 10:53:20.101 #1   001bc50c6004fdd6 <log> 0:00:03.060 [debug] [      fs/api] { schedule}: fsOpen (/dlms_state, mode=2, fd=1)
+2019-06-04 10:53:20.117 #1   001bc50c6004fdd6 <log> 0:00:03.069 [ info] [        dtls] {     dtls}: Loaded /keys/agent_key.der, size: 121, md5: c77eaadd...
+2019-06-04 10:53:20.176 #1   001bc50c6004fdd6 <log> 0:00:03.127 [debug] [       cndfs] { terminal}: Found file /dp_config at sector 632
+2019-06-04 10:53:20.316 #1   001bc50c6004fdd6 <log> 0:00:03.237 [debug] [       cndfs] { schedule}: Committing 4 B at 0 (filesize 4)
+2019-06-04 10:53:20.316 #1   001bc50c6004fdd6 <log> 0:00:03.245 [debug] [       cndfs] { schedule}: Rewinding
+2019-06-04 10:53:20.316 #1   001bc50c6004fdd6 <log> 0:00:03.252 [debug] [      fs/api] { terminal}: fsOpen (/dp_config, mode=0, fd=0)
+2019-06-04 10:53:20.316 #1   001bc50c6004fdd6 <log> 0:00:03.260 [debug] [  fs/service] { schedule}: flashopProgram 456:0x28 11 B
+2019-06-04 10:53:20.316 #1   001bc50c6004fdd6 <log> 0:00:03.269 [debug] [  fs/service] { schedule}: flashopProgram 456:0x33 4 B
+2019-06-04 10:53:20.337 #1   001bc50c6004fdd6 <log> 0:00:03.284 [debug] [  fs/service] { schedule}: flashopProgram 456:0x0 40 B
+2019-06-04 10:53:20.337 #1   001bc50c6004fdd6 <log> 0:00:03.292 [debug] [  fs/service] { schedule}: flashopErase 455:0x0 4096 B
+2019-06-04 10:53:20.413 #1   001bc50c6004fdd6 <log> 0:00:03.341 [debug] [       cndfs] { schedule}: Cloned s455 -> s456g3 (size=55, full=0)
+2019-06-04 10:53:20.414 #1   001bc50c6004fdd6 <log> 0:00:03.350 [ info] [        dlms] { schedule}: Wrote frame counter 4407988
+2019-06-04 10:53:20.414 #1   001bc50c6004fdd6 <log> 0:00:03.357 [debug] [       cndfs] { terminal}: Rewinding
+2019-06-04 10:53:20.414 #1   001bc50c6004fdd6 <log> 0:00:03.365 [debug] [ dataProfile] { terminal}: Data profile config restored
+2019-06-04 10:53:20.414 #1   001bc50c6004fdd6 <log> 0:00:03.373 [debug] [      module] { terminal}: Initing keyload
+2019-06-04 10:53:20.445 #1   001bc50c6004fdd6 <log> 0:00:03.379 [debug] [      module] { terminal}: Initing remoteMemory
+2019-06-04 10:53:20.445 #1   001bc50c6004fdd6 <log> 0:00:03.386 [debug] [      module] { terminal}: Starting management
+2019-06-04 10:53:20.445 #1   001bc50c6004fdd6 <log> 0:00:03.393 [debug] [      module] { terminal}: Starting login
+2019-06-04 10:53:20.445 #1   001bc50c6004fdd6 <log> 0:00:03.400 [debug] [      module] { terminal}: Starting mqstorage
+2019-06-04 10:53:20.490 #1   001bc50c6004fdd6 <log> 0:00:03.442 [debug] [       cndfs] { terminal}: Found file /mq/000.mq at sector 347
+2019-06-04 10:53:20.622 #1   001bc50c6004fdd6 <log> 0:00:03.551 [debug] [      fs/api] { terminal}: fsOpen (/mq/000.mq, mode=0, fd=0)
+2019-06-04 10:53:20.622 #1   001bc50c6004fdd6 <log> 0:00:03.560 [debug] [ cndfs/utils] { terminal}: Found metadata #3 for /mq/000.mq: id=10 st=347 sz=3600 refs=0
+2019-06-04 10:53:20.622 #1   001bc50c6004fdd6 <log> 0:00:03.571 [debug] [   mqstorage] { terminal}: /mq/000.mq: First m#: 1, size: 3600
+2019-06-04 10:53:20.728 #1   001bc50c6004fdd6 <log> 0:00:03.681 [ info] [      fs/api] { terminal}: open /mq/001.mq failed (mode=0): 0xe
+2019-06-04 10:53:20.839 #1   001bc50c6004fdd6 <log> 0:00:03.790 [ info] [      fs/api] { terminal}: open /mq/002.mq failed (mode=
 
 
