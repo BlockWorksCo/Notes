@@ -18815,4 +18815,14 @@ Sundbyb3rg
 2019-06-04 10:53:20.728 #1   001bc50c6004fdd6 <log> 0:00:03.681 [ info] [      fs/api] { terminal}: open /mq/001.mq failed (mode=0): 0xe
 2019-06-04 10:53:20.839 #1   001bc50c6004fdd6 <log> 0:00:03.790 [ info] [      fs/api] { terminal}: open /mq/002.mq failed (mode=
 
+--------------------------------
+
+node unauthorized:
+
+DTLSConnectionRegistry - License id in DTLS node certificate does not match node id or previous node id or alias id for node with
+address=/fd51:3c22:ee1f:2:21b:c50c:6000:18b:5684, licenseId=00-1B-C5-0C-60-00-00-AB, nodeId=00-1b-c5-0c-60-00-01-8b, previousNodeId=null, aliasId=null
+
+use alias to license id value:
+coap_request.py --ctrlporthub :4003 --config prod.alias.id   00-1B-C5-0C-60-00-00-AB
+
 
