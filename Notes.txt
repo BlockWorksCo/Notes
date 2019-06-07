@@ -18825,4 +18825,16 @@ address=/fd51:3c22:ee1f:2:21b:c50c:6000:18b:5684, licenseId=00-1B-C5-0C-60-00-00
 use alias to license id value:
 coap_request.py --ctrlporthub :4003 --config prod.alias.id   00-1B-C5-0C-60-00-00-AB
 
+-------------------------------------------------
+
+gateway performance:
+- From powerup, all nodes must form mesh with gw within 2(?) minutes.
+- From powerup, all nodes must login to server within 5(?) minutes.
+- No "send failed" messages
+
+
+
+
+
+
 
