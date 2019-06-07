@@ -18832,6 +18832,13 @@ gateway performance:
 - From powerup, all nodes must login to server within 5(?) minutes.
 - No "send failed" messages
 
+---------------------------------------------------
+
+Deadlock:
+- Kaifa_ma304 v121 (mac_rx)
+- SMIP-26 similar (crypto/dtls)
+- gw200 v149 (mac_rx)
+- ipa3-genus-dlms-insecure:v142.3
 
 
 
