@@ -18849,7 +18849,11 @@ Given the code within those two fns, a likely failure mode would be for aesCcmSe
 wc_AesCcmSetKey() does nothing but call wc_AesSetKey() which calls wc_AesSetKeyLocal().
 wc_AesSetKeyLocal has a number while(1) loops that break out based on configuration values.
 aes->rounds
+aes->keylen
 
+OR:
+
+getEntryByDst() calls macDeviceTableFindDevice() which has to lock the MAC device table, this could be blocking.
 
 
 
