@@ -18840,7 +18840,20 @@ Deadlock:
 - gw200 v149 (mac_rx)
 - ipa3-genus-dlms-insecure:v142.3
 
+After reproducing the problem with 18 nodes continuously pinging the gw200 for a few hours, it turns out that:
 
+macSecuritySetTxKey() is the owner of s_keysMutex.
+setKeyByIndex() wants to take s_keysMutex but can't.
+Given the code within those two fns, a likely failure mode would be for aesCcmSetKey() within macSecuritySetTxKey() to have itself blocked for longer than the deadlock-detect time (2 min).
+
+wc_AesCcmSetKey() does nothing but call wc_AesSetKey() which calls wc_AesSetKeyLocal().
+wc_AesSetKeyLocal has a number while(1) loops that break out based on configuration values.
+aes->rounds
+
+
+
+
+-----------------------------------------------------
 
 
 
