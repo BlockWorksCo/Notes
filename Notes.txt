@@ -18876,6 +18876,8 @@ Analysis:
 - lowpan_tx takes s_keysMutex followed by s_macTableMutex.
 - The differing order means each is held by the other task causing the deadlock.
 
+Solution:
+- Both these tasks are wanting data at roughly the same architectural level at roughly the same frequency.
 
 
 
