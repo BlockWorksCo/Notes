@@ -18860,10 +18860,10 @@ getEntryByDst() calls macDeviceTableFindDevice() which has to lock the MAC devic
 -----------------------------------------------------
 
 mac_rx:
-- macSecurityDecryptFrame() -> setKeyByIndex() -> OS_mutexTake(&s_keysMutex) -> deadlock.
+- macSecurityDecryptFrame() -> setKeyByIndex() -> OS_mutexTake(&s_keysMutex) -> blocked.
 
 lowpan_tx:
--
+- macEncodeDataFrame() -> macSecuritySetTxKey() -> OS_mutexTake(&s_keysMutex);
 
 
 
