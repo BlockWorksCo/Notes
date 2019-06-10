@@ -18877,7 +18877,36 @@ Analysis:
 - The differing order means each is held by the other task causing the deadlock.
 
 Solution:
-- Both these tasks are wanting data at roughly the same architectural level at roughly the same frequency.
+- Both these tasks are wanting data at roughly the same architectural level at roughly the same frequency. Make them use the same mutex.
 
+
+2239996:2019-06-07 15:34:07.139 #1   001bc50c6005a283 <log> 3:55:19.268 [panic] osal_freertos:387, in task mac_rx: Deadlock 0x200071a8 0x1da4b
+2375263:2019-06-07 16:23:49.186 #1   001bc50c6005a283 <log> 0:27:16.840 [panic] osal_freertos:388, in task mac_rx: Deadlock 0x200071f0 0x1db21 (194, 441)
+3858273:2019-06-07 21:41:40.305 #1   001bc50c6005a283 <log> 4:28:55.234 [panic] osal_freertos:390, in task mac_rx: Deadlock 0x20007194 0x1db21 (194, 426, 0, 68)
+4225906:2019-06-07 23:16:19.797 #1   001bc50c6005a283 <log> 1:20:25.493 [panic] osal_freertos:391, in task mac_rx: Deadlock 0x20007194 0x1db21 (194, 442, 0, 68)
+7186547:2019-06-08  9:40:45.241 #1   001bc50c6005a283 <log> 2:11:26.688 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+7284287:2019-06-08 10:08:24.132 #1   001bc50c6005a283 <log> 0:27:12.525 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+7772136:2019-06-08 11:53:33.633 #1   001bc50c6005a283 <log> 1:44:41.752 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+8058244:2019-06-08 13:05:38.829 #1   001bc50c6005a283 <log> 0:27:54.271 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+8271758:2019-06-08 14:11:05.499 #1   001bc50c6005a283 <log> 1:04:58.909 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+8673086:2019-06-08 15:37:21.536 #1   001bc50c6005a283 <log> 1:26:11.891 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+9224350:2019-06-08 17:45:58.616 #1   001bc50c6005a283 <log> 2:08:09.320 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+10535009:2019-06-08 22:21:09.568 #1   001bc50c6005a283 <log> 4:34:47.043 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+10926494:2019-06-08 23:47:59.643 #1   001bc50c6005a283 <log> 1:26:23.949 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+11060317:2019-06-09  0:23:20.483 #1   001bc50c6005a283 <log> 0:34:53.050 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+11727202:2019-06-09  2:57:51.758 #1   001bc50c6005a283 <log> 1:52:20.418 [panic] osal_freertos:392, in task mac_rx: Deadlock 0x200071bc 0x1db21 (194, 442, 0, 68, lowpan_tx, mac_rx)
+
+From: Friday, 7 June 2019, 15:34:07
+To: Sunday, 9 June 2019, 02:57:51
+Result: 1 day, 11 hours, 23 minutes and 44 seconds
+= 35h 23 min 44 sec
+= 126000 + 2640 + 44 = 128684
+
+number of deadlocks: 15
+
+Deadlock rate = 128684 / 15
+= 8578s
+= 2.3 hrs
+= 2h 20mins
 
 
