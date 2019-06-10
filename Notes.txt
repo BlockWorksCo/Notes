@@ -18860,10 +18860,22 @@ getEntryByDst() calls macDeviceTableFindDevice() which has to lock the MAC devic
 -----------------------------------------------------
 
 mac_rx:
-- macSecurityDecryptFrame() -> setKeyByIndex() -> OS_mutexTake(&s_keysMutex) -> blocked.
+- processReceivedDataFrame() -> macDeviceTableFindDevice() followed by macSecurityDecryptFrame() -> setKeyByIndex() -> OS_mutexTake(&s_keysMutex) -> blocked.
 
 lowpan_tx:
-- macEncodeDataFrame() -> macSecuritySetTxKey() -> OS_mutexTake(&s_keysMutex);
+- processSend() -> sendLowpanFrag() -> macTx() -> encodeFrame() -> macEncodeDataFrame() -> macSecuritySetTxKey() -> OS_mutexTake(&s_keysMutex), followed by a getEntryByDst() ->
+macDeviceTableFindDevice() -> OS_mutexTake(&s_macTableMutex);
+
+Deadlock
+- lowpan_tx owns the s_keysMutex and wants s_macTableMutex.
+- mac_rx holds s_macTableMutex and wants s_keysMutex.
+
+Analysis:
+- Both mac_rx and lowpan_tx want s_macTableMutex and s_keysMutex.
+- mac_rx takes s_macTableMutex and then s_keysMutex
+- lowpan_tx takes s_keysMutex followed by s_macTableMutex.
+- The differing order means each is held by the other task causing the deadlock.
+
 
 
 
