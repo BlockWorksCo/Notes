@@ -18921,11 +18921,30 @@ After change:
 
 Gateway functionality:
 - Cellular interface (PPP)
+    - packet encoding/decoding (wireshark).
+    - fuzzing
 - Mesh radio interface (MAC, PHY)
+    - packet encoding/decoding (wireshark).
+    - fuzzing
 - ethernet interface (IP)
+    - packet encoding/decoding (wireshark).
+    - fuzzing
 - IP stack (6LoWPAN, IP, UDP, CoAP)
+    - fuzzing
+- DTLS
+    - fuzzing
+    - known exploits (e.g. https://unit42.paloaltonetworks.com/dtls-vulnerabilities-cve-2014-6321/, https://www.cvedetails.com/cve/CVE-2014-0160/)
 - Mesh management (RPL)
+    - 1-node, 10-nodes, 100-node performance and time-to-settle at each.
+    - Disturb in various ways; reset some nodes, reset inner nodes
+    - Use network simulator to simulate bad uplink.
+    - fuzzing.
 - Routing.
+    - routing loops
+    - non-existant nodes.
+    - broadcast
+    - unicast
+    - multicast
 - uplink ipv6 network management (neighbour discovery, etc)
 - uplink ipv4 network management (DHCP)
 - ethernet downlink management
