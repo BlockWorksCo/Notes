@@ -18917,5 +18917,38 @@ Before change:
 After change:
 07E3060BFF0E370BFFFF8800
 
+------------------------------------------------------------
+
+Gateway functionality:
+- Cellular interface (PPP)
+- Mesh radio interface (MAC, PHY)
+- ethernet interface (IP)
+- IP stack (6LoWPAN, IP, UDP, CoAP)
+- Mesh management (RPL)
+- Routing.
+- uplink ipv6 network management (neighbour discovery, etc)
+- uplink ipv4 network management (DHCP)
+- ethernet downlink management
+- tunnel (tun6d)
+- file distribution.
+- low power mode.
+
+General:
+- stability, mesh, cellular
+   - long duration tests.
+   - mesh reform without power-cycle.
+   - mesh reform with power-cycle.
+   -
+- stress, overload
+- Throughput, CPU & I/O loading tests.
+
+
+
+
+
+
+
+
+
 
 
