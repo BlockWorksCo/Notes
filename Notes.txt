@@ -18919,6 +18919,13 @@ After change:
 
 ------------------------------------------------------------
 
+Note: Although it seems superfluous at the minute, the mesh and all the relevant protocols
+do need proper testing as we have Wi-SUN coming up which will change all of these yet we will
+still need to support the current standard. To do this in the transitional period will require
+us to have tests setup.
+Note2: Security will also come under more scrutiny with SMIP and Wi-SUN, hence the fuzzing and
+known-exploit testing.
+
 Gateway functionality:
 - Cellular interface (PPP)
     - packet encoding/decoding (wireshark).
@@ -18934,23 +18941,38 @@ Gateway functionality:
 - DTLS
     - fuzzing
     - known exploits (e.g. https://unit42.paloaltonetworks.com/dtls-vulnerabilities-cve-2014-6321/, https://www.cvedetails.com/cve/CVE-2014-0160/)
+    - timeouts & heartbeat
 - Mesh management (RPL)
     - 1-node, 10-nodes, 100-node performance and time-to-settle at each.
     - Disturb in various ways; reset some nodes, reset inner nodes
+    - Topologies, chain, star, star-of-stars.
     - Use network simulator to simulate bad uplink.
     - fuzzing.
+    - versioning, network isolation (RPL-id, PAN-id, etc).
+- Key update
+    - groups
+    - interaction
+    - silent-dropping.
 - Routing.
     - routing loops
     - non-existant nodes.
     - broadcast
     - unicast
     - multicast
-- uplink ipv6 network management (neighbour discovery, etc)
+- uplink ipv6 network managemen
+    - neighbour discovery
+    - gateway solicitation
 - uplink ipv4 network management (DHCP)
+    - neighbour discovery / ARP
+    - gateway solicitationA DHCP
 - ethernet downlink management
+    - DHCP6
 - tunnel (tun6d)
 - file distribution.
 - low power mode.
+- Time sync.
+    - accuracy.
+    - accuracy in disturbed mesh situations.
 
 General:
 - stability, mesh, cellular
