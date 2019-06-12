@@ -18984,6 +18984,16 @@ General:
 - Throughput, CPU & I/O loading tests.
 
 
+---------------------------------------------------------
+
+- At ~2.1V, processor starts up without Flash. Causes entry to prodmode.
+- At ~2.4V, processor starts up in run-mode with Flash, but after a few seconds packet tx causes reboot and prodmode is entered (Flash is inactive at this point).
+- At ~2.7V, processor srarts up in run-mode with Flash, first packet tx causes reboot into run-mode (Flash is semi-active).
+- At ~2.9V, processor starts up in run-mode with Flash, seems stable but incorrect framecounter has been read:
+2019-06-12 13:41:26.964 #18  001bc50c6000018f <log> 22:20:39.171 [ info] [mac_security] {   mac_rx}: Possible replay attack: 02-1b-c5-0c-60-04-fd-d6 counter 42000 expected > 730057
+this means no mesh!
+
+
 
 
 
