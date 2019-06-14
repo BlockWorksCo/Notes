@@ -19008,6 +19008,17 @@ https://help.github.com/en/articles/changing-author-info
 do a commit push as usual to the new branch (created in gerrit).
 
 
+------------------------------------------------
+
+heap size:
+heap is controlled by newlib which uses HeapLimit symbols.
+HeapLimit is defined in flex library ld scripts.
+
+startup_efr32fg12p.c
+
+static uint8_t heap[__HEAP_SIZE]   __attribute__ ((aligned(8), used, section(".heap")));
+
+
 
 
 
