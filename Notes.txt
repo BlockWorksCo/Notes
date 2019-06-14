@@ -18997,7 +18997,11 @@ this means no mesh!
 
 -----------------------------------------------------
 
+Change email and author in git
+
 git clone -b add-mbus-2 git@gitlab.cyco.io:JasonWebb/terminal.git terminalJason
+
+https://help.github.com/en/articles/changing-author-info
 
 
 
