@@ -19015,6 +19015,7 @@ heap is controlled by newlib which uses HeapLimit symbols.
 HeapLimit is defined in flex library ld scripts.
 
 startup_efr32fg12p.c
+3pp/flex/src/platform/Device/SiliconLabs/EFR32FG12P/Source/GCC/startup_efr32fg12p.c
 
 static uint8_t heap[__HEAP_SIZE]   __attribute__ ((aligned(8), used, section(".heap")));
 
