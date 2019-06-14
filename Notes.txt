@@ -19001,8 +19001,11 @@ Change email and author in git
 
 git clone -b add-mbus-2 git@gitlab.cyco.io:JasonWebb/terminal.git terminalJason
 
+git add remote gerrit <gerrit-repo-URL>
+
 https://help.github.com/en/articles/changing-author-info
 
+do a commit push as usual to the new branch (created in gerrit).
 
 
 
