@@ -19027,6 +19027,8 @@ Flash patching unit allows up to 3 addresses that read as 0xbebe for debugging. 
 FLASh code to have effective breakpoints put in without writing to the flash itself.
 FPB flash patch and breakpoint unit.
 
+https://developer.arm.com/docs/100166/latest/debug/flash-patch-and-breakpoint-unit-fpb/fpb-programmers-model
+
 
 
 
