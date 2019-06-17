@@ -19019,6 +19019,13 @@ startup_efr32fg12p.c
 
 static uint8_t heap[__HEAP_SIZE]   __attribute__ ((aligned(8), used, section(".heap")));
 
+--------------------------------------
+
+debugging on Cortex m3
+
+Flash patching unit allows up to 3 addresses that read as 0xbebe for debugging. This allows
+FLASh code to have effective breakpoints put in without writing to the flash itself.
+FPB flash patch and breakpoint unit.
 
 
 
