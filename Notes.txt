@@ -19019,6 +19019,17 @@ startup_efr32fg12p.c
 
 static uint8_t heap[__HEAP_SIZE]   __attribute__ ((aligned(8), used, section(".heap")));
 
+gcc_arm.ld:
+
+    .heap (COPY):
+    {
+        __HeapBase = .;
+        __end__ = .;
+        end = __end__;
+    } > RAM
+
+_HeapLimit is dynamically set via the linker to whatever is left in RAM.
+
 --------------------------------------
 
 debugging on Cortex m3
