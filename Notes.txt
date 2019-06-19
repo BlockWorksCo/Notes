@@ -19041,6 +19041,10 @@ FPB flash patch and breakpoint unit.
 https://developer.arm.com/docs/100166/latest/debug/flash-patch-and-breakpoint-unit-fpb/fpb-programmers-model
 
 
+------------------------------------
+
+fwVersion: 12110403   (new)
+fwVersion: 06010066   (old)
 
 
 
