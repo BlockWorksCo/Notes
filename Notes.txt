@@ -19046,6 +19046,72 @@ https://developer.arm.com/docs/100166/latest/debug/flash-patch-and-breakpoint-un
 fwVersion: 12110403   (new)
 fwVersion: 06010066   (old)
 
+------------------------------------------------------------------------------
+
+power issue:
+
+2019-06-20 14:39:38.258 #1   0000000000000000 <log> 0:00:00.597 [ info] [       cndfs] {       bl}:   --DDDDDD DDDDDDDD DDD-EEEE EEEE-E-E EEEEEEE- -------- -------- --------
+2019-06-20 14:39:38.258 #1   0000000000000000 <hub> 0:00:00.604 [debug] Got ack
+2019-06-20 14:39:38.258 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-20 14:39:38.259 #1   0000000000000000 <log> 0:00:00.615 [ info] [       cndfs] {       bl}:   567----- -------- -------- -------- -------- -------- =------- --------
+2019-06-20 14:39:38.260 #1   0000000000000000 <log> 0:00:00.633 [ info] [       cndfs] {       bl}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-20 14:39:38.260 #1   0000000000000000 <log> 0:00:00.645 [ info] [       cndfs] {       bl}:
+2019-06-20 14:39:38.274 #1   0000000000000000 <hub> 0:00:00.671 [debug] Got ack
+2019-06-20 14:39:38.374 #1   0000000000000000 <log> 0:00:00.753 [ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+2019-06-20 14:39:38.374 #1   0000000000000000 <hub> 0:00:00.761 [ info] Node registering
+2019-06-20 14:39:38.374 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-20 14:39:38.374 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-20 14:39:38.374 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-20 14:39:38.390 #1   0000000000000000 <hub> 0:00:00.782 [debug] Got ack
+2019-06-20 14:39:38.390 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-20 14:39:38.406 #1   0000000000000000 <hub> 0:00:00.802 [debug] Got ack
+2019-06-20 14:39:40.396 #1   0000000000000000 <log> 0:00:02.763 [ info] [  bootloader] {       bl}: Jumping to firmware
+2019-06-20 14:39:40.641 #1   0000000000000000 <hub> 0:00:00.007 [ info] Expected message# 32 but got 1, node restarted?
+2019-06-20 14:39:40.641 #1   0000000000000000 <log> 0:00:00.007 [ info] [       cndfs] { terminal}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2019-06-20 14:39:40.991 #1   0000000000000000 <log> 0:00:00.315 [ info] [       cndfs] { terminal}: Mounted: 279 sectors used, 31 files
+2019-06-20 14:39:40.991 #1   0000000000000000 <log> 0:00:00.323 [ info] [       cndfs] { terminal}: Flash map:
+2019-06-20 14:39:40.991 #1   0000000000000000 <log> 0:00:00.336 [ info] [       cndfs] { terminal}:   -------- -------- -------- -----<-- -------- -------- -------- --------
+2019-06-20 14:39:40.991 #1   0000000000000000 <log> 0:00:00.354 [ info] [       cndfs] { terminal}:   -------- -------- -------- -FFFFF-F FFFFFFFF FFF-GGGG GGGGGGGG GGGGG-HH
+2019-06-20 14:39:41.070 #1   0000000000000000 <log> 0:00:00.372 [ info] [       cndfs] { terminal}:   HHHHHHHH HHHHHHH- :::::::I :::::::: ::-@@@@@ @@@@@@@@ -@@@@--- J-2-----
+2019-06-20 14:39:41.070 #1   0000000000000000 <log> 0:00:00.390 [ info] [       cndfs] { terminal}:   -------- -------- L------- -------- -------- -------- -------- --------
+2019-06-20 14:39:41.070 #1   0000000000000000 <log> 0:00:00.409 [ info] [       cndfs] { terminal}:   -------- -------- -------- -9------ -------- -------- -------- --------
+2019-06-20 14:39:41.070 #1   0000000000000000 <log> 0:00:00.427 [ info] [       cndfs] { terminal}:   -------- -------- AAAA-AA- O------- A--A-AAA AAAA-AA- ---B-B-B BBBB-BBB
+2019-06-20 14:39:41.128 #1   0000000000000000 <log> 0:00:00.445 [ info] [       cndfs] { terminal}:   BBBBBBB- -------- ------>- >>>>>>>> ->>>>>>> >->>>>>> >>->>>>> >>>->>>>
+2019-06-20 14:39:41.128 #1   0000000000000000 <log> 0:00:00.463 [ info] [       cndfs] { terminal}:   >>>>->>> >>>>>->> ?;------ -------- N------- --8----- -------- ----34--
+2019-06-20 14:39:41.128 #1   0000000000000000 <log> 0:00:00.481 [ info] [       cndfs] { terminal}:   ------KK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK K-------
+2019-06-20 14:39:41.128 #1   0000000000000000 <log> 0:00:00.500 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- C------- M-----M-
+2019-06-20 14:39:41.190 #1   0000000000000000 <log> 0:00:00.518 [ info] [       cndfs] { terminal}:   ----M--- ---MM--- -------- -------- -------- -------- -------- --------
+2019-06-20 14:39:41.190 #1   0000000000000000 <log> 0:00:00.536 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-20 14:39:41.191 #1   0000000000000000 <log> 0:00:00.554 [ info] [       cndfs] { terminal}:   -------- -------- -------- -----1-- -------- -------- -------- --------
+2019-06-20 14:39:41.251 #1   0000000000000000 <log> 0:00:00.572 [ info] [       cndfs] { terminal}:   --DDDDDD DDDDDDDD DDD-EEEE EEEE-E-E EEEEEEE- -------- -------- --------
+2019-06-20 14:39:41.252 #1   0000000000000000 <log> 0:00:00.591 [ info] [       cndfs] { terminal}:   567----- -------- -------- -------- -------- -------- =------- --------
+2019-06-20 14:39:41.252 #1   0000000000000000 <log> 0:00:00.609 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-20 14:39:41.252 #1   0000000000000000 <log> 0:00:00.620 [ info] [       cndfs] { terminal}:
+2019-06-20 14:39:41.252 #1   0000000000000000 <hub> 0:00:00.620 [ info] Received msg# 20 from node, sending settings
+2019-06-20 14:39:41.252 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-20 14:39:41.252 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-20 14:39:41.252 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-20 14:39:41.267 #1   0000000000000000 <hub> 0:00:00.645 [debug] Got ack
+2019-06-20 14:39:41.267 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-20 14:39:41.283 #1   0000000000000000 <hub> 0:00:00.665 [debug] Got ack
+2019-06-20 14:39:41.307 #1   0000000000000000 <log> 0:00:00.676 [debug] [       cndfs] { terminal}: Found file /configuration-1.pb at sector 490
+2019-06-20 14:39:41.437 #1   0000000000000000 <log> 0:00:00.787 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2019-06-20 14:39:41.437 #1   0000000000000000 <log> 0:00:00.798 [ WARN] [    fs/crypt] { terminal}: closeRead: HMAC failed
+2019-06-20 14:39:41.437 #1   0000000000000000 <log> 0:00:00.806 [ERROR] [   config/pb] { terminal}: Failed close check
+2019-06-20 14:39:41.463 #1   0000000000000000 <log> 0:00:00.832 [debug] [       cndfs] { terminal}: Found file /configuration-2.pb at sector 186
+2019-06-20 14:39:41.599 #1   0000000000000000 <log> 0:00:00.942 [debug] [      fs/api] { terminal}: fsOpen (/configuration-2.pb, mode=1, fd=0)
+2019-06-20 14:39:41.599 #1   0000000000000000 <log> 0:00:00.954 [ WARN] [    fs/crypt] { terminal}: closeRead: HMAC failed
+2019-06-20 14:39:41.599 #1   0000000000000000 <log> 0:00:00.961 [ERROR] [   config/pb] { terminal}: Failed close check
+2019-06-20 14:39:41.599 #1   0000000000000000 <log> 0:00:00.968 [ info] [   config/pb] { terminal}: Config generations: 0, 0
+2019-06-20 14:39:41.599 #1   0000000000000000 <log> 0:00:00.976 [debug] [      module] { terminal}: Starting srcRestrictedCfgService
+2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:00.984 [debug] [      module] { terminal}: Starting timeService
+2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:00.991 [ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:01.001 [ info] [        time] { terminal}: Uptime: 1001, local time: 1970-01-01  1:19:12.486, UTC: 1152.486, status: 0
+2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:01.013 [panic] ======== Panic ========
+2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:01.013 [panic] terminal:98, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+
+
+
 
 
 
