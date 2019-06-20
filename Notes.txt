@@ -19050,6 +19050,8 @@ fwVersion: 06010066   (old)
 
 power issue:
 
+Version: ipa3-genus-dlms-insecure:v146-7-gddde399 on hw ipa3
+
 2019-06-20 14:39:38.258 #1   0000000000000000 <log> 0:00:00.597 [ info] [       cndfs] {       bl}:   --DDDDDD DDDDDDDD DDD-EEEE EEEE-E-E EEEEEEE- -------- -------- --------
 2019-06-20 14:39:38.258 #1   0000000000000000 <hub> 0:00:00.604 [debug] Got ack
 2019-06-20 14:39:38.258 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
@@ -19110,6 +19112,68 @@ power issue:
 2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:01.013 [panic] ======== Panic ========
 2019-06-20 14:39:41.653 #1   0000000000000000 <log> 0:00:01.013 [panic] terminal:98, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
 
+
+
+
+- running fine on full power.
+
+- turn off mains to run at 2.33V from cap.
+- runs fine until attempt to transmit. This causes a reboot as below:
+2019-06-20 15:34:16.138 #1   001bc50c6000d3ca <log> 0:02:17.304 [debug] [        hdlc] {   device}: disconnectLink 0x20012c70
+2019-06-20 15:34:16.138 #1   001bc50c6000d3ca <log> 0:02:17.311 [debug] [  meter/dlms] {   device}: -- waiting on the userQueue for 60000ms --
+2019-06-20 15:34:16.138 #1   001bc50c6000d3ca <log> 0:02:17.320 [debug] [    hdlclock] {   device}: -- HDLC locked --
+2019-06-20 15:34:16.138 #1   001bc50c6000d3ca <log> 0:02:17.327 [debug] [  meter/dlms] {   device}: Setup AA using LLS without ciphering, without fw upgrade
+2019-06-20 15:34:16.150 #1   001bc50c6000d3ca <log> 0:02:17.338 [debug] [        dlms] {   device}: Setup AA with LLS
+2019-06-20 15:34:16.232 #1   001bc50c6000d3ca <log> 0:02:17.394 [debug] [        hdlc] {   device}: Connect HDLC link
+2019-06-20 15:34:16.232 #1   001bc50c6000d3ca <log> 0:02:17.401 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-06-20 15:34:16.232 #1   001bc50c6000d3ca <log> 0:02:17.407 [debug] [        hdlc] {   device}: tx: (1/1): a020
+2019-06-20 15:34:16.232 #1   001bc50c6000d3ca <log> 0:02:17.414 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2019-06-20 15:34:16.232 #1   001bc50c6000d3ca <log> 0:02:17.420 [debug] [        hdlc] {   device}: tx: (1/1): 41
+2019-06-20 15:34:16.232 #1   001bc50c6000d3ca <log> 0:02:17.427 [debug] [        hdlc] {   device}: tx: (1/1): 93
+2019-06-20 15:34:16.263 #1   001bc50c6000d3ca <log> 0:02:17.433 [debug] [        hdlc] {   device}: tx: (1/1): 28bc
+2019-06-20 15:34:16.263 #1   001bc50c6000d3ca <log> 0:02:17.440 [debug] [        hdlc] {   device}: tx: (1/2): 8180140502015e0602015e0704000000
+2019-06-20 15:34:16.263 #1   001bc50c6000d3ca <log> 0:02:17.449 [debug] [        hdlc] {   device}: tx: (2/2): 01080400000001
+2019-06-20 15:34:16.310 #1   001bc50c6000d3ca <log> 0:02:17.478 [debug] [        hdlc] {   device}: tx: (1/1): 51af
+2019-06-20 15:34:16.310 #1   001bc50c6000d3ca <log> 0:02:17.484 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2019-06-20 15:34:16.310 #1   001bc50c6000d3ca <log> 0:02:17.491 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 100000ms --
+2019-06-20 15:34:17.338 #1   001bc50c6000d3ca <log> 0:02:18.502 [debug] [    rpl/core] {      rpl}: 0: transmit DIS
+2019-06-20 15:34:17.338 #1   001bc50c6000d3ca <log> 0:02:18.509 [debug] [        icmp] {      rpl}: ICMPv6 multicast to ff02::1a, RPL control message (DIS), 23 B
+2019-06-20 15:34:17.338 #1   001bc50c6000d3ca <log> 0:02:18.519 [debug] [          ip] {      rpl}: Send IP on lowpan, 27 B, type 58, ttl 32: fe80::21b:c50c:6000:d3ca -> ff02::1a      <-------- transmit
+2019-06-20 15:34:17.430 #1   0000000000000000 <hub> 0:00:00.003 [ info] Expected message# 752 but got 1, node restarted?
+2019-06-20 15:34:17.430 #1   0000000000000000 <log> 0:00:00.003 [debug] [      module] {       bl}: Starting ctrlportService
+2019-06-20 15:34:17.430 #1   0000000000000000 <log> 0:00:00.010 [ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl:v112
+2019-06-20 15:34:17.431 #1   0000000000000000 <log> 0:00:00.019 [debug] [      module] {       bl}: Initing fsService
+2019-06-20 15:34:17.431 #1   0000000000000000 <log> 0:00:00.026 [debug] [      module] {       bl}: Starting fsService
+2019-06-20 15:34:17.431 #1   0000000000000000 <log> 0:00:00.034 [ info] [       cndfs] {       bl}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2019-06-20 15:34:17.780 #1   0000000000000000 <log> 0:00:00.341 [ info] [       cndfs] {       bl}: Mounted: 279 sectors used, 31 files
+2019-06-20 15:34:17.780 #1   0000000000000000 <log> 0:00:00.350 [ info] [       cndfs] {       bl}: Flash map:
+2019-06-20 15:34:17.780 #1   0000000000000000 <log> 0:00:00.362 [ info] [       cndfs] {       bl}:   -------- -------- -------- -----<-- -------- -------- -------- --------
+2019-06-20 15:34:17.780 #1   0000000000000000 <log> 0:00:00.380 [ info] [       cndfs] {       bl}:   -------- -------- -------- -FFFFF-F FFFFFFFF FFF-GGGG GGGGGGGG GGGGG-HH
+2019-06-20 15:34:17.849 #1   0000000000000000 <log> 0:00:00.398 [ info] [       cndfs] {       bl}:   HHHHHHHH HHHHHHH- :::::::I :::::::: ::-@@@@@ @@@@@@@@ -@@@@--- J-2-----
+2019-06-20 15:34:17.849 #1   0000000000000000 <log> 0:00:00.416 [ info] [       cndfs] {       bl}:   -------- -------- L------- -------- -------- -------- -------- --------
+2019-06-20 15:34:17.849 #1   0000000000000000 <log> 0:00:00.434 [ info] [       cndfs] {       bl}:   -------- -------- -------- -9------ -------- -------- -------- --------
+2019-06-20 15:34:17.849 #1   0000000000000000 <log> 0:00:00.452 [ info] [       cndfs] {       bl}:   -------- -------- AAAA-AA- ---O---- A--A-AAA AAAA-AA- ---B-B-B BBBB-BBB
+2019-06-20 15:34:17.911 #1   0000000000000000 <log> 0:00:00.470 [ info] [       cndfs] {       bl}:   BBBBBBB- -------- ------>- >>>>>>>> ->>>>>>> >->>>>>> >>->>>>> >>>->>>>
+2019-06-20 15:34:17.911 #1   0000000000000000 <log> 0:00:00.488 [ info] [       cndfs] {       bl}:   >>>>->>> >>>>>->> ?;------ -------- ---N---- --8----- -------- ----34--
+2019-06-20 15:34:17.911 #1   0000000000000000 <log> 0:00:00.506 [ info] [       cndfs] {       bl}:   ------KK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK K-------
+2019-06-20 15:34:17.980 #1   0000000000000000 <log> 0:00:00.524 [ info] [       cndfs] {       bl}:   -------- -------- -------- -------- -------- -------- C------- M-----M-
+2019-06-20 15:34:17.980 #1   0000000000000000 <log> 0:00:00.543 [ info] [       cndfs] {       bl}:   ----M--- ---MM--- -------- -------- -------- -------- -------- --------
+2019-06-20 15:34:17.980 #1   0000000000000000 <log> 0:00:00.561 [ info] [       cndfs] {       bl}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-20 15:34:17.980 #1   0000000000000000 <log> 0:00:00.579 [ info] [       cndfs] {       bl}:   -------- -------- -------- -----1-- -------- -------- -------- --------
+
+- on power up, we try to read the config-files.
+- Flash seems to be returning corrupted data for some data reads, but identifier read
+and metadata read seem ok, enough to 'find' the file anyway.
+
+Found file /configuration-1.pb at sector 490
+fsOpen (/configuration-1.pb, mode=1, fd=0)
+closeRead: HMAC failed
+Failed close check
+Found file /configuration-2.pb at sector 186
+fsOpen (/configuration-2.pb, mode=1, fd=0)
+closeRead: HMAC failed
+Failed close check
+Config generations: 0, 0  <------ 0 == INVALID_GENERATION
 
 
 
