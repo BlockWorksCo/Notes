@@ -19177,6 +19177,51 @@ Config generations: 0, 0  <------ 0 == INVALID_GENERATION
 
 
 
+Another fault:
+slowly wind-up from below reset to 2.35V
+- bootloader cannot detect FLASH.
+- firmware does not run.
+
+2019-06-20 16:09:57.069 #1   0000000000000000 <hub> 0:00:00.055 [ info] Node registering
+2019-06-20 16:09:57.069 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-20 16:09:57.069 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-20 16:09:57.069 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-20 16:09:57.085 #1   0000000000000000 <hub> 0:00:00.073 [debug] Got ack
+2019-06-20 16:09:57.085 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-20 16:09:57.101 #1   0000000000000000 <hub> 0:00:00.093 [debug] Got ack
+2019-06-20 16:09:59.096 #1   0000000000000000 <log> 0:00:02.057 [ info] [  bootloader] {       bl}: Jumping to firmware
+2019-06-20 16:09:59.353 #1   0000000000000000 <hub> 0:00:00.003 [ info] Expected message# 12 but got 1, node restarted?
+2019-06-20 16:09:59.353 #1   0000000000000000 <log> 0:00:00.003 [debug] [      module] {       bl}: Starting ctrlportService
+2019-06-20 16:09:59.353 #1   0000000000000000 <log> 0:00:00.010 [ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl:v112
+2019-06-20 16:09:59.353 #1   0000000000000000 <log> 0:00:00.019 [ERROR] [       flash] {       bl}: Unsupported flash id: 00 00 00
+2019-06-20 16:09:59.353 #1   0000000000000000 <log> 0:00:00.027 [debug] [      module] {       bl}: Initing fsService
+2019-06-20 16:09:59.353 #1   0000000000000000 <log> 0:00:00.034 [debug] [      module] {       bl}: Starting fsService
+2019-06-20 16:09:59.379 #1   0000000000000000 <log> 0:00:00.041 [ERROR] [  fs/service] {       bl}: No flash
+2019-06-20 16:09:59.379 #1   0000000000000000 <log> 0:00:00.047 [ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+2019-06-20 16:09:59.379 #1   0000000000000000 <hub> 0:00:00.055 [ info] Node registering
+2019-06-20 16:09:59.379 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-20 16:09:59.379 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-20 16:09:59.379 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-20 16:09:59.394 #1   0000000000000000 <hub> 0:00:00.074 [debug] Got ack
+2019-06-20 16:09:59.394 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-20 16:09:59.411 #1   0000000000000000 <hub> 0:00:00.094 [debug] Got ack
+2019-06-20 16:10:01.404 #1   0000000000000000 <log> 0:00:02.057 [ info] [  bootloader] {       bl}: Jumping to firmware
+
+
+
+
+- another fault (2.41V):
+- gets config but fails check on cert file
+
+
+
+
+
+
+----------------------------------
+
+time issue... ensure the time set uses deviation from tz, not from get time operation.
+
 
 
 
