@@ -19233,6 +19233,11 @@ CONFIG_READ_PROTECT
 
 Or... use bank switching.
 
+--------------------------------------------
+
+mesh network id
+
+CND-1469: implies PARAM_LOWPAN_NETWORK_ID was used in the same manner as RPL instance ID, unique per mesh.
 
 
 
