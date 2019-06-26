@@ -19229,7 +19229,9 @@ Bootlaoder upgrade:
 - "...the system can be redirected to boot from this area by setting bit 1 in config lock word 0 (CLW0) at word 122 of the lockbit (LB) page."
 - The lockbits page is writable by software, but only erasable by the debugger.
 
+CONFIG_READ_PROTECT
 
+Or... use bank switching.
 
 
 
