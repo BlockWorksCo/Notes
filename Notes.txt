@@ -19222,6 +19222,15 @@ slowly wind-up from below reset to 2.35V
 
 time issue... ensure the time set uses deviation from tz, not from get time operation.
 
+------------------------------------------------
+
+Bootlaoder upgrade:
+- EFR32 reference, section 7.3.4
+- "...the system can be redirected to boot from this area by setting bit 1 in config lock word 0 (CLW0) at word 122 of the lockbit (LB) page."
+
+
+
+
 
 
 
