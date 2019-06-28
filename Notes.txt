@@ -19561,6 +19561,13 @@ Cap supply @2.22V, Main supply @3.82V == lockup Only power cycle revived it.
 Conclusion... Flash soft-reset doesn't recover the device.
 
 
+---------------------------------------------
+
+run ctrlporthub & blfwupload to upgrade fw.
+
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4002 -serial /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTE6CGWM-if00-port0 -loglevel debug -logfile /Data/Logs/node123.log
+./build/host-lnt-insecure/bin/blfwupload -ctrlport 4002 -loglevel debug -image ./build/ipa3-genus-dlms-insecure/release/agent-ipa3-genus-dlms-insecure-v149.5-21-gb23a7f0M.image -dev /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTE6CGWM-if00-port0
+
 
 
 
