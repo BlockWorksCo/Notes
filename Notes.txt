@@ -19575,5 +19575,10 @@ Kaifa time sync.
 - revert CND-9457 (tz inversion)
 - Make sure dev has same sign as tz.
 
+----------------------------------------------------
+
+mosh is an ssh type terminal-server that uses UDP.
+run "sudo mosh-server" on OrangePi, "mosh omni@<ip>" on client.
+
 
 
