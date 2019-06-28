@@ -19281,6 +19281,284 @@ lockup on partial power.
 Cap supply @2.22V, Main supply @3.82V == lockup Only power cycle revived it.
 
 
+2019-06-28 13:59:55.344 #1   0000000000000000 <log> 0:00:00.120 [ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+2019-06-28 13:59:55.344 #1   0000000000000000 <hub> 0:00:00.128 [ info] Node registering
+2019-06-28 13:59:55.344 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-28 13:59:55.344 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-28 13:59:55.344 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-28 13:59:55.360 #1   0000000000000000 <hub> 0:00:00.145 [debug] Got ack
+2019-06-28 13:59:55.360 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-28 13:59:55.376 #1   0000000000000000 <hub> 0:00:00.165 [debug] Got ack
+2019-06-28 13:59:57.372 #1   0000000000000000 <log> 0:00:02.131 [ info] [  bootloader] {       bl}: Jumping to firmware
+2019-06-28 13:59:58.112 #1   0000000000000000 <hub> 0:00:00.505 [ info] Expected message# 13 but got 1, node restarted?
+2019-06-28 13:59:58.113 #1   0000000000000000 <log> 0:00:00.505 [ info] [       cndfs] { terminal}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2019-06-28 13:59:58.182 #1   0000000000000000 <log> 0:00:00.575 [ WARN] [       cndfs] { terminal}: Erasing sector 588: bad file start
+2019-06-28 13:59:58.526 #1   0000000000000000 <log> 0:00:00.878 [ info] [       cndfs] { terminal}: Mounted: 348 sectors used, 31 files
+2019-06-28 13:59:58.526 #1   0000000000000000 <log> 0:00:00.886 [ info] [       cndfs] { terminal}: Flash map:
+2019-06-28 13:59:58.526 #1   0000000000000000 <log> 0:00:00.899 [ info] [       cndfs] { terminal}:   >>->>>>> >>>->>>> >>>>=>>> >>>>>->> >>>>>>-> >>>>>>>- >>>>>>>> ->>>>>>>
+2019-06-28 13:59:58.526 #1   0000000000000000 <log> 0:00:00.917 [ info] [       cndfs] { terminal}:   >->>>>>> >>->>>>> >>>>->>> >FFFFF>F FFFFFFFF FFF-GGGG GGGGGGGG GGGGG-HH
+2019-06-28 13:59:58.594 #1   0000000000000000 <log> 0:00:00.935 [ info] [       cndfs] { terminal}:   HHHHHHHH HHHHHHH? :::::::- :::::::: ::-@@@@@ @@@@@@@@ -@@@@--- J-------
+2019-06-28 13:59:58.594 #1   0000000000000000 <log> 0:00:00.953 [ info] [       cndfs] { terminal}:   -------- -------- L------- -------- -------- -------- -------- --------
+2019-06-28 13:59:58.594 #1   0000000000000000 <log> 0:00:00.972 [ info] [       cndfs] { terminal}:   -------- 2------- -------- -9------ -------- -------- -------- --------
+2019-06-28 13:59:58.594 #1   0000000000000000 <log> 0:00:00.990 [ info] [       cndfs] { terminal}:   ------83 4567---- AAAA-AA- -------- A--A-AAA AAAA-AA- ---B-B-B BBBB-BBB
+2019-06-28 13:59:58.656 #1   0000000000000000 <log> 0:00:01.008 [ info] [       cndfs] { terminal}:   BBBBBBB- -------- -------- -------- -------- -------- -------- --------
+2019-06-28 13:59:58.656 #1   0000000000000000 <log> 0:00:01.026 [ info] [       cndfs] { terminal}:   -------- -------- -;------ -------- -------- -------- -------- --------
+2019-06-28 13:59:58.656 #1   0000000000000000 <log> 0:00:01.044 [ info] [       cndfs] { terminal}:   ------KK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK KKKKKKKK K-------
+2019-06-28 13:59:58.725 #1   0000000000000000 <log> 0:00:01.063 [ info] [       cndfs] { terminal}:   -------- ---O0--- -------- -------- -------- -------- C------- M-----M-
+2019-06-28 13:59:58.725 #1   0000000000000000 <log> 0:00:01.081 [ info] [       cndfs] { terminal}:   ----M-N- ---M---M -M------ -------- -------- -------- -------- --------
+2019-06-28 13:59:58.725 #1   0000000000000000 <log> 0:00:01.099 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-28 13:59:58.725 #1   0000000000000000 <log> 0:00:01.117 [ info] [       cndfs] { terminal}:   -------- -------- -------- -----1-- -------- -------- -------- --------
+2019-06-28 13:59:58.786 #1   0000000000000000 <log> 0:00:01.135 [ info] [       cndfs] { terminal}:   --DDDDDD DDDDDDDD DDD-EEEE EEEE-E-E EEEEEEE- -------- -------- --------
+2019-06-28 13:59:58.786 #1   0000000000000000 <log> 0:00:01.154 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2019-06-28 13:59:58.786 #1   0000000000000000 <log> 0:00:01.172 [ info] [       cndfs] { terminal}:   -------- -------- --<I>->> >>>>>>-> >>>>>>>- >>>>>>>> ->>>>>>> >->>>>>>
+2019-06-28 13:59:58.786 #1   0000000000000000 <hub> 0:00:01.172 [ info] Received msg# 20 from node, sending settings
+2019-06-28 13:59:58.786 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-28 13:59:58.786 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-28 13:59:58.786 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-28 13:59:58.786 #1   0000000000000000 <log> 0:00:01.183 [ info] [       cndfs] { terminal}:
+2019-06-28 13:59:58.802 #1   0000000000000000 <hub> 0:00:01.203 [debug] Got ack
+2019-06-28 13:59:58.802 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-28 13:59:58.835 #1   0000000000000000 <log> 0:00:01.223 [debug] [       cndfs] { terminal}: Found file /configuration-1.pb at sector 326
+2019-06-28 13:59:58.835 #1   0000000000000000 <hub> 0:00:01.224 [debug] Got ack
+2019-06-28 13:59:58.960 #1   0000000000000000 <log> 0:00:01.334 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2019-06-28 13:59:58.960 #1   0000000000000000 <log> 0:00:01.346 [ WARN] [    fs/crypt] { terminal}: closeRead: HMAC failed
+2019-06-28 13:59:58.960 #1   0000000000000000 <log> 0:00:01.353 [ERROR] [   config/pb] { terminal}: Failed close check
+2019-06-28 13:59:58.997 #1   0000000000000000 <log> 0:00:01.387 [debug] [       cndfs] { terminal}: Found file /configuration-2.pb at sector 264
+2019-06-28 13:59:59.129 #1   0000000000000000 <log> 0:00:01.498 [debug] [      fs/api] { terminal}: fsOpen (/configuration-2.pb, mode=1, fd=0)
+2019-06-28 13:59:59.130 #1   0000000000000000 <log> 0:00:01.510 [ WARN] [    fs/crypt] { terminal}: closeRead: HMAC failed
+2019-06-28 13:59:59.130 #1   0000000000000000 <log> 0:00:01.517 [ERROR] [   config/pb] { terminal}: Failed close check
+2019-06-28 13:59:59.130 #1   0000000000000000 <log> 0:00:01.524 [ info] [   config/pb] { terminal}: Config generations: 0, 0
+2019-06-28 13:59:59.130 #1   0000000000000000 <log> 0:00:01.532 [debug] [      module] { terminal}: Starting srcRestrictedCfgService
+2019-06-28 13:59:59.145 #1   0000000000000000 <log> 0:00:01.540 [debug] [      module] { terminal}: Starting timeService
+2019-06-28 14:00:00.206 #1   0000000000000000 <log> 0:00:02.571 [ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+2019-06-28 14:00:00.206 #1   0000000000000000 <log> 0:00:02.580 [ info] [        time] { terminal}: Uptime: 2580, local time: 1970-01-01  1:00:00.009, UTC: 0.9, status: 0
+2019-06-28 14:00:00.206 #1   0000000000000000 <log> 0:00:02.592 [panic] ======== Panic ========
+2019-06-28 14:00:00.206 #1   0000000000000000 <log> 0:00:02.592 [panic] terminal:107, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2019-06-28 14:00:27.350 #1   0000000000000000 <hub> 0:00:00.004 [ info] Expected message# 39 but got 1, node restarted?
+2019-06-28 14:00:27.350 #1   0000000000000000 <log> 0:00:00.004 [debug] [      module] {       bl}: Starting ctrlportService
+2019-06-28 14:00:27.350 #1   0000000000000000 <log> 0:00:00.011 [ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl:v112
+2019-06-28 14:00:27.350 #1   0000000000000000 <log> 0:00:00.020 [debug] [      module] {       bl}: Initing fsService
+2019-06-28 14:00:27.351 #1   0000000000000000 <log> 0:00:00.027 [debug] [      module] {       bl}: Starting fsService
+2019-06-28 14:00:27.351 #1   0000000000000000 <log> 0:00:00.035 [ info] [       cndfs] {       bl}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2019-06-28 14:00:27.436 #1   0000000000000000 <log> 0:00:00.105 [ WARN] [       cndfs] {       bl}: Bad sector 588: bad file start
+2019-06-28 14:00:27.436 #1   0000000000000000 <log> 0:00:00.113 [ERROR] [  fs/service] {       bl}: Failed to mount filesystem
+2019-06-28 14:00:27.436 #1   0000000000000000 <log> 0:00:00.121 [ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+2019-06-28 14:00:27.436 #1   0000000000000000 <hub> 0:00:00.129 [ info] Node registering
+2019-06-28 14:00:27.436 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-28 14:00:27.436 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-28 14:00:27.436 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-28 14:00:27.452 #1   0000000000000000 <hub> 0:00:00.146 [debug] Got ack
+2019-06-28 14:00:27.452 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-28 14:00:27.468 #1   0000000000000000 <hub> 0:00:00.165 [debug] Got ack
+2019-06-28 14:00:29.464 #1   0000000000000000 <log> 0:00:02.131 [ info] [  bootloader] {       bl}: Jumping to firmware
+2019-06-28 14:00:30.203 #1   0000000000000000 <hub> 0:00:00.505 [ info] Expected message# 13 but got 1, node restarted?
+2019-06-28 14:00:30.204 #1   0000000000000000 <log> 0:00:00.505 [ info] [       cndfs] { terminal}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2019-06-28 14:00:30.272 #1   0000000000000000 <log> 0:00:00.575 [ WARN] [       cndfs] { terminal}: Erasing sector 588: bad file start
+2019-06-28 14:00:35.325 #1   0000000000000000 <log> 0:00:05.627 [ WARN] [       cndfs] { terminal}: Erasing sector 0: non-file data
+2019-06-28 14:00:40.332 #1   0000000000000000 <log> 0:00:10.635 [ WARN] [       cndfs] { terminal}: Erasing sector 1: non-file data
+2019-06-28 14:00:45.341 #1   0000000000000000 <log> 0:00:15.643 [ WARN] [       cndfs] { terminal}: Erasing sector 3: non-file data
+2019-06-28 14:00:50.348 #1   0000000000000000 <log> 0:00:20.651 [ WARN] [       cndfs] { terminal}: Erasing sector 4: non-file data
+2019-06-28 14:00:55.356 #1   0000000000000000 <log> 0:00:25.659 [ WARN] [       cndfs] { terminal}: Erasing sector 5: non-file data
+2019-06-28 14:01:00.364 #1   0000000000000000 <log> 0:00:30.667 [ WARN] [       cndfs] { terminal}: Erasing sector 6: non-file data
+2019-06-28 14:01:05.372 #1   0000000000000000 <log> 0:00:35.675 [ WARN] [       cndfs] { terminal}: Erasing sector 7: non-file data
+2019-06-28 14:01:10.380 #1   0000000000000000 <log> 0:00:40.683 [ WARN] [       cndfs] { terminal}: Erasing sector 8: non-file data
+2019-06-28 14:01:15.388 #1   0000000000000000 <log> 0:00:45.691 [ WARN] [       cndfs] { terminal}: Erasing sector 9: non-file data
+2019-06-28 14:01:20.395 #1   0000000000000000 <log> 0:00:50.699 [ WARN] [       cndfs] { terminal}: Erasing sector 10: non-file data
+2019-06-28 14:01:25.403 #1   0000000000000000 <log> 0:00:55.707 [ WARN] [       cndfs] { terminal}: Erasing sector 12: non-file data
+2019-06-28 14:01:30.411 #1   0000000000000000 <log> 0:01:00.715 [ WARN] [       cndfs] { terminal}: Erasing sector 13: non-file data
+2019-06-28 14:01:35.420 #1   0000000000000000 <log> 0:01:05.723 [ WARN] [       cndfs] { terminal}: Erasing sector 14: non-file data
+2019-06-28 14:01:40.428 #1   0000000000000000 <log> 0:01:10.731 [ WARN] [       cndfs] { terminal}: Erasing sector 15: non-file data
+2019-06-28 14:01:45.436 #1   0000000000000000 <log> 0:01:15.739 [ WARN] [       cndfs] { terminal}: Erasing sector 16: non-file data
+2019-06-28 14:01:50.443 #1   0000000000000000 <log> 0:01:20.747 [ WARN] [       cndfs] { terminal}: Erasing sector 17: non-file data
+2019-06-28 14:01:55.452 #1   0000000000000000 <log> 0:01:25.755 [ WARN] [       cndfs] { terminal}: Erasing sector 18: non-file data
+2019-06-28 14:02:00.460 #1   0000000000000000 <log> 0:01:30.763 [ WARN] [       cndfs] { terminal}: Erasing sector 19: non-file data
+2019-06-28 14:02:00.460 #1   0000000000000000 <hub> 0:01:30.763 [ info] Received msg# 20 from node, sending settings
+2019-06-28 14:02:00.460 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2019-06-28 14:02:00.460 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2019-06-28 14:02:00.460 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2019-06-28 14:02:00.475 #1   0000000000000000 <hub> 0:01:30.787 [debug] Got ack
+2019-06-28 14:02:00.476 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2019-06-28 14:02:00.491 #1   0000000000000000 <hub> 0:01:30.807 [debug] Got ack
+2019-06-28 14:02:00.709 #1   0000000000000000 <log> 0:01:31.004 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:02:00.709 #1   0000000000000000 <log> 0:01:31.012 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:02:05.474 #1   0000000000000000 <log> 0:01:35.771 [ WARN] [       cndfs] { terminal}: Erasing sector 21: non-file data
+2019-06-28 14:02:05.474 #1   0000000000000000 <log> 0:01:35.780 [debug] [  fs/service] { terminal}: flashopErase 21:0x0 4096 B
+2019-06-28 14:02:10.211 #1   0000000000000000 <log> 0:01:40.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:02:10.211 #1   0000000000000000 <log> 0:01:40.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:02:10.493 #1   0000000000000000 <log> 0:01:40.787 [ WARN] [       cndfs] { terminal}: Erasing sector 22: non-file data
+2019-06-28 14:02:10.493 #1   0000000000000000 <log> 0:01:40.795 [debug] [  fs/service] { terminal}: flashopErase 22:0x0 4096 B
+2019-06-28 14:02:10.728 #1   0000000000000000 <log> 0:01:41.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:02:10.728 #1   0000000000000000 <log> 0:01:41.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:02:15.506 #1   0000000000000000 <log> 0:01:45.803 [ WARN] [       cndfs] { terminal}: Erasing sector 23: non-file data
+2019-06-28 14:02:15.506 #1   0000000000000000 <log> 0:01:45.811 [debug] [  fs/service] { terminal}: flashopErase 23:0x0 4096 B
+2019-06-28 14:02:20.211 #1   0000000000000000 <log> 0:01:50.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:02:20.211 #1   0000000000000000 <log> 0:01:50.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:02:20.525 #1   0000000000000000 <log> 0:01:50.819 [ WARN] [       cndfs] { terminal}: Erasing sector 24: non-file data
+2019-06-28 14:02:20.525 #1   0000000000000000 <log> 0:01:50.827 [debug] [  fs/service] { terminal}: flashopErase 24:0x0 4096 B
+2019-06-28 14:02:20.726 #1   0000000000000000 <log> 0:01:51.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:02:20.726 #1   0000000000000000 <log> 0:01:51.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:02:25.537 #1   0000000000000000 <log> 0:01:55.835 [ WARN] [       cndfs] { terminal}: Erasing sector 25: non-file data
+2019-06-28 14:02:25.537 #1   0000000000000000 <log> 0:01:55.843 [debug] [  fs/service] { terminal}: flashopErase 25:0x0 4096 B
+2019-06-28 14:02:30.212 #1   0000000000000000 <log> 0:02:00.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:02:30.212 #1   0000000000000000 <log> 0:02:00.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:02:30.557 #1   0000000000000000 <log> 0:02:00.851 [ WARN] [       cndfs] { terminal}: Erasing sector 26: non-file data
+2019-06-28 14:02:30.557 #1   0000000000000000 <log> 0:02:00.859 [debug] [  fs/service] { terminal}: flashopErase 26:0x0 4096 B
+2019-06-28 14:02:30.727 #1   0000000000000000 <log> 0:02:01.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:02:30.727 #1   0000000000000000 <log> 0:02:01.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:02:35.569 #1   0000000000000000 <log> 0:02:05.867 [ WARN] [       cndfs] { terminal}: Erasing sector 27: non-file data
+2019-06-28 14:02:35.569 #1   0000000000000000 <log> 0:02:05.875 [debug] [  fs/service] { terminal}: flashopErase 27:0x0 4096 B
+2019-06-28 14:02:40.211 #1   0000000000000000 <log> 0:02:10.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:02:40.211 #1   0000000000000000 <log> 0:02:10.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:02:40.589 #1   0000000000000000 <log> 0:02:10.883 [ WARN] [       cndfs] { terminal}: Erasing sector 28: non-file data
+2019-06-28 14:02:40.589 #1   0000000000000000 <log> 0:02:10.891 [debug] [  fs/service] { terminal}: flashopErase 28:0x0 4096 B
+2019-06-28 14:02:40.727 #1   0000000000000000 <log> 0:02:11.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:02:40.727 #1   0000000000000000 <log> 0:02:11.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:02:45.600 #1   0000000000000000 <log> 0:02:15.899 [ WARN] [       cndfs] { terminal}: Erasing sector 30: non-file data
+2019-06-28 14:02:45.600 #1   0000000000000000 <log> 0:02:15.907 [debug] [  fs/service] { terminal}: flashopErase 30:0x0 4096 B
+2019-06-28 14:02:50.211 #1   0000000000000000 <log> 0:02:20.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:02:50.211 #1   0000000000000000 <log> 0:02:20.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:02:50.620 #1   0000000000000000 <log> 0:02:20.915 [ WARN] [       cndfs] { terminal}: Erasing sector 31: non-file data
+2019-06-28 14:02:50.620 #1   0000000000000000 <log> 0:02:20.923 [debug] [  fs/service] { terminal}: flashopErase 31:0x0 4096 B
+2019-06-28 14:02:50.726 #1   0000000000000000 <log> 0:02:21.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:02:50.726 #1   0000000000000000 <log> 0:02:21.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:02:55.633 #1   0000000000000000 <log> 0:02:25.931 [ WARN] [       cndfs] { terminal}: Erasing sector 32: non-file data
+2019-06-28 14:02:55.633 #1   0000000000000000 <log> 0:02:25.939 [debug] [  fs/service] { terminal}: flashopErase 32:0x0 4096 B
+2019-06-28 14:03:00.211 #1   0000000000000000 <log> 0:02:30.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:03:00.211 #1   0000000000000000 <log> 0:02:30.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:03:00.653 #1   0000000000000000 <log> 0:02:30.947 [ WARN] [       cndfs] { terminal}: Erasing sector 33: non-file data
+2019-06-28 14:03:00.654 #1   0000000000000000 <log> 0:02:30.955 [debug] [  fs/service] { terminal}: flashopErase 33:0x0 4096 B
+2019-06-28 14:03:00.726 #1   0000000000000000 <log> 0:02:31.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:03:00.726 #1   0000000000000000 <log> 0:02:31.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:03:05.665 #1   0000000000000000 <log> 0:02:35.963 [ WARN] [       cndfs] { terminal}: Erasing sector 34: non-file data
+2019-06-28 14:03:05.665 #1   0000000000000000 <log> 0:02:35.971 [debug] [  fs/service] { terminal}: flashopErase 34:0x0 4096 B
+2019-06-28 14:03:10.212 #1   0000000000000000 <log> 0:02:40.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:03:10.212 #1   0000000000000000 <log> 0:02:40.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:03:10.684 #1   0000000000000000 <log> 0:02:40.979 [ WARN] [       cndfs] { terminal}: Erasing sector 35: non-file data
+2019-06-28 14:03:10.684 #1   0000000000000000 <log> 0:02:40.987 [debug] [  fs/service] { terminal}: flashopErase 35:0x0 4096 B
+2019-06-28 14:03:10.727 #1   0000000000000000 <log> 0:02:41.020 [debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+2019-06-28 14:03:10.727 #1   0000000000000000 <log> 0:02:41.028 [debug] [       flash] { schedule}: ** periodic FLASH reset done **
+2019-06-28 14:03:15.697 #1   0000000000000000 <log> 0:02:45.995 [ WARN] [       cndfs] { terminal}: Erasing sector 36: non-file data
+2019-06-28 14:03:15.697 #1   0000000000000000 <log> 0:02:46.003 [debug] [  fs/service] { terminal}: flashopErase 36:0x0 4096 B
+2019-06-28 14:03:20.211 #1   0000000000000000 <log> 0:02:50.504 [debug] [       flash] { schedule}: ** periodic FLASH reset **
+2019-06-28 14:03:20.211 #1   0000000000000000 <log> 0:02:50.511 [debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+2019-06-28 14:03:20.733 #1   0000000000000000 <log> 0:02:51.011 [ WARN] [       cndfs] { terminal}: Erasing sector 37: non-file data
+2019-06-28 14:03:20.733 #1   0000000000000000 <log> 0:02:51.019 [debug] [  fs/service] { terminal}: flashopErase 37:0x0 4096 B
+
+
+[debug] [  fs/service] { terminal}: flashopErase 85:0x0 4096 B
+[ WARN] [       cndfs] { terminal}: Erasing sector 86: non-file data
+[debug] [  fs/service] { terminal}: flashopErase 86:0x0 4096 B
+[debug] [       flash] { schedule}: ** periodic FLASH reset **
+[debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+[debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+[debug] [       flash] { schedule}: ** periodic FLASH reset done **
+[ WARN] [       cndfs] { terminal}: Erasing sector 87: non-file data
+[debug] [  fs/service] { terminal}: flashopErase 87:0x0 4096 B
+[ WARN] [       cndfs] { terminal}: Erasing sector 88: non-file data
+[debug] [  fs/service] { terminal}: flashopErase 88:0x0 4096 B
+[debug] [       flash] { schedule}: ** periodic FLASH reset **
+[debug] [       flash] { schedule}: ** Putting FLASH into low-power mode **
+[debug] [       flash] { schedule}: ** Taking FLASH out of low-power mode **
+[debug] [       flash] { schedule}: ** periodic FLASH reset done **
+[ WARN] [       cndfs] { terminal}: Erasing sector 94: non-file data
+[debug] [  fs/service] { terminal}: flashopErase 94:0x0 4096 B
+[ info] [       cndfs] { terminal}: Mounted: 184 sectors used, 22 files
+[ info] [       cndfs] { terminal}: Flash map:
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+[ info] [       cndfs] { terminal}:
+[debug] [      module] { terminal}: Starting configService
+[ info] [      fs/api] { terminal}: open /configuration-1.pb failed (mode=1): 0xe
+[ info] [      fs/api] { terminal}: open /configuration-2.pb failed (mode=1): 0xe
+[ info] [   config/pb] { terminal}: Config generations: 0, 0
+[debug] [      module] { terminal}: Starting srcRestrictedCfgService
+[debug] [      module] { terminal}: Starting timeService
+[ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+[ info] [        time] { terminal}: Uptime: 407460, local time: 1970-01-01  1:07:16.974, UTC: 436.974, status: 0
+[panic] ======== Panic ========
+[panic] terminal:107, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+[ info] Expected message# 302 but got 1, node restarted?
+[debug] [      module] {       bl}: Starting ctrlportService
+[ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl:v112
+[ERROR] [       flash] {       bl}: Unsupported flash id: 00 00 00
+[debug] [      module] {       bl}: Initing fsService
+[debug] [      module] {       bl}: Starting fsService
+[ERROR] [  fs/service] {       bl}: No flash
+[ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+[ info] Node registering
+[ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+[debug] Writing message of type 145 size 27 bootloaderState: 0
+[ info] Giving lowpan prefix :: to node
+[debug] Got ack
+[debug] Writing message of type 144 size 77 bootloaderState: 0
+[debug] Got ack
+[ info] [  bootloader] {       bl}: Jumping to firmware
+[ info] Expected message# 12 but got 1, node restarted?
+[ERROR] [       flash] { terminal}: Unsupported flash id: 00 00 00
+[ERROR] [     storage] { terminal}: FLASH init failed
+[ERROR] [  fs/service] { terminal}: No flash
+[ info] [      fs/api] { terminal}: open /configuration-1.pb failed (mode=1): 0xe
+[ info] [      fs/api] { terminal}: open /configuration-2.pb failed (mode=1): 0xe
+[ info] [   config/pb] { terminal}: Config generations: 0, 0
+[ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+[ info] [        time] { terminal}: Uptime: 1084, local time: 1970-01-01  1:00:00.009, UTC: 0.9, status: 0
+[panic] ======== Panic ========
+[panic] terminal:107, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+[ info] Expected message# 11 but got 1, node restarted?
+[debug] [      module] {       bl}: Starting ctrlportService
+[ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl:v112
+[ERROR] [       flash] {       bl}: Unsupported flash id: 00 00 00
+[debug] [      module] {       bl}: Initing fsService
+[debug] [      module] {       bl}: Starting fsService
+[ERROR] [  fs/service] {       bl}: No flash
+[ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+[ info] Node registering
+[ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+[debug] Writing message of type 145 size 27 bootloaderState: 0
+[ info] Giving lowpan prefix :: to node
+[debug] Got ack
+[debug] Writing message of type 144 size 77 bootloaderState: 0
+[debug] Got ack
+[ info] [  bootloader] {       bl}: Jumping to firmware
+[ info] Expected message# 12 but got 1, node restarted?
+[ERROR] [       flash] { terminal}: Unsupported flash id: 00 00 00
+[ERROR] [     storage] { terminal}: FLASH init failed
+[ERROR] [  fs/service] { terminal}: No flash
+[ info] [      fs/api] { terminal}: open /configuration-1.pb failed (mode=1): 0xe
+[ info] [      fs/api] { terminal}: open /configuration-2.pb failed (mode=1): 0xe
+[ info] [   config/pb] { terminal}: Config generations: 0, 0
+[ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+[ info] [        time] { terminal}: Uptime: 61, local time: 1970-01-01  1:00:29.507, UTC: 29.507, status: 0
+[panic] ======== Panic ========
+[panic] terminal:107, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+[ info] Expected message# 11 but got 1, node restarted?
+[debug] [      module] {       bl}: Starting ctrlportService
+[ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl:v112
+[ERROR] [       flash] {       bl}: Unsupported flash id: 00 00 00
+[debug] [      module] {       bl}: Initing fsService
+[debug] [      module] {       bl}: Starting fsService
+[ERROR] [  fs/service] {       bl}: No flash
+[ info] [      fs/api] {       bl}: open /bl_request failed (mode=1): 0xe
+[ info] Node registering
+[ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+
+
+
+Conclusion... Flash soft-reset doesn't recover the device.
 
 
 
