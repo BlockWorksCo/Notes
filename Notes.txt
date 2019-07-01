@@ -19581,5 +19581,20 @@ Kaifa time sync.
 mosh is an ssh type terminal-server that uses UDP.
 run "sudo mosh-server" on OrangePi, "mosh omni@<ip>" on client.
 
+----------------------------------------------
+
+Release lifecycle & testability:
+- requirements
+- implementation
+- release formation / CI build.
+- testing
+- node-production
+- meter-production
+- in-field / commisioning / configuration.
+
+
+
+
+
 
 
