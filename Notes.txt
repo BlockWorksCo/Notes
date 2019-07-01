@@ -8442,6 +8442,7 @@ Fuzz tests with Aaron:
 
 --------------------------------------------------
 
+ARMLMD_LICENSE_FILE=8224@172.16.32.179
 
 need a ~/.flexlmrc containing:
 ARMLMD_LICENSE_FILE=8224@flexlm.se.cyco.io
