@@ -19592,6 +19592,17 @@ Release lifecycle & testability:
 - meter-production
 - in-field / commisioning / configuration.
 
+---------------------------------------------------
+
+GW7 notes:
+- No Flash as in NIC7. No brainer.
+- Battery charge management in Agent allows removing equivalent functionality from PSU board.
+- Higher power on mesh radio (i.e. IPA3b style with the CC1190) == less gateways for same coverage / density tradoff. Obvious saving if it can be managed.
+- Does it have to be a single device? Can we have higher-power gw with a small, low-power fill-in gw? network-planning issues?
+- Maybe a high-power modem-less gw (i.e. a mesh-extender) that can route to a more expensive gw-with-modem? Similar idea for in-meter-mesh-extender.
+- SMIP-model processing, i.e. gateway on modem as application, controlling a CC1200.
+- Optimising software power-usage would result in lower battery capacity requirement, could also involve a low-power-mesh "mode" to improve that significantly.
+- Debugging-gw for overall cost-of-ownership reduction, help to optmise mesh. Fights inefficient gw usage & positioning.
 
 
 
