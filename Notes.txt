@@ -19606,15 +19606,24 @@ GW7 notes:
 
 ------------------------------------------------------
 
+Polite spectrum access timing parameters
+
 mactx.c: ccaSendLoop()
 macRadioGetUnitBackoffUs = 200us.
 
+deferral period = getRandomDelayMsec()
 
-Polite spectrum access timing parameters
+macGetCSMACAMaxDelayPeriods = (1 << MIN(3+numTrys, 8) )
+
+MAX_RADIO_PAYLOAD_SIZE(253) & mac.frame_size(253)
+SUN_PHY_FRAME_PHR_SIZE(2) + MAX_RADIO_PAYLOAD_SIZE(253) + preamble(2) + sync(2) + CRC(2)
+max= 2+253+2+2+2 = 261bytes max.
+min= 2+0+2+2+2 = 8bytes minimum
+
 
 Minimum CCA interval:                               5 ms  (checked)
-Minimum deferral period:                            5 ms
-Minimum unit of deferral period:                    0.2 ms
+Minimum deferral period:                            6 ms  (checked)
+Minimum unit of deferral period:                    1 ms (checked)
 Dead Time:                                          < 1 ms (checked)
 Minimum Transmission Duration Ton Max:              42 ms
 Maximum Transmission Duration Ton Maxi:             1260 ms
