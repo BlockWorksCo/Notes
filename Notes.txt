@@ -19606,12 +19606,14 @@ GW7 notes:
 
 ------------------------------------------------------
 
+mactx.c: ccaSendLoop()
+macRadioGetUnitBackoffUs = 200us.
 
 
 Polite spectrum access timing parameters
 
 Minimum CCA interval:                               5 ms  (checked)
-Minimum deferral period:                            1 ms
+Minimum deferral period:                            5 ms
 Minimum unit of deferral period:                    0.2 ms
 Dead Time:                                          < 1 ms (checked)
 Minimum Transmission Duration Ton Max:              42 ms
