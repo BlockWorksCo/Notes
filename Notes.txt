@@ -19642,8 +19642,8 @@ airtimeMax = (10 * 8 * 1000) / 50000 = 1.6ms
 OFF_PERIOD_MS = 100ms
 
 Minimum CCA interval:                               5 ms  (defined in code)
-Minimum deferral period:                            6 ms  (CCA period + mindeferral period)
-Minimum unit of deferral period:                    1 ms (defined in code effectively as MIN(1ms,200us) )
+Minimum deferral period:                            5.2 ms  (CCA period + mindeferral period)
+Minimum unit of deferral period:                    0.2 ms (defined in code effectively as MIN(1ms,200us) )
 Dead Time:                                          < 1 ms (no explicit delay, just execution time)
 Minimum Transmission Duration Ton Max:              1.6 ms (min size 10b packet @ 50Kb/s)
 Maximum Transmission Duration Ton Maxi:             42 ms (max size 263b packet @ 50Kb/s)
