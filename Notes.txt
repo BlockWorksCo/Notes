@@ -19604,8 +19604,20 @@ GW7 notes:
 - Optimising software power-usage would result in lower battery capacity requirement, could also involve a low-power-mesh "mode" to improve that significantly.
 - Debugging-gw for overall cost-of-ownership reduction, help to optmise mesh. Fights inefficient gw usage & positioning.
 
+------------------------------------------------------
 
 
+
+Polite spectrum access timing parameters
+
+Minimum CCA interval:                               5 ms
+Minimum deferral period:                            1 ms
+Minimum unit of deferral period:                    0.2 ms
+Dead Time:                                          < 1 ms
+Minimum Transmission Duration Ton Max:              42 ms
+Maximum Transmission Duration Ton Maxi:             1260 ms
+Max Tcum_on over 1 hour:                            DutyCycle=10%, therefore Tcum_on for 3600s = 360s.
+Minimum Toff_min on the same Operating Frequency:   101ms
 
 
 
