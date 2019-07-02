@@ -19608,12 +19608,28 @@ GW7 notes:
 
 Polite spectrum access timing parameters
 
+static uint32_t getRandomDelayMsec(int numPreviousTries)
+{
+    const int maxPeriods = 8
+    const int numPeriods = rnd16() % 8;
+    const int unitBackoffPeriodUs = 200us
+    const int delayus = numPeriods * 200us;
+
+    // Round down to milliseconds, but enforce a lower limit of 1 ms to
+    // satisfy RED compliance (ETSI EN 300 220-1 v3.1.1 section 5.21.3.1
+    // minimum deferral period).
+    const int delayms = MAX(1, delayus / 1000);
+
+    return delayms;
+}
+
+
 mactx.c: ccaSendLoop()
 macRadioGetUnitBackoffUs = 200us.
 
 deferral period = getRandomDelayMsec()
 
-macGetCSMACAMaxDelayPeriods = (1 << MIN(3+numTrys, 8) )
+macGetCSMACAMaxDelayPeriods = (1 << MIN(3+numTrys, 8) ) = 8
 
 MAX_RADIO_PAYLOAD_SIZE(253) & mac.frame_size(253)
 SUN_PHY_FRAME_PHR_SIZE(2) + MAX_RADIO_PAYLOAD_SIZE(253) + preamble(4) + sync(2) + CRC(2)
@@ -19623,15 +19639,16 @@ min= 2+0+4+2+2 = 10bytes minimum
 airtimeMax = (263 * 8 * 1000) / 50000 = 42ms.
 airtimeMax = (10 * 8 * 1000) / 50000 = 1.6ms
 
+OFF_PERIOD_MS = 100ms
 
-Minimum CCA interval:                               5 ms  (checked)
-Minimum deferral period:                            6 ms  (checked)
-Minimum unit of deferral period:                    1 ms (checked)
-Dead Time:                                          < 1 ms (checked)
-Minimum Transmission Duration Ton Max:              1.6 ms (checked)
-Maximum Transmission Duration Ton Maxi:             42 ms (checked)
-Max Tcum_on over 1 hour:                            360 sec (DutyCycle=10%) (checked)
-Minimum Toff_min on the same Operating Frequency:   101ms
+Minimum CCA interval:                               5 ms  (defined in code)
+Minimum deferral period:                            6 ms  (CCA period + mindeferral period)
+Minimum unit of deferral period:                    1 ms (defined in code effectively as MIN(1ms,200us) )
+Dead Time:                                          < 1 ms (no explicit delay, just execution time)
+Minimum Transmission Duration Ton Max:              1.6 ms (min size 10b packet @ 50Kb/s)
+Maximum Transmission Duration Ton Maxi:             42 ms (max size 263b packet @ 50Kb/s)
+Max Tcum_on over 1 hour:                            360 sec (DutyCycle=10%
+Minimum Toff_min on the same Operating Frequency:   105ms (dead time + min CCA time)
 
 
 
