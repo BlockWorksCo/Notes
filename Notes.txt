@@ -19670,6 +19670,11 @@ EDGE upload rate    = 0.1 MB/sec
 
 SMIP RLL-key breakdown.
 - First drop (show ability to change keys from command-line). Its existing functionality, so buys us an easy-win.
+- second drop (some UI functionality?)
+- third drop (hooking up of UI with agent to change keys).
+- forth drop (complete functionality?)
+
+
 -
 
 
