@@ -19658,22 +19658,10 @@ Gateway typical upstream/downstream thoughput for ~200 nodes:
 
 per-day upload = 400*12 = 5MByte/day
 
-2G upload rate =  0.1MB/sec
-EDGE upload rate =  0.3MB/sec
-3G upload rate =  0.3MB/sec
-3G upload rate =  0.3MB/sec
+EDGE upload rate    = 0.1 MB/sec
+3G upload rate      =  MB/sec
+4G upload rate      =  MB/sec
 
-
-
-2.75G/EDGE - 236Kbps
-Release 99/3G/UMTS - 384Kbps
-Release 4/HSPA - 2Mbps
-Release 5/HSDPA - 14.4 Mbps D/L, 384 Kbps U/L
-Release 6/HSUPA - 14.4 Mbps D/L, 5.76Mbps U/L
-Release 7/HSPA+ -42Mbps D/L, 11.5Mbps U/L
-Release 8/LTE - 173 Mbps D/L, 58Mbps U/L
-Release 9/ Better LTE- 326 Mbps D/L, 66Mbps U/L
-Release 10/LTE Advanced/ 4G- 1Gbps
 
 
 ----------------------------------------------------------------------
