@@ -19671,17 +19671,46 @@ https://www.4g.co.uk/how-fast-is-4g/
 
 SMIP RLL-key breakdown.
 - First drop (show ability to change keys from command-line). Its existing functionality, so buys us an easy-win.
-- second drop (some UI functionality?)
-- third drop (hooking up of UI with agent to change keys).
+- second drop (distribution of key-tables and generation of key-tables from UI)
+- third drop ().
 - forth drop (complete functionality?)
 
 
--
+-   Nodes will report their current key-table-hash on startup to the server.
+-   The server will, on detection of a mismatch in key-table configuration, send the current key-table configuration down to the node to update.
+-   Nodes will receive their key-table in the configuration protobuf.
+-   Server will treat the additional key-table field as a normal additional field for communication purposes.
+-   Server UI will hide the key-table field from the normal UI configuration mechanism.
+-   Server UI will provide ability to generate key-tables and preferred indexes.
+-   Server will maintain multiple (small number?) of key-tables to be inserted into configuration protobuf during selection of groups.
+-   Server will use the existing configuration job API to distribute the configuration.
+-   Key-table shall be stored securely in the configuration data by utilising a wrapped format.
+
+
+Agent changes required
+-   Agent needs to read a table of keys and a preferred key index from the CH instead of a single key. (Agent 3d when CH has support).
+-   The process of distribution of the key-table and the application pf a key-table shall be separate operations. Key-tables shall be identified by a hash (of their contents) in order to avoid application of inappropriate keys. Use of configuration to distribute key-table & preferred key. Key-table hash separate from configuration-hash (3d).
+-   Agent needs a timed activation of key-table to allow coordination of change-over (?).
+-   Agent needs to send event to C4 server on key-change operations (1d).
+-   Agent-side library integration API documentation (2d).
+-   CH code will need updates to support key-table, and we need new code to integrate with (2d integration time for new code drop from Tosh).
+
+
+
+Tickets:
+- Make a development setup for CommsHubs (as opposed to test).
+- Get new drop of CH code with key-table support.
+- Make configuration capable of taking large values (16-bit length).
+- definition of protobuf for key-table.
+- Add configuration-item for key-table, add mechanism from CoAP-request to set it.
+- Populate MAC-layer table from configuration at boot.
+- Add logging events for all key-table actions.
+- MAC level key changes.
 
 
 ---------------------------------------------
 
-CND-9426 1d743ffef238bcc4f62ade0fe3093522dc6170b4 (bad timestamp)
+CND-9426 1d743ffef238bcc4f62ade0fe3093522dc6170b4 (bad timesstamp)
 CND-9450 688239e5d4f5f914df6297e37dcbdf441dc8ecf1 (friendCom emulator)
 CND-9536 39d9133faeb511076927af4b74f5cd96882f6249 (future activate meter-upgrade)
 
