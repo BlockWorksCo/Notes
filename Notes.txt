@@ -19679,6 +19679,12 @@ SMIP RLL-key breakdown.
 -
 
 
+---------------------------------------------
+
+CND-9426 1d743ffef238bcc4f62ade0fe3093522dc6170b4 (bad timestamp)
+CND-9450 688239e5d4f5f914df6297e37dcbdf441dc8ecf1 (friendCom emulator)
+CND-9536 39d9133faeb511076927af4b74f5cd96882f6249 (future activate meter-upgrade)
+
 
 
 
