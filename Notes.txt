@@ -19653,16 +19653,17 @@ Minimum Toff_min on the same Operating Frequency:   105ms (dead time + min CCA t
 ----------------------------------------------------------------------
 
 Gateway typical upstream/downstream thoughput for ~200 nodes:
-- modem-tx-bytes = ~400KB/hour
-- modem-rx-bytes = ~67KB/hour
+- modem-tx-bytes = ~400KB/hour  = 2KB/hour/node
+- modem-rx-bytes = ~67KB/hour   = 0.4KB/hour/node
 
 per-day upload = 400*12 = 5MByte/day
 
-EDGE upload rate    = 0.1 MB/sec
-3G upload rate      =  MB/sec
-4G upload rate      =  MB/sec
+typical rates:
+2G upload rate      = 0.02 Mb/sec   = 2.5KB/sec = 9000 KB/hour      = 4500 nodes
+3G upload rate      = 0.4 Mb/sec    = 5KB/sec   = 18000 KB/hour     = 9000 nodes
+4G upload rate      = 10 Mb/sec     = 1MB/sec   = 360000 KB/hour    = 180000 nodes
 
-
+https://www.4g.co.uk/how-fast-is-4g/
 
 ----------------------------------------------------------------------
 
