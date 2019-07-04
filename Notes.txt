@@ -19708,6 +19708,13 @@ Tickets:
 - Per-node framecounter into device table.
 
 
+
+- cndkeystore used by DTLS and mac-security.
+- only used on CONFIG_SMIP
+- remove cndkeystore, store keys in config.
+- add ability for config to store large BLOBs (NIC7,IPA).
+- on SMIP, config of keys is intercepted and rerouted to CH callbacks.
+
 ---------------------------------------------
 
 CND-9426 1d743ffef238bcc4f62ade0fe3093522dc6170b4 (bad timesstamp)
