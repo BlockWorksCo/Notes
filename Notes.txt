@@ -19705,7 +19705,7 @@ Tickets:
 - Add configuration-item for key-table, add mechanism from CoAP-request to set it.
 - Populate MAC-layer table from configuration at boot.
 - Add logging events for all key-table actions.
-- MAC level key changes.
+- Per-node framecounter
 
 
 ---------------------------------------------
