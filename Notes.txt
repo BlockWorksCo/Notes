@@ -19814,6 +19814,16 @@ fwVersion: 06010066   (old)
  2187  git cherry-pick f3aa469
 
 
+----------------------------------------
+
+MBus risk
+- autoscaling scalers.
+- choice of unit(s) for energy/power
+- choice of unit(s) for volume/flow.
+
+possibly add scalers (if dynamic) into fixed format.
+
+
 
 
 
