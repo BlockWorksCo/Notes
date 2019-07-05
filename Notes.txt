@@ -19740,21 +19740,13 @@ CND-9449 AGENT: Hard fault in production mode
 git log --pretty=oneline --abbrev-commit --no-merges > t
 diff -y t ../terminalMaster/t
 
-f3aa469 CND-9506 New Kaifa meter firmware fails to produce a    | 7f7dae9 CND-9514 Fixups for nic7b kaifa build
-688239e CND-9450 : Friendcom - Real Node with Meter emulator    | 912f628 CND-9514 build targets for IPA3B with (single LED + 8
-4c973e0 CND-9436 Get tz/deviation working on Kaifa              | 739827d CND-9498 NIC7 Phase 1: Create nic7 build targets and
-3a7221d Revert "CND-9515 Fix incorrect channel plan 7 definit   | c5ca6c5 CND-9457 Added debug text
-39d9133 future firmware activation time support. Meter firmwa   | 86ca5d6 CND-9457 Kaifa timezone inversion fixups for branch
-0aff416 CND-9514 Fixups for nic7b kaifa build                   | 2dd7fc7 CND-9457 Kaifa - rtc sync inversion and DLMS SET supp
-83637b4 CND-9515 Fix incorrect channel plan 7 definition Chan   | 06ac81c CND-9457 Kaifa RTC tz offset inversion
-f3aa469 CND-9506 New Kaifa meter firmware fails to produce a    | 7f7dae9 CND-9514 Fixups for nic7b kaifa build
-688239e CND-9450 : Friendcom - Real Node with Meter emulator    | 912f628 CND-9514 build targets for IPA3B with (single LED + 8
-4c973e0 CND-9436 Get tz/deviation working on Kaifa              | 739827d CND-9498 NIC7 Phase 1: Create nic7 build targets and
-3a7221d Revert "CND-9515 Fix incorrect channel plan 7 definit   | c5ca6c5 CND-9457 Added debug text
-39d9133 future firmware activation time support. Meter firmwa   | 86ca5d6 CND-9457 Kaifa timezone inversion fixups for branch
-0aff416 CND-9514 Fixups for nic7b kaifa build                   | 2dd7fc7 CND-9457 Kaifa - rtc sync inversion and DLMS SET supp
-83637b4 CND-9515 Fix incorrect channel plan 7 definition Chan   | 06ac81c CND-9457 Kaifa RTC tz offset inversion
-
+f3aa469 CND-9506 New Kaifa meter firmware fails to produce a    | Need this.
+688239e CND-9450 : Friendcom - Real Node with Meter emulator    |
+4c973e0 CND-9436 Get tz/deviation working on Kaifa              | Need this.
+3a7221d Revert "CND-9515 Fix incorrect channel plan 7 definit   |
+39d9133 future firmware activation time support. Meter firmwa   |
+0aff416 CND-9514 Fixups for nic7b kaifa build                   |
+83637b4 CND-9515 Fix incorrect channel plan 7 definition Chan   |
 Oe3399ff CND-9514 build targets for IPA3B with (single LED + 8  <
 30e3c77 CND-9504 Create ipa3b LNT build targets                 <
 692ced2 CND-9498 NIC7 Phase 1: Create nic7 build targets and    <
