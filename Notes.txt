@@ -19795,6 +19795,12 @@ f704fac CND-8770: remove empty buffer messages from WARNING l   <
 
 
 
+fwVersion: 12110403   (new)
+fwVersion: 06010066   (old)
+06010003
+12110406
+06010002
+
 
 
 
