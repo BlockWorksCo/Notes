@@ -19740,9 +19740,9 @@ CND-9449 AGENT: Hard fault in production mode
 git log --pretty=oneline --abbrev-commit --no-merges > t
 diff -y t ../terminalMaster/t
 
-f3aa469 CND-9506 New Kaifa meter firmware fails to produce a    | Need this.
+f3aa469 CND-9506 New Kaifa meter firmware fails to produce a    | Need this. x
 688239e CND-9450 : Friendcom - Real Node with Meter emulator    |
-4c973e0 CND-9436 Get tz/deviation working on Kaifa              | Need this.
+4c973e0 CND-9436 Get tz/deviation working on Kaifa              | Need this. x
 3a7221d Revert "CND-9515 Fix incorrect channel plan 7 definit   |
 39d9133 future firmware activation time support. Meter firmwa   |
 0aff416 CND-9514 Fixups for nic7b kaifa build                   |
@@ -19750,10 +19750,10 @@ f3aa469 CND-9506 New Kaifa meter firmware fails to produce a    | Need this.
 Oe3399ff CND-9514 build targets for IPA3B with (single LED + 8  <
 30e3c77 CND-9504 Create ipa3b LNT build targets                 <
 692ced2 CND-9498 NIC7 Phase 1: Create nic7 build targets and    <
-c07c9c8 CND-9457 Kaifa RTC tz offset inversion                  < Need this.
+c07c9c8 CND-9457 Kaifa RTC tz offset inversion                  < Need this. x
 a6d77b7 CND-9237, CND-8786 deadlock in mac_rx                   <
 d0acd02 CND-9444 Enable overriding TX frequency in EFR          <
-e70887b CND-9457 Kaifa - rtc sync inversion and DLMS SET supp   < Need this.
+e70887b CND-9457 Kaifa - rtc sync inversion and DLMS SET supp   < Need this. x
 07194f2 CND-9449 AGENT: Hard fault in production mode           <
 1094917 CND-8977 duty cycle supports decimal values             <
 daf1285 CND-9426 ignore sample with bad time stamp              <
@@ -19765,7 +19765,7 @@ d2d1919 CND-9414 Make L&T builds default time_update to off     <
 a84a45e CND-9264 DLMS timeouts on large multi-part responses    <
 2ed5475 GW batery management remove modem driver power off to   <
 3556e03 GW batery management [CND-9346] : fix report event wh   <
-cde81c3 CND-9408 TimeSync is being called every 60s             < Need this.
+cde81c3 CND-9408 TimeSync is being called every 60s             < Need this. x
 a6a1445 GW battery management [CND-9347] fix - disable ethern   <
 179bf1b CND-9410 setAlarmsFilter on L&T needs length field ch   <
 5ceb724 CND-9400 Fix possible missing sample cause by CND-802   <
