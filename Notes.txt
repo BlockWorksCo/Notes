@@ -19825,6 +19825,12 @@ possibly add scalers (if dynamic) into fixed format.
 
 
 
+--------------------------------
+
+downlink:
+- plug omnibox into downlink port
+- can ping from server->omnibox and omnibox->server. ICMP pings ok.
+- can use "nc -6lu"
 
 
 
