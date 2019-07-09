@@ -19832,7 +19832,93 @@ downlink:
 - can ping from server->omnibox and omnibox->server. ICMP pings ok.
 - can use "nc -6lu"
 
+TCP also works for nc, but not for telnet.
+
+----------------------------------------------------------
+SMIP
+
+https://confluence.cyco.io/display/SMIP/SMIP+tools
+
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 --get-connode-settings --slot 8
+
+
+b=01000000
+monitor.profile.network.sample.interval           : int=120       , string=x                                    , blob=78000000
+monitor.profile.radio.enabled                     : int=1         , string=
+                                    , blob=01000000
+monitor.profile.radio.sample.interval             : int=120       , string=x                                    , blob=78000000
+prod.alias.id                                     : int=None      , string=88-73-84-53-00-00-08-48                 , blob=38382d37332d38342d35332d30302d30302d30382d3438
+prod.hw.version                                   : int=None      , string=B3PRIME_SKU3                           , blob=42335052494d455f534b553300
+prod.lowpan.eui64                                 : int=None      , string=8a-73-84-53-00-00-08-48                 , blob=38612d37332d38342d35332d30302d30302d30382d3438
+server.ip                                         : int=None      , string=2001:9b0:192:8::115                    , blob=323030313a3962303a3139323a383a3a31313500
+server.mesh.token.timeout                         : int=1083      , string=;                                    , blob=3b040000
+server.mq.push_delay                              : int=527       , string=                                    , blob=0f020000
+time.max.diff                                     : int=55        , string=7                                    , blob=37000000
+time.mesh.period                                  : int=1269      , string=None                                    , blob=f5040000
+time.ref.period                                   : int=25409     , string=Ac                                    , blob=41630000
+time.ref.rtt.max                                  : int=55        , string=7                                    , blob=37000000
 
 
 
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM0 --set-setting connode_settings server.ip 2001:db8:1::8
+
+--> AT
+
+OK
+--> ATE1
+
+OK
+--> AT#PORTCFG?
+AT#PORTCFG?
+#PORTCFG: 8,8
+
+OK
+--> AT#PORTCFG=8
+AT#PORTCFG=8
+OK
+--> AT+GMR
+AT+GMR
+12.00.926-B054
+
+OK
+--> AT#M2MCHDIR="/fileservice/database/slot8"
+AT#M2MCHDIR="/fileservice/database/slot8"
+OK
+--> AT#M2MLIST
+Warning: Starting with clean database
+Setting string server.ip=2001:db8:1::8 in connode_settings
+--> AT#M2MCHDIR?
+
+#M2MLIST: <.>
+#M2MLIST: <..>
+#M2MLIST: "slot8.slt",22560
+#M2MLIST: free bytes: 28567552
+
+OK
+AT#M2MCHDIR?
+#M2MCHDIR: "/fileservice/database/slot8"
+
+OK
+--> AT#M2MCHDIR="/fileservice/database/slot8"
+AT#M2MCHDIR="/fileservice/database/slot8"
+OK
+--> AT#M2MWRITE="slot8.slt",3104,0
+AT#M2MWRITE="slot8.slt",3104,0
+.
+File of size 3104 written, waiting for modem to confirm with OK...
+>>>
+OK
+--> AT#M2MCHDIR="/fileservice/database/slot8"
+AT#M2MCHDIR="/fileservice/database/slot8"
+OK
+
+
+
+
+
+
+
+./tools/c4-tools/upload_smip.py -p ${DEV} --set-setting connode_settings server.ip 2001:9b0:192:8::115 --set-setting connode_settings dtls.heartbeat.period.s 60 --set-setting connode_settings time.ref.period 60 --set-setting connode_settings rpl.instance_id 46
+
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 --reboot0
 
