@@ -19925,3 +19925,7 @@ OK
 
 ./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 --reboot0
 
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 -r m2mapz.bin
+
+AT+M2M=1
+
