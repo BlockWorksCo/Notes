@@ -19834,6 +19834,9 @@ downlink:
 
 TCP also works for nc, but not for telnet.
 
+
+telnetd needs to be installed for IPv6, but DOES work.
+
 ----------------------------------------------------------
 SMIP
 
