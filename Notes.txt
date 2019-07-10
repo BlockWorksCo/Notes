@@ -19939,6 +19939,19 @@ contained in:
 
 
 
+---------------------------------------
+
+debug rate:
+start = 9:19:55
+end   = 10:29:04
+is 1h 9m 9s = 3600+(9*60)+9 = 4149sec
+
+cat t | awk '{ print length($0)-72;total+=(length($0)-72);count++ } END {print "average=" total/count "total=" total}'
+
+average bytes per debug line (without 72 bytes of metadata) is: 64.3
+total debug in 4149s is 3164300 bytes.
+debug text rate is: (64.3 * 4149)
+
 
 
 
