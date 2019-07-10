@@ -19929,3 +19929,18 @@ OK
 
 AT+M2M=1
 
+-----------------------------------------
+
+DTLS error -313 FATAL_ERROR
+
+contained in:
+3pp/wolfssl/src/wolfssl/error-ssl.h
+
+
+
+
+
+
+
+
+
