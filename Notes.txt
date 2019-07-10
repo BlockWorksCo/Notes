@@ -19950,7 +19950,7 @@ cat t | awk '{ print length($0)-72;total+=(length($0)-72);count++ } END {print "
 
 average bytes per debug line (without 72 bytes of metadata) is: 64.3
 total debug in 4149s is 3164300 bytes.
-debug text rate is: (64.3 * 4149)
+debug text rate is: (3164300 / 4149) = 762 bytes/sec
 
 
 
