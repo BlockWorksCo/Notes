@@ -20003,6 +20003,20 @@ INFO:prodpak:Creating production package ProdPak1K_b.prodpak.tbz2
 INFO:order:Found 1000 EUI-64s in the range 00-1B-C5-0C-60-06-73-D1 to 00-1B-C5-0C-60-06-77-B8
 INFO:prodpak:Finished creating ProdPak1K_b.prodpak.tbz2
 
+----------------------------------------
+
+SMIP estimates:
+- SMIPDEV-61: 4d
+- SMIPDEV-56, testing method:3d
+- SMIPDEV-55, remove old CoAP API: 1d
+- SMIPDEV-54, hash of key-table: 3d
+- SMIPDEV-53: frameCounter per device: 5d
+- SMIPDEV-52: events for key-table events: 2d
+- SMIPDEV-51: configured key-table into mac-security: 3d
+- CND-9565: 1d
+- SMIPDEV-50: new drop of code: 2d
+- SMIPDEV-49: SMIP dev setup: 4d
+-
 
 
 
