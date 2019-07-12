@@ -19969,6 +19969,7 @@ Power          : C = 8
 Flow rate      : C = 9
 Inlet Flow temp: C = 10
 Outlet temp    : C = 11
+country-specific:C = 94
 
 for heating systems, flow == inlet, return == outlet.
 current value  : D = 0
@@ -19976,10 +19977,18 @@ instantaneous  : D = 7
 current avg    : D = 10
 last avg       : D = 11
 
-So:
+if C==04, D = country calling code (46 for sweden).
 
-heating,Energy,currentvalue
 
+field E is typically used for tariff identifier, i.e. rate 1 == E of 1.
+When not needed, E == 0
+
+F is typically for identification of billing-period, so we're not using it so F == 0
+
+So for example:
+
+heating,Energy,currentvalue : 5.128.1.0.0.255
+heating,Flowrate,currentvalue : 5.128.9.0.0.255
 
 
 
