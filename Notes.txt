@@ -20016,7 +20016,11 @@ SMIP estimates:
 - CND-9565: 1d
 - SMIPDEV-50: new drop of code: 2d
 - SMIPDEV-49: SMIP dev setup: 4d
--
+- SMIPDEV-49: use of keys by MAC layer: 3d
+- SMIPDEV-63: key restriction conditions: 1d
+- SMIPDEV-64: single-key fallback: 1d
+- SMIPDEV-65: removal of change API for RLL key: 1d
+total: 34d
 
 
 
