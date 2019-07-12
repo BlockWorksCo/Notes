@@ -19953,6 +19953,37 @@ total debug in 4149s is 3164300 bytes.
 debug text rate is: (3164300 / 4149) = 762 bytes/sec
 
 
+------------------------------------------------------
+
+OBIS codes for MBus (From Blue Book).
+
+Thermal Energy : A==5 or A==6
+Energy         : C = 1
+Volume         : C = 2
+Power          : C = 8
+Flow rate      : C = 9
+Inlet Flow temp: C = 10
+Outlet temp    : C = 11
+
+for heating systems, flow == inlet, return == outlet.
+
+no channel     : B == 0
+Channel 1->64  : B == 1..64
+Mfg specific   : 128..199
+
+current value  : D = 0
+instantaneous  : D = 7
+current avg    : D = 10
+last avg       : D = 11
+
+So:
+
+Energy
+
+
+
+
+
 
 
 
