@@ -20023,6 +20023,21 @@ SMIP estimates:
 total: 34d
 
 
+----------------------------------------------------
+
+GW7:
+- Based on GW200.
+- Software-wise, no change other than already-planned NIC7 modifications (i.e. LED & FLASH removal).
+
+GW7-high-density:
+- Primary node based on GW200.
+- Secondary node based on GW200.
+- Software additions for communication using SLIP across UART (4 weeks?) (SLIP/Mesh bridge mode).
+- Software addition for 'slave' mode that can use SLIP interface as uplink (2 weeks?).
+
+GW7-satellite:
+- Based on IPA3b with no meter-driver.
+- No additional s/w effort, would work out-of-box.
 
 
 
