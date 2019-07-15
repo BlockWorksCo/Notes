@@ -20052,6 +20052,32 @@ GW7-satellite:
 -------------------------------------------------------
 
 
+Reimplement:
+CND-7896: Track and report unknown key indexes
+CND-6233: Remove PacketSecurity from MAC code
+CND-6233: Decrypt frame with Key Identifier Mode 1
+CND-7896: Filter IPv6 packets if restricted.
+CND-6233: Support multiple MAC keys in cndkeystore
+CND-7902: Re-encode RllKeyMessage before storing
+- CND-6233: Add /rll-key CoAP resource
+
+Also:
+Set pathControl in RPL Target Option As required by RFC6550 9.9 point 3
+CND-5295: IEEE 802.15.4-2015 frame parsing
+CND-5295: Simplify code for encoding ACKs
+Support loading keys from the command line in coap_request.py
+Add MAC fuzz call to coap_request.py
+Actually parse the FuzzMacMessage message Oops.
+Do no set PAN ID compression bit on ACKs
+Ignore NULL packets in EFR32 driver
+CND-6576: Fix for Set/Action Response Processing
+Parse Metric Container properly in DIO
+Properly iterate RPL packets during decode
+
+
+
+
+
 
 
 
