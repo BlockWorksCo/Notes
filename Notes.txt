@@ -20051,17 +20051,46 @@ GW7-satellite:
 
 -------------------------------------------------------
 
+ Merge changes from topic 'rll-key'
 
-Reimplement:
+ * changes:
+   CND-6233: Simplify macSecuritySetKey()
+   CND-6233: Evict broadcast MAC device entries first
+   CND-6233: Support rll-key in coap_request.py
+   CND-6233: Generate event when RLL keys are stored
+   CND-6233: Support multiple MAC keys in cndkeystore
+   CND-6233: Support multiple keys in -mackey option
+   CND-6233: Include key index in net/topology
+   CND-6233: Read keys from storage during init
+   CND-6233: Write keys to storage when set
+   CND-6233: Remove mac-key slot from prod/keyfile
+   CND-6233: Add /rll-key CoAP resource
+   CND-6233: Use unicast DIO when key mismatch
+   CND-6233: Pass packetinfo by reference in RPL core
+   CND-6233: Propagate if preferred MAC key was used
+   CND-6233: Remove macSecurityLevel from packetInfo
+   CND-6233: TX packets with key for neighbor
+   CND-6233: Keep track of MAC keyIndex of peers
+   CND-6233: Decrypt frame with Key Identifier Mode 1
+   CND-6233: Expose mutex with macDeviceTableUnlock()
+   CND-6233: Remove PacketSecurity from MAC code
+   CND-6233: Simplify ACK sending
+   CND-6233: Simplify ASSERT in mac_tx encodeFrame()
+   CND-6233: Improve 802.15.4 frame macros
+
+
+
+
+
+Also:
 CND-7896: Track and report unknown key indexes
 CND-6233: Remove PacketSecurity from MAC code
 CND-6233: Decrypt frame with Key Identifier Mode 1
 CND-7896: Filter IPv6 packets if restricted.
 CND-6233: Support multiple MAC keys in cndkeystore
 CND-7902: Re-encode RllKeyMessage before storing
+CND-6233: Expose mutex with macDeviceTableUnlock()
 - CND-6233: Add /rll-key CoAP resource
-
-Also:
 Set pathControl in RPL Target Option As required by RFC6550 9.9 point 3
 CND-5295: IEEE 802.15.4-2015 frame parsing
 CND-5295: Simplify code for encoding ACKs
@@ -20073,6 +20102,47 @@ Ignore NULL packets in EFR32 driver
 CND-6576: Fix for Set/Action Response Processing
 Parse Metric Container properly in DIO
 Properly iterate RPL packets during decode
+Properly handle PAD1 RPL option
+Cleanup in RPL msg parsing code
+Improve rpl_msg unittest
+Keep track of DAO/DAO-ACK optional DODAGID
+Don't include DODAGID in DAO-ACK
+Improve RPL length checking
+Log less when failing to decrypt a radio frame
+Fix minor memory leak
+CND-6543: Make frame counter for aes encryption to survive node restart
+Use WPC (India) compliant channel plan on 865-867 MHz band
+Add 433 MHz configuration for EFR32 (IPA3)
+Fix int-in-bool-context warning from new GCC
+CND-6836: Update WolfSSL to 3.12.0
+Mark all proto files proto2
+CND-6233: Improve 802.15.4 frame macros
+CND-6233: Simplify ASSERT in mac_tx encodeFrame()
+CND-6233: Simplify ACK sending
+CND-6233: Remove PacketSecurity from MAC code
+CND-6233: Expose mutex with macDeviceTableUnlock()
+CND-6233: TX packets with key for neighbor
+CND-6233: Remove macSecurityLevel from packetInfo
+CND-6233: Propagate if preferred MAC key was used
+CND-6233: Pass packetinfo by reference in RPL core
+CND-6233: Use unicast DIO when key mismatch
+CND-6233: Read keys from storage during init
+CND-6233: Include key index in net/topology
+CND-6233: Support multiple MAC keys in cndkeystore
+CND-6233: Generate event when RLL keys are stored
+CND-6233: Evict broadcast MAC device entries first
+CND-6233: Simplify macSecuritySetKey()
+
+
+
+
+
+
+
+
+
+
+
 
 
 
