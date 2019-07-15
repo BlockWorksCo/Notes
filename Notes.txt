@@ -20168,9 +20168,6 @@ Add dutycycle metric
 CND-6871: Cosmetic refactoring in CC1200 driver
 CND-6871: Noise metric implementation for CC1200
 Log less when transmitting frames over radio
-
->> Tue Sep 19 10:34:11 2017 +0200
-
 CND-6547: tun6 failover for Ethernet & Cellular
 Remove arraySize from DISPATCH_ADD
 Remove ipHaveRouteTo()
@@ -20211,6 +20208,26 @@ CND-7902: Re-encode RllKeyMessage before storing
 CND-7994: Plug memory leak in PUT /rll-key
 CND-8093: Check link after reset in DHCPv6 client
 CND-8166: Disable support for PEM certificates
+CND-8166: Disable support for AES-192 and AES-256
+CND-7896: Support restricted flag in file for host
+CND-7896: Include indexes in RLL keyChange event
+CND-7896: Filter IPv6 packets if restricted
+CND-7896: RLL restricted keys restriction in RPL
+CND-7896: Track and report unknown key indexes
+Fix minor race in GW rank inflation
+Handle reset of rpl.netsize_penalty
+CND-8621 fuzzable needs to build for smip
+CND-8718: support new European 870 channel
+CND-8740 Support additional European 870 Modes
+CND-8408: Increase uplink grace period to 15 min
+CND-7465: Feed watchdog once during CSR generation
+CND-8978 All channel plans start from channel 0 except WPCIndia
+CND-8979 Codification of new channel plan
+CND-8977 duty cycle supports decimal values
+CND-9237, CND-8786 deadlock in mac_rx
+
+
+
 
 
 
