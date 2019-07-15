@@ -20241,6 +20241,42 @@ m2mb_os_isrCtrl() < interrupt enable/disable.
 m2m_os_lock_info(M2M_T_OS_LOCK lock, INT32* sem_count,  INT32* count_suspended);
 M2M_API M2M_API_RESULT m2m_os_mtx_info(M2M_T_OS_MTX mtx, INT32* mtx_count,  INT32* count_suspended);
 
+m2mb_spi_ioctl( INT32 fd, INT32 request, ... );
+
+
+-------------------------------------------
+
+SMIP backport of MAC key table onto v98:
+
+modified:   config/smip.mk
+modified:   src/communication/cndkeystore/cndkeystore.c
+modified:   src/communication/cndkeystore/cndkeystore.h
+modified:   src/communication/conman/conman.c
+modified:   src/communication/lowpan/lowpan_tx.c
+modified:   src/communication/mac/802_15_4.h
+modified:   src/communication/mac/Makefile
+modified:   src/communication/mac/mac.c
+modified:   src/communication/mac/mac.h
+modified:   src/communication/mac/mac_device_table.c
+modified:   src/communication/mac/mac_device_table.h
+modified:   src/communication/mac/mac_dutycycle.c
+deleted:    src/communication/mac/mac_encode.c
+deleted:    src/communication/mac/mac_encode.h
+modified:   src/communication/mac/mac_radio.c
+modified:   src/communication/mac/mac_radio.h
+modified:   src/communication/mac/mac_rx.c
+modified:   src/communication/mac/mac_rx.h
+modified:   src/communication/mac/mac_security.c
+modified:   src/communication/mac/mac_security.h
+modified:   src/communication/mac/mac_tx.c
+modified:   src/communication/mac/mac_tx.h
+modified:   src/communication/radiotest/radiotest.c
+modified:   src/communication/types.h
+modified:   src/config/events_config_types.xml
+modified:   src/connode/cndkeystore.h
+modified:   src/platform/osal/osal-smip/osal_smip.c
+modified:   src/platform/osal/osal.h
+modified:   tools/buildsys/config-directives.mk
 
 
 
