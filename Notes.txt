@@ -20022,6 +20022,15 @@ SMIP estimates:
 - SMIPDEV-65: removal of change API for RLL key: 1d
 total: 34d
 
+Reimplement:
+CND-7896: Track and report unknown key indexes
+CND-6233: Remove PacketSecurity from MAC code
+CND-6233: Decrypt frame with Key Identifier Mode 1
+CND-7896: Filter IPv6 packets if restricted.
+CND-6233: Support multiple MAC keys in cndkeystore
+CND-7902: Re-encode RllKeyMessage before storing
+- CND-6233: Add /rll-key CoAP resource
+
 
 ----------------------------------------------------
 
@@ -20038,6 +20047,9 @@ GW7-high-density:
 GW7-satellite:
 - Based on IPA3b with no meter-driver.
 - No additional s/w effort, would work out-of-box.
+
+
+-------------------------------------------------------
 
 
 
