@@ -20079,6 +20079,35 @@ GW7-satellite:
    CND-6233: Improve 802.15.4 frame macros
 
 
+Merge changes from topic 'e2e-dao'
+
+* changes:
+  CND-5678: Make autochannel work better with end-to-end DAO-ACKs
+  CND-5678: Check retvalue before changing DAG
+  CND-5678: Send less DIS messages when not in a hurry to join
+  Python 3.5 support in inttest.py scripts
+  Simulation scenario for overfull network
+  CND-5678: Unit tests for DAO-ACKs
+  CND-5678: Update via if we get a DAO with same seq
+  CND-5678: Include DAG penalty when considering to swith DAG
+  CND-5678: Add penalty for bad DAGs, cool-off time before retry
+  CND-5678: Send error status in DAO-ACKs
+  CND-5678: Remove the delay before logging in if using E2E DAO-ACK
+  CND-5678: Deferred DAO-ACKs, forward DAO information immediately
+  CND-5678: Keep track of in-flight DAOs awaiting DAO-ACK
+  CND-5678: Update and spell fix RPL documentation
+  CND-5678: Config param to limit route list size
+  CND-5678: Refactor RPL code (mostly DAO)
+  CND-5678: Break out DAO code
+
+Merge changes from topic 'restricted_rll_keys'
+
+* changes:
+  CND-7896: Move multiple UDP defines to single .h
+  CND-7995: Use correct proto for GET /rll-key
+  CND-7994: Plug memory leak in PUT /rll-key
+  CND-7902: Re-encode RllKeyMessage before storing
+  CND-7987: Extract keyIndex properly from MAC frame
 
 
 
@@ -20132,6 +20161,68 @@ CND-6233: Support multiple MAC keys in cndkeystore
 CND-6233: Generate event when RLL keys are stored
 CND-6233: Evict broadcast MAC device entries first
 CND-6233: Simplify macSecuritySetKey()
+CND-6964: Ensure strings end with a null terminator
+CND-7024: Don't create rll-key event in prodmode
+Add dutycycle metric
+- Remove the deprecated config parameter lowpan.frequency
+CND-6871: Cosmetic refactoring in CC1200 driver
+CND-6871: Noise metric implementation for CC1200
+Log less when transmitting frames over radio
+
+>> Tue Sep 19 10:34:11 2017 +0200
+
+CND-6547: tun6 failover for Ethernet & Cellular
+Remove arraySize from DISPATCH_ADD
+Remove ipHaveRouteTo()
+CND-7518: Fix deadlock when switching to MeshOnly
+Remove faulty ASSERT in uplink_tun6_failover
+Don't send RA with unspecified src address
+CND-6547: Log tun6 state changes
+CND-6547: Restart IPv4 interface if tun6 fails
+CND-7606: Add a 100 ms off-period after transmitting
+Do not log broadcast packets we fail to decrypt
+CND-7684 Reset tun6 badLinkCount on interface up
+Consider UPLINK_GRACETIME in conmanIsConnected()
+Differentiate between DNS timeout and not found
+Rename tun6 failures to helloFailures
+Remove unused variable in mac_radio.c
+CND-7729: Timeout network registration properly
+CND-5678: Document more in RPL route list code
+CND-5678: Remove config options for RPL min hop rank increase
+Send unicast DIS to neighbor that is about to time out
+CND-5678: Break out DAO code
+CND-5678: Refactor RPL code (mostly DAO)
+CND-5678: Config param to limit route list size
+CND-5678: Config param to limit route list size
+CND-5678: Keep track of in-flight DAOs awaiting DAO-ACK
+CND-5678: Deferred DAO-ACKs, forward DAO information immediately
+CND-5678: Send error status in DAO-ACKs
+CND-5678: Add penalty for bad DAGs, cool-off time before retry
+CND-5678: Include DAG penalty when considering to swith DAG
+CND-5678: Update via if we get a DAO with same seq
+CND-5678: Unit tests for DAO-ACKs
+CND-5678: Send less DIS messages when not in a hurry to join
+CND-5678: Check retvalue before changing DAG
+CND-5678: Make autochannel work better with end-to-end DAO-ACKs
+CND-5334: Gateway rank penalty based on down-routes
+CND-7681: Add RPL HopCount change callback
+CND-7987: Extract keyIndex properly from MAC frame
+CND-7902: Re-encode RllKeyMessage before storing
+CND-7994: Plug memory leak in PUT /rll-key
+CND-8093: Check link after reset in DHCPv6 client
+CND-8166: Disable support for PEM certificates
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
