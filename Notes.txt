@@ -20227,6 +20227,20 @@ CND-8977 duty cycle supports decimal values
 CND-9237, CND-8786 deadlock in mac_rx
 
 
+--------------------------------------------------------
+
+SMIP:
+
+m2mb_os.h:
+
+m2mb_os_getSysTicks()
+m2mb_os_setSysTicks()
+m2mb_os_getSysTickDuration_ms();
+m2mb_os_isrCtrl() < interrupt enable/disable.
+
+m2m_os_lock_info(M2M_T_OS_LOCK lock, INT32* sem_count,  INT32* count_suspended);
+M2M_API M2M_API_RESULT m2m_os_mtx_info(M2M_T_OS_MTX mtx, INT32* mtx_count,  INT32* count_suspended);
+
 
 
 
