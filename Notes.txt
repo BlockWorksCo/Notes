@@ -20289,6 +20289,7 @@ Gateway to node ratio:
 - Reduce contention by TDMA-like scheme between nodes. Makes more efficient use of medium. This
 could be as simple as an appliction-level protocol to send data on a schedule (determined by
 gateway).
+- Multiple CC1200 tranceivers per processor? would this be cheaper? (more s/w cost, less h/w cost).
 
 
 
