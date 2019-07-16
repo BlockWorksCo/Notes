@@ -20281,6 +20281,14 @@ modified:   tools/buildsys/config-directives.mk
 
 
 
+------------------------------------------------------------
+
+Gateway to node ratio:
+- Dual/triple node gateway for high density areas.
+- Satellite node gateways for normal-density areas.
+- Reduce contention by TDMA-like scheme between nodes. Makes more efficient use of medium. This
+could be as simple as an appliction-level protocol to send data on a schedule (determined by
+gateway).
 
 
 
