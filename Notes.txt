@@ -20312,6 +20312,11 @@ Can application coalesce packets?
 - All the above.
 
 
+-----------------------------------------------
+
+https://www.kalkitech.com/products/syncnet/
+
+
 
 
 
