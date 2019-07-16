@@ -20293,6 +20293,9 @@ gateway).
 - Better transmit power management to reuce contention.
 - range and density is a question to be asked? no point having high-density gateways when we
 need support over more area.
+- Is 'average hops' a good 'stariness' metric for a nmesh?
+- Use mesh-simulator for large nodes? can we get that to work?
+
 
 
 
@@ -20304,6 +20307,8 @@ Solutions:
 - Don't shout so loudly (better transmit power-managent).
 - Don't shout at the same time (scheduled transmissions).
 - Have physical separation via the satellite or in-meter-satellite gateways.
+- Make the mesh more 'bursty' with larger packets, to take advantage of the LBT dead-time?
+Can application coalesce packets?
 - All the above.
 
 
