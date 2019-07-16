@@ -20290,6 +20290,21 @@ Gateway to node ratio:
 could be as simple as an appliction-level protocol to send data on a schedule (determined by
 gateway).
 - Multiple CC1200 tranceivers per processor? would this be cheaper? (more s/w cost, less h/w cost).
+- Better transmit power management to reuce contention.
+- range and density is a question to be asked? no point having high-density gateways when we
+need support over more area.
+
+
+
+Problem:
+Root node is the bottleneck for radio:
+
+Solutions:
+- Have multiple roots (i.e. multiple nodes on multiple channels).
+- Don't shout so loudly (better transmit power-managent).
+- Don't shout at the same time (scheduled transmissions).
+- Have physical separation via the satellite or in-meter-satellite gateways.
+- All the above.
 
 
 
