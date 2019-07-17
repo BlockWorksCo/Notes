@@ -20326,7 +20326,7 @@ openssl ecparam -out key.pem -name prime256v1 -genkey
 openssl req -new -sha256 -key key.pem -out server.csr
 openssl x509 -req -sha256 -days 365 -in server.csr -signkey key.pem -out cert.pem
 
-server: 
+server:
 openssl s_server -dtls1_2 -cert cert.pem -key key.pem -accept 4444
 
 client:
@@ -20345,6 +20345,23 @@ openssl req -new -sha256 -key key.pem -out server.csr
 openssl x509 -req -sha256 -days 365 -in server.csr -signkey key.pem -out cert.pem
 
 
+
+--------------------------------------------------------
+
+
+--> AT#M2MREAD="slot8.slt"
+AT#M2MREAD="slot8.slt"
+<<<
+OK
+dtls.heartbeat.period.s                           : int=60        , string=<                                    , blob=3c000000
+lowpan.channel                                    : int=15        , string=                                    , blob=0f000000
+lowpan.channelplan                                : int=0         , string=                                    , blob=00000000
+prod.alias.id                                     : int=None      , string=88-73-84-53-00-00-09-2c                 , blob=38382d37332d38342d35332d30302d30302d30392d3263
+prod.hw.version                                   : int=None      , string=B3PRIME_SKU3_REV24                     , blob=42335052494d455f534b55335f524556323400
+prod.lowpan.eui64                                 : int=None      , string=8a-73-84-53-00-00-09-2c                 , blob=38612d37332d38342d35332d30302d30302d30392d3263
+rpl.instance_id                                   : int=9         , string=                                     , blob=09000000
+server.ip                                         : int=None      , string=2001:db8:1::4                           , blob=323030313a6462383a313a3a34
+time.ref.period                                   : int=60        , string=<                                    , blob=3c000000
 
 
 
