@@ -20364,6 +20364,13 @@ server.ip                                         : int=None      , string=2001:
 time.ref.period                                   : int=60        , string=<                                    , blob=3c000000
 
 
+----------------------------------------------------
+
+CH logs:
+
+
+./tools/c4-tools/readport.py -p /dev/ttyACM3 > /Data/Logs/ch1.log
+tail -f /Data/Logs/ch1.log | rg -v "Ezsp|ASH|^$"
 
 
 
