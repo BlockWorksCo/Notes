@@ -20373,6 +20373,22 @@ CH logs:
 tail -f /Data/Logs/ch1.log | rg -v "Ezsp|ASH|^$"
 
 
+--------------------------------------------------------
+
+
+import re
+import csv
+data=[]
+for line in open('t').read().splitlines():
+    d=re.compile('lat:([0-9\.]*),lon:([0-9\.]*),name:\'(.*?)\',.*?color:\'(.*)\',icon:\'(.*)\'\}').findall(line)
+    data.append(d[0])
+
+f=open('t.csv','w')
+writer=csv.writer(f)
+writer.writerows(data)
+f.close()
+
+
 
 
 
