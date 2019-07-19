@@ -20395,6 +20395,8 @@ TOBY-L210:
 - [CA-040611 / u-blox ID 2-2701] UDP packet might not sent out with TOBY-L210
 - [CA-042553 / u-blox ID 2-2990, 2-3064, 2-3065, 2-3259] Unexpected behavior of the module
 TOBY-L210 in P3 testing (M2M_009, M2M_011, M2M_012, M2M_068, M2M_072)
+- [u-blox ID 1-2030] During PPP startup some unexpected strings may be sent by the module.
+Workaround: ignore these strings
 
 
 
