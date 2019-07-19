@@ -20397,6 +20397,9 @@ TOBY-L210:
 TOBY-L210 in P3 testing (M2M_009, M2M_011, M2M_012, M2M_068, M2M_072)
 - [u-blox ID 1-2030] During PPP startup some unexpected strings may be sent by the module.
 Workaround: ignore these strings
+- [u-blox ID 1-1906] Downloading a file in the file system at high baudrate (921600 b/s) can lead
+to data corruption. Workaround: decrease the UART baudrate to 115200 b/s.
+
 
 
 
