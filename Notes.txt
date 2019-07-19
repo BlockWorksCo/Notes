@@ -11406,11 +11406,14 @@ OK
 
 
 AT#M2MRUN=2,m2mapz.bin
+AT#M2MRUN=1,m2mapz.bin
 
 AT+M2M=4,10 this means that the application will start 10 seconds after start-up.
 
 
 
+AT#M2MREAD="debuglog_normal.txt"
+AT#M2MREAD="m2m_config"
 
 
 
