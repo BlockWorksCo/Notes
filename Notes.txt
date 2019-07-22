@@ -20421,6 +20421,23 @@ make -j2 -C scimitar_ch/CommsHubFramework TARGET=telit_apz OSTYPE=cygwin ARMLMD_
 reboot using AT+M2M=1
 
 
+------------------------------------
+
+new machine:
+
+apt install build-essential
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+
+.vimrc
+set expandtab
+set nowrap
+set tabstop=4
+set shiftwidth=4
+set number
+
+
 
 
 
