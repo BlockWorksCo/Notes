@@ -20425,6 +20425,8 @@ reboot using AT+M2M=1
 
 ------------------------------------
 
+Getting started:
+
 new machine:
 
 apt install build-essential
