@@ -20456,11 +20456,13 @@ git config --global user.name "Steve Tickle"
 
 apt install python3-pip libjansson4 libasan2
 pip3 install serial
+pip3 install protobuf
 
 git clone ssh://stevetickle@gerrit.cyco.io:222/omnimesh
 git clone ssh://stevetickle@gerrit.cyco.io:222/terminal
 
-apt install quilt
+apt install quilt protobuf-compiler
+
 
 
 
