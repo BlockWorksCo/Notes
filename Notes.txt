@@ -20428,6 +20428,7 @@ reboot using AT+M2M=1
 new machine:
 
 apt install build-essential
+apt install silversearcher-ag
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
