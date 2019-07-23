@@ -20469,6 +20469,10 @@ apt install quilt protobuf-compiler pkg-config
 wget https://confluence.cyco.io/display/ENG/2015/05/25/Toshiba+escrow?preview=%2F14155968%2F60227589%2Farm_compiler.tar.gz
 tar zxvf ~/Downloads/arm_compiler.tar.gz -C ~/
 https://confluence.cyco.io/display/ENG/2014/09/04/How+to+get+the+ancient+ARM+compiler+for+SMIP
+sudo dpkg --add-architecture i386
+sudo apt update
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+sudo apt install multiarch-support
 
 
 need a ~/.flexlmrc containing:
