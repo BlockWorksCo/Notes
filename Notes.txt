@@ -20468,6 +20468,8 @@ pip install protobuf
 git clone ssh://stevetickle@gerrit.cyco.io:222/omnimesh
 git clone ssh://stevetickle@gerrit.cyco.io:222/terminal
 
+cd terminal && git remote add gerrit ssh://stevetickle@gerrit.cyco.io:222/terminal
+
 apt install quilt protobuf-compiler pkg-config
 
 
