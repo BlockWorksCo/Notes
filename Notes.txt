@@ -20429,6 +20429,8 @@ new machine:
 
 apt install build-essential
 apt install silversearcher-ag
+sudo apt install net-tools
+sudo apt install openssh-server
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
@@ -20473,6 +20475,9 @@ sudo dpkg --add-architecture i386
 sudo apt update
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
 sudo apt install multiarch-support
+
+add to .bashrc
+export ARMLMD_LICENSE_FILE=8224@172.16.32.179
 
 
 need a ~/.flexlmrc containing:
