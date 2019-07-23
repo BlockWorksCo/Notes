@@ -20433,6 +20433,7 @@ apt install build-essential
 apt install silversearcher-ag
 sudo apt install net-tools
 sudo apt install openssh-server
+pip install git-review
 
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
