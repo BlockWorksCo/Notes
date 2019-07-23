@@ -20456,13 +20456,17 @@ git config --global user.name "Steve Tickle"
 
 apt install python3-pip libjansson4 libasan2
 pip3 install serial
-pip3 install protobuf
+
+# note: python2
+pip install protobuf
 
 git clone ssh://stevetickle@gerrit.cyco.io:222/omnimesh
 git clone ssh://stevetickle@gerrit.cyco.io:222/terminal
 
 apt install quilt protobuf-compiler
 
+
+wget https://confluence.cyco.io/display/ENG/2015/05/25/Toshiba+escrow?preview=%2F14155968%2F60227589%2Farm_compiler.tar.gz
 
 
 
