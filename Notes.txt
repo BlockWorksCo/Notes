@@ -20467,6 +20467,9 @@ apt install quilt protobuf-compiler pkg-config
 
 
 wget https://confluence.cyco.io/display/ENG/2015/05/25/Toshiba+escrow?preview=%2F14155968%2F60227589%2Farm_compiler.tar.gz
+tar zxvf ~/Downloads/arm_compiler.tar.gz -C ~/
+https://confluence.cyco.io/display/ENG/2014/09/04/How+to+get+the+ancient+ARM+compiler+for+SMIP
+
 
 need a ~/.flexlmrc containing:
 ARMLMD_LICENSE_FILE=8224@flexlm.cyco.io
