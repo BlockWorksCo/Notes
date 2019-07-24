@@ -20465,6 +20465,7 @@ pip3 install serial
 
 # note: python2
 pip install protobuf
+pip install pyserial
 
 git clone ssh://stevetickle@gerrit.cyco.io:222/omnimesh
 git clone ssh://stevetickle@gerrit.cyco.io:222/terminal
