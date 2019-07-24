@@ -20490,6 +20490,21 @@ export ARMLMD_LICENSE_FILE=8224@172.16.32.179
 need a ~/.flexlmrc containing:
 ARMLMD_LICENSE_FILE=8224@flexlm.cyco.io
 
+--------------------------------------------------
+
+'ctrlport', priority 4, taskId 17, taskId_CH 20, stack 1
+'mac_rx', priority 3, taskId 18, taskId_CH 21, stack 1
+'cc1200', priority 2, taskId 19, taskId_CH 22, stack 1
+'lowpan_tx', priority 4, taskId 20, taskId_CH 23, stack 1
+'coap', priority 4, taskId 21, taskId_CH 24, stack 1
+'dtls', priority 5, taskId 22, taskId_CH 25, stack 3
+'rpl', priority 4, taskId 23, taskId_CH 26, stack 1
+'uplink_rx', priority 4, taskId 24, taskId_CH 27, stack 1
+'uplink_tx', priority 4, taskId 25, taskId_CH 28, stack 1
+'filedl', priority 10, taskId 26, taskId_CH 29, stack 3
+'terminal', priority 6, taskId 15, taskId_CH 18, stack 1
+'schedule', priority 5, taskId 16, taskId_CH 19, stack 1
+
 
 
 
