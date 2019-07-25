@@ -20531,9 +20531,10 @@ https://chris-wood.github.io/2016/05/06/OpenSSL-DTLS.html
 openssl req -x509 -newkey rsa:2048 -days 3650 -nodes -keyout client-key.pem -out client-cert.pem
 openssl req -x509 -newkey rsa:2048 -days 3650 -nodes -keyout server-key.pem -out server-cert.pem
 
+openssl s_server -dtls -port 1069 -key server-key.pem -cert server-cert.pem
+openssl s_client -dtls -connect localhost:1069
 
-openssl s_server -dtls -port 1069 -key key.pem -cert cert.pem
-openssl s_client -connect localhost:1069
+cipher: ECDHE-RSA-AES256-GCM-SHA384
 
 
 ------------------------------------------
