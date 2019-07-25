@@ -20525,7 +20525,10 @@ Solution would be to enable priority-inheritance on the SPI mutex (if possible).
 
 --------------------------------------------
 
-penssl s_server -dtls -port 1069 -key key.pem -cert cert.pem
+openssl req -x509 -newkey rsa:2048 -days 3650 -nodes -keyout client-key.pem -out client-cert.pem
+
+
+openssl s_server -dtls -port 1069 -key key.pem -cert cert.pem
 openssl s_client -connect localhost:1069
 
 
