@@ -20574,5 +20574,12 @@ git@gitlab.cyco.io:CA/ca.git
 [22821.374109] usb 1-1: USB disconnect, device number 2
 [22821.436304] xhci_hcd 0000:00:0c.0: Slot 1 endpoint 2 not removed from BW list!
 
+---------------------------------------------------
+
+CA:
+
+https://artifactory.cyco.io/pypi-dev/ca/13003/ca-13003-py2.py3-none-any.whl
+pip install ~/Downloads/ca-13003-py2.py3-none-any.whl
+
 
 
