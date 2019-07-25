@@ -20520,6 +20520,9 @@ run-time to release the lock, therefore the high-priority cc1200 task will be bl
 indefinitely on the low-priority dtls task.
 Solution would be to enable priority-inheritance on the SPI mutex (if possible).
 
+- DTLS locks crypto for rng transaction. It locks spi to perform this.
+- cc1200 wants spi but is blocked on DTLS for this.
+
 --------------------------------------------
 
 penssl s_server -dtls -port 1069 -key key.pem -cert cert.pem
