@@ -20539,4 +20539,25 @@ git push ssh://stevetickle@gerrit.cyco.io:222/terminal HEAD:refs/for/master
 
 git@gitlab.cyco.io:CA/ca.git
 
+---------------------------------------------------
+
+[22815.650682] xhci_hcd 0000:00:0c.0: WARN Cannot submit Set TR Deq Ptr
+[22815.650687] xhci_hcd 0000:00:0c.0: A Set TR Deq Ptr command is pending.
+[22816.193293] xhci_hcd 0000:00:0c.0: ERROR mismatched command completion event
+[22816.193462] usb 1-4: USB disconnect, device number 66
+[22816.194093] xhci_hcd 0000:00:0c.0: ERROR mismatched command completion event
+[22821.372699] xhci_hcd 0000:00:0c.0: xHCI host not responding to stop endpoint command.
+[22821.373353] xhci_hcd 0000:00:0c.0: xHCI host controller not responding, assume dead
+[22821.373401] xhci_hcd 0000:00:0c.0: HC died; cleaning up
+[22821.373487] cdc_acm 1-4:1.6: failed to set dtr/rts
+[22821.374083] xhci_hcd 0000:00:0c.0: Slot 4 endpoint 2 not removed from BW list!
+[22821.374086] xhci_hcd 0000:00:0c.0: Slot 4 endpoint 6 not removed from BW list!
+[22821.374088] xhci_hcd 0000:00:0c.0: Slot 4 endpoint 10 not removed from BW list!
+[22821.374091] xhci_hcd 0000:00:0c.0: Slot 4 endpoint 14 not removed from BW list!
+[22821.374094] xhci_hcd 0000:00:0c.0: Slot 4 endpoint 18 not removed from BW list!
+[22821.374097] xhci_hcd 0000:00:0c.0: Slot 4 endpoint 22 not removed from BW list!
+[22821.374109] usb 1-1: USB disconnect, device number 2
+[22821.436304] xhci_hcd 0000:00:0c.0: Slot 1 endpoint 2 not removed from BW list!
+
+
 
