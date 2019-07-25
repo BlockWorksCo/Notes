@@ -20537,6 +20537,13 @@ openssl s_client -dtls -connect localhost:1069
 cipher: ECDHE-RSA-AES256-GCM-SHA384
 
 
+-cipher ECDHE-ECDSA-AES128-GCM-SHA256
+
+openssl genpkey -out key.pem -algorithm ec -pkeyopt ec_paramgen_curve:P-256
+openssl req -new -sha256 -key key.pem -out server.csr
+openssl x509 -req -sha256 -days 365 -in server.csr -signkey key.pem -out cert.pem
+
+
 ------------------------------------------
 
 
