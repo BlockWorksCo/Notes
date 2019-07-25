@@ -20507,6 +20507,9 @@ CH task priorities (1=high, 32=low)
 'terminal',     priority 6, taskId 15, taskId_CH 18, stack 1
 'filedl',       priority 10, taskId 26, taskId_CH 29, stack 3
 
+error is:
+The CH has rebooted once due to Task 'Diagnostics' failed to lock 'Crypto', held by ': dtls'.
+
 Suspect that cc1200 may be in a priority-inversion situation with the dtls task. The dtls task
 needs access to the random number generator, which shares the bus with the radio.
 If dtls is in middle of transaction with VaultIC (at low priority, but owns the bus) and the
