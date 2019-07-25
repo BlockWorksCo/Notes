@@ -20529,6 +20529,10 @@ penssl s_server -dtls -port 1069 -key key.pem -cert cert.pem
 openssl s_client -connect localhost:1069
 
 
+------------------------------------------
+
+
+git push ssh://stevetickle@gerrit.cyco.io:222/terminal HEAD:refs/for/master
 
 
 
