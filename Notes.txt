@@ -20578,7 +20578,7 @@ git@gitlab.cyco.io:CA/ca.git
 
 CA:
 
-https://artifactory.cyco.io/pypi-dev/ca/13003/ca-13003-py2.py3-none-any.whl
+Download https://artifactory.cyco.io/pypi-dev/ca/13003/ca-13003-py2.py3-none-any.whl
 pip install ~/Downloads/ca-13003-py2.py3-none-any.whl
 
 
