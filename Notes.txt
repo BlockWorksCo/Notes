@@ -20585,6 +20585,9 @@ pip install ~/Downloads/ca-13003-py2.py3-none-any.whl
 
 docker-compose -f .buildenv-compose run --rm -v $(PWD):/project -w /project -u build buildenv /bin/sh -c "${ARGS}"
 
+docker-compose -f .buildenv-compose run flexlm
+
+
 
 
 
