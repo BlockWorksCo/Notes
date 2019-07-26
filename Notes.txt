@@ -20612,12 +20612,11 @@ ATTRS{idVendor}=="1bc7", ATTRS{idProduct}=="0021", ENV{ID_MM_DEVICE_IGNORE}="1"
 
 
 
+-------------------------------------------------------
+
+server Performance test blog:
+
+https://confluence.cyco.io/display/ENG/2015/01/27/Server+Performance+Test+Results
 
 
-A
-A
-
-A
-A
-A
 
