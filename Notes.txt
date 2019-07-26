@@ -20588,6 +20588,9 @@ docker-compose -f .buildenv-compose run --rm -v $(PWD):/project -w /project -u b
 docker-compose -f .buildenv-compose run flexlm
 
 docker run --mac-address="00:50:56:ba:54:5c" --hostname="flexlm" smip/flexlm 
+docker inspect <containerId>
+get IP address
+
 
 
 
