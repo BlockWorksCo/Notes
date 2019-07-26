@@ -20596,4 +20596,7 @@ export ARMLMD_LICENSE_FILE=8224@172.17.0.2
 
 
 
+make smip smip_ctrlporthub
+rsync -av --delete --exclude Makefile src/connode/ scimitar_ch/CommsHubFramework/3rdParty/Connode/c4_bin-smip_lg/include/connode/
+make -C scimitar_ch/CommsHubFramework TARGET=telit_apz OSTYPE=cygwin ARMLMD_LICENSE_FILE= ARMROOT= C4LIB=$PWD/build/smip_ctrlporthub/release/libc4.a
 
