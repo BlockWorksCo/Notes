@@ -20600,3 +20600,24 @@ make smip smip_ctrlporthub
 rsync -av --delete --exclude Makefile src/connode/ scimitar_ch/CommsHubFramework/3rdParty/Connode/c4_bin-smip_lg/include/connode/
 make -C scimitar_ch/CommsHubFramework TARGET=telit_apz OSTYPE=cygwin ARMLMD_LICENSE_FILE= ARMROOT= C4LIB=$PWD/build/smip_ctrlporthub/release/libc4.a
 
+
+Telit modem detected as modem by Linux and ModemManager attempts to take it....
+add the following to udev rules to prevent this:
+
+in /lib/udev/rules.d/77-mm-usb-device-blacklist.rules
+
+# Toshiba SMIP CommsHub
+ATTRS{idVendor}=="1bc7", ATTRS{idProduct}=="0021", ENV{ID_MM_DEVICE_IGNORE}="1"
+
+
+
+
+
+
+A
+A
+
+A
+A
+A
+
