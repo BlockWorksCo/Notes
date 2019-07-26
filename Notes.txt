@@ -20610,7 +20610,10 @@ in /lib/udev/rules.d/77-mm-usb-device-blacklist.rules
 ATTRS{idVendor}=="1bc7", ATTRS{idProduct}=="0021", ENV{ID_MM_DEVICE_IGNORE}="1"
 
 
+Make sure no flow control on terminal, reset CH, type in:
+AT+M2M=4,10
 
+now you can use upload_smip to update code.
 
 -------------------------------------------------------
 
