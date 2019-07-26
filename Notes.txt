@@ -20588,7 +20588,7 @@ docker-compose -f .buildenv-compose run --rm -v $(PWD):/project -w /project -u b
 docker-compose -f .buildenv-compose run flexlm
 
 flexlm armcc
-docker run --mac-address="00:50:56:ba:54:5c" --hostname="flexlm" smip/flexlm 
+docker run --mac-address="00:50:56:ba:54:5c" --hostname="flexlm" --expose 8200-50000 smip/flexlm
 docker inspect -f "{{ .NetworkSettings.IPAddress }}" <containerId>
 get IP address
 export ARMLMD_LICENSE_FILE=8224@172.17.0.2
