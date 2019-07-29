@@ -20622,6 +20622,9 @@ now you can use upload_smip to update code.
 monitor with:
 ./tools/c4-tools/readport.py -p /dev/ttyACM3 | ag -v "Ezsp|ASH|^$"
 
+# to enable debug:
+change "C4_logSetLevel(cnd_LogLevelInfo);" to "C4_logSetLevel(cnd_LogLevelDebug);" in C4_task.c
+
 -------------------------------------------------------
 
 server Performance test blog:
