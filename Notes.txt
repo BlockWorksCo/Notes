@@ -20615,6 +20615,8 @@ AT+M2M=4,10
 
 now you can use upload_smip to update code.
 
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 -r scimitar_ch/CommsHubFramework/bin/target/telit_apz/m2mapz.bin
+
 -------------------------------------------------------
 
 server Performance test blog:
