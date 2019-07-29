@@ -20600,6 +20600,8 @@ make smip smip_ctrlporthub
 rsync -av --delete --exclude Makefile src/connode/ scimitar_ch/CommsHubFramework/3rdParty/Connode/c4_bin-smip_lg/include/connode/
 make -C scimitar_ch/CommsHubFramework TARGET=telit_apz OSTYPE=cygwin ARMLMD_LICENSE_FILE= ARMROOT= C4LIB=$PWD/build/smip_ctrlporthub/release/libc4.a
 
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM0 -r scimitar_ch/CommsHubFramework/bin/target/telit_apz/m2mapz.bin
+
 
 Telit modem detected as modem by Linux and ModemManager attempts to take it....
 add the following to udev rules to prevent this:
@@ -20618,7 +20620,7 @@ now you can use upload_smip to update code.
 ./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 -r scimitar_ch/CommsHubFramework/bin/target/telit_apz/m2mapz.bin
 
 monitor with:
-tail -f /Data/Logs/ch1.log | rg -v "Ezsp|ASH|^$"
+./tools/c4-tools/readport.py -p /dev/ttyACM3 | ag -v "Ezsp|ASH|^$"
 
 -------------------------------------------------------
 
