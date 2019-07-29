@@ -20617,6 +20617,9 @@ now you can use upload_smip to update code.
 
 ./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 -r scimitar_ch/CommsHubFramework/bin/target/telit_apz/m2mapz.bin
 
+monitor with:
+tail -f /Data/Logs/ch1.log | rg -v "Ezsp|ASH|^$"
+
 -------------------------------------------------------
 
 server Performance test blog:
