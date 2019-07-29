@@ -20620,10 +20620,12 @@ now you can use upload_smip to update code.
 ./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 -r scimitar_ch/CommsHubFramework/bin/target/telit_apz/m2mapz.bin
 
 monitor with:
+stty -F /dev/ttyACM3 -ixon -ixoff -crtscts
 ./tools/c4-tools/readport.py -p /dev/ttyACM3 | ag -v "Ezsp|ASH|^$"
 
 # to enable debug:
 change "C4_logSetLevel(cnd_LogLevelInfo);" to "C4_logSetLevel(cnd_LogLevelDebug);" in C4_task.c
+
 
 -------------------------------------------------------
 
