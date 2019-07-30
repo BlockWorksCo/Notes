@@ -20640,6 +20640,17 @@ coap request thru server:
 
 ./tools/c4-tools/coap_request.py  --server venus.uk.cyanconnode.com:38082 --agent  fd72:9df8:bda5:286:21b:c50c:6004:3621 --log
 
+------------------------------------------------
+
+ppGet crash:
+
+Hdev DV35@ 35f54 L 40469 S 2000a450
+
+
+
+
+
+
 
 
 
