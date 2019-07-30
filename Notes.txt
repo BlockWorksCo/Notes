@@ -20633,5 +20633,13 @@ server Performance test blog:
 
 https://confluence.cyco.io/display/ENG/2015/01/27/Server+Performance+Test+Results
 
+----------------------------------------------------------
+
+
+coap request thru server:
+
+./tools/c4-tools/coap_request.py  --server venus.uk.cyanconnode.com:38082 --agent  fd72:9df8:bda5:286:21b:c50c:6004:3621 --log
+
+
 
 
