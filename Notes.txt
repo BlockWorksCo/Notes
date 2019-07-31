@@ -20674,6 +20674,9 @@ mysql -u debian-sys-maint -p -e "create database smc; grant all on smc.* to 'mes
 mysql -umeshnet -pmeshnet sma < /opt/omnimesh/current/sma/db/mysql-ddl.sql
 mysql -umeshnet -pmeshnet smc < /opt/omnimesh/current/nms/db/mysql-ddl.sql
 
+change nms/bin/server.sh to use "#!/usr/bin/env bash" (not sh)
+change sma/bin/server.sh to use "#!/usr/bin/env bash" (not sh)
+
 
 
 
