@@ -20648,6 +20648,8 @@ Hdev DV35@ 35f54 L 40469 S 2000a450
 
 -----------------------------------------------------------
 
+manual server installation:
+
 mkdir /opt/omnimesh
 chmod a+rw /opt/omnimesh
 From Jenkins, download: server-ws.tgz, server.tgz, sma.tgz tund-8.tar.gz
@@ -20662,14 +20664,15 @@ tar zxvf ~/Downloads/tund-8.tar.gz -C /opt/omnimesh
 
 sudo apt install default-jre
 
-# Get mysql root pw and user (look at the [client] section):
+# Get mysql root pw and user (look at the [client] section): BgmDZmOFJog90xwm
 sudo cat /etc/mysql/debian.cnf
 
 mysql -u debian-sys-maint -p -e "create user 'meshnet'@'localhost' identified by 'meshnet';"
 mysql -u debian-sys-maint -p -e "create database sma; grant all on sma.* to 'meshnet'@'localhost'; flush privileges;"
+mysql -u debian-sys-maint -p -e "create database smc; grant all on smc.* to 'meshnet'@'localhost'; flush privileges;"
 
 mysql -umeshnet -pmeshnet sma < /opt/omnimesh/current/sma/db/mysql-ddl.sql
-mysql -umeshnet -pmeshnet sma < /opt/omnimesh/current/nms/db/mysql-ddl.sql
+mysql -umeshnet -pmeshnet smc < /opt/omnimesh/current/nms/db/mysql-ddl.sql
 
 
 
