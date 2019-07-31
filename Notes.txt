@@ -20650,14 +20650,16 @@ Hdev DV35@ 35f54 L 40469 S 2000a450
 
 mkdir /opt/omnimesh
 chmod a+rw /opt/omnimesh
-From Jenkins, download: server-ws.tgz, server.tgz, sma.tgz
+From Jenkins, download: server-ws.tgz, server.tgz, sma.tgz tund-8.tar.gz
 mkdir -p /opt/omnimesh/v63.3
 mkdir -p /opt/omnimesh/v63.3/nms
 mkdir -p /opt/omnimesh/v63.3/sma
 ln -s /opt/omnimesh/v63.3 /opt/omnimesh/current
-tar zxvf server.tgz -C /opt/omnimesh/v63.3/nms
-tar zxvf server-ws.tgz -C /opt/omnimesh/v63.3/nms
-tar zxvf sma.tgz -C /opt/omnimesh/v63.3/sma
+tar zxvf ~/Downloads/server.tar.gz -C /opt/omnimesh/v63.3/nms
+tar zxvf ~/Downloads/server-ws.tar.gz -C /opt/omnimesh/v63.3/nms
+tar zxvf ~/Downloads/sma.tar.gz -C /opt/omnimesh/v63.3/sma
+tar zxvf ~/Downloads/tund-8.tar.gz -C /opt/omnimesh
+
 
 
 
