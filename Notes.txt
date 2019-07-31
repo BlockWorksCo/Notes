@@ -20660,6 +20660,11 @@ tar zxvf ~/Downloads/server-ws.tar.gz -C /opt/omnimesh/v63.3/nms
 tar zxvf ~/Downloads/sma.tar.gz -C /opt/omnimesh/v63.3/sma
 tar zxvf ~/Downloads/tund-8.tar.gz -C /opt/omnimesh
 
+sudo apt install default-jre
+
+mysql -uroot -p -e "create user 'meshnet'@'localhost' identified by 'meshnet';"
+mysql -uroot -p -e "create database sma; grant all on sma.* to 'meshnet'@'localhost'; flush privileges;"
+mysql -umeshnet -pmeshnet sma < /opt/sma/db/mysql-ddl.sql
 
 
 
