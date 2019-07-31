@@ -20677,7 +20677,9 @@ mysql -umeshnet -pmeshnet smc < /opt/omnimesh/current/nms/db/mysql-ddl.sql
 change nms/bin/server.sh to use "#!/usr/bin/env bash" (not sh)
 change sma/bin/server.sh to use "#!/usr/bin/env bash" (not sh)
 
-
+sudo /opt/omnimesh/current/nms/bin/server.h
+sudo /opt/omnimesh/current/sma/bin/server.h
+sudo TUN6D_SECRET=whatsfordinner /usr/bin/tun6d --loglevel debug
 
 
 
