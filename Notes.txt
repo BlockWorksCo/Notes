@@ -20662,13 +20662,14 @@ tar zxvf ~/Downloads/tund-8.tar.gz -C /opt/omnimesh
 
 sudo apt install default-jre
 
-# Get mysql root pw and user:
+# Get mysql root pw and user (look at the [client] section):
 sudo cat /etc/mysql/debian.cnf
 
-mysql -udebian-sys-maint -p -e "create user 'meshnet'@'localhost' identified by 'meshnet';"
-mysql -udebian-sys-maint -p -e "create database sma; grant all on sma.* to 'meshnet'@'localhost'; flush privileges;"
+mysql -u debian-sys-maint -p -e "create user 'meshnet'@'localhost' identified by 'meshnet';"
+mysql -u debian-sys-maint -p -e "create database sma; grant all on sma.* to 'meshnet'@'localhost'; flush privileges;"
 
-mysql -umeshnet -pmeshnet sma < /opt/sma/db/mysql-ddl.sql
+mysql -umeshnet -pmeshnet sma < /opt/omnimesh/current/sma/db/mysql-ddl.sql
+mysql -umeshnet -pmeshnet sma < /opt/omnimesh/current/nms/db/mysql-ddl.sql
 
 
 
