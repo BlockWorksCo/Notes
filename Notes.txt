@@ -20705,6 +20705,12 @@ smipdev-66:
 3387: <----- Left DAG partway thru download. DAG is 2a03:dd00:800:4002:8873:8456:2:d411, myIP is 2a03:dd00:800:4002:8873:8455:2:d3dc preferred parent is 2a03:dd00:800:4002:8873:8455:2:d3b6
 3651:<----- new preferred parent is 2a03:dd00:800:4002:8873:8455:2:d3b6, DAG is 2a03:dd00:800:4002:8873:8456:2:d411, myIP is 2a03:dd00:800:4002:8873:8455:2:d3dc, resumes download of file on block 1397.
 
+3387: <----- Left DAG partway thru download. DAG is 2a03:dd00:800:4002:8873:8456:2:d411, myIP is 2a03:dd00:800:4002:8873:8455:2:d3dc preferred parent is 2a03:dd00:800:4002:8873:8455:2:d3b6
+3651:<----- new preferred parent is 2a03:dd00:800:4002:8873:8455:2:d3b6, DAG is 2a03:dd00:800:4002:8873:8456:2:d411, myIP is 2a03:dd00:800:4002:8873:8455:2:d3dc, resumes download of file on block 1397.
+
+1) 2a03:dd00:800:4002:8873:8456:2:d411 2a03:dd00:800:4002:8873:8455:2:d3dc 2a03:dd00:800:4002:8873:8455:2:d3b6
+2) 2a03:dd00:800:4002:8873:8456:2:d411 2a03:dd00:800:4002:8873:8455:2:d3dc 2a03:dd00:800:4002:8873:8455:2:d3b6
+
 
 ----------------------------------------------------------
 
