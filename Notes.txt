@@ -20702,6 +20702,11 @@ smipdev-66:
 - Code for unicast retrieval is there in both: getBlockWithCoap() && handleMsgGetNextBlock().
 - If a gateway changes mode, it will not serve data from the nodes despite it having the file.
 
+3387: <----- Left DAG partway thru download. DAG is 2a03:dd00:800:4002:8873:8456:2:d411, myIP is 2a03:dd00:800:4002:8873:8455:2:d3dc preferred parent is 2a03:dd00:800:4002:8873:8455:2:d3b6
+3651:<----- new preferred parent is 2a03:dd00:800:4002:8873:8455:2:d3b6, DAG is 2a03:dd00:800:4002:8873:8456:2:d411, myIP is 2a03:dd00:800:4002:8873:8455:2:d3dc, resumes download of file on block 1397.
+
+
+----------------------------------------------------------
 
 
 
