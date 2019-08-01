@@ -20682,6 +20682,18 @@ sudo /opt/omnimesh/current/sma/bin/server.h
 sudo TUN6D_SECRET=whatsfordinner /usr/bin/tun6d --loglevel debug
 
 
+-----------------------------------------------------------------------
+
+uint32_t    start   = 0;
+uint32_t    end     = 0;
+M2M_T_SPI_RESULT m2m_result;
+m2m_hw_get_ms_count( &start );
+LOG_ERROR("start is %u n is %d ",start,n);
+m2m_result = m2m_spi_write(C_CH_HAL_SPI_USIF_NUM, tx_buf, rx_buf, n, NULL);
+m2m_hw_get_ms_count( &end );
+LOG_ERROR("end is %u diff = %u ",end,end-start);
+
+
 
 
 
