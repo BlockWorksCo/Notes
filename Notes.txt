@@ -20700,7 +20700,7 @@ CRYPTOIF_Random
 
 smipdev-66:
 - Code for unicast retrieval is there in both: getBlockWithCoap() && handleMsgGetNextBlock().
-- 
+- If a gateway changes mode, it will not serve data from the nodes despite it having the file.
 
 
 
