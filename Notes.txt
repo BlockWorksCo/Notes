@@ -20696,6 +20696,11 @@ LOG_ERROR("end is %u diff = %u ",end,end-start);
 
 CRYPTOIF_Random
 
+----------------------------------------------------
+
+smipdev-66:
+- Code for unicast retrieval is there in both: getBlockWithCoap() && handleMsgGetNextBlock().
+- 
 
 
 
