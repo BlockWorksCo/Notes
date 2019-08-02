@@ -20736,7 +20736,7 @@ mbus: move non-task mainloop functions to own modules
 
 General:
 - File headers non standard.
-- interface documention.
+- interface documention in header files.
 - bracketing style
 - no camelCase.
 - no whitespace between functions.
@@ -20753,6 +20753,7 @@ mbus/device-mbus.c:
 - deviceMBusTask should probably cause a restart if it drops out rather than just shutting down.
 
 mbus/device-mbus-devicedata.c:
+- 
 mbus/device-mbus-maxdemand.c:
 mbus/device-mbus-mbus.c:
 mbus/device-mbus-mdreading.c:
