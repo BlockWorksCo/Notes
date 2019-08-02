@@ -20740,6 +20740,7 @@ General:
 - bracketing style
 - no camelCase.
 - no whitespace between functions.
+- check_range_is_readwritable. macros should be upper-case.
 
 mbus/dataprofilesample.c:
 - 
