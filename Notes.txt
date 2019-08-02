@@ -20736,11 +20736,28 @@ mbus: move non-task mainloop functions to own modules
 
 General:
 - File headers non standard.
+- interface documention.
+- bracketing style
+- no camelCase.
+- no whitespace between functions.
 
-device-mbus.c:
+mbus/dataprofilesample.c:
+mbus/device-mbus-axdr.c:
+mbus/device-mbus.c:
 - 346: "goto exit" skips functionality intended?
 - devmbus_uart_start() need to use MODULE_ functionality?
 - deviceMBusTask should probably cause a restart if it drops out rather than just shutting down.
+
+mbus/device-mbus-devicedata.c:
+mbus/device-mbus-maxdemand.c:
+mbus/device-mbus-mbus.c:
+mbus/device-mbus-mdreading.c:
+mbus/device-mbus-ondemand.c:
+mbus/device-mbus-readout.c:
+mbus/device-mbus-register.c:
+mbus/device-mbus-uart.c:
+mbus/device-mbus-watchdog.c:
+mbus/mbus-utils.c:
 
 
 
