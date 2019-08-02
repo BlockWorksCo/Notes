@@ -20742,7 +20742,11 @@ General:
 - no whitespace between functions.
 
 mbus/dataprofilesample.c:
+- 
+
 mbus/device-mbus-axdr.c:
+- 
+
 mbus/device-mbus.c:
 - 346: "goto exit" skips functionality intended?
 - devmbus_uart_start() need to use MODULE_ functionality?
