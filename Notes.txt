@@ -20738,6 +20738,7 @@ mbus: move non-task mainloop functions to own modules
 device-mbus.c:
 - 346: "goto exit" skips functionality intended?
 - devmbus_uart_start() need to use MODULE_ functionality?
+- deviceMBusTask should probably cause a restart if it drops out rather than just shutting down.
 
 
 
