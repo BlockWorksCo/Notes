@@ -20760,6 +20760,8 @@ mbus/device-mbus-devicedata.c:
 mbus/device-mbus-maxdemand.c:
 - 114: 'exit1' & 'exit2'... maybe 'exit' and 'exitNoDestroy'??
 - 96: #define MAX_ELEMS_IN_READING 128 ??
+- 204,215,228: odd LOG text format... why? just put text in string...
+- 265: Variable Length Arrays are not allowed. robustness/security/MISRA/etc.
 
 mbus/device-mbus-mbus.c:
 mbus/device-mbus-mdreading.c:
