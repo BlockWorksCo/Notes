@@ -20724,6 +20724,8 @@ SMIPDEV-26: ch10.log
  79472 [  17233.461][2019-08-01 19:54:30][FATAL][Diagnostics       ]CH_osal_lock.c,1039:Task 'Diagnostics' failed to lock 'Crypto', held by 'c:schedule'
 
 
+VltGenerateRandom() never returns!
+SPI is still able to be used (CC1200 has no problems).
 
 
 
