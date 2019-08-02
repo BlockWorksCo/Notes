@@ -20727,6 +20727,11 @@ SMIPDEV-26: ch10.log
 VltGenerateRandom() never returns!
 SPI is still able to be used (CC1200 has no problems).
 
+------------------------------------------------------------
+
+mbus: Initial add of driver
+mbus: move non-task mainloop functions to own modules
+
 
 
 
