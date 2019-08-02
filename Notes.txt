@@ -20741,6 +20741,7 @@ General:
 - no camelCase.
 - no whitespace between functions.
 - check_range_is_readwritable. macros should be upper-case.
+- Dont need enter/exit tracing, e.g. TRACE_LOG_DEBUG("%s", "enter"); ... can be done by compiler if needed but don't need commented out code for this.
 
 mbus/dataprofilesample.c:
 - 
@@ -20757,8 +20758,8 @@ mbus/device-mbus-devicedata.c:
 - 
 
 mbus/device-mbus-maxdemand.c:
-- 'exit1' & 'exit2'... maybe 'exit' and 'exitNoDestroy'??
--
+- 114: 'exit1' & 'exit2'... maybe 'exit' and 'exitNoDestroy'??
+- 96: #define MAX_ELEMS_IN_READING 128 ??
 
 mbus/device-mbus-mbus.c:
 mbus/device-mbus-mdreading.c:
