@@ -20719,6 +20719,11 @@ smipdev-66:
 SMIPDEV-26: ch10.log
 
 79476 [  17233.484][2019-08-01 19:54:30][ERROR][Supervisor        ]SUPERVISOR_Task.c,2152:Supervisor Task failed to send Task State message id=65542 to "Diagnostics" Task
+19155 [   8170.118][2019-08-01 22:27:08][FATAL][Diagnostics       ]CH_osal_lock.c,1039:Task 'Diagnostics' failed to lock 'Crypto', held by 'c:schedule'
+2649 [    276.258][2019-08-01 20:34:17][FATAL][Diagnostics       ]CH_osal_lock.c,1039:Task 'Diagnostics' failed to lock 'Crypto', held by 'c:schedule'
+ 79472 [  17233.461][2019-08-01 19:54:30][FATAL][Diagnostics       ]CH_osal_lock.c,1039:Task 'Diagnostics' failed to lock 'Crypto', held by 'c:schedule'
+
+
 
 
 
