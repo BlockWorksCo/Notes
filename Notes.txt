@@ -20768,6 +20768,7 @@ mbus/device-mbus-maxdemand.c:
 
 mbus/device-mbus-mbus.c:
 - 144,151,158,166: Probably don't want to PANIC based on malformed input. We should PANIC if internal state is bad, but be resilient to malformed input.
+- 238: Commented out code.
 
 mbus/device-mbus-mdreading.c:
 mbus/device-mbus-ondemand.c:
