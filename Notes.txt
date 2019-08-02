@@ -20716,6 +20716,11 @@ smipdev-66:
 
 ----------------------------------------------------------
 
+SMIPDEV-26: ch10.log
+
+79476 [  17233.484][2019-08-01 19:54:30][ERROR][Supervisor        ]SUPERVISOR_Task.c,2152:Supervisor Task failed to send Task State message id=65542 to "Diagnostics" Task
+
+
 
 
 
