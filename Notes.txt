@@ -20771,6 +20771,7 @@ mbus/device-mbus-mbus.c:
 - 238, 582, 678: Commented out code.
 - 824: Possibly use ptrdiff_t to more portably do pointer position comparisons.
 - 1153: Possibly put _memswap into utilities?
+- 1161: No need for a separate function to hide _memswap behind.
 
 mbus/device-mbus-mdreading.c:
 mbus/device-mbus-ondemand.c:
