@@ -20740,7 +20740,7 @@ General:
 - bracketing style
 - no camelCase.
 - no whitespace between functions.
-- check_range_is_readwritable. macros should be upper-case.
+- check_range_is_readwritable. macros should be upper-case. Suggest using CHECK_STRUCT_IS_READABLE(v) which will check the range of sizeof(*v) bytes. One less parameter in lots of places.
 - Dont need enter/exit tracing, e.g. TRACE_LOG_DEBUG("%s", "enter"); ... can be done by compiler if needed but don't need commented out code for this.
 
 mbus/dataprofilesample.c:
@@ -20773,7 +20773,7 @@ mbus/device-mbus-mbus.c:
 - 1153: Possibly put _memswap into utilities?
 - 1161: No need for a separate function to hide _memswap behind.
 - reverse_copy: Can this be replaced by memove? should it be in utilities?
-- MBUS_Value_as_int24/48: non-functional code?
+- MBUS_Value_as_int24/48: non-functional code? Shouldn't they just be returning the next-largest native-sized value?
 
 mbus/device-mbus-mdreading.c:
 mbus/device-mbus-ondemand.c:
