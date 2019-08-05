@@ -20772,6 +20772,8 @@ mbus/device-mbus-mbus.c:
 - 824: Possibly use ptrdiff_t to more portably do pointer position comparisons.
 - 1153: Possibly put _memswap into utilities?
 - 1161: No need for a separate function to hide _memswap behind.
+- reverse_copy: Can this be replaced by memove? should it be in utilities?
+- MBUS_Value_as_int24/48: non-functional code?
 
 mbus/device-mbus-mdreading.c:
 mbus/device-mbus-ondemand.c:
