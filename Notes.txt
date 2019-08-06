@@ -20795,6 +20795,63 @@ radio-simulator:
 - CCA, inverse-square, bitrate, receiver-sensitivity all modelled.
 
 
+--------------------------------------
+
+1ph UGVCL
+sequenceNumber,numericCode,textCode,type,metricTime,value
+88279,4.2,ip.tx.bytes,Delta,24/07/19 20:17:14,165239
+88475,4.2,ip.tx.bytes,Delta,25/07/19 20:17:14,127391
+88669,4.2,ip.tx.bytes,Delta,26/07/19 20:17:14,193879
+88863,4.2,ip.tx.bytes,Delta,27/07/19 20:17:15,175977
+89057,4.2,ip.tx.bytes,Delta,28/07/19 20:17:15,161950
+89251,4.2,ip.tx.bytes,Delta,29/07/19 20:17:16,210717
+89449,4.2,ip.tx.bytes,Delta,30/07/19 20:17:16,198978
+89648,4.2,ip.tx.bytes,Delta,31/07/19 20:17:16,191794
+89843,4.2,ip.tx.bytes,Delta,01/08/19 20:17:16,148274
+90037,4.2,ip.tx.bytes,Delta,02/08/19 20:17:16,154996
+90231,4.2,ip.tx.bytes,Delta,03/08/19 20:17:15,168833
+90427,4.2,ip.tx.bytes,Delta,04/08/19 20:17:17,222517
+90621,4.2,ip.tx.bytes,Delta,05/08/19 20:17:16,159487
+
+
+another 1ph UGVCL:
+sequenceNumber,numericCode,textCode,type,metricTime,value
+83213,4.2,ip.tx.bytes,Delta,24/07/19 14:17:13,130660
+83534,4.2,ip.tx.bytes,Delta,26/07/19 08:33:14,329391
+83730,4.2,ip.tx.bytes,Delta,27/07/19 08:33:14,129696
+83928,4.2,ip.tx.bytes,Delta,28/07/19 08:33:15,114967
+84126,4.2,ip.tx.bytes,Delta,29/07/19 08:33:15,103111
+84328,4.2,ip.tx.bytes,Delta,30/07/19 08:33:16,187171
+84530,4.2,ip.tx.bytes,Delta,31/07/19 08:33:16,158075
+84732,4.2,ip.tx.bytes,Delta,01/08/19 08:33:16,200445
+84928,4.2,ip.tx.bytes,Delta,02/08/19 08:33:17,150767
+85126,4.2,ip.tx.bytes,Delta,03/08/19 08:33:17,164721
+85320,4.2,ip.tx.bytes,Delta,04/08/19 08:33:18,119691
+85514,4.2,ip.tx.bytes,Delta,05/08/19 08:33:17,110675
+85708,4.2,ip.tx.bytes,Delta,06/08/19 08:33:18,122226
+
+
+
+yet another 1ph UGVCL:
+sequenceNumber,numericCode,textCode,type,metricTime,value
+76111,4.2,ip.tx.bytes,Delta,25/07/19 02:28:22,79915
+76307,4.2,ip.tx.bytes,Delta,26/07/19 02:28:24,146542
+76503,4.2,ip.tx.bytes,Delta,27/07/19 02:28:25,89344
+77020,4.2,ip.tx.bytes,Delta,29/07/19 16:09:16,99196
+77218,4.2,ip.tx.bytes,Delta,30/07/19 16:09:23,109379
+77414,4.2,ip.tx.bytes,Delta,31/07/19 16:09:18,117226
+77612,4.2,ip.tx.bytes,Delta,01/08/19 16:09:19,143567
+77806,4.2,ip.tx.bytes,Delta,02/08/19 16:09:20,111112
+78000,4.2,ip.tx.bytes,Delta,03/08/19 16:09:20,106535
+78194,4.2,ip.tx.bytes,Delta,04/08/19 16:09:22,120733
+78390,4.2,ip.tx.bytes,Delta,05/08/19 16:09:23,110648
+
+
+
+
+
+
+
 
 
 
