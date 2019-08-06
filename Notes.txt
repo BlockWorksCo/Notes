@@ -20847,6 +20847,13 @@ sequenceNumber,numericCode,textCode,type,metricTime,value
 78390,4.2,ip.tx.bytes,Delta,05/08/19 16:09:23,110648
 
 
+----------------------------------------------
+
+routing table size:
+
+CONFIG_ROUTELIST_SIZE in rpl_routelist.c
+
+Should be enought for ~240 mesh nodes.
 
 
 
