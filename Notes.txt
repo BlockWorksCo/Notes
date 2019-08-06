@@ -20786,6 +20786,16 @@ mbus/device-mbus-uart.c:
 mbus/device-mbus-watchdog.c:
 mbus/mbus-utils.c:
 
+-----------------------------------------
+
+radio-simulator:
+
+- model in radio_simulator_server.c
+- python wrapper and runner in inttest/
+- CCA, inverse-square, bitrate, receiver-sensitivity all modelled.
+
+
+
 
 
 
