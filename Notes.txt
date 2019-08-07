@@ -20880,6 +20880,15 @@ e187d59e43f0a2a97705753f9183207bd9f8df1c
 8e8315e0f13bb82467bac27b2d96ae6ed444af3b already there.
 oldest:
 
+-------------------------------------------
+
+configure kdiff3
+git config --global --add merge.tool kdiff3
+git config --global --add diff.guitool kdiff3
+git config --global --add mergetool.kdiff3.path `which kdiff3`
+git config --global --add difftool.kdiff3.path `which kdiff3`
+git config --global --add mergetool.kdiff3.trustExitCode false
+git config --global --add difftool.kdiff3.trustExitCode false
 
 
 
