@@ -20858,6 +20858,17 @@ Should be enought for ~240 mesh nodes.
 
 
 
+----------------------------------------
+
+release 151.3
+
+CND-8918 - Agent - node is performing redundant local filtering of alarms.      : 814fe3e6c33a80867439b5fc71c8fdf20d6a327f
+CND-9388 - UGVCL meter reporting time issue on scheduled IS sample collection.  :
+CND-9454 - Get Prepayment configuration use case                                : 47fc715d307b5fb2c3d3519b394cb6c52f3872ec 215b9b876268e37321ffc149c9560a1795571581 
+CND-9491 - Agent - LNT D2 MD RESET failing consistently                         : bcca766d1c3be3faf5b2962bcca06f257336ba84 
+CND-9539 - Agent - COSEM time conversion wrong on Sunday                        : 8e8315e0f13bb82467bac27b2d96ae6ed444af3b
+CND-9499 - Agent - LNT D2 Load Curtailment SET Failing                          : 630e1a3b9761f0172a479ab3d21fcfd78b1bb4fc
+ 
 
 
 
