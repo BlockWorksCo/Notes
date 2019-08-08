@@ -20891,6 +20891,25 @@ git config --global --add mergetool.kdiff3.trustExitCode false
 git config --global --add difftool.kdiff3.trustExitCode false
 
 
+-------------------------------------------------------------------------
+
+
+
+SMIPDEV-51 Implement ability to configure a key table and preferred key
+
+(1) Configuration: support binary data (new Bytes type)
+(2) Configuration: support secure parameter for keystore (new Secure
+flag and securedId)
+(3) SMIP configuration backend: store secure parameter to keystore
+(4) Add new parameter "key.keytable" (Bytes type, Secure).
+It contains key table and preferred key. For SMIP, it is stored in
+keystore KeyTable.
+(5) Add keytable to mac_security and ready for multiple keys support
+(6) Add smip mock code for configuration and keystore storage
+(7) Add ipa1-smip-insecure target to test smip code on ipa1 node
+
+
+
 
 
 
