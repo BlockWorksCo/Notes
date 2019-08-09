@@ -20918,8 +20918,8 @@ UDP     - 8
 DTLS    - 9
 CoAP    - 72
 Protobuf- 
-AXDR    - 
-readingdata -
+AXDR    - 24
+readingdata - 90
 
 Total   - 152
 
