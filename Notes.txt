@@ -20917,8 +20917,8 @@ IP      - 22
 UDP     - 8
 DTLS    - 9
 CoAP    - 72
-Protobuf-
-AXDR    -
+Protobuf- 
+AXDR    - 
 readingdata -
 
 Total   - 152
