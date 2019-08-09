@@ -20911,17 +20911,17 @@ keystore KeyTable.
 -----------------------------------------------------------
 
 PHY     - 
-MAC     - 26
+MAC     - 22
 LoWPAN  - 19
 IP      - 22
 UDP     - 8
-DTLS    -
-CoAP    -
+DTLS    - 9
+CoAP    - 72
 Protobuf-
 AXDR    -
-payload -
+readingdata -
 
-Total   - 
+Total   - 152
 
 
 
