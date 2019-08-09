@@ -20931,6 +20931,7 @@ Total   - 263
 SMIP sftp
 
 sftp.cyco.io
+/home/toshiba/data/New_Build_Libraries/
 
 /Data/Temp/SMIPDrop1
 
