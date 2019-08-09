@@ -20916,13 +20916,13 @@ LoWPAN          - 19
 IP              - 22
 UDP             - 8
 DTLS            - 9
-CoAP            - 
-Protobuf        -  
+CoAP            - 6 
+Protobuf        - 28 
 AXDR            - 24
 app metadata    - 36
 readingdata     - 90
 
-Total   - 194
+Total   - 263
 
 
 
