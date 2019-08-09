@@ -20919,7 +20919,7 @@ DTLS            - 9
 CoAP            - 
 Protobuf        -  
 AXDR            - 24
-app metadata    - 
+app metadata    - 36
 readingdata     - 90
 
 Total   - 194
