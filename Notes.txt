@@ -20912,9 +20912,9 @@ keystore KeyTable.
 
 PHY     - 
 MAC     - 26
-LoWPAN  -19
-IP      -
-UDP     -
+LoWPAN  - 19
+IP      - 22
+UDP     - 8
 DTLS    -
 CoAP    -
 Protobuf-
