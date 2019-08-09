@@ -20910,18 +20910,19 @@ keystore KeyTable.
 
 -----------------------------------------------------------
 
-PHY     - 
-MAC     - 22
-LoWPAN  - 19
-IP      - 22
-UDP     - 8
-DTLS    - 9
-CoAP    - 72
-Protobuf- 
-AXDR    - 24
-readingdata - 90
+PHY             - 
+MAC             - 22
+LoWPAN          - 19
+IP              - 22
+UDP             - 8
+DTLS            - 9
+CoAP            - 
+Protobuf        -  
+AXDR            - 24
+app metadata    - 
+readingdata     - 90
 
-Total   - 152
+Total   - 194
 
 
 
