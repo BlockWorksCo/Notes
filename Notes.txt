@@ -20927,5 +20927,13 @@ Total   - 263
 = 34% efficient.
 
 
+--------------------------
+SMIP sftp
+
+sftp.cyco.io
+
+/Data/Temp/SMIPDrop1
+
+
 
 
