@@ -20911,8 +20911,8 @@ keystore KeyTable.
 -----------------------------------------------------------
 
 PHY     - 
-MAC     -
-LoWPAN  -
+MAC     - 26
+LoWPAN  -19
 IP      -
 UDP     -
 DTLS    -
