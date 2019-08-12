@@ -20944,5 +20944,12 @@ sftp.cyco.io
 3G HSPA+
 LTE
 
+-----------------------------
+
+CoAP timeouts.
+
+handlePiggybackedTimeouts()
+handleRetransmissions();
+
 
 
