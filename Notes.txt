@@ -20935,6 +20935,9 @@ sftp.cyco.io
 
 /Data/Temp/SMIPDrop1
 
+sftp smip@sftp.cyco.io
+/home/toshiba/upload
+
 ------------------------------------------------------
 
 2G
