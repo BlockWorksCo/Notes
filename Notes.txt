@@ -20951,5 +20951,8 @@ CoAP timeouts.
 handlePiggybackedTimeouts()
 handleRetransmissions();
 
+"session %d (%s): sending message, try #%d of %d, next in %d ms"
+"session %d (%s): sending message, try #%d of %d"
+
 
 
