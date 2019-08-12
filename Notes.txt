@@ -20935,6 +20935,14 @@ sftp.cyco.io
 
 /Data/Temp/SMIPDrop1
 
+------------------------------------------------------
+
+2G
+2G EDGE
+3G HSPA
+3G HSUPA
+3G HSPA+
+LTE
 
 
 
