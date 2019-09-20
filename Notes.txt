@@ -21994,7 +21994,10 @@ EFM32GG12B810F1024GM64
 - 1024KB FLASH
 - 192KB RAM
 - QFN64
-- 2xI2C
+- I2C0 - to mesh NICs
+- US0 - Cellular
+- US1 - meter
+- U1 - Debug
 
 
 
