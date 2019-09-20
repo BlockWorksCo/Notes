@@ -22021,6 +22021,19 @@ openssl req -new -key Server.key -out Server.csr -sha256 -subj "/C=SE/ST=Stockho
 
 openssl x509 -req -in Server.csr -days 3650 -CA /Data/Projects/terminal/tools/c4-tools/cert/ec/root.crt -CAkey /Data/Projects/terminal/tools/c4-tools/cert/ec/root.key -CAcreateserial -out Server.crt
 
+-------------------------------------------
+
+Generate server security RSA pair
+#without password
+openssl genrsa -out nopass.pem 2048
+openssl rsa -in nopass.pem -pubout | tee nopass.pem.pub
+ 
+ 
+#with password
+openssl genrsa -des3 -out pass.pem 2048
+openssl rsa -in pass.pem -pubout | tee pass.pem.pub
+
+
 
 
 
