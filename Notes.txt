@@ -22034,6 +22034,43 @@ openssl genrsa -des3 -out pass.pem 2048
 openssl rsa -in pass.pem -pubout | tee pass.pem.pub
 
 
+Or...
+
+#!/bin/bash
+set -e
+CURVE=secp224r1
+ 
+#create root key
+openssl ecparam -out root.key -name ${CURVE} -genkey
+#create self signed root cert
+openssl req -new -key root.key -x509 -nodes -days 3650 -out root.crt -keyout root2.key -subj "/C=SE/ST=Stockholm/L=Stockholm/O=Connode AB/OU=R&D/CN=c4.connode.com"
+#create server key
+openssl ecparam -out server.key -name ${CURVE} -genkey
+#generate server CSR
+openssl req -new -key server.key -out server.csr -subj "/C=SE/ST=Stockholm/L=Stockholm/O=Connode AB/OU=R&D/CN=testserver.connode.com"
+#sign server CSR
+openssl x509 -req -in server.csr -CA root.crt -CAkey root.key -CAcreateserial -out server.crt -days 3650
+#create client key
+openssl ecparam -out client.key -name ${CURVE} -genkey
+#generate client CSR
+openssl req -new -key client.key -out client.csr -subj "/C=SE/ST=Stockholm/L=Stockholm/O=Connode AB/OU=R&D/CN=testserver.connode.com"
+#sign client CSR
+openssl x509 -req -in client.csr -CA root.crt -CAkey root.key -CAcreateserial -out client.crt -days 3650
+ 
+#create keystore
+keytool -import -keystore server.keystore -storepass "Connode" -file root.crt -alias client -trustcacerts
+openssl pkcs12 -export -in server.crt -inkey server.key -out server.p12 -name server -CAfile root.crt -caname root
+keytool
+ -importkeystore -deststorepass Connode -destkeypass Connode
+-destkeystore server.keystore -srckeystore server.p12 -srcstoretype
+PKCS12 -srcstorepass Connode -alias server
+ 
+cp root.key root-key.pem
+cp server.key server-key.pem
+cp server.crt server-cert.pem
+cp client.key client-key.pem
+cp client.crt client-cert.pem
+
 
 
 
