@@ -22007,12 +22007,21 @@ sudo ip -6 add add fd00::1 dev enp0s3
 
 --------------------------------------------------------
 
+server credentials keys cert
+https://confluence.cyco.io/display/ENG/PKI+infrastructure+description
+
 openssl ecparam -genkey -out Server.key -name prime256v1
 
 # Backup generated key:
 $ cp Server.key Server_passwordless_backup.key
 # Assign the password:
 $ openssl ec -in Server_passwordless_backup.key -des -passout pass:1234 -out Server.key
+
+openssl req -new -key Server.key -out Server.csr -sha256 -subj "/C=SE/ST=Stockholm/L=Stockholm/O=Connode AB/OU=R&D/CN=C4 Server"
+
+openssl x509 -req -in Server.csr -days 3650 -CA /Data/Projects/terminal/tools/c4-tools/cert/ec/root.crt -CAkey /Data/Projects/terminal/tools/c4-tools/cert/ec/root.key -CAcreateserial -out Server.crt
+
+
 
 
 
