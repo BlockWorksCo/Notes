@@ -20780,11 +20780,29 @@ mbus/device-mbus-mbus.c:
 
 mbus/device-mbus-mdreading.c:
 mbus/device-mbus-ondemand.c:
+- 41,142 "#if 0" code
+- 136, exit1, exit2, exit3, exit4 need more descriptive names... normalExit?, errorExit?
+- 237 LOG_DEBUG format not searchable and confusing.
 mbus/device-mbus-readout.c:
+- no file header.
+- min_uint32() Lets use standard MIN/MAX.
 mbus/device-mbus-register.c:
 mbus/device-mbus-uart.c:
+- 500, debug code not needed.
+- 510: "while (in_isr)" not needed. it can't be executing while in the ISR.
 mbus/device-mbus-watchdog.c:
+- Not clear why we need a watchdog module. We should just have watchdogFeed() calls at critical points.
+- LOG_DEBUG("%s%s%s %s", "", "start", "ing", "watchdog schedule"); (and others).
+- 76, 43 Commented out debug code.
 mbus/mbus-utils.c:
+
+jprintf.c
+- Unnecessary change that affects all builds.
+
+axdr.c:
+- DLMS_Date_create style() and others is wrong doesn't fit.
+- 810 commented out code. Also looks like we already have this, check dlms.c.
+- Also, DLMS_Date_to_tm may be duplicated.
 
 -----------------------------------------
 
@@ -20910,22 +20928,55 @@ keystore KeyTable.
 
 -----------------------------------------------------------
 
-PHY             - 
-MAC             - 22
-LoWPAN          - 19
-IP              - 22
-UDP             - 8
-DTLS            - 9
-CoAP            - 6 
-Protobuf        - 28 
-AXDR            - 24
-app metadata    - 36
-readingdata     - 90
+radio overhead:
+https://confluence.cyco.io/display/ENG/%5BFuncSpec%5D+C4+-+Radio+Mesh+Performance+Model
 
-Total   - 263
 
-= 34% efficient.
+data packet:
+(assuming 3xlowpan packets).
 
+PHY                 - 24 = 3*8  = (Preamble + SFD + PHR)
+MAC                 - 69 = 3*23
+6LoWPAN (ipv6+udp)  - 58 = 48+5+5
+DTLS                - 49  = 13 + 36 (seq num, IV and hash)
+CoAP                - 11 
+Protobuf            - 28 
+AXDR                - 24
+app metadata        - 36
+readingdata         - 90
+
+Total   - 389
+
+Response packet to above is approx:
+
+PHY                 - 8 = 1*8  = (Preamble + SFD + PHR)
+MAC                 - 23 = 1*23
+6LoWPAN (ipv6+udp)  - 48 = 48
+DTLS                - 49  = 13 + 36 (seq num, IV and hash)
+CoAP                - 11 
+
+Total   - 139
+
+total transferred 389+139 = 528
+
+= 17% efficient.
+
+
+
+new:
+
+(assuming 2xlowpan packets).
+
+PHY                 - 16 = 2*8  = (Preamble + SFD + PHR)
+MAC                 - 46 = 2*23
+6LoWPAN (ipv6+udp)  - 53 = 48+5
+readingdata         - 90
+
+Total   - 205
+
+= 43% efficient.
+
+!! but only point-to-point encryption on mesh, no end-to-end !!
 
 --------------------------
 SMIP sftp
@@ -20956,6 +21007,986 @@ handleRetransmissions();
 
 "session %d (%s): sending message, try #%d of %d, next in %d ms"
 "session %d (%s): sending message, try #%d of %d"
+
+
+gateway proxy
+- Nodes send mq elements to mq-proxy running on gw.
+- mq-proxy then packages them for transmission over uplink to server.
+- mq-proxy handles the ACKs and retransmissions.
+- Failures are handled by retransmission (over uplink) and subsequent dropping of message in same way as happens on originating node.
+- Removes ACK-load from mesh, reducing contention and allowing more meters on mesh.
+- packets on mesh get ACKs without contention (due to ETSI & LBT). CoAP responses/ACKs come with contention.
+- In theory also allows nodes to not put samples in mq for NIC7.
+- Packing would be more optimal, tuned for cellular packet-sizes and able to take multiple readings from multiple nodes at every
+sampling interval.
+
+
+----------------------------------------------------
+
+/tools/c4-tools/upload_smip.py -r /Data/Temp/m2m_v98-7_apz.bin -p /dev/serial/by-id/usb-Telit_6_CDC-ACM_004678058002915-if08
+
+
+
+----------------------------
+
+Gateway Recommendations:
+- Increase table size to not be route-list-limited (10KB should hold 500).
+- Allow a duty-cycle-reserve so RPL packets can never be duty-cycle limited.
+- Prioritise RPL packets over data packets to hold the mesh together.
+- Implement a proxy-mq to half the number of mq-generated packets on the mesh (Increase FLASH?).
+- Compress and coalesce packets in the proxy-mq to make better use of uplink-bandwidth (increase RAM?).
+- Increase modem-uart bandwidth to remove this as a bottleneck.
+- Reduce data overhead by removing AXDR, protobuf, CoAP and application metadata overhead (move to discovery phase).
+- Implement an application-level transmit scheduling scheme on gateway.
+- Implement frequency-agility in network-planning (currently enabled but not used as gws need to be assigned static channels).
+- Scheduled uplink-network-agility to make better use of cellular. Can we do this without reforming mesh on network-change?
+
+
+
+----------------------------------
+
+Kaifa response:
+1. For transfer of a data-item *into* the node, the node polls the register periodically to detect changes and uses the item when changed.
+For transfer *out* of the node, the node writes the value to the register. The test-equipment can then read the value from the register (polling).
+
+2. The "128.x" is chosen to due to it being a manufacturer-specific OBIS code in the schema.
+
+3. The CCMTRFD can be supplied.
+
+4. The node has no way of performing radiated power test. It can only report what it is configured to try. This value will be as configured.
+The RSSI of the ping packets from the CCMTRFD is written into a register in the meter periodically. The test-equipment can read it from the meter.
+
+5. PFAIL and EVENT lines need to be triggered by the test-equipment. The node detects this and toggle the LED lines at specific rates. 
+The test-equipment shall detect this indication.
+
+The manufacturing-test software is the PC running ctrlporthub & coap_request. This is for testing *modules* via the debug port, not within meters.
+
+6. the sense of the nEVENT line is different for Kaifa meters. This is for compatibility reasons.
+
+
+--------------------------------------------------
+
+radio specs and performance:
+
+https://confluence.cyco.io/display/ENG/%5BFuncSpec%5D+C4+-+Radio+Mesh+Performance+Model
+
+- PHY supports up to 2048 byte frames.
+- 
+
+------------------------------------------
+
+rack of nodes 16 nodes
+./RunRack.sh
+cat serialPortsToMonitor
+cat /tmp/RunCtrlporthub
+
+tail -f /tmp/ctrlporthub.log 
+~/ForEach.sh --restart
+
+----------------------------------------------------
+
+Upgrade NCP
+
+
+stop CH booting up app:
+AT#M2MRUN=0
+
+
+utilities folder in scimitar_ch/CommsHubFramework/utils/target_binary_download.py
+
+NCP_FIRMWARE_DIR ='/fileservice/special/slot2'
+NCP_FIRMWARE_FILENAME = 'slot2.slt'
+
+/fileservice/special/slot2/slot2.slt for NCP OTA image.
+
+python target_binary_download.py m2mapz.bin /dev/ttyACM0 8 -CID 8873845300000856 -GID 887384FF00000856 --settings_path Device_SKU1.txt --ncp_firmware_path em357-FW_4_5_0_7.ota -run
+
+python target_binary_download.py /Data/Temp/m2m_v98-3_apz.bin /dev/ttyACM0 8 --ncp_firmware_path /Data/Temp/em357-SingleB-FW_6_3_2_37.ota 
+
+
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM0 --ls /
+
+./tools/c4-tools/upload_smip.py -p /dev/ttyACM0 --ls /fileservice/special/slot2
+
+
+--> AT#M2MCHDIR="/fileservice/"
+AT#M2MCHDIR="/fileservice/"
+OK
+--> AT#M2MLIST
+AT#M2MLIST
+#M2MLIST: <.>
+#M2MLIST: <..>
+#M2MLIST: <firmware>
+#M2MLIST: <database>
+#M2MLIST: <certificate>
+#M2MLIST: <selftest>
+#M2MLIST: <connode>
+#M2MLIST: free bytes: 19142656
+
+
+ubuntu@stevesworklaptop:/Data/Projects/ScimitarUtils$ python target_binary_download.py /Data/Temp/m2m_v98-3_apz.bin /dev/ttyACM0 8 
+> AT+M2M?
++M2M: 4,10,0
+OK
+> AT+M2M=0
+OK
+Forcing hardware reset using watchdog
+> AT+M2M?
++M2M: 0,10,0
+OK
+> AT#M2MCHDRIVE?
+#M2MCHDRIVE: 0
+OK
+> AT#PORTCFG?
+#PORTCFG: 8,8
+OK
+ ....going to delete_settings_file
+deleting filename: slot0.slt
+deleting filename: slot1.slt
+deleting filename: slot2.slt
+deleting filename: slot3.slt
+deleting filename: slot4.slt
+deleting filename: slot6.slt
+deleting filename: m2mapz.bin
+deleting filename: slot8.slt
+ ....going to delete_certificate_files
+deleting filename: slot0.slt
+deleting filename: slot1.slt
+deleting filename: slot4.slt
+deleting filename: slot5.slt
+deleting filename: slot25.slt
+deleting filename: slot29.slt
+ ....going to delete_certificate_file_connode
+ ... Downloading file m2mapz.bin to target.
+> AT#M2MWRITE="m2mapz.bin",1739620,1
+>>>
+
+
+OK
+
+> AT#M2MRUN=2,"m2mapz.bin"
+OK
+ ... The application m2mapz.bin should be downloaded on target.
+ ....setting modem configuration for WANMGR
+> AT+CFUN=1
+OK
+> AT#SIMDET=1
+OK
+> AT+CGREG=1
+OK
+> AT+CGEREP=2,0
+OK
+> AT#NITZ=0
+OK
+> AT+CGCLASS=CG
+OK
+> AT#AUTOATT=1
+OK
+> AT#ICMP=2
+OK
+> AT#PSNT=1
+OK
+> AT+CFUN=4
+OK
+> AT&P
+#PSNT: 4
+OK
+> AT&W
+OK
+Adding hash to target for binary /Data/Temp/m2m_v98-3_apz.bin
+> AT#M2MWRITE="slot4.slt",32
+>>>
+OK
+>file write of tempHash.txt on \fileservice\firmware\slot4\slot4.slt Done
+
+---------------------------------------------------------
+
+In order to upgrade zigbee NCP firmware:
+
+Note that Linux will hangup the line on /dev/ttyACMx after the last close, causing the AT parser
+on the modem to die.
+To prevent this, open python and do "f=open("/dev/ttyACM0")" and leave that open. With that device
+open (but not being read) the following script(s) can complete ok.
+
+
+ubuntu@stevesworklaptop:/Data/Projects/ScimitarUtils$ python target_binary_download.py m2mapz.bin /dev/ttyACM0 8 --ncp_firmware_path em357-SingleB-FW_6_3_2_37.ota 
+> AT+M2M?
++M2M: 0,10,0
+OK
+> AT#M2MCHDRIVE?
+#M2MCHDRIVE: 0
+OK
+> AT#PORTCFG?
+#PORTCFG: 8,8
+OK
+ ....going to delete_settings_file
+ ....going to delete_certificate_files
+ ....going to delete_certificate_file_connode
+ ... Downloading file m2mapz.bin to target.
+> AT#M2MWRITE="m2mapz.bin",1759568,1
+>>>
+
+
+> AT#M2MRUN=2,"m2mapz.bin"
+OK
+ ... The application m2mapz.bin should be downloaded on target.
+ ....setting modem configuration for WANMGR
+> AT+CFUN=1
+OK
+> AT#SIMDET=1
+OK
+> AT+CGREG=1
+OK
+> AT+CGEREP=2,0
+OK
+> AT#NITZ=0
+OK
+> AT+CGCLASS=CG
+OK
+> AT#AUTOATT=1
+OK
+> AT#ICMP=2
+OK
+> AT#PSNT=1
+OK
+> AT+CFUN=4
+OK
+> AT&P
+OK
+> AT&W
+OK
+Adding hash to target for binary m2mapz.bin
+> AT#M2MWRITE="slot4.slt",32
+>>>
+OK
+>file write of tempHash.txt on \fileservice\firmware\slot4\slot4.slt Done
+Adding NCP firmware update OTA image to target.
+> AT#M2MWRITE="slot2.slt",155684
+>>>
+OK
+>file write of em357-SingleB-FW_6_3_2_37.ota on \fileservice\special\slot2\slot2.slt Done
+
+
+----------------------------------------------
+
+SMIPDEV-26:
+- with rebuilt code with new CH code & same library that caused demo-failure (ie. SPI lockup)
+- ch15.log
+- "C4_Task.c,760: MESH Radio chip failure"
+- Suspect this is due to SPI contention between RNG and Radio.
+
+  563 [     42.341][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,693: HAN Interface Enabled/Disabled status = 1
+  564 [     42.347][yyyy-mm-dd hh:mm:ss][ info][CHF               ]CHF_FwActivate.c,851: Rollback check timer not needed as roll-back or activation not ongoing
+  565 [     42.360][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,711: HAN Interface_Enabled = TRUE
+  566 [     42.363][yyyy-mm-dd hh:mm:ss][ info][CHF               ]CHF_FwActivate.c,942: toBeActivatedFirmware set to 0
+  567 [     42.395][yyyy-mm-dd hh:mm:ss][ info] PAN Id 19D5, Extended PAN id 887384FF0000092C
+  568 [     42.397][yyyy-mm-dd hh:mm:ss][ info][CHF               ]CALENDAR_Service.c,294: Retrieving CHF future dated commands
+  569 [     42.401][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,1027: LastHANConfigurationChangeTime =FF FF FF FF
+  570 [     42.403][yyyy-mm-dd hh:mm:ss][ info][CHF               ]CALENDAR_Service.c,1764: Number of future dated command restored : 0
+  571 [     42.404][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,834: node ID  value = 0
+  572 [     42.406][yyyy-mm-dd hh:mm:ss][ info][CHF               ]CHF_Task.c,1644: No future dated CHF commands
+  573 [     42.409][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,897: firmware version = 
+  574 [     42.411][yyyy-mm-dd hh:mm:ss][ info][CHF               ]CHF_Task.c,1653: Added GPF GUID in CHF device log =88-73-84-ff-00-00-09-2c
+  575 [     42.412][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,921: model number = PA5235D-B4B3
+  576 [     42.414][yyyy-mm-dd hh:mm:ss][ info][CHF               ]TASK_Base.c,214: **** Run operations for task CHF end.
+  577 [     42.416][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,950: manufacturer id =ZF105985DT
+  578 [     42.419][yyyy-mm-dd hh:mm:ss][ info] HAN 2.4GHz Channel 24
+  579 [     42.421][yyyy-mm-dd hh:mm:ss][debug][  rpl/task        ]0: Going to state disabled
+  580 [     42.422][yyyy-mm-dd hh:mm:ss][debug][  conman          ]LoWPAN prefix unset from RPL
+  581 [     42.425][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]C4_Task.c,1080: Mesh Agent running
+  582 [     42.427][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]TASK_Base.c,214: **** Run operations for task C4_Task end.
+  583 [     42.431][yyyy-mm-dd hh:mm:ss][ERROR][C4_Task           ]DEVICE_Task.c,2947: MESH SELF-TEST FAILED!!
+  584 [     42.434][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]LED_Service.c,116: SetLED, LED:MESH, Freq(state):HIGH_FREQ
+  585 [     42.447][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG e1d08da7 **
+  586 [     42.458][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]LOGGING_Service.c,809: [DMM CHF Event Log: Write Entry]: C:C401
+  587 [     42.470][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG 69954f05 **
+  588 [     42.476][yyyy-mm-dd hh:mm:ss][RESET][C4_Task           ]C4_Task.c,760: MESH Radio chip failure
+  589 [     42.495][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG 7325d7ab **
+  590 [     42.500][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]DEVICE_Task.c,1731: Re-boot cause set to 5
+  591 [     42.503][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]LOGGING_Service.c,614: [DMM Reboot Log: Write entry: Reason=1
+  592 [     42.520][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG 4e3ea04e **
+  593 [     42.522][yyyy-mm-dd hh:mm:ss][ info][Supervisor        ]SUPERVISOR_Task.c,480: SHUTDOWN requested: reason 0
+  594 [     42.535][yyyy-mm-dd hh:mm:ss][ info][Ezsp              ]interpan-host.c,88: Mac filter List Enable status = 0x00
+  595 [     42.538][yyyy-mm-dd hh:mm:ss][ info][Power             ]POWER_Task.c,350: power_Shutdown
+  596 [     42.542][yyyy-mm-dd hh:mm:ss][ info][Ezsp              ]interpan.c,285: Interpan is Disabled
+  597 [     42.545][yyyy-mm-dd hh:mm:ss][ WARN][Ezsp              ]telit-stubs.c,297: [ASH:TraceEvent] ======== ASH stopped ========
+
+  598 [     42.547][yyyy-mm-dd hh:mm:ss][ WARN][Ezsp              ]CH_osal_ezsp.c,5171: EZSP state is set as : EZSP_SHUTDOWN
+  599 [     42.551][yyyy-mm-dd hh:mm:ss][ info][Ezsp              ]ota-storage-telit.c,265: Closing the Ota Server File Store.
+  600 [     42.553][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG 2fb0aec3 **Sent shutdown message to supervisor task - assert reboot
+  610 [     42.564][yyyy-mm-dd hh:mm:ss][ info][C4_Task           ]C4_Task.c,1102: taskc4_Shutdown
+  611 [     42.581][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG 021a1f60 **
+  612 [     42.583][yyyy-mm-dd hh:mm:ss][ info][  terminal        ]Shutting down
+  613 [     42.590][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,984: Channel mask value is = 7fff800
+  614 [     42.607][yyyy-mm-dd hh:mm:ss][ info][FwDownload        ]FwDownload_Task.c,2197: Shutting down FwDownload Task
+  615 [     42.620][yyyy-mm-dd hh:mm:ss][ info][HANmanager        ]HANMGR_HANInterface.c,1014: stack profile value is =2
+  616 [     42.639][yyyy-mm-dd hh:mm:ss][ info][FwDownload        ]FwDownload_Task.c,1578: FwDownload.State setting updated to 1
+  617 [     42.642][yyyy-mm-dd hh:mm:ss][debug][  cc1200          ]** RNG 26223bc9 **
+  618 [     42.656][yyyy-mm-dd hh:mm:ss][ info][FwDownload        ]FwDownload_Task.c,1578: FwDownload.Interruptions setting updated to 0
+  619 [     42.669][yyyy-mm-dd hh:mm:ss][ info][FwDownload        ]FwDownload_Task.c,1578: FwDownLoad.RetryCounterOuter setting updated to 0
+  620 [     42.682][yyyy-mm-dd hh:mm:ss][ info][FwDownload        ]FwDownload_Task.c,1578: FwDownload.OngoingFwDownloadType setting updated to 0
+
+
+----------------------------------
+
+When CH in reboot loop..... we get this every boot on ACM0
+
+every 5 seconds or so:
+"#PSNT: 4"
+
+
+--------------------------------------------------------
+
+cers, keys, RLL key for SMIP CH
+
+connode_default_mac_key.bin
+
+upload_smip.py -p ${DEV} -C /connode /tmp/certs/${NID}/agent.key.der /tmp/certs/${NID}/agent.crt.der /tmp/certs/${NID}/ca.crt.der
+
+NOTE: Must be named as above.
+
+Is SECCREDENTIALS_InternKeyChfMeshRllEnum only set during manufacture?
+
+---------------------------------------------------------
+
+Wireshark
+
+display filter:
+
+wpan.src64 == 00:1b:c5:0c:60:06:73:dd
+
+wpan.src64 == 00:1b:c5:0c:60:06:73:dd || wpan.dst64 == 00:1b:c5:0c:60:06:73:dd || wpan.src64 == 00:1b:c5:0c:60:06:73:de || wpan.dst64 == 00:1b:c5:0c:60:06:73:de
+
+---------------------------------------------------------------
+
+SMIP serial issues:
+- Hang-up control kills AT parser on modem
+- holding UART open on host when CH boots means that /dev/ttyACMx will not be enumerated.
+- udev installs its own driver on 18.04
+- USB driver for 16.04 and prior fails with known lockup.
+- flow control is enabled for ports and we do't expect that. Turn it off via stty.
+
+-----------------------------------------------------------
+
+IP level traffic:
+
+- Two profiles, 900s apart instantaneous & block-load
+- one response for each, 85 bytes.
+- 426 bytes for profile 1.
+- 234 bytes for profile 2.
+
+looks like:
+426b -> server
+85b <- server
+234b -> server
+85b <- server
+
+Doing this 96 times per day:
+
+90*426 = 38340B
+90*85 = 7650B
+90*234 = 21060B
+90*85 = 7650B
+
+Total to server per day = 38340 + 21060 = 59400 Bytes
+Total from server per day = 7650 + 7650 = 15300 Bytes
+
+
+-----------------------------------
+
+Speed at PHY layer = 50KBit/s = 6250 bytes/sec
+
+throughput of unACKed UDP packets = 
+throughput of ACKed UDP packets = 
+throughput of confirmed CoAP packets = 
+throughput of unconfirmed CoAP packets = 
+
+--------------------------------------------------
+
+Single hop nodes
+SPDCL 1557/2977     = 52%
+MPWZ 30981/80322    = 38%
+UGVCL 11555/23605   = 48%
+
+
+--------------------------------------------------
+
+RPL Objective function (OF) factors:
+- ETX to route around nodes with local interferers.
+- Hop count to reduce number of transmissions.
+- Cumulative transmitted power to root (can take into account ETX as a multiplier?).
+- Cumulative Number of neighbours to root.
+- Available uplink throughput ().
+- netsize_penality (is this needed?).
+
+
+This probably won't work, but...
+If too much local interference, splinter RPL into a sub-mesh and act as a gateway to route packets
+to the original mesh? It would use the existing radio to change channel for transmit.
+This new type of gateway could have scheduled communications with the real gateway to reduce loss
+due to switching channel.
+
+---------------------------------------------
+
+Upper limit of number of nodes supported:
+
+
+Given a 50Kbps radio providing 6250 Bytes/sec and an 20% overhead for packet management we have 5000 Bytes/sec. 
+If all meters cooperated in an ideal manner to perfectly interleave their packets leading to 0% congestion, we could fill the air with 5000 Bytes/sec of payload (metering) data.  
+One meter produces 90 samples of around 90 bytes of (real) metering data per day ignoring metadata which use <magic> to transfer. This results in 113 bytes of data on-air per packet 90 times per day, per meter. 
+A packet of 113 bytes takes on the order of 3ms to transmit with a 5ms LBT period, making the packet 8ms in total. A single meter, therefore, requires a total of 720ms (8ms*90) airtime per day. 
+Given those values, the medium supports 120,000 meters. 
+
+
+------------------------------------------
+
+- Routing table size
+- Tuning of RPL parameters for large networks
+- Frame size optimisations
+- Management-packet prioritisation.
+- Duty-cycle reservation for management packets.
+- Simplified network planning for frequency agility
+
+- Simple Coordinated transmissions (grouped).
+- Complex Coordinated transmissions (dynamic based on neighbouring nodes).
+- Reducing data requirements
+- UDP to server
+- UDP to gateway (mq-proxy)
+- RPL OF to minimise transmited power along route.
+- RPL OF to minimise number of neighbours along route.
+- RPL OF to factor in available-uplink-capacity.
+- Improved transmit-power control.
+- Improved frequency agility
+- Login token passing
+- Frequency hopping
+- CPU to modem UART link
+- Network planning incorporating more factors.
+- Uplink network agility.
+
+- Increased radio bitrate
+- Physical architecture (modular gateway)
+- Gateway-attached meters.
+- Satellite gateways & high-power in-meter-satellite gateways.
+- Multi radio gateway
+
+-----------------------------------------------
+
+OBISs in the kaifa_ma304 driver.
+
+// Instant
+0x00, 0x00, 0x60, 0x01, 0x00, 0xFF 
+0x00, 0x00, 0x60, 0x01, 0x01, 0xFF 
+0x00, 0x00, 0x01, 0x00, 0x00, 0xFF 
+0x01, 0x00, 0x00, 0x02, 0x08, 0xFF 
+0x01, 0x01, 0x00, 0x02, 0x00, 0xFF 
+0x01, 0x01, 0x00, 0x02, 0x08, 0xFF 
+0x01, 0x00, 0x01, 0x08, 0x00, 0xFF 
+0x01, 0x00, 0x02, 0x08, 0x00, 0xFF 
+0x01, 0x00, 0x03, 0x08, 0x00, 0xFF 
+0x01, 0x00, 0x04, 0x08, 0x00, 0xFF 
+0x01, 0x00, 0x20, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x1F, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x34, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x33, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x48, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x47, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x01, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x02, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x03, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x04, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x0B, 0x23, 0x80, 0xFF 
+0x01, 0x00, 0x0B, 0x23, 0x81, 0xFF 
+0x01, 0x00, 0x0B, 0x23, 0x82, 0xFF 
+0x01, 0x00, 0x0E, 0x07, 0x00, 0xFF 
+0x01, 0x00, 0x0D, 0x07, 0x00, 0xFF 
+0x00, 0x01, 0x5E, 0x1F, 0x04, 0xFF 
+0x00, 0x00, 0x61, 0x62, 0x00, 0xFF 
+0x00, 0x00, 0x60, 0x01, 0x04, 0xFF 
+
+
+// Energy load
+{ { 0x01, 0x00, 0x63, 0x01, 0x00, 0xFF }, 0, NULL,
+
+// Power quality
+{ { 0x01, 0x00, 0x63, 0x02, 0x00, 0xFF }, 0, NULL,
+
+// MBUS load
+{ { 0x00, 0x00, 0x18, 0x03, 0x00, 0xFF }, 0, NULL,
+
+
+{ 0x01, 0x01, 0x00, 0x02, 0x00, 0xFF }, // Firmware identifier
+{ 0x01, 0x00, 0x00, 0x02, 0x08, 0xFF }, // Firmware signature
+{ 0x01, 0x01, 0x00, 0x02, 0x08, 0xFF }, // Firmware signature
+{ 0x00, 0x00, 0x60, 0x01, 0x04, 0xFF }, // EUI-64
+
+
+------------------------------------------------
+
+MEA estimation:
+
+Assumptions:
+- PanMesh server
+- Calendar via device-op
+- meter-upgrade via old "metadata-in-filename" mechanism.
+
+
+Estimate:
+- Meterupgrade; Can take in the meter-upgrade module fairly easily (3d) but getting it working with the meter may take longer (new integration). (2w)
+- Calendar; With device-op, should work, but will take a little scripting on server-side (3d)
+- Get build up to date (3d).
+- Meter events; make the Agents "complex-profile" reading code get the events-profile data and send to server (1w).
+- Time sync; Probably not worth taking this from Omnimesh and just do a time-set periodically on a cron/schedule (much simpler). (3d)
+
+So, 5 weeks (ish) in total sounds fair.
+
+
+
+-------------------------------
+
+git add remote gerrit ssh://stevetickle@gerrit.cyco.io:222/terminal
+
+git push ssh://stevetickle@gerrit.cyco.io:222/terminal HEAD:refs/for/master
+
+--------------------------------------
+
+git show 10949171b8
+
+duty cycle change from 10->100 after version ....
+
+
+change 10949171b8 happened on Thu Jan 10 11:17:44 2019 +0000
+tag prior to 10949171b8 is v142.2
+tag after to 10949171b8 is v142.3
+
+git tags with dates:
+
+git log --tags --simplify-by-decoration --pretty="format:%ai %d"
+
+2019-01-16 18:38:43 +0000  (tag: v142.3, tag: OMNIMESH_6.1)
+2019-01-03 12:33:39 +0000  (tag: v142.2)
+
+
+--------------------------------------------------
+
+We have a build breakage on master as a result of ipa3b-mbus being put into CI builds.
+
+src/device/drivers/mbus/device-mbus.c: In function 'task_put':
+src/device/drivers/mbus/device-mbus.c:140:13: error: this statement may fall through [-Werror=implicit-fallthrough=]
+             ++s_userQueue_dropped;
+             ^~~~~~~~~~~~~~~~~~~~~
+src/device/drivers/mbus/device-mbus.c:142:9: note: here
+         default:
+         ^~~~~~~
+cc1: all warnings being treated as errors
+
+Got a changeset to fix it (https://gerrit.cyco.io/#/c/12585/) 
+Oddly, it appears that it's failing on the build-server but not locally.
+
+---------------------------------
+RPL rank
+
+The RPL RFC  describes it like this: (https://tools.ietf.org/html/rfc6550#page-20)
+
+DAGRank(M) is less than DAGRank(N):
+      In this case, the position of M is closer to the DODAG root than
+      the position of N.  Node M may safely be a DODAG parent for Node N
+      without risk of creating a loop.  Further, for a Node N, all
+      parents in the DODAG parent set must be of a Rank less than
+      DAGRank(N).  In other words, the Rank presented by a Node N MUST
+      be greater than that presented by any of its parents.
+
+
+-----------------------------------------------------------
+
+RPL issue with continuous churn in RPL network
+
+unreliable networks get penalised
+
+RPL_UNRELIABLE_DAG_PENALTY
+
+
+
+----------------------------------------------
+
+duty-cycle test:
+
+before:
+agent-ipa3-lnt-dlms-insecure-v125.2.1.elf
+mac.dutycycle.limit                      : 10
+mac.dutycycle.buffer                     : 1000
+
+
+after:
+agent-ipa3b-lnt-dlms-insecure-v151.2.31+dirty.elf
+2019-09-06 11:19:01.963 #1   001bc50c6004fdd6 <log> 0:00:00.982 [debug] [    terminal] { terminal}: !! Warning, bad duty cycle detected, correcting (10/1000) !! 
+mac.dutycycle.limit                      : 100
+mac.dutycycle.buffer                     : 1000
+
+
+-----------------------------------------------------------------
+- 9f2ec671252fa9ca7ad83ffd683fbe5e6bd7eaae CND-9599 Duty-cycle correction
+- 6ee676b952987309783abec34f698e53111cee3a Updated Gitlab CI to build HMP and latest build-tools
+- 63bb71bd56384f198370f104490cf0b49d206418 Gitlabify the project
+- 09d894b1bb5ea7956c38d09eb388530f1a935bdf Revert the NIC7 build to an IPA3 bootloader
+- af519aed0bfbf44e93e446eb093d4dcd1681b4f6 CND-9492 : SMA Agent - powerSwitch status request returns invalid state
+
+
+---------------------------------------
+
+[Fri Sep  6 14:42:47 2019] [04:37:52.115] 1567777367 16672115 dlms	dlms	tx unencrypted: (1/2): c30181000f0000280000ff010109109e
+[Fri Sep  6 14:42:47 2019] [04:37:52.115] 1567777367 16672115 dlms	dlms	tx unencrypted: (2/2): f01c96319e989964b036bd46d3217e
+[Fri Sep  6 14:42:47 2019] [04:37:52.383] 1567777367 16672383 dlms	dlms	Encrypted:: (1/3): 29300005113ddf7a8520fa194bb67a9b
+[Fri Sep  6 14:42:47 2019] [04:37:52.383] 1567777367 16672383 dlms	dlms	Encrypted:: (2/3): cf1cff31aad969761a963e37cabc1e63
+[Fri Sep  6 14:42:47 2019] [04:37:52.383] 1567777367 16672383 dlms	dlms	Encrypted:: (3/3): fb7f456a003d68d3b69b
+[Fri Sep  6 14:42:47 2019] [04:37:52.385] 1567777367 16672385 dlms	dlms	rx decrypted: (1/2): c701810001000910c0bba41b053b9b78
+[Fri Sep  6 14:42:47 2019] [04:37:52.385] 1567777367 16672385 dlms	dlms	rx decrypted: (2/2): 4cec183f552e8ad6
+[Fri Sep  6 14:42:47 2019] [04:37:52.385] 1567777367 16672385 dlms	dlms	COSEM AA with HLS setup is accepted
+[Fri Sep  6 14:42:47 2019] [04:37:52.386] 1567777367 16672386 dlms	dlms	DLMS result is 0 bytes with code 0
+[Fri Sep  6 14:42:47 2019] [04:37:52.604] 1567777367 16672604 dlms	dlms	Encrypted:: (1/2): 16300005113ed788890787130e0daaba
+[Fri Sep  6 14:42:47 2019] [04:37:52.604] 1567777367 16672604 dlms	dlms	Encrypted:: (2/2): 46b2f508b5e2fa
+[Fri Sep  6 14:42:47 2019] [04:37:52.605] 1567777367 16672605 dlms	dlms	rx decrypted: (1/1): c701810103
+[Fri Sep  6 14:42:47 2019] [04:37:52.614] 1567777367 16672614 dlms	dlms	Action Response result: hw fault
+[Fri Sep  6 14:42:47 2019] [04:37:52.622] 1567777367 16672622 dlms	dlms	processXDlmsApdu(24 B): failed
+[Fri Sep  6 14:42:47 2019] [04:37:52.622] 1567777367 16672622 dlms	dlms	DLMS result is 0 bytes with code 12
+
+<ActionRequest>
+  <ActionRequestNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <MethodDescriptor>
+      <!--ASSOCIATION_LOGICAL_NAME-->
+      <ClassId Value="000F" />
+      <!--0.0.40.0.0.255-->
+      <InstanceId Value="0000280000FF" />
+      <MethodId Value="01" />
+    </MethodDescriptor>
+    <MethodInvocationParameters>
+      <OctetString Value="9EF01C96319E989964B036BD46D3217E" />
+    </MethodInvocationParameters>
+  </ActionRequestNormal>
+</ActionRequest>
+
+<ActionResponse>
+  <ActionResponseNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <Result Value="Success" />
+    <ReturnParameters>
+      <Data>
+        <OctetString Value="C0BBA41B053B9B784CEC183F552E8AD6" />
+      </Data>
+    </ReturnParameters>
+  </ActionResponseNormal>
+</ActionResponse>
+
+
+[Fri Sep  6 14:42:47 2019] [04:37:52.604] 1567777367 16672604 dlms	dlms	Encrypted:: (1/2): 16300005113ed788890787130e0daaba
+[Fri Sep  6 14:42:47 2019] [04:37:52.604] 1567777367 16672604 dlms	dlms	Encrypted:: (2/2): 46b2f508b5e2fa
+[Fri Sep  6 14:42:47 2019] [04:37:52.605] 1567777367 16672605 dlms	dlms	rx decrypted: (1/1): c701810103
+[Fri Sep  6 14:42:47 2019] [04:37:52.614] 1567777367 16672614 dlms	dlms	Action Response result: hw fault
+
+<Data="300005113ED788890787130E0DAABA46B2F508B5E2FA" />
+
+<ActionResponse>
+  <ActionResponseNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <Result Value="HardwareFault" />
+    <ReturnParameters>
+      <DataAccessError Value="HardwareFault" />
+    </ReturnParameters>
+  </ActionResponseNormal>
+</ActionResponse>
+
+
+
+---------------------------------------------------
+
+[Fri Sep  6 15:15:35 2019] [05:10:40.852] 1567779335 18640852 dlms	dlms	rx decrypted: (9/30): 060000178c060000178c060000000006
+[Fri Sep  6 15:15:35 2019] [05:10:40.852] 1567779335 18640852 dlms	dlms	rx decrypted: (10/30): 00000000020b090c07e3081aff000fff
+[Fri Sep  6 15:15:35 2019] [05:10:40.853] 1567779335 18640853 dlms	dlms	rx decrypted: (11/30): ff014a00060000000006000000000600
+[Fri Sep  6 15:15:35 2019] [05:10:40.853] 1567779335 18640853 dlms	dlms	rx decrypted: (12/30): 0005fc060000621e06000060e0060000
+[Fri Sep  6 15:15:35 2019] [05:10:40.853] 1567779335 18640853 dlms	dlms	rx decrypted: (13/30): 60b30600001ef706000021d706000000
+[Fri Sep  6 15:15:35 2019] [05:10:40.854] 1567779335 18640854 dlms	dlms	rx decrypted: (14/30): 000600000000020b090c07e3081aff00
+[Fri Sep  6 15:15:35 2019] [05:10:40.854] 1567779335 18640854 dlms	dlms	rx decrypted: (15/30): 1effff014a0006000000000600000000
+[Fri Sep  6 15:15:35 2019] [05:10:40.854] 1567779335 18640854 dlms	dlms	rx decrypted: (16/30): 06000007a0060000625c060000611c06
+[Fri Sep  6 15:15:35 2019] [05:10:40.855] 1567779335 18640855 dlms	dlms	rx decrypted: (17/30): 0000608d06000027380600002cf70600
+[Fri Sep  6 15:15:35 2019] [05:10:40.855] 1567779335 18640855 dlms	dlms	rx decrypted: (18/30): 0000000600000000020b090c07e3081a
+[Fri Sep  6 15:15:35 2019] [05:10:40.855] 1567779335 18640855 dlms	dlms	rx decrypted: (19/30): ff002dffff014a000600000000060000
+[Fri Sep  6 15:15:35 2019] [05:10:40.856] 1567779335 18640856 dlms	dlms	rx decrypted: (20/30): 000006000006bc060000628a06000061
+[Fri Sep  6 15:15:35 2019] [05:10:40.856] 1567779335 18640856 dlms	dlms	rx decrypted: (21/30): 3e06000060a706000027500600002750
+[Fri Sep  6 15:15:35 2019] [05:10:40.856] 1567779335 18640856 dlms	dlms	rx decrypted: (22/30): 06000000000600000000020b090c07e3
+[Fri Sep  6 15:15:35 2019] [05:10:40.857] 1567779335 18640857 dlms	dlms	rx decrypted: (23/30): 081aff0100ffff014a00060000000006
+[Fri Sep  6 15:15:35 2019] [05:10:40.857] 1567779335 18640857 dlms	dlms	rx decrypted: (24/30): 00000000060000050406000062c50600
+[Fri Sep  6 15:15:35 2019] [05:10:40.858] 1567779335 18640858 dlms	dlms	rx decrypted: (25/30): 00616606000061080600001c00060000
+[Fri Sep  6 15:15:35 2019] [05:10:40.858] 1567779335 18640858 dlms	dlms	rx decrypted: (26/30): 1c0006000000000600000000020b090c
+[Fri Sep  6 15:15:35 2019] [05:10:40.858] 1567779335 18640858 dlms	dlms	rx decrypted: (27/30): 07e3081aff010fffff014a0006000000
+[Fri Sep  6 15:15:35 2019] [05:10:40.859] 1567779335 18640859 dlms	dlms	rx decrypted: (28/30): 00060000000006000004b806000062e2
+[Fri Sep  6 15:15:35 2019] [05:10:40.859] 1567779335 18640859 dlms	dlms	rx decrypted: (29/30): 060000616f060000611b06000016cf06
+[Fri Sep  6 15:15:35 2019] [05:10:40.859] 1567779335 18640859 dlms	dlms	rx decrypted: (30/30): 0000199706000000000600000000
+[Fri Sep  6 15:15:35 2019] [05:10:40.859] 1567779335 18640859 dlms	dlms	s_totalDlmsPayloadBuf = alloc 0 + 466
+[Fri Sep  6 15:15:35 2019] [05:10:40.860] 1567779335 18640860 dlms	dlms	tx unencrypted: (1/1): c0028100000001
+
+
+
+[Fri Sep  6 16:45:36 2019] [06:40:41.891] 1567784736 24041891 dlms	dlms	rx decrypted: (9/30): 7c06000027de06000000000600000000
+[Fri Sep  6 16:45:36 2019] [06:40:41.892] 1567784736 24041892 dlms	dlms	rx decrypted: (10/30): 020b090c07e3081aff0200ffff014a00
+[Fri Sep  6 16:45:36 2019] [06:40:41.892] 1567784736 24041892 dlms	dlms	rx decrypted: (11/30): 06000000000600000000060000068a06
+[Fri Sep  6 16:45:36 2019] [06:40:41.892] 1567784736 24041892 dlms	dlms	rx decrypted: (12/30): 000062cd06000061d1060000617b0600
+[Fri Sep  6 16:45:36 2019] [06:40:41.893] 1567784736 24041893 dlms	dlms	rx decrypted: (13/30): 001c2f06000027200600000000060000
+[Fri Sep  6 16:45:36 2019] [06:40:41.893] 1567784736 24041893 dlms	dlms	rx decrypted: (14/30): 0000020b090c07e3081aff020fffff01
+[Fri Sep  6 16:45:36 2019] [06:40:41.893] 1567784736 24041893 dlms	dlms	rx decrypted: (15/30): 4a000600000000060000000006000006
+[Fri Sep  6 16:45:36 2019] [06:40:41.894] 1567784736 24041894 dlms	dlms	rx decrypted: (16/30): 8006000062c906000061dc0600006185
+[Fri Sep  6 16:45:36 2019] [06:40:41.894] 1567784736 24041894 dlms	dlms	rx decrypted: (17/30): 0600001b8906000026d9060000000006
+[Fri Sep  6 16:45:36 2019] [06:40:41.894] 1567784736 24041894 dlms	dlms	rx decrypted: (18/30): 00000000020b090c07e3081aff021eff
+[Fri Sep  6 16:45:36 2019] [06:40:41.895] 1567784736 24041895 dlms	dlms	rx decrypted: (19/30): ff014a00060000000006000000000600
+[Fri Sep  6 16:45:36 2019] [06:40:41.895] 1567784736 24041895 dlms	dlms	rx decrypted: (20/30): 00041a06000062c006000061bc060000
+[Fri Sep  6 16:45:36 2019] [06:40:41.895] 1567784736 24041895 dlms	dlms	rx decrypted: (21/30): 61660600001156060000150c06000000
+[Fri Sep  6 16:45:36 2019] [06:40:41.896] 1567784736 24041896 dlms	dlms	rx decrypted: (22/30): 000600000000020b090c07e3081aff02
+[Fri Sep  6 16:45:36 2019] [06:40:41.896] 1567784736 24041896 dlms	dlms	rx decrypted: (23/30): 2dffff014a0006000000000600000000
+[Fri Sep  6 16:45:36 2019] [06:40:41.896] 1567784736 24041896 dlms	dlms	rx decrypted: (24/30): 06000002e606000062eb06000061da06
+[Fri Sep  6 16:45:36 2019] [06:40:41.897] 1567784736 24041897 dlms	dlms	rx decrypted: (25/30): 0000616f0600000b670600000b670600
+[Fri Sep  6 16:45:36 2019] [06:40:41.897] 1567784736 24041897 dlms	dlms	rx decrypted: (26/30): 0000000600000000020b090c07e3081a
+[Fri Sep  6 16:45:36 2019] [06:40:41.897] 1567784736 24041897 dlms	dlms	rx decrypted: (27/30): ff0300ffff014a000600000000060000
+[Fri Sep  6 16:45:36 2019] [06:40:41.898] 1567784736 24041898 dlms	dlms	rx decrypted: (28/30): 000006000008cc060000625a06000061
+[Fri Sep  6 16:45:36 2019] [06:40:41.898] 1567784736 24041898 dlms	dlms	rx decrypted: (29/30): 1706000060ec0600000b970600000e2f
+[Fri Sep  6 16:45:36 2019] [06:40:41.898] 1567784736 24041898 dlms	dlms	rx decrypted: (30/30): 06000000000600000000
+[Fri Sep  6 16:45:36 2019] [06:40:41.899] 1567784736 24041899 dlms	dlms	s_totalDlmsPayloadBuf = alloc 466 + 462
+[Fri Sep  6 16:45:36 2019] [06:40:41.899] 1567784736 24041899 dlms	dlms	tx unencrypted: (1/1): c0028100000002
+[parsed local time] [parsed uptime] epochtime uptime module task log
+--------------------------------------------------------------------
+
+
+
+For clarity and in adherence with the requirements of IETF
+RFC5759, all Security Credential Documents shall:
+o contain the authorityKeyIdentifier extension, except
+where the security credentials document is self signed or
+Root Certificates;
+o contain the keyUsage extension which shall be marked as
+critical;
+
+contain a authorityKeyIdentifier in the form [0] KeyIdentifier
+which shall be marked as non-critical, except where the Security
+Credential Document is self signed. Note this exception only
+applies where RemotePartyRole as specified in the
+X520OrganizationalUnitName field = root;
+
+In the case of Root CA key compromise, a new Root CA certificate is generated
+within the SMKI via a Root CA key ceremony. The distribution of the new Root CA
+key is a function of the DCC Trust Anchor Management System (TAMS), using the
+signing certificate issued by the SMKI. 
+
+Contingency Key Pair a Key Pair established by the DCC for the purposes of the
+replacement of all Certificates including Root OCA Certificates
+on Devices after a Relevant Private Key has been
+Compromised
+
+Contingency Public Key the Public Key which is part of that Key Pair and which is
+stored in the WrappedApexContingencyKey field of the Root
+OCA Certificate (being the field identified as such in the Root
+OCA Certificate Profile at Annex B of the Organisation
+Certificate Policy)
+
+contain a single public key except for the Root-OCA where there
+shall be two public keys. The second public key shall be referred
+to as the Contingency Key and shall be present in the
+WrappedApexContingencyKey extension with the meaning of
+IETF RFC5934. The Contingency Key shall be encrypted as per the
+requirements of the GBCS.
+
+RFC 5934:
+Any type of TAMP message, including an Apex Trust Anchor
+   Update message, can be validated with the operational public key.
+   The second public key, called the contingency public key, can only be
+   used to update the apex trust anchor.
+
+The contingency private key
+   SHOULD be used at only one point in time; it is used only to sign an
+   Apex Trust Anchor Update message that results in its own replacement
+
+
+
+Ok, RFC 5934 (which SMKI follow) specify the use of a "contingency private key", basically the
+root cert as *two* public keys, the first is used for normal messages, the second (tagged as "WrappedApexContingencyKey")
+is only used for the key-replacement message after which it is replaced. Basically a one-time use key.
+
+(The relevant parts of RFC 5934 are section 1.2.1)
+
+Quotes:
+"Any type of TAMP message, including an Apex Trust Anchor
+ Update message, can be validated with the operational public key.
+ The second public key, called the contingency public key, can only be
+ used to update the apex trust anchor."
+
+"The contingency private key
+SHOULD be used at only one point in time; it is used only to sign an
+Apex Trust Anchor Update message that results in its own replacement"
+
+And from the SMKI doc describing the certs:
+"...contain a single public key except for the Root-OCA where there
+shall be two public keys. The second public key shall be referred
+to as the Contingency Key and shall be present in the
+WrappedApexContingencyKey extension with the meaning of
+IETF RFC5934. The Contingency Key shall be encrypted as per the
+requirements of the GBCS.
+"
+
+---------------------------------------------------------------
+
+SMIP KEK changes:
+- LoginResponseMessage needs a 'optional bytes passPhrase' field.
+- loginResponseCallback() needs to extract and store the passPhrase for later use when returning the secure module data on first-boot.
+- When returning the keytable, unwrap and re-wrap with KEK=TRUNC128(SHA256(SALT+PASSPHRASE)) where PASSPHRASE is value from LoginResponseMessage. After use, sanitise the PASSPHRASE storage.
+- Passphrase is stored within the keyTable.
+- KeyTable is stored wrapped within the VaultIC in the CH. 
+- On use by Agent, keyTable is unwrapped into RAM using KEK=TRUNC128(SHA256(SALT+PASSPHRASE)), where PASSPHRASE is extracted from the table. After decryption, temporary storage area is sanitised.
+- SALT is derived from data hardcoded into image (not stored directly in image, there *must* be a function to derive it at point of use, not stored, then temporary area sanitised).
+- Modify keyTableGenerate script to take SALT and PASSPHRASE to encrypt the table with.
+
+-------------------------------------------------------------------
+
+Node 00-1b-c5-0c-60-04-2c-7f
+https://hes.amimpwz.in/panmesh/login#node.events/35484
+
+
+326151093	47633	22.0	node.boot	PUSH	S~dlms:3724 malloc of 14326 bytes failed!	11/09/19 12:16:38
+326132640	47806	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 14326 + 462	11/09/19 13:16:10
+326132586	47805	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 13864 + 462	11/09/19 13:16:09
+326132535	47804	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 13402 + 462	11/09/19 13:16:08
+326132499	47803	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 12940 + 462	11/09/19 13:16:07
+326132457	47802	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 12478 + 462	11/09/19 13:16:05
+326132415	47801	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 12016 + 462	11/09/19 13:16:04
+326132376	47800	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 11554 + 462	11/09/19 13:16:03
+326132346	47799	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 11092 + 462	11/09/19 13:16:02
+326132292	47798	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 10630 + 462	11/09/19 13:16:01
+326132247	47797	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 10168 + 462	11/09/19 13:16:00
+326132181	47796	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 9706 + 462	11/09/19 13:15:59
+326132145	47795	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 9244 + 462	11/09/19 13:15:58
+326132091	47794	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 8782 + 462	11/09/19 13:15:57
+326132067	47793	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 8320 + 462	11/09/19 13:15:56
+326132028	47792	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 7858 + 462	11/09/19 13:15:55
+326131977	47791	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 7396 + 462	11/09/19 13:15:54
+326131947	47790	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 6934 + 462	11/09/19 13:15:53
+326131899	47789	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 6472 + 462	11/09/19 13:15:51
+326131869	47788	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 6010 + 462	11/09/19 13:15:50
+326131851	47778	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 1390 + 462	11/09/19 13:15:40
+326131818	47777	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 928 + 462	11/09/19 13:15:39
+326131815	47787	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 5548 + 462	11/09/19 13:15:49
+326131698	47786	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 5086 + 462	11/09/19 13:15:48
+326131644	47785	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 4624 + 462	11/09/19 13:15:47
+326131608	47784	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 4162 + 462	11/09/19 13:15:46
+326131566	47783	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 3700 + 462	11/09/19 13:15:45
+326131551	47782	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 3238 + 462	11/09/19 13:15:44
+326131524	47781	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 2776 + 462	11/09/19 13:15:43
+326131566	47783	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 3700 + 462	11/09/19 13:15:45
+326131551	47782	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 3238 + 462	11/09/19 13:15:44
+326131524	47781	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 2776 + 462	11/09/19 13:15:43
+326131482	47780	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 2314 + 462	11/09/19 13:15:42
+326131455	47779	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 1852 + 462	11/09/19 13:15:41
+326131368	47776	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 466 + 462	11/09/19 13:15:38
+326131332	47775	22.2	node.alert	PUSH	s_totalDlmsPayloadBuf = alloc 0 + 466	11/09/19 13:15:37
+326131299	47774	22.2	node.alert	PUSH	get-range from=1567789260 to=1567807200	11/09/19 13:15:35
+
+
+
+-------------------------------------------------------------
+O
+Kaifa alarm
+0F40000000090C07E3090C040C120CFF800000
+0202
+ 0906 0000616200FF
+ 06   07 00 60 C5 "
+
+07 00 60 C5 is the bitmask for alarms, gets converted into a list.
+
+
+push mechanism
+https://confluence.cyco.io/display/ENG/%5BDesignSpec%5D+C4+-+Push+Alarms+and+Last+Gasp
+
+Kaifa event codes:
+https://confluence.cyco.io/display/ENG/Kaifa+MA304C?preview=/14156008/22478918/Event_codes.xls
+
+------------------------------------------
+
+friendcom:
+
+2019-09-16 10:39:33.177 #1   001bc50c6004fdd6 <log> 0:00:02.263 Hter DV18@4ad76L27a55S2000cb28
+
+
+-------------------------------------------------
+
+.hex to .bin
+
+objcopy --input-target=ihex --output-target=binary /Data/Temp/Z106-A4-KMZ109Z-20190911-V1\(W\).hex /Data/Temp/Z106-A4-KMZ109Z-20190911-V1\(W\).bin
+
+---------------------------
+
+tunnelhub was removed after Oct 2015
+after this hash in the terminal repo: 696363d8aef41de67f2070cd36ba5543b0ff29ea (This is the last commit)
+
+
+Comments:
+This is a tunnel concentrator server. It terminates connections from C4 gateway terminals
+connecting over the internet (3G modem).
+
+IPv6 packets to/from the terminal are tunneled in UDP in IPv4. The tunnel is configured
+by the Tunnel Setup Protocol (TSP, RFC5572), for example to hand out IP prefixes to the terminal.
+
+This server connects to the Linux IPv6 stack using TUN virtual network interfaces. It is
+responsible for configuring the TUN interfaces and handing out IPv6 prefixes to connected clients.
+
+
+----------------------------------
+
+server(s)
+Update appserver.properties and webserver.properties from working system.
+/Data/Temp/serverProperties/[sma,nms]
+
+NMS: http://localhost:8080/nms/dashboard
+SMA: http://localhost:8882/dashboard
+PaneMesh: http://localhost:8080/#dashboard
+
+
+
+---------------------------------------
+
+crash:
+
+https://jenkins.cyco.io/job/Omnimesh_Terminal_Branch/1232/artifact/terminal/build/
+nic7-genus-dlms-insecure:v151.2.35
+2019-09-18 13:40:58.381 #1   0000007123010138 <log> 1:06:55.209 Hter DV0@2a73eL5ea67S20010ce0
+
+crash in power_switch::pbEncodeStates()
+this doesn't make much sense.
+
+
+--------------------------------------------
+
+CNIC7 review:
+- 3 LEDs? stay with single green?
+- large FLASH can be reduced to 8MBit.
+- need dev board for Quectel modem to test out commands (should be ok, but may need changes to our generic modem driver).
+- CEL_DTR gets inverted according to our source ( ----0--- DTR output low (CELL_DTR high on modem side)). Is this still happening?
+- meter port needs PA0, PA1, PA4, PA5
+- ethernet to be removed?
+- SPI FLASH on PD12, PD13, PD14, PD15.
+- Modem on PF4. PF5, PF6, PF7
+- In uart-efr32.c, mneed merging of CONFIG_EFR32_GW200 and CONFIG_EFR32_IPA3.
+- Debug port on PC10, PC11
+- SWD on PF0, PF1, PF2
+
+-------------------------------------------------
+
+I2C on EFR32FG12P231F1024GM48 (QFN48) 31 GPIO, 1MB FLASH, 128KB RAM:
+- 100/400/1000 speeds.
+- Active in all energy modes so able to be used for power-control.
+- PA0, PA1 look like good candidates for I2C0 as they can take over the ELM_UART_TX/RX pins.
+- PC10, PC11 are usable for I2C1 but they are also the LOG_UART_TX/RX.
+
+
+
+
 
 
 
