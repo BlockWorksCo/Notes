@@ -21985,6 +21985,20 @@ I2C on EFR32FG12P231F1024GM48 (QFN48) 31 GPIO, 1MB FLASH, 128KB RAM:
 - PC10, PC11 are usable for I2C1 but they are also the LOG_UART_TX/RX.
 
 
+--------------------------------------------------------
+
+CNIC:
+
+EFM32GG12B810F1024GM64   
+- No FLASH (NIC7 gateway build)
+- 
+
+
+
+
+
+
+
 
 
 
