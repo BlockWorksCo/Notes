@@ -19927,6 +19927,7 @@ OK
 
 
 ./tools/c4-tools/upload_smip.py -p ${DEV} --set-setting connode_settings server.ip 2001:9b0:192:8::115 --set-setting connode_settings dtls.heartbeat.period.s 60 --set-setting connode_settings time.ref.period 60 --set-setting connode_settings rpl.instance_id 46
+./tools/c4-tools/upload_smip.py -p ${DEV} --set-setting connode_settings server.ip 2001:9b0:192:8::115 --set-setting connode_settings dtls.heartbeat.period.s 60
 
 ./tools/c4-tools/upload_smip.py -p /dev/ttyACM3 --reboot0
 
