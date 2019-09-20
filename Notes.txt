@@ -22005,6 +22005,16 @@ add fd00::1
 
 sudo ip -6 add add fd00::1 dev enp0s3
 
+--------------------------------------------------------
+
+openssl ecparam -genkey -out Server.key -name prime256v1
+
+# Backup generated key:
+$ cp Server.key Server_passwordless_backup.key
+# Assign the password:
+$ openssl ec -in Server_passwordless_backup.key -des -passout pass:1234 -out Server.key
+
+
 
 
 
