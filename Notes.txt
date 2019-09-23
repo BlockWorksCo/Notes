@@ -22142,6 +22142,10 @@ Certificate:
          d8:99:64:4d:c0:03:d2:03:36:f6:1f:1b:46:72:ca:79
 
 
+Failing at:
+if (caPrivateKey.getPublicKeyHash().equals(trustedCertificate.getPublicKeyHash())) {
+
+
 
 
 
