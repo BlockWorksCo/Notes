@@ -22104,6 +22104,44 @@ Certificate:
 
 
 
+ubuntu@stevesworklaptop:/Data/Temp/Credentials/Working$ openssl x509 -text -noout -in /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-76-7F/ca.crt.der -inform der
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            e0:be:bf:be:19:d8:3e:88
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: C = SE, ST = Stockholm, L = Stockholm, O = Connode AB, OU = R&D, CN = demo-poc.connode.com
+        Validity
+            Not Before: Nov 26 15:46:48 2018 GMT
+            Not After : Nov 23 15:46:48 2028 GMT
+        Subject: C = SE, ST = Stockholm, L = Stockholm, O = Connode AB, OU = R&D, CN = demo-poc.connode.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:72:fd:aa:0e:bf:8b:36:87:e4:ca:28:38:8d:af:
+                    ed:7e:42:4f:b6:1c:c2:a1:2b:15:02:9b:bd:79:5e:
+                    c0:ad:36:21:03:1f:86:a8:5b:86:da:e1:2b:09:18:
+                    ff:a3:02:79:52:85:50:fd:33:d9:eb:86:7a:6d:57:
+                    d9:df:86:bb:ad
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                A8:64:17:2A:19:C1:88:75:38:11:68:B6:3A:B3:41:55:09:4D:72:EA
+            X509v3 Authority Key Identifier: 
+                keyid:A8:64:17:2A:19:C1:88:75:38:11:68:B6:3A:B3:41:55:09:4D:72:EA
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: ecdsa-with-SHA256
+         30:44:02:20:0d:a6:16:bb:cb:42:94:5c:1d:1c:ee:09:fb:a2:
+         86:fe:44:08:c7:8d:87:ff:f8:a6:51:43:18:4e:0d:8d:99:7e:
+         02:20:78:bf:6c:e5:4e:62:10:b1:28:8c:ae:ba:85:ed:36:6f:
+         d8:99:64:4d:c0:03:d2:03:36:f6:1f:1b:46:72:ca:79
+
+
 
 
 
