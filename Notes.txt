@@ -22071,6 +22071,39 @@ cp server.crt server-cert.pem
 cp client.key client-key.pem
 cp client.crt client-cert.pem
 
+------------------------------------------------
+
+ubuntu@stevesworklaptop:/Data/Temp/Credentials/Working$ openssl x509 -text -noout -in /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-76-7F/node.crt.der -inform der
+Certificate:
+    Data:
+        Version: 1 (0x0)
+        Serial Number:
+            8d:51:b4:50:15:b3:a8:3c
+        Signature Algorithm: ecdsa-with-SHA256
+        Issuer: C = SE, ST = Stockholm, L = Stockholm, O = Connode AB, OU = R&D, CN = demo-poc.connode.com
+        Validity
+            Not Before: Jul 11 13:18:14 2019 GMT
+            Not After : Jul  8 13:18:14 2029 GMT
+        Subject: CN = 00-1B-C5-0C-60-06-76-7F
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:8a:55:65:a6:b8:ce:e2:96:87:ae:b1:ac:08:0f:
+                    23:34:c8:91:16:f7:1d:be:33:3a:d1:a9:67:0f:d3:
+                    33:04:fe:c7:50:2d:ed:53:55:20:b0:11:23:f0:6e:
+                    a8:9d:02:89:c1:cf:36:0c:d8:0a:f7:4c:b7:4d:0c:
+                    d6:8d:01:b8:bc
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+    Signature Algorithm: ecdsa-with-SHA256
+         30:44:02:20:30:88:c9:69:27:41:ec:f7:40:5a:99:84:3b:49:
+         77:fd:65:95:e7:e6:6e:9c:ce:f6:40:bf:f3:69:9a:55:06:23:
+         02:20:58:94:1f:08:69:47:34:c0:05:60:c0:ed:c7:dd:04:f6:
+         8f:a3:78:15:fe:3a:52:96:7c:a3:ae:86:1c:aa:48:c9
+
+
+
 
 
 
