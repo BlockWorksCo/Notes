@@ -21946,7 +21946,7 @@ Update appserver.properties and webserver.properties from working system.
 
 NMS: http://localhost:8080/nms/dashboard
 SMA: http://localhost:8882/dashboard
-PaneMesh: http://localhost:8080/#dashboard
+PanMesh: http://localhost:8080/#dashboard
 
 
 
