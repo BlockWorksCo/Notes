@@ -22147,6 +22147,11 @@ if (caPrivateKey.getPublicKeyHash().equals(trustedCertificate.getPublicKeyHash()
 
 
 
+-----------------------------------------------------
+
+openssl check cert matches key:
+
+"openssl x509 -noout -pubkey -in ca.crt" == "openssl pkey -pubout -in ca.key"
 
 
 
