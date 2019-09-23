@@ -22154,6 +22154,10 @@ openssl check cert matches key:
 "openssl x509 -noout -pubkey -in ca.crt" == "openssl pkey -pubout -in ca.key"
 
 
+Verify crt is signed by a CA:
+openssl verify -verbose -CAfile ca.crt  node.crt
+
+
 
 
 
