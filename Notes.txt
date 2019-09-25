@@ -17629,7 +17629,7 @@ typical config size (all-in) of ~4KB. Allow 8KB x2 = 16KB.
 
 ------------------------------------------------------------------
 
-Issues:
+NIC7 Issues:
 - MAX Size of firmware us 448KB
 - Does bootloader erase top half of FLASH??? yes... up to 896KB!!!!
 - There is another FLASH at 0x0FE10000 that is normally used for a
