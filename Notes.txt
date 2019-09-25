@@ -22165,7 +22165,7 @@ right on bootup.
 
 2) The CH application takes a while to start up and present the USB ports to the host.
 
-3) AT+M2M=0 to staop it booting after 4 seconds.
+3) AT+M2M=0 to staop it booting after 4 seconds (telit_appzone_c_user-guide_r1.pdf).
 
 at                                                                                       
 OK                                                                                       
