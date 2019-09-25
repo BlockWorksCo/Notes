@@ -22182,6 +22182,8 @@ are closed otherwise those ports will not enumerate correctly.
 
 6) "read_port -p /dev/ttyACM3" will show you the debug text.
 
+7)
+
 
 
 
