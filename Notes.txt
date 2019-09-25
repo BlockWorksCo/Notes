@@ -22157,6 +22157,13 @@ openssl check cert matches key:
 Verify crt is signed by a CA:
 openssl verify -verbose -CAfile ca.crt  node.crt
 
+------------------------------------------------------------
+
+1) If using VirtualBox, repeatedly turn off and on the CH and put the device into your USB settings
+such that it VirtualBox always captures the CH as it boots up. This is essential to get the timing
+right on bootup.
+
+2) The CH application takes a while to start up and present the USB ports to the host.
 
 
 
