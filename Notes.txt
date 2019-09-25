@@ -22159,6 +22159,10 @@ openssl verify -verbose -CAfile ca.crt  node.crt
 
 ------------------------------------------------------------
 
+0) The following instructions are timing sensitive, you need to know when the modem ports are 
+enumerated. To do this, I perform a "watch -n 1 ls /dev/ttyACM*" so I can see when ports appear
+and dissapear.
+
 1) If using VirtualBox, repeatedly turn off and on the CH and put the device into your USB settings
 such that it VirtualBox always captures the CH as it boots up. This is essential to get the timing
 right on bootup.
