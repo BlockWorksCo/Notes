@@ -22165,6 +22165,14 @@ right on bootup.
 
 2) The CH application takes a while to start up and present the USB ports to the host.
 
+3) AT+M2M=0 to staop it booting after 4 seconds.
+
+at                                                                                       
+OK                                                                                       
+at+m2m=0                                                                                 
+OK
+
+
 
 
 
