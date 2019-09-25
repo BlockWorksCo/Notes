@@ -22253,6 +22253,14 @@ OK
 9) The CH will now reboot and start the freshly programmed application after 10 seconds.
 
 
+------------------------------------------------------------------
+
+hw type hardware version tag CONFIG_NAME image
+
+yeah, so its a bit of a mess... what is configured as the hw type (the one you've found) isn't used, but is reported.... the one that is actually checked by the bootloader to be the same as the image during an upgrade is not known as the hardware type but is the "CONFIG_NAME". The text that this CONFIG_NAME actually contains is the hardware type but is nothing to do with the configuration item you found.
+
+
+-------------------------------
 
 
 
