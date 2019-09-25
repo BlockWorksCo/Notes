@@ -22172,6 +22172,9 @@ OK
 at+m2m=0                                                                                 
 OK
 
+At this point the modem can be sat at an AT prompt allowing you to enter 
+commands (or be driven by a script).
+
 
 
 
