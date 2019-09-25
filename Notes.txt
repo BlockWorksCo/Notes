@@ -22186,7 +22186,71 @@ are closed otherwise those ports will not enumerate correctly.
 
 6) "read_port -p /dev/ttyACM3" will show you the debug text.
 
-7)
+7) To reprogram the application, first start from a powered-off CH, close the "read_port", have
+no applications with open /dev/ttyACMx ports.
+
+8) Get ready to run the following command as soon as your port-watcher shows the ACMx ports 
+./tools/c4-tools/upload_smip.py  -r /Data/Temp/m2m_Drop1_Integ_TSIP_20190919_apz.bin -p /dev/ttyACM0
+
+The following should happen:
+--> AT
+AT
+OK
+--> ATE1
+ATE1
+OK
+--> AT#PORTCFG?
+AT#PORTCFG?
+#PORTCFG: 8,8
+
+OK
+--> AT#PORTCFG=8
+AT#PORTCFG=8
+OK
+--> AT+GMR
+AT+GMR
+12.00.928-B034
+
+OK
+Uploading /Data/Temp/m2m_Drop1_Integ_TSIP_20190919_apz.bin to /dev/ttyACM0
+--> AT#M2MWRITE="m2m_Drop1_Integ_TSIP_20190919_apz.bin",1751164,1
+AT#M2MWRITE="m2m_Drop1_Integ_TSIP_20190919_apz.bin",1751164,1
+.........................................................................................................................................................................................................................
+File of size 1751164 written, waiting for modem to confirm with OK...
+>>> 
+OK
+Writing SHA sum 3b4d81f1e262198b2e5954d0e0111f249c92db2c6a6d89cb6e4ee1de3c6d8d29 of /Data/Temp/m2m_Drop1_Integ_TSIP_20190919_apz.bin to hash info file slot
+--> AT#M2MCHDIR?
+AT#M2MCHDIR?
+#M2MCHDIR: "/"
+
+OK
+--> AT#M2MCHDIR="/fileservice/firmware/slot4"
+AT#M2MCHDIR="/fileservice/firmware/slot4"
+OK
+--> AT#M2MWRITE="slot4.slt",32,0
+AT#M2MWRITE="slot4.slt",32,0
+.
+File of size 32 written, waiting for modem to confirm with OK...
+>>> 
+OK
+--> AT#M2MCHDIR="/"
+AT#M2MCHDIR="/"
+OK
+Making m2m_Drop1_Integ_TSIP_20190919_apz.bin runnable
+--> AT#M2MRUN=2,"m2m_Drop1_Integ_TSIP_20190919_apz.bin"
+AT#M2MRUN=2,"m2m_Drop1_Integ_TSIP_20190919_apz.bin"
+OK
+--> AT#M2MRUN?
+AT#M2MRUN?
+#M2MRUN: "m2m_Drop1_Integ_TSIP_20190919_apz.bin"
+
+OK
+--> AT+M2M=4,10
+AT+M2M=4,10
+OK
+
+9) The CH will now reboot and start the freshly programmed application after 10 seconds.
 
 
 
