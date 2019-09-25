@@ -22175,8 +22175,12 @@ OK
 At this point the modem can be sat at an AT prompt allowing you to enter 
 commands (or be driven by a script).
 
+4) AT+M2M=4,10 will reboot the modem and make it start the application after 10 seconds.
 
+5) Before the modem comes up again after a reboot, make sure all appliations using /dev/ttyACMx
+are closed otherwise those ports will not enumerate correctly.
 
+6) "read_port -p /dev/ttyACM3" will show you the debug text.
 
 
 
