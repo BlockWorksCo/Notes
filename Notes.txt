@@ -22267,6 +22267,13 @@ DTR can't be controlled via Linux.
 
 https://unix.stackexchange.com/questions/446088/how-to-prevent-dtr-on-open-for-cdc-acm
 
+------------------------------------------------
+
+SMIP last gasp
+cndgwmsg.h
+
+CA-273 CND-3716
+
 
 
 
