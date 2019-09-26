@@ -22261,8 +22261,11 @@ yeah, so its a bit of a mess... what is configured as the hw type (the one you'v
 
 
 -------------------------------
+ACM DTR CH SMIP serial port issue.
 
+DTR can't be controlled via Linux.
 
+https://unix.stackexchange.com/questions/446088/how-to-prevent-dtr-on-open-for-cdc-acm
 
 
 
