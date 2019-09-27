@@ -22308,6 +22308,7 @@ stream_UE910_EUD-AZ_64R_64F-12.00.927_B053.bin
 - power on modem while Xfp is waiting... It should pick it up when the com ports enumerate.
 - Programming should take just under 2 minutes.
 - power-cycle the boards.
+- python target_binary_download.py /Data/Temp/m2m_v98-3_apz.bin /dev/ttyACM0 8 --ncp_firmware_path /Data/Temp/em357-SingleB-FW_6_3_2_37.ota
 
 
 
