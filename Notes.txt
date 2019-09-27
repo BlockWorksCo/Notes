@@ -22310,6 +22310,25 @@ stream_UE910_EUD-AZ_64R_64F-12.00.927_B053.bin
 - power-cycle the boards.
 - python target_binary_download.py /Data/Temp/m2m_v98-3_apz.bin /dev/ttyACM0 8 --ncp_firmware_path /Data/Temp/em357-SingleB-FW_6_3_2_37.ota
 
+-----------------------------------------------
+
+RAM usage symbols sizes
+
+arm-none-eabi-size agent.elf 
+
+   text	   data	    bss	    dec	    hex	filename
+ 477476	   1104	  68688	 547268	  859c4	agent.elf
+
+
+Code:       466KB text + 1KB data   = 467KB
+static RAM: 67KB + 1KB data         = 68KB
+dynamic RAM:                        = 20KB   
+
+total RAM usage                     = 88KB
+total FLASH usage                   = 467KB
+
+
+
 
 
 
