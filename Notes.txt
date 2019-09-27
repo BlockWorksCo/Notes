@@ -22297,8 +22297,11 @@ CA-273 CND-3716
  05 296d2a0d
 
 -----------------------------------------------------------
+Telit stream update xfp
 
+UE910 stream.bin files in scimitar_ch/CommsHubFramework/tools/TELIT/Stream/
 
+stream_UE910_EUD-AZ_64R_64F-12.00.927_B053.bin
 
 
 
