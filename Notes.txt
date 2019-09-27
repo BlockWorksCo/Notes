@@ -22313,6 +22313,7 @@ stream_UE910_EUD-AZ_64R_64F-12.00.927_B053.bin
 -----------------------------------------------
 
 RAM usage symbols sizes
+v151.x
 
 arm-none-eabi-size agent.elf 
 
