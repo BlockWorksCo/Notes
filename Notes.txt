@@ -22303,6 +22303,11 @@ UE910 stream.bin files in scimitar_ch/CommsHubFramework/tools/TELIT/Stream/
 
 stream_UE910_EUD-AZ_64R_64F-12.00.927_B053.bin
 
+- power off modem.
+- Press "program" ono Xfp.
+- power on modem while Xfp is waiting... It should pick it up when the com ports enumerate.
+- Programming should take just under 2 minutes.
+- power-cycle the boards.
 
 
 
