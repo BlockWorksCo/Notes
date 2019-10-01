@@ -22332,12 +22332,12 @@ total FLASH usage                   = 467KB
 
 openssl x509 -in certificate.crt -text -noout
 
-intCA.crt.PEM.crt
-Ref1_Service-99.key
-Ref1_Service-99.pem
-TEF_Test_Mesh_IA.pem
-TEF_Test_Mesh_Root.pem
-ToshCA.cer.pem
+intCA.crt.PEM.crt       - CA=true
+Ref1_Service-99.key     -
+Ref1_Service-99.pem     -
+TEF_Test_Mesh_IA.pem    -
+TEF_Test_Mesh_Root.pem  - CA=true
+ToshCA.cer.pem          - CA=true
 
 
 
