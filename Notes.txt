@@ -22349,6 +22349,11 @@ ubuntu@stevesworklaptop:/Data/Temp/Credentials/Working$ openssl verify -CAfile c
 node.crt: OK
 
 
+ubuntu@stevesworklaptop:/Data/Temp/KeyTest$ openssl verify -CAfile root.crt client.c
+client.crt  client.csr  
+ubuntu@stevesworklaptop:/Data/Temp/KeyTest$ openssl verify -CAfile root.crt client.crt 
+client.crt: OK
+
 
 
 
