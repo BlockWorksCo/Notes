@@ -22339,6 +22339,14 @@ TEF_Test_Mesh_IA.pem    -
 TEF_Test_Mesh_Root.pem  - CA=true
 ToshCA.cer.pem          - CA=true
 
+--------------------------------------
+
+certificate verify:
+
+ubuntu@stevesworklaptop:/Data/Temp/Credentials/Working$ openssl verify -CAfile ca.crt server.crt
+server.crt: OK
+ubuntu@stevesworklaptop:/Data/Temp/Credentials/Working$ openssl verify -CAfile ca.crt node.crt
+node.crt: OK
 
 
 
