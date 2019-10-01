@@ -22328,6 +22328,9 @@ dynamic RAM:                        = 20KB
 total RAM usage                     = 88KB
 total FLASH usage                   = 467KB
 
+-------------------------------------------------------
+
+openssl x509 -in certificate.crt -text -noout
 
 
 
