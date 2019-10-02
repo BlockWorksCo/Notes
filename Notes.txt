@@ -22378,6 +22378,49 @@ remove "-s"
 
 
 
+// Data Notification packet format:
+// 0F  Data-Notification
+// 40 00 00 00  long-invoke-id-and-priority
+// 09 0C 07 D0 01 01 06 02 25 38 FF 80 00 00  date-time
+// 02 structure
+// 02 length
+// 09 06 00 00 61 62 00 FF  Obis code for alarm
+// 06 00 00 00 04           alarm value
+
+// We only need "alarm value" and
+// expected that the format of packet is hardcoded to this structure
+
+7ea039010110a7c3e6e700 0f 
+40 00 00 00
+09 0c 07e30a02030f3002ff003c00 
+02 03
+ 09 0c 07e30a02030f3002ff003c00 
+ 06 04 c060f606 
+ 00000000
+3e79 7e
+
+
+
+2019-10-02 15:48:04.512 #1   001bc50c60066205 <log> 0:02:41.399 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-10-02 15:48:04.589 #1   001bc50c60066205 <log> 0:02:41.454 [debug] [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+2019-10-02 15:48:04.589 #1   001bc50c60066205 <log> 0:02:41.461 [debug] [        hdlc] {     hdlc}: rx: (1/4): 7ea039010110a7c3e6e7000f40000000
+2019-10-02 15:48:04.589 #1   001bc50c60066205 <log> 0:02:41.470 [debug] [        hdlc] {     hdlc}: rx: (2/4): 090c07e30a02030f3002ff003c000203
+2019-10-02 15:48:04.589 #1   001bc50c60066205 <log> 0:02:41.479 [debug] [        hdlc] {     hdlc}: rx: (3/4): 090c07e30a02030f3002ff003c000604
+2019-10-02 15:48:04.589 #1   001bc50c60066205 <log> 0:02:41.489 [debug] [        hdlc] {     hdlc}: rx: (4/4): c060f606000000003e797e
+2019-10-02 15:48:04.633 #1   001bc50c60066205 <log> 0:02:41.497 [debug] [        hdlc] {     hdlc}: HDLC_TYPE_I
+2019-10-02 15:48:04.633 #1   001bc50c60066205 <log> 0:02:41.504 [debug] [        hdlc] {     hdlc}: Passing IFrame up the stack to the DLMS task.
+2019-10-02 15:48:04.633 #1   001bc50c60066205 <log> 0:02:41.513 [debug] [meter/kaifaMa304] {     hdlc}: dlmsReceiveCb called with s_rxRes=0 from dev dlms (0b 0x0) 
+2019-10-02 15:48:04.633 #1   001bc50c60066205 <log> 0:02:41.524 [debug] [        hdlc] {     hdlc}: !! Result == ResultOK !! 
+2019-10-02 15:48:04.633 #1   001bc50c60066205 <log> 0:02:41.531 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2019-10-02 15:48:04.676 #1   001bc50c60066205 <log> 0:02:41.540 [debug] [meter/kaifaMa304] {   device}: !! MessageAlarmsMaskRequest received, from ISR !! 
+2019-10-02 15:48:04.676 #1   001bc50c60066205 <log> 0:02:41.550 [ WARN] [meter/kaifaMa304] {   device}: Failed to find obis code tag field in Data Notification APDU
+2019-10-02 15:48:04.676 #1   001bc50c60066205 <log> 0:02:41.561 [debug] [    hdlclock] {   device}: -- unlocking HDLC --
+2019-10-02 15:48:04.676 #1   001bc50c60066205 <log> 0:02:41.568 [debug] [        hdlc] {   device}: disconnectLink 0x0
+2019-10-02 15:48:04.676 #1   001bc50c60066205 <log> 0:02:41.575 [debug] [        hdlc] {   device}: Disconnect HDLC link
+2019-10-02 15:48:04.702 #1   001bc50c60066205 <log> 0:02:41.582 [ WARN] [meter/kaifaMa304] {   device}: Failed to receive Alarm Indication Mask
+2019-10-02 15:48:04.702 #1   001bc50c60066205 <log> 0:02:41.592 [debug] [meter/kaifaMa304] {   device}: Finished processing message.
+
+
 
 
 
