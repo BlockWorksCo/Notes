@@ -22365,6 +22365,9 @@ Note: There is another reversal from RTS to CTS on the development/breakout boar
 
 Which means the *actual* meter-push/interrupt pin is the UART0 *CTS* pin, *not* RTS! argh!
 
+NOTE2: 'nEVENT' on the meter interface for IPA3b (pin 9) seems to be wired up but we never see a
+transition on that line. Guessing the meter software still uses pin-11 (EM-RTS) instead.
+
 ----------------------------------------------
 
 version info for git
