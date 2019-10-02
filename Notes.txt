@@ -22361,6 +22361,10 @@ ma304 hw1 kaifa schematic alarm
 PA4 = interrupt pin UART_DTR EM_DTR pin-11 on meter-header, EM_RTS, pin 18 on IPA module, PA5 on EFR32
 PB0 = allowAlarm pin UART_CTS EM_CTS pin-7 on meter-header, EM_CTS pin 19 on IPA module, PA4 on EFR32.
 
+Note: There is another reversal from RTS to CTS on the development/breakout boards for IPA.
+
+Which means the *actual* meter-push/interrupt pin is the UART0 *CTS* pin, *not* RTS! argh!
+
 ----------------------------------------------
 
 version info for git
