@@ -22424,9 +22424,9 @@ remove "-s"
 
 v148.10:
 
-DeviceOpsForKaifa
-ConfigurableSingleLED
-CND9672
+- DeviceOpsForKaifa
+- ConfigurableSingleLED
+- CND9672, CND-9667 (meter-push interrupt & netstat/devstat leds).
 
 
 
