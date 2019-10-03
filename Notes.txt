@@ -22420,6 +22420,17 @@ remove "-s"
 2019-10-02 15:48:04.702 #1   001bc50c60066205 <log> 0:02:41.582 [ WARN] [meter/kaifaMa304] {   device}: Failed to receive Alarm Indication Mask
 2019-10-02 15:48:04.702 #1   001bc50c60066205 <log> 0:02:41.592 [debug] [meter/kaifaMa304] {   device}: Finished processing message.
 
+---------------------------------
+
+v148.10:
+
+DeviceOpsForKaifa
+ConfigurableSingleLED
+CND9672
+
+
+
+
 
 
 
