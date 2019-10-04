@@ -22428,6 +22428,10 @@ v148.10:
 - ConfigurableSingleLED
 - CND9672, CND-9667 (meter-push interrupt & netstat/devstat leds).
 
+--------------------------------------------------------------
+
+ECDHE-ECDSA-AES128-CCM8 = 0xc0ae
+ECDHE-ECDSA-AES256-CCM8 = 0xc0ef
 
 
 
