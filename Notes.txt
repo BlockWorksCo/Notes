@@ -22486,6 +22486,17 @@ c0 ae       <---- cipher suite (AES-128). AES-256 is "c0 af".
 
 
 
+-----------------------------------------------------
+
+DTLS extensions:
+
+// turn on EC support
+wolfSSL_CTX_UseSupportedCurve(ctx, WOLFSSL_ECC_SECP256R1);
+
+// turn on trusted_ca_keys extension support
+wolfSSL_CTX_UseTrustedCaKeys(ctx);
+
+
 
 
 
