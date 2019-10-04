@@ -22504,6 +22504,11 @@ keys in ~/.config/wireshark/ieee802154_keys
 
 tshark -r /Data/Logs/radio-aes256.pcap -V
 
+
+----------------------------------------
+
+DTLS extension
+
 Datagram Transport Layer Security
     DTLS Record Layer: Handshake Protocol: Client Hello
         Content Type: Handshake (22)
@@ -22551,7 +22556,22 @@ Datagram Transport Layer Security
                         Signature Hash Algorithm Signature: ECDSA (3)
 
 
+extensions:
+- ecdsa_secp256r1_sha256 curve
+- trusted_ca_keys (defined in RFC3546)
 
+
+
+form RFC3546
+   constrained clients that, due to memory limitations, possess only a
+   small number of CA root keys, may wish to indicate to servers which
+   root keys they possess, in order to avoid repeated handshake
+   failures.
+
+   In order to indicate which CA root keys they possess, clients MAY
+   include an extension of type "trusted_ca_keys" in the (extended)
+   client hello.  The "extension_data" field of this extension SHALL
+   contain "TrustedAuthorities"
 
 
 
