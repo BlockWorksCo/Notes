@@ -22496,6 +22496,61 @@ wolfSSL_CTX_UseSupportedCurve(ctx, WOLFSSL_ECC_SECP256R1);
 // turn on trusted_ca_keys extension support
 wolfSSL_CTX_UseTrustedCaKeys(ctx);
 
+---------------------------------------------------------
+
+tshark wireshark radio keys
+tshark config in ~/.config/wireshark
+keys in ~/.config/wireshark/ieee802154_keys
+
+tshark -r /Data/Logs/radio-aes256.pcap -V
+
+Datagram Transport Layer Security
+    DTLS Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: DTLS 1.2 (0xfefd)
+        Epoch: 0
+        Sequence Number: 0
+        Length: 129
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 117
+            Message Sequence: 0
+            Fragment Offset: 0
+            Fragment Length: 117
+            Version: DTLS 1.2 (0xfefd)
+            Random: 953a90bf820bae62aae5f5d2a4eac25ceeee22c52a8492db...
+                GMT Unix Time: May  3, 2049 08:28:47.000000000 GMT
+                Random Bytes: 820bae62aae5f5d2a4eac25ceeee22c52a8492db7c834424...
+            Session ID Length: 32
+            Session ID: ac16a088312198b7b9a6dbfc1bbebbc4c5c86f570a6ce0df...
+            Cookie Length: 0
+            Cipher Suites Length: 2
+            Cipher Suites (1 suite)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_256_CCM_8 (0xc0af)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+            Extensions Length: 41
+            Extension: trusted_ca_keys (len=21)
+                Type: trusted_ca_keys (3)
+                Length: 21
+                Data: 0158b2604832def562fa28ebc48e5f3b8e2d21c8f5
+            Extension: supported_groups (len=4)
+                Type: supported_groups (10)
+                Length: 4
+                Supported Groups List Length: 2
+                Supported Groups (1 group)
+                    Supported Group: secp256r1 (0x0017)
+            Extension: signature_algorithms (len=4)
+                Type: signature_algorithms (13)
+                Length: 4
+                Signature Hash Algorithms Length: 2
+                Signature Hash Algorithms (1 algorithm)
+                    Signature Algorithm: ecdsa_secp256r1_sha256 (0x0403)
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+
+
 
 
 
