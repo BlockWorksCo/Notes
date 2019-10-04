@@ -22573,6 +22573,26 @@ form RFC3546
    client hello.  The "extension_data" field of this extension SHALL
    contain "TrustedAuthorities"
 
+CND-8166: Revert "Merge changes from topic 'wolfssl-3.14.0'"
+
+Revert to previous version of WolfSSl because 3.14.0 broke our Trusted CA
+Keys extension patch.
+
+It works with DTLS resume but not with a full handshake.
+
+In order to upgrade to 3.14.0 the patch must be rewritten. See this
+upstream commit
+https://github.com/wolfSSL/wolfssl/commit/7160384a1969482c4a3c5d4e3b39f206570f9b7d
+
+Basically the patch calculated a SHA1 of the raw public key but the
+commit above kept more of the ASN1 encoded public key than before
+causing our code to calculate the wrong SHA1.
+
+This reverts commit 2145c488f5112ed231ffc4331a4c9982c90f6e37, reversing
+changes made to 2d52177263557aac6bd80c4741ff70ca6b4ede84.
+
+Change-Id: I631848282483422db56b005e747199689c5e5c9e
+<Paste>
 
 
 
