@@ -22449,6 +22449,8 @@ https://testssl.sh/openssl-iana.mapping.html
 ECDHE-ECDSA-AES128-CCM8 = 0xc0ae
 ECDHE-ECDSA-AES256-CCM8 = 0xc0ef
 
+00 02 c0 ae  (for AES-128)
+00 02 c0 af  (for AES-256)
 
 
 
