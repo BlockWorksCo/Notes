@@ -22449,6 +22449,20 @@ https://testssl.sh/openssl-iana.mapping.html
 ECDHE-ECDSA-AES128-CCM8 = 0xc0ae
 ECDHE-ECDSA-AES256-CCM8 = 0xc0ef
 
+record-header:
+16       (handshake record)
+03 01    (protocol version)
+00 a5    (number of following bytes)
+handshake-header:
+01       (handshake type)
+00 00 a1 (number of bytes following)
+client version:
+03 03
+client-random:
+32 bytes
+session-id:
+00
+cipher suites (44 bytes in):
 00 02 c0 ae  (for AES-128)
 00 02 c0 af  (for AES-256)
 
