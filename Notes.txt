@@ -22467,6 +22467,22 @@ cipher suites (44 bytes in):
 00 02 c0 af  (for AES-256)
 
 
+16          <---- handshake record type.
+03 01       <---- protocol version.
+00 a5       <---- number of following bytes in frame.
+01          <---- handshake type
+00 00 a1    <--- number of following bytes in packet.
+03 03   <----- protocol version number (TLS 1.2)
+00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f  <--- random data
+00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f  <--- random data
+00      <---- session id
+00 02   <----- number of bytes containing the cipher-suite, should be two.
+c0 ae   <----- cipher suite (AES-128). AES-256 is "c0 af".
+
+
+
+
+
 
 
 
