@@ -22595,6 +22595,16 @@ Change-Id: I631848282483422db56b005e747199689c5e5c9e
 
 -----------------------------------------------------------
 
+7e a00c034130de33e6e700 9eb4 7e
+-----------------------------------------------------
+
+SMIP CH rescue
+Sometimes the CH continues to reboot.
+In this case, try using minicom to attach to /dev/ttyACM4.
+You have to be quick with this one. The AT parser is active for ~1 second.
+Get ready to paste "AT+M2M=0" into /dev/ttyACM4. You should get an "OK" at which point it will
+reboot and you will have a permanently active AT parser.
+
 
 
 
