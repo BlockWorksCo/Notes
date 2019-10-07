@@ -22605,6 +22605,28 @@ You have to be quick with this one. The AT parser is active for ~1 second.
 Get ready to paste "AT+M2M=0" into /dev/ttyACM4. You should get an "OK" at which point it will
 reboot and you will have a permanently active AT parser.
 
+AT#PORTCFG=?
+#PORTCFG: Variant=0: AT= USIF0 USB0 USB3; MA(Trace)= USB1
+#PORTCFG: Variant=1: AT= USIF0 USB0 USB3; MA(Trace)= USIF1
+#PORTCFG: Variant=2: AT= USIF0 SPI USB0; MA(Trace)= USB1
+#PORTCFG: Variant=3: AT= USIF0 USIF1 USB0; MA(Trace)= USB1
+#PORTCFG: Variant=4: AT= USIF0 SPI USB0 USB3; MA(Trace)= USB1
+#PORTCFG: Variant=5: AT= SPI USB0 USB3; MA(Trace)= USB1
+#PORTCFG: Variant=6: AT= USIF0 SPI USB0; MA(Trace)= USB1
+#PORTCFG: Variant=7: AT= USIF0 USB0 USB3; MA(Trace)= USB1; 3G-Trace= USB2
+#PORTCFG: Variant=8: AT= USB0 USB3 USB4; MA(Trace)= USB1
+#PORTCFG: Variant=9: AT= USIF0 USB0 HSIC0; MA(Trace)= USB1; 3G-Trace= USB2
+#PORTCFG: Variant=10: AT= USIF0 USB0 HSIC0 HSIC1; MA(Trace)= USB1; 3G-Trace= USB2
+#PORTCFG: Variant=11: not supported by this product
+#PORTCFG: Variant=12: AT= USIF0 USB0 USB3 USB4; MA(Trace)= USB1; DLINK= USB5
+
+AT#PORTCFG?
+#PORTCFG: 8,8
+
+which means this is active:
+22617 #PORTCFG: Variant=8: AT= USB0 USB3 USB4; MA(Trace)= USB1
+
+
 
 
 
