@@ -22666,6 +22666,9 @@ int main()
 Extract section with:
 objcopy --dump-section .logdebug=StringSection.logdebug StringSection
 
+Remove section with:
+objcopy --remove-section .logdebug StringSection
+
 -------------------------------------------
 
 breakfast - 500
