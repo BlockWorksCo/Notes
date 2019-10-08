@@ -22638,7 +22638,7 @@ string section debug removal.
 //
 // This will be stored in .xxx_section
 //
-char* specialString __attribute__ ((__section__(".xxx_section"))) = "Hello World!";
+char* specialString __attribute__ ((__section__(".blaa"))) = "Hello World!";
 
 //
 // This will be stored into .data
@@ -22650,7 +22650,7 @@ void myLoggingFn(const char* format, ...)
 {
 }
 
-#define LOG_DEBUG(format, ... ) {static const char* t __attribute__ ((__section__(".xxx_section"))) =format;myLoggingFn( t, ## __VA_ARGS__ );}
+#define LOG_DEBUG(format, ... ) {static const char t[] __attribute__ ((__section__(".xxx_section"))) =format;myLoggingFn( t, ## __VA_ARGS__ );}
 
 int main()
 {
@@ -22661,6 +22661,10 @@ int main()
     LOG_DEBUG("four five six %d", 2);
     LOG_DEBUG("seven eight nine");
 }
+
+
+Extract section with:
+objcopy --dump-section .logdebug=StringSection.logdebug StringSection
 
 -------------------------------------------
 
