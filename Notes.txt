@@ -22923,8 +22923,12 @@ OK
 >file write of em357-SingleB-FW_6_3_2_37.ota on \fileservice\special\slot2\slot2.slt Done
 Adding factory image for NCP firmware to target.
 
+------------------------------------------
 
-
+/lib/udev/rules.d/77-mm-telit-port-types.rules 
+has:
+# HE910, UE910, UL865 (dynamic port identification supported)
+ATTRS{idVendor}=="1bc7", ATTRS{idProduct}=="0021", ENV{ID_MM_TELIT_TAGGED}="1", ENV{ID_MM_TELIT_PORTS_TAGGED}="1"
 
 
 
