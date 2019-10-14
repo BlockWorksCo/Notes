@@ -22990,6 +22990,11 @@ has:
 # HE910, UE910, UL865 (dynamic port identification supported)
 ATTRS{idVendor}=="1bc7", ATTRS{idProduct}=="0021", ENV{ID_MM_TELIT_TAGGED}="1", ENV{ID_MM_TELIT_PORTS_TAGGED}="1"
 
+------------------------------------------------
+
+To stop spurious first-breath events being reported when meter watchdogs:
+- Meter asserts meter-push.
+- Node detects meter-push, but read will fail. The node may also be in process of reading from meter and timing out due to lack of response.
 
 
 
