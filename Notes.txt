@@ -22995,6 +22995,9 @@ ATTRS{idVendor}=="1bc7", ATTRS{idProduct}=="0021", ENV{ID_MM_TELIT_TAGGED}="1", 
 To stop spurious first-breath events being reported when meter watchdogs:
 - Meter asserts meter-push.
 - Node detects meter-push, but read will fail. The node may also be in process of reading from meter and timing out due to lack of response.
+- If when node starts up (within 5 seconds?), the alert pin is asserted, we assume that the restart is due to a meter-watchdog event and do not send a first-breath.
+- If when node starts up (within 5 seconds?), the alert pin is *NOT* asserted, we assume that the restart is due to a power-failure event and node sends a first-breath.
+
 
 
 
