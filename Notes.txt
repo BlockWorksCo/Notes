@@ -23007,6 +23007,12 @@ v148.11
 - Manufacturing/device-testing.
 - other stuff?
 
+----------------------------------
+
+gateway routelist:
+4KB = ~200 nodes.
+8KB = ~400 nodes
+16KB = ~800 nodes.
 
 
 
