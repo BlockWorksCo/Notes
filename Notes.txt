@@ -22998,6 +22998,14 @@ To stop spurious first-breath events being reported when meter watchdogs:
 - If when node starts up (within 5 seconds?), the alert pin is asserted, we assume that the restart is due to a meter-watchdog event and do not send a first-breath.
 - If when node starts up (within 5 seconds?), the alert pin is *NOT* asserted, we assume that the restart is due to a power-failure event and node sends a first-breath.
 
+------------------------------------------
+
+v148.11
+
+- Yens test jig stuff
+- HDLC fix
+- Manufacturing/device-testing.
+- other stuff?
 
 
 
