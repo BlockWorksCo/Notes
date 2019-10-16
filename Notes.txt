@@ -23003,8 +23003,8 @@ To stop spurious first-breath events being reported when meter watchdogs:
 v148.11
 
 - Yens test jig stuff
-- HDLC fix
-- Manufacturing/device-testing.
+- HDLC fix                              - a744fde7b949238e46d747ebe904e524a9a2a34e
+- Manufacturing/device-testing.         - f1e383760fc97725b8429206f3e7377c53283689
 - other stuff?
 - Documentation. Ordering of obises?
 
