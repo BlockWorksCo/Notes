@@ -23005,8 +23005,8 @@ v148.11
 - Yens test jig stuff
 - HDLC fix                              - a744fde7b949238e46d747ebe904e524a9a2a34e
 - Manufacturing/device-testing.         - f1e383760fc97725b8429206f3e7377c53283689
-- CND-9444 1
-- CND-9444 2
+- CND-9444 Enable overriding TX frequency in EFR    - d0acd022fb7c55f3e123b9503faa1d19d469dd0a
+- CND-9444 interface repo.                          - 
 - Documentation. Ordering of obises?    - Done.
 
 ----------------------------------
