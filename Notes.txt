@@ -23015,6 +23015,23 @@ gateway routelist:
 8KB = ~400 nodes
 16KB = ~800 nodes.
 
+--------------------------------------------------------
+
+Impact assesment for key changes on operations
+
+
+
+----------------------------------------------------------
+
+radio range test procedure
+
+
+
+
+
+
+
+
 
 
 
