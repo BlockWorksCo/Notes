@@ -23003,7 +23003,7 @@ To stop spurious first-breath events being reported when meter watchdogs:
 v148.11
 
 - Yens test jig stuff
-- HDLC fix                              - a744fde7b949238e46d747ebe904e524a9a2a34e
+- HDLC fix                              - 9f029d6544b5d381fe5163e869aaf888fcc6a34e
 - Manufacturing/device-testing.         - 4552dfa90d42eabb7ad64a1030ef2db6f7608a0e 
 - CND-9444 Enable overriding TX frequency in EFR    - d0acd022fb7c55f3e123b9503faa1d19d469dd0a
 - Documentation. Ordering of obises?    - Done.
