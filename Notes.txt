@@ -23027,7 +23027,7 @@ change events:
 - key restriction
 
 scenarios:
-- RPL join
+- RPL join/mesh formation.
 - login
 - time distrbution
 - file distribution (download phase)
@@ -23035,6 +23035,8 @@ scenarios:
 - file distribution (fill-in phase).
 - IPSEC key exchange (over DTLS)
 - IPSEC packets over mesh.
+- mesh hopping.
+- cellular going down
 
 
 ----------------------------------------------------------
