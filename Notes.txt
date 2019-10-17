@@ -23019,10 +23019,22 @@ gateway routelist:
 
 Impact assesment for key changes on operations
 
+change events:
 - Preferred key change
 - key addition
 - key removal
 - key barring
+- key restriction
+
+scenarios:
+- RPL join
+- login
+- time distrbution
+- file distribution (download phase)
+- file distribution (broadcast phase)
+- file distribution (fill-in phase).
+- IPSEC key exchange (over DTLS)
+- IPSEC packets over mesh.
 
 
 ----------------------------------------------------------
