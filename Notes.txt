@@ -23005,8 +23005,9 @@ v148.11
 - Yens test jig stuff
 - HDLC fix                              - a744fde7b949238e46d747ebe904e524a9a2a34e
 - Manufacturing/device-testing.         - f1e383760fc97725b8429206f3e7377c53283689
-- other stuff?
-- Documentation. Ordering of obises?
+- CND-9444 1
+- CND-9444 2
+- Documentation. Ordering of obises?    - Done.
 
 ----------------------------------
 
