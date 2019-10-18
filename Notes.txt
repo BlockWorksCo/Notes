@@ -23056,6 +23056,8 @@ gatreway ratio improvement:
 - slight drop in SLA, around 1% that may be explained by a meter-upgrade that automatically kicked in.
 - Topologies look good, evently spread, max-chain-length 6. Very few of those.
 - With ~500 down-routes, modem is uploading ~1.3MByte/hour and downloading ~400KB/hour
+- MAC.drop.percentage not significantly different with large numbers of meters.
+- Contention percentage increased from ~50 to ~125 with peaks at 200 at point of changeover (RPL activity?).
 
 
 
