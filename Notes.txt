@@ -23065,6 +23065,8 @@ mesh size does not cause increasing numbers of packets being dropped (at this le
 - rpl.route_add_failures == 0, constantly.
 - The uplink rate of 1.3MByte/hour == 0.361MBps which is approaching theoretical maximum 2G upload
 limit of 0.4MBps.
+- mac.tx.noack.percentage spikes  to a high value at test-start but average seems roughly the same as previously
+indicating that possibly during intense RPL activity when mesh is disturbed we get packets dropped?
 - At test-start, the number of down-routes briefly spiked up to ~900 before falling back down to ~500. This
 indicates significant headroom in the number of available entries in the route-list. The gateway is not
 being route-list-size-limited at this number of nodes.
