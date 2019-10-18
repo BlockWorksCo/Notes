@@ -23058,7 +23058,9 @@ gateway ratio improvement (cb-82):
 - With ~500 down-routes, modem is uploading ~1.3MByte/hour and downloading ~400KB/hour
 - MAC.drop.percentage not significantly different with large numbers of meters. This indicates that increased 
 mesh size does not cause increasing numbers of packets being dropped (at this level).
-- Contention percentage increased from ~50 to ~125 with peaks at 200 at point of changeover (RPL activity?).
+- Contention percentage increased from ~50 to ~125 with peaks at 200 at point of changeover (RPL activity?). This indicates
+that as the number of meters on a single mesh rise, less airtime is available. Shouldn't this remain the same? its the same
+number of meters doing the same stuff? Is this down to RPL overhead of managing a larger mesh?
 - mac tx frame increased from ~2000/hour to 6500/hour when going from 125 to 500 nodes.
 - mac rx frames increased from ~17000/hour previously to ~30000 after.
 - mac.tx.dutycycle increased from ~1.5% before to ~4% after, peaking at 8% (of 10%). (At gateway).
