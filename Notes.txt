@@ -23050,6 +23050,7 @@ radio range test procedure
 
 
 -------------------------------------------------
+https://hes.amimpwz.in/panmesh/login#node.statistics/51563
 
 gateway ratio improvement (cb-82):
 - looks promising, ~600 nodes per gateway seems stable.
