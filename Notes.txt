@@ -23051,7 +23051,7 @@ radio range test procedure
 
 -------------------------------------------------
 
-gatreway ratio improvement:
+gateway ratio improvement (cb-42):
 - looks promising, ~600 nodes per gateway seems stable.
 - slight drop in SLA, around 1% that may be explained by a meter-upgrade that automatically kicked in.
 - Topologies look good, evently spread, max-chain-length 6. Very few of those.
