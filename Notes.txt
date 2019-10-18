@@ -23055,6 +23055,7 @@ gatreway ratio improvement:
 - looks promising, ~600 nodes per gateway seems stable.
 - slight drop in SLA, around 1% that may be explained by a meter-upgrade that automatically kicked in.
 - Topologies look good, evently spread, max-chain-length 6. Very few of those.
+- With ~500 down-routes, modem is uploading ~1.3MByte/hour and downloading ~400KB/hour
 
 
 
