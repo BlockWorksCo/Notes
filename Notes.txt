@@ -23070,6 +23070,8 @@ indicating that possibly during intense RPL activity when mesh is disturbed we g
 - At test-start, the number of down-routes briefly spiked up to ~900 before falling back down to ~500. This
 indicates significant headroom in the number of available entries in the route-list. The gateway is not
 being route-list-size-limited at this number of nodes.
+- CoAP failure percentage does not rise with increasing number of nodes indicating that retries are handling
+the packet-drops sufficiently well (except during one brief spike at test-start).
 
 
 
