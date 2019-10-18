@@ -23058,6 +23058,7 @@ gatreway ratio improvement:
 - With ~500 down-routes, modem is uploading ~1.3MByte/hour and downloading ~400KB/hour
 - MAC.drop.percentage not significantly different with large numbers of meters.
 - Contention percentage increased from ~50 to ~125 with peaks at 200 at point of changeover (RPL activity?).
+- mac tx frame increased from ~2000/hour to 6500/hour when going from 125 to 500 nodes.
 
 
 
