@@ -23061,6 +23061,7 @@ gateway ratio improvement (cb-42):
 - mac tx frame increased from ~2000/hour to 6500/hour when going from 125 to 500 nodes.
 - mac rx frames increased from ~17000/hour previously to ~30000 after.
 - mac.tx.dutycycle increased from ~1.5% before to ~4% after, peaking at 8% (of 10%). (At gateway).
+- rpl.route_add_failures == 0, constantly.
 
 
 
