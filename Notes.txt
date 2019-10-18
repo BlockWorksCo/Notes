@@ -23062,6 +23062,8 @@ gateway ratio improvement (cb-42):
 - mac rx frames increased from ~17000/hour previously to ~30000 after.
 - mac.tx.dutycycle increased from ~1.5% before to ~4% after, peaking at 8% (of 10%). (At gateway).
 - rpl.route_add_failures == 0, constantly.
+- The uplink rate of 1.3MByte/hour == 0.361MBps which is approaching theoretical maximum 2G upload
+limit of 0.4MBps.
 
 
 
