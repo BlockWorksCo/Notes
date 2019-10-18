@@ -23075,6 +23075,12 @@ being route-list-size-limited at this number of nodes.
 - CoAP failure percentage does not rise with increasing number of nodes indicating that retries are handling
 the packet-drops sufficiently well (except during one brief spike at test-start).
 
+-----------------------------
+
+framecounter issue.
+
+- Gets reset at known points so allows for replay attacks.
+- SMIP may need this to be rectified for CPA.
 
 
 
