@@ -23078,6 +23078,9 @@ being route-list-size-limited at this number of nodes.
 the packet-drops sufficiently well (except during one brief spike at test-start).
 
 - Delay is seen in readings leading to SLA drop
+- netsize_penalty?
+- sloshing? big swings causing overload? do the stats/metrics act quick enough to stop the sloshing
+effect? (time-base issue).
 
 -----------------------------
 
