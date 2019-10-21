@@ -23090,6 +23090,12 @@ framecounter issue.
 - SMIP may need this to be rectified for CPA.
 
 
+--------------------------------------
+
+EFM32GG12B8xx in QFN64 package
+
+CNIC7 review:
+- 
 
 
 
