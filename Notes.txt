@@ -23095,7 +23095,8 @@ framecounter issue.
 EFM32GG12B8xx in QFN64 package
 
 CNIC7 review:
-- 
+- PD2 is a 5V tolerant... treat it any different?
+- I get PF0/1/2 to be GPIO, not SWD lines.
 
 
 
