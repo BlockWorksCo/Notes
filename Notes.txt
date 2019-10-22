@@ -23017,7 +23017,7 @@ gateway routelist:
 
 --------------------------------------------------------
 
-Impact assesment for key changes on operations
+Impact assesment for key changes on operations, what error messages?
 
 change events:
 - Preferred key change
