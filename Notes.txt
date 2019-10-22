@@ -23098,7 +23098,7 @@ CNIC7 review:
 - PD2 is a 5V tolerant... treat it any different?
 - US2_TX labelled as "I" for input along with "US2_RX....
 
-- GNSS/GPS facility would be useful (time-sync & network-planning).
+- GNSS/GPS facility would be useful (time-sync & network-planning). ANT_GNSS?
 - More Test Points?
 
 
