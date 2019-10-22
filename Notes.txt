@@ -23099,7 +23099,9 @@ CNIC7 review:
 - US2_TX labelled as "I" for input along with "US2_RX....
 
 - GNSS/GPS facility would be useful (time-sync & network-planning). ANT_GNSS?
+- (paid for service using Cell triangulation) AT+QCELLLOC Get Location Information by QuecLocator
 - More Test Points?
+- netlight probably unusable.
 
 
 
