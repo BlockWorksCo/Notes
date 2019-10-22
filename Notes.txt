@@ -23102,7 +23102,7 @@ CNIC7 review:
 - (paid for service using Cell triangulation) AT+QCELLLOC Get Location Information by QuecLocator
 - More Test Points?
 - netlight probably unusable.
-- EG91 DBG_TX and RX brough out to a header?
+- EG91 DBG_TX and RX brough out to a header or TPs?
 
 
 
