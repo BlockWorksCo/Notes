@@ -23117,6 +23117,8 @@ IGW7 architecture change.
 - Is duty-cycle shared or individual?
 - SLIP-over-I2C
 - LED (extra-leds) control over I2C to CNIC7.
+- packets are encrypted and decrypted with MAC key(s) for 
+- meter-interface from CNIC needs to be exposed over I2C to master-IPA
 
 
 
