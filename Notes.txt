@@ -23027,7 +23027,7 @@ change events:
 - key restriction
 
 scenarios:
-- RPL join/mesh formation.
+- RPL join/mesh formation. DIS are broadcast, DIO/DAO/DAO-ACK are unicast.
 - login
 - time distrbution
 - file distribution (download phase)
