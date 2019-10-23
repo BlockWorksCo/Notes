@@ -23120,6 +23120,18 @@ IGW7 architecture change.
 
 
 
+Operate slave IPA3 on a separate mesh for compatibility with other single-channel meshes.
+RPL on slave-IPA is standalone and separate. Network interface presented to master-IPA is 'raw'
+with no security, DTLS, etc.
+
+Phase 1:
+- Get CNIC7 running with IP stack on board. Use to prove out the Quectel modem i/f.
+
+Phase 2:
+- SLIP-over-I2C slave on CNIC7.
+- SLIP-over-I2C master (with IP stack and mesh) on Master-IPA.
+
+
 
 
 
