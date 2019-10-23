@@ -23036,8 +23036,8 @@ scenarios:
 - IPSEC key exchange (over DTLS). unicast over DTLS between server/node.
 - IPSEC packets over mesh. unicast.
 - mesh hopping. As RPL if tables are consistent. What if tables aren't?
-- cellular going down
-- General DTLS traffic
+- cellular going down. Mesh reform, RPL ativity.
+- General DTLS traffic. Only restricted flag affects if unicast works.
 - CoAP/non-DTLS traffic.
 
 
