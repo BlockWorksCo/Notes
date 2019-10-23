@@ -23106,6 +23106,9 @@ CNIC7 review:
 - netlight probably unusable.
 - EG91 DBG_TX and RX brough out to a header or TPs?
 
+---------------------------------------------------------------
+
+IGW7 architecture change.
 
 
 
