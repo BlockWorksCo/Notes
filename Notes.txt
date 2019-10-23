@@ -23038,7 +23038,7 @@ scenarios:
 - mesh hopping. As RPL if tables are consistent. What if tables aren't?
 - cellular going down. Mesh reform, RPL ativity.
 - General DTLS traffic. Only restricted flag affects if unicast works.
-- CoAP/non-DTLS traffic.
+- CoAP/non-DTLS traffic. Filtered by restricted-key and address
 
 
 ----------------------------------------------------------
