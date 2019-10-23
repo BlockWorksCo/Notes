@@ -23109,7 +23109,9 @@ CNIC7 review:
 ---------------------------------------------------------------
 
 IGW7 architecture change.
-- 
+- fw upgrade to all uC.
+- master controls reset of slaves.
+- security must be handled on master, slaves are dumb.
 
 
 
