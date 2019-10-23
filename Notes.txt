@@ -23035,8 +23035,10 @@ scenarios:
 - file distribution (fill-in phase). unicast.
 - IPSEC key exchange (over DTLS). unicast over DTLS between server/node.
 - IPSEC packets over mesh. unicast.
-- mesh hopping.
+- mesh hopping. As RPL if tables are consistent. What if tables aren't?
 - cellular going down
+- General DTLS traffic
+- CoAP/non-DTLS traffic.
 
 
 ----------------------------------------------------------
