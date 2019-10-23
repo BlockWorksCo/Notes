@@ -23109,7 +23109,7 @@ CNIC7 review:
 ---------------------------------------------------------------
 
 IGW7 architecture change.
-- fw upgrade to all uC.
+- fw upgrade to all uC. Up to four different images, three may be able to be combined.
 - master controls reset of slaves.
 - security must be handled on master, slaves are dumb.
 - RPL implications (two concurrent meshes or one?)
@@ -23123,6 +23123,8 @@ IGW7 architecture change.
 Operate slave IPA3 on a separate mesh for compatibility with other single-channel meshes.
 RPL on slave-IPA is standalone and separate. Network interface presented to master-IPA is 'raw'
 with no security, DTLS, etc.
+On startup, only master-IPA is running, it brings slaves out of reset, determines if they are present
+and registers the network-interfaces.
 
 Phase 1:
 - Get CNIC7 running with IP stack on board. Use to prove out the Quectel modem i/f.
