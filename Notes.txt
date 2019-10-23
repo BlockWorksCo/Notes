@@ -23112,6 +23112,9 @@ IGW7 architecture change.
 - fw upgrade to all uC.
 - master controls reset of slaves.
 - security must be handled on master, slaves are dumb.
+- RPL implications (two concurrent meshes or one?)
+- Configuration implications (i.e. doubling up on radio config).
+
 
 
 
