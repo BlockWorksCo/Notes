@@ -23159,6 +23159,14 @@ apt install afl
 For MISRA lint report:
 install FlexeLint_v9.zip.zip from https://confluence.cyco.io/display/ENG/2015/03/23/Flexelint<Paste>
 
+To install you have to build the source.
+cd src
+gcc -o flint *.c
+./flint
+
+Add it to your path in you .bashrc:
+PATH=/Data/Temp/Flexelint/src:$PATH
+
 Thanks for purchasing FlexeLint Workstation License for download     .  Your download transaction ID is 0002496773 and your payment has now cleared.  In order to obtain technical support or updated software you will need to reference your serial number.  Please make a note of it.
 
 Serial Number:  
