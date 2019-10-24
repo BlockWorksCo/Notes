@@ -23180,6 +23180,7 @@ ag -v "generated|Note|3pp|stm32|efr32|cortex|at45|ds1374|ubuntu|mtd\/spi" build/
 report in:
 build/ipa1-smip-insecure/lint/agent.lint
 
+Old MISRA report in CND-3954
 
 
 
