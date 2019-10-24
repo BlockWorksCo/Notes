@@ -23136,6 +23136,9 @@ Phase 2:
 - SLIP-over-I2C master (with IP stack and mesh) on Master-IPA.
 
 
+Registering new interface:
+
+ipAddIface()
 
 
 
