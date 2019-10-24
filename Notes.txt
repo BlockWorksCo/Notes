@@ -23144,6 +23144,7 @@ iface.h
 - Create a static IfaceDesc structure with callbacks and call ipAddIface()
 - txPktq in IfaceDesc is used for outgoing packet. device-specufuc task reads from that q and
 sends out to PHY.
+- setRxCallback() registers callback for packet receipt notifications.
 
 
 
