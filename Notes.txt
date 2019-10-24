@@ -23175,7 +23175,7 @@ FlexeLint License: S60627
 make lint-ipa1-smip-insecure
 
 filter the full list down the non-3pp, non-Note, non-system-include MISRA checks:
-ag -v "generated|Note|3pp|stm32|efr32|cortex|at45|ds1374|ubuntu" build/ipa1-smip-insecure/lint/agent.lint | ag MISRA > agent.lint.MISRA
+ag -v "generated|Note|3pp|stm32|efr32|cortex|at45|ds1374|ubuntu|mtd\/spi" build/ipa1-smip-insecure/lint/agent.lint | ag MISRA > agent.lint.MISRA
 
 report in:
 build/ipa1-smip-insecure/lint/agent.lint
