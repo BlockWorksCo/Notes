@@ -23147,7 +23147,8 @@ sends out to PHY.
 - setRxCallback() registers callback for packet receipt notifications.
 
 -------------------------------------
-fuzz testing
+fuzz testing CND-8621 
+doesn't build so take 78536bafd476c84d82bb47cd9241b85470144af5 fixes.
 
 Documentation/fuzzing.txt
 apt install afl
