@@ -23175,6 +23175,10 @@ FlexeLint License: S60627
 make lint-ipa1-smip-insecure
 
 
+report in:
+build/ipa1-smip-insecure/lint/agent.lint
+
+
 
 
 
