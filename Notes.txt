@@ -23154,6 +23154,33 @@ apt install afl
 AFL_HARDEN=1 make fuzzable
 mkdir testcases findings
 
+# Make a test case.
+# Minimal MAC frame, destined to the broadcast address
+echo 41d8000000ffff0000000000000002 | xxd -r -p > testcases/frame1
+# Minimal MAC frame, destined to the right address
+echo 41dc0100007766554433221100aaaaaaaaaaaaaaa800 | xxd -p -r > testcases/frame2
+# Minimal MAC frame, destined to the right address, empty ICMP echo request
+echo 61dc4400007766554433221100776655443322110078003a20aaaaaaaaaaaaaaaab9bbbbbbbbbbbbbbaaaaaaaaaaaaaaaa021122334455667780006e54000a000a > testcases/frame_icmp_echo
+# Minimal MAC frame, destined to the right address, empty UDP packet
+echo 61dc1e0000776655443322110077665544332211007c0020aaaaaaaaaaaaaaaab9bbbbbbbbbbbbbbaaaaaaaaaaaaaaaa0211223344556677f04e2000509fa2 | xxd -r -p > testcases/frame_udp
+# Empty UDP frame, ellided checksum, CoAP destination port (CoAP data can be appended at the end)
+echo 61dc1e0000776655443322110077665544332211007c0020aaaaaaaaaaaaaaaab9bbbbbbbbbbbbbbaaaaaaaaaaaaaaaa0211223344556677f44e201633 | xxd -r -p > testcases/frame_coap
+# Empty, but valid, CoAP request: Get /
+echo 61dc1e0000776655443322110077665544332211007c0020aaaaaaaaaaaaaaaab9bbbbbbbbbbbbbbaaaaaaaaaaaaaaaa0211223344556677f44e20163340018888 | xxd -r -p > testcases/frame_coap_req
+
+# MAC Encryption
+Encryption on MAC layer is turned off by default. It is possible to enable it
+by setting CONFIG_MAC_ENCRYPTION in fuzzable.mk. The tool generate_frames can
+be used to generate frames.
+Example of an encrypted MAC frame which contains a UDP packet with 16 bytes
+of payload:
+49d8950000ffff7766554433221102050000000015e0ce46c58a02aa7a1e7edc3fe3bbbcbbc8a735074dcf77d5efd28df8dcd4c15d5a53a1e69a682796baefadb4e44b7a7a50
+The default MAC key was used to encrypt the frame.
+
+# Run!
+sudo sysctl -w kernel.core_pattern=core
+afl-fuzz -t 500 -m 200 -i testcases/ -o findings/ build/fuzzable/bin/fuzzable_mac_frame -timemode fast
+
 
 
 
