@@ -23138,7 +23138,7 @@ Phase 2:
 
 Registering new interface:
 
-ipAddIface()
+- Create a static IfaceDesc structure with callbacks and call ipAddIface()
 
 
 
