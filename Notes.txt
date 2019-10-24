@@ -23146,6 +23146,14 @@ iface.h
 sends out to PHY.
 - setRxCallback() registers callback for packet receipt notifications.
 
+-------------------------------------
+fuzz testing
+
+Documentation/fuzzing.txt
+apt install afl
+AFL_HARDEN=1 make fuzzable
+mkdir testcases findings
+
 
 
 
