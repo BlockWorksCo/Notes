@@ -23183,5 +23183,42 @@ build/ipa1-smip-insecure/lint/agent.lint
 Old MISRA report in CND-3954
 
 
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 20 hrs) <<<
+
+  cycle 19, lifetime speed 484 execs/sec, path 1301/1303 (99%)
+  pending 0/52, coverage 8.68%, no crashes yet
+
+>>> fuzzer1 (0 days, 20 hrs) <<<
+
+  cycle 149, lifetime speed 507 execs/sec, path 695/1431 (48%)
+  pending 0/4, coverage 8.74%, no crashes yet
+
+>>> fuzzer2 (0 days, 20 hrs) <<<
+
+  cycle 157, lifetime speed 511 execs/sec, path 980/1442 (67%)
+  pending 0/7, coverage 8.75%, no crashes yet
+
+>>> fuzzer3 (0 days, 20 hrs) <<<
+
+  cycle 168, lifetime speed 512 execs/sec, path 419/1332 (31%)
+  pending 0/1, coverage 8.54%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 3 days, 10 hours
+         Total execs : 149 million
+    Cumulative speed : 2014 execs/sec
+       Pending paths : 0 faves, 64 total
+  Pending per fuzzer : 0 faves, 16 total (on average)
+       Crashes found : 0 locally unique
+
+
 
 
