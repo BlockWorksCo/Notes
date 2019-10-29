@@ -23226,5 +23226,79 @@ aren't retried.
 - fsRemove and friends can fail in many ways and are never retried or checked for failure.
 
 
+---------------------------------------------------------------------
+
+commit 05fe0dfd67664a6a9cfa7bafdc2b5bb6ee3494e0
+Merge: 8025bdf70 0fb229e6f
+Author: SteveTickle <steve.tickle@cyanconnode.com>
+Date:   Thu Oct 24 13:44:58 2019 +0000
+
+    Merge branch 'lixin/mactestmode' into 'master'
+    
+    SMIPDEV-114 support TestBench functionality
+    
+    See merge request smip/terminal!22
+
+commit 3926d22b4695377b2150cb303d6b54c50a9da4b6
+Author: Jakob Ruhe <jakob.ruhe@cyanconnode.com>
+Date:   Fri Dec 15 16:09:08 2017 +0100
+
+    SMIPDEV-8 CND-7472: Update File download event types
+    
+    Rename the event FailDownload into InterruptedDownload to indicate
+    that the job is probably still running on the server and may get
+    resumed soon.
+    
+    Send the InterruptedDownload event to the File event callback when
+    the agent changes IP address instead of the AbortDownload event.
+    
+    Log on info level what is given to the File event callback.
+    
+    Change-Id: I64bd3477ebb2daf44bad8d4662303a676f600292
+    (cherry picked from commit 09463be9dfd6d3a79af058689d592ba715576e42)
+
+commit 0fb229e6f2cf2400b0481aa0d13d087957257445 (origin/lixin/mactestmode)
+Author: lcheng <lixin.cheng@cyanconnode.com>
+Date:   Thu Oct 17 15:25:31 2019 +0100
+
+    SMIPDEV-114 support TestBench functionality
+    
+    - Keystore: cnd_keystoreKeyChanged() support cnd_KeyIndex_LinkLayerKey.
+    Load default mac key and use it as keyId 0
+    
+    - For SMIP test build (ipa1-smip and host-smip), add follwing features
+    Configuration: add "agent.mactestmode", do the same as
+    "agentOptions->macTestMode", except to support some local coap requests
+    to support required tests.
+    
+    Keystore: add new "keystore/mac-key" coap request to set the default
+    mac key.
+
+commit 30b8abcdb2d2b807e1483f3988adc69710d813b3 (origin/lixin/protect_keywrite_api)
+Author: lcheng <lixin.cheng@cyanconnode.com>
+Date:   Thu Oct 3 12:13:53 2019 +0100
+
+    Protect cndkeystore WriteKey API
+
+commit 50f4783dd4da647db26102c0f4d4baf7a86de111
+Author: Steve Tickle <steve.tickle@cyanconnode.com>
+Date:   Thu Aug 8 11:19:18 2019 +0100
+
+    SMIPDEV-51 Implement ability to configure a key table and preferred key
+    
+    (1) Configuration: support binary data (new Bytes type)
+    (2) Configuration: support secure parameter for keystore (new Secure
+    flag and securedId)
+    (3) SMIP configuration backend: store secure parameter to keystore
+    (4) Add new parameter "key.keytable" (Bytes type, Secure).
+    It contains key table and preferred key. For SMIP, it is stored in
+    keystore KeyTable.
+    (5) Add keytable to mac_security and ready for multiple keys support
+    (6) Add smip mock code for configuration and keystore storage
+    (7) Add ipa1-smip-insecure target to test smip code on ipa1 node
+
+
+
+
 
 
