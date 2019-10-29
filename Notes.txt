@@ -23223,6 +23223,7 @@ Summary stats
 MISRA issues:
 - coapSendResponsePayload can fail due to queue-full conditions. This ripples out to most coapSendXXX() functions and they
 aren't retried.
+- fsRemove and friends can fail in many ways and are never retried or checked for failure.
 
 
 
