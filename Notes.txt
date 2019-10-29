@@ -23218,6 +23218,11 @@ Summary stats
        Pending paths : 0 faves, 64 total
   Pending per fuzzer : 0 faves, 16 total (on average)
        Crashes found : 0 locally unique
+-------------------------------------------------------------------
+
+MISRA issues:
+- coapSendResponsePayload can fail due to queue-full conditions. This ripples out to most coapSendXXX() functions and they
+aren't retried.
 
 
 
