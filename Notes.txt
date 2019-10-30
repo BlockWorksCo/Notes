@@ -23304,6 +23304,14 @@ Date:   Thu Aug 8 11:19:18 2019 +0100
     (7) Add ipa1-smip-insecure target to test smip code on ipa1 node
 
 
+----------------------------------------
+
+va_arg justifications and checks:
+- fn cannot return between va_start / va_end.
+- default type promotion converts chars to ints so don't interpret as char.
+- buffer overrun.
+- pointer from int promotion if sizeof(void*) != sizeof(int).
+- constant format string.
 
 
 
