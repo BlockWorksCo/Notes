@@ -23317,7 +23317,7 @@ va_arg justifications and checks:
 
 restricted key limitations:
 1) Only one node with a restricted key is allowed on a mesh at once.
-2) Nodes with restricted keys are not allowed to have children.
+2) Nodes with restricted keys are not allowed to have children (except temporarily, prior to the DAO-ACK timeout).
 
 Implications:
 3) Setting a restricted flag on an in-use key will remove those nodes from the mesh.
