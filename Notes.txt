@@ -23322,7 +23322,7 @@ restricted key limitations:
 Implications:
 3) Setting a restricted flag on an in-use key will remove those nodes from the mesh.
 4) Because of point 1, transition from a restricted key to non-restricted keys (the bootstrap case) will
-take a long time (i.e. on node at at time with a mesh timeout & reform between each).
+take a long time (i.e. each 'hop' of nodes at at time with a mesh timeout & reform between each).
 
 
 
