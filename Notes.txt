@@ -23323,6 +23323,9 @@ Implications:
 3) Setting a restricted flag on an in-use key will remove those nodes from the mesh.
 4) Because of point 1, transition from a restricted key to non-restricted keys (the bootstrap case) will
 take a long time (i.e. each 'hop' of nodes at at time with a mesh timeout & reform between each).
+5) Because of point 2, nodes attempting to join the network with a restricted key who happen to have a
+child node will not be able to join. Nodes *have* to be leaf nodes to join with a restricted key. This 
+condition *should* happen, but is it enforced or accidental?
 
 
 
