@@ -23313,6 +23313,26 @@ va_arg justifications and checks:
 - pointer from int promotion if sizeof(void*) != sizeof(int).
 - constant format string.
 
+----------------------------------------
+
+restricted key limitations:
+1) Only one node with a restricted key is allowed on a mesh at once.
+2) Nodes with restricted keys are not allowed to have children.
+
+Implications:
+3) Setting a restricted flag on an in-use key will remove those nodes from the mesh.
+4) Because of point 1, transition from a restricted key to non-restricted keys (the bootstrap case) will
+take a long time (i.e. on node at at time with a mesh timeout & reform between each).
+
+
+
+
+
+
+
+
+
+
 
 
 
