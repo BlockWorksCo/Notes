@@ -23343,6 +23343,9 @@ sleep 1
 -----------------------------------------------
 
 
+od -A none -v -t x1 ~/Shared/Downloads/Meter_Agent\ 071_RX.txt 
+
+:1,$s/7e/\r7e/g
 
 
 
