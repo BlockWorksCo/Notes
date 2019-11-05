@@ -23327,6 +23327,20 @@ take a long time (i.e. each 'hop' of nodes at at time with a mesh timeout & refo
 child node will not be able to join. Nodes *have* to be leaf nodes to join with a restricted key. This 
 condition *should* happen, but is it enforced or accidental?
 
+---------------------------------------------------------
+
+blfwupload:
+
+~/gitlab1/terminal/build/host-ctrlporthub/bin/ctrlporthub -controllerport 4000 -loglevel debug  -serial $SERIAL > /dev/null 2>&1 &
+pid=$!
+sleep 1
+~/gitlab1/terminal/tools/c4-tools/coap_request.py --ctrlporthub :4000 --restart
+kill $pid
+sleep 1
+~/gitlab1/terminal/build/host-agent/bin/blfwupload -serial $SERIAL -image $IMAGE -dev $SERIAL -loglevel debug
+
+
+-----------------------------------------------
 
 
 
