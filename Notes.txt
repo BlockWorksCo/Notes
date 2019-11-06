@@ -23348,6 +23348,21 @@ od -A none -v -t x1 ~/Shared/Downloads/Meter_Agent\ 071_RX.txt
 :1,$s/7e/\r7e/g
 
 
+-----------------------------------------------------------------
+
+DTLS epoch
+
+https://tlswg.org/dtls13-spec/draft-ietf-tls-dtls13.html#rfc.section.6.1
+
+
+epoch value (0) is used with unencrypted messages. There are three unencrypted messages in DTLS, namely ClientHello, ServerHello, and HelloRetryRequest.
+epoch value (1) is used for messages protected using keys derived from client_early_traffic_secret. This includes early data sent by the client and the EndOfEarlyData message.
+epoch value (2) is used for messages protected using keys derived from [sender]_handshake_traffic_secret. Messages transmitted during the initial handshake, such as EncryptedExtensions, CertificateRequest, Certificate, CertificateVerify, and Finished belong to this category. Note, however, post-handshake are protected under the appropriate application traffic key and are not included in this category.
+epoch value (3) is used for payloads protected using keys derived from the initial traffic_secret_0. This may include handshake messages, such as post-handshake messages (e.g., a NewSessionTicket message).
+epoch value (4 to 2^16-1) is used for payloads protected using keys from the traffic_secret_N (N>0).
+
+
+
 
 
 
