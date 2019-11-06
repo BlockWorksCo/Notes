@@ -23361,6 +23361,19 @@ epoch value (2) is used for messages protected using keys derived from [sender]_
 epoch value (3) is used for payloads protected using keys derived from the initial traffic_secret_0. This may include handshake messages, such as post-handshake messages (e.g., a NewSessionTicket message).
 epoch value (4 to 2^16-1) is used for payloads protected using keys from the traffic_secret_N (N>0).
 
+------------------------------------
+
+IMGW:
+
+CNIC7 + master-IPA combination.
+- I2C driver
+- SLIP driver
+- Reset logic
+- GPIO expander driver
+- ID line driver
+- Application-switching based on ID.
+- Quectel modem driver
+- removal of radio code from EFM application (CNIC7).
 
 
 
