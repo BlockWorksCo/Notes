@@ -23411,7 +23411,7 @@ https://en.wikipedia.org/wiki/Multicast_Listener_Discovery
 MLDv1 RFC 3810/4604/3678
 
 - Need to implement service such as this: "IPv6MulticastListen(socket, interface, IPv6multicastaddress, filtermode, sourcelist)"
-- Each node would be a router and register itself to receive routes from parent for each
+- Can implement only basic, Any-source-multicast (RFC3678)
 
 The Start Listening operation is equivalent to:
 
