@@ -23374,6 +23374,7 @@ CNIC7 + master-IPA combination.
 - Application-switching based on ID.
 - Quectel modem driver
 - removal of radio code from EFM application (CNIC7).
+- Encryption of packets on I2C (Wireless-Link-Layer key WLL)
 
 ----------------------------------------------------------
 
