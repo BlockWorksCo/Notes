@@ -23377,6 +23377,10 @@ CNIC7 + master-IPA combination.
 - Encryption of packets on I2C (Wireless-Link-Layer key WLL)
 - Debug over SLIP/UART.
 
+
+add to INTERFACE_SLIP EInterface (comm/types.h)
+ipAddIface(, "slip", ^s_slipDesc );
+
 ----------------------------------------------------------
 
 // Generate a certificate
