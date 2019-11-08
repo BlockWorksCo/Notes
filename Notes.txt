@@ -23405,6 +23405,12 @@ openssl list all ciphers
 
 openssl ciphers -v 'ALL:eNULL'
 
+-----------------------------------------------------
+multicast on ipv6
+https://en.wikipedia.org/wiki/Multicast_Listener_Discovery
+RFC 3810
+
+- Need to implement service such as this: "IPv6MulticastListen(socket, interface, IPv6multicastaddress, filtermode, sourcelist)"
 
 
 
