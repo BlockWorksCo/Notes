@@ -23408,9 +23408,22 @@ openssl ciphers -v 'ALL:eNULL'
 -----------------------------------------------------
 multicast on ipv6
 https://en.wikipedia.org/wiki/Multicast_Listener_Discovery
-RFC 3810
+MLDv1 RFC 3810/4604/3678
 
 - Need to implement service such as this: "IPv6MulticastListen(socket, interface, IPv6multicastaddress, filtermode, sourcelist)"
+- Each node would be a router and register itself to receive routes from parent for each
+
+The Start Listening operation is equivalent to:
+
+      IPv6MulticastListen ( socket, interface, IPv6 multicast address,
+                            EXCLUDE, {} )
+
+   and the Stop Listening operation is equivalent to:
+
+      IPv6MulticastListen ( socket, interface, IPv6 multicast address,
+                            INCLUDE, {} )
+
+   where {} is an empty source list.
 
 
 
