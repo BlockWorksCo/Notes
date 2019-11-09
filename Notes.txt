@@ -23425,6 +23425,48 @@ The Start Listening operation is equivalent to:
 
    where {} is an empty source list.
 
+-------------------------------------------------------
+
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 18 hrs) <<<
+
+  cycle 19, lifetime speed 497 execs/sec, path 1192/1311 (90%)
+  pending 0/105, coverage 8.85%, no crashes yet
+
+>>> fuzzer1 (0 days, 18 hrs) <<<
+
+  cycle 169, lifetime speed 530 execs/sec, path 484/1272 (38%)
+  pending 0/1, coverage 8.84%, no crashes yet
+
+>>> fuzzer2 (0 days, 18 hrs) <<<
+
+  cycle 166, lifetime speed 523 execs/sec, path 625/1333 (46%)
+  pending 0/2, coverage 8.80%, no crashes yet
+
+>>> fuzzer3 (0 days, 18 hrs) <<<
+
+  cycle 158, lifetime speed 530 execs/sec, path 505/1245 (40%)
+  pending 0/1, coverage 8.60%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 3 days, 0 hours
+         Total execs : 134 million
+    Cumulative speed : 2080 execs/sec
+       Pending paths : 0 faves, 109 total
+  Pending per fuzzer : 0 faves, 27 total (on average)
+       Crashes found : 0 locally unique
+
+
+-----------------------------------------------------------
+
+
 
 
 
