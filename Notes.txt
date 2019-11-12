@@ -23382,6 +23382,7 @@ CNIC7 + master-IPA combination.
 - 'remote' netstat/devstat LEDs (controlled by CNIC7) Better to be controlled by I2C expander?
 - coexistence interrupt notification on CNIC7
 - time distribution.
+- power-fail distribution.
 
 demo-able stages?
 
