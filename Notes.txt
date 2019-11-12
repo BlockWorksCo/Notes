@@ -23383,6 +23383,7 @@ CNIC7 + master-IPA combination.
 - coexistence interrupt notification on CNIC7
 - time distribution.
 - power-fail distribution.
+- Bootloader (now is the time to do an upgradeable bootloader!).
 
 demo-able stages?
 
