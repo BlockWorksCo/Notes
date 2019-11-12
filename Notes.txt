@@ -23380,6 +23380,8 @@ CNIC7 + master-IPA combination.
 - 'myAddress' needs to be dependent on ID line
 - File distribution of images to slave nodes.
 
+demo-able stages?
+
 
 add to INTERFACE_SLIP EInterface (comm/types.h)
 ipAddIface(, "slip", ^s_slipDesc );
