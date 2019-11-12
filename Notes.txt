@@ -23362,7 +23362,7 @@ epoch value (3) is used for payloads protected using keys derived from the initi
 epoch value (4 to 2^16-1) is used for payloads protected using keys from the traffic_secret_N (N>0).
 
 ------------------------------------
-
+IGW7
 IMGW:
 
 CNIC7 + master-IPA combination.
@@ -23378,6 +23378,7 @@ CNIC7 + master-IPA combination.
 - Debug over SLIP/UART.
 - ID line needs to be incorporated into I2C address.
 - 'myAddress' needs to be dependent on ID line
+- File distribution of images to slave nodes.
 
 
 add to INTERFACE_SLIP EInterface (comm/types.h)
