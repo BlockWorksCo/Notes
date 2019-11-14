@@ -23500,6 +23500,8 @@ Remove spi target from lib in Makefile and rebuild (only have i2c in the lib).
 .a in:
 LibMPSSE/Build/Linux/libMPSSE.a
 
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Data/Projects/LibMPSSE-I2C/LibMPSSE/Build/Linux
+ldconfig
 
 
 
