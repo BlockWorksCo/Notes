@@ -23489,6 +23489,17 @@ cd libftd2xx/
 tar xvf ../libftd2xx-x86_64-1.4.8
 
 
+LibMPSSE I2C FTDI:
+cd External/Linux/
+tar xvf libftd2xx1.1.12.tar.tar 
+
+
+
+
+
+
+
+
 
 
 
