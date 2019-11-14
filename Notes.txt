@@ -23478,7 +23478,10 @@ Summary stats
 
 
 -----------------------------------------------------------
+libftd2xx for ftdi I2C
 
+https://www.ftdichip.com/Drivers/D2XX.htm
+wget https://www.ftdichip.com/Drivers/D2XX/Linux/libftd2xx-x86_64-1.4.8.gz
 
 
 
