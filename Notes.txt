@@ -23490,10 +23490,15 @@ tar xvf ../libftd2xx-x86_64-1.4.8
 
 
 LibMPSSE I2C FTDI:
+https://www.ftdichip.com/Support/SoftwareExamples/MPSSE/LibMPSSE-I2C.htm
+wget https://www.ftdichip.com/Support/SoftwareExamples/MPSSE/LibMPSSE-I2C/libMPSSE-I2C.zip
 cd External/Linux/
 tar xvf libftd2xx1.1.12.tar.tar 
 
 Remove spi target from lib in Makefile and rebuild (only have i2c in the lib).
+
+.a in:
+LibMPSSE/Build/Linux/libMPSSE.a
 
 
 
