@@ -23503,6 +23503,13 @@ LibMPSSE/Build/Linux/libMPSSE.a
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/Data/Projects/LibMPSSE-I2C/LibMPSSE/Build/Linux
 ldconfig
 
+--------------------------------------
+
+SLIP framing:
+end-of-frame = 0xc0
+escape is 0xdb;
+on send, if you find 0xc0, replace with 0xdb 0xdc.
+on send, if you find 0xdb, replace with 0xdb 0xdd.
 
 
 
