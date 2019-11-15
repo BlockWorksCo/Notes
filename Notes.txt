@@ -23537,21 +23537,21 @@ on send, if you find 0xdb, replace with 0xdb 0xdd.
 
 -----------------------------------------
 
-sudo tunctl -u steve
+sudo tunctl -3 -u steve
 
 #
-ifconfig tap0 192.168.0.254 up
+sudo ifconfig tun1 192.168.0.254 up
 #
-route add -host 192.168.0.253 dev tap0
+sudo route add -host 192.168.0.253 dev tun1
 #
-bash -c 'echo 1 > /proc/sys/net/ipv4/conf/tap0/proxy_arp'
+sudo bash -c 'echo 1 > /proc/sys/net/ipv4/conf/tap0/proxy_arp'
 #
-arp -Ds 192.168.0.253 eth0 pub
+sudo arp -Ds 192.168.0.253 eth0 pub
 
 To delete the interface, use the -d option:
 
 #
-tunctl -d tap0
+sudo tunctl -d tap0
 Set 'tap0' nonpersistent
 
 
