@@ -23535,7 +23535,24 @@ on send, if you find 0xdb, replace with 0xdb 0xdd.
 2019-11-15 17:26:36.591 #1   001bc50c6004fdd6 <log> 0:00:10.364 [debug] [        icmp] {   mac_rx}: ICMPv6 multicast from fe80::21b:c50c:6006:73f2, RPL control message (DIS), 23 B
 2019-11-15 17:26:36.591 #1   001bc50c6004fdd6 <log> 0:00:10.377 [debug] [    rpl/core] {      rpl}: 0: Ignoring DIS for instance 7 (mine is 46)
 
+-----------------------------------------
 
+sudo tunctl -u steve
+
+#
+ifconfig tap0 192.168.0.254 up
+#
+route add -host 192.168.0.253 dev tap0
+#
+bash -c 'echo 1 > /proc/sys/net/ipv4/conf/tap0/proxy_arp'
+#
+arp -Ds 192.168.0.253 eth0 pub
+
+To delete the interface, use the -d option:
+
+#
+tunctl -d tap0
+Set 'tap0' nonpersistent
 
 
 
