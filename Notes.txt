@@ -23549,6 +23549,7 @@ sudo route -A inet6 add 2a11::1/48 dev tun1
 sudo ifconfig tun1 up
 ping6 2a11::0001:0203:0405:0600
 sudo tshark -i tun1
+coap-client -m get coap://[2a11::1:203:405:600]/conf/m/all
 
 
 #
