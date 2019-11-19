@@ -23564,6 +23564,9 @@ To delete the interface, use the -d option:
 sudo tunctl -d tap0
 Set 'tap0' nonpersistent
 
+https://unix.stackexchange.com/questions/368690/why-netcat-doesnt-use-the-right-interface-associated-with-the-ip
+
+
 ---------------------------------------------------------
 
 routing for IGW7:
