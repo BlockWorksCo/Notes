@@ -23581,8 +23581,8 @@ solicited-node ff02:: (used for neighbour discovery) Can be used as a source-add
 #define POWERCONTROL_BEACON_MULTICAST_GROUP "ff02::00c4:bbbb"
 
 
-- lowpan has file distribution multicast group
-- lowpan has power beacon multicast group
+- lowpan has file distribution multicast group ff05::00c4:f11e
+- lowpan has power beacon multicast group ff02::00c4:bbbb
 - lowpan has link local.
 - lowpan has unicast address.
 
@@ -23594,6 +23594,12 @@ solicited-node ff02:: (used for neighbour discovery) Can be used as a source-add
 
 - cellular has ipv4 therefore not in this consideration.
 
+
+
+-----------------------------------
+
+2019-11-19T07:00:21.908530 [000:00:00.782] [ WARN] [    fs/crypt] { terminal}: openRead: Bad header
+2019-11-19T07:00:21.915201 [000:00:00.789] [ WARN] [   config/pb] { terminal}: Failed to read config file: OK
 
 
 
