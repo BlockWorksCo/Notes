@@ -23568,10 +23568,19 @@ Set 'tap0' nonpersistent
 
 routing for IGW7:
 
+site-local fec0::/10   forwarded within organisation. deprecated.
+link-local fe80::   not forwarded, only on-link access.
+
 - lowpan has file distribution multicast group
 - lowpan has power beacon multicast group
 - lowpan has link local.
 - lowpan has unicast address.
+
+- I2C has
+
+- cellular has
+
+- ethernet has
 
 
 
