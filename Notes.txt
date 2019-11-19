@@ -23574,6 +23574,12 @@ unique-local-unicast fd00::/8
 global-unicast 2000::/3    16-bit subnet-id, 40 bits global-id, 64-bit interface-id
 unspecified :: (all zeroes)
 loopback ::1
+multicast: ff00::
+solicited-node ff02:: (used for neighbour discovery) Can be used as a source-address, when no other address is defined.
+
+#define FILE_DISTRIBUTION_MULTICAST_GROUP "ff05::00c4:f11e"
+#define POWERCONTROL_BEACON_MULTICAST_GROUP "ff02::00c4:bbbb"
+
 
 - lowpan has file distribution multicast group
 - lowpan has power beacon multicast group
