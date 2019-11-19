@@ -23580,9 +23580,11 @@ global-unicast 2000::/3    16-bit subnet-id, 40 bits global-id, 64-bit interface
 
 - I2C has
 
-- tun6d has
+- tun6d i/f (uplink) has a ULA assigned by tun6d.
 
 - ethernet has
+
+- cellular has ipv4 therefore not in this consideration.
 
 
 
