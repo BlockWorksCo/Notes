@@ -23571,7 +23571,7 @@ routing for IGW7:
 site-local fec0::/10   forwarded within organisation. deprecated.
 link-local fe80::   not forwarded, only on-link access.
 unique-local-unicast fd00::/8
-global-unicast 2000::/3
+global-unicast 2000::/3    16-bit subnet-id, 40 bits global-id, 64-bit interface-id
 
 - lowpan has file distribution multicast group
 - lowpan has power beacon multicast group
@@ -23580,7 +23580,7 @@ global-unicast 2000::/3
 
 - I2C has
 
-- cellular has
+- tun6d has
 
 - ethernet has
 
