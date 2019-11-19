@@ -23572,6 +23572,8 @@ site-local fec0::/10   forwarded within organisation. deprecated.
 link-local fe80::   not forwarded, only on-link access.
 unique-local-unicast fd00::/8
 global-unicast 2000::/3    16-bit subnet-id, 40 bits global-id, 64-bit interface-id
+unspecified :: (all zeroes)
+loopback ::1
 
 - lowpan has file distribution multicast group
 - lowpan has power beacon multicast group
@@ -23580,7 +23582,7 @@ global-unicast 2000::/3    16-bit subnet-id, 40 bits global-id, 64-bit interface
 
 - I2C has
 
-- tun6d i/f (uplink) has a ULA assigned by tun6d.
+- tun6d i/f (uplink) has a ULA assigned by tun6d. (fd::)
 
 - ethernet has
 
