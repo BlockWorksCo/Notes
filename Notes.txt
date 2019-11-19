@@ -23586,7 +23586,8 @@ solicited-node ff02:: (used for neighbour discovery) Can be used as a source-add
 - lowpan has link local.
 - lowpan has unicast address.
 
-- I2C has
+- i2c has link-local.
+- i2c has 
 
 - tun6d i/f (uplink) has a ULA assigned by tun6d. (fd::)
 
