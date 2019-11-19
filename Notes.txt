@@ -23605,6 +23605,13 @@ solicited-node ff02:: (used for neighbour discovery) Can be used as a source-add
 2019-11-19T07:38:38.805326 [000:38:17.653] [debug] [   coap/task] {     coap}: session 2 (ddeba19023a587c8): Request from [fd00::1]:5684: PUT file/download/95753 (T=CON, MID=0x1210): 116 B (65000:applicati
 
 
+--------------------------------------
+
+Quectel modem 
+
+https://www.cika.com/soporte/Information/GSMmodules/Quectel/AppNotes/Quectel_GSM_PPP_Application_Note.pdf
+
+- Auth is different for all modems. Use AT+QGPAU instead of CGAUTH.
 
 
 
