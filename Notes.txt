@@ -23564,6 +23564,14 @@ To delete the interface, use the -d option:
 sudo tunctl -d tap0
 Set 'tap0' nonpersistent
 
+---------------------------------------------------------
+
+routing for IGW7:
+
+- lowpan has file distribution multicast group
+- lowpan has power beacon multicast group
+- lowpan has link local.
+- lowpan has unicast address.
 
 
 
