@@ -23567,6 +23567,7 @@ Set 'tap0' nonpersistent
 https://unix.stackexchange.com/questions/368690/why-netcat-doesnt-use-the-right-interface-associated-with-the-ip
 
 socat - udp6-listen:1234,reuseaddr,fork
+sudo ip -6 addr del fe80::298c:e727:d0d6:81eb/64 dev tun1
 
 
 ---------------------------------------------------------
