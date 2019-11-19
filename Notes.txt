@@ -23570,6 +23570,8 @@ routing for IGW7:
 
 site-local fec0::/10   forwarded within organisation. deprecated.
 link-local fe80::   not forwarded, only on-link access.
+unique-local-unicast fd00::/8
+global-unicast 2000::/3
 
 - lowpan has file distribution multicast group
 - lowpan has power beacon multicast group
