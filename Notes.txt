@@ -23643,6 +23643,7 @@ USART1:
 TX=A0
 RX=A1
 
+I2C0 can use A0/A1 as SDA/SCL on expansion port. Will need pull-ups on those lines.
 
 
 
