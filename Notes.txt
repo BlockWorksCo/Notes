@@ -23620,6 +23620,28 @@ https://www.cika.com/soporte/Information/GSMmodules/Quectel/AppNotes/Quectel_GSM
 - Auth is different for all modems. Use AT+QGPAU instead of CGAUTH.
 
 
+---------------------------------------
+
+gw200 expansion port:
+
+#define GPIO_PIN_LEDR ((GPIOPin){ .onExpander = true, .pin = 6 })
+#define GPIO_PIN_LEDG ((GPIOPin){ .onExpander = true, .pin = 5 })
+#define GPIO_PIN_LEDB ((GPIOPin){ .onExpander = true, .pin = 7 })
+#define GPIO_PIN_GPIO0 ((GPIOPin){ gpioPortC, 8 }) // Expansion port pin 5
+#define GPIO_PIN_ELM_INT ((GPIOPin){ gpioPortB, 13 }) // Expansion port pin 6
+#define GPIO_PIN_SUPP_STA ((GPIOPin){ gpioPortB, 11 }) // P101 pin 1
+#define GPIO_PIN_BATT_STA ((GPIOPin){ gpioPortB, 12 }) // P101 pin 2
+#define GPIO_PIN_TEMP_STA ((GPIOPin){ gpioPortC, 9 }) // P101 pin 3
+#define GPIO_PIN_CEL_PWR ((GPIOPin){ .onExpander = true, .pin = 2 })
+#define GPIO_PIN_CEL_RESET ((GPIOPin){ gpioPortF, 3  })
+#define GPIO_PIN_CEL_DTR ((GPIOPin){ .onExpander = true, .pin = 3 })
+#define GPIO_ETH_UP_INT ((GPIOPin){ gpioPortA, 2 })
+#define GPIO_ETH_DOWN_INT ((GPIOPin){ gpioPortA, 3 })
+#define GPIO_PIN_PA_ENABLE  ((GPIOPin){ gpioPortC, 6 })     // Pin 43, PC6
+#define GPIO_PIN_LNA_ENABLE ((GPIOPin){ gpioPortC, 7 })     // Pin 44, PC7
+#define GPIO_PIN_HGM_ENABLE ((GPIOPin){ gpioPortF, 7 })     // Pin 8 PF7
+
+
 
 
 
