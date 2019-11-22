@@ -23644,6 +23644,12 @@ TX=A0
 RX=A1
 
 I2C0 can use A0/A1 as SDA/SCL on expansion port. Will need pull-ups on those lines.
+-----------------------------------
+
+v148.12
+
+c296503766e49e27c0359ed4164d627f63d5e4c2 (build number change)
+4c1afb9131166f9847990b1e9c0c0b2637208cf9 (hdlc change)
 
 
 
