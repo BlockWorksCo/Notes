@@ -23671,7 +23671,7 @@ new kaifa alarm format.
 
 column join
 
-ag --nonumbers "^sec: 15" /Data/Logs/time.log > c1
+ag --nonumbers "^15" /Data/Logs/time.log > c1
 ag --nonumbers "^sec:" /Data/Logs/time.log | ag -o --nonumbers "[0-9]+" > c2
 paste -d ',' c1 c2 > c.csv
 
