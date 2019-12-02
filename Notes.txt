@@ -23690,8 +23690,12 @@ paste -d ',' c1 c2 > c.csv
 
 cnic7 processor
 
+EFM32GG12B810F1024GM64-A
+not
 EFR32FG12P231F1024GM48
 
+
+in EFM32GG/Include
 
 
 
