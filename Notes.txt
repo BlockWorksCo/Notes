@@ -23727,7 +23727,13 @@ to provide a count of all issue categories:
 
 xargs -t -I '{}' -n 1 < ViolationsPresent  grep -F -c "'{}'" TotalViolationsInstances
 
+count all violations
 
+xargs -I '{}' -n 1 < ViolationsPresent grep -F -c '{}' TotalViolationsInstances > ViolationsPresentCount
+
+join two columns:
+
+paste -d ',' ViolationsPresent ViolationsPresentCount  > ViolationsTable.csv
 
 
 
