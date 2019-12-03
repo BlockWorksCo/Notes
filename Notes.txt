@@ -23715,7 +23715,7 @@ MISRA report processing:
 
 split multiple MISRA matches into multiple lines:
 
-grep -o "\[MISRA.*" ../MISRA.report.Delta | sed "s/\], /\]\n/" | sort
+grep -o "\[MISRA.*" ../MISRA.report.Delta | sed "s/\], /\]\n/" | sort > TotalViolationsInstances
 
 
 List of violations present:
