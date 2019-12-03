@@ -23709,6 +23709,21 @@ EFM32GG12B810F1024GM64-A 1024 192 Yes Yes Yes Yes Yes 51 QFN64 -40 to +85°C
 
 in EFM32GG/Include
 
+--------------------------------------------------------
+
+MISRA report processing:
+
+split multiple MISRA matches into multiple lines:
+
+grep -o "\[MISRA.*" ../MISRA.report.Delta | sed "s/\], /\]\n/" | sort
+
+
+List of violations present:
+
+grep -o "\[MISRA.*" ../MISRA.report.Delta | sed "s/\], /\]\n/" | sort | uniq
+
+
+
 
 
 
