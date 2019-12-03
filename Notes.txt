@@ -23723,6 +23723,9 @@ List of violations present:
 grep -o "\[MISRA.*" ../MISRA.report.Delta | sed "s/\], /\]\n/" | sort | uniq > ViolationsPresent
 
 
+to provide a count of all issue categories:
+
+xargs -t -I '{}' -n 1 < ViolationsPresent  grep -F -c "'{}'" TotalViolationsInstances
 
 
 
