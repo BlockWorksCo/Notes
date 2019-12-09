@@ -23761,6 +23761,7 @@ Bring-up notes:
 - SWD ok.
 - processor type corrected (series 1, not 2).
 - gpio ok
+- check layout e.g. spi pins by toggling with gpio.
 - disabled watchdog.
 - bootload jumping to firmware.
 - clocks ok
