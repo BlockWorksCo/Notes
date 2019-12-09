@@ -23767,6 +23767,9 @@ Bring-up notes:
 - uart tx ok with polled I/O
 - uart lines state changed via gpio.
 - uart rx ok (interrupt hit with correct byte).
+- DMA for uart-tx ok.
+- ctrlporthub logging ok.
+- ctrlporthub commands ok. config-list.
 
 
 
