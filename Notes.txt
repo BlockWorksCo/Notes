@@ -23763,7 +23763,7 @@ Bring-up notes:
 - disabled watchdog.
 - bootload jumping to firmware.
 - clocks ok
-- uart tx ok
+- uart tx ok with polled I/O
 - uart lines state changed via gpio.
 
 
