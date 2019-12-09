@@ -23765,6 +23765,7 @@ Bring-up notes:
 - clocks ok
 - uart tx ok with polled I/O
 - uart lines state changed via gpio.
+- uart rx ok (interrupt hit with correct byte).
 
 
 
