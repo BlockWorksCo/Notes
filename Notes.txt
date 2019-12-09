@@ -23753,6 +23753,16 @@ paste -d ',' ViolationsPresent ViolationsPresentCount  > ViolationsTable.csv
 #8  0x0003c9f8 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
+----------------------------------------------
+
+Bring-up notes:
+
+- SWD ok.
+- gpio ok
+- disabled watchdog.
+- clocks ok
+- uart tx ok
+- uart lines state changed via gpio.
 
 
 
