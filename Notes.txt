@@ -23757,6 +23757,7 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 Bring-up notes:
 
+- Put spin loop in HardFaulHandler to allow debugging.
 - SWD ok.
 - processor type corrected (series 1, not 2).
 - gpio ok
