@@ -23735,6 +23735,25 @@ join two columns:
 
 paste -d ',' ViolationsPresent ViolationsPresentCount  > ViolationsTable.csv
 
+------------------------------------------------------
+
+
+(gdb) where
+#0  uartWriteBlockingWithTimeout (timeout=4294967295, length=13, buffer=0x4912f "Hello World\r\n", 
+    port=1) at src/platform/drivers/uart/uart-efm32.c:241
+#1  uartOpen (port=port@entry=1, settings=settings@entry=0x200096c8 <s_terminalTaskStack+1480>)
+    at src/platform/drivers/uart/uart-efm32.c:164
+#2  0x00022f62 in ctrlportServicePlatformInit () at src/services/ctrlport/ctrlport_service-hw.c:106
+#3  0x00022ab2 in init () at src/services/ctrlport/ctrlport_service.c:98
+#4  0x00010190 in modulesInit (list=list@entry=0x475d8 <serviceModules>) at src/base/module.c:16
+#5  0x00021db0 in servicesInit () at src/services/services.c:57
+#6  0x0002ae7a in terminalBasicStart () at src/terminal/terminal.c:140
+#7  0x0002af44 in terminalTask (arg=0x20008ff0 <s_terminalInitedSemaphore>)
+    at src/terminal/terminal.c:501
+#8  0x0003c9f8 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
 
 
 
