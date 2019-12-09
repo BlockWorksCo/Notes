@@ -23758,8 +23758,10 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 Bring-up notes:
 
 - SWD ok.
+- processor type corrected (series 1, not 2).
 - gpio ok
 - disabled watchdog.
+- bootload jumping to firmware.
 - clocks ok
 - uart tx ok
 - uart lines state changed via gpio.
