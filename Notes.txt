@@ -23770,6 +23770,7 @@ Bring-up notes:
 - DMA for uart-tx ok.
 - ctrlporthub logging ok.
 - ctrlporthub commands ok. config-list.
+- coap_request --restart ok.
 
 
 
