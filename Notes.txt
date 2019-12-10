@@ -23777,6 +23777,7 @@ Bring-up notes:
 - cndfs ok.
 - persistent config ok.
 - meter uart tx & rx ok.
+- meter talking to driver.
 
 
 /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0
