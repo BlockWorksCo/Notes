@@ -23772,6 +23772,11 @@ Bring-up notes:
 - ctrlporthub logging ok.
 - ctrlporthub commands ok. config-list.
 - coap_request --restart ok.
+- SPI ok.
+- flash driver changed to AT45, ok.
+- cndfs ok.
+- persistent config ok.
+- meter uart tx & rx ok.
 
 
 /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0
