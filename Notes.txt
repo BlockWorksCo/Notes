@@ -23791,6 +23791,8 @@ opto:
 socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0,raw,echo=0,crnl
 
 modem:
+stty -F /dev/serial/by-id/usb-FTDI_USB_Serial_Converter_FTDVHX55-if00-port0 115200 raw
+stty -F /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0 115200 raw
 socat -x /dev/serial/by-id/usb-FTDI_USB_Serial_Converter_FTDVHX55-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0,raw,echo=0,crnl
 
 
