@@ -23780,6 +23780,7 @@ Bring-up notes:
 - meter talking to driver.
 
 
+
 /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0
 
 stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
@@ -23818,6 +23819,13 @@ $2 = 4294433878
 (gdb) 
 
 
+TODO:
+- Fix watchdog.
+- Fix ulDelta==0 dev-by-zero.
+- powerfail
+- status lines
+- flow control to modem.
+- waitForModem.
 
 
 
