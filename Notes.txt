@@ -23795,6 +23795,29 @@ stty -F /dev/serial/by-id/usb-FTDI_USB_Serial_Converter_FTDVHX55-if00-port0 1152
 stty -F /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0 115200 raw
 socat -x /dev/serial/by-id/usb-FTDI_USB_Serial_Converter_FTDVHX55-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0,raw,echo=0,crnl
 
+Crash in:
+
+(gdb) 
+0x0003c9d8 in uiUpdateCpuLoad () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4084
+4084		    unsigned int uiCpuLoad = 100 - (ulIdleTaskRunTimeCounter * 100 / ulDelta);
+(gdb) where
+#0  0x0003c9d8 in uiUpdateCpuLoad () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4084
+#1  0x0002ac24 in OS_getCpuLoad () at src/platform/osal/osal-freertos/osal_freertos.c:386
+#2  0x00021ff2 in logPeriodicStatus (id=<optimized out>, data=<optimized out>)
+    at src/management/status/status.c:106
+#3  0x00025da8 in scheduleTask (arg=<optimized out>) at src/services/schedule/schedule_service.c:193
+#4  0x0003ca10 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb) 
+
+ulDelta == 0, div by zero.
+(gdb) p ulDelta 
+$1 = 0
+(gdb) p ulIdleTaskRunTimeCounter
+$2 = 4294433878
+(gdb) 
+
+
 
 
 
