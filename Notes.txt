@@ -23827,5 +23827,40 @@ TODO:
 - flow control to modem.
 - waitForModem.
 
+----------------------------------------------
+
+deadlock in:
+
+Breakpoint 6, OS_mutexTake (m=0x20003c34 <s_modemTransmitMutex>)
+    at src/platform/osal/osal-freertos/osal_freertos.c:369
+369	        PANIC_HALT("Deadlock");
+(gdb) where
+#0  OS_mutexTake (m=0x20003c34 <s_modemTransmitMutex>)
+    at src/platform/osal/osal-freertos/osal_freertos.c:369
+#1  OS_mutexTake (m=m@entry=0x20003c34 <s_modemTransmitMutex>)
+    at src/platform/osal/osal-freertos/osal_freertos.c:362
+#2  0x00018c06 in modemTransmit (nextHop=<optimized out>, dstMac=<optimized out>, buf=0x20010f6c "E", 
+    len=74) at src/communication/modem/modem.c:773
+#3  0x00017ac4 in ipv4Transmit (interface=interface@entry=IPV4_IF_CELLULAR, dst=..., 
+    protocol=protocol@entry=HDR_UDP, packetbuf=packetbuf@entry=0x20010f68)
+    at src/communication/ipv4/ipv4_core.c:136
+#4  0x00018406 in ipv4UdpTransmit (interface=interface@entry=IPV4_IF_CELLULAR, dst=..., 
+    srcPort=srcPort@entry=53, dstPort=dstPort@entry=53, packetbuf=packetbuf@entry=0x20010f68)
+    at src/communication/ipv4/ipv4_udp.c:44
+#5  0x00017f28 in sendRequest (rr=1, 
+    hostname=0x2000ad85 <s_configuration+317> "lnt-dev2.dev.cyanconnode.com", id=<optimized out>)
+    at src/communication/ipv4/ipv4_dns.c:237
+#6  ipv4DnsResolveBlocking (interface=interface@entry=IPV4_IF_CELLULAR, 
+    hostname=hostname@entry=0x2000ad85 <s_configuration+317> "lnt-dev2.dev.cyanconnode.com", 
+    response=response@entry=0x20003200 <s_state+100>) at src/communication/ipv4/ipv4_dns.c:265
+#7  0x00015cde in updateTunnelServerAddress (iface=IPV4_IF_CELLULAR)
+    at src/communication/uplink/uplink_tun6.c:319
+#8  tun6StateMachine (scheduleId=<optimized out>, data=<optimized out>)
+    at src/communication/uplink/uplink_tun6.c:430
+#9  0x0003fd44 in scheduleTask (arg=<optimized out>) at src/services/schedule/schedule_service.c:193
+#10 0x000579ac in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4257
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
 
 
