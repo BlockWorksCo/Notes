@@ -23864,7 +23864,7 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 s_modemTransmitMutex    = modem.c:773
 s_stateSemaphore        = -1
 s_eventSemaphore        = -1
-s_sendDoneSemaphore
+s_sendDoneSemaphore     = modem.c:803
 
 
 
