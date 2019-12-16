@@ -23861,9 +23861,9 @@ Breakpoint 6, OS_mutexTake (m=0x20003c34 <s_modemTransmitMutex>)
 #10 0x000579ac in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4257
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
-s_modemTransmitMutex
-s_stateSemaphore
-s_eventSemaphore
+s_modemTransmitMutex    = modem.c:773
+s_stateSemaphore        = -1
+s_eventSemaphore        = -1
 s_sendDoneSemaphore
 
 
