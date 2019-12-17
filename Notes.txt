@@ -24007,6 +24007,7 @@ These are missing:
 
 
 Deadlock detected from scheduleTask while trying to send packet (taking s_modemTransmitMutex):
+uplink_tx task waiting for sendDone, when scheduletask tries to send data and blocks for > 2min, hence deadlock.
 
 (gdb) where
 #0  OS_mutexTakeDebug (m=0x20003afc <s_modemTransmitMutex>, fileName=<optimized out>, 
