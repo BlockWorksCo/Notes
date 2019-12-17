@@ -24101,6 +24101,7 @@ s_sendDoneSemaphore     = uplink_tx modem.c:806
 
 2019-12-17 16:53:46.483 #1   0000000011111111 <log> 0:04:24.236 [debug] [       modem] { schedule}: >>> Waiting for s_modemTransmitMutex            <----- This task wants to transmit, but can't.
 
+-------------------------------------
 
 
 
