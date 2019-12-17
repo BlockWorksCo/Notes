@@ -23887,10 +23887,10 @@ s_stateSemaphore        =
 s_eventSemaphore        =
 s_sendDoneSemaphore     = uplink_tx modem.c:804
 
-s_modemTransmitMutex    = 
+s_modemTransmitMutex    = uplink_tx modem.c:786
 s_stateSemaphore        =
 s_eventSemaphore        =
-s_sendDoneSemaphore     = uplink_tx modem.c:804
+s_sendDoneSemaphore     = uplink_tx modem.c:829
 
 
 
