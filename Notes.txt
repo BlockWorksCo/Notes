@@ -23872,6 +23872,11 @@ s_eventSemaphore        = -1
 s_sendDoneSemaphore     = 0
 
 
+s_modemTransmitMutex    = uplink_rx, modem.c:773
+s_stateSemaphore        = NULL, -1
+s_eventSemaphore        = NULL, -1
+s_sendDoneSemaphore     = NULL, -1
+
 
 
 
