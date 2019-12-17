@@ -23951,6 +23951,60 @@ These are missing:
 
 
 
+-----------------------
+
+2019-12-17 16:38:35.321 #1   0000000011111111 <log> 0:01:11.335 [debug] [       modem] {uplink_tx}: >>> Waiting for s_modemTransmitMutex
+2019-12-17 16:38:35.321 #1   0000000011111111 <log> 0:01:11.344 [debug] [       modem] {uplink_tx}: >>> Waiting for s_stateSemaphore
+2019-12-17 16:38:35.322 #1   0000000011111111 <log> 0:01:11.352 [debug] [       modem] {uplink_tx}: >>> modemTransmit 132 bytes
+2019-12-17 16:38:35.322 #1   0000000011111111 <log> 0:01:11.360 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
+2019-12-17 16:38:35.350 #1   0000000011111111 <log> 0:01:11.369 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
+2019-12-17 16:38:35.350 #1   0000000011111111 <log> 0:01:11.378 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes
+2019-12-17 16:38:35.404 #1   0000000011111111 <log> 0:01:11.407 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 9 bytes
+2019-12-17 16:38:35.404 #1   0000000011111111 <log> 0:01:11.425 [debug] [       modem] {    modem}: >>> signalling s_sendDoneSemaphore because we're *not* in DTR mode.
+2019-12-17 16:38:35.405 #1   0000000011111111 <log> 0:01:11.436 [debug] [       modem] {uplink_tx}: >>> Giving s_modemTransmitMutex
+
+2019-12-17 16:38:36.277 #1   0000000011111111 <log> 0:01:12.318 [debug] [       modem] {uplink_tx}: >>> Waiting for s_modemTransmitMutex
+2019-12-17 16:38:36.320 #1   0000000011111111 <log> 0:01:12.327 [debug] [       modem] {uplink_tx}: >>> Waiting for s_stateSemaphore
+2019-12-17 16:38:36.320 #1   0000000011111111 <log> 0:01:12.335 [debug] [       modem] {uplink_tx}: >>> modemTransmit 132 bytes
+2019-12-17 16:38:36.320 #1   0000000011111111 <log> 0:01:12.343 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
+2019-12-17 16:38:36.320 #1   0000000011111111 <log> 0:01:12.352 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
+2019-12-17 16:38:36.320 #1   0000000011111111 <log> 0:01:12.361 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes
+2019-12-17 16:38:36.387 #1   0000000011111111 <log> 0:01:12.390 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 9 bytes
+2019-12-17 16:38:36.387 #1   0000000011111111 <log> 0:01:12.408 [debug] [       modem] {    modem}: >>> signalling s_sendDoneSemaphore because we're *not* in DTR mode.
+2019-12-17 16:38:36.387 #1   0000000011111111 <log> 0:01:12.419 [debug] [       modem] {uplink_tx}: >>> Giving s_modemTransmitMutex
+
+2019-12-17 16:38:37.274 #1   0000000011111111 <log> 0:01:13.318 [debug] [       modem] {uplink_tx}: >>> Waiting for s_modemTransmitMutex
+2019-12-17 16:38:37.317 #1   0000000011111111 <log> 0:01:13.327 [debug] [       modem] {uplink_tx}: >>> Waiting for s_stateSemaphore
+2019-12-17 16:38:37.317 #1   0000000011111111 <log> 0:01:13.335 [debug] [       modem] {uplink_tx}: >>> modemTransmit 132 bytes
+2019-12-17 16:38:37.317 #1   0000000011111111 <log> 0:01:13.343 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
+2019-12-17 16:38:37.318 #1   0000000011111111 <log> 0:01:13.352 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
+2019-12-17 16:38:37.318 #1   0000000011111111 <log> 0:01:13.361 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes
+2019-12-17 16:38:37.386 #1   0000000011111111 <log> 0:01:13.390 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 9 bytes
+2019-12-17 16:38:37.386 #1   0000000011111111 <log> 0:01:13.408 [debug] [       modem] {    modem}: >>> signalling s_sendDoneSemaphore because we're *not* in DTR mode.
+2019-12-17 16:38:37.386 #1   0000000011111111 <log> 0:01:13.419 [debug] [       modem] {uplink_tx}: >>> Giving s_modemTransmitMutex
+
+2019-12-17 16:38:38.279 #1   0000000011111111 <log> 0:01:14.318 [debug] [       modem] {uplink_tx}: >>> Waiting for s_modemTransmitMutex
+2019-12-17 16:38:38.333 #1   0000000011111111 <log> 0:01:14.327 [debug] [       modem] {uplink_tx}: >>> Waiting for s_stateSemaphore
+2019-12-17 16:38:38.333 #1   0000000011111111 <log> 0:01:14.335 [debug] [       modem] {uplink_tx}: >>> modemTransmit 132 bytes
+2019-12-17 16:38:38.333 #1   0000000011111111 <log> 0:01:14.343 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
+2019-12-17 16:38:38.333 #1   0000000011111111 <log> 0:01:14.352 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
+2019-12-17 16:38:38.333 #1   0000000011111111 <log> 0:01:14.361 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes
+2019-12-17 16:38:38.354 #1   0000000011111111 <log> 0:01:14.390 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 9 bytes
+2019-12-17 16:38:38.387 #1   0000000011111111 <log> 0:01:14.408 [debug] [       modem] {    modem}: >>> signalling s_sendDoneSemaphore because we're *not* in DTR mode.
+2019-12-17 16:38:38.387 #1   0000000011111111 <log> 0:01:14.419 [debug] [       modem] {uplink_tx}: >>> Giving s_modemTransmitMutex
+
+2019-12-17 16:38:39.274 #1   0000000011111111 <log> 0:01:15.318 [debug] [       modem] {uplink_tx}: >>> Waiting for s_modemTransmitMutex
+2019-12-17 16:38:39.320 #1   0000000011111111 <log> 0:01:15.327 [debug] [       modem] {uplink_tx}: >>> Waiting for s_stateSemaphore
+2019-12-17 16:38:39.320 #1   0000000011111111 <log> 0:01:15.335 [debug] [       modem] {uplink_tx}: >>> modemTransmit 132 bytes
+2019-12-17 16:38:39.320 #1   0000000011111111 <log> 0:01:15.343 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
+2019-12-17 16:38:39.320 #1   0000000011111111 <log> 0:01:15.352 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
+2019-12-17 16:38:39.320 #1   0000000011111111 <log> 0:01:15.361 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes
+2019-12-17 16:38:39.386 #1   0000000011111111 <log> 0:01:15.390 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 9 bytes
+2019-12-17 16:38:39.386 #1   0000000011111111 <log> 0:01:15.408 [debug] [       modem] {    modem}: >>> signalling s_sendDoneSemaphore because we're *not* in DTR mode.
+2019-12-17 16:38:39.386 #1   0000000011111111 <log> 0:01:15.419 [debug] [       modem] {uplink_tx}: >>> Giving s_modemTransmitMutex
+
+
+
 
 
 
