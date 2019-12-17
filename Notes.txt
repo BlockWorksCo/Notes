@@ -24006,7 +24006,7 @@ These are missing:
 -----------------------------------------------------------------------
 
 
-Deadlock detected from scheduleTask while trying to send packet:
+Deadlock detected from scheduleTask while trying to send packet (taking s_modemTransmitMutex):
 
 (gdb) where
 #0  OS_mutexTakeDebug (m=0x20003afc <s_modemTransmitMutex>, fileName=<optimized out>, 
