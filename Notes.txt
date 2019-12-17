@@ -24086,7 +24086,7 @@ s_sendDoneSemaphore     = uplink_tx modem.c:806
 2019-12-17 16:50:50.634 #1   0000000011111111 <log> 0:01:28.336 [debug] [       modem] {uplink_tx}: >>> modemTransmit 132 bytes
 2019-12-17 16:50:50.634 #1   0000000011111111 <log> 0:01:28.344 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
 2019-12-17 16:50:50.634 #1   0000000011111111 <log> 0:01:28.353 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
-2019-12-17 16:50:50.634 #1   0000000011111111 <log> 0:01:28.362 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes
+2019-12-17 16:50:50.634 #1   0000000011111111 <log> 0:01:28.362 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 128 bytes               <----- This should have happened below to give s_sendDoneSemaphore.
 2019-12-17 16:50:50.691 #1   0000000011111111 <log> 0:01:28.391 [debug] [    modemdrv] {    modem}: >>> modemDriverWrite of 9 bytes
 2019-12-17 16:50:50.691 #1   0000000011111111 <log> 0:01:28.409 [debug] [       modem] {    modem}: >>> signalling s_sendDoneSemaphore because we're *not* in DTR mode.
 2019-12-17 16:50:50.691 #1   0000000011111111 <log> 0:01:28.420 [debug] [       modem] {uplink_tx}: >>> Giving s_modemTransmitMutex
@@ -24097,12 +24097,9 @@ s_sendDoneSemaphore     = uplink_tx modem.c:806
 2019-12-17 16:51:15.563 #1   0000000011111111 <log> 0:01:53.287 [debug] [       modem] {uplink_tx}: >>> Waiting for s_stateSemaphore
 2019-12-17 16:51:15.563 #1   0000000011111111 <log> 0:01:53.295 [debug] [       modem] {uplink_tx}: >>> modemTransmit 76 bytes
 2019-12-17 16:51:15.563 #1   0000000011111111 <log> 0:01:53.303 [debug] [       modem] {uplink_tx}: >>> giving s_stateSemaphore and s_eventSemaphore
-2019-12-17 16:51:15.583 #1   0000000011111111 <log> 0:01:53.313 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore
+2019-12-17 16:51:15.583 #1   0000000011111111 <log> 0:01:53.313 [debug] [       modem] {uplink_tx}: >>> Waiting for s_sendDoneSemaphore             <----- This should have completed.
 
-
-
-
-2019-12-17 16:53:46.483 #1   0000000011111111 <log> 0:04:24.236 [debug] [       modem] { schedule}: >>> Waiting for s_modemTransmitMutex
+2019-12-17 16:53:46.483 #1   0000000011111111 <log> 0:04:24.236 [debug] [       modem] { schedule}: >>> Waiting for s_modemTransmitMutex            <----- This task wants to transmit, but can't.
 
 
 
