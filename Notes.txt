@@ -24168,6 +24168,24 @@ Control
 - 
 
 
+-------------------------------------
+
+RTC
+#0  0x0003e3a6 in syncReg (mask=<optimized out>)
+    at build/3pp/flex/platform/emlib_efm32/src/em_cmu.c:4024
+#1  syncReg (mask=65536) at build/3pp/flex/platform/emlib_efm32/src/em_cmu.c:4013
+#2  0x0003e468 in CMU_ClockEnable (clock=clock@entry=cmuClock_RTCC, enable=enable@entry=true)
+    at build/3pp/flex/platform/emlib_efm32/src/em_cmu.c:5034
+#3  0x0002a47e in rtcInit () at src/platform/drivers/rtc/rtc_efm32.c:64
+#4  0x00026808 in timeServiceStart () at src/services/time/time_service.c:198
+#5  0x000101dc in modulesStart (list=list@entry=0x481d8 <serviceModules>) at src/base/module.c:25
+#6  0x00022466 in servicesStart () at src/services/services.c:64
+#7  0x0002b4be in terminalBasicStart () at src/terminal/terminal.c:148
+#8  0x0002b57c in terminalTask (arg=0x200096c8 <s_terminalInitedSemaphore>)
+    at src/terminal/terminal.c:511
+#9  0x0003d044 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4257
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
 
 
 
