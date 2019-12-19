@@ -24187,6 +24187,18 @@ RTC
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
+---------------------------------------------------------------
+
+    server.ip fd00::1 \
+    modem.apn wlapn4.com 
+    modem.username cyan 
+    modem.password cyan 
+    modem.authmethod PAP \
+    modem.tun6.ip lnt-dev2.dev.cyanconnode.com 
+    modem.tun6.port 8050 
+    modem.tun6.secret lnt-dev2 \
+    server.mq.push_now 1 
+    server.mq.push_delay 30
 
 
 
