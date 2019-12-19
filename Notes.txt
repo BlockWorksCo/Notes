@@ -24207,6 +24207,11 @@ CNIC7 setup.
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_now 1 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_delay 30
 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.lls_password lnt1
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.authentication_key 31323334353637383930313233343536 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.encryption_key 31323334353637383930313233343536 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.hls_key 30303030303030303031303335383230 
+
 
 
 
