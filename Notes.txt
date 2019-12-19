@@ -24189,16 +24189,22 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 ---------------------------------------------------------------
 
-    server.ip fd00::1 \
-    modem.apn wlapn4.com 
-    modem.username cyan 
-    modem.password cyan 
-    modem.authmethod PAP \
-    modem.tun6.ip lnt-dev2.dev.cyanconnode.com 
-    modem.tun6.port 8050 
-    modem.tun6.secret lnt-dev2 \
-    server.mq.push_now 1 
-    server.mq.push_delay 30
+CNIC7 setup.
+
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-key node.key.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key client-cert node.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --load-key root-cert ca.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config prod.lowpan.eui64 00-1B-C5-0C-60-00-01-84
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.ip fd00::1
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.apn wlapn4.com 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.username cyan 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.password cyan 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.authmethod PAP
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.ip lnt-dev2.dev.cyanconnode.com 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.port 8050 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.secret lnt-dev2
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_now 1 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.mq.push_delay 30
 
 
 
