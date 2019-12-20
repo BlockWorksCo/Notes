@@ -24213,6 +24213,7 @@ CNIC7 setup.
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.authentication_key 31323334353637383930313233343536 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.encryption_key 31323334353637383930313233343536 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config device.dlms.hls_key 30303030303030303031303335383230 
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config capabilities.meter.device_testing 0
 
 
 socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0,raw,echo=0,crnl
