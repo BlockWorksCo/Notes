@@ -24232,6 +24232,8 @@ Linux and Buildroot on ARM (BeagleBone variant).
 Provided day-to-day technical support and triage of issues for the operations/solutions team regarding the operation of the mesh network, IPv6 gateways/networks, embedded nodes and smart-metering.
 Development of SMIP/SMETS2 mesh product and support for CPA certification of that product regarding its security and robustness characteristics including MISRA certification and maintenance of 
 codebase quality.
+Technical leadership for Indian and UK development teams, creation of technical documentation such as architectural diagrams and descriptions. Also demonstrated operation of newly developed 
+products to management and the wider team(s).
 
 fuzz-testing using "American Fuzzy Lop"
 
