@@ -24223,7 +24223,7 @@ socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /d
 CyanConnode
 Technical Lead and SME
 
-Development of both the UltiMesh and OmniMesh smart metering and IoT platforms. These platforms consist of embedded nodes using Cortex-M processors and sub-GHz radios, gateways 
+Development of both the UltiMesh and OmniMesh smart metering and IoT platforms. These platforms consist of embedded nodes using Cortex-M processors and sub-GHz/802.15.4 radios, gateways 
 using embedded Linux on ARMv7 and LTE (Cat-1 and CAT-M1) modems and servers written in Java. 
 The mesh network involves a proprietary IPv6 network stack implementing (among others) RPL, 6LoWPAN and IPv6 protocols as well as CoAP & DTLS for secure communications.
 Developed the new family of products using a modular architecture and performed bring-up of CNIC7, IGW7 and DCUb4 products. Furthered the development of IPAx platform and OmniMesh Smart 
