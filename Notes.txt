@@ -24218,6 +24218,19 @@ CNIC7 setup.
 
 socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FTATI1IX-if00-port0,raw,echo=0,crnl
 
+-----------------------------------------
+
+CyanConnode
+Technical Lead and SME
+
+Development of both the UltiMesh and OmniMesh smart metering and IoT platforms. These platforms encompass an embedded “node” using Cortex-M processors, gateways using embedded Linux on ARMv7 and servers written in Java. The mesh network involves RPL, 6LoWPAN and IPv6 technologies as well as CoAP and DTLS secure messaging.
+Board bring up of CNIC7, IGW7 and DCUb4 products. Furthered the development of IPA family.
+Linux and Buildroot on ARM
+Providing day-to-day technical support for the operational team regarding the operation of the mesh network, IPv6 gateways, embedded nodes and smart-metering.
+Development of SMIP/SMETS2 mesh product and support for CPA certification of that product regarding its security and robustness characteristics.
+
+
+
 
 
 
