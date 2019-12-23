@@ -24234,6 +24234,7 @@ Development of SMIP/SMETS2 mesh product and support for CPA certification of tha
 codebase quality.
 Technical leadership for Indian and UK development teams, creation of technical documentation such as architectural diagrams and descriptions. Also demonstrated operation of newly developed 
 products to management and the wider team(s).
+working closely with the hardware team while supporting the development of the new platforms and triage of issues in existing platforms.
 
 fuzz-testing using "American Fuzzy Lop"
 
