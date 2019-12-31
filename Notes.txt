@@ -24223,18 +24223,21 @@ socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /d
 CyanConnode
 Technical Lead and SME
 
-Development of both the UltiMesh and OmniMesh smart metering and IoT platforms. These platforms consist of embedded nodes using Cortex-M processors and sub-GHz/802.15.4 radios, gateways 
-using embedded Linux on ARMv7 and LTE (Cat-1 and CAT-M1) modems and servers written in Java. 
-The mesh network involves a proprietary IPv6 network stack implementing (among others) RPL, 6LoWPAN and IPv6 protocols as well as CoAP & DTLS for secure communications.
-Developed the new family of products using a modular architecture and performed bring-up of CNIC7, IGW7 and DCUb4 products. Furthered the development of IPAx platform and OmniMesh Smart 
-Metering application and rearchitected the IPv6 stack to support the new products. Identified and designed the requried system-wide changes requried for cost-optimisation of the nodes.
+Development of both the UltiMesh and OmniMesh smart metering and IoT platforms. These platforms consist of embedded nodes using Cortex-M 
+processors and sub-GHz/802.15.4 radios, gateways (both bare-metal and using embedded Linux) on ARMv7 and LTE (Cat-1 and CAT-M1) modems and servers written in Java. 
+The mesh network involves a proprietary IPv6 network stack implementing (among others) RPL, 6LoWPAN and IPv6 protocols as well as CoAP & DTLS 
+for secure communications.
+Developed the new family of products using a modular architecture and performed bring-up of CNIC7, IGW7 and DCUb4 products. 
+Furthered the development of IPAx platform and OmniMesh Smart 
+Metering application and rearchitected the IPv6 stack to support the new products. Identified and designed the required system-wide changes needed for 
+cost-optimisation of the nodes.
 Linux and Buildroot on ARM (BeagleBone variant).
 Provided day-to-day technical support and triage of issues for the operations/solutions team regarding the operation of the mesh network, IPv6 gateways/networks, embedded nodes and smart-metering.
 Development of SMIP/SMETS2 mesh product and support for CPA certification of that product regarding its security and robustness characteristics including MISRA certification and maintenance of 
 codebase quality.
-Technical leadership for Indian and UK development teams, creation of technical documentation such as architectural diagrams and descriptions. Also demonstrated operation of newly developed 
-products to management and the wider team(s).
-working closely with the hardware team while supporting the development of the new platforms and triage of issues in existing platforms.
+Provided technical leadership for Indian and UK development teams, creation of technical documentation such as architectural diagrams and high/low level design documents. 
+Also demonstrated operation of newly developed products to management and the wider team(s).
+Worked closely with the hardware team while supporting the development of the new platforms and triage of issues in existing platforms.
 
 fuzz-testing using "American Fuzzy Lop"
 
