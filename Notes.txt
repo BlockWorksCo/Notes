@@ -24232,16 +24232,14 @@ Developed the new family of products using a modular architecture and performed 
 Furthered the development of IPAx platform and OmniMesh smart metering application and rearchitected the IPv6 stack to support the new products. 
 Identified and designed the required system-wide changes needed for cost-optimisation of the nodes.
 Developed the Linux platform for the DCUb4 gateway using Buildroot on ARMv7 (BeagleBone variant).
-Provided day-to-day technical support and triage of issues for the operations/solutions team regarding the operation of the mesh network, IPv6 gateways/networks, embedded nodes and smart-metering.
-Development of SMIP/SMETS2 mesh product and support for CPA certification of that product regarding its security and robustness characteristics including MISRA certification and maintenance of 
-codebase quality.
-Provided technical leadership for Indian and UK development teams, creation of technical documentation such as architectural diagrams and high/low level design documents. 
-Also demonstrated operation of newly developed products to management and the wider team(s).
+Provided day-to-day technical support and triage of issues for the operations/solutions team regarding the operation of the mesh network, IPv6 gateways/networks, 
+embedded nodes and smart-metering.
+Development of the SMIP/SMETS2 mesh product for not-spots and support for CPA certification of that product regarding its security and robustness characteristics 
+including MISRA certification and maintenance of codebase quality and fuzz-testing using American Fuzzy Lop (AFL).
+Provided technical leadership for Indian and UK development teams, creation of technical documentation such as architectural diagrams and high/low level design
+documents. 
+Also sucessfully demonstrated operation of newly developed products to management and the wider team(s).
 Worked closely with the hardware team while supporting the development of the new platforms and triage of issues in existing platforms.
-
-fuzz-testing using "American Fuzzy Lop"
-
-
 
 
 
