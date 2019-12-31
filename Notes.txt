@@ -24230,9 +24230,8 @@ The mesh network involves a proprietary, standards-based IPv6 network stack impl
 for secure communications.
 Developed the new family of products using a modular architecture and performed bring-up of CNIC7, IGW7 and DCUb4 products. 
 Furthered the development of IPAx platform and OmniMesh smart metering application and rearchitected the IPv6 stack to support the new products. 
-Identified and designed the required system-wide changes needed for 
-cost-optimisation of the nodes.
-Linux and Buildroot on ARM (BeagleBone variant).
+Identified and designed the required system-wide changes needed for cost-optimisation of the nodes.
+Developed the Linux platform for the DCUb4 gateway using Buildroot on ARMv7 (BeagleBone variant).
 Provided day-to-day technical support and triage of issues for the operations/solutions team regarding the operation of the mesh network, IPv6 gateways/networks, embedded nodes and smart-metering.
 Development of SMIP/SMETS2 mesh product and support for CPA certification of that product regarding its security and robustness characteristics including MISRA certification and maintenance of 
 codebase quality.
