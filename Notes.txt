@@ -24242,6 +24242,11 @@ Also sucessfully demonstrated operation of newly developed products to managemen
 Worked closely with the hardware team while supporting the development of the new platforms and triage of issues in existing platforms.
 
 
+----------------------------------------
+
+LoRaMesh:
+- No notion of upstream/downstream. Only forward/no-forward.
+- Root is determined by it being a source-of-ACKs. Only root can generate ACK packets.
 
 
 
