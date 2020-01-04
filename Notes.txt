@@ -24247,6 +24247,8 @@ Worked closely with the hardware team while supporting the development of the ne
 LoRaMesh:
 - No notion of upstream/downstream. Only forward/no-forward.
 - Root is determined by it being a source-of-ACKs. Only root can generate ACK packets.
+- Forwarding is subject to a random delay. If we hear a duplicate packet before we transmit
+then we delay the transmit until ACK is not heard.
 
 
 
