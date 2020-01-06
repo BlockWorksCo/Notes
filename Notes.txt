@@ -24249,6 +24249,10 @@ LoRaMesh:
 - Root is determined by it being a source-of-ACKs. Only root can generate ACK packets.
 - Forwarding is subject to a random delay. If we hear a duplicate packet before we transmit
 then we delay the transmit until ACK is not heard.
+- If you forwarded a packet because you heard no-one else do so, you're on the route for that
+address if you hear an ACK for that packet. If so, forward on the corresponding ACK.
+- Worst case routing will be determined by flooding. This is guaranteed to find a route, tho 
+it is expensive regarding power.
 
 
 
