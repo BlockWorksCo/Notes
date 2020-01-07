@@ -24264,6 +24264,8 @@ CNIC7 remaining work:
 - modem reset
 - status lines ('extra' ui).
 - remove dummy lowpan.
+- GPS?
+- transmit-detect?
 
 IGW7:
 - I2C driver
