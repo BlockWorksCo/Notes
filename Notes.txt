@@ -24260,6 +24260,11 @@ CNIC7 remaining work:
 - into master.
 - I2C.
 - PWM on status pins (or remove?)
+- Flow control.
+- modem reset
+- status lines ('extra' ui).
+- remove dummy lowpan.
+
 
 
 
