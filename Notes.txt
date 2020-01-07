@@ -24259,6 +24259,7 @@ in the mesh.
 to be forwarded more efficiently.
 - Forwarding delay should be based on hop-count, which means nodes closer to the root will naturally
 forward packets before more distant nodes, creating a more locally-optimal path (not whole-path-optimal tho).
+- ACK packets could also include power metrics for more whole-path-optimal routing.
 
 -----------------------------------
 
