@@ -24265,6 +24265,13 @@ CNIC7 remaining work:
 - status lines ('extra' ui).
 - remove dummy lowpan.
 
+IGW7:
+- I2C driver
+- I2CIP module
+
+Quick-path: have a modem proxy over I2C.
+Proper-path: IP stack improvments to allow multiple-interfaces.
+
 
 
 
