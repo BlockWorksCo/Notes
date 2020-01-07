@@ -24253,6 +24253,8 @@ then we delay the transmit until ACK is not heard.
 address if you hear an ACK for that packet. If so, forward on the corresponding ACK.
 - Worst case routing will be determined by flooding. This is guaranteed to find a route, tho 
 it is expensive regarding power.
+- ACKs should contain hop-count so initial flood will give all nodes an idea of their position
+in the mesh.
 
 -----------------------------------
 
