@@ -24255,6 +24255,10 @@ address if you hear an ACK for that packet. If so, forward on the corresponding 
 it is expensive regarding power.
 - ACKs should contain hop-count so initial flood will give all nodes an idea of their position
 in the mesh.
+- When all nodes know their hop-count, packets marked as up-stream/down-stream will be able
+to be forwarded more efficiently.
+- Forwarding delay should be based on hop-count, which means nodes closer to the root will naturally
+forward packets before more distant nodes, creating a more locally-optimal path (not whole-path-optimal tho).
 
 -----------------------------------
 
