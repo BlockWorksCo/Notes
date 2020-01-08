@@ -24282,6 +24282,10 @@ IGW7:
 Quick-path: have a modem proxy over I2C.
 Proper-path: IP stack improvments to allow multiple-interfaces.
 
+---------------------------------------------
+
+BVipa3-lnt-dlms-insecure:v19.7.41+b16227+g67ee94e Hde DV0@3a15eL3a27bS2000a368
+
 
 
 
