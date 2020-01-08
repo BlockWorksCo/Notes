@@ -24273,6 +24273,7 @@ CNIC7 remaining work:
 - remove dummy lowpan.
 - GPS?
 - transmit-detect?
+- first stage bootloader.
 
 IGW7:
 - I2C driver
