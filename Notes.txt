@@ -24289,7 +24289,35 @@ BVipa3-lnt-dlms-insecure:v19.7.41+b16227+g67ee94e Hde DV0@3a15eL3a27bS2000a368
 
 -----------------------------
 
-- Programming at 2.33V booted up into production mode.
+- 2.24V, panic:
+2020-01-09 13:52:00.609 #1   0011223344556677 <log> 0:00:04.463 [ info] [     monitor] { terminal}: Profile radio is disabled (interval 0 s)
+2020-01-09 13:52:00.609 #1   0011223344556677 <log> 0:00:04.472 [ info] [     monitor] { terminal}: Profile network is disabled (interval 0 s)
+2020-01-09 13:52:00.609 #1   0011223344556677 <log> 0:00:04.481 [ info] [     monitor] { terminal}: Profile ip is disabled (interval 0 s)
+2020-01-09 13:52:00.609 #1   0011223344556677 <log> 0:00:04.489 [debug] [      module] { terminal}: Starting filedl
+2020-01-09 13:52:00.609 #1   0011223344556677 <log> 0:00:04.497 [ info] [    terminal] { terminal}: Reboot reason: R~unknown
+2020-01-09 13:52:00.651 #1   0011223344556677 <log> 0:00:04.505 [debug] [ cndfs/utils] { terminal}: Found metadata #3 for /mq/000.mq: id=5 st=677 sz=659 refs=0
+2020-01-09 13:52:00.651 #1   0011223344556677 <log> 0:00:04.515 [debug] [ cndfs/utils] { terminal}: Found metadata #3 for /mq/000.mq: id=5 st=677 sz=659 refs=0
+2020-01-09 13:52:00.651 #1   0011223344556677 <log> 0:00:04.526 [debug] [      fs/api] { terminal}: fsOpen (/mq/000.mq, mode=3, fd=0)
+2020-01-09 13:52:00.651 #1   0011223344556677 <log> 0:00:04.534 [debug] [       cndfs] { terminal}: Committing 24 B at 659 (filesize 659)
+2020-01-09 13:52:00.697 #1   0011223344556677 <log> 0:00:04.543 [debug] [  fs/service] { terminal}: flashopProgram 677:0x0 40 B
+2020-01-09 13:52:00.697 #1   0011223344556677 <log> 0:00:04.551 [ERROR] [       flash] { terminal}: SR1 = 02 SR2 = 02 SR3 = 002
+2020-01-09 13:52:00.697 #1   0011223344556677 <log> 0:00:04.560 [debug] [  fs/service] { terminal}: flashopProgram 677:0x2c5 24 B
+2020-01-09 13:52:00.697 #1   0011223344556677 <log> 0:00:04.568 [ERROR] [       flash] { terminal}: SR1 = 02 SR2 = 02 SR3 = 002
+2020-01-09 13:52:00.697 #1   0011223344556677 <log> 0:00:04.577 [debug] [ cndfs/utils] { terminal}: Found metadata #3 for /mq/000.mq: id=5 st=677 sz=683 refs=0
+2020-01-09 13:52:00.740 #1   0011223344556677 <log> 0:00:04.587 [debug] [   mqstorage] { terminal}: Wrote m# 31 of size 22 to file /mq/000.mq size 683
+2020-01-09 13:52:00.740 #1   0011223344556677 <log> 0:00:04.597 [ WARN] [   alertbits] { schedule}: Alerts: keys
+2020-01-09 13:52:00.740 #1   0011223344556677 <log> 0:00:04.604 [debug] [ cndfs/utils] { schedule}: Found metadata #3 for /mq/000.mq: id=5 st=677 sz=683 refs=0
+2020-01-09 13:52:00.740 #1   0011223344556677 <log> 0:00:04.615 [debug] [ cndfs/utils] { schedule}: Found metadata #3 for /mq/000.mq: id=5 st=677 sz=683 refs=0
+2020-01-09 13:52:00.740 #1   0011223344556677 <log> 0:00:04.625 [debug] [      fs/api] { schedule}: fsOpen (/mq/000.mq, mode=3, fd=0)
+2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.634 [debug] [       cndfs] { schedule}: Committing 19 B at 683 (filesize 683)
+2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.648 [debug] [  fs/service] { schedule}: flashopProgram 678:0x28 128 B
+2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.656 [ERROR] [       flash] { schedule}: SR1 = 02 SR2 = 02 SR3 = 002
+2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.664 [panic] ======== Panic ========
+2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.664 [panic] platform_efr32:175, in task schedule: Stack overflow in schedule
+
+
+
+
 
 
 
