@@ -24322,6 +24322,10 @@ earlier as initialising and transmitting packets causes voltage-droop. Flash alw
 - 2.38V, transmission of packets is now possible.
 
 
+-----------------------------------
+
+- SimCOM 7600EI
+-  Adesto FLASH
 
 
 
