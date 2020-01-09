@@ -24326,6 +24326,7 @@ earlier as initialising and transmitting packets causes voltage-droop. Flash alw
 
 - SimCOM 7600EI
 -  Adesto FLASH
+- Unknown processor 100GJG
 
 
 
