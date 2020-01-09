@@ -24315,7 +24315,11 @@ BVipa3-lnt-dlms-insecure:v19.7.41+b16227+g67ee94e Hde DV0@3a15eL3a27bS2000a368
 2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.664 [panic] ======== Panic ========
 2020-01-09 13:52:00.789 #1   0011223344556677 <log> 0:00:04.664 [panic] platform_efr32:175, in task schedule: Stack overflow in schedule
 
+- 2.05V, no output from node. Leading up to that, winding the V down causes the processor to reset
+earlier as initialising and transmitting packets causes voltage-droop. Flash always functional.
 
+- Winding back up to 2.19V allows it to continue far enough to attempt writing to FLASH. Seems Ok.
+- 2.38V, transmission of packets is now possible.
 
 
 
