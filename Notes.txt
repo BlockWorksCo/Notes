@@ -24330,6 +24330,14 @@ earlier as initialising and transmitting packets causes voltage-droop. Flash alw
 
 
 
+-----------------------------
+
+- Hold up time for last-gasp?
+- micro SIMs?
+
+
+
+
 
 
 
