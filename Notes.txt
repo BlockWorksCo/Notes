@@ -24264,6 +24264,7 @@ forward packets before more distant nodes, creating a more locally-optimal path 
 their depth in the tree.
 - Packets do not need a 'current depth' field as the packets are only forwarded with a delay based
 on the nodes depth and de-duplication takes care of this.
+- forwarding-delay is based on a nodes hop-count and packet direction up/down.
 
 -----------------------------------
 
