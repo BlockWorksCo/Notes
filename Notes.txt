@@ -24260,6 +24260,10 @@ to be forwarded more efficiently.
 - Forwarding delay should be based on hop-count, which means nodes closer to the root will naturally
 forward packets before more distant nodes, creating a more locally-optimal path (not whole-path-optimal tho).
 - ACK packets could also include power metrics for more whole-path-optimal routing.
+- Periodically, the root can broadcast 'illuminator' packets to inform all reachable nodes of
+their depth in the tree.
+- Packets do not need a 'current depth' field as the packets are only forwarded with a delay based
+on the nodes depth and de-duplication takes care of this.
 
 -----------------------------------
 
