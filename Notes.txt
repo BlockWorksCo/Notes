@@ -24265,6 +24265,8 @@ their depth in the tree.
 - Packets do not need a 'current depth' field as the packets are only forwarded with a delay based
 on the nodes depth and de-duplication takes care of this.
 - forwarding-delay is based on a nodes hop-count and packet direction up/down.
+- Measure the density of your local environment my counting duplicate packets. Hi-density correlates with more duplicates.
+- In high-density, reduce your transmit power-level. This will interfere less with others and reduce unwanted propagation.
 
 -----------------------------------
 
