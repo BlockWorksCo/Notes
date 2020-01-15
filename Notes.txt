@@ -24345,6 +24345,24 @@ earlier as initialising and transmitting packets causes voltage-droop. Flash alw
 
 
 
+----------------------------------------------------
+
+debug log
+
+There is a *real* need for an improved mechanism for debugging in the field. The nature of out product means we
+will continue to only discover the (many) corner-cases of meter-interaction while deployed due to he number involved,
+(i.e. we will never have a significant population of meters to test in-house).
+
+We are currently limited to performing debug via the "snapshot" log, i.e. a 2KB snapshot of text that can be retrieved
+in a one-shot manner. Repeating this to attempt to get a continuous flow of debug text takes ~1 minute.
+
+
+
+
+
+
+
+
 
 
 
