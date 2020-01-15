@@ -24381,11 +24381,14 @@ The current code requires tidying up, commenting, safe-guards adding and in gene
 
 HLD/LLD
 
-- "Data Model", events from different source (filter? combine?)
+- "Data Model", i.e how the information required to represent the node is organised, events from different source (filter? 
+combine?), configuration (duplicate mesh data).
 - enic
 - ipv4/cnic/tunnel
 - address scheme (prefix-allocation, etc).
-- address discovery.
+- address discovery, SLAAC, etc.
+- FWUP details. phase 1 phase 2
+- encryption (retry mechanism on I2C), retry during key-exchange? phase-1, phase-2?
 
 
 
