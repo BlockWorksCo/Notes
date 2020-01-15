@@ -24377,6 +24377,15 @@ UDP packets, decompress them and present the debug-text on stdout as a debug-log
 The current code requires tidying up, commenting, safe-guards adding and in general making it more usable in practice.
 
 
+--------------------------------
+
+HLD/LLD
+
+- "Data Model", events from different source (filter? combine?)
+- enic
+- ipv4/cnic/tunnel
+- address scheme (prefix-allocation, etc).
+- address discovery.
 
 
 
