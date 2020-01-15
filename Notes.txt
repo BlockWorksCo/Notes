@@ -24389,6 +24389,7 @@ to present an IPv6 i/f over I2CIP. IPv6 uplink would be no different. The tunnel
 the routes that are advertised in that case is still over the IPv6 uplink. In effect, the tun6 is an implementation detail
 of the cellular uplink. Note that the password for tun7 is explicitly *not* a security-measure, its a 'challenge' that the remote
 side has to perform an specified operation (hashing) for the session to be setup.
+(https://confluence.cyco.io/display/ENG/Omnimesh+-+tun6d+-+Protocol+Overview)
 - address scheme (prefix-allocation, etc).
 - address discovery, SLAAC, etc.
 - FWUP details. phase 1 phase 2
