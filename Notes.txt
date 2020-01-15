@@ -24382,11 +24382,12 @@ The current code requires tidying up, commenting, safe-guards adding and in gene
 HLD/LLD
 
 - "Data Model", i.e how the information required to represent the node is organised, events from different source (filter? 
-combine?), configuration (duplicate mesh data).
+combine?), configuration (duplicate mesh data). Metrics:Same information for all interfaces? or 'hardcoded' into config as now?
 - enic/PHY options.
 - ipv4/cnic/tunnel. Tunnel is a networking feature, so should be on the CNIC, not a security endpoint. CNIC runs uplink_tun6
 to present an IPv6 i/f over I2CIP. IPv6 uplink would be no different. The tunnel would be invisible in that case, but
-the routes that are advertised in that case is still over the IPv6 uplink.
+the routes that are advertised in that case is still over the IPv6 uplink. In effect, the tun6 is an implementation detail
+of the cellular uplink. Note that the password for tun7 is explicitly *not* a security-measure
 - address scheme (prefix-allocation, etc).
 - address discovery, SLAAC, etc.
 - FWUP details. phase 1 phase 2
