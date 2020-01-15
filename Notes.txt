@@ -24356,6 +24356,40 @@ will continue to only discover the (many) corner-cases of meter-interaction whil
 We are currently limited to performing debug via the "snapshot" log, i.e. a 2KB snapshot of text that can be retrieved
 in a one-shot manner. Repeating this to attempt to get a continuous flow of debug text takes ~1 minute.
 
+In the "BetterInFieldDebugging" branch (https://gitlab.cyco.io/Omnimesh/terminal/commits/BetterInFieldDebugging) there
+is proof-of-concept code of a debug log that will continuously stream compressed debug-log packets at a rate that the 
+network will support.
+
+This has the potential to flood the network, so should be used with care and should have a safe-guard feature to 
+automatically disable itself after (say) 30 minutes.
+
+The implementation involves integrating a compression mechanism (lz4) into the Agent code and performing compression of
+a single packet of debug-text. the data-rate can also be reduced through use of filtering of debug "area" and "level" as
+is usual.
+
+Use of this mechanism should only be done with the understanding of the data rates involved and their potential effect
+on the mesh and cellular networks. The mesh network can transfer ~1KByte/sec and although cellular is not in general so
+limited, it may still be a bottleneck in certain cases.
+
+Once this feature is enabled, it requires the use of a server-side decompressor (tools/udpLog/RunMe.sh) to receive the 
+UDP packets, decompress them and present the debug-text on stdout as a debug-log.
+
+The current code requires tidying up, commenting, safe-guards adding and in general making it more usable in practice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
