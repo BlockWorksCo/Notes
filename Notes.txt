@@ -24383,7 +24383,7 @@ HLD/LLD
 
 - "Data Model", i.e how the information required to represent the node is organised, events from different source (filter? 
 combine?), configuration (duplicate mesh data).
-- enic
+- enic/PHY options.
 - ipv4/cnic/tunnel
 - address scheme (prefix-allocation, etc).
 - address discovery, SLAAC, etc.
