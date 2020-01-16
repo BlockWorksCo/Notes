@@ -24400,146 +24400,146 @@ side has to perform an specified operation (hashing) for the session to be setup
 
 CoAP endpoints:
 
-"device/alarms/conf", confGetCallback, CoapMethodGet, .idempotent = true },
-"device/alarms/conf", confPostCallback, CoapMethodPost },
-"device/alarms/conf/hash", confHashGetCallback, CoapMethodGet, .idempotent = true },
+"device/alarms/conf", confGetCallback, CoapMethodGet, .idempotent = true 
+"device/alarms/conf", confPostCallback, CoapMethodPost 
+"device/alarms/conf/hash", confHashGetCallback, CoapMethodGet, .idempotent = true 
 
-"sm/profile/conf", confGetCallback, CoapMethodGet, .idempotent = true },
-"sm/profile/conf/hash", confHashGetCallback, CoapMethodGet, .idempotent = true},
-"sm/profile/conf", confPostCallback, CoapMethodPost },
+"sm/profile/conf", confGetCallback, CoapMethodGet, .idempotent = true 
+"sm/profile/conf/hash", confHashGetCallback, CoapMethodGet, .idempotent = true
+"sm/profile/conf", confPostCallback, CoapMethodPost 
 
-"sm/series", retrieveProfileCallback, .method = CoapMethodGet, .idempotent = true};
+"sm/series", retrieveProfileCallback, .method = CoapMethodGet, .idempotent = true
 
-"meter/digitalio", getCallback, .idempotent = true, .method=CoapMethodGet},
-"meter/digitalio", putCallback, .idempotent = true, .method=CoapMethodPut}
+"meter/digitalio", getCallback, .idempotent = true, .method=CoapMethodGet
+"meter/digitalio", putCallback, .idempotent = true, .method=CoapMethodPut
 
-"devices/list", resourceCallback, .method = CoapMethodGet, .idempotent = true},
-"sm", smResourceCallback, .numberOfInFlightRequestsAllowed = 1 }
+"devices/list", resourceCallback, .method = CoapMethodGet, .idempotent = true
+"sm", smResourceCallback, .numberOfInFlightRequestsAllowed = 1 
 
-"smip/dmm-string", dmmGetStringCallback, CoapMethodGet, .idempotent = true },
-"smip/selftest", selftestGetStatusCallback, CoapMethodGet, .idempotent = true },
+"smip/dmm-string", dmmGetStringCallback, CoapMethodGet, .idempotent = true 
+"smip/selftest", selftestGetStatusCallback, CoapMethodGet, .idempotent = true 
 
-"fs", fsResourceCallback, CoapMethodPost, .idempotent = true }
+"fs", fsResourceCallback, CoapMethodPost, .idempotent = true 
 
 "crashtest", crashtestCallback, CoapMethodPost, .idempotent = true
 
-"time", getTime, CoapMethodGet, .idempotent = true },
-"time", setTime, CoapMethodPost },
-"time/meshtime/send", sendMeshTime, CoapMethodPost },
+"time", getTime, CoapMethodGet, .idempotent = true 
+"time", setTime, CoapMethodPost 
+"time/meshtime/send", sendMeshTime, CoapMethodPost 
 
 "reftime", timeServiceCoapRequestRefTime, .method = CoapMethodPost
 
-"memstats/info", getMemStatsInfo, CoapMethodGet, .idempotent = true },
-"memstats/log", logMemStats, CoapMethodPost },
-"memstats", getMemStats, CoapMethodGet, .idempotent = true },
+"memstats/info", getMemStatsInfo, CoapMethodGet, .idempotent = true 
+"memstats/log", logMemStats, CoapMethodPost 
+"memstats", getMemStats, CoapMethodGet, .idempotent = true 
 
-"file/download", fileDownloadCoapRequest, CoapMethodPut }, { "file/listen", fileListenCoapRequest, CoapMethodPut },
-"file/abort", fileAbortCoapRequest, CoapMethodPut },
-BCASTCLIENT_URI_BASE, bcastclientBlockRequest, CoapMethodPut, .multicastCapable = true, .allowNonDtls = true },
+"file/download", fileDownloadCoapRequest, CoapMethodPut 
+"file/abort", fileAbortCoapRequest, CoapMethodPut 
+BCASTCLIENT_URI_BASE, bcastclientBlockRequest, CoapMethodPut, .multicastCapable = true, .allowNonDtls = true 
 
-"log", logCoapGetCB, CoapMethodGet, .idempotent = true},
-"log", logCoapPostCB, CoapMethodPost, .idempotent = true}
+"log", logCoapGetCB, CoapMethodGet, .idempotent = true
+"log", logCoapPostCB, CoapMethodPost, .idempotent = true
 
-BCASTSERVER_URI_BASE, bcastBlockCoapRequest, CoapMethodGet, .idempotent = true, .allowNonDtls = true },
-"file/broadcast", bcastStartCoapRequest, CoapMethodPut },
+BCASTSERVER_URI_BASE, bcastBlockCoapRequest, CoapMethodGet, .idempotent = true, .allowNonDtls = true 
+"file/broadcast", bcastStartCoapRequest, CoapMethodPut 
 
-"firmware/update", firmwareUpdateCoapRequest, CoapMethodPut };
+"firmware/update", firmwareUpdateCoapRequest, CoapMethodPut 
 
-"login/logout", loginLogoutCallback, CoapMethodPost },
-"login/clear-dtls", loginClearDtlsCallback, CoapMethodPost },
+"login/logout", loginLogoutCallback, CoapMethodPost 
+"login/clear-dtls", loginClearDtlsCallback, CoapMethodPost 
 
-"monitoring/m", moduleCoapResourceCb, CoapMethodGet, .idempotent = true };
-"datarate/discard", discardRequest, CoapMethodPost, .idempotent = true },
-"datarate/start", startRequest, CoapMethodPut }, 
-"net/info", infoCallback, CoapMethodGet, .idempotent = true },
-"net/stats", statsCallback, CoapMethodGet, .idempotent = true },
-"net/topology", topoCallback, CoapMethodGet, .idempotent = true },
-"net/routes", routesCallback, CoapMethodGet, .idempotent = true },
+"monitoring/m", moduleCoapResourceCb, CoapMethodGet, .idempotent = true 
+"datarate/discard", discardRequest, CoapMethodPost, .idempotent = true 
+"datarate/start", startRequest, CoapMethodPut 
+"net/info", infoCallback, CoapMethodGet, .idempotent = true 
+"net/stats", statsCallback, CoapMethodGet, .idempotent = true 
+"net/topology", topoCallback, CoapMethodGet, .idempotent = true 
+"net/routes", routesCallback, CoapMethodGet, .idempotent = true 
 
-"temperature", temperatureGetCallback, CoapMethodGet };
+"temperature", temperatureGetCallback, CoapMethodGet 
 
-"ping", pingReceiveRequestCallback, CoapMethodPost, .idempotent = true };
+"ping", pingReceiveRequestCallback, CoapMethodPost, .idempotent = true 
 
-"events/m", eventsModuleCoapResourceCb, CoapMethodGet, .idempotent = true };
+"events/m", eventsModuleCoapResourceCb, CoapMethodGet, .idempotent = true 
 
-"memory", memoryCallback, CoapMethodPost, .idempotent = true };
+"memory", memoryCallback, CoapMethodPost, .idempotent = true 
 
-"fuzz/mac", fuzzGetCallback, CoapMethodGet, .idempotent = true },
-"fuzz/mac", fuzzSetCallback, CoapMethodPost, .idempotent = true },
+"fuzz/mac", fuzzGetCallback, CoapMethodGet, .idempotent = true 
+"fuzz/mac", fuzzSetCallback, CoapMethodPost, .idempotent = true 
 
 "prod/led", ledRequestCallback, CoapMethodPost
 
-"prod/erase-flash", eraseFlashRequestCallback, CoapMethodPost },
-"prod/finalize/pass", finalizePassRequestCallback, CoapMethodPost },
-"prod/finalize/fail", finalizeFailRequestCallback, CoapMethodPost },
-"prod/netmeterpin", getNetDevStatCallback, CoapMethodGet },
-"prod/netmeterpin", setNetDevStatCallback, CoapMethodPut },
-"prod/netmeterio", setNetDevIOStatCallback, CoapMethodPut },
+"prod/erase-flash", eraseFlashRequestCallback, CoapMethodPost 
+"prod/finalize/pass", finalizePassRequestCallback, CoapMethodPost 
+"prod/finalize/fail", finalizeFailRequestCallback, CoapMethodPost 
+"prod/netmeterpin", getNetDevStatCallback, CoapMethodGet 
+"prod/netmeterpin", setNetDevStatCallback, CoapMethodPut 
+"prod/netmeterio", setNetDevIOStatCallback, CoapMethodPut 
 
-"prod/test-ethernet", testEthernetCallback, CoapMethodPost },
-"prod/load-ethernet", loadEthernetCallback, CoapMethodPost },
-"prod/voltage", getVoltageCallback, CoapMethodGet },
-"prod/gpio", getGpioCallback, CoapMethodGet },
-"prod/test-leds", testLedsCallback, CoapMethodPost },
-"prod/test-modem", testModemCallback, CoapMethodPost },
+"prod/test-ethernet", testEthernetCallback, CoapMethodPost 
+"prod/load-ethernet", loadEthernetCallback, CoapMethodPost 
+"prod/voltage", getVoltageCallback, CoapMethodGet 
+"prod/gpio", getGpioCallback, CoapMethodGet 
+"prod/test-leds", testLedsCallback, CoapMethodPost 
+"prod/test-modem", testModemCallback, CoapMethodPost 
 
-"prod/test-eeprom", testEepromRequestCallback, CoapMethodPost },
+"prod/test-eeprom", testEepromRequestCallback, CoapMethodPost 
 
-"prod/radio-ping", radioPingRequestCallback, CoapMethodPost },
+"prod/radio-ping", radioPingRequestCallback, CoapMethodPost 
 
-"prod/keyfile", keyfileRequestCallback, CoapMethodPost };
+"prod/keyfile", keyfileRequestCallback, CoapMethodPost 
 
-"restart", restartReceiveRequestCallback, CoapMethodPost };
+"restart", restartReceiveRequestCallback, CoapMethodPost 
 
 "mq-entries", mqCoapPull, CoapMethodGet, .idempotent = true
 
-"conf", confCallback, CoapMethodGet, .idempotent = true },
-"conf/m/all", modulesAllCallback, CoapMethodGet, .idempotent = true },
-"conf/m", moduleCallback, CoapMethodGet, .idempotent = true },
-"conf", confPostCallback, CoapMethodPost},
+"conf", confCallback, CoapMethodGet, .idempotent = true 
+"conf/m/all", modulesAllCallback, CoapMethodGet, .idempotent = true 
+"conf/m", moduleCallback, CoapMethodGet, .idempotent = true 
+"conf", confPostCallback, CoapMethodPost
 
-"ping", resourceCallback, CoapMethodGet};
-"ping", resourceCallback, CoapMethodPut};
-"ping/advanced", resourceCallback};
+"ping", resourceCallback, CoapMethodGet
+"ping", resourceCallback, CoapMethodPut
+"ping/advanced", resourceCallback
 
-"conman/mode", getModeCallback, CoapMethodGet, .idempotent = true },
-"conman/mode", setModeCallback, CoapMethodPost, .idempotent = true },
-"conman/mesh-enabled", setMeshEnabledCallback, CoapMethodPost, .idempotent = true },
+"conman/mode", getModeCallback, CoapMethodGet, .idempotent = true 
+"conman/mode", setModeCallback, CoapMethodPost, .idempotent = true 
+"conman/mesh-enabled", setMeshEnabledCallback, CoapMethodPost, .idempotent = true 
 
 "rpl/reset-mesh", resetMeshCallback, CoapMethodPost
 
-"rll-key", rllKeyPut, CoapMethodPut, .idempotent = true},
-"rll-key", rllKeyGet, CoapMethodGet, .idempotent = true}
+"rll-key", rllKeyPut, CoapMethodPut, .idempotent = true
+"rll-key", rllKeyGet, CoapMethodGet, .idempotent = true
 
-"gwmsg", coapCallback, CoapMethodPost, .allowNonDtls = true };
+"gwmsg", coapCallback, CoapMethodPost, .allowNonDtls = true 
 
-"csr", csrCB, CoapMethodPost };
+"csr", csrCB, CoapMethodPost 
 
-"perftest/tp", coapStartThroughputTest, CoapMethodPost, .allowNonDtls = true};
+"perftest/tp", coapStartThroughputTest, CoapMethodPost, .allowNonDtls = true
 
-"perftest/tp/result", coapThroughputTestResult, CoapMethodPost, .allowNonDtls = true };
+"perftest/tp/result", coapThroughputTestResult, CoapMethodPost, .allowNonDtls = true 
 
-"perftest/gwmsg", coapStartGwmsgTest, CoapMethodPut, .allowNonDtls = true };
+"perftest/gwmsg", coapStartGwmsgTest, CoapMethodPut, .allowNonDtls = true 
 
-"perftest/enter", coapEnterTestMode, CoapMethodPut },
-"perftest/leave", coapLeaveTestMode, CoapMethodPut, .allowNonDtls = true },
-"perftest/start", coapStartTest, CoapMethodPut },
-"perftest/report", coapGetReport, CoapMethodGet },
-"perftest/nodeinfo", coapGetInfo, CoapMethodGet, .idempotent = true, .allowNonDtls = true },
+"perftest/enter", coapEnterTestMode, CoapMethodPut 
+"perftest/leave", coapLeaveTestMode, CoapMethodPut, .allowNonDtls = true 
+"perftest/start", coapStartTest, CoapMethodPut 
+"perftest/report", coapGetReport, CoapMethodGet 
+"perftest/nodeinfo", coapGetInfo, CoapMethodGet, .idempotent = true, .allowNonDtls = true 
 
-"ipsec", coapCB, CoapMethodPost };
+"ipsec", coapCB, CoapMethodPost 
 
-"radio/test/send", getTestSendCallback, CoapMethodGet, .idempotent = true },
-"radio/test/send", postTestSendCallback, CoapMethodPost },
-"radio/test/receive", getTestReceiveCallback, CoapMethodGet, .idempotent = true },
-"radio/test/receive", postTestReceiveCallback, CoapMethodPost },
-"radio/test/mode", setTestModeCallback, CoapMethodPost, .idempotent = true },
-"radio/rssi", getRssiCallback, CoapMethodGet, .idempotent = true },
-"radio/frequency", setFrequencyCallback, CoapMethodPost, .idempotent = true },
-"radio/channel", setChannelCallback, CoapMethodPost, .idempotent = true },
-"radio/cca-limit", setCcaLimitCallback, CoapMethodPost, .idempotent = true },
+"radio/test/send", getTestSendCallback, CoapMethodGet, .idempotent = true 
+"radio/test/send", postTestSendCallback, CoapMethodPost 
+"radio/test/receive", getTestReceiveCallback, CoapMethodGet, .idempotent = true 
+"radio/test/receive", postTestReceiveCallback, CoapMethodPost 
+"radio/test/mode", setTestModeCallback, CoapMethodPost, .idempotent = true 
+"radio/rssi", getRssiCallback, CoapMethodGet, .idempotent = true 
+"radio/frequency", setFrequencyCallback, CoapMethodPost, .idempotent = true 
+"radio/channel", setChannelCallback, CoapMethodPost, .idempotent = true 
+"radio/cca-limit", setCcaLimitCallback, CoapMethodPost, .idempotent = true 
 
-"keystore/trigger-change", keystoreTriggerChangeCallback, CoapMethodPost, .idempotent = true },
+"keystore/trigger-change", keystoreTriggerChangeCallback, CoapMethodPost, .idempotent = true 
 
 
 
