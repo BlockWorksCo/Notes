@@ -24543,6 +24543,55 @@ BCASTSERVER_URI_BASE, bcastBlockCoapRequest, CoapMethodGet, .idempotent = true, 
 
 
 
+name="mac"
+    name="keyChanged"                   # Master-NIC
+    name="unknownKey"                   # Master-NIC, slave-NIC
+
+name="dtls"
+    name="keyChanged"                   # Master-NIC
+    name="keyChangeFailed"              # Master-NIC
+
+name="network"
+    name="perftestEnter"                #
+    name="perftestLeave"                #
+    name="perftestFinished"             #
+    name="dhcpLease"                    #
+
+name="login"
+    name="loggedIn" unused="true"       # Master-NIC
+
+name="filedistribution"
+    name="broadcastStarted"             # Master-NIC, slave-NIC for broadcast on both internal and mesh
+    name="broadcastFinished"            # Master-NIC, slave-NIC for broadcast on both internal and mesh
+    name="downloadStarted"              # Master-NIC, slave-NIC for broadcast on both internal and mesh
+    name="downloadFinished"             # Master-NIC, slave-NIC for broadcast on both internal and mesh
+
+name="firmwareupdate"
+    name="restart"                      # All modules.
+
+name="time"
+    name="mesh.failure"                 #
+
+name="activity"
+    name="mgmt.nodeActive"              #
+
+name="node"
+    name="boot"                         #
+    name="powerLost"                    #
+    name="alert"                        #
+    name="powerStatus"                  #
+    name="lowPowerMode"                 #
+
+name="device"
+    name="powerChange" unused="true"    #
+    name="error"                        #
+    name="upgradeResult"                #
+
+
+
+
+
+
 
 
 
