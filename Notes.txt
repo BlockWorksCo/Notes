@@ -24587,6 +24587,12 @@ name="device"
     name="error"                        #
     name="upgradeResult"                #
 
+---------------------------------------------------------
+
+elf to bin
+
+arm-none-eabi-objcopy -O binary build/efr32-fsbl/bin/firststage-bootloader.elf firststage.bin
+
 
 
 
