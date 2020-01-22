@@ -24594,6 +24594,12 @@ elf to bin
 arm-none-eabi-objcopy -O binary build/efr32-fsbl/bin/firststage-bootloader.elf firststage.bin
 
 
+-----------------------------------------
+
+ipa3:
+- at45.c
+- AT45DB321D
+
 
 
 
