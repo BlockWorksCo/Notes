@@ -24600,6 +24600,7 @@ ipa3:
 - at45.c
 - AT45DB321D
 
+Must change to SPI25
 
 
 
