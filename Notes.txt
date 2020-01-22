@@ -24598,9 +24598,11 @@ arm-none-eabi-objcopy -O binary build/efr32-fsbl/bin/firststage-bootloader.elf f
 
 ipa3:
 - at45.c
-- AT45DB321D
+- AT45*
 
-Must change to SPI25
+Must change to CONFIG_FLASH_SPI25
+- spi25.c
+- AT25*
 
 
 
