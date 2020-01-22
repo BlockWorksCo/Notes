@@ -24605,6 +24605,8 @@ Must change to CONFIG_FLASH_SPI25
 - AT25*
 
 
+SRP0 (Status Reg 0)
+SRP1 (Status Reg 1)
 
 
 
