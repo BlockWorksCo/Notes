@@ -24644,7 +24644,14 @@ firststage-bootloader
 ./tools/gdb/flash-ipa3-bin.sh build/ipa3-bl/bin/bootloader.hbin 0x10000
 ./tools/gdb/flash-ipa3-bin.sh build/ipa3-lnt-dlms-insecure/bin/agent.hbin 0x70000
 
+dd if=/dev/zero of=zeros.bin bs=1 count=1024
+./tools/gdb/flash-ipa3-bin.sh zeros.bin 0x10000
 
+
+Intended method of use:
+
+- fsbl checks 3 locations, A, B and App.
+- A & B have sequence numbers attached to them
 
 
 
