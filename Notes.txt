@@ -24619,10 +24619,12 @@ RAIL_PaCtuneSet();
 
 --------------------------------------------------------
 
-UltraSOC            -
-Sentec              -
-Adder Technology    -
+UltraSOC            - Nick  Moore
+Sentec              - Chetan
+Adder Technology    - Joe Draper
 Viavi               - 
+Cambridge Broadband Networks    - Chetan
+L-Tec?                          - Chetan
 
 
 ----------------------------------------------------------
