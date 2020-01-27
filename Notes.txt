@@ -24622,6 +24622,17 @@ RAIL_PaCtuneSet();
 UltraSOC            -
 Sentec              -
 Adder Technology    -
+Viavi               - 
+
+
+----------------------------------------------------------
+
+MISRA
+
+https://www.embedded.com/tutorial-achieve-reliable-embedded-code-with-misra-c/
+
+
+
 
 
 
