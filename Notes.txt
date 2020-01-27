@@ -24651,8 +24651,15 @@ dd if=/dev/zero of=zeros.bin bs=1 count=1024
 Intended method of use:
 
 - fsbl checks 3 locations, A, B and App.
-- A & B have sequence numbers attached to them
+- When booting, only *either* A or B should be valid.
+- If *both* A and B are valid, it is presumed there has been an interrupted
+bootloader write as the last part of the bootloader-write is to remove the 
+previous bootloader.
+- If neither A nor B is valid, the application is run directly to recover
+the situation. no firmware-upgrade is possible in this case since the application
+is being executed from the first-stage-bootloader.
 
+-----------------------------------------------------
 
 
 
