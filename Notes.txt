@@ -24640,6 +24640,7 @@ https://www.perforce.com/resources/qac/misra-c-cpp
 firststage-bootloader
 
 ./tools/gdb/flash-ipa3-bin.sh build/efr32-fsbl/bin/firststage-bootloader.bin 0x0
+./tools/gdb/flash-ipa3-bin.sh build/ipa3-lnt-dlms-insecure/bin/agent.hbin 0x70000
 
 
 
