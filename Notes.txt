@@ -24658,6 +24658,20 @@ previous bootloader.
 - If neither A nor B is valid, the application is run directly to recover
 the situation. no firmware-upgrade is possible in this case since the application
 is being executed from the first-stage-bootloader.
+- When upgrading the bootloader, determine the invalid-slot (A or B). This is where
+the new image will be written (by the application). Only when the application is
+written should the header be made valid. When the header has been made valid,
+perform a check of the entire bootloader image to ensure its correct. When the 
+check passes, make the current bootloader invalid by corrupting its header.
+- In the period of time between writing the new bootloader and removing the old
+bootloader, there will be a period of time where *both* are valid. While in this
+two-valid-bootloaders mode, the sequence numbers will come into effect. With no
+change the current image-headers contain identical sequenceNumbers and in this case
+the application image is run directly. This will allow the application to complete
+the new bootloader programming sequence (by checking and erasing the old one).
+- If the sequence numbers are not identical and both A & B are valid, then the
+sequence numbers must be consecutive. In this case, the bootloader with the highest
+sequence number will be executed.
 
 -----------------------------------------------------
 
