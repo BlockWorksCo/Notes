@@ -24675,6 +24675,93 @@ sequence number will be executed.
 
 -----------------------------------------------------
 
+Genus:
+
+7ea077
+610330ad6ce6e700
+6169a10906076085
+7405080103
+a203020100
+a305a1030201
+0e
+88020780890760857405080202aa12
+8010
+47656e75734240415977411301240120
+a40a0408474f4500000000
+05
+be230421281f3000000018574c52e7
+b220dc39c6c89eebdf36a6b515094be7
+fd44e47757427ba27e
+
+
+<HDLC len="118" >
+<TargetAddress Value="48" />
+<SourceAddress Value="1" />
+<!--AARE frame.-->
+<FrameType Value="30" />
+<PDU>
+<AssociationResponse>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <AssociationResult Value="0" />
+  <ResultSourceDiagnostic>
+    <!--AUTHENTICATION_REQUIRED-->
+    <ACSEServiceUser Value="14" />
+  </ResultSourceDiagnostic>
+  <ResponderACSERequirement Value="1" />
+  <MechanismName Value="High" />
+  <RespondingAuthentication Value="47656E75734240415977411301240120" />
+  <RespondingAPTitle Value="474F450000000005" />
+  <glo_InitiateResponse Value="3000000018574C52E7B220DC39C6C89EEBDF36A6B515094BE7FD44E4775742" />
+</AssociationResponse>
+</PDU>
+</HDLC>
+
+
+LnT:
+
+7ea077
+610330ad6ce6e700
+6169a10906076085
+7405080103
+a203020100
+a305a1030201
+0e
+a40a04084c4e543031313830
+88020780890760857405080202aa12
+8010
+6162636465666768696a6b6c6d6e6f70
+be230421281f300000134d3f81fa74
+d0ff6e9e594015af4718149c33049b84
+3a51996731f53b2c7e
+
+<HDLC len="118" >
+<TargetAddress Value="48" />
+<SourceAddress Value="1" />
+<!--AARE frame.-->
+<FrameType Value="30" />
+<PDU>
+<AssociationResponse>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <AssociationResult Value="0" />
+  <ResultSourceDiagnostic>
+    <!--AUTHENTICATION_REQUIRED-->
+    <ACSEServiceUser Value="14" />
+  </ResultSourceDiagnostic>
+  <RespondingAPTitle Value="4C4E543031313830" />
+  <ResponderACSERequirement Value="1" />
+  <MechanismName Value="High" />
+  <RespondingAuthentication Value="6162636465666768696A6B6C6D6E6F70" />
+  <glo_InitiateResponse Value="300000134D3F81FA74D0FF6E9E594015AF4718149C33049B843A51996731F5" />
+</AssociationResponse>
+</PDU>
+</HDLC>
+
+ 
+
+
+
+
+
 
 
 
