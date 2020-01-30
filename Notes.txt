@@ -24762,6 +24762,13 @@ d0ff6e9e594015af4718149c33049b84
 </PDU>
 </HDLC>
 
+-----------------------------------------------
+
+sudo apt install docker-ce
+sudo groupadd docker
+sudo usermod -aG docker $USER
+newgrp - docker
+
  
 
 
