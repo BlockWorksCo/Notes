@@ -24882,8 +24882,12 @@ kmalloc
 
 PCI BAR
 DMA pci mappings
+each PCI peripheral is identified by a bus number, a device number, and a function number
+
 
 PTE TLB
+https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch13.html
+
 
 
 https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch08s04.html
