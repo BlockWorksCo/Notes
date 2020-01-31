@@ -24876,6 +24876,14 @@ mailbox interrupts
 upper/lower interrupt handlers.
 
 
+memcpy_fromio / memcpy_toio / memset_io
+
+kmalloc
+
+PCI BAR
+
+
+
 
 
 
