@@ -24881,6 +24881,7 @@ memcpy_fromio / memcpy_toio / memset_io
 kmalloc
 
 PCI BAR
+DMA pci mappings
 
 
 https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch08s04.html
