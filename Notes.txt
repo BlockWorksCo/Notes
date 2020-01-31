@@ -24841,6 +24841,22 @@ SUM:                            30            411            684           1580
 
 
  
+----------------------------------------
+
+
+ioremap cache/nocache readb/writeb/readw/writew/readl/writel
+writethrough/writecached.
+no multiple mappings.
+
+
+Documentation/DMA-API-HOWTO.txt
+https://www.infradead.org/~mchehab/kernel_docs/unsorted/bus-virt-phys-mapping.html
+
+CPU untranslated. This is the “physical” address. Physical address 0 is what the CPU sees when it drives zeroes on the memory bus.
+CPU translated address. This is the “virtual” address, and is completely internal to the CPU itself with the CPU doing the appropriate translations into “CPU untranslated”.
+bus address. This is the address of memory as seen by OTHER devices, not the CPU. Now, in theory there could be many different bus addresses, with each device seeing memory in some device-specific way, but happily most hardware designers aren’t actually actively trying to make things any more complex than necessary, so you can assume that all external hardware sees the memory the same way.
+
+
 
 
 
