@@ -24883,6 +24883,8 @@ kmalloc
 PCI BAR
 DMA pci mappings
 
+PTE TLB
+
 
 https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch08s04.html
 https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch15.html
