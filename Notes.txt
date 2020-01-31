@@ -24848,8 +24848,10 @@ ioremap cache/nocache readb/writeb/readw/writew/readl/writel
 writethrough/writecached.
 no multiple mappings.
 
-never really use physical mapping cos bus-masters need bus-address
+typically use physical mapping cos bus-masters need bus-address
 and cpu needs virt address.
+remap_pfn_range uses physical address when setting up memory
+mappings but only knows about addresses in the CPU.
 
 
 Documentation/DMA-API-HOWTO.txt
@@ -24871,6 +24873,7 @@ caching
 
 mailbox interrupts
 
+upper/lower interrupt handlers.
 
 
 
