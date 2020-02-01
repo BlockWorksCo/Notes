@@ -24875,6 +24875,7 @@ barrier - tell compiler to flush all temps to memory.
 spinlock
 
 caching
+alignment
 
 
 mailbox interrupts
@@ -24894,7 +24895,11 @@ every PCI slot has four interrupt pins
 
 PTE TLB
 https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch13.html
+addx split into pgd/pmd/pte/offset.
+pgd->pmd->pte
+pte contains physical address of page.
 
+drivers that can implement mmap for user code need to manage ptes.
 
 
 https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch08s04.html
