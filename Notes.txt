@@ -25055,7 +25055,14 @@ Errors:
 - Blocking instead of EBUSY? not pleasant for user.
 
 
-Task Queues - lists of functions to perform (used in bottom-half handlers).
+Task Queues - lists of functions to perform (used in bottom-half handlers). 
+int queue_task(struct tq_struct *task, task_queue *list);
+run_task_queue()
+unordered.
+run by kernel, not process when it can, not on-demand.
+no access to user space because no process exists when run.
+no sleeping
+
 Tasklets - use for polling a device where don't want overhead of context switches each time.
 Kernel timers.
 
