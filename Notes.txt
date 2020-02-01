@@ -24981,7 +24981,9 @@ up == give. releases process.
 
 copy_to_user()
 copy_from_user()
-pages might not be in memory (i.e. swapped out)
+pages might not be in memory (i.e. swapped out) in this case, page-fault handler will block process 
+so being reentrant is important.
+readv and writev scatter/gather.
 
 
 
