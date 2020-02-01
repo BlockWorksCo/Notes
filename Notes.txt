@@ -24963,6 +24963,13 @@ check_region, chem_mem_region to see if you can allocate ports/address ranges.
 Module parameters, can be passed in via insmod or .conf
 MODULE_PARM
 
+major, minor numbers, mknod
+major number identifies driver
+minor  number is of use to driver.
+register_chrdev()
+list in Documentation/devices.txt
+or if major == 0, auto allocate.
+
 
 
 
