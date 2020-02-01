@@ -25038,6 +25038,13 @@ one can get work done.... inefficient.
 
 
 
+reentrancy:
+- critical with SMP
+- no globals.
+- beware anything that causes blocking, schedule(), page-faults accessing user data, etc.
+- Scull_Pipe *dev = filp->private_data;
+
+
 
 
 
