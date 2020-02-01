@@ -25043,6 +25043,7 @@ reentrancy:
 - no globals.
 - beware anything that causes blocking, schedule(), page-faults accessing user data, etc.
 - Scull_Pipe *dev = filp->private_data;
+- multiple open of files.
 
 
 
