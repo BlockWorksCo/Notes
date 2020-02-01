@@ -24987,10 +24987,22 @@ readv and writev scatter/gather.
 
 
 
+debugging:
 printk
 /var/log/messages
 echo 8 > /proc/sys/kernel/printk
 or setlevel
+
+or JTAG/SWD
+
+or read_proc for /proc info.
+
+or ioctl for debugging.
+
+or strace for system calls & parameters.
+
+Systemfaults:
+OOPS messages.
 
 
 
