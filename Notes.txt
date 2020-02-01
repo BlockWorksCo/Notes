@@ -25064,8 +25064,15 @@ no access to user space because no process exists when run.
 no sleeping
 - predefined queues, scheduler(keventd),tq_timer(interrupt), immediate.
 - timerq executes in interrupt handler removing scheduling latency.
+- immediateq used for bottom-halfs, must be told to run by "marking" the bottom-half
+- its purpose is to execute a task as soon as possible, but at a safe time. So its use is for interrupt-handlers.
+
 
 Tasklets - use for polling a device where don't want overhead of context switches each time.
+Now preferred over task-queues for bottom-half interrupt handlers.
+- run on first CPU that schedules them.
+- can run in parallel on SMP.
+
 Kernel timers.
 
 
