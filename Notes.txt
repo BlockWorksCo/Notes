@@ -24979,8 +24979,10 @@ down() == take, blocks process
 down_interruptible() blocks process but allows signals to process.
 up == give. releases process.
 
+get_user
+put_user for small items
 copy_to_user()
-copy_from_user()
+copy_from_user() for blocks.
 pages might not be in memory (i.e. swapped out) in this case, page-fault handler will block process 
 so being reentrant is important.
 readv and writev scatter/gather.
@@ -25007,6 +25009,10 @@ klogd and ksymoops to map hex values to symbols
 
 gdb /usr/src/linux/vmlinux /proc/kcore
 cant breakpoint, just view data with symbols.
+
+kdb
+kgdb
+LTT trace toolkit.
 
 
 
