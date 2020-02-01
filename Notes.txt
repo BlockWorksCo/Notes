@@ -24979,6 +24979,10 @@ down() == take, blocks process
 down_interruptible() blocks process but allows signals to process.
 up == give. releases process.
 
+copy_to_user()
+copy_from_user()
+pages might not be in memory (i.e. swapped out)
+
 
 
 
