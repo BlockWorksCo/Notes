@@ -24868,6 +24868,11 @@ user/kernel mapping.
 
 mempry barrier
 reodering by compiler and hardware.
+rmb(), wmb(), mb()
+barrier - tell compiler to flush all temps to memory.
+
+
+spinlock
 
 caching
 
