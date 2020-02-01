@@ -24883,6 +24883,7 @@ kmalloc
 PCI BAR
 DMA pci mappings
 each PCI peripheral is identified by a bus number, a device number, and a function number
+every PCI slot has four interrupt pins
 
 
 PTE TLB
