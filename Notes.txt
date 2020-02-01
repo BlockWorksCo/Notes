@@ -24973,6 +24973,14 @@ or if major == 0, auto allocate.
 file_operations struct, read/write/ioctl/mmap/etc
 
 
+race conditions, smp is big issue.
+sema_init()
+down() == take, blocks process
+down_interruptible() blocks process but allows signals to process.
+up == give. releases process.
+
+
+
 
 
 
