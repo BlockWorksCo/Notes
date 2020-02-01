@@ -25005,6 +25005,8 @@ Systemfaults:
 OOPS messages.
 klogd and ksymoops to map hex values to symbols
 
+gdb /usr/src/linux/vmlinux /proc/kcore
+cant breakpoint, just view data with symbols.
 
 
 
