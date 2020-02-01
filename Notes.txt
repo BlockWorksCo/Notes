@@ -25019,11 +25019,18 @@ LTT trace toolkit.
 Blocking:
 wait_queue
 allocate and block with:
+DECLARE_WAIT_QUEUE_HEAD(wq);
 sleep_on()
 interruptible_sleep_on()
 sleep_on_timeout() jiffies
 wait_event() with condition evaluated in while loop, avoids race conditions
 wait_event_interruptible
+
+wake_up() from interrupt handler or other task?
+wake_up has to be called after changing any variable that could change the result of the wait condition.
+
+
+
 
 
 
