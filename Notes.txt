@@ -24931,6 +24931,17 @@ These differ from logical addresses in that they do not necessarily have a direc
 
 
 
+kmalloc vs vmalloc
+logical address vs virtual address which may not be mapped to physical.
+
+
+Low memory
+Memory for which logical addresses exist in kernel space. On almost every system you will likely encounter, all memory is low memory.
+
+High memory
+Memory for which logical addresses do not exist, because the system contains more physical memory than can be addressed with 32 bits.
+
+
 
 
 
