@@ -24867,6 +24867,7 @@ user/kernel mapping.
 
 
 mempry barrier
+reodering by compiler and hardware.
 
 caching
 
