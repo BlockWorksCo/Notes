@@ -25044,7 +25044,15 @@ reentrancy:
 - beware anything that causes blocking, schedule(), page-faults accessing user data, etc.
 - Scull_Pipe *dev = filp->private_data;
 - multiple open of files.
+- spinlock. never sleeps, for critical sections. uniprocessor compiles to nothing. only for SMP.
+- must use for minimum time possible. and never sleep while holding the lock!
+- spin_lock() spin_unlock().
 
+
+Errors:
+- EBUSY
+- EPERM
+- Blocking instead of EBUSY? not pleasant for user.
 
 
 
