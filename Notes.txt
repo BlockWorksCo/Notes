@@ -24960,6 +24960,11 @@ check_region, chem_mem_region to see if you can allocate ports/address ranges.
 
 
 
+Module parameters, can be passed in via insmod or .conf
+MODULE_PARM
+
+
+
 
 
 
