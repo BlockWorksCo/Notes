@@ -24987,6 +24987,13 @@ readv and writev scatter/gather.
 
 
 
+printk
+/var/log/messages
+echo 8 > /proc/sys/kernel/printk
+or setlevel
+
+
+
 
 
 
