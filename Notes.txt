@@ -25062,7 +25062,8 @@ unordered.
 run by kernel, not process when it can, not on-demand.
 no access to user space because no process exists when run.
 no sleeping
-- predefined queues, scheduler,tq_timer(interrupt), immediate.
+- predefined queues, scheduler(keventd),tq_timer(interrupt), immediate.
+- timerq executes in interrupt handler removing scheduling latency.
 
 Tasklets - use for polling a device where don't want overhead of context switches each time.
 Kernel timers.
