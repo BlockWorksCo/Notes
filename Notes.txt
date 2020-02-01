@@ -25016,6 +25016,14 @@ LTT trace toolkit.
 
 
 
+Blocking:
+wait_queue
+allocate and block with:
+sleep_on()
+interruptible_sleep_on()
+sleep_on_timeout() jiffies
+wait_event() with condition evaluated in while loop, avoids race conditions
+wait_event_interruptible
 
 
 
