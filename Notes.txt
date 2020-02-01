@@ -25003,6 +25003,7 @@ or strace for system calls & parameters.
 
 Systemfaults:
 OOPS messages.
+klogd and ksymoops to map hex values to symbols
 
 
 
