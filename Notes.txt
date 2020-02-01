@@ -24914,6 +24914,23 @@ https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch15.html
 
 
 
+User virtual addresses
+These are the regular addresses seen by user-space programs. User addresses are either 32 or 64 bits in length, depending on the underlying hardware architecture, and each process has its own virtual address space.
+
+Physical addresses
+The addresses used between the processor and the system’s memory. Physical addresses are 32- or 64-bit quantities; even 32-bit systems can use 64-bit physical addresses in some situations.
+
+Bus addresses
+The addresses used between peripheral buses and memory. Often they are the same as the physical addresses used by the processor, but that is not necessarily the case. Bus addresses are highly architecture dependent, of course.
+
+Kernel logical addresses
+These make up the normal address space of the kernel. These addresses map most or all of main memory, and are often treated as if they were physical addresses. On most architectures, logical addresses and their associated physical addresses differ only by a constant offset. Logical addresses use the hardware’s native pointer size, and thus may be unable to address all of physical memory on heavily equipped 32-bit systems. Logical addresses are usually stored in variables of type unsigned long or void *. Memory returned from kmalloc has a logical address.
+
+Kernel virtual addresses
+These differ from logical addresses in that they do not necessarily have a direct mapping to physical addresses. All logical addresses are kernel virtual addresses; memory allocated by vmalloc also has a virtual address (but no direct physical mapping). The function kmap, described later in this chapter, also returns virtual addresses. Virtual addresses are usually stored in pointer variables.
+
+
+
 
 
 
