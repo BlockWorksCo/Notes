@@ -25072,6 +25072,10 @@ Tasklets - use for polling a device where don't want overhead of context switche
 Now preferred over task-queues for bottom-half interrupt handlers.
 - run on first CPU that schedules them.
 - can run in parallel on SMP.
+DECLARE_TASKLET(name, function, data);
+tasklet_schedule(&jiq_tasklet);
+- since theyrunin an interrupt-context, spinlocks must be used to protect multiple calls on SMP.
+
 
 Kernel timers.
 
