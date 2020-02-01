@@ -25021,13 +25021,22 @@ wait_queue
 allocate and block with:
 DECLARE_WAIT_QUEUE_HEAD(wq);
 sleep_on()
-interruptible_sleep_on()
+interruptible_sleep_on() has race conditions.
 sleep_on_timeout() jiffies
 wait_event() with condition evaluated in while loop, avoids race conditions
 wait_event_interruptible
 
 wake_up() from interrupt handler or other task?
 wake_up has to be called after changing any variable that could change the result of the wait condition.
+
+the blocking is performed by seting task status to BLOCKED and calling schedule.
+the wake-up is performed by setting task status to RUNNABLE and calling schedule.
+
+wake-up acts on allprocesses on wait-queue.
+This can lead to the thundering-herd problem where all tasks wake up and cause context switches but only
+one can get work done.... inefficient.
+
+
 
 
 
