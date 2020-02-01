@@ -24918,8 +24918,8 @@ User virtual addresses
 These are the regular addresses seen by user-space programs. User addresses are either 32 or 64 bits in length, depending on the underlying hardware architecture, and each process has its own virtual address space.
 
 
-Kernel must be reentrant
-although no preemption occurs, in SMP systems, multiple processors are in kernel simultaneously.
+
+
 
 Physical addresses
 The addresses used between the processor and the system’s memory. Physical addresses are 32- or 64-bit quantities; even 32-bit systems can use 64-bit physical addresses in some situations.
@@ -24946,6 +24946,14 @@ High memory
 Memory for which logical addresses do not exist, because the system contains more physical memory than can be addressed with 32 bits.
 
 
+
+
+
+
+Kernel must be reentrant
+although no preemption occurs, in SMP systems, multiple processors are in kernel simultaneously.
+
+kernel-modules have a usage count, increment on open, decrement on close.
 
 
 
