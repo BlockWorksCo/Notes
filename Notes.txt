@@ -24898,6 +24898,11 @@ https://www.oreilly.com/library/view/linux-device-drivers/0596000081/ch13.html
 addx split into pgd/pmd/pte/offset.
 pgd->pmd->pte
 pte contains physical address of page.
+each process and kernel as a set of page tables.
+
+VMA virtual memory area
+segments like BSS, stack, text
+larger areas that have same permissions.
 
 drivers that can implement mmap for user code need to manage ptes.
 
