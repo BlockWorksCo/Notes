@@ -24970,6 +24970,7 @@ register_chrdev()
 list in Documentation/devices.txt
 or if major == 0, auto allocate.
 
+file_operations struct, read/write/ioctl/mmap/etc
 
 
 
