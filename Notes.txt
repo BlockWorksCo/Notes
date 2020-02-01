@@ -24956,6 +24956,8 @@ although no preemption occurs, in SMP systems, multiple processors are in kernel
 kernel-modules have a usage count, increment on open, decrement on close.
 
 
+check_region, chem_mem_region to see if you can allocate ports/address ranges.
+
 
 
 
