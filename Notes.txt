@@ -25194,6 +25194,11 @@ RF->ADC->FPGA->SRIO->TI6678->x86->network
 
 Bare metal PCIe driver on TI CC6678 side.
 
+DCUb4 bringup
+- RAM timings
+- Secure boot (uboot)
+
+
 
 
 
