@@ -25116,6 +25116,7 @@ request_irq() installs handler
 - wake up waiting process by wake_up_interruptible(&short_queue);
 - shared interrupt lines imply level, not edge triggering so multiple devices and pull a line high or low.
 - shared interrupts, must  pass context (dev*) into handler. handler must interrogate device to recognise own interrupts.
+- sahred handlers cant do enable_irq() or disable_irq() without messing up the other drivers.
 
 
 
