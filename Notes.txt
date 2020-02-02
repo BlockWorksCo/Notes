@@ -25164,6 +25164,7 @@ linked list:
 - list_add_tail()
 - list_del()
 - list_splice();
+- list_entry() gives containing stucture from list ptr.
 
 
 
