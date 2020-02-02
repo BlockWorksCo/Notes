@@ -25129,10 +25129,19 @@ race condtions:
 spin_lock() takes lock
 spin_lock_irqsave() takes lock and disables ints on local CPU.
 spin_lock_bh() takes lock and prvents execution of bottom-halves.
+spin_trylock() tests lock and possibly takes it.
 spin_unlock()
 spin_unlock_irqrestore()
 spin_unlock_bh()
 spin_is_locked()
+- if used by interrupt handlers,process must also use spin_lock_irqsave and spin_unlock_irqsave to disable interrupts.
+
+
+reader-writer-spinlocks:
+- read_lock()
+- read_unlock()
+- write_lock()
+- write_unlock()
 
 
 
