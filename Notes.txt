@@ -25200,7 +25200,7 @@ arrange for flushing and invalidation coordinated with DMA between cores.
 done dynamically to allow zero copy from buffer to buffer while still enabling performance boost from cache.
 buffers are sized and aligned appropriately to allow for data to be correctly transferred while allowing 
 
-Also, Ground probing radar system, Front end process & signal processing (4xi860 crossbar fabric) transferring data
+Also, Ground probing radar system, Front end process & signal processing (4xi860 Mercury RaceWay) transferring data
 to Solaris board (VME rack) then logging and UI.
 - data transfer (DMA from parallel port).
 - Bare metal on DSP.
