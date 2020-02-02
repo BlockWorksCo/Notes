@@ -25220,7 +25220,7 @@ DCUb4 bringup
 - RAM timings
 - Secure boot (uboot)
 
-Performance counters on CC6678 side
+Performance counters on CC6678 side for cache misses and hits, etc.
 Performance counters for optimising power usage on Cortex M
 
 
