@@ -25194,8 +25194,11 @@ RF->ADC->FPGA->SRIO->TI6678->x86->network
 
 Caching issues between CC6678 cores and from x86 to CC6678 transfer core.
 cache hierarchies on CC6678. 32KB L1 data, 512KB L2 per core.
+shared 4MB SRAM between cores.
 Use intrinsics for memory barrier equivalents & macros/library fns for cache invalidation & flushing.
-arrange for flushing and invalidation coordinated with DMA.
+arrange for flushing and invalidation coordinated with DMA between cores.
+done dynamically to allow zero copy from buffer to buffer while still enabling performance boost from cache.
+buffers are sized and aligned appropriately to allow for data to be correctly transferred while allowing 
 
 Bare metal PCIe driver on TI CC6678 side.
 
