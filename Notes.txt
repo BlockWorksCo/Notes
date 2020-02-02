@@ -25080,6 +25080,12 @@ tasklet_schedule(&jiq_tasklet);
 Kernel timers.
 
 
+interrupts:
+save_flags()
+cli()
+sti()
+restore_flags()
+
 
 
 
