@@ -25145,8 +25145,13 @@ reader-writer-spinlocks:
 - write_unlock()
 
 
-lock variables (akapoor-mans-spinlock)
+lock variables (aka poor-mans-spinlock) TAS (test and set) operation.
 - atomic access with bit operations.
+- set_bit()
+- clear_bit()
+- test_bit()
+- test_and_set_bit()
+- test_and_change_bit()
 
 
 
