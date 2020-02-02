@@ -25154,6 +25154,16 @@ lock variables (aka poor-mans-spinlock) TAS (test and set) operation.
 - test_and_change_bit()
 
 
+- wait_event(wq, condition) performs the test-while-half-asleep operation to go to sleep safely.
+- its a macro so the condition gets evaluated every time round the loop.
+
+linked list:
+- put a struct list_head list; at the top of your struct.
+- INIT_LIST_HEAD();
+- list_add()
+- list_add_tail()
+- list_del()
+- list_splice();
 
 
 
