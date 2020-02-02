@@ -25167,6 +25167,16 @@ linked list:
 - list_entry() gives containing stucture from list ptr.
 
 
+PCIe
+- configuration registers
+- BAR setup.
+- bus master DMA.
+
+
+
+RF->ADC->FPGA->SRIO->TI6678->x86->network
+
+
 
 
 
