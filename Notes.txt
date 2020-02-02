@@ -25080,11 +25080,34 @@ tasklet_schedule(&jiq_tasklet);
 Kernel timers.
 
 
+vmalloc vs kmalloc
+vmalloc allocates CPU addressable pages as opposed to kmalloc 1:1 physical pages.
+kmalloc with KERNEL priority can block due to swapping, etc.
+kmalloc with ATOMIC priority won't block so is suitable for being called from interrupt-handler.
+
+SLAB allocator.
+- for arrays of small objects.
+- each object is cache aligned and can be in DMA region.
+- size is power of two.
+
+
+
 interrupts:
 save_flags()
 cli()
 sti()
 restore_flags()
+
+request_irq() installs handler
+- irq number from PCI config or probing.
+- SMP issues, must spinlock fir the IRQ to prevent multi CPU processing same interrupt.
+- flags can indicate INTERRUPT or SHARED. INTERRUPT causes handler to be called with interrupts disabled, SHARED does not.
+- INTERRUPT flag indicates a fast-handler, SHARED indicates a slow-handler.
+- /proc/interrupts can show interrupt count.
+- bottom-half handler called via tasklet.
+- fast-handler for the few realtime responses that are required such as timer interrupt.
+- slow for  most things.
+
 
 
 
