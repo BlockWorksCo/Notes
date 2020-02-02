@@ -25113,6 +25113,7 @@ request_irq() installs handler
 - use barrier/wmb/rmb instead of volatile to read/write value scorrectly.
 - bottom halfs run with interrupts enabled so are not blocking execution of other interrupts.
 - DECLARE_TASKLET(name, function, data); and tasklet_schedule(&short_tasklet);
+- wake up waiting process by wake_up_interruptible(&short_queue);
 
 
 
