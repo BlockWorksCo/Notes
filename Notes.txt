@@ -25173,8 +25173,21 @@ PCIe
 - bus master DMA.
 
 
+Previous serial port character device
+MOntaVista distribution, customised, compilation on Windows with Cygwin.
 
 RF->ADC->FPGA->SRIO->TI6678->x86->network
+- zero-copy pipelined architecture.
+- DMA from SRIO
+ - processing stage 1
+  - processing stage 2
+   - processing stage 3
+    - data reform into circular buffer format for transfer to x86.
+    - DMA to x86.
+     - logging to FLASH.
+     - control from network.
+
+
 
 
 
