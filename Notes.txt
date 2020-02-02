@@ -25138,12 +25138,15 @@ spin_is_locked()
 
 
 reader-writer-spinlocks:
+- write-locks must be taken with irqsave to avoid deadlocks, read-locks dont need that tho.
 - read_lock()
 - read_unlock()
 - write_lock()
 - write_unlock()
 
 
+lock variables (akapoor-mans-spinlock)
+- atomic access with bit operations.
 
 
 
