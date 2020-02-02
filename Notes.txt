@@ -25126,6 +25126,13 @@ race condtions:
 - use lock variables.
 - don't use semaphores because that implies blocking a process and you're not in a process-context.
 
+spin_lock() takes lock
+spin_lock_irqsave() takes lock and disables ints on local CPU.
+spin_lock_bh() takes lock and prvents execution of bottom-halves.
+spin_unlock()
+spin_unlock_irqrestore()
+spin_unlock_bh()
+spin_is_locked()
 
 
 
