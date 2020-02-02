@@ -25114,6 +25114,8 @@ request_irq() installs handler
 - bottom halfs run with interrupts enabled so are not blocking execution of other interrupts.
 - DECLARE_TASKLET(name, function, data); and tasklet_schedule(&short_tasklet);
 - wake up waiting process by wake_up_interruptible(&short_queue);
+- shared interrupt lines imply level, not edge triggering so multiple devices and pull a line high or low.
+- shared interrupts, must  pass context (dev*) into handler. handler must interrogate device to recognise own interrupts.
 
 
 
