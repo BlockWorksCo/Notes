@@ -25210,6 +25210,9 @@ Performance counters on CC6678 side
 Performance counters for optimising power usage on Cortex M
 
 
+Mali, tile based, 
+- Exploits locality by iterating over all primitves in tile rather than over whole frame.
+
 
 
 
