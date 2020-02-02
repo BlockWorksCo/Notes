@@ -25200,7 +25200,19 @@ arrange for flushing and invalidation coordinated with DMA between cores.
 done dynamically to allow zero copy from buffer to buffer while still enabling performance boost from cache.
 buffers are sized and aligned appropriately to allow for data to be correctly transferred while allowing 
 
-Also, Ground probing radar system
+Also, Ground probing radar system, Front end process & signal processing (2 cores) transferring data
+to Solaris board (VME rack) then logging and UI.
+- data transfer (DMA from parallel port).
+- Bare metal on DSP.
+- DSP pipeline (oriented around scans).
+- Performing FFTs, windowing etc.
+
+Radar data processing.
+- FPGA fron end filter.
+- Recieved over VME bus (DMA from FPGA)
+- PowerPC, VxWorks.
+- Over VME backplane network to Solaris board for UI & control.
+
 
 Bare metal PCIe driver on TI CC6678 side.
 
