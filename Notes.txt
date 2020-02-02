@@ -25200,6 +25200,8 @@ arrange for flushing and invalidation coordinated with DMA between cores.
 done dynamically to allow zero copy from buffer to buffer while still enabling performance boost from cache.
 buffers are sized and aligned appropriately to allow for data to be correctly transferred while allowing 
 
+Also, Ground probing radar system
+
 Bare metal PCIe driver on TI CC6678 side.
 
 DCUb4 bringup
