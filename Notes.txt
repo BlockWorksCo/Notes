@@ -25107,6 +25107,9 @@ request_irq() installs handler
 - bottom-half handler called via tasklet.
 - fast-handler for the few realtime responses that are required such as timer interrupt.
 - slow for  most things.
+- Don't forget to clear interrupt flags from devices.
+- handler doesnt run in process context so no blocking or transfer of data to/from user space. instead trigger a wait-queue.
+- if handler has to wait or take significant time, drop it into a tasklet.
 
 
 
