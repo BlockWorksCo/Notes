@@ -25119,6 +25119,14 @@ request_irq() installs handler
 - sahred handlers cant do enable_irq() or disable_irq() without messing up the other drivers.
 
 
+race condtions:
+- use circular buffers
+- don't use shared variables.
+- use spinlocks for mutual exclusion.
+- use lock variables.
+- don't use semaphores because that implies blocking a process and you're not in a process-context.
+
+
 
 
 
