@@ -25192,6 +25192,11 @@ RF->ADC->FPGA->SRIO->TI6678->x86->network
      - logging to FLASH.
      - control from network.
 
+Caching issues between CC6678 cores and from x86 to CC6678 transfer core.
+cache hierarchies on CC6678. 32KB L1 data, 512KB L2 per core.
+Use intrinsics for memory barrier equivalents & macros/library fns for cache invalidation & flushing.
+arrange for flushing and invalidation coordinated with DMA.
+
 Bare metal PCIe driver on TI CC6678 side.
 
 DCUb4 bringup
