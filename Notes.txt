@@ -25111,6 +25111,8 @@ request_irq() installs handler
 - handler doesnt run in process context so no blocking or transfer of data to/from user space. instead trigger a wait-queue.
 - if handler has to wait or take significant time, drop it into a tasklet.
 - use barrier/wmb/rmb instead of volatile to read/write value scorrectly.
+- bottom halfs run with interrupts enabled so are not blocking execution of other interrupts.
+- DECLARE_TASKLET(name, function, data); and tasklet_schedule(&short_tasklet);
 
 
 
