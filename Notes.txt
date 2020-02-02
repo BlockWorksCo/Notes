@@ -25110,6 +25110,7 @@ request_irq() installs handler
 - Don't forget to clear interrupt flags from devices.
 - handler doesnt run in process context so no blocking or transfer of data to/from user space. instead trigger a wait-queue.
 - if handler has to wait or take significant time, drop it into a tasklet.
+- use barrier/wmb/rmb instead of volatile to read/write value scorrectly.
 
 
 
