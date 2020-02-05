@@ -25228,6 +25228,17 @@ Mali, tile based,
 - Exploits locality by iterating over all primitves in tile rather than over whole frame.
 
 
+-----------------------------------------
+
+JTAG tap: efm32.cpu tap/device found: 0x4ba00477 (mfg: 0x23b (ARM Ltd.), part: 0xba00, ver: 0x4)
+JTAG tap: efm32.cpu tap/device found: 0x4ba00477 (mfg: 0x23b (ARM Ltd.), part: 0xba00, ver: 0x4)
+
+Error: Could not initialize the debug port
+Info : JTAG tap: efm32.cpu tap/device found: 0x4ba00477 (mfg: 0x23b (ARM Ltd.), part: 0xba00, ver: 0x4)
+Info : JTAG tap: auto0.tap tap/device found: 0xffffffff (mfg: 0x7ff (<invalid>), part: 0xffff, ver: 0xf)
+Error: auto0.tap: IR capture error; saw 0x0003 not 0x0001
+
+
 
 
 
