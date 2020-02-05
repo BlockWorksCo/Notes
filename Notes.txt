@@ -25242,8 +25242,8 @@ Error: auto0.tap: IR capture error; saw 0x0003 not 0x0001
 
 FT232H 
 
-ADBUS2 == pin 18 == TDO == SWDIO
-ADBUS1 == pin 16 == TCK == SWCLK
+ADBUS2 == pin 18 == TDO == SWDIO == CN2-9
+ADBUS1 == pin 16 == TCK == SWCLK == CN2-10
 GND
 
 
