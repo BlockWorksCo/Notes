@@ -25238,6 +25238,14 @@ Info : JTAG tap: efm32.cpu tap/device found: 0x4ba00477 (mfg: 0x23b (ARM Ltd.), 
 Info : JTAG tap: auto0.tap tap/device found: 0xffffffff (mfg: 0x7ff (<invalid>), part: 0xffff, ver: 0xf)
 Error: auto0.tap: IR capture error; saw 0x0003 not 0x0001
 
+------------------------------------------------------
+
+FT232H 
+
+ADBUS2 == pin 18 == TDO == SWDIO
+ADBUS1 == pin 16 == TCK == SWCLK
+GND
+
 
 
 
