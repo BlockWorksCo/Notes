@@ -25246,6 +25246,12 @@ ADBUS2 == pin 18 == TDO == SWDIO == CN2-9
 ADBUS1 == pin 16 == TCK == SWCLK == CN2-10
 GND
 
+--------------------------------------
+
+branches:
+BetterInFieldDebugging
+SLIP6_PoC
+
 
 
 
