@@ -25252,6 +25252,13 @@ branches:
 BetterInFieldDebugging
 SLIP6_PoC
 
+-------------------------------------------------
+
+Mesh prefix.
+
+CONFIG_GATEWAY
+
+conmanSetUplinkPrefix called from ipv6_uplink.c::prefixCallback()
 
 
 
