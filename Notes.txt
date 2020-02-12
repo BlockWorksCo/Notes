@@ -25254,6 +25254,12 @@ SLIP6_PoC
 
 -------------------------------------------------
 
+FreeRTOS current task debugging
+
+pxCurrentTCB
+
+
+------------------------------------------
 Mesh prefix.
 
 CONFIG_GATEWAY
