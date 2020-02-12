@@ -25263,7 +25263,8 @@ pxCurrentTCB
 Mesh prefix.
 
 CONFIG_GATEWAY
-CONFIG_ETHERNET_IPV6_UPLINK
+CONFIG_ETHERNET_IPV6_UPLINK to send NS
+CONFIG_ETHERNET_IPV6_DOWNLINK to send RA
 
 conmanSetUplinkPrefix called from ipv6_uplink.c::prefixCallback()
 
