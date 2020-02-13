@@ -25270,6 +25270,16 @@ CONFIG_ETHERNET_IPV6_DOWNLINK to send RA
 
 conmanSetUplinkPrefix called from ipv6_uplink.c::prefixCallback()
 
+---------------------------------
+NIC7 FLASH
+We have three different FLASH devices that should all be suitable:
+
+Unit #1 AT25FF321A-SSHN-T
+
+Unit #2 AT25SF321B-SSHB-T
+
+Unit #3 AT25XE321D-SSHN-T
+
 
 
 
