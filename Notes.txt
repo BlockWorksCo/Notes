@@ -18986,6 +18986,8 @@ After change:
 
 ------------------------------------------------------------
 
+gateway testing:
+
 Note: Although it seems superfluous at the minute, the mesh and all the relevant protocols
 do need proper testing as we have Wi-SUN coming up which will change all of these yet we will
 still need to support the current standard. To do this in the transitional period will require
