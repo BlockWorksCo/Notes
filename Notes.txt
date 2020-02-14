@@ -25369,6 +25369,16 @@ capabilities.meter.dst_set               : 0
 capabilities.module.led.type             : 1
 
 
+-------------------------------------------------
+
+./rpc_prodtest.py --setparam server.ip -v fd00::1
+./rpc_prodtest.py --setparam prod.lowpan.eui64 -v 00-1B-C5-0C-60-06-77-B5
+./rpc_prodtest.py --loadkey -s client-key -f /Data/ProdPak/ProdPak1000/00-1B-C5-0C-60-06-77-B5/node.key.der
+./rpc_prodtest.py --loadkey -s client-cert -f /Data/ProdPak/ProdPak1000/00-1B-C5-0C-60-06-77-B5/node.crt.der
+./rpc_prodtest.py --loadkey -s root-cert -f /Data/ProdPak/ProdPak1000/00-1B-C5-0C-60-06-77-B5/ca.crt.der
+./rpc_prodtest.py --loadkey -s mac-key -f /Data/ProdPak/ProdPak1000/00-1B-C5-0C-60-06-77-B5/mac_key
+./rpc_prodtest.py –finalize
+
 
 
 
