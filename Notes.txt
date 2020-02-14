@@ -25379,9 +25379,9 @@ capabilities.module.led.type             : 1
 ./rpc_prodtest.py --loadkey -s mac-key -f /Data/ProdPak/ProdPak1000/00-1B-C5-0C-60-06-77-B5/mac_key
 ./rpc_prodtest.py –finalize
 
-coap_request.py --ctrlporthub localhost:4002 --load-key client-key /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B5/node.key.der
-coap_request.py --ctrlporthub localhost:4002 --load-key client-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B5/node.crt.der
-coap_request.py --ctrlporthub localhost:4002 --load-key root-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B5/ca.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub localhost:4002 --load-key client-key /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B5/node.key.der
+./tools/c4-tools/coap_request.py --ctrlporthub localhost:4002 --load-key client-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B5/node.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub localhost:4002 --load-key root-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B5/ca.crt.der
 
 
 
