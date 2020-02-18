@@ -25480,6 +25480,8 @@ ce996dfb2cde1568b366042e56ee8fa1
  00000005000000000000
 
 
+https://omnidev-in-01.dev.cyanconnode.com/nms/nodes/00-1b-c5-0c-60-06-77-b5/statistics
+
 
 
 
