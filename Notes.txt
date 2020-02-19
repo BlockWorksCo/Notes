@@ -25503,6 +25503,8 @@ master/slave relationship with the meter. Window till time set is also on the or
 - Obtain time from basestation if not logged in.
 - Obtain time from GPS on CNIC/IGW (if fitted).
 
+- need threshold on delta calculations to only use delta if within a given window.
+
 
 
 
