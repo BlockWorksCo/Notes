@@ -25498,7 +25498,10 @@ Seeding the RTC will then provide seed+uptime accuracy until login. Window till 
 discovery process to read time from meter first. Obtain the meter-delta at this point. Seed the RTC with
 savedTime+meterDelta. Accuracy is dependent on time-since-last-sync. Problem is that this inverts the
 master/slave relationship with the meter. Window till time set is also on the order of 5-10 seconds.
-- 
+- Increase rate of mesh-sync packets.
+- Obtain time from DIO in resposne to a DIS.
+- Obtain time from basestation if not logged in.
+- Obtain time from GPS on CNIC/IGW (if fitted).
 
 
 
