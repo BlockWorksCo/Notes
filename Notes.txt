@@ -25525,6 +25525,12 @@ config/ipa3b-mbus.mk
 2020-02-19 16:08:16.742 #1   001bc50c600663d7 <log> 0:00:42.603 [debug] [        hdlc] {     hdlc}: rx: (3/4): 09060000616200ff0600e020fc090600
 2020-02-19 16:08:16.742 #1   001bc50c600663d7 <log> 0:00:42.612 [debug] [        hdlc] {     hdlc}: rx: (4/4): 00616204ff060120024018247
 
+----------------------------------------
+
+network simulator: packet loss, rate limiting, jitter
+netem tc (traffic control)
+https://www.excentis.com/blog/use-linux-traffic-control-impairment-node-test-environment-part-2
+
 
 
 
