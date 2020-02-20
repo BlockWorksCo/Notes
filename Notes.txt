@@ -25533,6 +25533,13 @@ https://www.excentis.com/blog/use-linux-traffic-control-impairment-node-test-env
 
 
 
+---------------------------------
+
+prioritisation
+partitioning in NMS for network conditions
+dynamic adaptation
+flow control
+minimise end-to-end traffic. single direction if possible.
 
 
 
