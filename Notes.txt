@@ -25527,7 +25527,7 @@ config/ipa3b-mbus.mk
 
 ----------------------------------------
 
-network simulator: packet loss, rate limiting, jitter
+network simulator: packet loss, rate limiting, jitter, duplication, reordering., corruption
 netem tc (traffic control)
 https://www.excentis.com/blog/use-linux-traffic-control-impairment-node-test-environment-part-2
 
