@@ -25662,7 +25662,7 @@ targetted by gateway(s).
 
 
 
-Multicast Groupings:
+Multicast Groupings, could use site-local or admin-local addressing:
 - gateways
 - geographical areas, e.g. towns? grid coords?
 - feeder; would need a setup step prior to this working.
@@ -25675,6 +25675,7 @@ Multicast Groupings:
 - All-nodes
 - All-routers
 - All-terminals
+- All-RPL=nodes
 
 
 Security:
