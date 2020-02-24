@@ -25642,11 +25642,11 @@ which is within range in a reasonable timeframe.
 mass communication improvements
 
 Use cases:
-- firmware upgrade
-- meter upgrade
-- file distribution (distinct from above).
-- prepayment display
-- on-demand
+- firmware upgrade - multicast request, unicast response.
+- meter upgrade - multicast request. unicast response.
+- file distribution (distinct from above). multicast request, unicast response.
+- prepayment display - unicast request.
+- on-demand read - multicast request, unicast response.
 - node configuration distribution
 - meter configuration distribution (e.g. disconnect).
 
