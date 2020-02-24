@@ -25638,6 +25638,13 @@ which is within range in a reasonable timeframe.
 - 
 
 
+----------------------------------------------------
+
+- Topology can be built from parent reporting, prefix is not required to determine topology.
+- traffic management by multicast grouping allows more flexible grouping.
+- end-to-end encryption is a problem for responses, but requests can be multicast.
+- responses will be end-to-end encrypted, mass-requests will be end-to-end encrypted with shared key.
+
 
 
 
