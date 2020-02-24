@@ -25563,6 +25563,11 @@ routing    subnet   IID
 - tun6d uses the 16-bit subnetId for the addressable range of gateways (2^64 possible gateways).
 - Each tun6d peer is assigned a single IPv6 address making up a full /64 network-prefix.
 
+routing    subnet   IID
+<---/48----><--> <----- /64 ---->
+0011223344556677 0011223344556677
+fd5b2b5b5bc4
+fdxxxxxxxxxxyyyy
 
 
 
