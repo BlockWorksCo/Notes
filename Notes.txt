@@ -25601,6 +25601,33 @@ fdxxxxxxxxyyyyyy
 
 - Each CNIC will need a subnet, without change that will limit us to 65536 maximum CNICs on a network
 which is within range in a reasonable timeframe.
+- To counter the above point, we can increase the subnetId range to 24 bit, giving 2^24 CNICs on the network.
+
+
+CNIC case B:
+
+routing    subnet   IID
+<---/48----><--> <----- /64 ---->
+0011223344556677 0011223344556677
+fd5b2b5b5bc4....
+fdxxxxxxxxxxyyyy
+
+- Each CNIC will need a subnet, without change that will limit us to 65536 maximum CNICs on a network
+which is within range in a reasonable timeframe.
+- To counter the above point, we can increase the subnetId range to 24 bit, giving 2^24 CNICs on the network.
+
+
+IGW case:
+
+tun6d /40 case:
+routing  subnet  IID
+<---/40--><--><> <----- /64 ---->
+0011223344556677 0011223344556677
+fd5b2b5b5b......
+fdxxxxxxxxyyyyzz
+
+- Each CNIC will need a subnet, without change that will limit us to 65536 maximum CNICs on a network
+which is within range in a reasonable timeframe.
 - 
 
 
