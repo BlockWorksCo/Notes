@@ -25665,11 +25665,16 @@ targetted by gateway(s).
 Multicast Groupings:
 - gateways
 - geographical areas, e.g. towns? grid coords?
-- feeder
+- feeder; would need a setup step prior to this working.
 - cell-id
 - carrier
 - meter-type
 - version
+- designated test areas
+- device-type.
+- All-nodes
+- All-routers
+- All-terminals
 
 
 Security:
@@ -25678,5 +25683,8 @@ Security:
 - use of multicast for distribution of requests allows *much* greater efficiency.
 - use of multicast allows nodes to hop meshes and still be addressed.
 - multicast requests should be default. unicast will be a special case.
+- Use DTLS session to distribute multicast key.
+- On multicast-key per multicast-group?
+- Login returns set of multicast groups to join?
 
 
