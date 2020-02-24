@@ -25616,6 +25616,8 @@ fdxxxxxxxxxxyyyy
 - Extending the above. All nodes have unique EUIs, therefore we have no real need for the subnet...
 - ...except for managing the traffic (i.e. segmenting up the network for file-distribution).
 - The subnetId is used effectively to infer the topology of the network.
+- Maybe multicast is a better way to do that operation.
+- File-distribution is effectively a multicast operation, but we have rolled our own mechanism.
 
 
 
