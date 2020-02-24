@@ -25618,6 +25618,8 @@ fdxxxxxxxxxxyyyy
 - The subnetId is used effectively to infer the topology of the network.
 - Maybe multicast is a better way to do that operation.
 - File-distribution is effectively a multicast operation, but we have rolled our own mechanism.
+- File-distribution down to gateway is a file-transfer to the all-routers multicast address.
+- File-distribution from gw to nodes is a file-transfer to the all-nodes multicast address.
 
 
 
