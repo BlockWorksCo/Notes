@@ -25662,6 +25662,12 @@ targetted by gateway(s).
 
 
 
+Multicast Grouping:
+- gateways
+- geographical areas, e.g. towns
+- feeder
+- cell-id
+
 
 
 
