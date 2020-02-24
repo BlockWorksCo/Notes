@@ -25620,6 +25620,7 @@ fdxxxxxxxxxxyyyy
 - File-distribution is effectively a multicast operation, but we have rolled our own mechanism.
 - File-distribution down to gateway is a file-transfer to the all-routers multicast address.
 - File-distribution from gw to nodes is a file-transfer to the all-nodes multicast address.
+- CNICs will all have unique EUIs so could be assigned a single subnet id, leaving all other subnetIds available.
 
 
 
