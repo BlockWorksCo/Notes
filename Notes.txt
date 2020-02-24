@@ -25647,8 +25647,8 @@ Use cases:
 - file distribution (distinct from above). multicast request, unicast response.
 - prepayment display - unicast request.
 - on-demand read - multicast request, unicast response.
-- node configuration distribution
-- meter configuration distribution (e.g. disconnect).
+- node-configuration distribution
+- meter-configuration distribution (e.g. disconnect).
 
 
 - Topology can be built from parent reporting, prefix is not required to determine topology.
@@ -25679,7 +25679,7 @@ Multicast Groupings:
 
 Security:
 - unicast for sensitive/private data, generally data from-meter e2e encrypted with *node-unique/session* key.
-- multicasst for non-sensitive data, generally data to-meter is e2e encrypted with *shared* key.
+- multicast for non-sensitive data, generally data to-meter is e2e encrypted with *shared* key.
 - use of multicast for distribution of requests allows *much* greater efficiency.
 - use of multicast allows nodes to hop meshes and still be addressed.
 - multicast requests should be default. unicast will be a special case.
