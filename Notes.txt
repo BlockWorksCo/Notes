@@ -25641,6 +25641,14 @@ which is within range in a reasonable timeframe.
 ----------------------------------------------------
 mass communication improvements
 
+Use cases:
+- firmware upgrade
+- meter upgrade
+- file distribution (distinct from above).
+- prepayment display
+- on-demand
+- node configuration distribution
+- meter configuration distribution (e.g. disconnect).
 
 
 - Topology can be built from parent reporting, prefix is not required to determine topology.
