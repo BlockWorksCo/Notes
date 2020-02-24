@@ -25662,11 +25662,14 @@ targetted by gateway(s).
 
 
 
-Multicast Grouping:
+Multicast Groupings:
 - gateways
 - geographical areas, e.g. towns? grid coords?
 - feeder
 - cell-id
+- carrier
+- meter-type
+- version
 
 
 Security:
@@ -25674,5 +25677,6 @@ Security:
 - multicasst for non-sensitive data, generally data to-meter is e2e encrypted with *shared* key.
 - use of multicast for distribution of requests allows *much* greater efficiency.
 - use of multicast allows nodes to hop meshes and still be addressed.
+- multicast requests should be default. unicast will be a special case.
 
 
