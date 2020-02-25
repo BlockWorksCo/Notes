@@ -25675,7 +25675,8 @@ Multicast Groupings, could use site-local or admin-local addressing:
 - All-nodes
 - All-routers
 - All-terminals
-- All-RPL=nodes
+- All-RPL-nodes
+- All CNICs
 
 
 Security:
@@ -25687,5 +25688,23 @@ Security:
 - Use DTLS session to distribute multicast key.
 - On multicast-key per multicast-group?
 - Login returns set of multicast groups to join?
+
+Tunnel:
+- Required to operate over IPv4 betworks sucah as cellular.
+- Have to modify tun6d to allow multicast/IGMP addresses
+
+
+
+
+----------------------------------------------------------------
+
+Adams meter driver:
+https://gitlab.cyco.io/Omnimesh/terminal/-/tree/aps/generic-dlms-driver
+
+JJs bootloader update
+https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/75
+
+
+
 
 
