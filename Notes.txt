@@ -25689,4 +25689,8 @@ Security:
 - On multicast-key per multicast-group?
 - Login returns set of multicast groups to join?
 
+Tunnel:
+- Required to operate over IPv4 betworks sucah as cellular.
+- Have to modify tun6d to allow multicast/IGMP addresses
+
 
