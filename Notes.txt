@@ -25666,7 +25666,7 @@ Multicast Groupings, could use site-local or admin-local addressing:
 - gateways
 - geographical areas, e.g. towns? grid coords?
 - feeder; would need a setup step prior to this working.
-- cell-id
+- cell-id (because we have multiple gateways per cell).
 - carrier
 - meter-type
 - version
