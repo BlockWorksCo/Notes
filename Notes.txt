@@ -25675,7 +25675,8 @@ Multicast Groupings, could use site-local or admin-local addressing:
 - All-nodes
 - All-routers
 - All-terminals
-- All-RPL=nodes
+- All-RPL-nodes
+- All CNICs
 
 
 Security:
