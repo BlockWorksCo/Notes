@@ -25694,3 +25694,17 @@ Tunnel:
 - Have to modify tun6d to allow multicast/IGMP addresses
 
 
+
+
+----------------------------------------------------------------
+
+Adams meter driver:
+https://gitlab.cyco.io/Omnimesh/terminal/-/tree/aps/generic-dlms-driver
+
+JJs bootloader update
+https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/75
+
+
+
+
+
