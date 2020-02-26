@@ -25697,6 +25697,11 @@ forward packets to peers that have joined the destination group.
 - tun6d initially sets the multicast set for a new peer to be the
 group of nodes on its gateway. This then matches the address space
 partitioning that happens right now.
+- tun6d then can snoop on IGMP packets sent to tun6d ipv4 interface
+and add/remove group membership as needed for things like cell-id
+group.
+- Maybe tun6d should be an IPv6 multicast router as it presents ipv6 at both ends.
+
 
 
 
