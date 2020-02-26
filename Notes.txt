@@ -25694,6 +25694,9 @@ Tunnel:
 - Have to modify tun6d to forward multicast/IGMP addresses.
 - tun6d needs to act as a querier and multicast router to only
 forward packets to peers that have joined the destination group.
+- tun6d initially sets the multicast set for a new peer to be the
+group of nodes on its gateway. This then matches the address space
+partitioning that happens right now.
 
 
 
