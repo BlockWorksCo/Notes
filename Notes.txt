@@ -25691,7 +25691,9 @@ Security:
 
 Tunnel:
 - Required to operate over IPv4 betworks sucah as cellular.
-- Have to modify tun6d to allow multicast/IGMP addresses
+- Have to modify tun6d to forward multicast/IGMP addresses.
+- tun6d needs to act as a querier and multicast router to only
+forward packets to peers that have joined the destination group.
 
 
 
