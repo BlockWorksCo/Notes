@@ -25773,7 +25773,13 @@ deviceTask()                                                dlmsReceiveCb() call
 
 lighting
 
+- Should have been a third application LA parallel to SMA but is standalone JQuery/Flask app with SQLite backend.
+- Node is just a UDP pipe for now, interfaces with STM32 controller on ASKA board.
 
+
+https://gitlab.cyco.io/groups/mothballed/-/archived
 https://gitlab.cyco.io/AdamSutton/prototyping/-/commits/feature/lighting_node_put
+https://gitlab.cyco.io/AdamSutton/prototyping/-/blob/feature/lighting_hes_ui_scaleup/lighting_node/
+
 
 
