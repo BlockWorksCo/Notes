@@ -25722,6 +25722,10 @@ removeConnection
 listener.connectionExpire
 sessionExpired
 
+
+LOGOUT set in:
+DbRemoteAddressesResolver.java::logoutOneNode()
+
 -----------------------------------------------
 
 action == ACTION_PDU_TRANSMITTED,
