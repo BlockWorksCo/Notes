@@ -25748,6 +25748,9 @@ which is an AARQ ("Setup AA with No Security") which would have been sent by
 sendAARQwithNoSecurity->sendrequest
 
 
+onInvocationCounterRead(InvocationCounterHLS) is called while AARQ is still in progress
+before AARE has been received.
+The SendRequest times out, returning NULL message.
 
 
 
