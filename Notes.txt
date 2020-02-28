@@ -25753,8 +25753,11 @@ before AARE has been received.
 The SendRequest times out, returning NULL message.
 
 
-deviceTask()
- processDlmsPayload()
+Device                                                      DLMS
+
+                                                           reportDlmsResult()
+deviceTask()                                                dlmsReceiveCb() calls OS_semaphoreGive(&s_dlmsSemaphore);
+ processDlmsPayload()                                           
   dlmsVariantProcessDlmsPayloadPending()
    onInvocationCounterRead(InvocationCounterHLS)
      dlmsSendGetRequest(1, IC, 2, NULL, 0);
