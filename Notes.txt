@@ -25769,4 +25769,11 @@ deviceTask()                                                dlmsReceiveCb() call
      .... timeout & 0-byte return
 
 
+--------------------------------------------------
+
+lighting
+
+
+https://gitlab.cyco.io/AdamSutton/prototyping/-/commits/feature/lighting_node_put
+
 
