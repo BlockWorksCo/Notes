@@ -25722,6 +25722,29 @@ removeConnection
 listener.connectionExpire
 sessionExpired
 
+-----------------------------------------------
+
+action == ACTION_PDU_TRANSMITTED,
+
+ACTION_PDU_TRANSMITTED is set from:
+- dlmsSendHldcRR
+- dlmsSendHdlcDisc
+- sendRequest
+
+Last transmit was:
+7e
+a02b
+03
+21
+10
+fbaf
+e6e600
+601da109060760857405080101be1004
+0e01000000065f1f0400001f1fffff
+c64d
+7e
+
+which is an AARQ
 
 
 
