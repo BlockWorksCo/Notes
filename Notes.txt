@@ -25775,11 +25775,18 @@ lighting
 
 - Should have been a third application LA parallel to SMA but is standalone JQuery/Flask app with SQLite backend.
 - Node is just a UDP pipe for now, interfaces with STM32 controller on ASKA board.
-
+- last work was scale-up to show 20K lighting nodes on server using ASKA emulator.
 
 https://gitlab.cyco.io/groups/mothballed/-/archived
 https://gitlab.cyco.io/AdamSutton/prototyping/-/commits/feature/lighting_node_put
 https://gitlab.cyco.io/AdamSutton/prototyping/-/blob/feature/lighting_hes_ui_scaleup/lighting_node/
+https://gitlab.cyco.io/AdamSutton/prototyping/-/blob/feature/lighting_hes_ui_scaleup/lighting_hes/metering.py
+https://gitlab.cyco.io/AdamSutton/prototyping/-/blob/feature/lighting_hes_ui_scaleup/lighting_hes/programme.py
+https://gitlab.cyco.io/mothballed/Lighting/aska_emulator/-/blob/master/src/node.c
+https://gitlab.cyco.io/mothballed/Lighting/aska_emulator/-/blob/master/src/meter.c
+https://gitlab.cyco.io/mothballed/Lighting/terminal/-/compare/master...lightingo
+https://gitlab.cyco.io/mothballed/Lighting
+
 
 
 
