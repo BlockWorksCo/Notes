@@ -25787,6 +25787,13 @@ https://gitlab.cyco.io/mothballed/Lighting/aska_emulator/-/blob/master/src/meter
 https://gitlab.cyco.io/mothballed/Lighting/terminal/-/compare/master...lightingo
 https://gitlab.cyco.io/mothballed/Lighting
 
+-----------------------------------------
+
+Genus 
+
+
+
+
 
 
 
