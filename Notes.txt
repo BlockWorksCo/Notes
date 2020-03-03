@@ -25798,6 +25798,15 @@ Release:
 - GStar from VIVek
 
 
+-------------------------------------------
+
+BER test
+uses PN9
+
+RAIL_BerConfigSet()
+RAIL_BerRxStart()
+
+
 
 
 
