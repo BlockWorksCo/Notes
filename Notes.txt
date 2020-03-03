@@ -25805,6 +25805,14 @@ uses PN9
 
 RAIL_BerConfigSet()
 RAIL_BerRxStart()
+RAIL_BerRxStop()
+RAIL_BerStatusGet()
+
+ uint32_t bitsTotal; /**< Number of bits to receive */
+ uint32_t bitsTested; /**< Number of bits currently tested */
+ uint32_t bitErrors; /**< Number of bits errors detected */
+ int8_t   rssi; /**< Latched RSSI value at pattern detect */
+
 
 
 
