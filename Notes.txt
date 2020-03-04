@@ -25813,6 +25813,16 @@ RAIL_BerStatusGet()
  uint32_t bitErrors; /**< Number of bits errors detected */
  int8_t   rssi; /**< Latched RSSI value at pattern detect */
 
+--------------------------------------------
+lz4 udp log
+
+pip install lz4
+
+import lz4.frame
+compressedData=open('readme.md.lz4','rb').read()
+uncompressedData=lz4.frame.decompress(compressedData)
+
+
 
 
 
