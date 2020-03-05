@@ -25831,6 +25831,7 @@ IGW work
 - file distribution
 - IP Core work - make it more generic & flexible.
 - new modem evaluation (Neoway N11)
+- Rethink monitoring/statistics.
 
 
 
