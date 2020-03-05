@@ -25832,6 +25832,7 @@ IGW work
 - IP Core work - make it more generic & flexible.
 - new modem evaluation (Neoway N11)
 - Rethink monitoring/statistics.
+- node upgrade.
 
 
 
