@@ -25822,6 +25822,16 @@ import lz4.frame
 compressedData=open('readme.md.lz4','rb').read()
 uncompressedData=lz4.frame.decompress(compressedData)
 
+------------------------------------
+
+IGW work
+- config proxy
+- mq proxy
+- event proxy & filter
+- file distribution
+- IP Core work - make it more generic & flexible.
+- new modem evaluation (Neoway N11)
+
 
 
 
