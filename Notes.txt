@@ -25837,6 +25837,117 @@ IGW work
 
 
 
+---------------------------------------
+
+
+prod.prodtime                            : 1
+prod.alias.id                            : 00-1B-C5-0C-60-06-1A-55
+prod.ethernet.macaddr                    : 
+prod.lowpan.eui64                        : 00-1B-C5-0C-60-06-1A-55
+prod.hw.version                          : 
+rpl.enabled                              : 1
+rpl.br.dio.imin                          : 12
+rpl.br.dio.imax                          : 8
+rpl.br.dio.k                             : 6
+rpl.br.routelife                         : 1200
+rpl.br.ocp                               : 1
+rpl.dis.trickle.min.ms                   : 10000
+rpl.dis.trickle.doublings                : 4
+rpl.probe.interval.min.ms                : 1500
+rpl.probe.doublings                      : 6
+rpl.instance_id                          : 46
+rpl.etx.weight_factor                    : 64
+rpl.mrhof.pp_hysteresis                  : 75
+rpl.dag_switch.hysteresis                : 150
+rpl.dag_switch.time                      : 7200
+rpl.routes.max                           : 10000
+rpl.dao.deferred_ack                     : 1
+rpl.netsize_penalty                      : 64
+lowpan.txpower.max                       : 10
+lowpan.hop_limit                         : 32
+lowpan.frame_retries                     : 3
+lowpan.powercontrol.interval             : 480
+lowpan.powercontrol.target               : -90
+lowpan.powercontrol                      : 1
+lowpan.cca.threshold                     : -94
+lowpan.channelplan                       : 0
+lowpan.channel                           : 10
+lowpan.autochannel                       : 0
+ip.eth.ipv4.4in6.endpoint                : 
+ip.eth.ipv4.mtu                          : 0
+ip.eth.ipv4.dns_servers                  : 
+ip.eth.ipv4.lease_time                   : 600
+ip.eth.ipv6.dns_server                   : 
+ip.eth.ipv4.up.ip                        : 
+ip.eth.ipv4.up.gw                        : 
+ip.eth.ipv4.up.dns                       : 
+server.ip                                : fd00::1
+server.port                              : 5684
+server.mq.push_now                       : 0
+server.mq.push_delay                     : 3600
+server.mq.more_delay                     : 600
+modem.apn                                : wlapn4.com
+modem.tun6.ip                            : omnidev-in-01.dev.cyanconnode.com
+modem.tun6.port                          : 8050
+modem.tun6.secret                        : ZV9IPCHFvINmOEKv
+modem.uplink.gracetime                   : 900
+modem.username                           : cyan
+modem.password                           : cyan
+modem.authmethod                         : PAP
+modem.pin                                : 
+modem.uplink.max_failures_before_reset   : 5
+mac.lbt.min.be                           : 3
+mac.lbt.max.be                           : 8
+mac.lbt.max.backoffs                     : 20
+mac.dutycycle.limit                      : 100
+mac.dutycycle.buffer                     : 1000
+mac.frame_size                           : 253
+dtls.timeout.initial.s                   : 8
+dtls.timeout.max.s                       : 127
+dtls.heartbeat.period.s                  : 3600
+dtls.heartbeat.retry.s                   : 120
+dtls.heartbeat.max.retries               : 4
+monitor.profile.default.enabled          : 1
+monitor.profile.default.sample.interval  : 86400
+monitor.profile.radio.enabled            : 0
+monitor.profile.radio.sample.interval    : 3600
+monitor.profile.network.enabled          : 0
+monitor.profile.network.sample.interval  : 3600
+monitor.profile.ip.enabled               : 0
+monitor.profile.ip.sample.interval       : 3600
+monitor.profile.modem.enabled            : 1
+monitor.profile.modem.sample.interval    : 900
+monitor.profile.environment.enabled      : 0
+monitor.profile.environment.sample.interval : 3600
+time.tz                                  : CET-1CEST,M3.5.0/2,M10.5.0/3
+time.max.diff                            : 30
+time.mesh.fail.event.interval            : 1800
+time.mesh.period                         : 3600
+time.ref.period                          : 43200
+time.ref.rtt.max                         : 30
+coap.retry.timeout                       : 10
+coap.session.timeout                     : 60
+coap.attempts                            : 3
+activity.report.enabled                  : 1
+node.power_fail.gracetime                : 0
+node.production.rssisource.enabled       : 0
+node.production.rssisource.power         : 10
+node.production.rssisource.period        : 500
+node.production.meter_update_period      : 5
+capabilities.meter.reverse_ESW           : 0
+capabilities.meter.device_testing        : 1
+capabilities.meter.supports_Ipv6_setup   : 1
+capabilities.meter.supports_payment_management : 0
+capabilities.meter.MeterUpgradeRequiresUpgradeCredentials : 0
+capabilities.dlmspipe.session_close_detection : 1
+capabilities.meter.time_update           : 1
+capabilities.meter.timezone_set          : 1
+capabilities.meter.dst_set               : 0
+capabilities.module.led.type             : 1
+dev.i2c.slave.address                    : 226
+
+
+
 
 
 
