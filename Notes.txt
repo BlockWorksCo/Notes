@@ -25961,6 +25961,8 @@ LZF compression
 https://github.com/janding/lzfx.git
 https://github.com/teepark/python-lzf
 
+https://code.google.com/archive/p/lzfx/
+
 
 
 
