@@ -25964,6 +25964,28 @@ https://github.com/teepark/python-lzf
 https://code.google.com/archive/p/lzfx/
 
 
+#!/usr/bin/env python3
+
+
+import lzf
+import sys
+import struct
+
+t=open(sys.argv[0],'rb').read()
+
+fileId,kind,length  = struct.unpack('>4sHI',t[:10])
+compressedFrame     = t[10:10+length]
+uncompressedFrame   = lzf.decompress(compressedFrame,length)
+
+print(fileId,kind,length)
+print(uncompressedFrame)
+
+                                                                    
+git@github.com:nemequ/liblzf.git
+
+
+
+
 
 
 
