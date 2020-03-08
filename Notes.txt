@@ -25984,6 +25984,15 @@ print(uncompressedFrame)
 git@github.com:nemequ/liblzf.git
 
 
+import lzf
+import struct
+t=open('../liblzf/README.lzf','rb').read()
+blobID,blobType,compressedSize,uncompressedSize = struct.unpack('>2scHH',t[:7])
+compressedFrame     = t[7:7+compressedSize]
+print(lzf.decompress(compressedFrame,uncompressedSize).decode('utf-8'))
+
+
+
 
 
 
