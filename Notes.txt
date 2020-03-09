@@ -26004,5 +26004,11 @@ get repo, run get_ca.py
 
 
 
+There are (at least) two conditions where this is a legitimate status.
+
+First-breath is generated at login point, time passes, power fails and last-gasp is generated (can't be read from meter). Since the meter has not been read in the intervening time, it still has a last-gasp bit set itself. We then report this along with the last-gasp.
+First-breath is generated at login point and ESW is cached for later power-fail. This cache contains the first-breath (from the meter). A power-fail then occurs and the cached flags are used to send the last-gasp. First-breath is also included in these alarms.
+Both these cases occur because we have to cache the ESW from the meter and we have had no intervening read of the ESW to refresh the (non-first-breath) status between then and a power-fail occurring.
+
 
 
