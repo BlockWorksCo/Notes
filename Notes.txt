@@ -26002,6 +26002,29 @@ get_ca
 get repo, run get_ca.py
 
 
+b'Osf^\x88\x01\x1fSend IP on uplink, 311 B, type 1\x007 \x08\x1ftl 32: fdaa:1865:6aee:7:21b:c50c\x0c:6006:77b8 -> &\x0f00::1\neth_up: tx E\x052.16.3 \x05\x0176@#\x0313.2 \r\x1335.150 359B proto=17\xe0\x007\x00r 7\xe0\x04& [\xe0\x05H\x02407\xe0\x027\x06Got UDP\xe0\x054\x02:80 `\xe0\x079\x05:50412`1\nIPv6 packetA\x03\x80\xb4\x04 from\xe0\x0bH\x07399B\nICM@4\x0cunicast error\x801\xa0\xfa\n, DestinatiAV\x0fnreachable (Port\xe0\x03\x11\x00)!n\x0455 B\n@'
+('fdaa:1865:6aee:7:21b:c50c:6006:77b8', 1234, 0, 0)
+1583772495 392
+compressedSize=297
+uncompressedSize=392
+error in compressed data
+.
+b'Psf^\x92\x00\x1fSend IP on uplink, 311 B, type 1\x007 \x08\x1ftl 32: fdaa:1865:6aee:7:21b:c50c\x0c:6006:77b8 -> &\x0f00::1\neth_up: tx E\x052.16.3 \x05\x0176@#\x0313.2 \r\x1435.150 359B proto=17\n\x00'
+('fdaa:1865:6aee:7:21b:c50c:6006:77b8', 1234, 0, 0)
+1583772496 146
+compressedSize=149
+uncompressedSize=146
+None
+'NoneType' object has no attribute 'splitlines'
+.
+b'Psf^\x92\x00\x1fSend IP on uplink, 163 B, type 1\x007 \x08\x1ftl 32: fdaa:1865:6aee:7:21b:c50c\x0c:6006:77b8 -> &\x0f00::1\neth_up: tx E\x052.16.3 \x05\x0176@#\x0313.2 \r\x1435.150 211B proto=17\n\x00'
+('fdaa:1865:6aee:7:21b:c50c:6006:77b8', 1234, 0, 0)
+1583772496 146
+compressedSize=149
+uncompressedSize=146
+None
+
+
 
 
 There are (at least) two conditions where this is a legitimate status.
