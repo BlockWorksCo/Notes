@@ -25993,6 +25993,14 @@ print(lzf.decompress(compressedFrame,uncompressedSize).decode('utf-8'))
 
 
 
+------------------------------
+
+CA update
+
+get_ca
+
+get repo, run get_ca.py
+
 
 
 
