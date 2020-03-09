@@ -26033,5 +26033,11 @@ First-breath is generated at login point, time passes, power fails and last-gasp
 First-breath is generated at login point and ESW is cached for later power-fail. This cache contains the first-breath (from the meter). A power-fail then occurs and the cached flags are used to send the last-gasp. First-breath is also included in these alarms.
 Both these cases occur because we have to cache the ESW from the meter and we have had no intervening read of the ESW to refresh the (non-first-breath) status between then and a power-fail occurring.
 
+-----------------------------------------------
+
+import lzf
+lzf.decompress(open('test2.lzh','rb').read(),316*1024)
+
+
 
 
