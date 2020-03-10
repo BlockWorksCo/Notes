@@ -26053,6 +26053,16 @@ b"\x1fSend IP on uplink, 164 B, type 1\x007 \x08\x1ftl 32: fdaa:1865:6aee:7:21b:
 ssh cyanconnode@cyan-emng104
 Sundbyb3rg
 
+-----------------------------------------
+mac_keys.txt
+
+ProdPack1000:
+0 94a3802a5a15376c2d99037a795d4efe
+
+DemoPOC:
+0 94a3802a5a15376c2d99037a795d4efe
+
+
 
 
 
