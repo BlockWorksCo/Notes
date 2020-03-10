@@ -26040,4 +26040,12 @@ lzf.decompress(open('test2.lzh','rb').read(),316*1024)
 
 
 
+Send IP on uplink, 164 B, type 17, ttl 32: fdaa:1865:6aee:7:21b:c50c:6006:77b8 -> fd00::1
+eth_up: tx 172.16.32.176 -> 13.232.35.150 212B proto=17
+
+
+b"\x1fSend IP on uplink, 164 B, type 1\x007 \x08\x1ftl 32: fdaa:1865:6aee:7:21b:c50c\x0c:6006:77b8 -> &\x0f00::1\neth_up: tx E\x052.16.3 \x05\x0176@#\x0313.2 \r\x1935.150 212B proto=17\nSessi \x8e\x0f5: Timeout (last@H\x1b8 s ago, user triggered: no)\xe0\x048\x08oo many t\x80A\x08s, giving \xe4\r\nDTLS negotiat@i\xa0$\x08, restart@'\x12login sequence\nChan \x10\x01g   \x01te o\xc0> \x12`O \xf8\x05wait\n\x00H\x024"
+
+
+
 
