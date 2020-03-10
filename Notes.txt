@@ -26075,6 +26075,7 @@ vK20V2FM
 
 
 https://omnidev-in-01.dev.cyanconnode.com/
+13.232.35.150
 modem.tun6.secret=ZV9IPCHFvINmOEKv
 
 
