@@ -26080,6 +26080,17 @@ https://omnidev-in-01.dev.cyanconnode.com/
 modem.tun6.secret=ZV9IPCHFvINmOEKv
 
 
+------------------------------------------------------
+
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --rll-key /Data/Temp/DemoPOCkey.txt 
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key client-key /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B0/node.key.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key client-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B0/node.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key root-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B0/ca.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config prod.lowpan.eui64 00-1B-C5-0C-60-06-77-B0
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config prod.prodtime 1
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --restart
+
+
 
 
 
