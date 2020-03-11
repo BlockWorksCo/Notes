@@ -26088,6 +26088,9 @@ modem.tun6.secret=ZV9IPCHFvINmOEKv
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --load-key root-cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B0/ca.crt.der 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config prod.lowpan.eui64 00-1B-C5-0C-60-06-77-B0
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config prod.prodtime 1
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config lowpan.channelplan 0
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config lowpan.channel 5
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config rpl.instance_id  8
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --restart
 
 
