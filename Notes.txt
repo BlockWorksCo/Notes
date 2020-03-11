@@ -26091,6 +26091,7 @@ modem.tun6.secret=ZV9IPCHFvINmOEKv
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config lowpan.channelplan 0
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config lowpan.channel 5
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config rpl.instance_id  8
+./tools/c4-tools/coap_request.py --ctrlporthub :4001 --config server.ip fd00::1
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --restart
 
 
