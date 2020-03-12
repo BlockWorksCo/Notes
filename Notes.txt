@@ -26095,6 +26095,12 @@ modem.tun6.secret=ZV9IPCHFvINmOEKv
 ./tools/c4-tools/coap_request.py --ctrlporthub :4001 --restart
 
 
+stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
+stty -F /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0 9600 raw
+socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FT94TOL6-if00-port0,raw,echo=0,crnl
+
+
+
 
 
 
