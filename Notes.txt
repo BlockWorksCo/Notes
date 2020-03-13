@@ -26135,4 +26135,7 @@ socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /d
 
 TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
 
+wolfSSL_CTX_set_cipher_list(ctx, "ECDHE-ECDSA-AES128-CCM-8");
+
+
 
