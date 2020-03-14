@@ -26139,9 +26139,11 @@ wolfSSL_CTX_set_cipher_list(ctx, "ECDHE-ECDSA-AES128-CCM-8");
 
 
 ---------------------------------------------
-
+multiple displays
 xrandr --auto --output VGA-1 --mode 1920x1080 --right-of HDMI-1
 
+This works
+xrandr --auto --output HDMI-1 --mode 1920x1080 --left-of eDP-1
 
 
 
