@@ -26138,4 +26138,10 @@ TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8
 wolfSSL_CTX_set_cipher_list(ctx, "ECDHE-ECDSA-AES128-CCM-8");
 
 
+---------------------------------------------
+
+xrandr --auto --output VGA-1 --mode 1920x1080 --right-of HDMI-1
+
+
+
 
