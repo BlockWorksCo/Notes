@@ -26151,4 +26151,8 @@ bluetooth uart
 
 sudo rfcomm connect 1 11:75:58:30:58:86
 
+0000   0b ef 1f 01 0b                                    .ï...
+0b:ef:a4:01:01
+
+0b:ef:1f:01:0b
 
