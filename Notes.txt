@@ -67,6 +67,10 @@ b67bc45987c51f40f43606839cfd757b
 sudo openvpn --config ~/.vpn/SteveTickle.ovpn --auth-user-pass "garment seize optimism allow"
 
 
+CC VPN
+netExtender --u SteveTickle -p "mango surfeit balance yellow" -d CyanTechnology gw.cyantechnology.com:4433
+
+
 Cyanconnode-1__________
 <Client>
 
