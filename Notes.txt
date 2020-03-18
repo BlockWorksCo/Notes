@@ -26172,3 +26172,17 @@ socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /d
 Swagger
 http://lntmdmsint.dev.cyanconnode.com/swagger-UI.html
 
+-------------------------
+gateway modem settings:
+
+modem.apn                                : wlapn4.com
+modem.tun6.ip                            : 13.232.35.150
+modem.tun6.port                          : 8050
+modem.tun6.secret                        : ZV9IPCHFvINmOEKv
+modem.uplink.gracetime                   : 900
+modem.username                           : cyan
+modem.password                           : cyan
+modem.authmethod                         : PAP
+modem.pin                                : 
+
+
