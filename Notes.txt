@@ -26168,3 +26168,7 @@ stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
 stty -F /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0 9600 raw
 socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0,raw,echo=0,crnl
 
+-----------------------------------
+Swagger
+http://lntmdmsint.dev.cyanconnode.com/swagger-UI.html
+
