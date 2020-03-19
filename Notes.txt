@@ -26189,7 +26189,10 @@ modem.pin                                :
 
 processIncomingIP
  sendIp 
+   filterOutgoing_PreRouting
    ipRoute
+   filterOutgoing_PostRouting
+   queueUpAndEncodePacket()
 
 ipSendIp
  sendIp 
