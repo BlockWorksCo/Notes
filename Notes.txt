@@ -26220,7 +26220,8 @@ MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/mac_keys.txt
 MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/ca.crt.der
 MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/node.crt.der
 MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/node.key.der
-tar jcvf -C MEADemoPOCProdPak1  MEADemoPOCProdPak1.prodpak.tbz2
+tar jcvf ../MEA1.tbz2 --xform s:'./'::  ./*
+
 
 
 
