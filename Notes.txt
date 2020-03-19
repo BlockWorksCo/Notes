@@ -26207,5 +26207,20 @@ ipSendIp
 
 
 ---------------------------------------------------------------------
+prodpak:
 
 ./make_prod_package.py --name MIDTestContinuous --bootloader bootloader.elf  --image agent.elf  --order TEST_INTERNAL_IPA3_x1000_02_20190711131959.562.tar.gz --hw-variant ipa3b
+manifest.yaml
+image/bl.elf
+image/agent.elf
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/config
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/mac_key
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/mac_keys.txt
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/ca.crt.der
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/node.crt.der
+MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/node.key.der
+tar jcvf -C MEADemoPOCProdPak1  MEADemoPOCProdPak1.prodpak.tbz2
+
+
+
