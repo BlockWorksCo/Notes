@@ -26195,8 +26195,14 @@ processIncomingIP
    queueUpAndEncodePacket()
 
 ipSendIp
- sendIp 
-   ipRoute
+  setMLDFlags
+  fragmentedSend()
+    for all fragments:
+      sendIp 
+        ipRoute
+  nonFragmentedSend()
+    sendIp 
+      ipRoute
 
 
 
