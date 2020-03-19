@@ -26206,4 +26206,6 @@ ipSendIp
 
 
 
+---------------------------------------------------------------------
 
+./make_prod_package.py --name ProdPak1K_b --bootloader bootloader-ipa3-bl-insecure-v151.2.elf  --image agent-ipa3b-genus-dlms-insecure-v151.2.elf  --order TEST_INTERNAL_IPA3_x1000_02_20190711131959.562.tar.gz --hw-variant ipa3b
