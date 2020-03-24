@@ -26222,6 +26222,17 @@ MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/node.crt.der
 MEADemoPOCProdPak1/00-1B-C5-0C-60-06-74-B4/node.key.der
 tar jcvf ../MEA1.prodpak.tbz2 --xform s:'./'::  ./*
 
+-------------------------------------
+
+omnibox-ui
+
+npm install -g @vue/cli
+npm install -g @vue/cli-service-global
+
+vue serve
+
+
+
 
 
 
