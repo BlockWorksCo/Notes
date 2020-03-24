@@ -26229,6 +26229,8 @@ omnibox-ui
 npm install -g @vue/cli
 npm install -g @vue/cli-service-global
 
+npm install
+cd src
 vue serve
 
 
