@@ -26257,5 +26257,32 @@ https://codesandbox.io/s/4qp6vjp319
 
 npm install react-beautiful-dnd
 
+----------------------------------------------------
+
+meter-configurator
+
+- Load-profile capture-period
+- Demand integration period
+- billing date
+- load-curtailment:
+    - limit
+    - event setting for connect/disconnect.
+    - number of auto-reconnection attempts
+    - time between auto-reconnection attempts.
+    - lock-out period.
+- meter-upgrade
+- DLMS credentials
+   - HLS
+   - LLS
+   - FW-upgrade (?)
+- push schedule. This is effectively capture-period (?) we don't support the scheduled-data-push.
+- Event-thresholds
+   - Get list of these.
+
+
+
+
+
+
 
 
