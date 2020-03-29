@@ -26294,6 +26294,12 @@ Engineering version of Papers.
 Use cases:
 - PDF schematic, links to layout and datasheet.
 - Instantly get all PDFs for a particular project using project tags. Stored once.
+- Internal or external PDF viewer.
+- GitLab/GitHub/GoogleDrive/OneDrive backend
+- Raw repo remains usable with original names, sqlite db for apps use.
+- Raw repo/storage remains usable for people who don't want that. Papyrus indexes it.
+- Plugin for "add to Papyrus" to quickly get a PDF into system from other window.
+
 
 
 
