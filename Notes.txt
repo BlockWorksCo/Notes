@@ -26282,6 +26282,18 @@ meter-configurator
 - Node-upgrade (does this need to be done on this tool?)
 
 
+-------------------------------------------------
+
+Papyrus
+Engineering version of Papers.
+- PDF library
+- tags
+- annotations
+- linking between docs
+
+Use cases:
+- PDF schematic, links to layout and datasheet.
+- Instantly get all PDFs for a particular project using project tags. Stored once.
 
 
 
