@@ -26305,6 +26305,14 @@ Business model:
 - On-Prem option
 
 
+Implementation:
+- PDF.js (Mozilla) git@github.com:mozilla/pdf.js.git
+- Vue.JS
+- Indexer hashes files.
+- Internal references are to hashes, not filenames. This allows user freedom
+to arrange storage however they like.
+
+
 
 
 
