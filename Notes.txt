@@ -26320,6 +26320,7 @@ Implementation:
 - Internal references are to hashes, not filenames. This allows user freedom
 to arrange storage however they like.
 - Flask back-end
+- Convert other files types to pdf to display.
 
 
 
