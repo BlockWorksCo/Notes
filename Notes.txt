@@ -26305,6 +26305,13 @@ Business model:
 - On-Prem option
 
 
+name:
+- Papyrus
+- Scriptum
+- Engrafo
+- Engrafa
+- Vivlio
+
 Implementation:
 - PDF.js (Mozilla) git@github.com:mozilla/pdf.js.git
 - Vue.JS
