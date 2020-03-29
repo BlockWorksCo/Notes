@@ -26300,6 +26300,9 @@ Use cases:
 - Raw repo/storage remains usable for people who don't want that. Papyrus indexes it.
 - Plugin for "add to Papyrus" to quickly get a PDF into system from other window.
 
+Business model:
+- Commercial/hosted with limited free account
+- On-Prem option
 
 
 
