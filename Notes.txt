@@ -26311,6 +26311,7 @@ name:
 - Engrafo
 - Engrafa
 - Vivlio
+- Engrafica
 
 Implementation:
 - PDF.js (Mozilla) git@github.com:mozilla/pdf.js.git
