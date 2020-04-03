@@ -26312,6 +26312,7 @@ name:
 - Engrafa
 - Vivlio
 - Engrafica
+- Chartam
 
 Implementation:
 - PDF.js (Mozilla) git@github.com:mozilla/pdf.js.git
