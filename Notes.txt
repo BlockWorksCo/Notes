@@ -26313,6 +26313,7 @@ name:
 - Vivlio
 - Engrafica
 - Chartam
+- Notitia
 
 Implementation:
 - PDF.js (Mozilla) git@github.com:mozilla/pdf.js.git
