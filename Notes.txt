@@ -26343,6 +26343,8 @@ Timesheet March 2020
 
  W~BVipa3b-mbus-insecure:v20.3.10+g387655e15+dirty Hmb DV0@54934L19fafS20009d08 
 
+xwd -root -display :0 | convert - jpg:- | jp2a - --colors<Paste>
+
 
 
 
