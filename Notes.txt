@@ -26349,6 +26349,15 @@ screenshot:
 
 xwd | convert xwd:- jpg:- > step5.jpg
 
+------------------------------------------
+
+(200, {'meters': []})
+(200, {'meters': [{'meterId': 'USS 0000008', 'status': 'SUCCESS', 'failureStep': '0', 'progress': None}, 
+                  {'meterId': 'USS0002002', 'status': 'SUCCESS', 'failureStep': '0', 'progress': None}, 
+                  {'meterId': 'UST1000002', 'status': 'FAILED', 'failureStep': '0', 'progress': None}]})
+
+
+
 
 
 
