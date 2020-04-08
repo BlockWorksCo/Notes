@@ -26371,6 +26371,7 @@ IGW7 HLD updates
 - Remove Low-power-mode
 - Merge mq-API into proxy description
 - Address scheme update.
+- Add monitor/stats collection.
 
 
 
