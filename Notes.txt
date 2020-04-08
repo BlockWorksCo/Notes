@@ -26362,6 +26362,15 @@ xwd | convert xwd:- jpg:- > step5.jpg
 IGW7 HLD updates
 - Architecture diagram update
 - Slot-ID now analogue
+- File distribution update
+- Configuration updates
+- Proxy description (events, mq, etc)
+- Remove debug
+- Update address scheme
+- Routing rules config.
+- Remove Low-power-mode
+- Merge mq-API into proxy description
+- Address scheme update.
 
 
 
