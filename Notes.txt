@@ -26360,6 +26360,8 @@ xwd | convert xwd:- jpg:- > step5.jpg
 --------------------------------------
 
 IGW7 HLD updates
+- Architecture diagram update
+- Slot-ID now analogue
 
 
 
