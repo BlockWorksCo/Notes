@@ -26373,6 +26373,11 @@ IGW7 HLD updates
 - Address scheme update.
 - Add monitor/stats collection.
 
+-------------------------------------------
+
+PanMesh UI improvements:
+- CND-10058
+- 
 
 
 
