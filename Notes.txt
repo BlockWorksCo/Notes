@@ -26396,7 +26396,7 @@ PanMesh UI improvements:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.ip fd00::1
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.secret ZV9IPCHFvINmOEKv
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.ip mea-dev-hes.mea.prod.cyanconnode.com
-./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.apn wlgdsp.com
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.apn wlapn4.com
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.username cyan
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.password cyan
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.authmethod PAP
@@ -26416,7 +26416,7 @@ PanMesh UI improvements:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.ip fd00::1
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.secret ZV9IPCHFvINmOEKv
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.tun6.ip mea-dev-hes.mea.prod.cyanconnode.com
-./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.apn wlgdsp.com
+./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.apn wlapn4.com
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.username cyan
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.password cyan
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config modem.authmethod PAP
