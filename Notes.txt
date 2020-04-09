@@ -26393,8 +26393,11 @@ PanMesh UI improvements:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.channelplan 0
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.channel 5
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config rpl.instance_id  8
-./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.ip fd00::1
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config server.ip fd00::1
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config modem.tun6.secret ZV9IPCHFvINmOEKv
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config modem.tun6.ip mea-dev-hes.mea.prod.cyanconnode.com
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --restart
+
 
 
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --rll-key /Data/Temp/DemoPOCkey.txt 
@@ -26407,6 +26410,8 @@ PanMesh UI improvements:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config lowpan.channel 5
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config rpl.instance_id  8
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --config server.ip fd00::1
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config modem.tun6.secret ZV9IPCHFvINmOEKv
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config modem.tun6.ip mea-dev-hes.mea.prod.cyanconnode.com
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --restart
 
 
