@@ -26423,6 +26423,14 @@ PanMesh UI improvements:
 ./tools/c4-tools/coap_request.py --ctrlporthub :4002 --restart
 
 
+------------------------------------------
+
+Web based ToDo dashboard app
+
+Grid of tasks, the larger are the highest priority
+sunsama like
+as things get closer to deadline, their size increases.
+the bigger the task, the bigger the size.
 
 
 
