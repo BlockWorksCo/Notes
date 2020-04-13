@@ -26324,6 +26324,7 @@ Implementation:
 to arrange storage however they like.
 - Flask back-end
 - Convert other files types to pdf to display.
+- Use pandoc to convert other formats to pdf.
 
 
 https://www.papersapp.com/
