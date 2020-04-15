@@ -26444,7 +26444,7 @@ add-ons for relays, display-list and md-reset button
 
 CND-10029 relays
 CND-10111 lcd display list
-CND-10113 active/passive relay times
+CND-10113 active/passive relay times (already implemented?)
 CND-10116 MD reset button
 CND-10109 billing cycle length
 
