@@ -26454,6 +26454,23 @@ apt install apache2 libapache2-mod-proxy-uwsgi libapache2-mod-proxy-uwsgi-dbg
 
 https://httpd.apache.org/docs/2.4/mod/mod_proxy.html
 
+------------------------------------
+
+addressing:
+
+s_prefixLen = (unsigned int)len;
+s_numberOfAddresses = 1ULL << (64 - len);
+
+// Bad prefix length. A /40 should be enough for everyone, allowing 16M
+// sub-prefixes. Technically we're limited to 2**31 prefixes by
+// bitFindFree() returning a (32-bit signed) int.
+
+40+24 == 64 == /40 with a random 24-bit subnetId.
+
+
+
+
+
 
 
 
