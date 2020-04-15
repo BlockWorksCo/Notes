@@ -26447,6 +26447,11 @@ CND-10111 lcd display list
 CND-10113 active/passive relay times (already implemented?)
 CND-10116 MD reset button
 CND-10109 billing cycle length
+----------------------------------------
+
+apache reverse proxy
+apt install apache2 libapache2-mod-proxy-uwsgi libapache2-mod-proxy-uwsgi-dbg
+
 
 
 
