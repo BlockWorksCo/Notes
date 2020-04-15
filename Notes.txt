@@ -26452,6 +26452,8 @@ CND-10109 billing cycle length
 apache reverse proxy
 apt install apache2 libapache2-mod-proxy-uwsgi libapache2-mod-proxy-uwsgi-dbg
 
+https://httpd.apache.org/docs/2.4/mod/mod_proxy.html
+
 
 
 
