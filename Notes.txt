@@ -26078,6 +26078,8 @@ omnireltest2:
 sysadmin
 vK20V2FM
 
+ssh stickle@panmesh-dev-01.dev.cyanconnode.com
+
 
 
 https://omnidev-in-01.dev.cyanconnode.com/
