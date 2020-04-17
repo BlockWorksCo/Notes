@@ -26477,6 +26477,10 @@ gw -> tun6d (HelloMessage) initiate
 gw <- tun6d (HelloResponseMessage) challenge
 gw -> tun6d (AuthenticateMessage) challenge-response.
 gw <- tun6d (TunnelOptionsMessage) prefix,keepalive-period, timeout.
+-----------------------------
+
+dlmsVariantConfigureBillingPeriod
+
 
 
 
