@@ -26511,6 +26511,8 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     - Missing MD reset button enable
     - Would avoid the term "push" as that term has specific metering definitions (i.e. DLMS push). "displayListManual" may be better.
 
+    3.7.9: DisplayList should probably be UserInterface as it is greater than just the display list(s) i,e button also.
+
 
 ----------------------------------------
 !!  Update the Kaifa Manufacturing doc in Sharepoint.
