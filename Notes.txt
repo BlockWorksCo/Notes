@@ -26523,80 +26523,10 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
 fw upgrade
 
 
-{
-    "jobName" : "CalendarJob61",
-    "meterGroup" : "StevesGroup",
-    "jobType" : "METER_COMMAND_SET",
-    "jobConfiguration" : {
-        "name" : "updCalendar",
-        "commands" : [{
-            "type" : "TARIFF_CALENDAR",
-            "activationTime": "2018-07-10T18:35:00+0530",
-            "seasons": [
-                {
-                    "start": {
-                        "dayOfMonth": 1,
-                        "month": 1
-                    },
-                    "week": 0
-                }
-            ],
-            "weeks": [
-                {
-                    "days": [ 1, 1, 1, 1, 1, 1, 1 ]
-                }
-            ],
-            "days": [
-                {
-                    "schedule": [
-                        {
-                            "time": "00:00",
-                            "zone": 1
-                        },
-                        {
-                            "time": "09:00",
-                            "zone": 2
-                        },
-                        {
-                            "time": "15:00",
-                            "zone": 3
-                        }
-                    ]
-                },
-                {
-                    "schedule": [
-                        {
-                            "time": "00:00",
-                            "zone": 1
-                        },
-                        {
-                            "time": "09:00",
-                            "zone": 2
-                        },
-                        {
-                            "time": "15:00",
-                            "zone": 3
-                        }
-                    ]
-                }
-            ]
-        }]
-    }
-}
 
-{
-  "instruction": "startNow"
-}
+POST /meterJob { "jobName": "JOB_XYZ", "meterGroup": "GROUP_ABC", "jobType": "METER_FIRMWARE_UPDATE", "commands": [ { "type": "FIRMWARE_IMAGE", "firmwareImage": "HEX_ENCODED_FIRMWARE_DATA", "firmwareHash": "HEX_ENCODED_MD5_HASH_OF_FIRMARE_DATA", "meters": [ { "id": "METER 123", "firmwareIdent": "ABC" }, { "id": "METER 987", "firmwareIdent": "ZYX" }, ... ] } ] }
 
-
----------------------------------------------
-
-billing period reset
-
-curl -v -X POST http://localhost:8882/ws/meterJob -H 'Cache-Control: no-cache' -H 'Content-Type: application/json' -d '{"jobName":"bp1","meterGroup":"StevesGroup","jobType":"METER_COMMAND_SET","jobConfiguration":{"name":"bp1","scheduledTime":"2018-07-20T14:57:00.000","timeoutTime":"2018-07-20T14:59:00.000","commands":[{"type":"BILLING_PERIOD","activationTime":"2018-07-20T15:02:00+0530","date":{"dayOfMonth":15}}]}}'
-
-
-curl -X POST --header 'Content-Type: application/json' --header 'Accept: application/json' -d '{ "instruction": "startNow" } ' 'http://localhost:8880/ws/manageMeterJob/bp1'
+POST /manageMeterJob/JOB123 { "instruction": "START" }
 
 
 
