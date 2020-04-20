@@ -26498,6 +26498,14 @@ The current functionality is oriented around managing temperature in the GW-200 
 API doc review
 
 3.5.3 BillingPeriod, no addition for periodLength.
+3.6.2.1 One point to make is that there needs to be a degree of introspection
+available for the DisconnectorControlRequest in that it will have different
+behaviours depending on whether the parameters are a) single string or b) list of strings.
+
+Also, bit uncomfortable in that the API is imperative (i.e. a list of commands) rather than
+declarative (i.e. a list of final desired states). (This is a criticism of the whole API tho
+rather than this specific one).
+
 
 
 
