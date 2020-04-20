@@ -26507,6 +26507,9 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     rather than this specific one).
 
 
+    3.6.4 DisplayList:
+    - Missing MD reset button enable
+    - Would avoid the term "push" as that term has specific metering definitions (i.e. DLMS push). "displayListManual" may be better.
 
 
 ----------------------------------------
