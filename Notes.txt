@@ -26524,7 +26524,17 @@ fw upgrade
 
 
 
-POST /meterJob { "jobName": "JOB_XYZ", "meterGroup": "GROUP_ABC", "jobType": "METER_FIRMWARE_UPDATE", "commands": [ { "type": "FIRMWARE_IMAGE", "firmwareImage": "HEX_ENCODED_FIRMWARE_DATA", "firmwareHash": "HEX_ENCODED_MD5_HASH_OF_FIRMARE_DATA", "meters": [ { "id": "METER 123", "firmwareIdent": "ABC" }, { "id": "METER 987", "firmwareIdent": "ZYX" }, ... ] } ] }
+POST /meterJob 
+{ 
+"jobName": "JOB_XYZ", 
+"meterGroup": "GROUP_ABC", 
+"jobType": "METER_FIRMWARE_UPDATE", 
+"commands": [ { 
+		"type": "FIRMWARE_IMAGE", 
+		"firmwareImage": "HEX_ENCODED_FIRMWARE_DATA", 
+		"firmwareHash": "HEX_ENCODED_MD5_HASH_OF_FIRMARE_DATA", 
+		"meters": [ { "id": "USS 0000008", "firmwareIdent": "ABC" } ] 
+      } ] }
 
 POST /manageMeterJob/JOB123 { "instruction": "START" }
 
