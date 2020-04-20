@@ -26493,6 +26493,14 @@ configureBillingPeriod
 
 The current functionality is oriented around managing temperature in the GW-200 rather than providing longevity while running on battery. It is expected that some changes to the logic will be required here in order to run in a more efficent manner while still providing at least partial coverage for the mesh [REF_0007]. 
 
+-----------------------
+
+API doc review
+
+3.5.3 BillingPeriod, no addition for periodLength.
+
+
+
 
 
 
