@@ -26559,6 +26559,19 @@ secure/insecure differences:
 - local-CoAP disabled. CONFIG_LOCAL_COAP
 - some coap resources not registered (reset-mesh, conman, login, time)
 
+----------------------------
+prodmode changes for IGW
+secure/insecure unification
+
+
+- Local-CoAP is only enabled on DebugUART when no certs/keys exist.
+- Local-CoAP is disabled if certs exist.
+- Only cert-setting CoAP function are marked as Non-DTLS.
+- SLIP6 is enabled on Debug Port if certs exist.
+- DTLS will also work over SLIP6, enabling use of test CoAP Endpoints.
+- All other CoAP endpoints require DTLS.
+- rate-limiting exists on SLIP6 i/f.
+
 
 
 
