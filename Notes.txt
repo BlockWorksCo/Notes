@@ -26572,6 +26572,9 @@ secure/insecure unification
 - All other CoAP endpoints require DTLS.
 - Test functions can remain enabled until explicitly disabled with prodtime.
 - rate-limiting exists on SLIP6 i/f.
+- Could add a source-address restriction to add extra hurdle.
+
+SecureCoAP == CoAP over DTLS over local-Debug-UART.
 
 
 
