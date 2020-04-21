@@ -26557,7 +26557,7 @@ removing release mode.
 secure/insecure differences:
 - debug-flag blown. CONFIG_READ_PROTECT
 - local-CoAP disabled. CONFIG_LOCAL_COAP
-- some coap resources not registered (reset-mesh, conman)
+- some coap resources not registered (reset-mesh, conman, login, time)
 
 
 
