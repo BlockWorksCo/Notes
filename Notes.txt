@@ -26570,6 +26570,7 @@ secure/insecure unification
 - SLIP6 is enabled on Debug Port if certs exist.
 - DTLS will also work over SLIP6, enabling use of test CoAP Endpoints.
 - All other CoAP endpoints require DTLS.
+- Test functions can remain enabled until explicitly disabled with prodtime.
 - rate-limiting exists on SLIP6 i/f.
 
 
