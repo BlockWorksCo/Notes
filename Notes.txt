@@ -26551,7 +26551,7 @@ sudo java -jar nukkit.jar
 removing release mode.
 - local-CoAP to incorporate a challenge and become secure. Needs strong authentication and to be robust.
 
-- If we can have secure local-CoAP, we can remove prod-mode and 
+- If we can have secure local-CoAP, we can remove prod-mode and use it instead.
 
 
 
