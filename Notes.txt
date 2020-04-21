@@ -26538,6 +26538,13 @@ POST /meterJob
 
 POST /manageMeterJob/JOB123 { "instruction": "START" }
 
+-------------------------------------------
+
+sudo apt install oracle-java8-jdk
+
+wget -O nukkit.jar http://ci.mengcraft.com:8080/job/nukkit/lastSuccessfulBuild/artifact/target/nukkit-1.0-SNAPSHOT.jar
+
+sudo java -jar nukkit.jar
 
 
 
