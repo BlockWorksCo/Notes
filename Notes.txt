@@ -26554,6 +26554,12 @@ removing release mode.
 - If we can have secure local-CoAP, we can remove prod-mode and use it instead.
 
 
+secure/insecure differences:
+- debug-flag blown. CONFIG_READ_PROTECT
+- local-CoAP disabled. CONFIG_LOCAL_COAP
+
+
+
 
 
 
