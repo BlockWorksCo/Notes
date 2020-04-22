@@ -26576,6 +26576,16 @@ secure/insecure unification
 
 SecureCoAP == CoAP over DTLS over local-Debug-UART.
 
+----------------------------------------------------
+
+TangedCo update
+G3627.145021 -> o
+./tools/c4-tools/coap_request.py --config device.dlms.lls_password 3141324233433444
+./tools/c4-tools/coap_request.py --config device.dlms.hls_key 746764636c686c7375676d3434616263
+./tools/c4-tools/coap_request.py --config device.dlms.encryption_key 546744634c654b616b674d3434616263
+./tools/c4-tools/coap_request.py --config device.dlms.authentication_key 546744634c654b616b674d3434616263
+./tools/c4-tools/coap_request.py --config device.dlms.FirmwareUpgrade_key 746764636C686C7366676D3434616263
+
 
 
 
