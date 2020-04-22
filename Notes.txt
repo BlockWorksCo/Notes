@@ -26588,6 +26588,52 @@ G3627.145021 -> o
 
 
 
+GW7 only no 100/500 etc
+Reset : needs clarification
+GW200 has to be used in GW7
+ Is part of the requirement as per Matt.
+GW7 will be standard operating range.
+Extended will be used later?
+
+Secure/ insecure discussion
+
+2.4
+Link to be confidential and integrity checked.
+Need more information on Ethernet NIC.
+
+Security
+Some sync is needed between 2 end points and re-establish.
+This needs a more insight especially at IP level.
+Dtls on top would be possible option?
+Matt and Steve to discuss to find a right solution.
+No HW implications.
+HSM as an optional?
+HW IDs must be identified and married,CNIC,I/f board and agent. The data has to be available on server? Revisit the specification on this, based on the thread model, this needs more understanding.
+2.9 File Distribution
+Whether F/Ws to be combined or split?
+It may exceed 800kb or more, node and meter together.
+NIC7 n CNIC7 to debug headers.
+
+
+2.10 Radio coexistence issues
+Antenna must be installed with X distance apart, HW to update this.
+This needs more testing and understand the proximity is to be maintained.
+2.11 power failure
+Meter power failure is third party.
+Need more details to cover. Andy n Steve will work on 11 and 12.
+2.12 control of the PSU
+Need an interrupt line.
+2.13 safe shutdown
+Event notification is needed.
+
+2.14 LED control
+2.15 Configuration
+Single configuration
+2.18 Low power mode
+2.19 MQ CoAP API
+
+
+
 
 
 
