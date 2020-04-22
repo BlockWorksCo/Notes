@@ -26633,6 +26633,26 @@ Single configuration
 2.19 MQ CoAP API
 
 
+-----------------------------------------------
+
+fileInput.addEventListener("change", function(evt) {
+  const files = evt.target.files;
+  if (!files || files.length === 0) {
+    return;
+  }
+  PDFViewerApplication.eventBus.dispatch("fileinputchange", {
+    source: this,
+    fileInput: evt.target,
+  });
+});
+
+webViewerFileInputChange()
+webViewerOpenFile()
+
+PDFViewerApplication.open(url);
+
+
+
 
 
 
