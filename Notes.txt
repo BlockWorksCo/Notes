@@ -26668,14 +26668,34 @@ phase 1, don't have internal DTLS, phase 2 introduce DTLS for internal?
 IGW Tasks
 - IGW type on server, usable in search and grouping.
 - tun6 allocation of multiple addresses.
-- new production mode
+- new production mode / configuration mode with reversible application-mode.
 - DTLS server
-- secure-local-coap
+- secure-local-coap / SLIP6 / PC-side tools
 - EC100 bring-up
 - slot id
 - revision id
 - collection of identity info from other slave modules.
 - nodeHash generation and reporting
+- reset control by master of slave modules.
+- timeout and error handling on I2C
+- integrity check on I2C.
+- Encryption on I2C
+- framecounter on I2C
+- Backplane DTLS session?
+- reporting of identity to test sw
+- HSM driver.
+- Battery-backed RTC driver (I2C)
+- Upgrade authentication
+- Upgrade hw identification
+- New PSU control
+- Shutdown broadcast
+- UI LED control exposed to other modules, i.e. CNIC
+- Configurable routing
+- low-power-mode
+- Proxy functionality (samples, alarms, events, metrics).
+- Ethernet (TBD)
+- integration tests
+
 
 
 
