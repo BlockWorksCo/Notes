@@ -26667,8 +26667,7 @@ phase 1, don't have internal DTLS, phase 2 introduce DTLS for internal?
 
 IGW Tasks
 - IGW type on server, usable in search and grouping.                            - 10d
-- tun6 allocation of multiple addresses.                                        - 4d
-- new production mode / configuration mode with reversible application-mode.    - 
+- new production mode / configuration mode with reversible application-mode.    - 10d
 - DTLS server                                                                   - 5d
 - secure-local-coap / SLIP6 / PC-side tools                                     - 5d
 - EC100 bring-up                                                                - 5d
@@ -26681,22 +26680,26 @@ IGW Tasks
 - integrity check on I2C.                                                       - 2d
 - Encryption on I2C                                                             - 4d
 - framecounter on I2C                                                           - 5d
-- Backplane DTLS session?                                                       - 4d
 - reporting of identity to test sw                                              - 3d
-- HSM driver.                                                                   - 25d
-- Battery-backed RTC driver (I2C)                                               - 5d
-- Upgrade authentication                                                        - 5d
-- Upgrade hw identification                                                     - 5d
-- New PSU control                                                               - 5d
 - Shutdown broadcast                                                            - 2d
 - UI LED control exposed to other modules, i.e. CNIC                            - 4d
+- integration tests                                                             - 10d
+- ProdPak to incorporate WLL key.                                               - 2d
+
+- Upgrade authentication                                                        - 5d
+- Upgrade hw identification                                                     - 5d
+
+- Backplane DTLS session?                                                       - 4d
+- tun6 allocation of multiple addresses.                                        - 4d
+
+- HSM driver.                                                                   - 25d
+- Battery-backed RTC driver (I2C)                                               - 5d
+- New PSU control                                                               - 5d
 - Configurable routing                                                          - 5d
 - low-power-mode                                                                - 25d
 - Proxy functionality (samples, alarms, events, metrics).                       - 10d
 - Ethernet (TBD)                                                                - 25d
-- integration tests                                                             - 10d
 - upgradeable bootloader                                                        - 5d
-- ProdPak to incorporate WLL key.                                               - 2d
 
 
 
