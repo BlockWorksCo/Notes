@@ -26666,37 +26666,37 @@ phase 1, don't have internal DTLS, phase 2 introduce DTLS for internal?
 ------------------------------------------
 
 IGW Tasks
-- IGW type on server, usable in search and grouping.                            -
-- tun6 allocation of multiple addresses.                                        -
-- new production mode / configuration mode with reversible application-mode.    -
-- DTLS server                                                                   -
-- secure-local-coap / SLIP6 / PC-side tools                                     -
-- EC100 bring-up                                                                -
-- slot id                                                                       -
-- revision id                                                                   -
-- collection of identity info from other slave modules.                         -
-- nodeHash generation and reporting                                             -
-- reset control by master of slave modules.                                     -
-- timeout and error handling on I2C                                             -
-- integrity check on I2C.                                                       -
-- Encryption on I2C                                                             -
-- framecounter on I2C                                                           -
-- Backplane DTLS session?                                                       -
-- reporting of identity to test sw                                              -
-- HSM driver.                                                                   -
-- Battery-backed RTC driver (I2C)                                               -
-- Upgrade authentication                                                        -
-- Upgrade hw identification                                                     -
-- New PSU control                                                               -
-- Shutdown broadcast                                                            -
-- UI LED control exposed to other modules, i.e. CNIC                            -
-- Configurable routing                                                          -
-- low-power-mode                                                                -
-- Proxy functionality (samples, alarms, events, metrics).                       -
-- Ethernet (TBD)                                                                -
-- integration tests                                                             -
-- upgradeable bootloader                                                        -
-- ProdPak to incorporate WLL key.                                               -
+- IGW type on server, usable in search and grouping.                            - 10d
+- tun6 allocation of multiple addresses.                                        - 4d
+- new production mode / configuration mode with reversible application-mode.    - 
+- DTLS server                                                                   - 5d
+- secure-local-coap / SLIP6 / PC-side tools                                     - 5d
+- EC100 bring-up                                                                - 5d
+- slot id                                                                       - 2d
+- revision id                                                                   - 2d
+- collection of identity info from other slave modules.                         - 3d
+- nodeHash generation and reporting                                             - 5d
+- reset control by master of slave modules.                                     - 3d
+- timeout and error handling on I2C                                             - 5d
+- integrity check on I2C.                                                       - 2d
+- Encryption on I2C                                                             - 4d
+- framecounter on I2C                                                           - 5d
+- Backplane DTLS session?                                                       - 4d
+- reporting of identity to test sw                                              - 3d
+- HSM driver.                                                                   - 25d
+- Battery-backed RTC driver (I2C)                                               - 5d
+- Upgrade authentication                                                        - 5d
+- Upgrade hw identification                                                     - 5d
+- New PSU control                                                               - 5d
+- Shutdown broadcast                                                            - 2d
+- UI LED control exposed to other modules, i.e. CNIC                            - 4d
+- Configurable routing                                                          - 5d
+- low-power-mode                                                                - 25d
+- Proxy functionality (samples, alarms, events, metrics).                       - 10d
+- Ethernet (TBD)                                                                - 25d
+- integration tests                                                             - 10d
+- upgradeable bootloader                                                        - 5d
+- ProdPak to incorporate WLL key.                                               - 2d
 
 
 
