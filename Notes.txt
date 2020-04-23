@@ -26665,9 +26665,5 @@ phase 1, don't have internal DTLS, phase 2 introduce DTLS for internal?
 
 ------------------------------------------
 
-Multiple DTLS contexts.
-- global state: file
-
-
 
 
