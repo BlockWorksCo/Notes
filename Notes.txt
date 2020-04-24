@@ -26757,6 +26757,10 @@ asdas
   }
 }
 
+-----------------------------------------------------------
+
+./omnimesh/omnisma-demo.py --sma_user="sysadmin" --sma_pass="sysadmin" --sma_ws https://omnidev-in-01.dev.cyanconnode.com/ws -m "USS 0000008" --config-set ../SetConfig-DisconnectorControl-off.json
+
 
 
 
