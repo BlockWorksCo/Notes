@@ -26686,6 +26686,8 @@ IGW Tasks
 - integration tests                                                             - 10d
 - ProdPak to incorporate WLL key.                                               - 2d
 
+- Production SW
+
 - Upgrade authentication                                                        - 5d
 - Upgrade hw identification                                                     - 5d
 
