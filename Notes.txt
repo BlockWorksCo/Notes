@@ -26461,6 +26461,12 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
 
     https://httpd.apache.org/docs/2.4/mod/mod_proxy.html
 
+    mod_wsgi:
+
+    apt-get install libapache2-mod-wsgi
+
+    https://flask.palletsprojects.com/en/1.1.x/deploying/mod_wsgi/
+
     ------------------------------------
 
     addressing:
@@ -26761,6 +26767,7 @@ asdas
 
 ./omnimesh/omnisma-demo.py --sma_user="sysadmin" --sma_pass="sysadmin" --sma_ws https://omnidev-in-01.dev.cyanconnode.com/ws -m "USS 0000008" --config-set ../SetConfig-DisconnectorControl-off.json
 
+---------------------------------------
 
 
 
