@@ -26803,7 +26803,7 @@ GW WAN configuration data shall be retrieved from GWs for Network Operator queri
 Feeder power failures and recoveries shall be reported/notified by GWs to HES                                           (How do we know its a feeder failure?)
 Communication failures, retries and recoveries: timeouts, Node/GW, WAN connections                                      (metrics)
 Communication infrastructure quality:                                                                                   (metrics, duplicate)
-RAT(for WAN) selection and switching: GW (UMTS, HSDPA, HSUPA, HSPA, LTE)
+RAT(for WAN) selection and switching: GW (UMTS, HSDPA, HSUPA, HSPA, LTE)                                                (new, no identification of protocol yet)
 RAT Service Quality: GW (RSSI, RSRQ, RSRP, RSCP, Tx Pwr Level, Rx Pwr Level)
 QoS: Maximum Uplink/Downlink bit rate
 Communication channel round trip performance; Server to GW TTL (ICMP ping), GW to Nodes TTL(ICMP ping)
