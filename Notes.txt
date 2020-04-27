@@ -26826,6 +26826,14 @@ Operator SLA query, demand, reporting
 
 
 
+Gateway operations:
+- Read IMSI(s)
+- Read IMEI
+- Read ICCID
+- determine server ping time.
+- determine channel performance.
+
+
 
 
 
