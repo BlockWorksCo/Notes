@@ -26772,6 +26772,61 @@ asdas
 ssh -p 922 ubuntu@86.129.59.24
 
 
+----------------------------------------------
+
+cellular management:
+- https://openapi.airtel.in/#/docs/payment
+- gw sim
+- distribution management system (https://en.wikipedia.org/wiki/Distribution_management_system)
+- NIC
+
+
+MNO(Mobile Network Operator) Airtel provides a M2M(Machine to Machine) platform through Web APIs. These APIs utilises SIM card, NIC, DMS node identities for queries.
+
+HES shall gather identity information of GW SIM, NIC, and DMS Nodes from the mesh
+MNO SIM Management integration: High priority
+The identity information of the individual mesh components shhould be used to report the status of these components to MNO M2M platform.
+The identity information can be used to query the related MNO service status
+Network outages
+Coverage of the GWs, throughput
+NIC accesability, throughput
+HES can schedule jobs based on the status of mesh componets gathered from MNO M2M platform
+HES should report cellular connectivity issues/events to the MNO M2M platform
+HES should do OTA commissioning of the mesh components related to the MNO M2M platform
+HES shall display cellular issues/events
+ 
+
+Communication failures shall be logged and reported on HES
+Scheduled performance measurement jobs executed by HES to GWs and selected nodes
+Comminication infrastructure quality arguments shall be acquired from GWs
+GW WAN configuration data shall be retrieved from GWs for Network Operator queries and system logging/reporting
+Feeder power failures and recoveries shall be reported/notified by GWs to HES
+All above: argument and data shall be assigned to designated OBIS metrics on GWs, Nodes (need to be defined/allocated)
+Communication failures, retries and recoveries: timeouts, Node/GW, WAN connections
+Communication infrastructure quality:
+RAT(for WAN) selection and switching: GW (UMTS, HSDPA, HSUPA, HSPA, LTE)
+RAT Service Quality: GW (RSSI, RSRQ, RSRP, RSCP, Tx Pwr Level, Rx Pwr Level)
+QoS: Maximum Uplink/Downlink bit rate
+Communication channel round trip performance; Server to GW TTL (ICMP ping), GW to Nodes TTL(ICMP ping)
+Topology gathering: GW to Nodes
+Topology gathering: Node to Node Hopping
+HES to GWSs roundrip and throughput performance gathering
+GWSs to Nodes roundtrip and throughput performance gathering
+GW WAN Configuration:
+IMEI (GW, International Mobile Equipment ID, i.e. Modem ID)
+IMSI (GW SIM, International Mobile Station ID, i.e. GW's ID on Network Operator)
+ICCID (GW SIM, SIM Integrated Circuit Card ID, i.e. SIM ID and manufacturer)
+Feeder power failures and recoveries: Node, GW(on battery, on line power)
+HES job queues can utilise communication infrastructure status and quality levels to schedule (issue, re-prioritise, postpone, reschedule) jobs to GW/Node groups to improve system performance and decrease wastage.
+Reporting system level operational quality
+Reporting End-to-End connection, data loss
+HES can access the Web APIs of Network Operators as a client (WAN Configuration and Communication Infrastructure Quality
+To report network outage
+Operator SLA query, demand, reporting
+
+
+
+
 
 
 
