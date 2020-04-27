@@ -26796,14 +26796,13 @@ HES should do OTA commissioning of the mesh components related to the MNO M2M pl
 HES shall display cellular issues/events
  
 
-Communication failures shall be logged and reported on HES (metrics)
-Scheduled performance measurement jobs executed by HES to GWs and selected nodes (metrics)
-Comminication infrastructure quality arguments shall be acquired from GWs (metrics)
-GW WAN configuration data shall be retrieved from GWs for Network Operator queries and system logging/reporting (New)
-Feeder power failures and recoveries shall be reported/notified by GWs to HES (How do we know its a feeder failure?)
-All above: argument and data shall be assigned to designated OBIS metrics on GWs, Nodes (need to be defined/allocated)
-Communication failures, retries and recoveries: timeouts, Node/GW, WAN connections
-Communication infrastructure quality:
+Communication failures shall be logged and reported on HES                                                              (metrics)
+Scheduled performance measurement jobs executed by HES to GWs and selected nodes                                        (metrics)
+Comminication infrastructure quality arguments shall be acquired from GWs                                               (metrics)
+GW WAN configuration data shall be retrieved from GWs for Network Operator queries and system logging/reporting         (New)
+Feeder power failures and recoveries shall be reported/notified by GWs to HES                                           (How do we know its a feeder failure?)
+Communication failures, retries and recoveries: timeouts, Node/GW, WAN connections                                      (metrics)
+Communication infrastructure quality:                                                                                   (metrics, duplicate)
 RAT(for WAN) selection and switching: GW (UMTS, HSDPA, HSUPA, HSPA, LTE)
 RAT Service Quality: GW (RSSI, RSRQ, RSRP, RSCP, Tx Pwr Level, Rx Pwr Level)
 QoS: Maximum Uplink/Downlink bit rate
