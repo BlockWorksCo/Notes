@@ -26796,11 +26796,11 @@ HES should do OTA commissioning of the mesh components related to the MNO M2M pl
 HES shall display cellular issues/events
  
 
-Communication failures shall be logged and reported on HES
-Scheduled performance measurement jobs executed by HES to GWs and selected nodes
-Comminication infrastructure quality arguments shall be acquired from GWs
-GW WAN configuration data shall be retrieved from GWs for Network Operator queries and system logging/reporting
-Feeder power failures and recoveries shall be reported/notified by GWs to HES
+Communication failures shall be logged and reported on HES (metrics)
+Scheduled performance measurement jobs executed by HES to GWs and selected nodes (metrics)
+Comminication infrastructure quality arguments shall be acquired from GWs (metrics)
+GW WAN configuration data shall be retrieved from GWs for Network Operator queries and system logging/reporting (New)
+Feeder power failures and recoveries shall be reported/notified by GWs to HES (How do we know its a feeder failure?)
 All above: argument and data shall be assigned to designated OBIS metrics on GWs, Nodes (need to be defined/allocated)
 Communication failures, retries and recoveries: timeouts, Node/GW, WAN connections
 Communication infrastructure quality:
@@ -26835,7 +26835,8 @@ Gateway operations:
 - Software version - AT+CGMR
 - determine server ping time.
 - determine channel performance.
-
+- New CoAP request to supply identity.
+- New CoAP request to supply configuration info (hash, but could be considered to be hash of config module for "modem").
 
 
 
