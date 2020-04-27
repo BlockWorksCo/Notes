@@ -26829,6 +26829,7 @@ Gateway operations:
 - Read IMSI(s) (AT+CIMI)
 - Read IMEI (AT+CGSN).
 - Read ICCID (AT+CCID?)
+- Read RSSI (AT+CSQ?)
 - Name of manufacturer - AT+CGMI
 - Model number - AT+CGMM
 - Software version - AT+CGMR
