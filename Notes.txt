@@ -26990,6 +26990,20 @@ RSSI-target     0.128.0.0.10.255
 Actual Channel  0.128.0.0.11.255
 
 
+---------------------------------------------
+
+cat ./teststring.proto
+syntax = "proto2";
+message Test2 {
+  optional string b = 2;
+}
+
+echo b:\"my_testing_string\"|./protoc --encode Test2 teststring.proto>result.out
+
+protoc --encode PassiveBillingPeriod interface/proto/device_meter_config.proto  -Iinterface/proto
+
+
+
 
 
 
