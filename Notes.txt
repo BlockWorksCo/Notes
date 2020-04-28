@@ -27000,13 +27000,20 @@ message Test2 {
 
 echo b:\"my_testing_string\"|./protoc --encode Test2 teststring.proto>result.out
 
-put this into a file "t"
+put this into a file "t":
 activationTime: 123
 day: 23
 periodLength: EVEN_MONTHLY
 
 
 cat t | protoc --encode PassiveBillingPeriod interface/proto/device_meter_config.proto  -Iinterface/proto
+
+cat t | protoc --encode PassiveBillingPeriod interface/proto/device_meter_config.proto  -Iinterface/proto | od -t x1
+
+
+ODD_MONTHLY:  "08 7b 10 17 18 03"
+EVEN_MONTHLY: "08 7b 10 17 18 02"
+MONTHLY:      "08 7b 10 17 18 01"
 
 
 
