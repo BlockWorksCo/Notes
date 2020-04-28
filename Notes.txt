@@ -26840,7 +26840,11 @@ Gateway operations:
 - New CoAP request to supply configuration info (hash, but could be considered to be hash of config module for "modem").
 
 
+---------------------
+cellular signal quality:
 
+RSRQ, RSSI, etc
+https://www.cablefree.net/wirelesstechnology/4glte/rsrp-rsrq-measurement-lte/
 
 
 -----------------------------
