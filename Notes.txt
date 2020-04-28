@@ -26893,6 +26893,70 @@ Passive Calendar read response
 2020-04-27 14:09:26.106 #1   0000000000000003 <log> 1:27:54.592 [debug] [        hdlc] {     hdlc}: rx: (3/3): 11021101d99e7e
 
 
+<HDLC len="36" >
+<TargetAddress Value="1" />
+<SourceAddress Value="1" />
+<!--I frame.-->
+<FrameType Value="96" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="129" />
+    <Result>
+      <Data>
+        <Array Qty="1" >
+          <Structure Qty="8" >
+            <OctetString Value="01" />
+            <UInt8 Value="1" />
+            <UInt8 Value="1" />
+            <UInt8 Value="2" />
+            <UInt8 Value="1" />
+            <UInt8 Value="1" />
+            <UInt8 Value="2" />
+            <UInt8 Value="1" />
+          </Structure>
+        </Array>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+
+<HDLC len="36" >
+<TargetAddress Value="1" />
+<SourceAddress Value="1" />
+<!--I frame.-->
+<FrameType Value="96" />
+<PDU>
+<GetResponse>
+  <GetResponseNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="129" />
+    <Result>
+      <Data>
+        <Array Qty="1" >
+          <Structure Qty="8" >
+            <OctetString Value="01" />
+            <UInt8 Value="2" />
+            <UInt8 Value="1" />
+            <UInt8 Value="2" />
+            <UInt8 Value="1" />
+            <UInt8 Value="1" />
+            <UInt8 Value="2" />
+            <UInt8 Value="1" />
+          </Structure>
+        </Array>
+      </Data>
+    </Result>
+  </GetResponseNormal>
+</GetResponse>
+</PDU>
+</HDLC>
+
+
+
 
 
 
