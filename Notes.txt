@@ -27025,8 +27025,12 @@ billingPeriod: {
     periodLength: EVEN_MONTHLY
 }
 
+
 cat t | protoc --encode MeterConfigMessage interface/proto/device_meter_config.proto  -Iinterface/proto | od -t x1
 
+ODD_MONTHLY:  "1a 06 08 7b 10 17 18 03"
+EVEN_MONTHLY: "1a 06 08 7b 10 17 18 02"
+MONTHLY:      "1a 06 08 7b 10 17 18 01"
 
 
 
