@@ -27017,7 +27017,15 @@ MONTHLY:      "08 7b 10 17 18 01"
 
 
 
+------------------------------------------------------
 
+billingPeriod: {
+    activationTime: 123
+    day: 23
+    periodLength: EVEN_MONTHLY
+}
+
+cat t | protoc --encode MeterConfigMessage interface/proto/device_meter_config.proto  -Iinterface/proto | od -t x1
 
 
 
