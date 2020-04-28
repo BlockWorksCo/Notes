@@ -26964,6 +26964,17 @@ Attribute 4 - active True
 2020-04-28 12:05:52.860 #1   0000000000000003 <log> 0:45:30.590 [debug] [        hdlc] {     hdlc}: rx: (2/3): 01020809010111011101110211011101
 2020-04-28 12:05:52.860 #1   0000000000000003 <log> 0:45:30.590 [debug] [        hdlc] {     hdlc}: rx: (3/3): 110211012e907e
 
+------------------------------------------
+time from meter and node.
+
+"coap_request --time-get" and:
+"coap_request.py --device "USS 0000008" --device-op GET 8 0.0.1.0.0.255 2"
+
+2020-04-28 09:13:11,921 ctrlport : Connecting to ctrlporthub on localhost:4000
+Result 1/1: 14 B: b'090c07e4041c020a0b2eff014a00'
+            datetime-octet-string { 2020-04-28T10:11:46 dev 330 status: 0x0 }
+
+
 
 
 
