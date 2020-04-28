@@ -27000,7 +27000,12 @@ message Test2 {
 
 echo b:\"my_testing_string\"|./protoc --encode Test2 teststring.proto>result.out
 
-protoc --encode PassiveBillingPeriod interface/proto/device_meter_config.proto  -Iinterface/proto
+activationTime:123
+day:23
+BillingPeriodLength:EVEN_MONTHLY
+
+
+echo activationTime:0 | protoc --encode PassiveBillingPeriod interface/proto/device_meter_config.proto  -Iinterface/proto
 
 
 
