@@ -27179,6 +27179,46 @@ DLMS process finished.
 ** dlmspipe task waiting to be triggered (30000) **
 Postpone device hash propagation, node isn't logged in
 
+------------------------------------
+
+Set 0.0.15.0.0.255 attribute 4 (day of month))
+Set 0.0.15.0.0.255 ic 22 attr 4 valueLen 17 B
+tx unencrypted: (1/2): c10181001600000f0000ff0400010102
+tx unencrypted: (2/2): 0209040000000009050000001700
+tx: (1/1): 7e
+tx: (1/1): a03d
+tx: (1/1): 03
+tx: (1/1): 61
+tx: (1/1): 54
+tx: (1/1): 8665
+tx: (1/1): e6e600
+tx: (1/4): c92f3000003a9fa5277030a65723ba47
+tx: (2/4): a27b2ea063664577199166dd7ebe696b
+tx: (3/4): cc7de3e20a65bff987770b920473d052
+tx: (4/4): df
+tx: (1/1): 8018
+tx: (1/1): 7e
+** Giving s_responseSem to start the timeout cycle... **
+ -- waiting on s_dlmsSemaphore for 100000ms --
+Restarting HDLC timeout due to HDLC send operation
+** Waiting for HDLC event (60000ms) **
+ACTION_WAIT_FOR_RESPONSE
+rx: (1/3): 7ea02361037477cfe6e700cd15300000
+rx: (2/3): 0729d69c0ff051b5a80fd62fbf0fbd8c
+rx: (3/3): b175802a7e
+HDLC_TYPE_I
+Passing IFrame up the stack to the DLMS task.
+!! Result == ResultOK !! 
+** Waiting for HDLC event (60000ms) **
+Encrypted:: (1/2): 153000000729d69c0ff051b5a80fd62f
+Encrypted:: (2/2): bf0fbd8cb175
+rx decrypted: (1/1): c5018100
+DLMS result is 0 bytes with code 0
+dlmsReceiveCb called with s_rxRes=0
+** processDlmsPayload (0) **
+
+
+
 
 
 
