@@ -27218,6 +27218,109 @@ dlmsReceiveCb called with s_rxRes=0
 ** processDlmsPayload (0) **
 
 
+----------------------------------------
+
+
+
+
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [ info] [        dtls] {     dtls}: Session 2: Timeout (last tx 19 s ago, user triggered: no)
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [ WARN] [        dtls] {     dtls}: Session 2: Too many timeouts, giving up
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [ info] [       login] {     dtls}: DTLS negotiation timeout, restarting login sequence
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [debug] [       login] {     dtls}: Changing state: negotiating DTLS -> wait
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [debug] [ meter/genus] {   device}: Configure BillingPeriod step 0 
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [debug] [ meter/genus] {   device}: Set 0.0.15.0.137.255 attribute 4 (day of month))
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [debug] [        dlms] {   device}: Set 0.0.15.0.137.255 ic 22 attr 4 valueLen 17 B
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [debug] [        dlms] {   device}: tx unencrypted: (1/2): c10181001600000f0089ff0400010102
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.833 [debug] [        dlms] {   device}: tx unencrypted: (2/2): 0209040000000009050000001700
+2020-04-29 15:47:37.762 #26  001bc50c600677b8 <log> 0:01:21.834 [debug] [ uplink-tun6] { schedule}: Sending keepalive message
+2020-04-29 15:47:37.763 #26  001bc50c600677b8 <log> 0:01:21.834 [debug] [        icmp] { schedule}: ICMPv6 unicast to fd00::1, Echo request (-), 4 B
+2020-04-29 15:47:37.763 #26  001bc50c600677b8 <log> 0:01:21.834 [debug] [          ip] { schedule}: Send IP on uplink, 8 B, type 58, ttl 32: fdaa:1865:6aee:7:21b:c50c:6006:77b8 -> fd00::1
+2020-04-29 15:47:37.763 #26  001bc50c600677b8 <log> 0:01:21.834 [debug] [   ipv4/core] {uplink_tx}: eth_up: tx 192.168.2.240 -> 13.232.35.150 56B proto=17
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.884 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.884 [debug] [        hdlc] {   device}: tx: (1/1): a03d
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.884 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/1): 61
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/1): 54
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/1): 8665
+2020-04-29 15:47:37.813 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/4): c92f3000003b7f562dfbf9e5d7db5786
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (2/4): ec65d4abbfeb628e8b09e3879d2f80b2
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (3/4): 0d67a5d4c707a0a85db362a1249c498e
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (4/4): bd
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/1): ff5b
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.885 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.886 [debug] [        hdlc] {   device}: ** Giving s_responseSem to start the timeout cycle... **
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.886 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 100000ms --
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.886 [debug] [        hdlc] {     hdlc}: Restarting HDLC timeout due to HDLC send operation
+2020-04-29 15:47:37.814 #26  001bc50c600677b8 <log> 0:01:21.886 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-04-29 15:47:37.896 #26  001bc50c600677b8 <log> 0:01:21.967 [debug] [   ipv4/core] {socketUplink}: eth_up: rx 13.232.35.150 -> 192.168.2.240 56B proto=17
+2020-04-29 15:47:37.896 #26  001bc50c600677b8 <log> 0:01:21.967 [debug] [    ipv4/udp] {socketUplink}: Got UDP 13.232.35.150:8050 -> 192.168.2.240:50412
+2020-04-29 15:47:37.896 #26  001bc50c600677b8 <log> 0:01:21.967 [debug] [ uplink-tun6] {socketUplink}: Got IPv6 packet on eth_up from 13.232.35.150:8050 48B
+2020-04-29 15:47:37.896 #26  001bc50c600677b8 <log> 0:01:21.967 [debug] [        icmp] {socketUplink}: ICMPv6 unicast from fd00::1, Echo reply (-), 4 B
+2020-04-29 15:47:37.896 #26  001bc50c600677b8 <log> 0:01:21.967 [debug] [   icmp/echo] {socketUplink}: Echo Reply from: fd00::1, id: 0xabcd, seq: 2, ICMP payload size: 4
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea02361037477cfe6e700cd15300000
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: rx: (2/3): 081f1d752f22114e40a388741e21ec69
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: rx: (3/3): fa8e798e7e
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: HDLC_TYPE_I
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: Passing IFrame up the stack to the DLMS task.
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.096 [debug] [        hdlc] {     hdlc}: !! Result == ResultOK !! 
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [        dlms] {     dlms}: Encrypted:: (1/2): 15300000081f1d752f22114e40a38874
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [        dlms] {     dlms}: Encrypted:: (2/2): 1e21ec69fa8e
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [        dlms] {     dlms}: rx decrypted: (1/1): c5018100
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2020-04-29 15:47:38.026 #26  001bc50c600677b8 <log> 0:01:22.097 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+
+
+
+
+
+
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [    dlmspipe] { dlmspipe}: ** dlmspipe task triggered **
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [    dlmspipe] { dlmspipe}: DLMS process finished.
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [    dlmspipe] { dlmspipe}: ** dlmspipe task waiting to be triggered (30000) **
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [ meter/genus] {   device}: Configure BillingPeriod step 1 
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [ meter/genus] {   device}: Set 1.0.0.8.6.255 attribute 2 (periodLength)
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [        dlms] {   device}: Set 1.0.0.8.6.255 ic 1 attr 2 valueLen 2 B
+2020-04-29 15:47:48.762 #26  001bc50c600677b8 <log> 0:01:32.833 [debug] [        dlms] {   device}: tx unencrypted: (1/1): c1018100010100000806ff02001103
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): a02e
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): 03
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): 61
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): 76
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): fa81
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): e6e600
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/3): c9203000003b8008b0aea0ed20eb406e
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (2/3): 0fcdb6207b77105e20b9e326eabfc50f
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (3/3): dedd
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): 2a08
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: tx: (1/1): 7e
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {   device}: ** Giving s_responseSem to start the timeout cycle... **
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 100000ms --
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {     hdlc}: Restarting HDLC timeout due to HDLC send operation
+2020-04-29 15:47:48.814 #26  001bc50c600677b8 <log> 0:01:32.885 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-04-29 15:47:49.020 #26  001bc50c600677b8 <log> 0:01:33.089 [debug] [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+2020-04-29 15:47:49.020 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: rx: (1/3): 7ea0236103966b0be6e700cd15300000
+2020-04-29 15:47:49.020 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: rx: (2/3): 08203c234ee6f81d99e073797acf1b63
+2020-04-29 15:47:49.020 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: rx: (3/3): e6b454a57e
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: HDLC_TYPE_I
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: Passing IFrame up the stack to the DLMS task.
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: !! Result == ResultOK !! 
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.090 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [        dlms] {     dlms}: Encrypted:: (1/2): 1530000008203c234ee6f81d99e07379
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [        dlms] {     dlms}: Encrypted:: (2/2): 7acf1b63e6b4
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [        dlms] {     dlms}: rx decrypted: (1/1): c5018100
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [        dlms] {     dlms}: DLMS result is 0 bytes with code 0
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
+2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
+
+
+
+
+
+
 
 
 
