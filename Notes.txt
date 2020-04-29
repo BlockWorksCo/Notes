@@ -27032,6 +27032,153 @@ ODD_MONTHLY:  "1a 06 08 7b 10 17 18 03"
 EVEN_MONTHLY: "1a 06 08 7b 10 17 18 02"
 MONTHLY:      "1a 06 08 7b 10 17 18 01"
 
+------------------------------------------
+
+Set 0.0.15.0.0.255 attribute 4 (day of month))
+Set 0.0.15.0.0.255 ic 22 attr 4 valueLen 17 B
+tx unencrypted: (1/2): c10181001600000f0000ff0400010102
+tx unencrypted: (2/2): 0209040000000009050000001000
+Login state: wait, server: [fd00::1]:5684
+Agent Mode: GatewayOnly, ifaces up: uplink lowpan eth4
+TASK                      now blocks    max  total  calls
+terminal                 6654     32   6994   8785     79
+dtls                     4020     12   4112  16528     41
+device                   2335     22   3141  14322    219
+schedule                  492     11    748   2354     38
+uplink_tx                  80      1    196    712      6
+eth_up: tx 192.168.2.240 -> 13.232.35.150 56B proto=17
+FILE                      now blocks    max  total  calls
+wolfssl_funcs            4544     20   4544   8764     33
+ctrlport                 4136      2   4136   4136      2
+dlms                     2070     12   2300  16037    140
+device-dlms              1264      2   1374   1540     14
+schedule_service          512     16    512    992     31
+GLOBAL                  13509     77  14130  79928    866
+Sending keepalive message
+RPL: attached as BR, inst 0, rank 128, dag fdaa:1865:6aee:7:21b:c50c:6006:77b8 v.240, pp ::, hop 0, rout
+Number of dags: 1
+DAG prefix                ver DODAG-ID
+  0 fdaa:1865:6aee:7::    240 fdaa:1865:6aee:7:21b:c50c:6006:77b8
+Neighbors: 0, local: 0. Parents: 0, preferred: 0
+ RPL route list: 0 entries using 0 B (0 B/entry)
+ICMPv6 unicast to fd00::1, Echo request (-), 4 B
+Send IP on uplink, 8 B, type 58, ttl 32: fdaa:1865:6aee:7:21b:c50c:6006:77b8 -> fd00::1
+eth_up: tx 192.168.2.240 -> 13.232.35.150 56B proto=17
+Connect HDLC link
+tx: (1/1): 7e
+tx: (1/1): a020
+tx: (1/1): 03
+tx: (1/1): 61
+tx: (1/1): 93
+tx: (1/1): 1b9f
+tx: (1/2): 8180140502015e0602015e0704000000
+tx: (2/2): 01080400000001
+tx: (1/1): 51af
+tx: (1/1): 7e
+** Giving s_responseSem to start the timeout cycle... **
+ -- waiting on s_dlmsSemaphore for 100000ms --
+Restarting HDLC timeout due to HDLC send operation
+** Waiting for HDLC event (60000ms) **
+ACTION_WAIT_FOR_RESPONSE
+rx: (1/3): 7ea020610373059e8180140502015e06
+rx: (2/3): 02015e07040000000108040000000151
+rx: (3/3): af7e
+HDLC_TYPE_UA
+tx: (1/1): 7e
+tx: (1/1): a03d
+tx: (1/1): 03
+tx: (1/1): 61
+tx: (1/1): 10
+tx: (1/1): a661
+tx: (1/1): e6e600
+tx: (1/4): c92f3000003a67c5bcc706ef0e322542
+tx: (2/4): 69ae5da03773b7ff06817ad76da3f025
+tx: (3/4): c39fbae34ae643df4f8707f7bdb41710
+tx: (4/4): 82
+tx: (1/1): 7852
+tx: (1/1): 7e
+** Giving s_responseSem to start the timeout cycle... **
+!! Result == ResultOK !! 
+** Waiting for HDLC event (60000ms) **
+Restarting HDLC timeout due to HDLC send operation
+** Waiting for HDLC event (60000ms) **
+}: eth_up: rx 13.232.35.150 -> 192.168.2.240 56B proto=17
+}: Got UDP 13.232.35.150:8050 -> 192.168.2.240:50412
+}: Got IPv6 packet on eth_up from 13.232.35.150:8050 48B
+}: ICMPv6 unicast from fd00::1, Echo reply (-), 4 B
+}: Echo Reply from: fd00::1, id: 0xabcd, seq: 2, ICMP payload size: 4
+}: eth_up: rx 13.232.35.150 -> 192.168.2.240 56B proto=17
+}: Got UDP 13.232.35.150:8050 -> 192.168.2.240:50412
+}: Got IPv6 packet on eth_up from 13.232.35.150:8050 48B
+}: ICMPv6 unicast from fd00::1, Echo reply (-), 4 B
+}: Echo Reply from: fd00::1, id: 0xabcd, seq: 3, ICMP payload size: 4
+}: eth_up: rx 13.232.35.150 -> 192.168.2.240 56B proto=17
+}: Got UDP 13.232.35.150:8050 -> 192.168.2.240:50412
+}: Got IPv6 packet on eth_up from 13.232.35.150:8050 48B
+}: ICMPv6 unicast from fd00::1, Echo reply (-), 4 B
+}: Echo Reply from: fd00::1, id: 0xabcd, seq: 4, ICMP payload size: 4
+ACTION_WAIT_FOR_RESPONSE
+rx: (1/2): 7ea01061033068a2e6e7000e060501da
+rx: (2/2): 427e
+HDLC_TYPE_I
+Passing IFrame up the stack to the DLMS task.
+!! Result == ResultOK !! 
+** Waiting for HDLC event (60000ms) **
+Error Response from meter access: access denied through authorisation reason
+processXDlmsApdu(4 B): failed
+DLMS result is 0 bytes with code 12
+dlmsReceiveCb called with s_rxRes=0
+** processDlmsPayload (12) **
+Broken response: check failed
+Error from USS 0000008: comm: broken rsp
+fsOpen failed (/mq/000.mq, newfile): Permission denied
+Failed to create file /mq/000.mq: permission denied
+MeterConfiguration result: failure
+Reason: Failed response from meter
+Response produced for unknown session id: 321
+CoAP sessions: 0 in, 0 out
+Disconnect HDLC link
+tx: (1/1): 7e
+tx: (1/1): a007
+tx: (1/1): 03
+tx: (1/1): 61
+tx: (1/1): 53
+tx: (1/1): 6581
+tx: (1/1): 7e
+** Giving s_responseSem to start the timeout cycle... **
+ -- waiting on s_dlmsSemaphore for 100000ms --
+Restarting HDLC timeout due to HDLC send operation
+** Waiting for HDLC event (60000ms) **
+ACTION_WAIT_FOR_RESPONSE
+rx: (1/1): 7ea00761037377467e
+HDLC_TYPE_UA
+HDLC link disconnected
+!! Result == ResultOK !! 
+** Waiting for HDLC event (60000ms) **
+DLMS result is 0 bytes with code 0
+dlmsReceiveCb called with s_rxRes=12
+** processDlmsPayload (0) **
+Error ceased from USS 0000008
+fsOpen failed (/mq/000.mq, newfile): Permission denied
+Failed to create file /mq/000.mq: permission denied
+-- unlocking HDLC --
+disconnectLink 0x0
+-- waiting on the userQueue for -1ms --
+Scheduling keepalive in 1s
+Sending keepalive message
+ICMPv6 unicast to fd00::1, Echo request (-), 4 B
+Send IP on uplink, 8 B, type 58, ttl 32: fdaa:1865:6aee:7:21b:c50c:6006:77b8 -> fd00::1
+eth_up: tx 192.168.2.240 -> 13.232.35.150 56B proto=17
+}: eth_up: rx 13.232.35.150 -> 192.168.2.240 56B proto=17
+}: Got UDP 13.232.35.150:8050 -> 192.168.2.240:50412
+}: Got IPv6 packet on eth_up from 13.232.35.150:8050 48B
+}: ICMPv6 unicast from fd00::1, Echo reply (-), 4 B
+}: Echo Reply from: fd00::1, id: 0xabcd, seq: 5, ICMP payload size: 4
+** dlmspipe task triggered **
+DLMS process finished.
+** dlmspipe task waiting to be triggered (30000) **
+Postpone device hash propagation, node isn't logged in
+
 
 
 
