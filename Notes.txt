@@ -27316,6 +27316,11 @@ dlmsReceiveCb called with s_rxRes=0
 2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [  meter/dlms] {     dlms}: dlmsReceiveCb called with s_rxRes=0
 2020-04-29 15:47:49.021 #26  001bc50c600677b8 <log> 0:01:33.091 [debug] [  meter/dlms] {   device}: ** processDlmsPayload (0) **
 
+----------------------------------------
+
+viewAreaElement.addEventListener('scroll', debounceScroll, true);
+
+
 
 
 
