@@ -27341,6 +27341,13 @@ viewAreaElement.addEventListener('scroll', debounceScroll, true);
     ./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config modem.password cyan
     ./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config modem.authmethod PAP
     ./tools/c4-tools/coap_request.py --ctrlporthub :4000 --restart
+----------------------
+
+Add-Ons need to be reported for new Tangedco functionality
+
+For all new metering functionality such as multi-phase-relays and UI functionality, the Agent should identify the meter and report the appropriate (new) Add-Ons.
+This will enable the NMS&SMA to identify the available functionality for the chosen meter and filter functionality appropriately.
+
 
 
 
