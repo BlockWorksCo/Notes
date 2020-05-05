@@ -27352,9 +27352,8 @@ This will enable the NMS&SMA to identify the available functionality for the cho
 --------------------------------------
 
 configItem: {
-    activationTime: 123
-    day: 23
-    periodLength: EVEN_MONTHLY
+    dataType: BILLING_PERIOD
+    getType: ACTIVE_SET
 }
 
 
