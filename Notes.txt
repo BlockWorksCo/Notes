@@ -27349,6 +27349,21 @@ For all new metering functionality such as multi-phase-relays and UI functionali
 This will enable the NMS&SMA to identify the available functionality for the chosen meter and filter functionality appropriately.
 
 
+--------------------------------------
+
+configItem: {
+    activationTime: 123
+    day: 23
+    periodLength: EVEN_MONTHLY
+}
+
+
+cat t | protoc --encode GetMeterConfigRequest interface/proto/device_meter_config.proto  -Iinterface/proto | od -t x1
+
+ODD_MONTHLY:  "1a 06 08 7b 10 17 18 03"
+EVEN_MONTHLY: "1a 06 08 7b 10 17 18 02"
+MONTHLY:      "1a 06 08 7b 10 17 18 01"
+
 
 
 
