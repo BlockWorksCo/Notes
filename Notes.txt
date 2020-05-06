@@ -27483,6 +27483,13 @@ BUS_RegBitRead (bit=3, addr=0x400e4090) at build/3pp/flex/platform/emlib/inc/em_
 (gdb) 
 
 
+----------------------
+
+Never gets past this:
+ /* Ensure selected oscillator is enabled, waiting for it to stabilize */
+ CMU_OscillatorEnable(osc, true, true);
+
+
 
 
 
