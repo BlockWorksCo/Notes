@@ -27458,6 +27458,32 @@ Error: init mode failed (unable to connect to the target)
 in procedure 'init' 
 in procedure 'ocd_bouncer'
 
+---------------------------------------
+
+
+Breakpoint 3, Reset_Handler () at src/hw/cortex-m3/startup.c:92
+92	  _start();
+(gdb) del 3
+(gdb) c
+Continuing.
+^C
+Program received signal SIGINT, Interrupt.
+BUS_RegBitRead (bit=3, addr=0x400e4090) at build/3pp/flex/platform/emlib/inc/em_bus.h:194
+194	  return *(volatile uint32_t *)aliasAddr;
+(gdb) where
+#0  BUS_RegBitRead (bit=3, addr=0x400e4090) at build/3pp/flex/platform/emlib/inc/em_bus.h:194
+#1  CMU_OscillatorEnable (osc=cmuOsc_HFXO, enable=enable@entry=true, wait=wait@entry=true)
+    at build/3pp/flex/platform/emlib/src/em_cmu.c:3716
+#2  0x0004dd4e in CMU_ClockSelectSet (clock=clock@entry=cmuClock_HF, ref=ref@entry=cmuSelect_HFXO)
+    at build/3pp/flex/platform/emlib/src/em_cmu.c:2643
+#3  0x00039c84 in halInitChipSpecific () at src/platform/init/platform_efr32.c:114
+#4  platformInit () at src/platform/init/platform_efr32.c:137
+#5  0x0003a172 in cnd_agentInit (agentOptions=agentOptions@entry=0x0) at src/terminal/agent.c:90
+#6  0x000101ac in main (argc=<optimized out>, argv=<optimized out>) at src/terminal/main.c:17
+(gdb) 
+
+
+
 
 
 
