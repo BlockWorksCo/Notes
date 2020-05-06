@@ -27489,6 +27489,8 @@ Breakpoint 7, CMU_ClockSelectSet (clock=clock@entry=cmuClock_HF, ref=ref@entry=c
     at build/3pp/flex/platform/emlib/src/em_cmu.c:2643
 2643	      CMU_OscillatorEnable(osc, true, true);
 
+cmuClock_HF
+
 Never gets to this:
 flashWaitStateMax()
 
