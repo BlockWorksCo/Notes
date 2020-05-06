@@ -27482,13 +27482,15 @@ BUS_RegBitRead (bit=3, addr=0x400e4090) at build/3pp/flex/platform/emlib/inc/em_
 #6  0x000101ac in main (argc=<optimized out>, argv=<optimized out>) at src/terminal/main.c:17
 (gdb) 
 
+build/3pp/flex/platform/emlib/src/em_cmu.c:3716
 
-----------------------
+This never completes:
+Breakpoint 7, CMU_ClockSelectSet (clock=clock@entry=cmuClock_HF, ref=ref@entry=cmuSelect_HFXO)
+    at build/3pp/flex/platform/emlib/src/em_cmu.c:2643
+2643	      CMU_OscillatorEnable(osc, true, true);
 
-Never gets past this:
- /* Ensure selected oscillator is enabled, waiting for it to stabilize */
- CMU_OscillatorEnable(osc, true, true);
-
+Never gets to this:
+flashWaitStateMax()
 
 
 
