@@ -27396,6 +27396,33 @@ control        0x2                 2
 
 
 
+(GOOD)
+(gdb) info reg
+r0             0x40052000          1074077696
+r1             0x80000000          -2147483648
+r2             0x287b9             165817
+r3             0x20020000          537001984
+r4             0xbbf5              48117
+r5             0xa5a5a5a5          -1515870811
+r6             0xa5a5a5a5          -1515870811
+r7             0xa5a5a5a5          -1515870811
+r8             0xa5a5a5a5          -1515870811
+r9             0xa5a5a5a5          -1515870811
+r10            0xa5a5a5a5          -1515870811
+r11            0xa5a5a5a5          -1515870811
+r12            0x7fffffff          2147483647
+sp             0x20020000          0x20020000
+lr             0xffffffff          -1
+pc             0x287b8             0x287b8 <Reset_Handler>
+xPSR           0x1000000           16777216
+fpscr          0x0                 0
+msp            0x2001ffe0          0x2001ffe0
+psp            0x20020000          0x20020000
+primask        0x1                 1
+basepri        0xa0                -96
+faultmask      0x0                 0
+control        0x2                 2
+
 
 
 
