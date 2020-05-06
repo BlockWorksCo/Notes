@@ -27424,6 +27424,40 @@ faultmask      0x0                 0
 control        0x2                 2
 
 
+(Bad, will boot to bootloader, crashes in Reset_Handler in main fw)
+adapter speed: 1000 kHz
+Info : The selected transport took over low-level target control. The results might dif
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : clock speed 950 kHz
+Info : STLINK v2 JTAG v27 API v2 SWIM v6 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 3.256021                                 <-------
+Info : efm32.cpu: hardware has 6 breakpoints, 4 watchpoints
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x0fe10000 msp: 0x20000400
+Info : accepting 'gdb' connection on tcp/3333
+Info : detected part: EFR32FG12P Flex Gecko, rev 16
+Info : flash size = 1024kbytes
+Info : flash page size = 2048bytes
+target halted due to debug-request, current mode: Thread 
+xPSR: 0x01000000 pc: 0x0fe10000 msp: 0x20000400
+
+
+(Good, running, no debug)
+adapter speed: 1000 kHz
+Info : The selected transport took over low-level target control. The res
+ differ compared to plain JTAG/SWD
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : Unable to match requested speed 1000 kHz, using 950 kHz
+Info : clock speed 950 kHz
+Info : STLINK v2 JTAG v27 API v2 SWIM v6 VID 0x0483 PID 0x3748
+Info : using stlink api v2
+Info : Target voltage: 1.579568                                     <---- 
+Error: init mode failed (unable to connect to the target)
+in procedure 'init' 
+in procedure 'ocd_bouncer'
+
 
 
 
