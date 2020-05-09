@@ -27495,6 +27495,12 @@ Never gets to this:
 flashWaitStateMax()
 
 
+----------------------------------------------
+
+forceRender
+renderView
+case RenderingStates.INITIAL
+
 
 
 
