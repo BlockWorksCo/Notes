@@ -27501,7 +27501,8 @@ forceRender
 renderView
 case RenderingStates.INITIAL
 
-
+this.pdfViewer object.
+div id="viewer" is zero height, should be ~12800px.
 
 
 
