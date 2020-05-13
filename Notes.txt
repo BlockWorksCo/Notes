@@ -27742,6 +27742,11 @@ With cable but with no ctrlporthub
 $7 = 221
 
 
+---------------------------------------------
+
+is cross-talk happening before buffer so is clean after it?
+try loopback behaviour
+
 
 
 
