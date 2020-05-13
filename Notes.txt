@@ -27671,6 +27671,7 @@ tx: (1/1): 7e
 
 We can see an entire transmitted message being received, byte for byte that would pass the CRC
 check and be parsed as a correct HDLC message... but it wouldn't make much sense to the upperlevel).
+also evidence there of messages coming from the meter that are also garbled.
 
 
 
