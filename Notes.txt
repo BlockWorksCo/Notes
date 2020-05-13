@@ -27615,6 +27615,64 @@ $1 = 6
 $3 = 218
 
 
+2020-05-13 12:22:23.775 #1   001bc50c6006f4cd <log> 0:01:06.065 [debug] [        hdlc] {     dlms}: Connect HDLC link
+2020-05-13 12:22:23.775 #1   001bc50c6006f4cd <log> 0:01:06.072 [debug] [        hdlc] {     dlms}: tx: (1/1): 7e
+2020-05-13 12:22:23.775 #1   001bc50c6006f4cd <log> 0:01:06.078 [debug] [        hdlc] {     dlms}: tx: (1/1): a020
+2020-05-13 12:22:23.775 #1   001bc50c6006f4cd <log> 0:01:06.085 [debug] [        hdlc] {     dlms}: tx: (1/1): 03
+2020-05-13 12:22:23.775 #1   001bc50c6006f4cd <log> 0:01:06.091 [debug] [        hdlc] {     dlms}: tx: (1/1): 03
+2020-05-13 12:22:23.775 #1   001bc50c6006f4cd <log> 0:01:06.098 [debug] [        hdlc] {     dlms}: tx: (1/1): 93
+2020-05-13 12:22:23.816 #1   001bc50c6006f4cd <log> 0:01:06.104 [debug] [        hdlc] {     dlms}: tx: (1/1): fec9
+2020-05-13 12:22:23.816 #1   001bc50c6006f4cd <log> 0:01:06.111 [debug] [        hdlc] {     dlms}: tx: (1/2): 8180140502015e0602015e0704000000
+2020-05-13 12:22:23.816 #1   001bc50c6006f4cd <log> 0:01:06.120 [debug] [        hdlc] {     dlms}: tx: (2/2): 01080400000001
+2020-05-13 12:22:23.816 #1   001bc50c6006f4cd <log> 0:01:06.128 [debug] [        hdlc] {     dlms}: tx: (1/1): 51af
+2020-05-13 12:22:23.816 #1   001bc50c6006f4cd <log> 0:01:06.134 [debug] [        hdlc] {     dlms}: tx: (1/1): 7e
+2020-05-13 12:22:23.880 #1   001bc50c6006f4cd <log> 0:01:06.177 [debug] [        hdlc] {     dlms}: ** Giving s_responseSem to start the timeout cycle... **
+2020-05-13 12:22:23.880 #1   001bc50c6006f4cd <log> 0:01:06.187 [debug] [        hdlc] {     hdlc}: Restarting HDLC timeout due to HDLC send operation
+2020-05-13 12:22:23.880 #1   001bc50c6006f4cd <log> 0:01:06.197 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-05-13 12:22:23.880 #1   001bc50c6006f4cd <log> 0:01:06.205 [debug] [        hdlc] {     hdlc}: ACTION_WAIT_FOR_RESPONSE
+2020-05-13 12:22:23.880 #1   001bc50c6006f4cd <log> 0:01:06.213 [debug] [        hdlc] {     hdlc}: rx: (1/1): 7e
+2020-05-13 12:22:23.923 #1   001bc50c6006f4cd <log> 0:01:06.219 [ WARN] [        hdlc] {     hdlc}: Too short frame
+2020-05-13 12:22:23.923 #1   001bc50c6006f4cd <log> 0:01:06.226 [debug] [        hdlc] {     hdlc}:  (Bad result) Passing 0 bytes up the chain.
+2020-05-13 12:22:23.923 #1   001bc50c6006f4cd <log> 0:01:06.235 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-05-13 12:22:23.923 #1   001bc50c6006f4cd <log> 0:01:06.244 [debug] [        hdlc] {     hdlc}: *** We should not receive an event while idling. ***
+2020-05-13 12:22:23.923 #1   001bc50c6006f4cd <log> 0:01:06.254 [debug] [        hdlc] {     hdlc}: ** Waiting for HDLC event (60000ms) **
+2020-05-13 12:22:23.955 #1   001bc50c6006f4cd <log> 0:01:06.263 [ WARN] [        dlms] {     dlms}: Broken HDLC (or timeout receiving response): (7) unexpected end of stream
+2020-05-13 12:22:23.955 #1   001bc50c6006f4cd <log> 0:01:06.274 [debug] [        dlms] {     dlms}: Retry: send timed-out on an AARQ, requesting again
+2020-05-13 12:22:24.037 #1   001bc50c6006f4cd <log> 0:01:06.334 [debug] [        hdlc] {     dlms}: Connect HDLC link
+2020-05-13 12:22:24.037 #1   001bc50c6006f4cd <log> 0:01:06.341 [debug] [        hdlc] {     dlms}: tx: (1/1): 7e
+2020-05-13 12:22:24.037 #1   001bc50c6006f4cd <log> 0:01:06.347 [debug] [        hdlc] {     dlms}: tx: (1/1): a020
+2020-05-13 12:22:24.037 #1   001bc50c6006f4cd <log> 0:01:06.354 [debug] [        hdlc] {     dlms}: tx: (1/1): 03
+2020-05-13 12:22:24.037 #1   001bc50c6006f4cd <log> 0:01:06.360 [debug] [        hdlc] {     dlms}: tx: (1/1): 03
+2020-05-13 12:22:24.037 #1   001bc50c6006f4cd <log> 0:01:06.367 [debug] [        hdlc] {     dlms}: tx: (1/1): 93
+2020-05-13 12:22:24.085 #1   001bc50c6006f4cd <log> 0:01:06.373 [debug] [        hdlc] {     dlms}: tx: (1/1): fec9
+2020-05-13 12:22:24.085 #1   001bc50c6006f4cd <log> 0:01:06.380 [debug] [        hdlc] {     dlms}: tx: (1/2): 8180140502015e0602015e0704000000
+2020-05-13 12:22:24.085 #1   001bc50c6006f4cd <log> 0:01:06.389 [debug] [        hdlc] {     dlms}: tx: (2/2): 01080400000001
+2020-05-13 12:22:24.085 #1   001bc50c6006f4cd <log> 0:01:06.397 [debug] [        hdlc] {     dlms}: tx: (1/1): 51af
+2020-05-13 12:22:24.085 #1   001bc50c6006f4cd <log> 0:01:06.403 [debug] [        hdlc] {     dlms}: tx: (1/1): 7e
+2020-05-13 12:22:24.148 #1   001bc50c6006f4cd <log> 0:01:06.446 [debug] [        hdlc] {     dlms}: ** Giving s_responseSem to start the timeout cycle... **
+
+tx: (1/1): 7e
+tx: (1/1): a020
+tx: (1/1): 03
+tx: (1/1): 03
+tx: (1/1): 93
+tx: (1/1): fec9
+tx: (1/2): 8180140502015e0602015e0704000000
+tx: (2/2): 01080400000001
+tx: (1/1): 51af
+tx: (1/1): 7e
+
+0x2000bfcf <uartBuffer+24>:	0xaf	0x7e	0x7e	0xa0   <0x7e	0xa0	0x20	0x03
+0x2000bfd7 <uartBuffer+32>:	0x03	0x93	0xfe	0xc9	0x81	0x80	0x14	0x05
+0x2000bfdf <uartBuffer+40>:	0x02	0x01	0x5e	0x06	0x02	0x01	0x5e	0x07
+0x2000bfe7 <uartBuffer+48>:	0x04	0x00	0x00	0x00	0x01	0x08	0x04	0x00
+0x2000bfef <uartBuffer+56>:	0x00	0x00	0x01	0x51	0xaf	0x7e>   0x7e	0xa0
+0x2000bff7 <uartBuffer+64>:	0x20	0x03	0x03	0x93	0xfe	0xc9	0x81	0x80
+
+
+
+
+
 
 
 
