@@ -27747,6 +27747,19 @@ $7 = 221
 is cross-talk happening before buffer so is clean after it?
 try loopback behaviour
 
+---------------------------------------------
+
+GStar credentials:
+
+device.dlms.lls_password                 : hello
+device.dlms.hls_key                      : 31313131313131313131313131313131
+device.dlms.encryption_key               : 30313233343536373839414243444546
+device.dlms.authentication_key           : 41314132413341344135413641374138
+device.dlms.FirmwareUpgrade_key          : 30303030303030303030303030303030
+
+
+
+
 
 
 
