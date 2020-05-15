@@ -27759,6 +27759,9 @@ device.dlms.FirmwareUpgrade_key          : 30303030303030303030303030303030
 
 
 
+-----------------------------------------------
+
+connect disconnect flip on Genus.
 
 
 
