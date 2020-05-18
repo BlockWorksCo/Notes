@@ -27765,7 +27765,7 @@ connect disconnect flip on Genus.
 
 -----------------------------------------------
 
-Meter-alarm FB/GD SLA test:
+Meter-alarm FB/LG SLA test:
 - Use server time as a common time.
 - Get time when power-off triggered.
 - get time when LG received.
