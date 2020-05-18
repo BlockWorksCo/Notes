@@ -27770,6 +27770,11 @@ Meter-alarm FB/LG SLA test:
 - Get time when power-off triggered.
 - get time when LG received.
 
+----------------------------------------------
+MEA node comms bug with GStar
+
+- default logLevel to debug
+- try outputting high level as GPIO to debugtx.
 
 
 
