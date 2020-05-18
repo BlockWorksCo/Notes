@@ -27763,6 +27763,12 @@ device.dlms.FirmwareUpgrade_key          : 30303030303030303030303030303030
 
 connect disconnect flip on Genus.
 
+-----------------------------------------------
+
+Meter-alarm FB/GD SLA test:
+- Use server time as a common time.
+- Get time when power-off triggered.
+- get time when LG received.
 
 
 
