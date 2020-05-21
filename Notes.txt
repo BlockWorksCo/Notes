@@ -27809,6 +27809,9 @@ MEA node comms bug with GStar
 without SEND_HDLC_BYTES_ALL_AT_ONCE defined, info-level fails, debug-level works.
 with SEND_HDLC_BYTES_ALL_AT_ONCE, info-level works, debug-level works.
 
+ipa3-bl-insecure:v20.4.0+b18854+g7615a5
+
+
 
 
 
