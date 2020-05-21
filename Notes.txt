@@ -27812,6 +27812,7 @@ with SEND_HDLC_BYTES_ALL_AT_ONCE, info-level works, debug-level works.
 ipa3-bl-insecure:v20.4.0+b18854+g7615a5
 ipa3-gstar-dlms-insecure:v20.4.0+b18854+g7615a5
 
+== release 20.4.0
 
 
 
