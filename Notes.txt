@@ -27794,6 +27794,17 @@ MEA node comms bug with GStar
 - SEND_HDLC_BYTES_ALL_AT_ONCE
 
 
+----------------------------------------
+
+- 3ph from sundby. Turned on, is in prod mode. red flash every 60sec ish before crashing every few minutes.
+
+
+
+
+
+
+
+
 
 
 
