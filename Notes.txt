@@ -27799,6 +27799,8 @@ MEA node comms bug with GStar
 - PROFILE_DISCOVERY_DELAY at 60s
 - SEND_HDLC_BYTES_ALL_AT_ONCE
 - icog10in 3ph test
+- with 5v ftdi instead of 3v3
+- with and without FTDI.
 
 
 
