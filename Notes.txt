@@ -27801,6 +27801,7 @@ MEA node comms bug with GStar
 - icog10in 3ph test
 - with 5v ftdi instead of 3v3
 - with and without FTDI.
+- with ftdi but without ctrlporthub
 
 
 
