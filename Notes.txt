@@ -27833,6 +27833,7 @@ GStar comms issue
 - timing issue that DMA output resolves. Possibly response->request delay (~0.5ms when fail, >1ms when works).
 
 
+Note: STM32 on IPA1 is 5v tolerant.
 
 
 
