@@ -27830,7 +27830,7 @@ GStar comms issue
 - Damaged PFail on node in 3ph causing continuous reboot and no comms.
 - Damaged hex-buffer on 1ph (icog-10) that prevents transmit to meter.
 - Stronger pull-up on rx on line required (or was tha also damaged?) new icog-10s work fine.
-- timing issue that DMA output resolves.
+- timing issue that DMA output resolves. Possibly response->request delay (~0.5ms when fail, >1ms when works).
 
 
 
