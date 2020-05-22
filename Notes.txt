@@ -27823,6 +27823,14 @@ Date:   Fri Mar 27 12:20:43 2020 +0000
 Change done in 89baa287f8 (Meter fw upgrade change for gstar)
 
 
+-----------------------------------------------------------------
+GStar comms issue
+
+- Damaged Tx/Rx on node causing crosstalk, was that node in a 3ph?
+- Damaged PFail on node in 3ph causing continuous reboot and no comms.
+- Damaged hex-buffer on 1ph (icog-10) that prevents transmit to meter.
+- Stronger pull-up on rx on line required (or was tha also damaged?) new icog-10s work fine.
+- timing issue that DMA output resolves.
 
 
 
