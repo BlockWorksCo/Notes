@@ -27835,6 +27835,18 @@ GStar comms issue
 
 Note: STM32 on IPA1 is 5v tolerant.
 
+------------------------------------------------
+
+Release process:
+- Gitlab: repository->tags->new tag.
+- Enter tag name and message with even-numbered tag name & message.
+- Create tag.
+- Repeat for dev tag (odd numbered). Repository->branches->new branch
+- Enter branch name (odd numbered)
+- Create Branch
+- Request build of new branch, CI/CD->pipelines->Run pipeline-> Run for branch, run pipeline
+
+
 
 
 
