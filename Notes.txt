@@ -27855,6 +27855,13 @@ s_sendFirstBreathWhenWeHaveMeterTime
 ------------------
 SMA 2.8C review
 - ...during the <time which> the meter HW and SW are still in flux.
+- The point about FB and LG in the same set not being interpreted as FB is incorrect, 
+- The reverse ordering can happen even with regard to the times (in the case where a time-sync jumped
+it backwards between the two). This is the crux of the problem, times can't be relied upon to make 
+sense in these cases.
+
+
+
 
 
 
