@@ -27852,6 +27852,9 @@ Release process:
 
 s_sendFirstBreathWhenWeHaveMeterTime
 
+------------------
+SMA 2.8C review
+- ...during the <time which> the meter HW and SW are still in flux.
 
 
 
