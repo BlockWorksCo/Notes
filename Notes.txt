@@ -27841,7 +27841,8 @@ Release process:
 - Gitlab: repository->tags->new tag.
 - Enter tag name and message with even-numbered tag name & message.
 - Create tag.
-- Repeat for dev tag (odd numbered). Repository->branches->new branch
+- Repeat for dev tag (odd numbered). 
+- Repository->branches->new branch
 - Create "release/v20.8" branch
 - Enter branch name 
 - Create Branch
