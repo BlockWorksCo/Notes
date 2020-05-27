@@ -27843,7 +27843,7 @@ Release process:
 - Create tag.
 - Repeat for dev tag (odd numbered). 
 - Repository->branches->new branch
-- Create "release/v20.8" branch
+- Create "release/v20.8.x" branch
 - Enter branch name 
 - Create Branch
 - Request build of new branch, CI/CD->pipelines->Run pipeline-> Run for branch, run pipeline
