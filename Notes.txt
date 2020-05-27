@@ -27859,6 +27859,12 @@ SMA 2.8C review
 - The reverse ordering can happen even with regard to the times (in the case where a time-sync jumped
 it backwards between the two). This is the crux of the problem, times can't be relied upon to make 
 sense in these cases.
+-------------------------------------------
+
+- Although our alarm API is controlled by us, the content is not.
+- The MDM, as the consumer of the API needs to know the detail of the meter content (i.e. which bits mean what in the ESW).
+- The node events should be used for a "processed"/"interpreted" view of this data.
+
 
 
 
