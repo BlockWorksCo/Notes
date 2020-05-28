@@ -27871,6 +27871,8 @@ meter alarms doc:
 - "allows the meter *to* clear" 
 - "And, there is no timing information is recorded associated with the alarm."
 - "Meter Discovery and Network Logging" == "Meter discovery and network login"
+- "if the other network elements, such as Gateways and other nodes, power up concurrently due to a system wide power outage, the completion of the meter discovery and the network initialisation/logging in operations could take many hours."
+Its not so much the other Omnimesh network elements that could cause that delay, (tho there is some of that), but cellular outages (which are not uncommon in these areas).
 
 
 
