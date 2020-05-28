@@ -27868,7 +27868,7 @@ sense in these cases.
 ---------------------------------
 meter alarms doc:
 - EWS == ESW
-- 
+- "allows the meter *to* clear" 
 
 
 
