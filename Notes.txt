@@ -27871,7 +27871,8 @@ meter alarms doc:
 - "allows the meter *to* clear" 
 - "And, there is no timing information is recorded associated with the alarm."
 - "Meter Discovery and Network Logging" == "Meter discovery and network login"
-- "if the other network elements, such as Gateways and other nodes, power up concurrently due to a system wide power outage, the completion of the meter discovery and the network initialisation/logging in operations could take many hours."
+- "if the other network elements, such as Gateways and other nodes, power up concurrently due to a system wide power outage, the completion of the meter discovery and 
+the network initialisation/logging in operations could take many hours."
 Its not so much the other Omnimesh network elements that could cause that delay, (tho there is some of that), but cellular outages (which are not uncommon in these areas).
 - ", the time synchronisation process itself would drift the time to the desired point over a number of minutes" 
 This *should* happen, but doesn't. Instead, we set time absolutely, causing time discontinuities (both forward and backward).
