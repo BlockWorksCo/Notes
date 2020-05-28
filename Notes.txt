@@ -27869,6 +27869,8 @@ sense in these cases.
 meter alarms doc:
 - EWS == ESW
 - "allows the meter *to* clear" 
+- "And, there is no timing information is recorded associated with the alarm."
+- "Meter Discovery and Network Logging" == "Meter discovery and network login"
 
 
 
