@@ -27881,6 +27881,12 @@ This *should* happen, but doesn't. Instead, we set time absolutely, causing time
 Hard fault
 BVipa3-gstar-dlms-insecure:v20.8.2+b19934+gc688c2c Hde BFb5b5b5b9@470d2L470d3S2000a508
 
+-----------------------------
+opkg install luci
+ * resolve_conffiles: Existing conffile /etc/config/uhttpd is different from the conffile in the new package. The new conffile will be placed at /etc/config/uhttpd-opkg.
+ * resolve_conffiles: Existing conffile /etc/config/rpcd is different from the conffile in the new package. The new conffile will be placed at /etc/config/rpcd-opkg.
+ * resolve_conffiles: Existing conffile /etc/config/luci is different from the conffile in the new package. The new conffile will be placed at /etc/config/luci-opkg.
+
 
 
 
