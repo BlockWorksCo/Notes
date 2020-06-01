@@ -27888,12 +27888,20 @@ opkg install luci
  * resolve_conffiles: Existing conffile /etc/config/luci is different from the conffile in the new package. The new conffile will be placed at /etc/config/luci-opkg.
 
 -------------------------------------
+Gstar 1ph with Forth board and old devlivered code:
+- PFAIL
+- comms issue with debug/info
+
 Gstar 1ph test with icog10
 - no PFAIL
 - restart on power-restoration.
 
 Gstar 1ph test with Forth i/f board.
 - PFAIL works.
+
+
+./build/host-genus-insecure/bin/blfwupload -ctrlport 5000 -loglevel debug -image build/ipa3-gstar-dlms-insecure/release/agent-ipa3-gstar-dlms-insecure-v20.9.12.image -dev /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0 
+
 
 
 
