@@ -27910,6 +27910,10 @@ unable to test without FTDI plugged in as I currently have no 442 gateway to det
 ./build/host-genus-insecure/bin/blfwupload -ctrlport 5000 -loglevel debug -image build/ipa3-gstar-dlms-insecure/release/agent-ipa3-gstar-dlms-insecure-v20.9.12.image -dev /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0 
 
 
+---------------------------------------------
+
+
+
 
 
 
