@@ -27888,11 +27888,15 @@ opkg install luci
  * resolve_conffiles: Existing conffile /etc/config/luci is different from the conffile in the new package. The new conffile will be placed at /etc/config/luci-opkg.
 
 -------------------------------------
-Gstar 1ph with Forth board and old devlivered code:
+GStar 1ph upgraded to latest image
+Gstar 3ph left on old firmware
+
+Gstar 1ph & 3ph with Forth board and old devlivered code:
 - PFAIL
+- Alarm ISR seen on power-fail, but could be due to power-fail and not controlled?
 - comms issue with debug/info
 
-Gstar 1ph test with icog10
+Gstar 1ph/3ph test with icog10/icog20
 - no PFAIL
 - restart on power-restoration.
 
