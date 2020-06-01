@@ -27900,7 +27900,7 @@ Gstar 1ph/3ph test with icog10/icog20
 - no PFAIL
 - restart on power-restoration.
 
-Gstar 1ph test with Forth i/f board.
+Gstar 1ph/3ph test with Forth i/f board.
 - PFAIL works.
 - Discovery works all the time.
 
