@@ -27887,6 +27887,13 @@ opkg install luci
  * resolve_conffiles: Existing conffile /etc/config/rpcd is different from the conffile in the new package. The new conffile will be placed at /etc/config/rpcd-opkg.
  * resolve_conffiles: Existing conffile /etc/config/luci is different from the conffile in the new package. The new conffile will be placed at /etc/config/luci-opkg.
 
+-------------------------------------
+Gstar 1ph test with icog10
+- no PFAIL
+- restart on power-restoration.
+
+Gstar 1ph test with Forth i/f board.
+- 
 
 
 
