@@ -27893,7 +27893,7 @@ Gstar 1ph test with icog10
 - restart on power-restoration.
 
 Gstar 1ph test with Forth i/f board.
-- 
+- PFAIL works.
 
 
 
