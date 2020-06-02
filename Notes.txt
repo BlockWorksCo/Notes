@@ -28029,6 +28029,11 @@ Bit0    UNDER MONEY STATE  yes yes yes
 Bit85   LASTGASP    yes yes yes         
 Bit86   FIRSTBREATH yes yes yes   
 
+Value before:
+00 00 00 00
+
+After:
+10 00 00 00
 
 
 
