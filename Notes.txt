@@ -27972,6 +27972,7 @@ SetOrAction  Success
   </ActionRequestNormal>
 </ActionRequest>
 </PDU>
+
 </HDLC>
 <HDLC len="19" >
 <TargetAddress Value="1" />
@@ -27988,6 +27989,46 @@ SetOrAction  Success
 </ActionResponse>
 </PDU>
 </HDLC>
+
+Ch. 0 Alarm filter object  #1
+0.0.97.98.10.255
+
+Alarm Bit No    Alarm Name  L1  L2  L3          
+Bit31   OPEN COVER STATE    yes yes yes         
+Bit30   OPEN TERMER STATE     yes yes yes         
+Bit29   OVER LOAD STATE yes yes yes         
+Bit28   OVER VOLTAGE STATE    yes yes yes         
+Bit27   UNDER VOLTAGE STATE yes yes yes         
+Bit26   LOSS VOLTAGE STATE  yes yes yes         
+Bit25   PHASE FAILURE STATE    no  yes yes         
+Bit24   FAILURE PHASE N STATE  no  yes yes         
+Bit23   OVER CURRENT STATE     yes yes yes         
+Bit22   LOSS CURRENT STATE     yes yes yes         
+Bit21   CURRENT FAILURE STATE     yes yes yes         
+Bit20   UNBALANCE VOLTAGE STATE    yes yes yes         
+Bit19   "  UNBALANCE CURRENT STATE  " yes yes yes         
+Bit18   PHASE REVERSE STATE    no  yes yes         
+Bit17   INVERSE VOLTAGE STATE  yes yes yes         
+Bit16   INVERSE CURRENT STATE     yes yes yes         
+Bit15   DEMAND OVER STATE  yes yes yes         
+Bit14   UNDER BATTERY STATE yes yes yes         
+Bit13   MAGNET DISTURB STATE      yes yes yes         
+Bit12   "  SHORT CURRENT STATE "  yes yes yes         
+Bit11   OPEN BOX STATE     yes yes yes         
+Bit10   "  UNBALANCE ACT POWER STATE" yes yes yes         
+Bit9    BYPASS STATE   yes yes yes         
+Bit8    OVER THDV STATE yes yes yes         
+Bit7    OVER THDC STATE yes yes yes         
+Bit6    OVER REACTLOAD STATE    yes yes yes         
+Bit5    RESERVED    yes yes yes         
+Bit4    PHASE OUTAGE STATE       no  yes yes         
+Bit3    NO LOAD STATE  yes yes yes         
+Bit2    RELAYOFF ERROR STATE   yes yes yes         
+Bit1    TEMP ERROR STATE      yes yes yes         
+Bit0    UNDER MONEY STATE  yes yes yes         
+Bit85   LASTGASP    yes yes yes         
+Bit86   FIRSTBREATH yes yes yes   
+
 
 
 
