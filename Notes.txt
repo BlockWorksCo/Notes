@@ -27922,6 +27922,75 @@ DLMS credentials
 Node Upgrade
 Event Thresholds
 Special days
+---------------------------------------
+
+2020-06-02 13:25:37.450 DisconnectCommand 
+2020-06-02 13:25:37.451 Send :  7E A0 0A 00 02 00 21 03 53 2F 12 7E
+2020-06-02 13:25:37.658 Receive :  7E A0 0A 03 00 02 00 21 1F A0 F0 7E
+2020-06-02 13:25:37.659 DisconnectSuccess 
+2020-06-02 13:25:37.710 HDLCConnectCommand 
+2020-06-02 13:25:37.711 Send :  7E A0 0A 00 02 00 21 03 93 23 D4 7E
+2020-06-02 13:25:37.934 Receive :  7E A0 23 03 00 02 00 21 73 70 7B 81 80 14 05 02 01 00 06 02 01 00 07 04 00 00 00 01 08 04 00 00 00 01 69 6D 7E
+2020-06-02 13:25:38.057 ConnMeterSuccess
+2020-06-02 13:25:38.090 AARQCommand 
+2020-06-02 13:25:38.094 Send :  7E A0 47 00 02 00 21 03 10 F9 8B E6 E6 00 60 36 A1 09 06 07 60 85 74 05 08 01 01 8A 02 07 80 8B 07 60 85 74 05 08 02 02 AC 0A 80 08 57 5A 4C 43 58 39 4E 43 BE 10 04 0E 01 00 00 00 06 5F 1F 04 00 00 FE 1F 01 00 D4 BA 7E
+2020-06-02 13:25:38.501 Receive :  7E A0 5B 03 00 02 00 21 30 4F C4 E6 E7 00 61 4A A1 09 06 07 60 85 74 05 08 01 01 A2 03 02 01 00 A3 05 A1 03 02 01 0E 88 02 07 80 AA 12 80 10 9A 4D A6 D3 E9 F4 7A BD DE 6F 37 1B 8D 46 A3 D1 89 07 60 85 74 05 08 02 02 BE 10 04 0E 08 00 06 5F 1F 04 00 00 1A 1D 01 00 00 07 23 8C 7E
+2020-06-02 13:25:38.501 AARQSuccess
+2020-06-02 13:25:38.502 HLSAuthentication 
+2020-06-02 13:25:38.502 Send :  7E A0 3E 00 02 00 21 03 32 9C D9 E6 E6 00 C3 01 C1 00 0F 00 00 28 00 00 FF 01 01 09 20 BD B2 D0 8D 45 48 54 48 06 BF 63 3C DF 34 00 BD DD 6B 2B 45 B8 ED AF 96 7B 78 7F E4 DE B9 BF B2 EE 82 7E
+2020-06-02 13:25:38.786 Receive :  7E A0 27 03 00 02 00 21 52 8D 24 E6 E7 00 C7 01 C1 00 01 00 09 10 9D 71 2F C4 55 D4 52 3B D0 4E B5 08 C5 44 5F 28 27 55 7E
+02/06/2020 01:25:38 PM strValBackage[0]: 0001
+2020-06-02 13:25:38.888 Send :  7E A0 1F 00 02 00 21 03 54 FA 23 E6 E6 00 C3 01 C1 00 09 00 02 0A 00 00 FF 01 01 12 00 01 44 65 7E
+2020-06-02 13:25:40.117 Receive :  7E A0 14 03 00 02 00 21 74 9D 1E E6 E7 00 C7 01 C1 00 00 FC B4 7E
+SetOrAction  Success
+2020-06-02 13:25:40.340 DisconnectCommand 
+2020-06-02 13:25:40.341 Send :  7E A0 0A 00 02 00 21 03 53 2F 12 7E
+2020-06-02 13:25:40.574 Receive :  7E A0 23 03 00 02 00 21 73 70 7B 81 80 14 05 02 01 00 06 02 01 00 07 04 00 00 00 01 08 04 00 00 00 01 69 6D 7E
+
+
+
+<HDLC len="30" >
+<TargetAddress Value="16400" />
+<SourceAddress Value="1" />
+<!--I frame.-->
+<FrameType Value="54" />
+<PDU>
+<ActionRequest>
+  <ActionRequestNormal>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="193" />
+    <MethodDescriptor>
+      <!--SCRIPT_TABLE-->
+      <ClassId Value="9" />
+      <!--0.2.10.0.0.255-->
+      <InstanceId Value="00020A0000FF" />
+      <MethodId Value="1" />
+    </MethodDescriptor>
+    <MethodInvocationParameters>
+      <UInt16 Value="1" />
+    </MethodInvocationParameters>
+  </ActionRequestNormal>
+</ActionRequest>
+</PDU>
+</HDLC>
+<HDLC len="19" >
+<TargetAddress Value="1" />
+<SourceAddress Value="16400" />
+<!--I frame.-->
+<FrameType Value="74" />
+<PDU>
+<ActionResponse>
+  <ActionResponseNormal>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="193" />
+    <Result Value="Success" />
+  </ActionResponseNormal>
+</ActionResponse>
+</PDU>
+</HDLC>
+
+
+
 
 
 
