@@ -28040,6 +28040,18 @@ After:
 - v20.8.2 secure
 
 
+-----------------------------------------
+
+Measuring last-gasp SLA.
+- minimise meter time-sync periods.
+- monitor log to ensure time-sync is accurate.
+- set minthreshold to minimum.
+- increase rate of mesh-time sync.
+- wait until time-sync period has just passed.
+- use node-time of alarm.
+- if meters are under out control, note server-time when powered-off.
+- Use server time of receipt to calculate delta (one timebase).
+
 
 
 
