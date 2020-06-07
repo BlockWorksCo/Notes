@@ -28080,6 +28080,12 @@ net.ipv4.conf.all.log_martians = 1
 sudo sysctl -p /etc/sysctl.d/99-sysctl.conf
 
 
+------------------------------------------------------
+
+
+python coapclient.py  -o GET -p coap://[2a11::0201:203:405:600]:5683/conf/m/all
+
+
 
 
 
