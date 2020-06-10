@@ -28141,7 +28141,7 @@ sampleTime=Wed Jun 10 17:56:15 IST 2020
 
 1: 171505
 2 {
-  1: 1591792232
+  1: 1591792232         == " timestamp=Wed Jun 10 18:00:32 IST 2020" from c.c.s.t.m.b.MessageQueuePersister line
   14 {
     1: "UST1000002"
     2: "\001\000^[\000\377"
