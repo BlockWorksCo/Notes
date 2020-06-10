@@ -28113,5 +28113,12 @@ Rules:
 - To determine order, examine the sequence number.
 - To examine duration between related alarms, use the event-log.
 
+SLA:
+- Read node time prior to test repeatedly to determine average latency.
+- Wait until node syncs to meter.
+- power-off
+- read node-time.
+on arrival at server
+
 
 
