@@ -28102,6 +28102,7 @@ python coapclient.py  -o GET -p coap://[2a11::0201:203:405:600]:5683/conf/m/all
 - Always send FB before LG, explicitly order? what about time-diff?
 - Send node-event with outage-time? calculated on node from meter-events?
 - Server to calculate outage-time from event-log?
+- Add sequence-number to alarm-UI API-response and sort-by sequence number.
 
 - Time sync issue.
 - Ordering is critical, timing is suggestive and may be wrong.
