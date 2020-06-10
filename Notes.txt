@@ -28092,9 +28092,13 @@ python coapclient.py  -o GET -p coap://[2a11::0201:203:405:600]:5683/conf/m/all
     - time == node-time rather than meter-time
     - What ESW bits do you fill in? cached?
     - No comparison possible to other bits.
-- Use event-log
+- Make user use the event-log
+    - latency? maybe separate quick-reports from accurate-reports?
+- Read event-log and parse into alarms?
 - Use node-events
+    - they go to NMS, not SMA.
 - Estimate of meter-time based on last-read-meter-time & elapses-time.
+    - Not 100% guaranteed still.
 
 - Time sync issue.
 
