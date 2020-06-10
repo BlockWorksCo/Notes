@@ -28087,6 +28087,7 @@ python coapclient.py  -o GET -p coap://[2a11::0201:203:405:600]:5683/conf/m/all
 
 
 ---------------------------------
+meter alarms:
 
 - New alarm bits for synthFB and synthLG.
     - time == node-time rather than meter-time
@@ -28103,11 +28104,14 @@ python coapclient.py  -o GET -p coap://[2a11::0201:203:405:600]:5683/conf/m/all
 - Send node-event with outage-time? calculated on node from meter-events?
 - Server to calculate outage-time from event-log?
 - Add sequence-number to alarm-UI API-response and sort-by sequence number.
+- Don't report meter-FB and meter-LG at all.
 
 - Time sync issue.
 - Ordering is critical, timing is suggestive and may be wrong.
 
-
+Rules:
+- To determine order, examine the sequence number.
+- To examine duration between related alarms, use the event-log.
 
 
 
