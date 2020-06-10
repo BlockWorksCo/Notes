@@ -28101,6 +28101,7 @@ python coapclient.py  -o GET -p coap://[2a11::0201:203:405:600]:5683/conf/m/all
     - Not 100% guaranteed still.
 
 - Time sync issue.
+- Ordering is critical, timing is suggestive and may be wrong.
 
 
 
