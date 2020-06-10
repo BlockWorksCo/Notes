@@ -28115,10 +28115,10 @@ Rules:
 
 
 SLA:
-- Repeatedly read meter-time from server to determine average latency.
+- Repeatedly read meter-time from server to determine average latency. This is the average-read-duration.
 - Generate power-down.
-- Upon receipt, read meter-time from server.
-- Time taken = ((receive-meter-time - average-read-time) - reported-alarm-time-from-meter)
+- Upon receipt of last-gap, read meter-time from server. This is the receive-meter-time.
+- Time taken = ((receive-meter-time - average-read-duration) - reported-alarm-time-from-meter)
 
 
 
