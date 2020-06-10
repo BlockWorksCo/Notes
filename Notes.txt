@@ -28115,6 +28115,8 @@ Rules:
 
 
 SLA:
+- Configure for maximum time-sync frequency & lowest min-threshold to meter.
+- Wait until a time-sync has just happened.
 - Repeatedly read meter-time from server to determine average latency. This is the average-read-duration.
 - Generate power-down.
 - Upon receipt of last-gap, read meter-time from server. This is the receive-meter-time.
