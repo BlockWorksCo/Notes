@@ -28193,6 +28193,12 @@ extraledsSignalState(UI_SOURCE_METER, );
 
 deviceDlmsAlertAsserted()
 
+------------------------------
+
+GPIO_PIN_PWM0 = DEVSTAT green   B13
+GPIO_PIN_PWM1 = NETSTAT yellow  B12
+
+
 
 
 
