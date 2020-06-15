@@ -28198,6 +28198,12 @@ deviceDlmsAlertAsserted()
 GPIO_PIN_PWM0 = DEVSTAT green   B13
 GPIO_PIN_PWM1 = NETSTAT yellow  B12
 
+GPIO3   = toggling status pin. J2 Pin 8
+
+DEVSTAT = s_meterLedPin which from the code is the only one beingn toggled based on these
+conditions:
+
+
 
 
 
