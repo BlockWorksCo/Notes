@@ -28203,6 +28203,9 @@ GPIO3   = toggling status pin. J2 Pin 8
 DEVSTAT = s_meterLedPin which from the code is the only one beingn toggled based on these
 conditions:
 
+normal==4Hz, nEVENT==2Hz, PFAIL==8Hz
+
+
 
 
 
