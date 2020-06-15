@@ -28213,7 +28213,8 @@ database library that stores data exactly as required.
 - Can be tailored to any types of db.
 - Need to specify queries in SQL (insert/update/select/join/etc)
 - C source is generated to store data oefficiently in block-device.
-
+- incremental view update / materialised views? / continuous views/ continuous aggregates
+- schema updates?? problematic.
 
 
 
