@@ -28205,6 +28205,20 @@ conditions:
 
 normal==4Hz, nEVENT==2Hz, PFAIL==8Hz
 
+-------------------------------------------
+idea:
+- database compiler
+- from schema description, generates source to an application-specific
+database library that stores data exactly as required.
+- Can be tailored to any types of db.
+- Need to specify queries in SQL (insert/update/select/join/etc)
+- C source is generated to store data oefficiently in block-device.
+
+
+
+
+
+
 
 
 
