@@ -28224,6 +28224,10 @@ Flash ID: 1f 86 01
 Mounting with 512 x 4096 KiB sectors = 2048 KiB
 
 
+Bad 442:
+Flash ID: 1f 84 01
+Mounting with 128 x 4096 KiB sectors = 512 KiB
+
 
 
 
