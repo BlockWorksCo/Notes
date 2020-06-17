@@ -28231,6 +28231,44 @@ Mounting with 128 x 4096 KiB sectors = 512 KiB
 
 blfwupload -ctrlport 5000 -loglevel debug -image agent.image -dev /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0
 
+--------------------------------
+ProdPak instructions:
+- Goto (https://confluence.cyco.io/display/ENG/Demo+Node+Production+Pack) and register the EUI(s).
+- Create a tree structure as follows fro teh certs & keys that you registered:
+MEADemoPOCProdPak1
+├── 00-1B-C5-0C-60-06-76-00
+│   ├── ca.crt.der
+│   ├── config
+│   ├── mac_key
+│   ├── mac_keys.txt
+│   ├── node.crt.der
+│   └── node.key.der
+├── 00-1B-C5-0C-60-06-76-01
+│   ├── ca.crt.der
+│   ├── config
+│   ├── mac_key
+│   ├── mac_keys.txt
+│   ├── node.crt.der
+│   └── node.key.der
+├── 00-1B-C5-0C-60-06-76-02
+│   ├── ca.crt.der
+│   ├── config
+│   ├── mac_key
+│   ├── mac_keys.txt
+│   ├── node.crt.der
+│   └── node.key.der
+├── 00-1B-C5-0C-60-06-76-03
+│   ├── ca.crt.der
+│   ├── config
+│   ├── mac_key
+│   ├── mac_keys.txt
+│   ├── node.crt.der
+│   └── node.key.der
+├── image
+│   ├── agent.elf
+│   └── bootloader.elf
+└── manifest.yaml
+
 
 
 
