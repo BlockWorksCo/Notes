@@ -28235,7 +28235,8 @@ blfwupload -ctrlport 5000 -loglevel debug -image agent.image -dev /dev/serial/by
 ProdPak instructions:
 - Goto (https://confluence.cyco.io/display/ENG/Demo+Node+Production+Pack) and register the EUI(s).
 - Create a tree structure as follows fro teh certs & keys that you registered:
-MEADemoPOCProdPak1
+
+$PRODPAKNAME
 ├── 00-1B-C5-0C-60-06-76-00
 │   ├── ca.crt.der
 │   ├── config
@@ -28268,6 +28269,26 @@ MEADemoPOCProdPak1
 │   ├── agent.elf
 │   └── bootloader.elf
 └── manifest.yaml
+
+- cd $PRODPAK_NAME
+- cp -R /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-9D .
+- cp -R /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-9E .
+- Create a "manifest.yml" file that contains the following:
+
+created_by: stickle                              
+created_date: Fri Mar 19 14:00:00 2020           
+created_host: prod                               
+format_version: 1                                
+hw_variant: ipa3                                 
+images:                                          
+- image/agent.elf                                
+- image/bootloader.elf                           
+                                                 
+node_count: 2                                    
+node_first: 00-1B-C5-0C-60-06-77-9D
+node_last: 00-1B-C5-0C-60-06-77-9E
+
+- 
 
 
 
