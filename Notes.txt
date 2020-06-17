@@ -28229,6 +28229,7 @@ Flash ID: 1f 84 01
 Mounting with 128 x 4096 KiB sectors = 512 KiB
 
 
+blfwupload -ctrlport 5000 -loglevel debug -image agent.image -dev /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0
 
 
 
