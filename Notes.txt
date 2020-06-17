@@ -28288,7 +28288,7 @@ node_count: 2
 node_first: 00-1B-C5-0C-60-06-77-9D
 node_last: 00-1B-C5-0C-60-06-77-9E
 
-- 
+- tar jcvf ../$PRODPAK_NAME.prodpak.tbz2 --xform s:'./'::  ./*
 
 
 
