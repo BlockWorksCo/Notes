@@ -28290,6 +28290,11 @@ node_last: 00-1B-C5-0C-60-06-77-9E
 
 - tar jcvf ../$PRODPAK_NAME.prodpak.tbz2 --xform s:'./'::  ./*
 
+-------------------------------------
+DHCPv6 request IAPD option:
+
+0000 a8dbc000 00a8dbc0 3e fd09253454fc00040000000000...
+     0000a8db c00000a8 db c03efd09253454fc00040000000000...
 
 
 
