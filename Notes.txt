@@ -28310,8 +28310,7 @@ TUN:                                           0000a8dbc00000a8dbc03efd09253454f
 ----------------------------------------------------
 
 {
-  "jobName": "jobForSession_1052245285",
-  "meterGroup": null,
+  "jobName": "jobForSession_883772010",
   "jobType": "METER_FIRMWARE_UPGRADE",
   "jobConfiguration": {
     "commands": [
@@ -28329,5 +28328,3 @@ TUN:                                           0000a8dbc00000a8dbc03efd09253454f
     ]
   }
 }
-
-
