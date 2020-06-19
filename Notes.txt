@@ -28331,3 +28331,8 @@ TUN:                                           0000a8dbc00000a8dbc03efd09253454f
   "timeoutTime": "2020-06-19T15:37:24+0000"
 }
 
+
+
+{ "jobName": "JOB_XYZ", "meterGroup": "GROUP_ABC", "jobType": "METER_FIRMWARE_UPDATE", "commands": [ { "type": "FIRMWARE_IMAGE", "firmwareImage": "HEX_ENCODED_FIRMWARE_DATA", "firmwareHash": "HEX_ENCODED_MD5_HASH_OF_FIRMARE_DATA", "meters": [ { "id": "METER 123", "firmwareIdent": "ABC" }, { "id": "METER 987", "firmwareIdent": "ZYX" }, ] } ] }
+
+
