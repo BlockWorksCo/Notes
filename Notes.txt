@@ -28356,7 +28356,9 @@ Guarantees:
 - The ordering of synthesized alarms is guaranteed to be correct according the sequence number (not time of the alarm).
 - The time on a synthesized alarm shall be marked unreliable.
 - cached ESW.
-- Meter-generated-alarms will be 
+- Meter-generated-alarms will be reported to the SMA within x seconds y %age of the time to the SMA from the point of nEVENT being asserted.
+- The time of "matching" synthesized alarms will be comparable.
+- There should be a 1:1 match between first-breath alarms and node-boot events.
 
 
 Non-guarantees:
