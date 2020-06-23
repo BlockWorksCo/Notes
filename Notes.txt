@@ -28357,9 +28357,14 @@ Guarantees:
 - The time on a synthesized alarm shall be marked unreliable.
 - cached ESW.
 
+
 Non-guarantees:
 - The time recorded for a synthesized alarm will be comparable to meter-generated-alarms.
 - The time recorded for a synthesized alarm will be comparable to the corresponding meter-event in the log.
+- The status-word bits shall be up-to-date compared
+- Short duration "pulsed" events will be provided in meters without a true "PUSH" mechanism.
+- If a "set" time sync occurs (as opposed to an "adjust") between events that the events will be correctly ordered or that the duration between those events 
+will be close to reality.
 
 
 Design that falls out of this:
