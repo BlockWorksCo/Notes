@@ -28362,9 +28362,8 @@ Guarantees:
 - "matching" synthesized alarms (e.g. FB/LG) shall always have a duration of more than 1 (?) second between them.
 - If an alarm is synthesized, the corresponding meter-alarm shall not be reported (if implemented).
 
-
-
 Explicit non-guarantees:
+- We cannot guarantee that the synthesized first-breath will be delivered until after a node logs in to the NMS/SMA.
 - We cannot guarantee that the time difference between the server and meter shall be closer than (+-x minutes). (This needs to be calculated).
 - We cannot guarantee that the time recorded for a synthesized alarm will be comparable to non-related meter-generated-alarms.
 - We cannot guarantee that the time recorded for a synthesized alarm will be comparable to the corresponding meter-event in the log.
@@ -28376,9 +28375,8 @@ those events will be close to reality.
 - We cannot guarantee that network issues between NMS/SMA and node will not affect the timely delivery of the alarms.
 - We cannot guarantee that the duration between a first-breath and last-gasp as measured by the provided "meter times" will be similar to that between the corresponding meter-events.
 
-
-Design that falls out of this:
-- The sequence number of the delivered alarm message will provide ordering
+Design points that fall out of this:
+- The sequence number of the delivered alarm message will provide ordering (currently we rely on the time).
 - Time-sync means time is not reliable.
 - meter needs to push up time status as well as time. Server shall display time-status and sequence number
 
