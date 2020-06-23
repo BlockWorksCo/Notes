@@ -28365,6 +28365,7 @@ Guarantees:
 
 
 Explicit non-guarantees:
+- We cannot guarantee that the time difference between the server and meter shall be closer than (+-x minutes). (This needs to be calculated).
 - We cannot guarantee that the time recorded for a synthesized alarm will be comparable to non-related meter-generated-alarms.
 - We cannot guarantee that the time recorded for a synthesized alarm will be comparable to the corresponding meter-event in the log.
 - We cannot guarantee that the status-word bits not related to the synthesize-alarms shall be up-to-date when compared to the equivalent meter-event.
