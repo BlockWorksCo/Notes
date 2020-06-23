@@ -28421,6 +28421,10 @@ To clean all persistent data:
 
 $ dev-stack clean
 
+------------------------------------------
+dev-stack:
+
+dev-stack setup -n 1 -s 1 -e -a 1 
 
 
 
