@@ -28337,6 +28337,7 @@ SMA API Doc.
 Integration doc:
 
 - Kaifa exception (for nEVENT)? 
+- internal pull-up on nEVENT doesn't happen right now (it should). Need ticket.
 
 
 
