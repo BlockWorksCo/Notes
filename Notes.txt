@@ -28336,7 +28336,7 @@ SMA API Doc.
 -------------------------------------------
 Integration doc:
 
-- 
+- Kaifa exception (for nEVENT)? 
 
 
 
