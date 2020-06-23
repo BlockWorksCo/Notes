@@ -28333,4 +28333,10 @@ SMA API Doc.
 - Response code to meterStatusForJob is 200, not 201
 - Response code to meter job cancelling is 200, not 201
 
+-------------------------------------------
+Integration doc:
+
+- 
+
+
 
