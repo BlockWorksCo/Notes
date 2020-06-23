@@ -28379,6 +28379,7 @@ Design points that fall out of this:
 - The sequence number of the delivered alarm message will provide ordering (currently we rely on the time).
 - Time-sync means time is not reliable.
 - meter needs to push up time status as well as time. Server shall display time-status and sequence number
+- In relation to the meter-time, node-time (and the snapshot of meter-time) has obvious inaccuracies. Synthesized alarms shall always report the time-status as unreliable.
 
 
 
