@@ -28352,11 +28352,15 @@ meter alarms:
 Guarantees:
 - Last-gasp will be delivered within x seconds y %age of the time to the SMA from the point of PFAIL assertion.
 - First-Breath will be delivered within x seconds y %age of the time to the SMA from the point of power-up.
+- A first-breath will always have a matching last-gasp (except for the current run).
 
 Non-guarantees:
 - The time recorded for a synthesized alarm will be comparable to meter-generated-alarms.
 - The time recorded for a synthesized alarm will be comparable to the corresponding meter-event in the log.
 
+
+Design that falls out of this:
+- The sequence number of the delivered alarm message will provide ordering
 
 
 
