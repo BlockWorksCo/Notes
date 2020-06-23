@@ -28385,4 +28385,25 @@ Design deltas that fall out of this:
 - In relation to the meter-time, node-time (and the snapshot of meter-time) has obvious inaccuracies. Synthesized alarms shall always report the time-status as unreliable.
 
 
+------------------------------
+dev-stack
+
+https://confluence.cyco.io/display/ENG/Development+Stack
+from dev-stack repo:
+git submodule init
+git submodule update
+python3 setup.py develop --user
+
+
+setup:
+Setup a single NMS/SMA stack and host agent using local development versions:
+
+$ dev-stack -n 1 -s 1 -a 1 --agent-version ./terminal --server-version ./server
+Setup a 3-node cluster (SMA and NMS) using local server development and 1000 emulated terminals using latest version.
+
+$ dev-stack -n 3 -s 3 -e -a 1000 --server-version ./server
+Setup a panmesh instance using latest server and terminal.
+
+$ dev-stack -n 1 -a 1 -p panmesh
+
 
