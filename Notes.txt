@@ -28356,6 +28356,7 @@ Guarantees:
 - The ordering of synthesized alarms is guaranteed to be correct according the sequence number (not time of the alarm).
 - The time on a synthesized alarm shall be marked unreliable.
 - cached ESW.
+- Meter-generated-alarms will be 
 
 
 Non-guarantees:
@@ -28370,6 +28371,7 @@ will be close to reality.
 Design that falls out of this:
 - The sequence number of the delivered alarm message will provide ordering
 - Time-sync means time is not reliable.
+- meter needs to push up time status as well as time. Server shall display time-status and sequence number
 
 
 
