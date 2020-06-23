@@ -28354,7 +28354,7 @@ Guarantees:
 - First-Breath will be delivered within x seconds y %age of the time to the SMA from the point of power-up.
 - A first-breath will always have a matching last-gasp (except for the current run).
 - The ordering of synthesized alarms is guaranteed to be correct according to the sequence number (not time of the alarm due to time-sync issues).
-- The time on a synthesized alarm shall be marked unreliable.
+- The time on a synthesized alarm shall be marked unreliable due to the inherent inaccuracies involved in relation to .
 - cached ESW.
 - Meter-generated-alarms will be reported to the SMA within x seconds y %age of the time to the SMA from the point of nEVENT being asserted.
 - The time of "matching" synthesized alarms will be comparable.
@@ -28365,6 +28365,7 @@ Guarantees:
 Explicit non-guarantees:
 - We cannot guarantee that the synthesized first-breath will be delivered until after a node logs in to the NMS/SMA.
 - We cannot guarantee that the time difference between the server and meter shall be closer than (+-x minutes). (This needs to be calculated).
+- We cannot guarantee that the time difference between a meter and a sibling meter shall be closer than (+-x minutes). (This needs to be calculated).
 - We cannot guarantee that the time recorded for a synthesized alarm will be comparable to non-related meter-generated-alarms.
 - We cannot guarantee that the time recorded for a synthesized alarm will be comparable to the corresponding meter-event in the log.
 - We cannot guarantee that the status-word bits not related to the synthesize-alarms shall be up-to-date when compared to the equivalent meter-event.
@@ -28374,6 +28375,8 @@ those events will be close to reality.
 - We cannot guarantee that communications issues between node and meter will not affect the timely delivery of alarms.
 - We cannot guarantee that network issues between NMS/SMA and node will not affect the timely delivery of the alarms.
 - We cannot guarantee that the duration between a first-breath and last-gasp as measured by the provided "meter times" will be similar to that between the corresponding meter-events.
+
+If we can agree on those points, then I think we're nearly there.
 
 Design points that fall out of this:
 - The sequence number of the delivered alarm message will provide ordering (currently we rely on the time).
