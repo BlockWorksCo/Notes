@@ -28406,4 +28406,22 @@ Setup a panmesh instance using latest server and terminal.
 
 $ dev-stack -n 1 -a 1 -p panmesh
 
+Running:
+
+start the entire stack (or a setup of named services):
+
+$ dev-stack start [SERVICE-1 SERVICE-2 ...]
+To stop the entire stack (or a setup of named services)
+
+$ dev-stack stop [SERVICE-1 SERVICE-2 ...]
+To access a shell on a running service:
+
+$ dev-stack shell SERVICE
+To clean all persistent data:
+
+$ dev-stack clean
+
+
+
+
 
