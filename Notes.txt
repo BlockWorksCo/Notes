@@ -28336,11 +28336,17 @@ SMA API Doc.
 -------------------------------------------
 Integration doc:
 
-- Kaifa exception (for nEVENT)? 
+- Kaifa exception (for nEVENT)? Kaifa uses two GPIOs with handshaking.
 - internal pull-up on nEVENT doesn't happen right now (it should). Need ticket.
-- seq diagram needs more resolution.
-- "copletes" spell check.
+- seq diagram needs more resolution, its very blurry.
+- "copletes". spell check.
 - Definitely need a disclaimer that the provided frames are not guaranteed to be exact. The
 parameters *will* vary.
+- The paragraph beginning "To ensure optimum test efficiency..." is not correct. They need to
+support setting those values anyway.
+
+
+
+
 
 
