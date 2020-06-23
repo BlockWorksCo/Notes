@@ -28353,6 +28353,9 @@ Guarantees:
 - Last-gasp will be delivered within x seconds y %age of the time to the SMA from the point of PFAIL assertion.
 - First-Breath will be delivered within x seconds y %age of the time to the SMA from the point of power-up.
 - A first-breath will always have a matching last-gasp (except for the current run).
+- The ordering of synthesized alarms is guaranteed to be correct according the sequence number (not time of the alarm).
+- The time on a synthesized alarm shall be marked unreliable.
+- cached ESW.
 
 Non-guarantees:
 - The time recorded for a synthesized alarm will be comparable to meter-generated-alarms.
@@ -28361,6 +28364,7 @@ Non-guarantees:
 
 Design that falls out of this:
 - The sequence number of the delivered alarm message will provide ordering
+- Time-sync means time is not reliable.
 
 
 
