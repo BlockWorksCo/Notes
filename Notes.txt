@@ -28426,6 +28426,13 @@ dev-stack:
 
 dev-stack setup -n 1 -s 1 -e -a 1 
 
+-------------------------------------------
+Test machine:
+
+ssh stickle@gwuk.cyanconnode.com -p 2222
+
+
+
 
 
 
