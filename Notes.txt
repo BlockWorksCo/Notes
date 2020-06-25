@@ -28431,6 +28431,10 @@ Test machine:
 
 ssh stickle@gwuk.cyanconnode.com -p 2222
 
+/opt/omnimesh/c4-agent-tools/v151.2/c4-agent-tools-v151.2/coap_request.py --ctrlporthub :4000 --eui64 00-1b-c5-0c-60-06-f4-ef --fs-read /macsec_state
+/var/log/ctrlporthub
+
+
 
 
 
