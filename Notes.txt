@@ -28439,6 +28439,11 @@ replay attack
 2020-06-24 13:39:31.121 :: [004:58:37.505] [ info] [mac_security] {   mac_rx}: Possible replay attack: 02-1b-c5-0c-60-06-74-1b counter 0 expected > 113458
 
 ctrlport-00-1b-c5-0c-60-06-f4-ee.log.1:2020-06-24 15:48:19.933 :: [000:00:00.787] [ERROR] [mac_security] { terminal}: Failed to open mac security state file: not found
+---------------------------
+meter configurator:
+- Add help text at bottom.
+- meter-chooser should have dynamic list of meters, not plain text.
+
 
 
 
