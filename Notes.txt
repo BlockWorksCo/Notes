@@ -28443,7 +28443,10 @@ ctrlport-00-1b-c5-0c-60-06-f4-ee.log.1:2020-06-24 15:48:19.933 :: [000:00:00.787
 meter configurator:
 - Add help text at bottom.
 - meter-chooser should have dynamic list of meters, not plain text.
-
+- fuzzy searchm then return puts element in list.
+- meter list has "x" to remove.
+- Can paste comma-separated lists into it.
+- click link in meter-list to jump off to SMA.
 
 
 
