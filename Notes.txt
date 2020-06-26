@@ -28447,6 +28447,8 @@ meter configurator:
 - meter list has "x" to remove.
 - Can paste comma-separated lists into it.
 - click link in meter-list to jump off to SMA.
+- favicon
+- fuzzy match
 
 
 
