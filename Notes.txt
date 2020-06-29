@@ -28452,6 +28452,8 @@ meter configurator:
 - form validation.
 - UploadedFiles does not highlight stepper.
 - JobCompleteSubmit does not highlight stepper.
+- meterList should be search box.
+- choose file button should be custom file input.
 
 -----------------------------------------
 remote meter:
