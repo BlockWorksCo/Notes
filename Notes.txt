@@ -28446,9 +28446,10 @@ meter configurator:
 - fuzzy searchm then return puts element in list.
 - meter list has "x" to remove.
 - Can paste comma-separated lists into it.
-- click link in meter-list to jump off to SMA.
-- favicon
+- favicon (from cyanconnode.com)
 - fuzzy match
+- separate backend code for unit tests.
+- form validation.
 
 
 
