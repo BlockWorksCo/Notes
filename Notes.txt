@@ -28468,8 +28468,12 @@ ssh -L 127.0.0.1:80:intra.example.com:80 gw.example.com
 So...
 
 ssh stickle@gwuk.cyanconnode.com -p 2222
+hw-test-server-uk-01
 
-ssh -p 2222 -L 127.0.0.1:1234:intra.example.com:1234 gw.example.com
+Run this locally:
+  ssh -L 127.0.0.1:1234:hw-test-server-uk-01:1234  stickle@gwuk.cyanconnode.com -p 2222
+In the ssh session that opens:
+  socat tcp-l:1234,reuseaddr,fork file:/dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,b9600,raw,echo=0
 
 
 
