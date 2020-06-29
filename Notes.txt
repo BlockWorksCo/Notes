@@ -28451,6 +28451,11 @@ meter configurator:
 - separate backend code for unit tests.
 - form validation.
 
+-----------------------------------------
+remote meter:
+
+socat -d -d pty,link=/dev/remoteSerial,raw,echo=0,waitslave tcp:192.168.x.x:yyyy;
+
 
 
 
