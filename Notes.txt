@@ -28470,11 +28470,16 @@ So...
 ssh stickle@gwuk.cyanconnode.com -p 2222
 hw-test-server-uk-01
 
+
+
+Change username and port name appropriately:
+
 Run this locally:
   ssh -L 127.0.0.1:1234:hw-test-server-uk-01:1234  stickle@gwuk.cyanconnode.com -p 2222
 In the ssh session that opens:
   socat tcp-l:1234,reuseaddr,fork file:/dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,b9600,raw,echo=0
-
+In a local bash, run:
+  sudo socat -d -d pty,link=/dev/remoteSerial,raw,echo=0,waitslave tcp:127.0.0.1:1234
 
 
 
