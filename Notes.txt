@@ -28461,6 +28461,15 @@ socat -d -d pty,link=/dev/remoteSerial,raw,echo=0,waitslave tcp:192.168.x.x:yyyy
 to listen on tcp port 1234 and redirect traffic into serial port:
 socat tcp-l:1234,reuseaddr,fork file:/dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,b9600,raw,echo=0
 
+To tunnel a port thru ssh onto a remote machine:
+ssh -L 127.0.0.1:80:intra.example.com:80 gw.example.com
+
+
+So...
+
+ssh stickle@gwuk.cyanconnode.com -p 2222
+
+ssh -p 2222 -L 127.0.0.1:1234:intra.example.com:1234 gw.example.com
 
 
 
