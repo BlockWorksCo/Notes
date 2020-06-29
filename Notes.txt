@@ -28459,6 +28459,7 @@ forward requests to:
 socat -d -d pty,link=/dev/remoteSerial,raw,echo=0,waitslave tcp:192.168.x.x:yyyy;
 
 socat /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,b9600,raw,echo=0 TCP:192.168.2.140:1234
+socat tcp-l:1234,reuseaddr,fork file:/dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,b9600,raw,echo=0
 
 
 
