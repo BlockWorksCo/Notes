@@ -28455,6 +28455,7 @@ meter configurator:
 - meterList should be search box.
 - choose file button should be custom file input.
 - Bit of a mess on phone screen.
+- choose meters by group name.
 
 -----------------------------------------
 remote meter:
