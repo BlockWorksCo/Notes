@@ -28456,6 +28456,7 @@ meter configurator:
 - choose file button should be custom file input.
 - Bit of a mess on phone screen.
 - choose meters by group name.
+- Failure codes to the right of progress bars.
 
 -----------------------------------------
 remote meter:
