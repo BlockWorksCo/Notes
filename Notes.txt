@@ -28459,6 +28459,7 @@ meter configurator:
 - Failure codes to the right of progress bars.
 - JObs marked as FINISHED without full set of results? Do we detect that?
 - Import validator from submodule.
+- mouse select of fuzzy meterList
 
 -----------------------------------------
 remote meter:
