@@ -28458,6 +28458,7 @@ meter configurator:
 - choose meters by group name.
 - Failure codes to the right of progress bars.
 - JObs marked as FINISHED without full set of results? Do we detect that?
+- Import validator from submodule.
 
 -----------------------------------------
 remote meter:
