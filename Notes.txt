@@ -28457,6 +28457,7 @@ meter configurator:
 - Bit of a mess on phone screen.
 - choose meters by group name.
 - Failure codes to the right of progress bars.
+- JObs marked as FINISHED without full set of results? Do we detect that?
 
 -----------------------------------------
 remote meter:
