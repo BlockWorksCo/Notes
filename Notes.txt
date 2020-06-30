@@ -28460,6 +28460,7 @@ meter configurator:
 - JObs marked as FINISHED without full set of results? Do we detect that?
 - Import validator from submodule.
 - mouse select of fuzzy meterList
+- style of "choose file" button.
 
 -----------------------------------------
 remote meter:
