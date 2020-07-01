@@ -28461,6 +28461,7 @@ meter configurator:
 - Import validator from submodule.
 - mouse select of fuzzy meterList
 - style of "choose file" button.
+- Adding or removing special days clears list.
 
 -----------------------------------------
 remote meter:
