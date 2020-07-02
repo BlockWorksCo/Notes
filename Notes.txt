@@ -28442,12 +28442,7 @@ ctrlport-00-1b-c5-0c-60-06-f4-ee.log.1:2020-06-24 15:48:19.933 :: [000:00:00.787
 ---------------------------
 meter configurator:
 - Add help text at bottom.
-- meter-chooser should have dynamic list of meters, not plain text.
-- fuzzy searchm then return puts element in list.
-- meter list has "x" to remove.
 - Can paste comma-separated lists into it.
-- favicon (from cyanconnode.com)
-- fuzzy match
 - separate backend code for unit tests.
 - form validation.
 - UploadedFiles does not highlight stepper.
@@ -28456,12 +28451,12 @@ meter configurator:
 - choose file button should be custom file input.
 - Bit of a mess on phone screen.
 - choose meters by group name.
-- Failure codes to the right of progress bars.
 - JObs marked as FINISHED without full set of results? Do we detect that?
 - Import validator from submodule.
-- mouse select of fuzzy meterList
 - style of "choose file" button.
 - Adding or removing special days clears list.
+- node upgrade
+- node chooser like meter chooser.
 
 -----------------------------------------
 remote meter:
