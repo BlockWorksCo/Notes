@@ -28493,6 +28493,12 @@ In the ssh session that opens:
 In a local bash, run:
   sudo socat -d -d pty,link=/dev/remoteSerial,raw,echo=0,waitslave tcp:127.0.0.1:1234
 
+-----------------------------------------------------
+node firmware upgrade:
+
+omnitools: job_fwup_create
+
+
 
 
 
