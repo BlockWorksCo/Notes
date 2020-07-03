@@ -28601,9 +28601,9 @@ Recommendation: For IoT deployments where clients talk to a fixed, pre-configure
 
 -------------------------------------
 mbedtls:
-CFLAGS="-I$PWD/configs -DMBEDTLS_CONFIG_FILE='config-suite.h'" make
-make check 
+create mbedtls/config.h from template in configs/
 make
+make check 
 
 ./programs/ssl/ssl_server2 dtls=1 ecjpake_pw=passwd
 ./programs/ssl/ssl_client2 server_addr=127.0.0.1 dtls=1 ecjpake_pw=passwd
