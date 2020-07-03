@@ -28574,7 +28574,20 @@ options:
 - ec_point_formats=11, 
 - supported_groups=10
 
-Information at:
+
+RFC6066: section 6 Trusted CA Indication
+Constrained clients that, due to memory limitations, possess only a
+   small number of CA root keys may wish to indicate to servers which
+   root keys they possess, in order to avoid repeated handshake
+   failures.
+
+   In order to indicate which CA root keys they possess, clients MAY
+   include an extension of type "trusted_ca_keys" in the (extended)
+   client hello.  The "extension_data" field of this extension SHALL
+   contain "TrustedAuthorities" where:
+...
+
+more Information at:
 http://www.watersprings.org/pub/id/draft-ietf-dice-profile-05.html#rfc.section.13
 
 Trusted CA Indication
