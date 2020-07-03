@@ -28496,7 +28496,78 @@ omnitools: job_fwup_create
 -------------------------------------------------------
 mbedtls:
 
+Internet Protocol Version 6, Src: 2a00:23c5:b391:be04::2, Dst: fd00::1
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... .... .... 0000 0000 0000 0000 0000 = Flow Label: 0x00000
+    Payload Length: 124
+    Next Header: UDP (17)
+    Hop Limit: 32
+    Source: 2a00:23c5:b391:be04::2
+    Destination: fd00::1
+User Datagram Protocol, Src Port: 5684, Dst Port: 5684
+    Source Port: 5684
+    Destination Port: 5684
+    Length: 124
+    Checksum: 0xda46 [unverified]
+    [Checksum Status: Unverified]
+    [Stream index: 2]
+Datagram Transport Layer Security
+    DTLS Record Layer: Handshake Protocol: Client Hello
+        Content Type: Handshake (22)
+        Version: DTLS 1.2 (0xfefd)
+        Epoch: 0
+        Sequence Number: 0
+        Length: 103
+        Handshake Protocol: Client Hello
+            Handshake Type: Client Hello (1)
+            Length: 91
+            Message Sequence: 0
+            Fragment Offset: 0
+            Fragment Length: 91
+            Version: DTLS 1.2 (0xfefd)
+            Random: 127d05e778859401ee2a957c9dd1fa7653a089230d7914b2...
+                GMT Unix Time: Oct 31, 1979 02:03:19.000000000 GMT
+                Random Bytes: 78859401ee2a957c9dd1fa7653a089230d7914b29a44fba1...
+            Session ID Length: 0
+            Cookie Length: 0
+            Cipher Suites Length: 2
+            Cipher Suites (1 suite)
+                Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (0xc0ae)
+            Compression Methods Length: 1
+            Compression Methods (1 method)
+                Compression Method: null (0)
+            Extensions Length: 47
+            Extension: signature_algorithms (len=4)
+                Type: signature_algorithms (13)
+                Length: 4
+                Signature Hash Algorithms Length: 2
+                Signature Hash Algorithms (1 algorithm)
+                    Signature Algorithm: ecdsa_secp256r1_sha256 (0x0403)
+                        Signature Hash Algorithm Hash: SHA256 (4)
+                        Signature Hash Algorithm Signature: ECDSA (3)
+            Extension: trusted_ca_keys (len=21)
+                Type: trusted_ca_keys (3)
+                Length: 21
+                Data: 01a864172a19c18875381168b63ab34155094d72ea
+            Extension: ec_point_formats (len=2)
+                Type: ec_point_formats (11)
+                Length: 2
+                EC point formats Length: 1
+                Elliptic curves point formats (1)
+                    EC point format: uncompressed (0)
+            Extension: supported_groups (len=4)
+                Type: supported_groups (10)
+                Length: 4
+                Supported Groups List Length: 2
+                Supported Groups (1 group)
+                    Supported Group: secp256r1 (0x0017)
 
+
+DTLS ciper suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (secp256r1)
+options: signature_algorithms (ecdsa_secp256r1_sha256), trusted_ca_keys, ec_point_formats, supported_groups
 
 
 
