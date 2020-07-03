@@ -28599,6 +28599,10 @@ Today, in most IoT deployments there is a fairly static relationship between the
 
 Recommendation: For IoT deployments where clients talk to a fixed, pre-configured set of servers and where a software update mechanism is available this extension is not recommended. Environments where the client needs to interact with dynamically discovered DTLS servers this extension may be useful to reduce the communication overhead. Note, however, in that case the TLS cached info extension may help to reduce the communication overhead for everything but the first protocol interaction.
 
+-------------------------------------
+mbedtls:
+CFLAGS="-I$PWD/configs -DMBEDTLS_CONFIG_FILE='config-suite.h'" make
+
 
 
 
