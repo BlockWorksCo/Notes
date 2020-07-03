@@ -28568,8 +28568,7 @@ Datagram Transport Layer Security
 
 DTLS ciper suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (secp256r1)
 options: 
-- signature_algorithms=13 
-- (ecdsa_secp256r1_sha256), 
+- signature_algorithms=13 (restrict curves to ecdsa_secp256r1_sha256)
 - trusted_ca_keys=3, (size optimisation and avoids back-and-forth for multiple level of certs).
 - ec_point_formats=11, 
 - supported_groups=10
