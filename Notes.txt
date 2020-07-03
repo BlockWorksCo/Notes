@@ -28568,10 +28568,10 @@ Datagram Transport Layer Security
 
 DTLS ciper suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (secp256r1)
 options: 
-- signature_algorithms=13 (restrict curves to ecdsa_secp256r1_sha256)
-- trusted_ca_keys=3, (size optimisation and avoids back-and-forth for multiple level of certs).
-- ec_point_formats=11, 
-- supported_groups=10
+- signature_algorithms=13 (RFC8446)(restrict curves to ecdsa_secp256r1_sha256)
+- trusted_ca_keys=3, (RFC6066) (size optimisation and avoids back-and-forth for multiple level of certs).
+- ec_point_formats=11 (RFC8422), 
+- supported_groups=10 (RFC8422/RFC7919)
 
 
 RFC6066: section 6 Trusted CA Indication
@@ -28585,6 +28585,9 @@ Constrained clients that, due to memory limitations, possess only a
    client hello.  The "extension_data" field of this extension SHALL
    contain "TrustedAuthorities" where:
 ...
+
+extension list:
+https://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xml
 
 more Information at:
 http://www.watersprings.org/pub/id/draft-ietf-dice-profile-05.html#rfc.section.13
