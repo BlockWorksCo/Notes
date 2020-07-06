@@ -28611,12 +28611,12 @@ make check
 
 -----------------------------------------------
 
-Task CND-10509 MeterConfigurator: Apache/WSGI integration.
-Task CND-10508 MeterConfigurator: Build system
-Task CND-10507 MeterConfigurator: UI tweaks
-Task CND-10506 MeterConfigurator:Special days UI needs improvement
-Task CND-10505 MeterConfigurator: Selection by predefined group.
-Task CND-10504 MeterConfigurator: Add help text to forms
+Task CND-10509 MeterConfigurator: Apache/WSGI integration. (3 days)
+Task CND-10508 MeterConfigurator: Build system (3 days)
+Task CND-10507 MeterConfigurator: UI tweaks (4 days)
+Task CND-10506 MeterConfigurator: Special days UI needs improvement (2 days))
+Task CND-10505 MeterConfigurator: Selection by predefined group (4 days)
+Task CND-10504 MeterConfigurator: Add help text to forms (3 days).
 
 --------------------------
 CND-10361 Tangedco time sync:
