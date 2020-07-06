@@ -28609,6 +28609,9 @@ make check
  #define MBEDTLS_SSL_CIPHERSUITES                        \               
      MBEDTLS_TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8                          
 
+
+define MBEDTLS_DEBUG_C for debugging.
+
 -----------------------------------------------
 
 Task CND-10509 MeterConfigurator: Apache/WSGI integration. (3 days)
