@@ -28618,6 +28618,12 @@ Task CND-10506 MeterConfigurator:Special days UI needs improvement
 Task CND-10505 MeterConfigurator: Selection by predefined group.
 Task CND-10504 MeterConfigurator: Add help text to forms
 
+--------------------------
+CND-10361 Tangedco time sync:
+- reproduce on local.
+- observe time sync wrong way around
+- 3 days.
+
 
 
 
