@@ -28650,3 +28650,6 @@ key_file=/Data/Temp/MBedTLSCerts/user.key
 
 
 
+gdb --args ./programs/ssl/ssl_server2 server_addr=127.0.0.1 dtls=1  debug_level=9 ca_file=/Data/Temp/MBedTLSCerts/ca.crt.pem crt_file=/Data/Temp/MBedTLSCerts/server.crt.pem key_file=/Data/Temp/MBedTLSCerts/server.key.pem
+
+
