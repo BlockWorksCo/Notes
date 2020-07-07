@@ -28639,6 +28639,9 @@ ssl_client2 server_addr=127.0.0.1 dtls=1_2  debug_level=9 force_ciphersuite=TLS-
 
 "TLS-ECJPAKE-WITH-AES-128-CCM-8"
 
+
+CFLAGS="-g" make clean all
+
 ./programs/ssl/ssl_server2 server_addr=127.0.0.1 dtls=1  debug_level=9 \
 ca_file=/Data/Temp/MBedTLSCerts/rootca.crt \
 crt_file=/Data/Temp/MBedTLSCerts/user.crt \
