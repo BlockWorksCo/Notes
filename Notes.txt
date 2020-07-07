@@ -28631,6 +28631,9 @@ CND-10361 Tangedco time sync:
 - observe time sync wrong way around
 - 3 days.
 
+----------------------------------------
+
+TLS-ECDHE-ECDSA-WITH-AES-128-CCM-8
 
 
 
