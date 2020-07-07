@@ -28658,3 +28658,50 @@ MBEDTLS_ERR_OID_NOT_FOUND           = 0x002e
 Show certiface text:
 openssl x509 -in /Data/Temp/MBedTLSCerts/ca.crt.pem -text -noout
 
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            b6:e1:22:75:f3:bf:ee:f7
+        Signature Algorithm: ecdsa-with-SHA1
+        Issuer: C = SE, ST = Stockholm, L = Stockholm, O = Connode AB, OU = R&D, CN = c4.connode.com
+        Validity
+            Not Before: Apr 23 09:52:17 2014 GMT
+            Not After : Apr 20 09:52:17 2024 GMT
+        Subject: C = SE, ST = Stockholm, L = Stockholm, O = Connode AB, OU = R&D, CN = c4.connode.com
+        Subject Public Key Info:
+            Public Key Algorithm: id-ecPublicKey
+                Public-Key: (256 bit)
+                pub:
+                    04:33:30:57:77:36:4b:cc:6f:88:3b:b8:36:e1:92:
+                    d0:47:15:fe:75:66:8c:b8:dc:de:eb:cd:77:2a:9f:
+                    5b:cd:ed:95:e0:c5:7c:35:16:e7:8f:a3:02:b2:8c:
+                    55:40:6e:a9:4c:3d:53:f2:62:20:3e:77:6e:3d:92:
+                    88:2a:ca:84:c6
+                ASN1 OID: prime256v1
+                NIST CURVE: P-256
+        X509v3 extensions:
+            X509v3 Subject Key Identifier: 
+                58:B2:60:48:32:DE:F5:62:FA:28:EB:C4:8E:5F:3B:8E:2D:21:C8:F5
+            X509v3 Authority Key Identifier: 
+                keyid:58:B2:60:48:32:DE:F5:62:FA:28:EB:C4:8E:5F:3B:8E:2D:21:C8:F5
+
+            X509v3 Basic Constraints: 
+                CA:TRUE
+    Signature Algorithm: ecdsa-with-SHA1
+         30:44:02:20:70:d2:c3:0f:b6:ad:54:a6:6d:f5:a2:54:16:c7:
+         4f:49:08:93:b4:5c:41:55:82:60:d4:90:d9:80:9f:68:99:11:
+         02:20:1f:d1:34:e4:a0:de:fa:b0:0a:32:8e:68:80:54:0c:fa:
+         be:24:2f:a2:39:f0:47:83:63:4b:d8:eb:49:6f:e9:dc
+
+-----------------------------------------------------
+Crypto requirements:
+- ECDSA_ECDHE_AES128_CCM_8
+- cert signature ecdsa with SHA1
+- AES256 for SMIP
+- AES128 for MAC secirity
+- AES128 for CNDFS security.
+
+
+
+
