@@ -28639,6 +28639,7 @@ ssl_client2 server_addr=127.0.0.1 dtls=1_2  debug_level=9 force_ciphersuite=TLS-
 
 "TLS-ECJPAKE-WITH-AES-128-CCM-8"
 
+./programs/ssl/ssl_server2 server_addr=127.0.0.1 dtls=1  debug_level=9 ca_file=/Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-74-1C/ca.crt.der crt_file= key_file=
 
 
 
