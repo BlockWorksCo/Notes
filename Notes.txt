@@ -28635,6 +28635,10 @@ CND-10361 Tangedco time sync:
 
 TLS-ECDHE-ECDSA-WITH-AES-128-CCM-8
 
+ssl_client2 server_addr=127.0.0.1 dtls=1_2  debug_level=9 force_ciphersuite=TLS-ECDHE-ECDSA-WITH-AES-128-CCM-8
+
+"TLS-ECJPAKE-WITH-AES-128-CCM-8"
+
 
 
 
