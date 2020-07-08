@@ -28702,6 +28702,11 @@ Crypto requirements:
 - AES128 for MAC secirity
 - AES128 for CNDFS security.
 
+---------------------------------------------------
+openssl verify cert:
+
+openssl verify -verbose -CAfile ca.crt.pem server.crt.pem<Paste>
+
 
 
 
