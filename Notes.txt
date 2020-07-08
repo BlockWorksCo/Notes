@@ -28707,6 +28707,23 @@ openssl verify cert:
 
 openssl verify -verbose -CAfile ca.crt.pem server.crt.pem<Paste>
 
+----------------------------------------------------------------
+MBedTLS Working setup:
+
+./programs/ssl/ssl_client2 server_addr=127.0.0.1 dtls=1_2  debug_level=0 \        
+   force_ciphersuite=TLS-ECDHE-ECDSA-WITH-AES-128-CCM-8 \                        
+   ca_file=/Data/Temp/MBedTLSCerts/ca.crt.pem \                                  
+   crt_file=/Data/Temp/MBedTLSCerts/node.crt.pem \                               
+   key_file=/Data/Temp/MBedTLSCerts/node.key.pem \                               
+   server_name=server                                                            
+
+./programs/ssl/ssl_server2 server_addr=127.0.0.1 dtls=1 debug_level=9 \
+    ca_file=/Data/Temp/MBedTLSCerts/ca.crt.pem \
+    crt_file=/Data/Temp/MBedTLSCerts/server.crt.pem \
+    key_file=/Data/Temp/MBedTLSCerts/server.key.pem
+
+
+
 
 
 
