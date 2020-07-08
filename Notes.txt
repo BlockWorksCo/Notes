@@ -28829,6 +28829,10 @@ include/mbedtls/config.h
 #endif /* MBEDTLS_CONFIG_H */
 
 
+-------------------------------------------------
+certificate convert pem der
+
+- openssl x509 -inform der -in node.crt.der -out node.crt.pem
 
 
 
