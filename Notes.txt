@@ -28839,5 +28839,12 @@ certificate convert pem der
 show key info:
 - openssl ec -inform der -in node.key.der  -text -noout
 
+----------------------------------------------
+stevesbiglaptop.lan setup:
+
+https://unix.stackexchange.com/questions/337008/activate-tap-to-click-on-touchpad
+https://unix.stackexchange.com/questions/317591/gdm3-change-default-wm-from-gnome-to-i3
+
+
 
 
