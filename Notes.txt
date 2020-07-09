@@ -28845,6 +28845,9 @@ stevesbiglaptop.lan setup:
 https://unix.stackexchange.com/questions/337008/activate-tap-to-click-on-touchpad
 https://unix.stackexchange.com/questions/317591/gdm3-change-default-wm-from-gnome-to-i3
 
+------------------------------------------
+dtls_server:
+- make host-agent-psk
 
 
 
