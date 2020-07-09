@@ -28847,7 +28847,13 @@ https://unix.stackexchange.com/questions/317591/gdm3-change-default-wm-from-gnom
 
 ------------------------------------------
 dtls_server:
-- make host-agent
+- make host-genus-dlms-insecure
+
+
+---------------------
+
+dev-stack setup -n 1 -s 1 -e -a 1 -g 1
+
 
 
 
