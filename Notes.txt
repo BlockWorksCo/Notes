@@ -28854,6 +28854,9 @@ dtls_server:
 
 dev-stack setup -n 1 -s 1 -e -a 1 -g 1
 
+---------------------------------
+mbedtls trusted_ca_keys extension https://github.com/ARMmbed/mbedtls/pull/3371/commits
+
 
 
 
