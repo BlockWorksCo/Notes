@@ -1,6 +1,8 @@
 #!/bin/bash
 
-cd ~/BlockWorks/Notes
+set -e
+
+cd /Data/Temp/BlockWorks/Notes
 git add -A .
 git commit -am WIP
 git pull

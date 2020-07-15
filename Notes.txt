@@ -28857,6 +28857,22 @@ dev-stack setup -n 1 -s 1 -e -a 1 -g 1
 ---------------------------------
 mbedtls trusted_ca_keys extension https://github.com/ARMmbed/mbedtls/pull/3371/commits
 
+-----------------------------------------------
+
+- download packages from Artifactory, place into /Data/Temp/DevStack/pkg
+- extract "etc" directories from nms and sma pkgs and put into /Data/Temp/DevStack/pkg/nms/etc
+
+dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -e -a 1 -g 1 --tund-version tun6d-v8.0.5.tar.gz  --agent-version host-agent-v20.11.8.tar.gz --nms-version nms-v20.11.10.tar.gz --sma-version sma-v20.11.10.tar.gz
+
+--------------------------------------
+modem trace:
+
+./tools/c4-tools/coap_request.py --modem-at-enable 
+./tools/c4-tools/coap_request.py --modem-at-cmd AT+UUSBCONF=0
+./tools/c4-tools/coap_request.py --modem-at-cmd AT+CFUN=1,1
+./tools/c4-tools/coap_request.py --modem-at-cmd AT+TRACE=1,115200,,,,,"CDC-ACM"
+./tools/c4-tools/coap_request.py --modem-at-cmd AT+CFUN=1,1 
+
 
 
 
