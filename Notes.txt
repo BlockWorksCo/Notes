@@ -28873,6 +28873,9 @@ modem trace:
 ./tools/c4-tools/coap_request.py --modem-at-cmd AT+TRACE=1,115200,,,,,"CDC-ACM"
 ./tools/c4-tools/coap_request.py --modem-at-cmd AT+CFUN=1,1 
 
+----------------
+Test
+
 
 
 
