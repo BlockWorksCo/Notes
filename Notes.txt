@@ -28900,6 +28900,9 @@ docker change storage path:
 
 https://linuxconfig.org/how-to-move-docker-s-default-var-lib-docker-to-another-directory-on-ubuntu-debian-linux<Paste>
 
+----------------------------------------
+.gitlab-ci.yml build stage:
+/build-tools/ca-wrapper run "PATH=/build/.local/bin:$PATH; pip3 install --proxy squid:3128 virtualenv tox && tox"
 
 
 
