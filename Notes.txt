@@ -28904,6 +28904,12 @@ https://linuxconfig.org/how-to-move-docker-s-default-var-lib-docker-to-another-d
 .gitlab-ci.yml build stage:
 /build-tools/ca-wrapper run "PATH=/build/.local/bin:$PATH; pip3 install --proxy squid:3128 virtualenv tox && tox"
 
+-------------------------------------
+uwsgi running locally:
+
+uwsgi --ini wsgi.ini
+
+
 
 
 
