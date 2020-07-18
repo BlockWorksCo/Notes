@@ -28921,7 +28921,7 @@ apt install -y python3 python3-pip
 pip3 install --upgrade pip setuptools wheel uwsgi
 pip3 install /metertool/whl/metertool-0.1-py3-none-any.whl
 
-/usr/local/lib/python3.7/dist-packages/metertool/wsgi.ini
+uwsgi /usr/local/lib/python3.7/dist-packages/metertool/wsgi.ini
 
 
 
