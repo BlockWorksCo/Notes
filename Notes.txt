@@ -28915,6 +28915,11 @@ dev-stack,metertool:
 
 dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -e -a 1 -g 1 --tund-version tun6d-v8.0.5.tar.gz  --agent-version host-agent-v20.11.8.tar.gz --nms-version nms-v20.11.10.tar.gz --sma-version sma-v20.11.10.tar.gz --metertool-version=metertool-v0.0.0.tar.gz
 
+-----------------------------------------
+apt update
+apt install -y python3 python3-pip
+pip3 install --upgrade pip setuptools wheel
+pip3 install /metertool/whl/metertool-0.1-py3-none-any.whl
 
 
 
