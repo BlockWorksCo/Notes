@@ -28617,7 +28617,7 @@ mbedtls_ssl_list_ciphersuites()
 
 
 -----------------------------------------------
-
+MeterConfigurator tickets:
 Task CND-10509 MeterConfigurator: Apache/WSGI integration. (3 days)
 Task CND-10508 MeterConfigurator: Build system (3 days)
 Task CND-10507 MeterConfigurator: UI tweaks (4 days)
