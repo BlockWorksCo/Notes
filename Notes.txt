@@ -28924,5 +28924,12 @@ pip3 install /metertool/whl/metertool-0.1-py3-none-any.whl
 cd /usr/local/lib/python3.7/dist-packages/metertool
 uwsgi --ini wsgi.ini
 
+------------------------------------------
+Bootstrap validator
+
+https://1000hz.github.io/bootstrap-validator/
+
+
+
 
 
