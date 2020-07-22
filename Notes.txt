@@ -28930,7 +28930,26 @@ Bootstrap validator
 https://1000hz.github.io/bootstrap-validator/
 
 ----------------------------------------------
-POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterJob {"jobName": "jobForSession_2049442294", "jobType": "METER_COMMAND_SET", "jobConfiguration": {"commands": [{"type": "PROFILE_CAPTURE_PERIOD", "activationTime": "2018-01-01T00:00:00+0530", "profileType": "BLOCK_LOAD", "capturePeriod": "900"}]}, "meterGroup": "groupForSession_2049442294", "timeoutTime": "2020-07-22T10:10:21+0000"}
+POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterGroup {"meterGroupName": "groupForSession_2049442294", "meterGroupType": "STATIC", "meters": ["00-1B-C5-0C-60-06-77-B7", "002003699018"]}
+
+POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterJob 
+{
+  "jobName": "jobForSession_2049442294",
+  "jobType": "METER_COMMAND_SET",
+  "jobConfiguration": {
+    "commands": [
+      {
+        "type": "PROFILE_CAPTURE_PERIOD",
+        "activationTime": "2018-01-01T00:00:00+0530",
+        "profileType": "BLOCK_LOAD",
+        "capturePeriod": "900"
+      }
+    ]
+  },
+  "meterGroup": "groupForSession_2049442294",
+  "timeoutTime": "2020-07-22T10:10:21+0000"
+}
+
 201
 
 POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/manageMeterJob/jobForSession_2049442294 {"instruction": "START"}
