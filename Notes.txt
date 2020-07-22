@@ -28930,7 +28930,23 @@ Bootstrap validator
 https://1000hz.github.io/bootstrap-validator/
 
 ----------------------------------------------
+
+# Create group with two meters
+
 POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterGroup {"meterGroupName": "groupForSession_2049442294", "meterGroupType": "STATIC", "meters": ["00-1B-C5-0C-60-06-77-B7", "002003699018"]}
+
+{
+  "meterGroupName": "groupForSession_2049442294",
+  "meterGroupType": "STATIC",
+  "meters": [
+    "1B-C5-0C-60-06-77-B7",
+    "002003699018"
+  ]
+}
+
+201
+
+# Create job using that group.
 
 POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterJob 
 {
@@ -28952,8 +28968,15 @@ POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterJob
 
 201
 
-POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/manageMeterJob/jobForSession_2049442294 {"instruction": "START"}
+# Start the job.
+
+POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/manageMeterJob/jobForSession_2049442294 
+
+{"instruction": "START"}
+
 200
+
+# 
 
 GET https://omnidev-in-01.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_2049442294 None
 200 {"jobName":"jobForSession_2049442294","meterGroup":"groupForSession_2049442294","scheduledTime":null,"timeoutTime":"2020-07-22T15:40:21+05:30","createTime":"2020-07-22T15:38:22+05:30","updateTime":"2020-07-22T15:38:22+05:30","status":"FINISHED","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"PROFILE_CAPTURE_PERIOD","profileType":"BLOCK_LOAD","capturePeriod":900,"activationTime":"2018-01-01T00:00:00+05:30","active":false}]},"totalProcessedDevices":1,"totalSuccessfulDevices":0,"totalFailedDevices":0}
