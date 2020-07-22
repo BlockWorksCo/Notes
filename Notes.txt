@@ -28976,7 +28976,7 @@ POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/manageMeterJob/jobForSessi
 
 200
 
-# Get status for job
+# Get status for job (Note: one processed device).
 
 GET https://omnidev-in-01.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_2049442294
 
@@ -29007,7 +29007,7 @@ GET https://omnidev-in-01.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession
   "totalFailedDevices": 0
 }
 
-# Get meter statuses for job.
+# Get meter statuses for job. (Only one meter status, not two).
 
 POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_2049442294 
 {"startId": 0, "count": 1000}
@@ -29025,15 +29025,36 @@ POST https://omnidev-in-01.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSe
   ]
 }
 
-#
+# Get job status again. (FINISHED, only one processed, not two).
 
 GET https://omnidev-in-01.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_2049442294 
 
 200 
 
-{"jobName":"jobForSession_2049442294","meterGroup":"groupForSession_2049442294","scheduledTime":null,"timeoutTime":"2020-07-22T15:40:21+05:30","createTime":"2020-07-22T15:38:22+05:30","updateTime":"2020-07-22T15:38:22+05:30","status":"FINISHED","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"PROFILE_CAPTURE_PERIOD","profileType":"BLOCK_LOAD","capturePeriod":900,"activationTime":"2018-01-01T00:00:00+05:30","active":false}]},"totalProcessedDevices":1,"totalSuccessfulDevices":0,"totalFailedDevices":0}
-
-
+{
+  "jobName": "jobForSession_2049442294",
+  "meterGroup": "groupForSession_2049442294",
+  "scheduledTime": null,
+  "timeoutTime": "2020-07-22T15:40:21+05:30",
+  "createTime": "2020-07-22T15:38:22+05:30",
+  "updateTime": "2020-07-22T15:38:22+05:30",
+  "status": "FINISHED",
+  "jobType": "METER_COMMAND_SET",
+  "jobConfiguration": {
+    "commands": [
+      {
+        "type": "PROFILE_CAPTURE_PERIOD",
+        "profileType": "BLOCK_LOAD",
+        "capturePeriod": 900,
+        "activationTime": "2018-01-01T00:00:00+05:30",
+        "active": false
+      }
+    ]
+  },
+  "totalProcessedDevices": 1,
+  "totalSuccessfulDevices": 0,
+  "totalFailedDevices": 0
+}
 
 
 
