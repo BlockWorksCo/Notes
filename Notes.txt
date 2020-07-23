@@ -29056,6 +29056,13 @@ GET https://omnidev-in-01.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession
   "totalFailedDevices": 0
 }
 
+------------------------------
+to add to loadcurtailment:
+- currentLimitEmergency
+- currentLimitMinOverThresholdDuration
+- currentLimitMinUnderThresholdDuration
+- currentLimitNormal
+- powerLimitEmergency
 
 
 
