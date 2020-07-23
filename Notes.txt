@@ -28910,6 +28910,19 @@ uwsgi running locally:
 uwsgi --ini wsgi.ini
 
 
+----------------------------------------
+uwsgi
+https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
+
+Keys SSL cert:
+openssl genrsa -out foobar.key 2048
+openssl req -new -key foobar.key -out foobar.csr
+openssl x509 -req -days 365 -in foobar.csr -signkey foobar.key -out foobar.crt
+
+wsgi.ini
+[uwsgi]
+https = :9090,foobar.crt,foobar.key
+
 
 
 
