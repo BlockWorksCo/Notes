@@ -29080,8 +29080,8 @@ to add to loadcurtailment:
 - powerLimitEmergency
 --------------------------------------
 timesheets:                                                     
-- 17/3/20 - 20/3/20 :                                           
-- 23/3/20 - 27/3/20 :                                           
+- 17/3/20 - 20/3/20 : TangedCo + SW                                          
+- 23/3/20 - 27/3/20 : TangedCo + SW                                          
 - 30/3/20 - 3/4/20  : TangedCo + SW
 - 6/4/20  - 10/4/20 : TangedCo + SW                                      
 - 13/4/20 - 17/4/20 : TangedCo + SW
