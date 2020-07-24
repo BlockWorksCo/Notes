@@ -29082,8 +29082,8 @@ to add to loadcurtailment:
 timesheets:                                                     
 - 17/3/20 - 20/3/20 :                                           
 - 23/3/20 - 27/3/20 :                                           
-- 30/3/20 - 3/4/20  : TengedCo
-- 6/4/20  - 10/4/20 :  TangedCo                                          
+- 30/3/20 - 3/4/20  : TangedCo
+- 6/4/20  - 10/4/20 : TangedCo                                          
 - 13/4/20 - 17/4/20 : TangedCo
 - 20/4/20 - 24/4/20 : TangedCo
 - 27/4/20 - 1/5/20  : MEA
