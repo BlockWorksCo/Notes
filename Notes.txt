@@ -29078,9 +29078,6 @@ to add to loadcurtailment:
 - currentLimitMinUnderThresholdDuration
 - currentLimitNormal
 - powerLimitEmergency
-<<<<<<< HEAD
->>>>>>> 766415f842b68d73c7676583781ba8cc0af00fc1
-=======
 --------------------------------------
 timesheets:
 - 17/3/20 - 20/3/20
@@ -29103,8 +29100,6 @@ timesheets:
 - 13/7/20 - 17/7/20
 - 20/7/20 - 24/7/20
 
-
->>>>>>> WIP
 
 
 
