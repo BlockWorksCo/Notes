@@ -29100,6 +29100,10 @@ timesheets:
 + 13/7/20 - 17/7/20 : MEA + SW
 - 20/7/20 - 24/7/20 : MEA + SW
 
+-------------------------------------------------
+dev-stack
+dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -a 1
+
 
 
 
