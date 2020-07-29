@@ -29111,6 +29111,14 @@ ideas:
 - Load control devices (plug-with-nodes). Close loop with analytics to provide load-smoothing for power network, etc. 
 - Above provides "local" load-shedding, i.e. real-time local control of devices to ensure load never rises above set threshold. Easy to manage.
 - Low power for gas & water meters.
+    - Application level
+        - Application boots, attaches to mesh, syncs requests, generates responses, samples, sends responses to gw, shuts down.
+        - Implement SMA stored "last-timestamp" pointer rather than on node to allow removal of (high powered, expensive) external flash.
+        - Implement persistent-circular-buffers for deterministic power-usage for persistent data.
+    - Transport level
+        - Modelled on SMETS2 "gas-proxy", i.e. gateway presents a psuedo node that communicates with server. Sync of proxy to real device happens on-the-hour.
+    - Platform level
+        - normally off operation. no state retention. RTC wakes via alarm int every 30 minutes.
 - Secure local CoAP for modeless/secure operation
 - FLASH removal. BOM cost reduction.
 - Replace platform with OpenThread to reduce software maintainance. CC becomesa pure SmartMetering company.
