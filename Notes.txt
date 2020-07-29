@@ -29105,6 +29105,17 @@ dev-stack
 dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -a 1
 
 
+-------------------------------------------------
+ideas:
+- OpenSource IoT platform & dev kit?
+- Load control devices (plug with nodes).
+- Low power for gas & water meters.
+- Secure local CoAP for modeless/secure operation
+- 
+
+
+
+
 
 
 
