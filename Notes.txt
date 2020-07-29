@@ -29117,6 +29117,9 @@ ideas:
         - Implement persistent-circular-buffers for deterministic power-usage for persistent data.
     - Transport level
         - Modelled on SMETS2 "gas-proxy", i.e. gateway presents a psuedo node that communicates with server. Sync of proxy to real device happens on-the-hour.
+        - Could keep the illusion of IPv6/LoWPAN with very high-latency.
+    - Routing
+        - RPL is slow to start, consider alternative, even very simple network flooding with de-duplication on gw.
     - Platform level
         - normally off operation. no state retention. RTC wakes via alarm int every 30 minutes.
 - Secure local CoAP for modeless/secure operation
