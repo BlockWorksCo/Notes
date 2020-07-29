@@ -29114,7 +29114,7 @@ ideas:
 - Secure local CoAP for modeless/secure operation
 - FLASH removal. BOM cost reduction.
 - Replace platform with OpenThread to reduce software maintainance. CC becomesa pure SmartMetering company.
-- Deterministic configuration
+- Declarative configuration for more deterministic & (hopefully) reliable configuration of meters.
 - Multicast based jobs for scalable network comms.
 - Time-series db on server for separation of sample data from metadata/control-data. Different access patterns warrant different storage patterns. Improve scalability.
 - OpenSource IoT platform & dev kit? "Consumer" level gateway.
