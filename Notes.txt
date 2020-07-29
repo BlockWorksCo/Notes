@@ -29109,10 +29109,11 @@ dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg s
 ideas:
 - OpenSource IoT platform & dev kit?
 - Analytics, provide value-added analysis with AI/ML.
-- Load control devices (plug-with-nodes). Close loop with analytics to provide load-smoothing for power network, etc.
+- Load control devices (plug-with-nodes). Close loop with analytics to provide load-smoothing for power network, etc. 
+- Above provides "local" load-shedding, i.e. real-time local control of devices to ensure load never rises above set threshold. Easy to manage.
 - Low power for gas & water meters.
 - Secure local CoAP for modeless/secure operation
-- FLASH removal.
+- FLASH removal. BOM cost reduction.
 - Replace platform with OpenThread to reduce software maintainance. CC becomesa pure SmartMetering company.
 - 
 
