@@ -29119,7 +29119,7 @@ ideas:
         - Modelled on SMETS2 "gas-proxy", i.e. gateway presents a psuedo node that communicates with server. Sync of proxy to real device happens on-the-hour.
         - Could keep the illusion of IPv6/LoWPAN with very high-latency.
     - Routing
-        - RPL is slow to start, consider alternative, even very simple network flooding with de-duplication on gw.
+        - RPL is slow to start, consider alternatives, even very simple network flooding with de-duplication on gw.
     - Platform level
         - normally off operation. no state retention. RTC wakes via alarm int every 30 minutes.
 - Secure local CoAP for modeless/secure operation
@@ -29129,6 +29129,9 @@ ideas:
 - Multicast based jobs for scalable network comms.
 - Time-series db on server for separation of sample data from metadata/control-data. Different access patterns warrant different storage patterns. Improve scalability.
 - OpenSource IoT platform & dev kit? "Consumer" level gateway.
+- presence detection.
+- liquid level monitoring (e.g. oil tank)
+- water tank monitoring & sprinkler control (gardens tend to be out of wifi-range).
 
 
 
