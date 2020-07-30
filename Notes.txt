@@ -29130,7 +29130,7 @@ ideas:
 - Time-series db on server for separation of sample data from metadata/control-data. Different access patterns warrant different storage patterns. Improve scalability.
 - OpenSource IoT platform & dev kit? "Consumer" level gateway.
 - presence detection.
-- liquid level monitoring (e.g. oil tank)
+- liquid level monitoring (e.g. oil tank), hook up with oil delivery service to give cheaper bulk oil delivery.
 - water tank monitoring & sprinkler control (gardens tend to be out of wifi-range).
 
 
