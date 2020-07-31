@@ -29143,6 +29143,39 @@ gcc
 https://developer.arm.com/-/media/Files/downloads/gnu-rm/8-2019q3/RC1.1/gcc-arm-none-eabi-8-2019-q3-update-linux.tar.bz2?revision=c34d758a-be0c-476e-a2de-af8c6e16a8a2?product=GNU%20Arm%20Embedded%20
 
 
+gdb --args ./build/host-genus-insecure/bin/agent -eui64 00-1B-C5-0C-60-06-77-B8 \            
+ -pythonScript myTest \                                                                      
+ -meter /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 \                               
+ -initrtc \                                                                                  
+ -ctrlhub 127.0.0.1 \                                                                        
+ -ctrlhubport 4242 \                                                                         
+ -loglevel debug \                                                                           
+ -param device.dlms.lls_password=3141324233433444 \                                          
+ -param device.dlms.authentication_key=756776636c656b616b67313836616263 \                    
+ -param device.dlms.encryption_key=756776636c656b616b67313836616263 \                        
+ -param device.dlms.hls_key=756776636c686c737567313836616263 \                               
+ -param device.time.sync_timer=1 \                                                           
+ -param server.ip=fd00::1 \                                                                  
+ -param server.port=5684 \                                                                   
+ -param modem.tun6.ip=omnidev-in-01.dev.cyanconnode.com \                                    
+ -param modem.tun6.secret=ZV9IPCHFvINmOEKv \                                                 
+ -param modem.apn=4g.tele2.se \                                                              
+ -param server.mq.push_now=1 \                                                               
+ -param server.mq.push_delay=30 \                                                            
+ -param device.capabilities.dlmspipe.push=0 \                                                
+ -param device.dlms.pipe_enabled=0 \                                                         
+ -param capabilities.meter.device_testing=0 \                                                
+ -param dev.udp.log.ip=fd00::1 \                                                             
+ -param dev.udp.log.port=1234 \                                                              
+ -rootcert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B8/ca.crt.der  \            
+ -cert /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B8/node.crt.der  \              
+ -key /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B8/node.key.der  \               
+ -mackey /Data/Temp/ProdPack/ProdPack1000/00-1B-C5-0C-60-06-77-B8/mac_keys.txt \             
+ -gateway \                                                                                  
+ -statedir AgentState \                                                                      
+ -socket                                                                                     
+                                                                                             
+
 
 
 
