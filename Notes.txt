@@ -29134,6 +29134,9 @@ ideas:
 - liquid level monitoring (e.g. oil tank), hook up with oil delivery service to give cheaper bulk oil delivery.
 - water tank monitoring & sprinkler control (gardens tend to be out of wifi-range).
 
+------------------------------
+SMIP library uploaded to sftp.cyco.io
+/home/toshiba/data/Development_Libraries/smip-v97.0.63.tar.gz
 
 
 
