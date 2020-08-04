@@ -28835,6 +28835,7 @@ certificate convert pem der
 - openssl x509 -inform der -in ca.crt.der -out ca.crt.pem
 - openssl x509 -inform der -in node.crt.der -out node.crt.pem
 - openssl ec -inform der -in node.key.der -outform pem -out node.key.pem
+- openssl rsa -inform pem -in client-key.pem -outform der -out client-key.der
 
 show key info:
 - openssl ec -inform der -in node.key.der  -text -noout
