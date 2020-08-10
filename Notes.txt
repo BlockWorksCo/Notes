@@ -29202,6 +29202,44 @@ LOG = logging.basicConfig(filename='SMA.log', format='%(asctime)-15s %(message)s
 LOG = logging.getLogger('sma')
 
 
+-------------------------------------------------------------------
+special days failure
+
+
+2020-08-10 16:17:48,195 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterGroup {"meterGroupName": "groupForSession_1852918579", "meterGroupType": "STATIC", "meters": ["002003999032"]}
+2020-08-10 16:17:48,350 <<< 201 
+2020-08-10 16:17:48,350 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterJob {"jobName": "jobForSession_1852918579", "jobType": "METER_COMMAND_SET", "jobConfiguration": {"commands": [{"type": "TARIFF_CALENDAR", "activationTime": "2018-01-01T00:00:00+0530", "seasons": [{"start": {"dayOfMonth": 1, "month": 1}, "week": 0}], "weeks": [{"days": [1, 2, 3, 1, 2, 3, 1]}], "days": [{"schedule": [{"time": "00:00", "zone": 1}, {"time": "12:00", "zone": 2}, {"time": "18:00", "zone": 3}]}, {"schedule": [{"time": "00:00", "zone": 4}, {"time": "12:00", "zone": 5}, {"time": "18:00", "zone": 6}]}, {"schedule": [{"time": "00:00", "zone": 7}, {"time": "12:00", "zone": 8}, {"time": "18:00", "zone": 9}]}], "specialDay": [{"dayOfMonth": 30, "month": 7, "year": 2020, "dayId": 2}, {"dayOfMonth": 15, "month": 8, "year": 2020, "dayId": 2}]}]}, "meterGroup": "groupForSession_1852918579", "timeoutTime": "2020-08-10T15:19:48+0000"}
+2020-08-10 16:17:48,400 <<< 201 
+2020-08-10 16:17:48,400 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/manageMeterJob/jobForSession_1852918579 {"instruction": "START"}
+2020-08-10 16:17:48,456 <<< 200 
+2020-08-10 16:17:48,457 127.0.0.1 - - [10/Aug/2020 16:17:48] "POST /Step3Submit HTTP/1.1" 200 -
+2020-08-10 16:17:48,580 >>> GET https://omnireltest1.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_1852918579 None
+2020-08-10 16:17:48,625 <<< 200 {"jobName":"jobForSession_1852918579","meterGroup":"groupForSession_1852918579","scheduledTime":null,"timeoutTime":"2020-08-10T15:19:48Z","createTime":"2020-08-10T15:17:48Z","updateTime":"2020-08-10T15:17:48Z","status":"RUNNING","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"TARIFF_CALENDAR","active":false,"activationTime":"2017-12-31T18:30:00Z","seasons":[{"week":0,"start":{"dayOfMonth":1,"month":1}}],"weeks":[{"days":[1,2,3,1,2,3,1]}],"days":[{"schedule":[{"time":"00:00","zone":1},{"time":"12:00","zone":2},{"time":"18:00","zone":3}]},{"schedule":[{"time":"00:00","zone":4},{"time":"12:00","zone":5},{"time":"18:00","zone":6}]},{"schedule":[{"time":"00:00","zone":7},{"time":"12:00","zone":8},{"time":"18:00","zone":9}]}],"specialDay":[{"dayId":2,"year":2020,"dayOfMonth":30,"month":7},{"dayId":2,"year":2020,"dayOfMonth":15,"month":8}]}]},"totalProcessedDevices":0,"totalSuccessfulDevices":0,"totalFailedDevices":0}
+2020-08-10 16:17:48,626 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_1852918579 {"startId": 0, "count": 1000}
+2020-08-10 16:17:48,669 <<< 200 {"meters":[]}
+2020-08-10 16:17:48,671 127.0.0.1 - - [10/Aug/2020 16:17:48] "GET /Progress HTTP/1.1" 200 -
+
+
+
+
+
+
+2020-08-10 16:17:53,581 >>> GET https://omnireltest1.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_1852918579 None
+2020-08-10 16:17:53,642 <<< 200 {"jobName":"jobForSession_1852918579","meterGroup":"groupForSession_1852918579","scheduledTime":null,"timeoutTime":"2020-08-10T15:19:48Z","createTime":"2020-08-10T15:17:48Z","updateTime":"2020-08-10T15:17:48Z","status":"RUNNING","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"TARIFF_CALENDAR","active":false,"activationTime":"2017-12-31T18:30:00Z","seasons":[{"week":0,"start":{"dayOfMonth":1,"month":1}}],"weeks":[{"days":[1,2,3,1,2,3,1]}],"days":[{"schedule":[{"time":"00:00","zone":1},{"time":"12:00","zone":2},{"time":"18:00","zone":3}]},{"schedule":[{"time":"00:00","zone":4},{"time":"12:00","zone":5},{"time":"18:00","zone":6}]},{"schedule":[{"time":"00:00","zone":7},{"time":"12:00","zone":8},{"time":"18:00","zone":9}]}],"specialDay":[{"dayId":2,"year":2020,"dayOfMonth":30,"month":7},{"dayId":2,"year":2020,"dayOfMonth":15,"month":8}]}]},"totalProcessedDevices":0,"totalSuccessfulDevices":0,"totalFailedDevices":0}
+2020-08-10 16:17:53,642 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_1852918579 {"startId": 0, "count": 1000}
+2020-08-10 16:17:53,709 <<< 200 {"meters":[]}
+2020-08-10 16:17:53,711 127.0.0.1 - - [10/Aug/2020 16:17:53] "GET /Progress HTTP/1.1" 200 -
+2020-08-10 16:17:58,581 >>> GET https://omnireltest1.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_1852918579 None
+2020-08-10 16:17:58,655 <<< 200 {"jobName":"jobForSession_1852918579","meterGroup":"groupForSession_1852918579","scheduledTime":null,"timeoutTime":"2020-08-10T15:19:48Z","createTime":"2020-08-10T15:17:48Z","updateTime":"2020-08-10T15:17:58Z","status":"FINISHED","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"TARIFF_CALENDAR","active":false,"activationTime":"2017-12-31T18:30:00Z","seasons":[{"week":0,"start":{"dayOfMonth":1,"month":1}}],"weeks":[{"days":[1,2,3,1,2,3,1]}],"days":[{"schedule":[{"time":"00:00","zone":1},{"time":"12:00","zone":2},{"time":"18:00","zone":3}]},{"schedule":[{"time":"00:00","zone":4},{"time":"12:00","zone":5},{"time":"18:00","zone":6}]},{"schedule":[{"time":"00:00","zone":7},{"time":"12:00","zone":8},{"time":"18:00","zone":9}]}],"specialDay":[{"dayId":2,"year":2020,"dayOfMonth":30,"month":7},{"dayId":2,"year":2020,"dayOfMonth":15,"month":8}]}]},"totalProcessedDevices":1,"totalSuccessfulDevices":0,"totalFailedDevices":0}
+2020-08-10 16:17:58,655 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_1852918579 {"startId": 0, "count": 1000}
+2020-08-10 16:17:58,733 <<< 200 {"meters":[{"meterId":"002003999032","status":"FAILED","failureStep":"0","progress":null}]}
+2020-08-10 16:17:58,735 127.0.0.1 - - [10/Aug/2020 16:17:58] "GET /Progress HTTP/1.1" 200 -
+2020-08-10 16:18:01,828 127.0.0.1 - - [10/Aug/2020 16:18:01] "GET / HTTP/1.1" 200 -
+
+
+
+
+
 
 
                                                                                              
