@@ -29197,6 +29197,10 @@ LINK	CVE-2017-8855	High	In versions of wolfSSL before 3.11.0 there are cases whe
 metertoool log
 journalctl -xe --unit=omnimesh-metertool
 
+-----------------------------------------
+LOG = logging.basicConfig(filename='SMA.log', format='%(asctime)-15s %(message)s')
+LOG = logging.getLogger('sma')
+
 
 
 
