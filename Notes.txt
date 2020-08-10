@@ -29193,6 +29193,10 @@ LINK	CVE-2017-13099	Medium	Versions of wolfSSL up to 3.12.2 have a weak Bleichen
 LINK	CVE-2017-2800	Critical	Versions of wolfSSL before 3.11.0 have a possible out-of-bounds write by one from a crafted certificate being passed to the function wolfSSL_X509_NAME_get_text_by_NID. Discovered by Aleksandar Nikolic of Cisco Talos.	Fixed 20 days prior to CVE issuance	3.11.0
 LINK	CVE-2017-8855	High	In versions of wolfSSL before 3.11.0 there are cases where a malformed DH key is not rejected by the function wc_DhAgree. Thanks to Yueh-Hsun Lin and Peng Li at KNOX Security at Samsung Research America.	Fixed 5 days prior to CVE issuance	3.11.0
 
+-----------------------------------------
+metertoool log
+journalctl -xe --unit=omnimesh-metertool
+
 
 
 
