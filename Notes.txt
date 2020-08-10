@@ -29172,6 +29172,30 @@ gdb --args ./build/host-genus-insecure/bin/agent -eui64 00-1B-C5-0C-60-06-77-B8 
  -gateway \                                                                                  
  -statedir AgentState \                                                                      
  -socket                                                                                     
+                                                                
+--------------------------------------------------------
+wolf ssl advisories since 3.10.2
+
+INFO	CVE ID	SEVERITY	DESCRIPTION	TIME TO FIX	FIXED IN VERSION
+LINK	CVE-2020-11713	Low	wolfSSL versions prior to 4.4.0 have mulmod code in wc_ecc_mulmod_ex in ecc.c that does not properly resist timing side-channel attacks. Version 4.4.0 fixes this to be constant time and cache resistant. Thank you to Pietro Borrello at Sapienza University of Rome.	Fixed 4 days prior to CVE issuance	4.4.0
+LINK	CVE-2020-11735	Low	wolfSSL versions prior to 4.4.0 using fast math do not use a constant-time modular inverse when mapping to affine coordinates. Version 4.4.0 uses a constant time modular inverse when mapping to affine when operation involves a private key - keygen, calc shared secret, sign. Thank you to Alejandro Cabrera Aldaya, Cesar Pereida García and Billy Bob Brumley from the Network and Information Security Group (NISEC) at Tampere University for the report.	Fixed 36 days prior to CVE issuance	4.4.0
+CVE-2019-18840	High	In wolfSSL 4.1.0 through 4.2.0c, there are missing sanity checks of memory accesses in parsing ASN.1 certificate data while handshaking. Specifically, there is a one-byte heap-based buffer overflow inside the DecodedCert structure in GetName in wolfcrypt/src/asn.c because the domain name location index is mishandled. Because a pointer is overwritten, there is an invalid free	0 days	4.3.0
+LINK	N/A	Low	In wolfSSL versions prior to 4.2.0, there is a potential program hang when ocspstapling2 is enabled. This is a moderate level fix that affects users who have ocspstapling2 enabled(off by default) and are on the server side. In parsing a CSR2 (Certificate Status Request v2 ) on the server side, there was the potential for a malformed extension to cause a program hang. Discovered by Robert Hoerr.	5 days	4.2.0
+LINK	CVE-2019-16748	High	In wolfSSL through 4.1.0, there is a missing sanity check of memory accesses in parsing ASN.1 certificate data while handshaking. Specifically, there is a one-byte heap-based buffer over-read in CheckCertSignature_ex in wolfcrypt/src/asn.c.	1 days	4.2.0
+LINK	CVE-2019-15651	High	wolfSSL 4.1.0 has a one-byte heap-based buffer over-read in DecodeCertExtensions in wolfcrypt/src/asn.c because reading the ASN_BOOLEAN byte is mishandled for a crafted DER certificate in GetLength_ex.	1 days	4.2.0
+LINK	N/A	Low	wolfSSL versions before 4.2.0 have potential for an invalid read when TLS 1.3 and pre-shared keys is enabled. Users without TLS 1.3 enabled are unaffected. Users with TLS 1.3 enabled and HAVE_SESSION_TICKET defined or NO_PSK not defined should update wolfSSL versions. Discovered by Robert Hoerr.	0 days	4.2.0
+LINK	CVE-2019-14317	Low	Versions of wolfSSL before 4.2.0 are vulnerable to DSA operations involving an attack on recovering DSA private keys. This affects users that have DSA enabled and are performing DSA operations (off by default). ECDSA is NOT affected by this and TLS code is NOT affected by this issue. Discovered by Ján Jan?ár at Masaryk University.	0 days	4.2.0
+LINK	CVE-2019-13628	Medium	Versions of wolfSSL before 4.1.0 are vulnerable to the potential leak of nonce sizes when performing ECDSA signing operations. The leak is considered to be difficult to exploit but it could potentially be used maliciously to perform a lattice based timing attack against previous wolfSSL versions. Discovered by Ján Jan?ár at Masaryk University.	5 days	4.1.0
+LINK	CVE-2019-11873	High	In wolfSSL version 4.0.0, there is a potential buffer overflow case with the TLSv1.3 PSK extension parsing. This affects users that are enabling TLSv1.3 (--enable-tls13). Discovered by Robert Hoerr.	0 days	4.1.0
+LINK	CVE-2018-16870	Medium	Versions of wolfSSL prior to 3.15.7 are vulnerable to a new variant of the Bleichenbacher attack to perform downgrade attacks against TLS, which may lead to leakage of sensible data.	0 days	3.15.7
+LINK	CVE-2018-12436	Medium	Versions of wolfSSL up to and including 3.15.0 are vulnerable to a Key Extraction Side Channel Attack. A patch (wolfssl-3.15.1.patch) is available for download now on our website and a full release will be available next week containing the patch.	0 days	3.15.3
+LINK	CVE-2017-13099	Medium	Versions of wolfSSL up to 3.12.2 have a weak Bleichenbacher vulnerability with suites that use an RSA-encrypted premaster secret. Discovered by Hanno Böck, Juraj Somorovsky, Craig Young.	9 days	3.13.0
+LINK	CVE-2017-2800	Critical	Versions of wolfSSL before 3.11.0 have a possible out-of-bounds write by one from a crafted certificate being passed to the function wolfSSL_X509_NAME_get_text_by_NID. Discovered by Aleksandar Nikolic of Cisco Talos.	Fixed 20 days prior to CVE issuance	3.11.0
+LINK	CVE-2017-8855	High	In versions of wolfSSL before 3.11.0 there are cases where a malformed DH key is not rejected by the function wc_DhAgree. Thanks to Yueh-Hsun Lin and Peng Li at KNOX Security at Samsung Research America.	Fixed 5 days prior to CVE issuance	3.11.0
+
+
+
+
                                                                                              
 
 
