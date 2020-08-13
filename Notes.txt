@@ -29241,6 +29241,12 @@ TODO
 - Groups real use of.
 - Sessions not pickling.
 
+--------------------------------------------------
+MNO integration:
+- IMEI, IMSI returned from gw on startup
+- Always unique, therefore no point in having hash.
+- Never changes tho, so thats argument for hash, but hash overhead could be larger than actual data.
+- New protobuf & CoAP endpoint on NMS to deliver data to.
 
 
 
