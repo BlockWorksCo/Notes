@@ -29247,6 +29247,7 @@ MNO integration:
 - Always unique, therefore no point in having hash.
 - Never changes tho, so thats argument for hash, but hash overhead could be larger than actual data.
 - New protobuf & CoAP endpoint on NMS to deliver data to.
+- gws have modems, but so do IMGWs and CNICs
 
 
 
