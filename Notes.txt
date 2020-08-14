@@ -29285,6 +29285,8 @@ building smip
 
 CA_PROFILE=SMIP ca docker_pull smip/buildenv_terminal
 CA_PROFILE=SMIP ./build-tools/ca-wrapper setup
+CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make smip"
+CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make build"
 CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make package"
 
 
