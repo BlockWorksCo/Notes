@@ -29249,6 +29249,31 @@ MNO integration:
 - New protobuf & CoAP endpoint on NMS to deliver data to.
 - gws have modems, but so do IMGWs and CNICs
 
+-----------------------------------------------------
+
+{
+  "jobName": "jobForSession_3467398692",
+  "jobType": "METER_COMMAND_SET",
+  "jobConfiguration": {
+    "commands": [
+      {
+        "type": "SECURITY_CREDENTIALS",
+        "credentials": [
+          {
+            "accessLevel": "METER_ACCESS_UTILITY ",
+            "password": "31313131313131313131313131313131",
+            "wrappedPassword": "ad0110483d0559d12e8cb97203e6c908"
+          }
+        ]
+      }
+    ]
+  },
+  "meterGroup": "groupForSession_3467398692"
+}
+
+
+400 Cannot deserialize value of type `com.cyanconnode.sma.job.objects.MeterAccessLevel` from String "METER_ACCESS_UTILITY": value not one of declared Enum instance names: [METER_ACCESS_READER, METER_GLOBAL_KEY, METER_ACCESS_PUBLIC, METER_ACCESS_UTILITY, METER_ACCESS_FWUP
+
 
 
 
