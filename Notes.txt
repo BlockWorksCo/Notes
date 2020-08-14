@@ -29280,6 +29280,11 @@ MNO integration:
 
 400 Cannot deserialize value of type `com.cyanconnode.sma.job.objects.MeterAccessLevel` from String "METER_ACCESS_UTILITY": value not one of declared Enum instance names: [METER_ACCESS_READER, METER_GLOBAL_KEY, METER_ACCESS_PUBLIC, METER_ACCESS_UTILITY, METER_ACCESS_FWUP
 
+---------------------------------------------
+building smip
+
+CA_PROFILE=SMIP ca docker_pull smip/buildenv_terminal
+
 
 
 
