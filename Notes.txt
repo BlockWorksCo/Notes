@@ -29290,6 +29290,13 @@ CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make build"
 CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make package"
 
 
+---------------
+pi@raspberrypi:~ $ ifconfig | grep global
+        inet6 2a00:23c5:b394:dd00:e82d:8dbd:2a66:aaa1  prefixlen 64  scopeid 0x0<global>
+        inet6 fd09:2534:54fc:0:f926:d444:ef43:4ffe  prefixlen 64  scopeid 0x0<global>
+        inet6 fd09:2534:54fc::abf  prefixlen 128  scopeid 0x0<global>
+        inet6 2a00:23c5:b394:dd00::abf  prefixlen 128  scopeid 0x0<global>
+
 
 
                                                                                              
