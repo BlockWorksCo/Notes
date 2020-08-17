@@ -29298,6 +29298,17 @@ pi@raspberrypi:~ $ ifconfig | grep global
         inet6 2a00:23c5:b394:dd00::abf  prefixlen 128  scopeid 0x0<global>
 
 
+-------------------------------------------------
+pki-create.sh
+
+server certs (SMIP and Omni):
+pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki server server
+
+SMIP node certs:
+SMIP=yes ./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-01 node 00-00-00-00-00-00-00-01
+
+
+
 
                                                                                              
 
