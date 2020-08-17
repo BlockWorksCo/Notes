@@ -29306,6 +29306,7 @@ pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki server
 
 SMIP node certs:
 SMIP=yes ./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-01 node 00-00-00-00-00-00-00-01
+SMIP=yes /Data/Projects/dev-stack2/src/omnimesh/devstack/data/scripts/pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-02 node 00-00-00-00-00-00-00-02
 
 
 
