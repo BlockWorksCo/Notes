@@ -29319,6 +29319,11 @@ cp certs/ca.key.pem /Data/Temp/DevStack/.data/pki
 mkdir -p /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-02
 SMIP=yes ./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-02 node 00-00-00-00-00-00-00-02
 
+-------------------------------------
+videos
+- "Screen recorder" chrome extension
+- "veed" to add subtitles.
+
 
 
 
