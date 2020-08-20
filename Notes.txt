@@ -29324,6 +29324,12 @@ videos
 - "Screen recorder" chrome extension
 - "veed" to add subtitles.
 
+-----------------------------------------
+MISRA start point:
+21 agent.lint.MISRA.mandatory.uniq
+1239 agent.lint.MISRA.required.uniq
+559 agent.lint.MISRA.advisory.uniq
+
 
 
 
