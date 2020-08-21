@@ -29322,13 +29322,18 @@ SMIP=yes ./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data
 -------------------------------------
 videos
 - "Screen recorder" chrome extension
-- "veed" to add subtitles.
+- "veed" to add subtitles. (veed.io)
 
 -----------------------------------------
 MISRA start point:
 21 agent.lint.MISRA.mandatory.uniq
 1239 agent.lint.MISRA.required.uniq
 559 agent.lint.MISRA.advisory.uniq
+
+After mods:
+0 agent.lint.MISRA.mandatory.uniq
+354 agent.lint.MISRA.required.uniq
+295 agent.lint.MISRA.advisory.uniq
 
 
 
