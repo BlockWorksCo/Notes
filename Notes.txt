@@ -29100,7 +29100,7 @@ timesheets:
   27/7/20 -         : MEA + SW
   03/8/20 -         : holiday
   10/8/20 -         : MEA + SW
-  17/8/20 -
+  17/8/20 - 21/8/20 : MEA + SMIP + SW
   24/8/20 -         : holiday
   31/8/20 -
 
