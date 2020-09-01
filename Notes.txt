@@ -29344,6 +29344,10 @@ echo core >/proc/sys/kernel/core_pattern
 dd if=/dev/urandom of=testcases/seed bs=1024 count=1
 afl-fuzz -t 500 -m 600 -i testcases/ -o findings/ build/fuzzable/bin/fuzzable_mac_frame -timemode fast -heap 8000
 
+parallel fuzzing.
+https://github.com/mirrorer/afl/blob/master/docs/parallel_fuzzing.txt
+
+Or use script: tools/fuzzing/fuzzy-wuzzy.sh
 
 
                                                                                              
