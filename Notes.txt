@@ -29335,7 +29335,13 @@ After mods:
 354 agent.lint.MISRA.required.uniq
 295 agent.lint.MISRA.advisory.uniq
 
+---------------------------------------------------
+Fuzz testing for SMIP (AFL)
 
+make fuzzable
+sudo su
+echo core >/proc/sys/kernel/core_pattern
+afl-fuzz -t 500 -m 600 -i testcases/ -o findings/ build/fuzzable/bin/fuzzable_mac_frame -timemode fast -heap 8000
 
 
 
