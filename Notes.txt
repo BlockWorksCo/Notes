@@ -29349,7 +29349,48 @@ https://github.com/mirrorer/afl/blob/master/docs/parallel_fuzzing.txt
 
 Or use script: tools/fuzzing/fuzzy-wuzzy.sh
 
+----------------------------------------------------------
 
+
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 14 hrs) <<<
+
+  cycle 14, lifetime speed 457 execs/sec, path 999/1009 (99%)
+  pending 0/81, coverage 7.62%, no crashes yet
+
+>>> fuzzer1 (0 days, 14 hrs) <<<
+
+  cycle 116, lifetime speed 487 execs/sec, path 834/1057 (78%)
+  pending 0/2, coverage 7.58%, no crashes yet
+
+>>> fuzzer2 (0 days, 14 hrs) <<<
+
+  cycle 107, lifetime speed 480 execs/sec, path 598/1158 (51%)
+  pending 0/4, coverage 7.77%, no crashes yet
+
+>>> fuzzer3 (0 days, 14 hrs) <<<
+
+  cycle 111, lifetime speed 481 execs/sec, path 640/1139 (56%)
+  pending 0/2, coverage 7.75%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 2 days, 9 hours
+         Total execs : 99 million
+    Cumulative speed : 1905 execs/sec
+       Pending paths : 0 faves, 89 total
+  Pending per fuzzer : 0 faves, 22 total (on average)
+       Crashes found : 0 locally unique
+
+
+
+------------------------------------------------------------------------
                                                                                              
 
 
