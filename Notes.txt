@@ -29441,7 +29441,19 @@ Summary stats
 2.40  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
 2.30  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui6terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.euiterminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
 2.50  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
-2.60  - 
+3.00  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+power-cycle- ok.
+
+2.79V - ok
+2.60V - ok
+2.50V - ok
+2.40V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50V - ok
+2.40V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50V - ok
+2.40V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.60V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
 
 
 
