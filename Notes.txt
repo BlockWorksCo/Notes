@@ -23164,6 +23164,8 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     ./tools/fuzzing/fuzzy-wuzzy.sh 
 
 
+https://confluence.cyco.io/display/ENG/2015/03/23/Flexelint?preview=%2F13467824%2F13631565%2FFlexeLint_v9.zip
+
     For MISRA lint report:
     install FlexeLint_v9.zip.zip from https://confluence.cyco.io/display/ENG/2015/03/23/Flexelint<Paste>
 
