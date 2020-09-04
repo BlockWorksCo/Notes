@@ -23164,6 +23164,8 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     ./tools/fuzzing/fuzzy-wuzzy.sh 
 
 
+https://confluence.cyco.io/display/ENG/2015/03/23/Flexelint?preview=%2F13467824%2F13631565%2FFlexeLint_v9.zip
+
     For MISRA lint report:
     install FlexeLint_v9.zip.zip from https://confluence.cyco.io/display/ENG/2015/03/23/Flexelint<Paste>
 
@@ -29097,6 +29099,12 @@ timesheets:
 + 6/7/20  - 10/7/20 : MEA + TLS                                 
 + 13/7/20 - 17/7/20 : MEA + SW
 + 20/7/20 - 24/7/20 : MEA + SW
+  27/7/20 -         : MEA + SW
+  03/8/20 -         : holiday
+  10/8/20 -         : MEA + SW
+  17/8/20 - 21/8/20 : MEA + SMIP + SW
+  24/8/20 - 28/8/20 : holiday
+  31/8/20 -         : bank hol? +  ...
 
           - 31/7/20 : MEA + SW (MeterTool & support)
 -------------------------------------------------
@@ -29172,9 +29180,329 @@ gdb --args ./build/host-genus-insecure/bin/agent -eui64 00-1B-C5-0C-60-06-77-B8 
  -gateway \                                                                                  
  -statedir AgentState \                                                                      
  -socket                                                                                     
+                                                                
+--------------------------------------------------------
+wolf ssl advisories since 3.10.2
+
+INFO	CVE ID	SEVERITY	DESCRIPTION	TIME TO FIX	FIXED IN VERSION
+LINK	CVE-2020-11713	Low	wolfSSL versions prior to 4.4.0 have mulmod code in wc_ecc_mulmod_ex in ecc.c that does not properly resist timing side-channel attacks. Version 4.4.0 fixes this to be constant time and cache resistant. Thank you to Pietro Borrello at Sapienza University of Rome.	Fixed 4 days prior to CVE issuance	4.4.0
+LINK	CVE-2020-11735	Low	wolfSSL versions prior to 4.4.0 using fast math do not use a constant-time modular inverse when mapping to affine coordinates. Version 4.4.0 uses a constant time modular inverse when mapping to affine when operation involves a private key - keygen, calc shared secret, sign. Thank you to Alejandro Cabrera Aldaya, Cesar Pereida García and Billy Bob Brumley from the Network and Information Security Group (NISEC) at Tampere University for the report.	Fixed 36 days prior to CVE issuance	4.4.0
+CVE-2019-18840	High	In wolfSSL 4.1.0 through 4.2.0c, there are missing sanity checks of memory accesses in parsing ASN.1 certificate data while handshaking. Specifically, there is a one-byte heap-based buffer overflow inside the DecodedCert structure in GetName in wolfcrypt/src/asn.c because the domain name location index is mishandled. Because a pointer is overwritten, there is an invalid free	0 days	4.3.0
+LINK	N/A	Low	In wolfSSL versions prior to 4.2.0, there is a potential program hang when ocspstapling2 is enabled. This is a moderate level fix that affects users who have ocspstapling2 enabled(off by default) and are on the server side. In parsing a CSR2 (Certificate Status Request v2 ) on the server side, there was the potential for a malformed extension to cause a program hang. Discovered by Robert Hoerr.	5 days	4.2.0
+LINK	CVE-2019-16748	High	In wolfSSL through 4.1.0, there is a missing sanity check of memory accesses in parsing ASN.1 certificate data while handshaking. Specifically, there is a one-byte heap-based buffer over-read in CheckCertSignature_ex in wolfcrypt/src/asn.c.	1 days	4.2.0
+LINK	CVE-2019-15651	High	wolfSSL 4.1.0 has a one-byte heap-based buffer over-read in DecodeCertExtensions in wolfcrypt/src/asn.c because reading the ASN_BOOLEAN byte is mishandled for a crafted DER certificate in GetLength_ex.	1 days	4.2.0
+LINK	N/A	Low	wolfSSL versions before 4.2.0 have potential for an invalid read when TLS 1.3 and pre-shared keys is enabled. Users without TLS 1.3 enabled are unaffected. Users with TLS 1.3 enabled and HAVE_SESSION_TICKET defined or NO_PSK not defined should update wolfSSL versions. Discovered by Robert Hoerr.	0 days	4.2.0
+LINK	CVE-2019-14317	Low	Versions of wolfSSL before 4.2.0 are vulnerable to DSA operations involving an attack on recovering DSA private keys. This affects users that have DSA enabled and are performing DSA operations (off by default). ECDSA is NOT affected by this and TLS code is NOT affected by this issue. Discovered by Ján Jan?ár at Masaryk University.	0 days	4.2.0
+LINK	CVE-2019-13628	Medium	Versions of wolfSSL before 4.1.0 are vulnerable to the potential leak of nonce sizes when performing ECDSA signing operations. The leak is considered to be difficult to exploit but it could potentially be used maliciously to perform a lattice based timing attack against previous wolfSSL versions. Discovered by Ján Jan?ár at Masaryk University.	5 days	4.1.0
+LINK	CVE-2019-11873	High	In wolfSSL version 4.0.0, there is a potential buffer overflow case with the TLSv1.3 PSK extension parsing. This affects users that are enabling TLSv1.3 (--enable-tls13). Discovered by Robert Hoerr.	0 days	4.1.0
+LINK	CVE-2018-16870	Medium	Versions of wolfSSL prior to 3.15.7 are vulnerable to a new variant of the Bleichenbacher attack to perform downgrade attacks against TLS, which may lead to leakage of sensible data.	0 days	3.15.7
+LINK	CVE-2018-12436	Medium	Versions of wolfSSL up to and including 3.15.0 are vulnerable to a Key Extraction Side Channel Attack. A patch (wolfssl-3.15.1.patch) is available for download now on our website and a full release will be available next week containing the patch.	0 days	3.15.3
+LINK	CVE-2017-13099	Medium	Versions of wolfSSL up to 3.12.2 have a weak Bleichenbacher vulnerability with suites that use an RSA-encrypted premaster secret. Discovered by Hanno Böck, Juraj Somorovsky, Craig Young.	9 days	3.13.0
+LINK	CVE-2017-2800	Critical	Versions of wolfSSL before 3.11.0 have a possible out-of-bounds write by one from a crafted certificate being passed to the function wolfSSL_X509_NAME_get_text_by_NID. Discovered by Aleksandar Nikolic of Cisco Talos.	Fixed 20 days prior to CVE issuance	3.11.0
+LINK	CVE-2017-8855	High	In versions of wolfSSL before 3.11.0 there are cases where a malformed DH key is not rejected by the function wc_DhAgree. Thanks to Yueh-Hsun Lin and Peng Li at KNOX Security at Samsung Research America.	Fixed 5 days prior to CVE issuance	3.11.0
+
+-----------------------------------------
+metertoool log
+journalctl -xe --unit=omnimesh-metertool
+
+-----------------------------------------
+LOG = logging.basicConfig(filename='SMA.log', format='%(asctime)-15s %(message)s')
+LOG = logging.getLogger('sma')
+
+
+-------------------------------------------------------------------
+special days failure
+
+
+2020-08-10 16:17:48,195 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterGroup {"meterGroupName": "groupForSession_1852918579", "meterGroupType": "STATIC", "meters": ["002003999032"]}
+2020-08-10 16:17:48,350 <<< 201 
+2020-08-10 16:17:48,350 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterJob {"jobName": "jobForSession_1852918579", "jobType": "METER_COMMAND_SET", "jobConfiguration": {"commands": [{"type": "TARIFF_CALENDAR", "activationTime": "2018-01-01T00:00:00+0530", "seasons": [{"start": {"dayOfMonth": 1, "month": 1}, "week": 0}], "weeks": [{"days": [1, 2, 3, 1, 2, 3, 1]}], "days": [{"schedule": [{"time": "00:00", "zone": 1}, {"time": "12:00", "zone": 2}, {"time": "18:00", "zone": 3}]}, {"schedule": [{"time": "00:00", "zone": 4}, {"time": "12:00", "zone": 5}, {"time": "18:00", "zone": 6}]}, {"schedule": [{"time": "00:00", "zone": 7}, {"time": "12:00", "zone": 8}, {"time": "18:00", "zone": 9}]}], "specialDay": [{"dayOfMonth": 30, "month": 7, "year": 2020, "dayId": 2}, {"dayOfMonth": 15, "month": 8, "year": 2020, "dayId": 2}]}]}, "meterGroup": "groupForSession_1852918579", "timeoutTime": "2020-08-10T15:19:48+0000"}
+2020-08-10 16:17:48,400 <<< 201 
+2020-08-10 16:17:48,400 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/manageMeterJob/jobForSession_1852918579 {"instruction": "START"}
+2020-08-10 16:17:48,456 <<< 200 
+2020-08-10 16:17:48,457 127.0.0.1 - - [10/Aug/2020 16:17:48] "POST /Step3Submit HTTP/1.1" 200 -
+2020-08-10 16:17:48,580 >>> GET https://omnireltest1.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_1852918579 None
+2020-08-10 16:17:48,625 <<< 200 {"jobName":"jobForSession_1852918579","meterGroup":"groupForSession_1852918579","scheduledTime":null,"timeoutTime":"2020-08-10T15:19:48Z","createTime":"2020-08-10T15:17:48Z","updateTime":"2020-08-10T15:17:48Z","status":"RUNNING","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"TARIFF_CALENDAR","active":false,"activationTime":"2017-12-31T18:30:00Z","seasons":[{"week":0,"start":{"dayOfMonth":1,"month":1}}],"weeks":[{"days":[1,2,3,1,2,3,1]}],"days":[{"schedule":[{"time":"00:00","zone":1},{"time":"12:00","zone":2},{"time":"18:00","zone":3}]},{"schedule":[{"time":"00:00","zone":4},{"time":"12:00","zone":5},{"time":"18:00","zone":6}]},{"schedule":[{"time":"00:00","zone":7},{"time":"12:00","zone":8},{"time":"18:00","zone":9}]}],"specialDay":[{"dayId":2,"year":2020,"dayOfMonth":30,"month":7},{"dayId":2,"year":2020,"dayOfMonth":15,"month":8}]}]},"totalProcessedDevices":0,"totalSuccessfulDevices":0,"totalFailedDevices":0}
+2020-08-10 16:17:48,626 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_1852918579 {"startId": 0, "count": 1000}
+2020-08-10 16:17:48,669 <<< 200 {"meters":[]}
+2020-08-10 16:17:48,671 127.0.0.1 - - [10/Aug/2020 16:17:48] "GET /Progress HTTP/1.1" 200 -
+
+
+
+
+
+
+2020-08-10 16:17:53,581 >>> GET https://omnireltest1.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_1852918579 None
+2020-08-10 16:17:53,642 <<< 200 {"jobName":"jobForSession_1852918579","meterGroup":"groupForSession_1852918579","scheduledTime":null,"timeoutTime":"2020-08-10T15:19:48Z","createTime":"2020-08-10T15:17:48Z","updateTime":"2020-08-10T15:17:48Z","status":"RUNNING","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"TARIFF_CALENDAR","active":false,"activationTime":"2017-12-31T18:30:00Z","seasons":[{"week":0,"start":{"dayOfMonth":1,"month":1}}],"weeks":[{"days":[1,2,3,1,2,3,1]}],"days":[{"schedule":[{"time":"00:00","zone":1},{"time":"12:00","zone":2},{"time":"18:00","zone":3}]},{"schedule":[{"time":"00:00","zone":4},{"time":"12:00","zone":5},{"time":"18:00","zone":6}]},{"schedule":[{"time":"00:00","zone":7},{"time":"12:00","zone":8},{"time":"18:00","zone":9}]}],"specialDay":[{"dayId":2,"year":2020,"dayOfMonth":30,"month":7},{"dayId":2,"year":2020,"dayOfMonth":15,"month":8}]}]},"totalProcessedDevices":0,"totalSuccessfulDevices":0,"totalFailedDevices":0}
+2020-08-10 16:17:53,642 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_1852918579 {"startId": 0, "count": 1000}
+2020-08-10 16:17:53,709 <<< 200 {"meters":[]}
+2020-08-10 16:17:53,711 127.0.0.1 - - [10/Aug/2020 16:17:53] "GET /Progress HTTP/1.1" 200 -
+2020-08-10 16:17:58,581 >>> GET https://omnireltest1.dev.cyanconnode.com/sma/ws/queryMeterJob/jobForSession_1852918579 None
+2020-08-10 16:17:58,655 <<< 200 {"jobName":"jobForSession_1852918579","meterGroup":"groupForSession_1852918579","scheduledTime":null,"timeoutTime":"2020-08-10T15:19:48Z","createTime":"2020-08-10T15:17:48Z","updateTime":"2020-08-10T15:17:58Z","status":"FINISHED","jobType":"METER_COMMAND_SET","jobConfiguration":{"commands":[{"type":"TARIFF_CALENDAR","active":false,"activationTime":"2017-12-31T18:30:00Z","seasons":[{"week":0,"start":{"dayOfMonth":1,"month":1}}],"weeks":[{"days":[1,2,3,1,2,3,1]}],"days":[{"schedule":[{"time":"00:00","zone":1},{"time":"12:00","zone":2},{"time":"18:00","zone":3}]},{"schedule":[{"time":"00:00","zone":4},{"time":"12:00","zone":5},{"time":"18:00","zone":6}]},{"schedule":[{"time":"00:00","zone":7},{"time":"12:00","zone":8},{"time":"18:00","zone":9}]}],"specialDay":[{"dayId":2,"year":2020,"dayOfMonth":30,"month":7},{"dayId":2,"year":2020,"dayOfMonth":15,"month":8}]}]},"totalProcessedDevices":1,"totalSuccessfulDevices":0,"totalFailedDevices":0}
+2020-08-10 16:17:58,655 >>> POST https://omnireltest1.dev.cyanconnode.com/sma/ws/meterStatusForJob/jobForSession_1852918579 {"startId": 0, "count": 1000}
+2020-08-10 16:17:58,733 <<< 200 {"meters":[{"meterId":"002003999032","status":"FAILED","failureStep":"0","progress":null}]}
+2020-08-10 16:17:58,735 127.0.0.1 - - [10/Aug/2020 16:17:58] "GET /Progress HTTP/1.1" 200 -
+2020-08-10 16:18:01,828 127.0.0.1 - - [10/Aug/2020 16:18:01] "GET / HTTP/1.1" 200 -
+
+---------------------------------------------
+TODO
+- Groups real use of.
+- Sessions not pickling.
+
+--------------------------------------------------
+MNO integration:
+- IMEI, IMSI returned from gw on startup
+- Always unique, therefore no point in having hash.
+- Never changes tho, so thats argument for hash, but hash overhead could be larger than actual data.
+- New protobuf & CoAP endpoint on NMS to deliver data to.
+- gws have modems, but so do IMGWs and CNICs
+
+-----------------------------------------------------
+
+{
+  "jobName": "jobForSession_3467398692",
+  "jobType": "METER_COMMAND_SET",
+  "jobConfiguration": {
+    "commands": [
+      {
+        "type": "SECURITY_CREDENTIALS",
+        "credentials": [
+          {
+            "accessLevel": "METER_ACCESS_UTILITY ",
+            "password": "31313131313131313131313131313131",
+            "wrappedPassword": "ad0110483d0559d12e8cb97203e6c908"
+          }
+        ]
+      }
+    ]
+  },
+  "meterGroup": "groupForSession_3467398692"
+}
+
+
+400 Cannot deserialize value of type `com.cyanconnode.sma.job.objects.MeterAccessLevel` from String "METER_ACCESS_UTILITY": value not one of declared Enum instance names: [METER_ACCESS_READER, METER_GLOBAL_KEY, METER_ACCESS_PUBLIC, METER_ACCESS_UTILITY, METER_ACCESS_FWUP
+
+---------------------------------------------
+building smip
+
+CA_PROFILE=SMIP ca docker_pull smip/buildenv_terminal
+CA_PROFILE=SMIP ./build-tools/ca-wrapper setup
+CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make smip"
+CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make build"
+CA_PROFILE=SMIP ./build-tools/ca-wrapper run "PROJECT=smip make package"
+
+
+---------------
+pi@raspberrypi:~ $ ifconfig | grep global
+        inet6 2a00:23c5:b394:dd00:e82d:8dbd:2a66:aaa1  prefixlen 64  scopeid 0x0<global>
+        inet6 fd09:2534:54fc:0:f926:d444:ef43:4ffe  prefixlen 64  scopeid 0x0<global>
+        inet6 fd09:2534:54fc::abf  prefixlen 128  scopeid 0x0<global>
+        inet6 2a00:23c5:b394:dd00::abf  prefixlen 128  scopeid 0x0<global>
+
+
+-------------------------------------------------
+pki-create.sh
+
+server certs (SMIP and Omni):
+pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki server server
+
+SMIP node certs:
+SMIP=yes ./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-01 node 00-00-00-00-00-00-00-01
+SMIP=yes /Data/Projects/dev-stack2/src/omnimesh/devstack/data/scripts/pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-02 node 00-00-00-00-00-00-00-02
+
+---------------------------
+rm -rf /Data/Temp/DevStack/.data/pki
+mkdir -p /Data/Temp/DevStack/.data/pki
+cp certs/ca.crt.pem /Data/Temp/DevStack/.data/pki
+cp certs/ca.key.pem /Data/Temp/DevStack/.data/pki
+
+./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki server server
+
+mkdir -p /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-02
+SMIP=yes ./pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-02 node 00-00-00-00-00-00-00-02
+
+-------------------------------------
+videos
+- "Screen recorder" chrome extension
+- "veed" to add subtitles. (veed.io)
+
+-----------------------------------------
+MISRA start point:
+21 agent.lint.MISRA.mandatory.uniq
+1239 agent.lint.MISRA.required.uniq
+559 agent.lint.MISRA.advisory.uniq
+
+After mods:
+0 agent.lint.MISRA.mandatory.uniq
+354 agent.lint.MISRA.required.uniq
+295 agent.lint.MISRA.advisory.uniq
+
+---------------------------------------------------
+Fuzz testing for SMIP (AFL)
+
+make fuzzable
+sudo su
+echo core >/proc/sys/kernel/core_pattern
+dd if=/dev/urandom of=testcases/seed bs=1024 count=1
+afl-fuzz -t 500 -m 600 -i testcases/ -o findings/ build/fuzzable/bin/fuzzable_mac_frame -timemode fast -heap 8000
+
+parallel fuzzing.
+https://github.com/mirrorer/afl/blob/master/docs/parallel_fuzzing.txt
+
+Or use script: tools/fuzzing/fuzzy-wuzzy.sh
+
+----------------------------------------------------------
+
+
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 14 hrs) <<<
+
+  cycle 14, lifetime speed 457 execs/sec, path 999/1009 (99%)
+  pending 0/81, coverage 7.62%, no crashes yet
+
+>>> fuzzer1 (0 days, 14 hrs) <<<
+
+  cycle 116, lifetime speed 487 execs/sec, path 834/1057 (78%)
+  pending 0/2, coverage 7.58%, no crashes yet
+
+>>> fuzzer2 (0 days, 14 hrs) <<<
+
+  cycle 107, lifetime speed 480 execs/sec, path 598/1158 (51%)
+  pending 0/4, coverage 7.77%, no crashes yet
+
+>>> fuzzer3 (0 days, 14 hrs) <<<
+
+  cycle 111, lifetime speed 481 execs/sec, path 640/1139 (56%)
+  pending 0/2, coverage 7.75%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 2 days, 9 hours
+         Total execs : 99 million
+    Cumulative speed : 1905 execs/sec
+       Pending paths : 0 faves, 89 total
+  Pending per fuzzer : 0 faves, 22 total (on average)
+       Crashes found : 0 locally unique
+
+
+
+------------------------------------------------------------------------
                                                                                              
 
+status check tool for afl-fuzz by <lcamtuf@google.com>
 
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 15 hrs) <<<
+
+  cycle 17, lifetime speed 457 execs/sec, path 652/1013 (64%)
+  pending 0/56, coverage 7.62%, no crashes yet
+
+>>> fuzzer1 (0 days, 15 hrs) <<<
+
+  cycle 123, lifetime speed 487 execs/sec, path 562/1061 (52%)
+  pending 0/1, coverage 7.59%, no crashes yet
+
+>>> fuzzer2 (0 days, 15 hrs) <<<
+
+  cycle 113, lifetime speed 480 execs/sec, path 397/1163 (34%)
+  pending 0/1, coverage 7.78%, no crashes yet
+
+>>> fuzzer3 (0 days, 15 hrs) <<<
+
+  cycle 117, lifetime speed 481 execs/sec, path 534/1144 (46%)
+  pending 0/1, coverage 7.76%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 2 days, 12 hours
+         Total execs : 104 million
+    Cumulative speed : 1905 execs/sec
+       Pending paths : 0 faves, 59 total
+  Pending per fuzzer : 0 faves, 14 total (on average)
+       Crashes found : 0 locally unique
+
+
+------------------------------------------------------------------------------------
+
+4.98V - ok
+3.7V  - ok
+2.74  - ok
+2.50  - ok
+2.40  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.30  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui6terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.euiterminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+3.00  - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+power-cycle- ok.
+
+2.79V - ok
+2.60V - ok
+2.50V - ok
+2.40V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50V - ok
+2.40V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50V - ok
+2.40V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.50V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+2.60V - terminal:114, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+
+
+-------------------------------------------
+
+http://127.0.0.1:8088/Step1Submit
+http://127.0.0.1:8088/Step1Submit
+http://127.0.0.1:8088/Step2Submit
+http://127.0.0.1:8088/Step3Submit
+
+----------------------------------------------------------------
+smip v20.0.0
+
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 23 hrs) <<<
+
+  cycle 22, lifetime speed 398 execs/sec, path 641/1220 (52%)
+  pending 0/30, coverage 8.96%, no crashes yet
+
+>>> fuzzer1 (0 days, 23 hrs) <<<
+
+  cycle 152, lifetime speed 425 execs/sec, path 1139/1202 (94%)
+  pending 0/3, coverage 8.54%, no crashes yet
+
+>>> fuzzer2 (0 days, 23 hrs) <<<
+
+  cycle 161, lifetime speed 428 execs/sec, path 342/1191 (28%)
+  pending 0/4, coverage 8.55%, no crashes yet
+
+>>> fuzzer3 (0 days, 23 hrs) <<<
+
+  cycle 157, lifetime speed 419 execs/sec, path 423/1260 (33%)
+  pending 0/0, coverage 8.67%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 3 days, 20 hours
+         Total execs : 138 million
+    Cumulative speed : 1670 execs/sec
+       Pending paths : 0 faves, 37 total
+  Pending per fuzzer : 0 faves, 9 total (on average)
+       Crashes found : 0 locally unique
+
+---------------------------------------------------------------------
 
 
 
