@@ -29463,7 +29463,46 @@ http://127.0.0.1:8088/Step1Submit
 http://127.0.0.1:8088/Step2Submit
 http://127.0.0.1:8088/Step3Submit
 
+----------------------------------------------------------------
+smip v20.0.0
 
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (0 days, 23 hrs) <<<
+
+  cycle 22, lifetime speed 398 execs/sec, path 641/1220 (52%)
+  pending 0/30, coverage 8.96%, no crashes yet
+
+>>> fuzzer1 (0 days, 23 hrs) <<<
+
+  cycle 152, lifetime speed 425 execs/sec, path 1139/1202 (94%)
+  pending 0/3, coverage 8.54%, no crashes yet
+
+>>> fuzzer2 (0 days, 23 hrs) <<<
+
+  cycle 161, lifetime speed 428 execs/sec, path 342/1191 (28%)
+  pending 0/4, coverage 8.55%, no crashes yet
+
+>>> fuzzer3 (0 days, 23 hrs) <<<
+
+  cycle 157, lifetime speed 419 execs/sec, path 423/1260 (33%)
+  pending 0/0, coverage 8.67%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 3 days, 20 hours
+         Total execs : 138 million
+    Cumulative speed : 1670 execs/sec
+       Pending paths : 0 faves, 37 total
+  Pending per fuzzer : 0 faves, 9 total (on average)
+       Crashes found : 0 locally unique
+
+---------------------------------------------------------------------
 
 
 
