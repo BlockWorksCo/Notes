@@ -29509,7 +29509,7 @@ This needs to be writable but gets created with user & group 999.
 chusr -R ubuntu .data/db
 chgrp -R ubuntu .data/db
 
-fies that.
+fixes that.
 
 
 
