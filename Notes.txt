@@ -29503,8 +29503,13 @@ Summary stats
        Crashes found : 0 locally unique
 
 ---------------------------------------------------------------------
+.data/db is mapped to /var/lib/mysql
 
+This needs to be writable but gets created with user & group 999.
+chusr -R ubuntu .data/db
+chgrp -R ubuntu .data/db
 
+fixes that.
 
 
 
