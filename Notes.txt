@@ -29511,5 +29511,11 @@ chgrp -R ubuntu .data/db
 
 fixes that.
 
+---------------------------------------
+dev-stack:
+
+Need for each NMS:
+dev-stack shell nms-0 "chmod -R a+rw /tmp" 
+for each 
 
 
