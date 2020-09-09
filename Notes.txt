@@ -29518,4 +29518,7 @@ Need for each NMS:
 dev-stack shell nms-0 "chmod -R a+rw /tmp" 
 for each 
 
+sudo -u #1000 -E
+
+
 
