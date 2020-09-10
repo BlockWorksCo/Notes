@@ -29520,5 +29520,8 @@ for each
 
 sudo -u #1000 -E
 
+-------------------------------------------------
+dtls server side.
+getTerminalLicenseId() retuns licenceId from cert?
 
 
