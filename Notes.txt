@@ -29522,6 +29522,8 @@ sudo -u #1000 -E
 
 -------------------------------------------------
 dtls server side.
+driven from:
+network.getConnectionRegistry().queueSessionInfoForStoring(this);
 getTerminalLicenseId() retuns licenceId from cert?
 
 DTLSSessionScavenger : thread
