@@ -29539,6 +29539,16 @@ docker login
 docker login docker-dev.artifactory.cyco.io
 docker login smip-docker-dev.artifactory.cyco.io
 
+----------------------------------------
+MISRA checking process:
+
+- run tools/MISRA/MakeMISRAReport.sh on new code.
+- run tools/MISRA/MakeMISRAReport.sh on baseline code from MISRABaseline branch.
+- Copy old agent.lint.MISRA.required.uniq to 'baseline'
+- Copy new agent.lint.MISRA.required.uniq to 'new'
+- Run tools/MISRA/CompareMISRAReport.py to find probable new issues.
+- Manually check all output from above comparison.
+- Repeat with 'mandatory' and 'advisory' in place of 'required'.
 
 
 
