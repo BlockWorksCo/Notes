@@ -29648,6 +29648,39 @@ O1 2020-09-16 13:28:47.774 PORT Baud Rate: 9600 StopBits: One Parity: None DataB
 9 2020-09-16 13:28:48.501 SEND 07 60 85 74 05 08 02 01 AC 0A 80 08 31 32 33 34 
 10 2020-09-16 13:28:48.514 SEND 35 36 37 38 BE 10 04 0E 01 00 00 00 06 5F 1F 04 
 11 2020-09-16 13:28:48.524 SEND 00 00 7E 1F 04 B0 D0 F5 7E 
+
+<HDLC len="70" >
+<TargetAddress Value="33358044" />
+<SourceAddress Value="17" />
+<!--AARQ frame.-->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="Low" />
+  <CallingAuthentication Value="3132333435363738" />
+  <InitiateRequest>
+    <ProposedDlmsVersionNumber Value="6" />
+    <ProposedConformance>
+      <ConformanceBit Name="Action" />
+      <ConformanceBit Name="EventNotification" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="MultipleReferences" />
+      <ConformanceBit Name="BlockTransferWithAction" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+      <ConformanceBit Name="Attribute0SupportedWithGet" />
+      <ConformanceBit Name="PriorityMgmtSupported" />
+    </ProposedConformance>
+    <ProposedMaxPduSize Value="1200" />
+  </InitiateRequest>
+</AssociationRequest>
+</PDU>
+</HDLC>
+
 12 2020-09-16 13:28:48.572 RECEIVE 7E A0 3A 23 
 13 2020-09-16 13:28:48.588 RECEIVE 1E E8 02 B9 30 86 A5 E6 E7 00 61 29 A1 09 06 
 14 2020-09-16 13:28:48.608 RECEIVE 07 60 85 74 05 08 01 01 A2 03 02 01 00 A3 05 
@@ -29721,6 +29754,22 @@ O1 2020-09-16 13:28:47.774 PORT Baud Rate: 9600 StopBits: One Parity: None DataB
 
 13:29
 
+
+
+                                                                                  7e
+2020-09-16 15:08:07.135 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): a040
+2020-09-16 15:08:07.135 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 03
+2020-09-16 15:08:07.135 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 21
+2020-09-16 15:08:07.135 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 10
+2020-09-16 15:08:07.135 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 0af6
+2020-09-16 15:08:07.135 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): e6e600
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 4): 6032a1090607608574050801018a0207
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: tx: ( 2/ 4): 808b0760857405080201ac0680041234
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: tx: ( 3/ 4): 5678be10040e01000000065f1f040000
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: tx: ( 4/ 4): 1e1dffff
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 1cb7
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 7e
+2020-09-16 15:08:07.136 [debug] [              hdlc] {        hdlc}: ** Giving s_responseSem to s
 
 
 
