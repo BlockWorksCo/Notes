@@ -29773,4 +29773,8 @@ O1 2020-09-16 13:28:47.774 PORT Baud Rate: 9600 StopBits: One Parity: None DataB
 
 
 
+Somehow we need to get 33358044 from 1220200204... we also need to be able to read 1220200204 from the meter with a target-address of 0x01.
+
+
+
 
