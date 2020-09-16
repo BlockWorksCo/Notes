@@ -29550,6 +29550,28 @@ MISRA checking process:
 - Manually check all output from above comparison.
 - Repeat with 'mandatory' and 'advisory' in place of 'required'.
 
+-------------------------------------
+energimax:
+
+12:35:56 Initializing serial connection.
+12:35:57 Send SNRM request.
+7E A0 07 03 21 93 0F 01 7E
+12:35:57 
+7E A0 1E 21 03 73 C3 7A 81 80 12 05 01 80 06 01 80 07 04 00 00 00 01 08 04 00 00 00 01 53 3B 7E
+12:35:57 Parsing UA reply succeeded.
+12:35:57 Send AARQ request.
+7E A0 2B 03 21 10 FB AF E6 E6 00 60 1D A1 09 06 07 60 85 74 05 08 01 01 BE 10 04 0E 01 00 00 00 06 5F 1F 04 00 00 1E 1D FF FF C5 E4 7E
+12:35:58 
+7E A0 37 21 03 30 6C 7C E6 E7 00 61 29 A1 09 06 07 60 85 74 05 08 01 01 A2 03 02 01 00 A3 05 A1 03 02 01 00 BE 10 04 0E 08 00 06 5F 1F 04 00 00 10 10 00 F3 00 07 8A F2 7E
+12:35:58 Parsing AARE reply succeeded.
+12:35:58 Reading object 0.2.43.1.0.255, interface Data
+7E A0 19 03 21 32 6F D8 E6 E6 00 C0 01 C1 00 01 00 02 2B 01 00 FF 02 00 C6 B8 7E
+12:35:58 
+7E A0 15 21 03 52 5D 8A E6 E7 00 C4 01 C1 00 06 00 00 04 35 33 19 7E
+12:35:58 Disconnect request
+12:35:58 Disconnect request
+
+
 
 
 
