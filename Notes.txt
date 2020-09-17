@@ -29775,6 +29775,50 @@ O1 2020-09-16 13:28:47.774 PORT Baud Rate: 9600 StopBits: One Parity: None DataB
 
 Somehow we need to get 33358044 from 1220200204... we also need to be able to read 1220200204 from the meter with a target-address of 0x01.
 
+--------------------------------------------------
+
+<HDLC len="106" >
+<TargetAddress Value="1" />
+<SourceAddress Value="1" />
+<!--AARQ frame.-->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <CallingAPTitle Value="5A54590131343B09" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="HighGMac" />
+  <CallingAuthentication Value="1E03280E0C074369433B274D5A6C4E4E" />
+  <glo_InitiateRequest Value="3000000012ABB52DE45AEE0BE876FE7FCFD0C83FE81AD727CE11EFF40E1098" />
+</AssociationRequest>
+</PDU>
+</HDLC>
+
+<HDLC len="118" >
+<TargetAddress Value="1" />
+<SourceAddress Value="1" />
+<!--AARE frame.-->
+<FrameType Value="30" />
+<PDU>
+<AssociationResponse>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <AssociationResult Value="0" />
+  <ResultSourceDiagnostic>
+    <!--AUTHENTICATION_REQUIRED-->
+    <ACSEServiceUser Value="14" />
+  </ResultSourceDiagnostic>
+  <RespondingAPTitle Value="5A54590131343B0C" />
+  <ResponderACSERequirement Value="1" />
+  <MechanismName Value="HighGMac" />
+  <RespondingAuthentication Value="9B6358803A79576456DF73C239006ADD" />
+  <glo_InitiateResponse Value="300000001175D6DDA6B2D17BA4610FAD5422F957A41C9D0FEDC7C27B07A896" />
+</AssociationResponse>
+</PDU>
+</HDLC>
+
+
+
+
 
 
 
