@@ -29818,6 +29818,67 @@ Somehow we need to get 33358044 from 1220200204... we also need to be able to re
 
 
 
+7365727665723031
+7365727665723031
+
+
+
+not working:
+<HDLC len="106" >
+<TargetAddress Value="1" />
+<SourceAddress Value="16" />
+<!--AARQ frame.-->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <CallingAPTitle Value="7365727665723031" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="HighGMac" />
+  <CallingAuthentication Value="30654537456363633938356635344342" />
+  <glo_InitiateRequest Value="3000000002460790BCD438C149A712F6F017F1555C73B5D45B9CDD3B07399A" />
+</AssociationRequest>
+</PDU>
+</HDLC>
+gives:
+COSEM AA is rejected: application-context-name not supported
+
+
+working:
+<HDLC len="6A" >
+<TargetAddress Value="1" />
+<SourceAddress Value="1" />
+<!-- AARQ frame. -->
+<FrameType Value="10" />
+<PDU>
+<AssociationRequest>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <CallingAPTitle Value="7365727665723031" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="HighGMAC" />
+  <CallingAuthentication Value="07352A1E20751A4C610A422355375E08" />
+  <!-- Decrypted data:
+    Security: 48
+    Invocation Counter: 1
+    <InitiateRequest>
+      <ProposedDlmsVersionNumber Value="06" />
+      <ProposedConformance>
+        <ConformanceBit Name="BlockTransferWithGetOrRead" />
+        <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+        <ConformanceBit Name="BlockTransferWithAction" />
+        <ConformanceBit Name="MultipleReferences" />
+        <ConformanceBit Name="Get" />
+        <ConformanceBit Name="Set" />
+        <ConformanceBit Name="SelectiveAccess" />
+        <ConformanceBit Name="Action" />
+      </ProposedConformance>
+      <ProposedMaxPduSize Value="FFFF" />
+    </InitiateRequest>
+  -->
+  <glo_InitiateRequest Value="3000000001351D528876A05B23E805F9BF85370F3D7B05E5906240E16C49CA" />
+</AssociationRequest>
+</PDU>
+</HDLC>
 
 
 
