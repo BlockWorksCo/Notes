@@ -29881,5 +29881,8 @@ working:
 </HDLC>
 
 
+400 Cannot deserialize value of type `com.cyanconnode.sma.job.objects.MeterCredentialKeyId` from String "KEY_ID_BROADCAST_ENCRYPTION": value not one of declared Enum instance name
+    s: [KEY_ID_AUTHENTICATION, KEY_ID_BROADCAST_ENCRYPTION, KEY_ID_UNICAST_ENCRYPTION] 
+
 
 
