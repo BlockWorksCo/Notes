@@ -29885,4 +29885,76 @@ working:
     s: [KEY_ID_AUTHENTICATION, KEY_ID_BROADCAST_ENCRYPTION, KEY_ID_UNICAST_ENCRYPTION] 
 
 
+Fails:
+
+{
+  "jobName": "jobForSession_263509559",
+  "jobType": "METER_COMMAND_SET",
+  "jobConfiguration": {
+    "commands": [
+      {
+        "type": "SECURITY_CREDENTIALS",
+        "credentials": [
+          {
+            "accessLevel": "METER_GLOBAL_KEY",
+            "password": "1",
+            "wrappedPassword": "2",
+            "keyId": "KEY_ID_AUTHENTICATION"
+          },
+          {
+            "accessLevel": "METER_GLOBAL_KEY",
+            "password": "3",
+            "wrappedPassword": "4",
+            "keyId": "KEY_ID_AUTHENTICATION"
+          },
+          {
+            "accessLevel": "METER_GLOBAL_KEY",
+            "password": "5",
+            "wrappedPassword": "6",
+            "keyId": "KEY_ID_BROADCAST_ENCRYPTION "
+          }
+        ]
+      }
+    ]
+  },
+  "meterGroup": "groupForSession_263509559"
+}
+
+
+Works:
+
+{
+  "jobName": "jobForSession_3491317259",
+  "jobType": "METER_COMMAND_SET",
+  "jobConfiguration": {
+    "commands": [
+      {
+        "type": "SECURITY_CREDENTIALS",
+        "credentials": [
+          {
+            "accessLevel": "METER_GLOBAL_KEY",
+            "password": "1",
+            "wrappedPassword": "2",
+            "keyId": "KEY_ID_AUTHENTICATION"
+          },
+          {
+            "accessLevel": "METER_GLOBAL_KEY",
+            "password": "3",
+            "wrappedPassword": "4",
+            "keyId": "KEY_ID_UNICAST_ENCRYPTION"
+          }
+        ]
+      }
+    ]
+  },
+  "meterGroup": "groupForSession_3491317259"
+}
+
+
+
+
+
+
+
+
 
