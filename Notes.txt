@@ -29885,8 +29885,6 @@ working:
     s: [KEY_ID_AUTHENTICATION, KEY_ID_BROADCAST_ENCRYPTION, KEY_ID_UNICAST_ENCRYPTION] 
 
 
-Fails:
-
 {
   "jobName": "jobForSession_263509559",
   "jobType": "METER_COMMAND_SET",
@@ -29911,7 +29909,7 @@ Fails:
             "accessLevel": "METER_GLOBAL_KEY",
             "password": "5",
             "wrappedPassword": "6",
-            "keyId": "KEY_ID_BROADCAST_ENCRYPTION "
+            "keyId": "KEY_ID_BROADCAST_ENCRYPTION"
           }
         ]
       }
