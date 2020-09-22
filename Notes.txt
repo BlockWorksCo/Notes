@@ -29965,6 +29965,9 @@ PR-1918-0005:
 PR-1918-0006:
 - Falls into above NMS work (selection & grouping for jobs).
 
+PR-1918-0008:
+- Nope. (or add ~4->6 months extra work to add a TCP stack and spec-compliant TCP-Profile DLMS).
+- Also has encryption issues that likely make this unfeasible (the node is not the security endpoint).
 
 
 
