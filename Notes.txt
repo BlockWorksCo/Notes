@@ -29952,9 +29952,9 @@ Works:
 
 PR-1918-0003:
 - Falls into Agent-side MNO-integration work also (IMEI/IMSI/etc).
-- NMS: Allow CELLULAR nodes in protobuf/interface. Allow selection of nodes for jobs & groups by CELLULAR.
-- Agent: read modem info from modem, send it up via new protobuf (MNO integration work)
-- Agent: read GPIO to peform h/w identification and publish to NMS.
+- NMS: Allow CELLULAR nodes in protobuf/interface. Allow selection of nodes for jobs & groups by CELLULAR. (guess 10d)
+- Agent: read modem info from modem, send it up via new protobuf (MNO integration work) (5d)
+- Agent: read GPIO to peform h/w identification and publish to NMS. (2d design issues, 3d implementation).
 
 PR-1918-0004:
 - Falls into above (hw identification).
@@ -29968,6 +29968,9 @@ PR-1918-0006:
 PR-1918-0008:
 - Nope. (or add ~4->6 months extra work to add a TCP stack and spec-compliant TCP-Profile DLMS).
 - Also has encryption issues that likely make this unfeasible (the node is not the security endpoint).
+
+PR-1918-0013:
+- This was waiting on the new PSU spec which hadn't been designed previously. Do we have a design now? (rough guess, 5d).
 
 
 
