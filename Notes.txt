@@ -29948,6 +29948,24 @@ Works:
   "meterGroup": "groupForSession_3491317259"
 }
 
+------------------------------------------
+
+PR-1918-0003:
+- Falls into Agent-side MNO-integration work also (IMEI/IMSI/etc).
+- NMS: Allow CELLULAR nodes in protobuf/interface. Allow selection of nodes for jobs & groups by CELLULAR.
+- Agent: read modem info from modem, send it up via new protobuf (MNO integration work)
+- Agent: read GPIO to peform h/w identification and publish to NMS.
+
+PR-1918-0004:
+- Falls into above (hw identification).
+
+PR-1918-0005:
+- Falls into above NMS work (selection & grouping for jobs).
+
+PR-1918-0006:
+- Falls into above NMS work (selection & grouping for jobs).
+
+
 
 
 
