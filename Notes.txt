@@ -29999,7 +29999,17 @@ activateSampleComplexProfiles()   - called periodically (15 minutes) by cron tas
 sampleComplexProfiles()             - called by driver task as a result of the above. Iterates over all profiles.
  selectiveAccessRead()              - called for each profile in turn to perform the SA read of the profile data from the meter.
   profileSampleCreate()             - Called to create a profile sample message after reading from meter.
-   s_dpSampleCb/saveDataProfileSample - called through a callback setup as "config.sampleCb = saveDataProfileSample".
+   s_dpSampleCb/saveDataProfileSample - called through a callback setup as "config.sampleCb = saveDataProfileSample". Forms the protobuf mesage from sample data.
+     mqCreate()                         - puts the protobuf sample into the mq.
+
+
+Periodically:
+ sendMq()                           - called by scheduletask to send mq entries to NMS
+
+- NMS receives MQ entries and forwards to SMA.
+- SMA stores sample data in DB.
+- UI/MDMS reads data from database via SMA API.
+
 
 
 
