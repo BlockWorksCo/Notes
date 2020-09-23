@@ -29202,7 +29202,7 @@ LINK	CVE-2017-2800	Critical	Versions of wolfSSL before 3.11.0 have a possible ou
 LINK	CVE-2017-8855	High	In versions of wolfSSL before 3.11.0 there are cases where a malformed DH key is not rejected by the function wc_DhAgree. Thanks to Yueh-Hsun Lin and Peng Li at KNOX Security at Samsung Research America.	Fixed 5 days prior to CVE issuance	3.11.0
 
 -----------------------------------------
-metertoool log
+deviceconfigurator metertoool log
 journalctl -xe --unit=omnimesh-metertool
 
 -----------------------------------------
