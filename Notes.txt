@@ -29998,8 +29998,7 @@ activateSampleComplexProfiles()   - called periodically (15 minutes) by cron tas
 
 sampleComplexProfiles()             - called by driver task as a result of the above. Iterates over all profiles.
  selectiveAccessRead()              - called for each profile in turn to perform the SA read of the profile data from the meter.
-
-selectiveAccessRead(BY_RANGE for data, BY_ENTRY for events typically)
+  profileSampleCreate()             - Called to create a profile sample message after reading from meter.
 
 
 
