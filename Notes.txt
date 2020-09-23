@@ -29987,6 +29987,10 @@ MNO integration:
 - Configuration of fallback/rotation/selection of SIM. Primary/secondary?
 
 
+-------------------------------------------
+sample reading process:
+
+selectiveAccessRead(BY_RANGE for data, BY_ENTRY for events typically)
 
 
 
