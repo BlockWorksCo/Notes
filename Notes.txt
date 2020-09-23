@@ -29983,6 +29983,10 @@ Dual SIM:
 - report both in MNO integration work on login?
 
 
+MNO integration:
+- Configuration of fallback/rotation/selection of SIM. Primary/secondary?
+
+
 
 
 
