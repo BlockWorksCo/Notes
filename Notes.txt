@@ -29990,6 +29990,11 @@ MNO integration:
 -------------------------------------------
 sample reading process:
 
+driverActivateDp()          - called at initialisation.
+ setDataProfileSampling()   - sets the cron job to read samples.
+
+activateSampleComplexProfiles   - called periodically (15 minutes) by cron task 
+ driverPostMsg(MessageSampleComplexProfile)     - posts message to read the profiles.
 selectiveAccessRead(BY_RANGE for data, BY_ENTRY for events typically)
 
 
