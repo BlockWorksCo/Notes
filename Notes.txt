@@ -29973,6 +29973,14 @@ PR-1918-0013:
 - This was waiting on the new PSU spec which hadn't been designed previously. Do we have a design now? (rough guess, 5d).
 
 - dual SIM
+- MTS
+
+-----------------------------------------------------------
+Dual SIM:
+
+- SIM change == tamper?
+- fallback/rotate SIM usage
+- report both in MNO integration work on login?
 
 
 
