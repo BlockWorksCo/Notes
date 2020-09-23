@@ -29972,6 +29972,7 @@ PR-1918-0008:
 PR-1918-0013:
 - This was waiting on the new PSU spec which hadn't been designed previously. Do we have a design now? (rough guess, 5d).
 
+- dual SIM
 
 
 
