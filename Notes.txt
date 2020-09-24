@@ -30011,6 +30011,23 @@ On server side:
 - SMA stores sample data in DB.
 - UI/MDMS reads data from database via SMA API.
 
+-----------------------------------
+omnireltest1.dev.cyanconnode.com server and Precise 1ph & 3ph meter (edited) 
+15:01
+0000000064610807
+15:02
+0000000006460309
+
+I used following for Precice meters:
+Password : 31313131313131313131313131313132
+Wrapped Password : 8AB6BD02DE7F5BFA8BF565DE848EEACCB0763241C41D9338
+Password : D0D1D2D3D4D5D6D7D8D9DADBDCDDDEDF (default AK)
+Wrapped Password : E8B8CBF0663B79A456FB47B6E7412F5B2ACE14293403460E
+
+
+
+
+
 
 
 
