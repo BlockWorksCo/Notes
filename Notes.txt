@@ -30052,10 +30052,12 @@ Ideas
     - Anomaly detection (being able to correctly predict normal behaviour is essential) then differences from norm.
     - Standard management style reporting, data reduction/statistics.
     - Maintenance reporting.
+    - predictive maintenance of power network.
+    - fault monitoring of power network.
 - Reporting
 - Visualisation
     - geographic
-    - power network (hierarchy)
+    - power network (hierarchy) for energy audit
     - 
 - Push into OmniMDMS
     - back-fill
