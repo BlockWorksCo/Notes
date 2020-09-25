@@ -30070,14 +30070,15 @@ Ideas
 - OSCORE
 - CoAP replacement
 - LwM2M
-- Data fusion
+- Data fusion (they all feed into energy consumption)
     - weather
     - traffic
-    -
+    - air quality
 - Business value
 - network optimisation thru data reduction at edge.
 - hash-chain of profile data.
 - Demand-side management.
+    - Give client discount for ability to turn on/off low priority equipment?
 - Network architecture
     - use of multicast to lighten the load.
 - Low power architecture.
@@ -30085,6 +30086,9 @@ Ideas
     - pushing decisions to edge facilitates this as network-use is reduced.
     - Event ESMEs can be a low-power design.
 - "consumer facing" IFTTT style integration?
+    - plugs
+    - lights
+    - notifications
 
 
 
