@@ -30054,6 +30054,7 @@ Ideas
     - Maintenance reporting.
     - predictive maintenance of power network.
     - fault monitoring of power network.
+    - trends
 - Reporting
 - Visualisation
     - geographic
