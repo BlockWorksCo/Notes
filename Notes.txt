@@ -30032,6 +30032,22 @@ GET /meterPing/METER%20123
 
 curl --insecure --verbose -X GET https://sysadmin:sysadmin@localhost:8080/sma/ws/meterPing/METER_D1_002972
 
+------------------------------------------------------
+Ideas
+
+- Analytics
+- Push into OmniMDMS
+- Distributed MDMS (MDMS at edge).
+- Flexible architecture to allow for multiple technologies & pluggability.
+- Low power
+- Likelihood-of-communication. Predict how likely communication is to get thru. Background momitoring.
+
+
+
+
+
+
+
 
 
 
