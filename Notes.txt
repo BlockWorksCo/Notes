@@ -30055,6 +30055,9 @@ Ideas
     - predictive maintenance of power network.
     - fault monitoring of power network.
     - trends
+    - filtering of outages if feeder has had an outage (data reduction).
+        - Infer that feeder is out when all downstream meters are out.
+        - Gateway can also filter out last-gasps from all child nodes if LGs are received from all (data reduction).
 - Reporting
 - Visualisation
     - geographic
