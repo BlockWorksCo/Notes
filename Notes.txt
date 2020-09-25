@@ -30035,13 +30035,23 @@ curl --insecure --verbose -X GET https://sysadmin:sysadmin@localhost:8080/sma/ws
 ------------------------------------------------------
 Ideas
 
-- Analytics
+- Internal Analytics
+- External analytics
+- Reporting
+- Visualisation
 - Push into OmniMDMS
 - Distributed MDMS (MDMS at edge).
 - Flexible architecture to allow for multiple technologies & pluggability.
 - Low power
 - Likelihood-of-communication. Predict how likely communication is to get thru. Background momitoring.
-
+- Proactive recovery to improve likelihood-of-communication.
+- OSCORE
+- CoAP repalcement
+- LwM2M
+- Data fusion
+- Business value
+- network optimisation thru data reduction at edge.
+- hash-chain of profile data.
 
 
 
