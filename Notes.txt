@@ -30037,10 +30037,15 @@ Ideas
 
 - Internal Analytics
 - External analytics
+    - Power network monitoring
+    - Power network prediction.
 - Reporting
 - Visualisation
 - Push into OmniMDMS
 - Distributed MDMS (MDMS at edge).
+    - just send metadata & control over network, no bulk data.
+    - no back-fill needed, reliability increase.
+    - 
 - Flexible architecture to allow for multiple technologies & pluggability.
 - Low power
 - Likelihood-of-communication. Predict how likely communication is to get thru. Background momitoring.
