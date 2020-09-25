@@ -30036,12 +30036,22 @@ curl --insecure --verbose -X GET https://sysadmin:sysadmin@localhost:8080/sma/ws
 Ideas
 
 - Internal Analytics
+    - Anomaly detection (being able to correctly predict normal behaviour is essential) then differences from norm.
+    - Analyse Agent logs.
+        - Proactively detect bugs
+        - Save developer time
+    - Meter-failure prediction. Replace before failure.
 - External analytics
     - Power network monitoring
     - Power network prediction.
+    - Feedback loop to demand-side management.
+    - Anomaly detection (being able to correctly predict normal behaviour is essential) then differences from norm.
 - Reporting
 - Visualisation
 - Push into OmniMDMS
+    - back-fill
+    - cleansing of data
+    - billing.
 - Distributed MDMS (MDMS at edge).
     - just send metadata & control over network, no bulk data.
     - no back-fill needed, reliability increase.
@@ -30054,9 +30064,13 @@ Ideas
 - CoAP repalcement
 - LwM2M
 - Data fusion
+    - weather
+    - traffic
+    -
 - Business value
 - network optimisation thru data reduction at edge.
 - hash-chain of profile data.
+- Demand-side management.
 
 
 
