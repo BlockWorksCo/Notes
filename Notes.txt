@@ -30062,6 +30062,9 @@ Ideas
     - just send metadata & control over network, no bulk data.
     - no back-fill needed, reliability increase.
     - legal record would be hashes of data as below hash-chain produces.
+        - alternate NMS to feed data into SMA?
+        - separation of DTLS/CoAP from NMS?
+    - Problem: Interface with other systems??
 - Flexible architecture to allow for multiple technologies & pluggability.
     - alternate NMS to feed data into SMA?
     - separation of DTLS/CoAP from NMS?
@@ -30080,6 +30083,7 @@ Ideas
     - air quality
 - Business value
 - network optimisation thru data reduction at edge.
+    - preprocess DLMS profile data into fitted curves over time (application-specific compression).
 - hash-chain of profile data.
 - Demand-side management.
     - Give client discount for ability to turn on/off low priority equipment?
@@ -30093,6 +30097,10 @@ Ideas
     - plugs
     - lights
     - notifications
+- Push down into meter
+    - flattened design.
+    - library + SPI-attached tranceiver.
+    - removes overhead of DLMS.
 
 
 
