@@ -30041,6 +30041,9 @@ Ideas
         - Proactively detect bugs
         - Save developer time
     - Meter-failure prediction. Replace before failure.
+        - Monitor current/voltage fluctutations w.r.t time
+        - value-add for industrial clients who need greater uptime?
+        - Can compare patterns against sibling meters which individual systems cannot.
 - External analytics
     - Power network monitoring
     - Power network prediction.
@@ -30071,6 +30074,12 @@ Ideas
 - network optimisation thru data reduction at edge.
 - hash-chain of profile data.
 - Demand-side management.
+- Network architecture
+    - use of multicast to lighten the load.
+- Low power architecture.
+    - Don't assume always-on.
+    - pushing decisions to edge facilitates this as network-use is reduced.
+    - Event ESMEs can be a low-power design.
 
 
 
