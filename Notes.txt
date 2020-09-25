@@ -30050,6 +30050,8 @@ Ideas
     - Power network prediction.
     - Feedback loop to demand-side management.
     - Anomaly detection (being able to correctly predict normal behaviour is essential) then differences from norm.
+    - Standard management style reporting, data reduction/statistics.
+    - Maintenance reporting.
 - Reporting
 - Visualisation
 - Push into OmniMDMS
@@ -30061,6 +30063,8 @@ Ideas
     - no back-fill needed, reliability increase.
     - legal record would be hashes of data as below hash-chain produces.
 - Flexible architecture to allow for multiple technologies & pluggability.
+    - alternate NMS to feed data into SMA?
+    - separation of DTLS/CoAP from NMS?
 - Low power
 - Likelihood-of-communication. Predict how likely communication is to get thru. Background momitoring.
 - Proactive recovery to improve likelihood-of-communication.
