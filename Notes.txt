@@ -30062,6 +30062,8 @@ Ideas
         - Validation of restoration at gw and feeder level.
     - Can we obtain data to train on?
     - real time pricing.
+    - structured/unstructured data
+    - field force automation (https://en.wikipedia.org/wiki/Field_force_automation)
 - Reporting
 - Visualisation
     - geographic
