@@ -30064,7 +30064,7 @@ Ideas
     - legal record would be hashes of data as below hash-chain produces.
         - alternate NMS to feed data into SMA?
         - separation of DTLS/CoAP from NMS?
-    - Problem: Interface with other systems??
+    - Problem: Interface with other head-end systems??
 - Flexible architecture to allow for multiple technologies & pluggability.
     - alternate NMS to feed data into SMA?
     - separation of DTLS/CoAP from NMS?
@@ -30085,6 +30085,8 @@ Ideas
 - network optimisation thru data reduction at edge.
     - preprocess DLMS profile data into fitted curves over time (application-specific compression).
 - hash-chain of profile data.
+    - Use for automated audit.
+    - meter-unique provides evidence of source (legality?).
 - Demand-side management.
     - Give client discount for ability to turn on/off low priority equipment?
 - Network architecture
@@ -30092,7 +30094,7 @@ Ideas
 - Low power architecture.
     - Don't assume always-on.
     - pushing decisions to edge facilitates this as network-use is reduced.
-    - Event ESMEs can be a low-power design.
+    - Even ESMEs can be a low-power design.
 - "consumer facing" IFTTT style integration?
     - plugs
     - lights
@@ -30101,6 +30103,7 @@ Ideas
     - flattened design.
     - library + SPI-attached tranceiver.
     - removes overhead of DLMS.
+    - Move away from "old-school" DLMS to more efficient protocols.
 
 
 
