@@ -30045,6 +30045,7 @@ Ideas
         - value-add for industrial clients who need greater uptime?
         - Ability to plan for field visit reduces cost of having on-call field engineers.
         - Can compare patterns against sibling meters which individual systems cannot.
+    - RF network analysis, periodic snapshot.
 - External analytics
     - Power network monitoring
     - Power network prediction.
@@ -30058,6 +30059,7 @@ Ideas
     - filtering of outages if feeder has had an outage (data reduction).
         - Infer that feeder is out when all downstream meters are out.
         - Gateway can also filter out last-gasps from all child nodes if LGs are received from all (data reduction).
+        - Validation of restoration at gw and feeder level.
     - Can we obtain data to train on?
 - Reporting
 - Visualisation
@@ -30074,6 +30076,7 @@ Ideas
     - asset management
     - network automation
     - outage management
+    - VEE: Validation, Estimation, Editing.
 - Distributed MDMS (MDMS at edge).
     - just send metadata & control over network, no bulk data.
     - no back-fill needed, reliability increase.
