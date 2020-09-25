@@ -30054,10 +30054,19 @@ Ideas
     - Maintenance reporting.
 - Reporting
 - Visualisation
+    - geographic
+    - power network (hierarchy)
+    - 
 - Push into OmniMDMS
     - back-fill
     - cleansing of data
     - billing.
+    - Prepayment
+    - theft detection
+    - plant maintenance
+    - asset management
+    - network automation
+    - outage management
 - Distributed MDMS (MDMS at edge).
     - just send metadata & control over network, no bulk data.
     - no back-fill needed, reliability increase.
@@ -30085,7 +30094,7 @@ Ideas
 - network optimisation thru data reduction at edge.
     - preprocess DLMS profile data into fitted curves over time (application-specific compression).
 - hash-chain of profile data.
-    - Use for automated audit.
+    - Use for "online" audit.
     - meter-unique provides evidence of source (legality?).
 - Demand-side management.
     - Give client discount for ability to turn on/off low priority equipment?
@@ -30099,6 +30108,7 @@ Ideas
     - plugs
     - lights
     - notifications
+    - In-home displays? probably should use phone instead.
 - Push down into meter
     - flattened design.
     - library + SPI-attached tranceiver.
