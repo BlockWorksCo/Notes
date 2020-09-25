@@ -30063,7 +30063,7 @@ Ideas
     - Can we obtain data to train on?
     - real time pricing.
     - structured/unstructured data
-    - field force automation (https://en.wikipedia.org/wiki/Field_force_automation)
+    - Interact with FFA (Field Force Automation) tools, (https://en.wikipedia.org/wiki/Field_force_automation) (Where to go, what to take, best route, what action).
 - Reporting
 - Visualisation
     - geographic
