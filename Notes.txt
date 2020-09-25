@@ -30030,7 +30030,8 @@ GET /meterPing/METER%20123
 {
 }
 
-curl -u sysadmin:sysadmin https://localhost:8080
+curl --insecure --verbose https://sysadmin:sysadmin@localhost:8080/meterPing/METER_D1_002352
+
 
 
 
