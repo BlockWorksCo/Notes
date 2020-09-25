@@ -30058,6 +30058,7 @@ Ideas
     - filtering of outages if feeder has had an outage (data reduction).
         - Infer that feeder is out when all downstream meters are out.
         - Gateway can also filter out last-gasps from all child nodes if LGs are received from all (data reduction).
+    - Can we obtain data to train on?
 - Reporting
 - Visualisation
     - geographic
