@@ -30024,6 +30024,14 @@ Wrapped Password : 8AB6BD02DE7F5BFA8BF565DE848EEACCB0763241C41D9338
 Password : D0D1D2D3D4D5D6D7D8D9DADBDCDDDEDF (default AK)
 Wrapped Password : E8B8CBF0663B79A456FB47B6E7412F5B2ACE14293403460E
 
+--------------------------------------------
+
+GET /meterPing/METER%20123
+{
+}
+
+curl -u sysadmin:sysadmin https://localhost:8080
+
 
 
 
