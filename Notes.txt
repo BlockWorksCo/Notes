@@ -30069,6 +30069,7 @@ Ideas
     - geographic
     - power network (hierarchy) for energy audit
     - 
+- Network planning
 - Push into OmniMDMS
     - back-fill
     - cleansing of data
