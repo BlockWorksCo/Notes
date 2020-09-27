@@ -30138,6 +30138,7 @@ Networking technologies:
 - Amazon sidewalk
 - Thread/OpenThread
 - OSCORR
+- WiSUN
 
 
 
