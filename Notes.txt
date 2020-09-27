@@ -30115,6 +30115,7 @@ Ideas
     - Smart building systems
         - occupancy
         - energy usage.
+    - Energy storage (batteries)
 - Business value
 - network optimisation thru data reduction at edge.
     - preprocess DLMS profile data into fitted curves over time (application-specific compression).
