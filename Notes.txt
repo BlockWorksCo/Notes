@@ -30129,10 +30129,15 @@ Ideas
     - Move away from "old-school" DLMS to more efficient protocols.
 
 
-
-
-
-
+Networking technologies:
+- CHIP
+- ZigBee
+- Bluetooth
+- LoRA
+- Senate
+- Amazon sidewalk
+- Thread/OpenThread
+- OSCORR
 
 
 
