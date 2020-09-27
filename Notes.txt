@@ -30100,10 +30100,18 @@ Ideas
 - OSCORE
 - CoAP replacement
 - LwM2M
-- Data fusion (they all feed into energy consumption)
+- Data fusion (they all feed into energy consumption) Prediction can feed into power generation.
     - weather
+        - wind power 
+        - solar power
+        - air con
+        - fans
+        - heating
+        - lighting
     - traffic
+        - electric car charging prediction.
     - air quality
+        - purifiers/humidifiers
 - Business value
 - network optimisation thru data reduction at edge.
     - preprocess DLMS profile data into fitted curves over time (application-specific compression).
