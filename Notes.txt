@@ -30112,6 +30112,9 @@ Ideas
         - electric car charging prediction.
     - air quality
         - purifiers/humidifiers
+    - Smart building systems
+        - occupancy
+        - energy usage.
 - Business value
 - network optimisation thru data reduction at edge.
     - preprocess DLMS profile data into fitted curves over time (application-specific compression).
