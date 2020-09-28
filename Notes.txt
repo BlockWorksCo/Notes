@@ -30155,6 +30155,42 @@ Networking technologies:
 
 
 
+--------------------------------------------------------
+
+ [{"type": "TARIFF_CALENDAR",                                               
+   "activationTime":"2018-01-01T00:00:00+05:30",                            
+   "seasons": [                                                             
+               { "start": {"dayOfMonth":10,"month":10}, "week":0},          
+               ],                                                           
+   "weeks": [{ "days": [ 2, 1, 1, 1, 1, 1, 1 ] }],                          
+   "days": [                                                                
+               {                                                            
+                   "schedule": [                                            
+                       { "time":"00:00", "zone":3 },                        
+                       { "time":"02:30", "zone":4 },                        
+                       { "time":"11:30", "zone":3 },                        
+                    ]                                                       
+               },                                                           
+               {                                                            
+                   "schedule": [                                            
+                       { "time":"00:00", "zone":3 },                        
+                    ]                                                       
+               },                                                           
+               {                                                            
+                   "schedule": [                                            
+                       { "time":"00:00", "zone":2 },                        
+                    ]                                                       
+               },                                                           
+               {                                                            
+                   "schedule": [                                            
+                       { "time":"00:00", "zone":1 },                        
+                    ]                                                       
+               },                                                           
+           ],                                                               
+   "specialDay": specialDays,                                               
+   }]                                                                       
+
+
 
 
 
