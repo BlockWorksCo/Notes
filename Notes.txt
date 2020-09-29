@@ -30148,9 +30148,10 @@ Ideas
     - status of repairs and crew management.
     - Prediction of future outages.
     - SCADA integration.
-
 - RF Planning
     - more efficient meshes.
+- Agent-side fault monitoring
+    - quick polling of instantaneous parameters to determine issues (phases/voltages/etc).
 
 
 Networking technologies:
