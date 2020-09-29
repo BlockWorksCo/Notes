@@ -30218,5 +30218,42 @@ MDMS/MDAS
 - home energy management/IHD
 
 
+----------------------------------------------------------
+
+Metering mode	0-0-94-91-19-255	1	0
+
+00005e5b13ff
+
+
+
+13:44
+Class id 1
+13:44
+so i think it will attribute 2
+13:44
+dont know the data type..
+13:45
+let me check the guruc files
+13:46
+OK its Unit8
+
+<SetRequest>
+  <SetRequestNormal>
+    <InvokeIdAndPriority Value="C1" />
+    <AttributeDescriptor>
+      <ClassId Value="0001" />
+      <InstanceId Value="00005e5b13ff" />
+      <AttributeId Value="02" />
+    </AttributeDescriptor>
+    <Value>
+      <Uint8 Value="00" />
+    </Value>
+  </SetRequestNormal>
+</SetRequest>
+
+
+
+
+
 
 
