@@ -30205,7 +30205,7 @@ MDMS/MDAS
 - Validation
 - Estimation (of missing samples, constant/interpolate/duplicate).
 - Editing (UI for manual update of samples for correction).
-- billing (simplistic case, export to CSV/XLS).
+- billing (simplistic case, export to CSV/XLS or integrate with other packages).
 - prepayment
 - theft detection
 - asset management
