@@ -30141,6 +30141,15 @@ Ideas
     - removes overhead of DLMS.
     - Move away from "old-school" DLMS to more efficient protocols.
 - Outage management system (OMS)
+    - identify outages
+    - provide alerts to affected customers
+    - record history
+    - insight
+    - status of repairs and crew management.
+    - Prediction of future outages.
+
+- RF Planning
+    - more efficient meshes.
 
 
 Networking technologies:
