@@ -30202,8 +30202,10 @@ coap reversions:
 
 --------------------------------------------
 MDMS/MDAS
-- VEE (Validation, Estimation, Editing)
-- billing
+- Validation
+- Estimation (of missing samples, constant/interpolate/duplicate).
+- Editing (UI for manual update of samples for correction).
+- billing (simplistic case, export to CSV/XLS).
 - prepayment
 - theft detection
 - asset management
