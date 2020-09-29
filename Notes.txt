@@ -30200,6 +30200,20 @@ coap reversions:
 - 11fb38ac2f079d92638ff2e3dc0ae942fb0679a9
 - 16fcc3c293fc6ae0f98443ba6f3d129ed4683759
 
+--------------------------------------------
+MDMS/MDAS
+- VEE (Validation, Estimation, Editing)
+- billing
+- prepayment
+- theft detection
+- asset management
+- outage management
+- predictive maintenance
+- fault monitoring
+- demand-side management
+- real-time pricing
+- business analytics
+- home energy management/IHD
 
 
 
