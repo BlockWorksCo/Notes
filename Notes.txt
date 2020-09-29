@@ -30147,6 +30147,7 @@ Ideas
     - insight
     - status of repairs and crew management.
     - Prediction of future outages.
+    - SCADA integration.
 
 - RF Planning
     - more efficient meshes.
