@@ -30251,6 +30251,7 @@ OK its Unit8
   </SetRequestNormal>
 </SetRequest>
 
+C1 01 C1 00 01 00 00 5E 5B 13 FF 02 00 11 00
 
 
 
