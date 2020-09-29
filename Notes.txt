@@ -30143,7 +30143,7 @@ Ideas
 - Outage management system (OMS)
     - identify outages
     - provide alerts to affected customers
-    - 100% outage on feeder == fuse blown at feeder station, less than that indicates consumer-side fuse.
+    - 100% outage on feeder == fuse blown at feeder station, less than that indicates consumer-side fuse. So can direct team to correct location of feeder or customer.
     - record history
     - insight
     - status of repairs and crew management.
