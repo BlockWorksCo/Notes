@@ -30152,6 +30152,7 @@ Ideas
     - more efficient meshes.
 - Agent-side fault monitoring
     - quick polling of instantaneous parameters to determine issues (phases/voltages/etc).
+    adds more intelligence to events.
 
 
 Networking technologies:
