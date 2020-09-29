@@ -30122,7 +30122,7 @@ Ideas
 - hash-chain of profile data.
     - Use for "online" audit.
     - meter-unique provides evidence of source (legality?).
-- Demand-side management.
+- Demand-side management / Demand-Response.
     - Give client discount for ability to turn on/off low priority equipment?
     - "consumer facing" IFTTT style integration?
         - plugs
@@ -30140,6 +30140,7 @@ Ideas
     - library + SPI-attached tranceiver.
     - removes overhead of DLMS.
     - Move away from "old-school" DLMS to more efficient protocols.
+- Outage management system (OMS)
 
 
 Networking technologies:
