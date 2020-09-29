@@ -30192,7 +30192,7 @@ Networking technologies:
 
 
 ------------------------------------------
-revert:
+coap reversions:
 - b77f5b34ba7bfad55e44c9165fb35e429662f849
 - 087066f79d9e9c2143a817ddae91c0c31627ef7c
 - d4e20af6ac7900c758214dbcf42adcce9f89481f
