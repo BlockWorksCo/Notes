@@ -30290,5 +30290,13 @@ SMA->UI/API:
 - On server-side, filter out existing FB/LG flags from alarm-status-bits. Replace with 
 
 
+Time statuses:
+server: assumed "RELIABLE".
+
+
+
+
+
+
 
 
