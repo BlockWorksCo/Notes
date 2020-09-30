@@ -30281,7 +30281,7 @@ last-gasp first-breath LG FB
 Time statuses:
 server: UNRELIABLE/RELIABLE. (determine threshold for this)
 agent: UNKNOWN/UNCERTAIN/IN_SYNC
-meter: INVALID/DOUBTFUL/DIFFERENT_CLOCK_BASE
+meter: INVALID/DOUBTFUL/DIFFERENT_CLOCK_BASE/GOOD
 
 So the union of the sets, in order of accuracy (low to high):
 - SERVER_UNRELIABLE
@@ -30292,6 +30292,7 @@ So the union of the sets, in order of accuracy (low to high):
 - METER_DOUBTFUL
 - AGENT_IN_SYNC
 - SERVER_RELIABLE
+- METER_TRUTH
 
 
 Agent->SMA:
@@ -30311,7 +30312,7 @@ SMA->UI/API:
 - Add two new server-generated bits:
     - LAST_GASP_UNRELIABLE
     - FIRST_BREATH_UNRELIABLE
-- Any source time-status less than
+- Any source time-status less than METER_TRUTH is classed as UNRELIABLE.
 - UI/API should sort-by-meter-time by default, not sequence-number or time-of-arrival.
 
 - User/Outage-Management-System has to check for both sets of bits and use the highest reliability value it has at the time.
