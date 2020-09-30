@@ -30311,6 +30311,8 @@ SMA->UI/API:
 - Add two new server-generated bits:
     - LAST_GASP_UNRELIABLE
     - FIRST_BREATH_UNRELIABLE
+- Any source time-status less than
+- UI/API should sort-by-meter-time by default, not sequence-number or time-of-arrival.
 
 - User/Outage-Management-System has to check for both sets of bits and use the highest reliability value it has at the time.
 
