@@ -30302,7 +30302,7 @@ Agent->SMA:
 - If server received LG notification with a low time-status (e.g. UNKNOWN/UNRELIABLE) and it's own status is better, fill in timestamp with server-time & set time-status to SERVER_RELIABLE.
 - On power-up, Agent reads meter-event-log to obtain correct LG/FB timings and resends events
 with appropriate "TRUTH" indicator with timestamps from meter.
-- Multiple events will be recived on server which reflects latency/accuracy trade-off.
+- Multiple events will be recived on server which reflects latency/accuracy trade-off. These can n ow be distinguished.
 
 SMA->UI/API:
 - On server-side, filter out existing FB/LG flags from alarm-status-bits.
