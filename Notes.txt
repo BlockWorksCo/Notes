@@ -30292,8 +30292,17 @@ SMA->UI/API:
 
 Time statuses:
 server: assumed "RELIABLE".
+agent: UNKNOWN/UNCERTAIN/IN_SYNC
+meter: INVALID/DOUBTFUL/DIFFERENT_CLOCK_BASE
 
-
+So the union of the sets, in order of accuracy (low to high):
+- AGENT_UNKNOWN
+- METER_INVALID
+- METER_DIFFERENT_CLOCK_BASE
+- AGENT_UNCERTAIN
+- METER_DOUBTFUL
+- AGENT_IN_SYNC
+- SERVER_RELIABLE
 
 
 
