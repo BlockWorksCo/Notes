@@ -30304,7 +30304,11 @@ Agent->SMA:
 with appropriate "TRUTH" indicator with timestamps from meter.
 
 SMA->UI/API:
-- On server-side, filter out existing FB/LG flags from alarm-status-bits. Replace with 
+- On server-side, filter out existing FB/LG flags from alarm-status-bits. Replace with server-generated bits:
+    - LAST_GASP_RELIABLE
+    - LAST_GASP_UNRELIABLE
+    - FIRST_BREATH_RELIABLE
+    - FIRST_BREATH_UNRELIABLE
 
 
 
