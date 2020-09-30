@@ -30277,8 +30277,12 @@ c0018100070100630100ff0201 010204020412000809060000010000ff0f02120000090c07e3040
 -----------------------------------------------------------------
 last-gasp first-breath LG FB
 
-- Node won't always have time, but time at server is next best. Rely on Time-Sync.
+- Have a flag on each FB/LG indicating quality of time, e.g. UNKNOWN/UNRELIABLE/RELIABLE/TRUTH.
+- Node won't always have time (time status UNKNOWN), but time at server is next best (RELIABLE). Rely on Time-Sync.
+- When node sends low-latency "notification", time is indicated as its current time-status.
 - Allow adjustments to received time on server to reflect latency/accuracy trade-off.
+- On power-up, Agent reads meter-event-log to obtain correct LG/FB timings and resends events
+with appropriate "RELIABLE" indicator.
 
 
 
