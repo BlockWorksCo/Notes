@@ -30283,7 +30283,7 @@ server: UNRELIABLE/RELIABLE. (determine threshold for this)
 agent: UNKNOWN/UNCERTAIN/IN_SYNC
 meter: INVALID/DOUBTFUL/DIFFERENT_CLOCK_BASE/GOOD
 
-So the union of the sets, in order of accuracy (low to high):
+So, the union of the sets, in order of accuracy (low to high):
 - SERVER_UNRELIABLE
 - AGENT_UNKNOWN
 - METER_INVALID
@@ -30293,7 +30293,6 @@ So the union of the sets, in order of accuracy (low to high):
 - AGENT_IN_SYNC
 - SERVER_RELIABLE
 - METER_TRUTH
-
 
 Agent->SMA:
 - Have a flag on each FB/LG indicating quality of time, e.g. UNKNOWN/UNRELIABLE/RELIABLE/TRUTH.
@@ -30322,6 +30321,13 @@ SMA->UI/API:
     - FIRST_BREATH_UNRELIABLE   (sent from Agent when network is up).
     - LAST_GASP_RELIABLE        (sent from Agent when event-log is read from meter on start-up).
     - FIRST_BREATH_RELIABLE     (sent from Agent when event-log is read from meter on start-up).
+  But when sorted by meter-time after time has been allowed for all events to arrive would result in:
+    - LAST_GASP_RELIABLE        (meter time)
+    - LAST_GASP_UNRELIABLE      (node/server time)
+    - FIRST_BREATH_RELIABLE     (meter time)
+    - FIRST_BREATH_UNRELIABLE   (node/server time)
+- Low-latency requirements can be satisfied by the LAST_GASP_UNRELIABLE/FIRST_BREATH_UNRELIABLE events.
+- High-accuracy requirements can be satisfied by the LAST_GASP_RELIABLE/FIRST_BREATH_RELIABLE events.
 
 
 
