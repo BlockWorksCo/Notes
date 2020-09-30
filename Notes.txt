@@ -30296,13 +30296,13 @@ So, the union of the sets, in order of accuracy (low to high):
 
 Agent->SMA:
 - Have a flag on each FB/LG indicating quality of time, e.g. UNKNOWN/UNRELIABLE/RELIABLE/TRUTH.
-- On PFAIL, send low-latency notification with time-status current node time-status (AGENT_UNKNOWN/AGENT_IN_SYNC/etc).
+- On PFAIL, send low-latency notification with current node time-status (AGENT_UNKNOWN/AGENT_IN_SYNC/etc).
 - Node won't always have time (time status AGENT_UNKNOWN). This is ok to send to server.
 - Meter won't always have time (time status METER_INVALID). This is ok to send to server.
 - If server received LG notification with a low time-status (e.g. UNKNOWN/UNRELIABLE) and it's own status is better, fill in timestamp with server-time & set time-status to SERVER_RELIABLE.
 - On power-up, Agent reads meter-event-log to obtain correct LG/FB timings and resends events
 with appropriate "TRUTH" indicator with timestamps from meter.
-- Multiple events will be recived on server which reflects latency/accuracy trade-off. These can n ow be distinguished.
+- Multiple events will be recived on server which reflects latency/accuracy trade-off. These can now be distinguished.
 
 SMA->UI/API:
 - On server-side, filter out existing FB/LG flags from alarm-status-bits.
