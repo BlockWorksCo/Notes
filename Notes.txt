@@ -30334,7 +30334,7 @@ Outage-management system:
 - For every pair of LG/FB, produce a span. Tag it as UNRELIABLE or RELIABLE.
 - Work up the meter->feeder chain to identify the root failure.
 - Determine location.
-- Update
+- Update on new data.
 
 
 
