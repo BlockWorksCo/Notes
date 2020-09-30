@@ -30274,6 +30274,11 @@ C1 01 C1 00 01 00 00 5E 5B 13 FF 02 00 11 00
 
 c0018100070100630100ff0201 010204020412000809060000010000ff0f02120000090c07e304060600001dff007800090c07e304060605001cff0078000100
 
+-----------------------------------------------------------------
+last-gasp first-breath LG FB
+
+- Node won't always have time, but time at server is next best. Rely on Time-Sync.
+- Allow adjustments to received time on server to reflect latency/accuracy trade-off.
 
 
 
