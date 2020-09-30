@@ -30312,6 +30312,8 @@ SMA->UI/API:
     - LAST_GASP_UNRELIABLE
     - FIRST_BREATH_UNRELIABLE
 
+- User/Outage-Management-System has to check for both sets of bits and use the highest reliability value it has at the time.
+
 
 
 
