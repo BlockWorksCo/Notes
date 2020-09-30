@@ -30333,6 +30333,8 @@ Outage-management system:
 - For every FIRST_BREATH, identify the previous LAST_GASP. (ideally _RELIABLE).
 - For every pair of LG/FB, produce a span. Tag it as UNRELIABLE or RELIABLE.
 - Work up the meter->feeder chain to identify the root failure.
+- Determine location.
+- Update
 
 
 
