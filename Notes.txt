@@ -30329,6 +30329,10 @@ SMA->UI/API:
 - Low-latency requirements can be satisfied by the LAST_GASP_UNRELIABLE/FIRST_BREATH_UNRELIABLE events.
 - High-accuracy requirements can be satisfied by the LAST_GASP_RELIABLE/FIRST_BREATH_RELIABLE events.
 
+Outage-management system:
+- For every FIRST_BREATH, identify the previous LAST_GASP. (ideally _RELIABLE).
+- For every pair of LG/FB, produce a span. Tag it as UNRELIABLE or RELIABLE.
+
 
 
 
