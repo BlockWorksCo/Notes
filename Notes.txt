@@ -29104,7 +29104,7 @@ timesheets:
   10/8/20 - 14/8/20 : MEA + SW
   17/8/20 - 21/8/20 : MEA + SMIP + SW
   24/8/20 - 28/8/20 : holiday
-  31/8/20 -  4/9/20 : bank hol? +  ...
+  31/8/20 -  4/9/20 : bank hol? +  MEA + SW + SMIP
   07/9/20 - 11/9/20 : MEA + SW + SMIP
   14/9/20 - 18/9/20 : MEA + SW + SMIP
   21/9/20 - 25/9/20 : MEA + SW
