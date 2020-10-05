@@ -30342,6 +30342,15 @@ Outage-management system:
 - Update on new data.
 
 
+-------------------------------------------------------------
+mbedtls notes:
+
+- CSR generation can be dropped.
+- session_cache can be delayed.
+- cert & key reading is needed.
+
+
+
 
 
 
