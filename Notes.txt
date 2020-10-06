@@ -30361,6 +30361,9 @@ sudo sysctl -w net.core.rmem_max=33554432
 sudo sysctl -w net.core.netdev_max_backlog=2000
 https://linux-tips.com/t/udp-packet-drops-and-packet-receive-error-difference/237
 
+apt install libnl-3-genl-dev libnl-3-dev libpcap-dev binutils-dev
+https://github.com/nhorman/dropwatch
+
 
 
 
