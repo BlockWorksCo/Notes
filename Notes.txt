@@ -30383,8 +30383,11 @@ mbedtls:
 mbedtls_ssl_flush_output()
 ssl_write_client_hello
 
-on timeout:
 ssl_get_next_record->mbedtls_ssl_fetch_input->mbedtls_net_recv_timeout
+
+recv_cb->mbedtls_net_recv
+
+recv_timeout_cb()
 
 
 
