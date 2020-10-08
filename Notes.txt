@@ -30389,6 +30389,18 @@ recv_cb->mbedtls_net_recv
 
 recv_timeout_cb()
 
+-------------------------------
+last-gasp
+
+- fs writes already suspended.
+- more benefit from scheduling transmissions.
+- OMS
+
+- Scheduling of transmissions.
+- Aggressive retries on last-gasps.
+- power-management to reduce collisions.
+- unconfirmed CoAP message for last-gasp to reduce contention.
+
 
 
 
