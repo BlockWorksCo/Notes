@@ -30400,7 +30400,8 @@ last-gasp
 - Aggressive retries on last-gasps.
 - power-management to reduce collisions.
 - unconfirmed CoAP message for last-gasp to reduce contention.
-
+- Filtering/post-processing in proto-OMS.
+- Send up time-accuracy with alert flags, allow improvement based on meter (truth) after power-up.
 
 
 
