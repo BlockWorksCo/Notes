@@ -30154,6 +30154,7 @@ Ideas
     - status of repairs and crew management.
     - Prediction of future outages.
     - SCADA integration.
+    - Restoration Verification
 - RF Planning
     - more efficient meshes.
 - Agent-side fault monitoring
