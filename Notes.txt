@@ -30429,13 +30429,16 @@ last-gasp
 ----------------------------------------------------------
 Last-Gasp improvement plan
 
-- Use simulation of ~500 nodes to verify current performance (~18% of LG events received within 5 minutes).
-- When a real-life deployment can be tested, mimic the layout as much as possible within the simulation to validate
-the performance of the simulation.
+- Use simulation of ~500 nodes to verify current performance (~18% of LG events received within 5 minutes). This can
+be used as a baseline for the following work.
+- When a real-life deployment can be tested, mimic the physical layout as much as possible within the simulation to 
+validate the performance of the simulation against reality.
 - Use aggressive retries for "urgent" messages such as LG. Parameters will have to be determined thru simulation
 but principle is to extend the MAC-level retries from 4 to a much larger number (potentially with better scheduling/random backoff).
 - Improve scheduling of transmissions given expected time-before-power-failure (i.e. choose a random point in that time
 to transmit the LG to avoid contention with other nodes).
+- Change "urgent" CoAP requests to use unconfirmed messages (this prevents the server sending ACKs back to sender and
+thus will halve the contention). Note that the MAC-level ACKs and retries are still enabled.
 
 
 
