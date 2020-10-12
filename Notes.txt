@@ -30441,6 +30441,9 @@ to transmit the LG to avoid contention with other nodes). Basically if we know w
 at a random point within those 2min.
 - Change "urgent" CoAP requests to use unconfirmed messages (this prevents the server sending ACKs back to sender and
 thus will halve the contention). Note that the MAC-level ACKs and retries are still enabled.
+- Incorporate time-status (quality) data along with the alert sent to the server to allow for successive refinement of
+the LG-time. This allows us to send known-inaccurate alerts immediately with the knowledge that we can improve the tiemstamp
+later. See details below.
 
 
 
