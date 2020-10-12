@@ -30404,6 +30404,23 @@ last-gasp
 - Filtering/post-processing in proto-OMS.
 - Send up time-accuracy with alert flags, allow improvement based on meter (truth) after power-up.
 
+------------------------------------------------
+
+
+[{'activationTime': '2018-01-01T00:00:00+05:30',
+  'days': [{'schedule': [{'time': '00:00', 'zone': 3},
+                         {'time': '02:30', 'zone': 4},
+                         {'time': '11:30', 'zone': 3}]},
+           {'schedule': [{'time': '00:00', 'zone': 3}]},
+           {'schedule': [{'time': '00:00', 'zone': 2}]},
+           {'schedule': [{'time': '00:00', 'zone': 1}]}],
+  'seasons': [{'start': {'dayOfMonth': 10, 'month': 10}, 'week': 0}],
+  'specialDay': [{'dayId': 2, 'dayOfMonth': 11, 'month': 10, 'year': 2020}],
+  'type': 'TARIFF_CALENDAR',
+  'weeks': [{'days': [2, 1, 1, 1, 1, 1, 1]}]}]
+
+
+
 
 
 
