@@ -30445,6 +30445,8 @@ thus will halve the contention). Note that the MAC-level ACKs and retries are st
 the LG-time. This allows us to send known-inaccurate alerts immediately with the knowledge that we can improve the tiemstamp
 later. This provides a low-accuracy/low-latency alert that will be followed by a high-accuracy/high-latency alert when
 available (details below).
+- Add a post-processing stage at the SMA (Outage Management) that parses the raw alerts and provides a view of outages
+given its view across the whole network.
 
 
 
