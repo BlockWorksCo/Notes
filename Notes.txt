@@ -30420,6 +30420,15 @@ last-gasp
   'weeks': [{'days': [2, 1, 1, 1, 1, 1, 1]}]}]
 
 
+-------------------------------------------------------
+
+
+{'season0_start': '2020-10-02', 'season0_weekId': '0', 'season1_start': '2020-10-25', 'season1_weekId': '1', 'week0_day0': '0', 'week0_day1': '1', 'week0_day2': '0', 'week0_day3': '1', 'week0_day4': '0', 'week0_day5': '1', 'week0_day6': '0', 'week1_day0': '1', 'week1_day1': '0', 'week1_day2': '1', 'week1_day3': '0', 'week1_day4': '1', 'week1_day5': '0', 'week1_day6': '1', 'day0_startTime0': '00:00', 'day0_ID0': '1', 'day0_startTime1': '01:30', 'day0_ID1': '2', 'day0_startTime2': '02:30', 'day0_ID2': '3', 'day1_startTime0': '03:45', 'day1_ID0': '4', 'day1_startTime1': '03:45', 'day1_ID1': '5', 'specialday0_date': '2020-10-09', 'specialday0_ID': '1', 'specialday1_date': '2020-10-29', 'specialday1_ID': '0'}
+[{'type': 'TARIFF_CALENDAR', 'activationTime': '2018-01-01T00:00:00+05:30', 'seasons': [{'start': {'dayOfMonth': 2, 'month': 10}, 'week': 0}, {'start': {'dayOfMonth': 25, 'month': 10}, 'week': 1}], 'weeks': [{'days': [0, 1, 0, 1, 0, 1, 0]}, {'days': [1, 0, 1, 0, 1, 0, 1]}], 'days': [{'schedule': [{'time': '00:00', 'zone': 1}, {'time': '01:30', 'zone': 2}, {'time': '02:30', 'zone': 3}]}, {'schedule': [{'time': '03:45', 'zone': 4}, {'time': '03:45', 'zone': 5}]}], 'specialDay': [{'dayOfMonth': 9, 'month': 10, 'year': 2020, 'dayId': 2}, {'dayOfMonth': 29, 'month': 10, 'year': 2020, 'dayId': 1}]}]
+
+
+
+
 
 
 
