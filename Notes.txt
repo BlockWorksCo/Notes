@@ -30443,7 +30443,8 @@ at a random point within those 2min.
 thus will halve the contention). Note that the MAC-level ACKs and retries are still enabled.
 - Incorporate time-status (quality) data along with the alert sent to the server to allow for successive refinement of
 the LG-time. This allows us to send known-inaccurate alerts immediately with the knowledge that we can improve the tiemstamp
-later. See details below.
+later. This provides a low-accuracy/low-latency alert that will be followed by a high-accuracy/high-latency alert when
+available (details below).
 
 
 
