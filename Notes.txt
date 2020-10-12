@@ -30439,6 +30439,7 @@ but principle is to extend the MAC-level retries from 4 to a much larger number 
 - Improve scheduling of transmissions given expected time-before-power-failure (i.e. choose a random point in that time
 to transmit the LG to avoid contention with other nodes). Basically if we know we can survive for 2min, send the LG alert
 at a random point within those 2min.
+- priority mq. plus initial push.
 - Change "urgent" CoAP requests to use unconfirmed messages (this prevents the server sending ACKs back to sender and
 thus will halve the contention). Note that the MAC-level ACKs and retries are still enabled.
 - Incorporate time-status (quality) data along with the alert sent to the server to allow for successive refinement of
