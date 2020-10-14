@@ -30454,8 +30454,14 @@ given its view across the whole network.
 mbedtls
 
 mbedtls_net_recv_timeout
+mbedtls_ssl_read_record
 mbedtls_ssl_handle_message_type
+ssl_write_client_hello
 ssl_parse_server_hello
+mbedtls_ssl_parse_certificate
+ssl_parse_server_key_exchange
+ssl_parse_certificate_request
+ssl_parse_server_hello_done
 
 ssl_cli.c:1863
 
