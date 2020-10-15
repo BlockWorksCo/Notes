@@ -30453,6 +30453,7 @@ given its view across the whole network.
 -------------------------------------------------
 mbedtls
 
+mbedtls_x509_crt_verify_restartable
 ssl_parse_certificate_verify
 mbedtls_net_recv_timeout
 mbedtls_ssl_read_record
