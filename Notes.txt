@@ -30453,6 +30453,7 @@ given its view across the whole network.
 -------------------------------------------------
 mbedtls
 
+ssl_parse_certificate_verify
 mbedtls_net_recv_timeout
 mbedtls_ssl_read_record
 mbedtls_ssl_handle_message_type
