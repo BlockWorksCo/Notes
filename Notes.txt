@@ -30467,6 +30467,9 @@ ssl_cli.c:1863
 
 only partially bufffered
 
+---------------------------------------------------------
+Genus changes:
+- IS: addition of RTC & NVM & battery statuses.
 
 
 
