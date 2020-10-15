@@ -30469,7 +30469,7 @@ only partially bufffered
 
 ---------------------------------------------------------
 Genus changes:
-- IS: addition of RTC & NVM & battery statuses.
+- IS: additions of a few parameters.
 
 
 
