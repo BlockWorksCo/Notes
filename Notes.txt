@@ -30467,6 +30467,8 @@ ssl_cli.c:1863
 
 only partially bufffered
 
+MBEDTLS_ERR_SSL_BAD_HS_CERTIFICATE_VERIFY
+
 ---------------------------------------------------------
 Genus changes:
 - IS: additions of a few parameters.
