@@ -30503,5 +30503,12 @@ last-gasp notes
 - IPv6 header compression already implemented.
 - On MAC level, we're beaconless and always use ACKs (except for broadcast obviously).
 
+-------------------------------------
+ Request from [fd00::100]:5684: GET sm/00-00-00-00-00-00-00-02/profiles (T=CON, MID=0x187a): 0 B (0:empty)  
+ deviceId=00-00-00-00-00-00-00-02                                                                           
+                                                                                                            
+ Response to [fd00::100]:5684: 4.04 (T=ACK, MID=0x187a): 16 B: Device not found                             
+
+
 
 
