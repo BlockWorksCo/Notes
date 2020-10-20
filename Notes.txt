@@ -30529,6 +30529,8 @@ crypto algs.
 
 - General:
     MD5 hash (device & profiel hashes).
+- Firmware image
+    AES CTR mode?
 - DTLS
     - AES-128, ECDHE key exchange, CCM mode.
 - DLMS
