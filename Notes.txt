@@ -30509,6 +30509,21 @@ last-gasp notes
                                                                                                             
  Response to [fd00::100]:5684: 4.04 (T=ACK, MID=0x187a): 16 B: Device not found                             
 
+-----------------------------------------------------------
+agent keys from server keys:
+
+mkdir -p /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03
+
+/Data/Projects/dev-stack/src/omnimesh/devstack/data/scripts/pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03 node 00-00-00-00-00-00-00-03
+
+
+
+
+
+
+
+
+
 
 
 
