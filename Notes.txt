@@ -30524,6 +30524,22 @@ from:
 /Data/Temp/DevStack/.data/pki/ca.key.pem
 
 
+--------------------------------------------------------
+crypto algs.
+
+- General:
+    MD5 hash (device & profiel hashes).
+- DTLS
+    - AES-128, ECDHE key exchange, CCM mode.
+- DLMS
+    - GMAC
+    - GCM mode
+- Filesystem
+    AES-128
+- MAC layer
+    AES-128 CBC?
+- tun6d
+    HMAC
 
 
 
