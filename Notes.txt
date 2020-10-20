@@ -30516,6 +30516,13 @@ mkdir -p /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03
 
 /Data/Projects/dev-stack/src/omnimesh/devstack/data/scripts/pki-create.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03 node 00-00-00-00-00-00-00-03
 
+creates:
+/Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03/node.crt.der
+/Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03/node.key.der
+from:
+/Data/Temp/DevStack/.data/pki/ca.crt.pem
+/Data/Temp/DevStack/.data/pki/ca.key.pem
+
 
 
 
