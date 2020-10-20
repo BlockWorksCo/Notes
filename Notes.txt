@@ -30535,7 +30535,7 @@ crypto algs.
     - GMAC
     - GCM mode
 - Filesystem
-    AES-128
+    AES-128 CBC
 - MAC layer
     AES-128 CBC?
 - tun6d
