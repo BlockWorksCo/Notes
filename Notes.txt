@@ -30533,7 +30533,8 @@ crypto algs.
     - AES-128, ECDHE key exchange, CCM mode.
 - DLMS
     - GMAC
-    - GCM mode
+    - AES GCM mode
+    - AES counter mode HLS
 - Filesystem
     AES-128 CBC
 - MAC layer
