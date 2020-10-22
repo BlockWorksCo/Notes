@@ -30404,6 +30404,10 @@ last-gasp
 - Filtering/post-processing in proto-OMS.
 - Send up time-accuracy with alert flags, allow improvement based on meter (truth) after power-up.
 
+--------------------------------------------
+lwm2m:
+
+https://omaspecworks.org/end-to-end-security-for-the-internet-of-things/
 
 
 
