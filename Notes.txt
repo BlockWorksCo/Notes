@@ -30538,7 +30538,7 @@ crypto algs.
 - Firmware image
     AES CTR mode
 - DTLS
-    - AES-128, ECDHE key exchange, CCM8 mode.
+    - AES-128, ECDHE key exchange ECDSA signing, CCM8 mode.
 - DLMS
     - GMAC
     - AES GCM mode
@@ -30547,17 +30547,9 @@ crypto algs.
     AES-128 CTR mode
     HMAC
 - MAC layer
-    AES-128 CCM?
+    AES-128 CCM
 - tun6d
     HMAC
-
-
-
-
-
->>>>>>> 868f21e8834df3349837e7bfc7ab57337f5c56d0
-
-
 
 
 
