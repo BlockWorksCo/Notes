@@ -30549,7 +30549,7 @@ crypto algs.
 - MAC layer
     AES-128 CCM
 - tun6d
-    HMAC (challenge response)
+    HMAC, SHA1 (challenge response)
 
 
 
