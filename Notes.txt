@@ -30551,5 +30551,8 @@ crypto algs.
 - tun6d
     HMAC, SHA1 (challenge response)
 
+RNG:
+- 
+
 
 
