@@ -30552,7 +30552,8 @@ crypto algs.
     HMAC, SHA1 (challenge response)
 
 RNG:
-- 
+- filesystem
+- devicekeys
 
 
 
