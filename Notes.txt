@@ -30533,20 +30533,21 @@ from:
 --------------------------------------------------------
 crypto algs.
 
-- General:
-    MD5 hash (device & profiel hashes).
+- General app:
+    MD5 hash (device & profile hashes).
 - Firmware image
-    AES CTR mode?
+    AES CTR mode
 - DTLS
-    - AES-128, ECDHE key exchange, CCM mode.
+    - AES-128, ECDHE key exchange, CCM8 mode.
 - DLMS
     - GMAC
     - AES GCM mode
-    - AES ECB mode (16-byte block) for challenge response in HLS
+    - AES ECB mode (single 16-byte block) for challenge response in HLS
 - Filesystem
-    AES-128 CBC
+    AES-128 CTR mode
+    HMAC
 - MAC layer
-    AES-128 CBC?
+    AES-128 CCM?
 - tun6d
     HMAC
 
