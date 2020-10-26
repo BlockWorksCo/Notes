@@ -30555,5 +30555,24 @@ RNG:
 - filesystem
 - devicekeys
 
+------------------------------------------------------------------
+MbedTLS status:
+- general hashing.
+- firmware image
+- DTLS
+- DLMS
+- Filesystem
+- MAC layer
+- tun6d
+- Genus meter
+- L&T meter
+- timeouts
+- "trusted CA" extension.
+- DTLS session saving.
+- DTLS session renewal.
+- 
+
+
+
 
 
