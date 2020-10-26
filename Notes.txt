@@ -30577,6 +30577,9 @@ MbedTLS status:
 - unit tests                .
 - ctrlporthub (RNG)         .
 
+- Test all node/meter variants with mbedtls    .
+- Test all node/meter variants with WolfSSL    .
+
 
 
 
