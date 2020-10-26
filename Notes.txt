@@ -30557,20 +30557,24 @@ RNG:
 
 ------------------------------------------------------------------
 MbedTLS status:
-- general hashing.
-- firmware image
-- DTLS
-- DLMS
-- Filesystem
-- MAC layer
-- tun6d
-- Genus meter
-- L&T meter
-- timeouts
-- "trusted CA" extension.
-- DTLS session saving.
-- DTLS session renewal.
-- 
+- host-agent build          Done.
+- ipa3 build                Done.
+- general hashing           Done.
+- firmware image            .
+- Basic DTLS                Done.
+- DLMS                      Done.
+- Filesystem                .
+- MAC layer                 .
+- tun6d                     Done.
+- Genus meter               Done.
+- L&T meter                 .
+- timeouts                  .
+- "trusted CA" extension    .
+- DTLS session saving       .
+- DTLS session renewal      .
+- Random number generator   .
+- device keys               .
+- unit tests                .
 
 
 
