@@ -30575,6 +30575,7 @@ MbedTLS status:
 - Random number generator   .
 - device keys               .
 - unit tests                .
+- ctrlporthub (RNG)         .
 
 
 
