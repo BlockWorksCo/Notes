@@ -30550,6 +30550,8 @@ crypto algs.
     AES-128 CCM
 - tun6d
     HMAC, SHA1 (challenge response)
+- IPSEC
+    AES-128 CCM
 
 RNG:
 - filesystem
@@ -30568,6 +30570,7 @@ MbedTLS status:
 - tun6d                     Done.
 - Genus meter               Done.
 - L&T meter                 .
+- GStar meter               .
 - timeouts                  .
 - "trusted CA" extension    .
 - DTLS session saving       .
