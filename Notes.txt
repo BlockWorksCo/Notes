@@ -30565,8 +30565,8 @@ MbedTLS status:
 - firmware image            .
 - Basic DTLS                Done.
 - DLMS                      Done.
-- Filesystem                .
-- MAC layer                 .
+- Filesystem                DOne.
+- MAC layer                 Done.
 - tun6d                     Done.
 - Genus meter               Done.
 - L&T meter                 .
