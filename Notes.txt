@@ -30580,6 +30580,12 @@ MbedTLS status:
 - Test all node/meter variants with mbedtls    .
 - Test all node/meter variants with WolfSSL    .
 
+--------------------------------------------------------
+hdlc bus utilisation:
+
+ag "hdlc.*tx:|hdlc.*rx:" /Data/Logs/node216.log | ag -o "log\>.*\[debug" | cut -d ' ' -f 2 > trafficTimes
+
+
 
 
 
