@@ -30617,6 +30617,26 @@ for a in activity:
                                                                                                                                                           
 print('totalInUse = %f totalGap = %f, total=%f, busUtilisation=%f'%(totalInUse, totalGap, totalInUse+totalGap, (100/(totalInUse+totalGap)*totalInUse) ))  
 
+----------------------------------------
+mDCU:
+
+Green book:
+In some cases, the supporting layer protocol(s) do (does) not allow sending a protocol data unit in a
+real, unsolicited manner. In these cases, the client has to explicitly solicit sending an
+EventNotification frame, by invoking the TriggerEventNotificationSending service primitive.
+
+To be able reporting events, a server may initiate a connection to the client, using the unsolicited
+EventNotification / InformationReport services. As events in several or all meters connected to a
+multidrop may occur simultaneously – for example in the case of a power failure – they may initiate a
+call to the client simultaneously. For such cases, two problems have to be handled:
+• collision on the logical bus: For the reasons explained above, several physical devices may try to
+access the shared resource (for example sending AT commands to the modem) simultaneously.
+Such situations must be handled by the manufacturers;
+• identification of the originator of the event report: this is possible by using the CALLING Physical
+Device Address, as described in 8.4.5.4.8.
+
+
+
 
 
 
