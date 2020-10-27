@@ -30585,6 +30585,39 @@ hdlc bus utilisation:
 
 ag "hdlc.*tx:|hdlc.*rx:" /Data/Logs/node216.log | ag -o "log\>.*\[debug" | cut -d ' ' -f 2 > trafficTimes
 
+import re                                                                                                                                                 
+                                                                                                                                                          
+f=open('trafficTimes').read().splitlines()                                                                                                                
+                                                                                                                                                          
+activity    = []                                                                                                                                          
+for line in f:                                                                                                                                            
+    h,m,s   = re.findall('([\d\.]+)[:$]*',line,re.MULTILINE)                                                                                              
+    activity.append( (3600*int(h))+(int(m)*60)+float(s) )                                                                                                 
+                                                                                                                                                          
+lastEnd = 0.0                                                                                                                                             
+totalGap    = 0.0                                                                                                                                         
+totalInUse  = 0.0                                                                                                                                         
+start       = activity[0]                                                                                                                                 
+end         = start                                                                                                                                       
+gapMinWidth = 0.5                                                                                                                                         
+                                                                                                                                                          
+for a in activity:                                                                                                                                        
+    gap = a-lastEnd                                                                                                                                       
+    if(gap > gapMinWidth):                                                                                                                                
+        print('@%f active=%f gap=%f'%(start, end-start,gap))                                                                                              
+                                                                                                                                                          
+        totalInUse  = totalInUse + end-start                                                                                                              
+        totalGap    = totalGap + gap                                                                                                                      
+                                                                                                                                                          
+        start   = a                                                                                                                                       
+    else:                                                                                                                                                 
+        end = a                                                                                                                                           
+                                                                                                                                                          
+    lastEnd = a                                                                                                                                           
+                                                                                                                                                          
+print('totalInUse = %f totalGap = %f, total=%f, busUtilisation=%f'%(totalInUse, totalGap, totalInUse+totalGap, (100/(totalInUse+totalGap)*totalInUse) ))  
+
+
 
 
 
