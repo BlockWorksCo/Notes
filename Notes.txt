@@ -30583,6 +30583,9 @@ MbedTLS status:
 - Test all node/meter variants with mbedtls    .
 - Test all node/meter variants with WolfSSL    .
 
+- Reduce config options     .
+- Check resource usage      .
+
 --------------------------------------------------------
 hdlc bus utilisation:
 
