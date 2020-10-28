@@ -30585,6 +30585,7 @@ MbedTLS status:
 
 - Reduce config options     .
 - Check resource usage      .
+- error paths               .
 
 --------------------------------------------------------
 hdlc bus utilisation:
