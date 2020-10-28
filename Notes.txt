@@ -30638,6 +30638,11 @@ Such situations must be handled by the manufacturers;
 • identification of the originator of the event report: this is possible by using the CALLING Physical
 Device Address, as described in 8.4.5.4.8.
 
+-----------------------------------------
+
+CND-11033 Image add features flag
+CND-10906 : HPL Phase1 - AMI Readings Agent Fixes
+
 
 
 
