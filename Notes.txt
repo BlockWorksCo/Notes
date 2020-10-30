@@ -30516,7 +30516,7 @@ last-gasp notes
  Response to [fd00::100]:5684: 4.04 (T=ACK, MID=0x187a): 16 B: Device not found                             
 
 -----------------------------------------------------------
-agent keys from server keys:
+agent keys and server keys:
 
 mkdir -p /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03
 
@@ -30529,6 +30529,17 @@ from:
 /Data/Temp/DevStack/.data/pki/ca.crt.pem
 /Data/Temp/DevStack/.data/pki/ca.key.pem
 
+
+agent keys from server keys (dont recreate):
+mkdir -p /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03
+/Data/Projects/dev-stack/src/omnimesh/devstack/data/scripts/pki-create-additional.sh /Data/Temp/DevStack/.data/pki /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03 node 00-00-00-00-00-00-00-03
+
+assumes:
+/Data/Temp/DevStack/.data/pki/ca.crt.pem
+/Data/Temp/DevStack/.data/pki/ca.key.pem
+creates:
+/Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03/node.crt.der
+/Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-03/node.key.der
 
 --------------------------------------------------------
 crypto algs.
