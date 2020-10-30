@@ -30658,7 +30658,11 @@ Device Address, as described in 8.4.5.4.8.
 CND-11033 Image add features flag
 CND-10906 : HPL Phase1 - AMI Readings Agent Fixes
 
+--------------------------------------------------------
 
+stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
+stty -F /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTA01CAS-if00-port0 9600 raw
+socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTA01CAS-if00-port0,raw,echo=0,crnl
 
 
 
