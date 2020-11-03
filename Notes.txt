@@ -30664,6 +30664,52 @@ stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
 stty -F /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTA01CAS-if00-port0 9600 raw
 socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTA01CAS-if00-port0,raw,echo=0,crnl
 
+--------------------------------------------------------------
+
+POST /meterSamples
+{
+ "startId": 1,
+ "count": 2,
+}
+RESPONSE CODE : 200
+[
+ {
+ "createTime": "2017-12-15T11:11:23+0000",
+ "deviceId": "METER 123",
+ "formattedProfileObisCode": '1.0.94.91.0.255',
+ "meterSampleId": 1,
+ "registerValues": [
+ {
+ "attributeId": 2,
+ "formattedRegisterObisCode": "0.0.1.0.0.255",
+ "formattedValue": "2017-12-15T11:03:03",
+ },
+ {
+ "attributeId": 2,
+ "formattedRegisterObisCode": "1.0.31.7.0.255",
+ "formattedValue": "0 A",
+ }
+ ]
+ },
+ {
+ "createTime": "2017-12-15T11:16:23+0000",
+ "deviceId": "METER 123",
+ "formattedProfileObisCode": '1.0.94.91.0.255',
+ "meterSampleId": 2,
+ "registerValues": [
+ {
+ "attributeId": 2,
+ "formattedRegisterObisCode": "0.0.1.0.0.255",
+ "formattedValue": "2017-12-15T11:08:03",
+ },
+ {
+ "attributeId": 2,
+ "formattedRegisterObisCode": "1.0.31.7.0.255",
+ "formattedValue": "0 A",
+ }
+ ]
+ },
+]
 
 
 
