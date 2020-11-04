@@ -30906,6 +30906,11 @@ run "CompareMISRAReport.py old new"
 examine required.comparison
 duplicates can be discarded.
 
+--------------------------------
+smip misra:
+filter out:
+- /bootloader_service_fs.c
+- 
 
 
 
