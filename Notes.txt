@@ -30899,7 +30899,11 @@ checkout HEAD
 run ./tools/MISRA/MakeMISRAReport.sh
 
 
-run CompareMISRAReport.py
+run "CompareMISRAReport.py old new"
+
+./tools/MISRA/CompareMISRAReport.py ../terminalSMIP3/agent.lint.MISRA.required.uniq agent.lint.MISRA.required.uniq
+
+
 
 
 
