@@ -30888,6 +30888,19 @@ mdms ingestor.py
 select * from "profile1.0.94.91.0.255" where "0.0.1.0.0.255_2" between "2020-08-06T19:00:18+05:30" and "2020-08-06T19:31:17+05:30";
 
 
+-----------------------------------
+smip misra compare:
+
+checkout MISRABaseline branch
+run ./tools/MISRA/MakeMISRAReport.sh
+
+
+checkout HEAD
+run ./tools/MISRA/MakeMISRAReport.sh
+
+
+run CompareMISRAReport.py
+
 
 
 
