@@ -30917,7 +30917,7 @@ strip symbols
 
 arm-none-eabi-strip -w --strip-dwo --strip-debug --discard-locals --strip-symbol=wolf\* libc4.a -o libc4_stripped.a
 
-arm-none-eabi-objcopy --wildcard --localize-symbol wc_\* -I libc4.a -O libc4_stripped.a
+arm-none-eabi-objcopy --wildcard --localize-symbol wolf\* --localize-symbol wc_\* --strip-debug libc4.a libc4_stripped.a
 
 
 
