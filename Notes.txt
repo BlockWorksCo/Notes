@@ -30924,7 +30924,8 @@ arm-none-eabi-objcopy --wildcard --localize-symbol wolf\* --localize-symbol wc_\
 ----------------------------------------
 CNIC server-side changes
 
-- 
+- job creation
+- What is difference between a multi-device node and a gateway-node? Presence of metering Agent?
 
 
 
