@@ -30927,6 +30927,12 @@ CNIC server-side changes
 - job creation
 - What is difference between a multi-device node and a gateway-node? Presence of metering Agent?
 
+--------------------------------------------
+SMIP v98 re release:
+
+git tag -a v98r3 -m "v98r3"  040d212621b050c399436dbee4f7fad6ee284f09
+
+
 
 
 
