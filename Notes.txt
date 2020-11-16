@@ -29360,6 +29360,7 @@ https://github.com/mirrorer/afl/blob/master/docs/parallel_fuzzing.txt
 
 Or use script: tools/fuzzing/fuzzy-wuzzy.sh
 
+then use "afl-whatsup findings/" to check status
 ----------------------------------------------------------
 
 
