@@ -30945,6 +30945,10 @@ Interface identifier (IID) compared to EUI-64
 Wi-SUN:
 - Is EAP-TLS needed? can we get away with DTLS? Similar protocols... whats the difference?
 
+In mbed-os:
+nanostack is in: mbed-os/connectivity/nanostack
+Also supports lwipstack
+
 
 
 
