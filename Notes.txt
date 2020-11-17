@@ -30949,6 +30949,19 @@ In mbed-os:
 nanostack is in: mbed-os/connectivity/nanostack
 Also supports lwipstack
 
+FAN nodes must join their FAN interface to the following IPv6 multicast groups.
+Link scope:
+1. A FAN node MUST join to the link-local-scope all-nodes group (ff02::1) [RFC4291].
+2. A FAN node MUST join to the link-local-scope all-routers group (ff02::2) [RFC4291].
+3. A FAN node MUST join to the link-local-scope all-RPL-nodes group (ff02::1a) [RFC6550].
+Realm scope:
+4. A FAN node MUST join to the realm-scope all-nodes group (ff03::1).
+5. A FAN node MUST join to the realm-scope all-routers group (ff03::2).
+6. A FAN node MUST join to the realm-scope all-mpl-forwarders group (ff03::fc).
+Site and Global scope:
+7. For each GUA/ULA acquired, a FAN node SHOULD subscribe to the equivalent unicast-prefix-based IPv6
+multicast group (as described in [RFC3306]) supporting a MPL domain on that multicast address. 
+
 
 
 
