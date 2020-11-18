@@ -30962,6 +30962,48 @@ Site and Global scope:
 7. For each GUA/ULA acquired, a FAN node SHOULD subscribe to the equivalent unicast-prefix-based IPv6
 multicast group (as described in [RFC3306]) supporting a MPL domain on that multicast address. 
 
+----------------------------------------------------
+fuzz test report for 20.2
+
+status check tool for afl-fuzz by <lcamtuf@google.com>
+
+Individual fuzzers
+==================
+
+>>> fuzzer0 (1 days, 0 hrs) <<<
+
+  cycle 54, lifetime speed 411 execs/sec, path 675/1045 (64%)
+  pending 0/2, coverage 8.03%, no crashes yet
+
+>>> fuzzer1 (1 days, 0 hrs) <<<
+
+  cycle 149, lifetime speed 431 execs/sec, path 187/1089 (17%)
+  pending 0/1, coverage 7.94%, no crashes yet
+
+>>> fuzzer2 (1 days, 0 hrs) <<<
+
+  cycle 181, lifetime speed 424 execs/sec, path 496/1054 (47%)
+  pending 0/2, coverage 7.89%, no crashes yet
+
+>>> fuzzer3 (1 days, 0 hrs) <<<
+
+  cycle 164, lifetime speed 418 execs/sec, path 26/1108 (2%)
+  pending 0/2, coverage 7.99%, no crashes yet
+
+Summary stats
+=============
+
+       Fuzzers alive : 4
+      Total run time : 4 days, 1 hours
+         Total execs : 148 million
+    Cumulative speed : 1684 execs/sec
+       Pending paths : 0 faves, 7 total
+  Pending per fuzzer : 0 faves, 1 total (on average)
+       Crashes found : 0 locally unique
+
+
+
+
 
 
 
