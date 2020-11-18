@@ -31008,6 +31008,9 @@ mbedtls RAM usage:
 after login, discovery, ping & validate relay: 28817 bytes
 
 30777
+32737
+33577
+34977
 
 
 
