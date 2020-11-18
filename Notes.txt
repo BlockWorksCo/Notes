@@ -31002,6 +31002,12 @@ Summary stats
        Crashes found : 0 locally unique
 
 
+------------------------------------------------
+mbedtls RAM usage:
+
+after login, discovery, ping & validate relay: 28817 bytes
+
+30777
 
 
 
