@@ -31013,6 +31013,14 @@ after login, discovery, ping & validate relay: 28817 bytes
 34977
 
 
+------------------------------------------------------
+SWCLKTCKPEN
+Serial Wire Clock and JTAG Test Clock Pin Enable
+Enable Serial Wire and JTAG Clock connection to pin. WARNING: When this pin is disabled, the device can no longer be
+accessed by a debugger. A reset will set the pin back to a default state as enabled. If you disable this pin, make sure you
+have at least a 3 second timeout at the start of you program code before you disable the pin. This way, the debugger will
+have time to halt the device after a reset before the pin is disabled.
+
 
 
 
