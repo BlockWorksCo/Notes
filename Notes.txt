@@ -31042,6 +31042,9 @@ CA trusted keys DTLS extension
 
 TrustedCaKeysExtension.java
 DTLSFullHandshakeProcedure.java
+DTLSECDHKeyExchange.java
+
+createCertificateMessage()
 
 Described in RFC 6066
 trusted_ca_keys = 3;
