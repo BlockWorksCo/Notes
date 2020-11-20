@@ -31029,6 +31029,11 @@ load balancing setup in health-check script in dev-stack.
 
 ipvsadm -L -n --connection 
 
+----------------------------------------------
+source address rewrite
+
+ip6tables -t nat -A POSTROUTING --source fd00::101 -j SNAT --to-source fd00::100 
+
 
 
 
