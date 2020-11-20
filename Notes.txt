@@ -31021,6 +31021,14 @@ accessed by a debugger. A reset will set the pin back to a default state as enab
 have at least a 3 second timeout at the start of you program code before you disable the pin. This way, the debugger will
 have time to halt the device after a reset before the pin is disabled.
 
+----------------------------------------
+ipvs ipvsadm
+
+ipvsadm -L -n --stats
+load balancing setup in health-check script in dev-stack.
+
+ipvsadm -L -n --connection 
+
 
 
 
