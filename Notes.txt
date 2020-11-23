@@ -31063,7 +31063,12 @@ cnic7 bootloader from reset:
 pc             0xfe10000           0xfe10000    EFR32
 pc             0xfe10002           0xfe10002    EFM32
 
-Jumps to Reset_Handler
+EFR32: Jumps to Reset_Handler
+
+EFM32:
+Info : Previous state query failed, trying to reconnect
+Error: jtag status contains invalid mode value - communication failure
+Polling target efm32.cpu failed, trying to reexamine
 
 
 
