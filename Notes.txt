@@ -31057,6 +31057,14 @@ getX509Name()
 ssl_cli.c
 ssl_write_client_hello()
 
+-------------------------------------------------------
+cnic7 bootloader from reset:
+
+sp             0x20000400          0x20000400 <s_bootloaderStack+512>
+pc             0xfe10000           0xfe10000
+msp            0x20000400          0x20000400 <s_bootloaderStack+512>
+psp            0x0                 0x0 <__Vectors>
+
 
 
 
