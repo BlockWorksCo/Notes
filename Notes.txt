@@ -31078,7 +31078,6 @@ pc             0xad8               0xad8 <Reset_Handler>
 Device identity
 
 - Agent to push identity data to NMS & NMS to accept identity for CNIC and populate identity tables & NMS to accept old-style identity (isGateway) and populate identity tables.
-- Dashboard.
 - Panmesh to display product name instead of gateway/mesh.
 - Panmesh to allow filtering of devices based on single network-type.
 - Panmesh to allow filtering of devices based on multiple network-types and network-identity (mfg name, etc).
