@@ -31077,5 +31077,9 @@ pc             0xad8               0xad8 <Reset_Handler>
 -----------------------------------------------------------------
 Device identity
 
+- Agent to push identity data to NMS
+- NMS to accept identity for CNIC and populate identity tables.
+- NMS to accept old-style identity (isGateway) and populate identity tables.
+
 
 
