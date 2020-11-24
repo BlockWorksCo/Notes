@@ -31083,6 +31083,11 @@ Device identity
 - Panmesh to allow filtering of devices based on multiple network-types and network-identity (mfg name, etc).
 - Panmesh to allow creation of jobs based on network-identity filters.
 
+----------------------------------------------------
+clear root fs
+
+sudo journalctl --vacuum-size=100M
+
 
 
 
