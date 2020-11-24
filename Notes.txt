@@ -31080,6 +31080,20 @@ Device identity
 - Agent to push identity data to NMS
 - NMS to accept identity for CNIC and populate identity tables.
 - NMS to accept old-style identity (isGateway) and populate identity tables.
+- NMS to display product name instead of gateway/mesh.
+- Panmesh to display product name instead of gateway/mesh.
+- NMS to allow filtering of devices based on single network-type.
+- NMS to allow filtering of devices based on multiple network-types and network-identity (mfg name, etc).
+- Panmesh to allow filtering of devices based on single network-type.
+- Panmesh to allow filtering of devices based on multiple network-types and network-identity (mfg name, etc).
+- NMS to allow creation of jobs based on network-identity filters.
+- Panmesh to allow creation of jobs based on network-identity filters.
+
+
+
+
+
+
 
 
 
