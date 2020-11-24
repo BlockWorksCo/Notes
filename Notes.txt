@@ -31074,6 +31074,8 @@ Polling target efm32.cpu failed, trying to reexamine
 pc             0xad8               0xad8 <Reset_Handler>
 
 
+-----------------------------------------------------------------
+Device identity
 
 
 
