@@ -31053,6 +31053,13 @@ Can use either SHA1 hash of key or x509 name (Distinguished Name or DN).
 getKeySha1Hash()
 getX509Name()
 
+findServerDtlsDomainBySha1Hash()
+searchDomainBySha1Hash()
+getIssuerPublicKeyHash()
+
+
+
+
 
 ssl_cli.c
 ssl_write_client_hello()
