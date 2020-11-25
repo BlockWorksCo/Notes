@@ -31060,6 +31060,14 @@ PkiLoader.java: getPublicKeyHash()
 SHA1 hash over publicKeyInfo.getPublicKeyData()
 
 
+cacert in dtls_mbedtls.c
+x509_crt.h
+mbedtls_x509_crt.pk
+or pk_raw
+
+mbedtls_x509_buf or mbedtls_pk_context
+
+pk.h
 
 
 
