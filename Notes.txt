@@ -31069,6 +31069,8 @@ mbedtls_x509_buf or mbedtls_pk_context
 
 pk.h
 
+mbedtls_ssl_get_key_exchange_md_tls1_2()
+
 
 
 
