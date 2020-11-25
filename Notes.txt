@@ -31056,6 +31056,12 @@ getX509Name()
 findServerDtlsDomainBySha1Hash()
 searchDomainBySha1Hash()
 getIssuerPublicKeyHash()
+PkiLoader.java: getPublicKeyHash()
+SHA1 hash over publicKeyInfo.getPublicKeyData()
+
+
+
+
 
 
 
