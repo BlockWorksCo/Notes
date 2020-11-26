@@ -31111,6 +31111,39 @@ clear root fs
 
 sudo journalctl --vacuum-size=100M
 
+---------------------------------------------------------
+
+2020-11-26 17:20:28,939 INFO  [http-114] [user=sysadmin] PkiLoader - SHA1 of 0433305777364bcc6f883bb836e192d04715fe75668cb8dcdeebcd772a9f5bcded95e0c57c3516e78fa302b28c55406ea94c3d53f262203e776e3d92882aca84c6 is 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+
+2020-11-26 17:20:28,916 INFO  [http-114] UserOperations - inactivePeriod  30 
+2020-11-26 17:20:28,936 INFO  [http-114] [user=sysadmin] PkiLoader - SHA1 of 04cf73852dd259a9d1f8cab8553c48134ee6b4d092da02a843c3564979b81080d43b58e1757e6226599e8de76fd872ab2349c8529c458481fc2937c5db1d1dfe1f is b66493c693295da258d40675bc74d2d5b6231ee8
+2020-11-26 17:20:28,937 INFO  [http-114] [user=sysadmin] PkiLoader - SHA1 of 04cf73852dd259a9d1f8cab8553c48134ee6b4d092da02a843c3564979b81080d43b58e1757e6226599e8de76fd872ab2349c8529c458481fc2937c5db1d1dfe1f is b66493c693295da258d40675bc74d2d5b6231ee8
+2020-11-26 17:20:28,939 INFO  [http-114] [user=sysadmin] PkiLoader - SHA1 of 0433305777364bcc6f883bb836e192d04715fe75668cb8dcdeebcd772a9f5bcded95e0c57c3516e78fa302b28c55406ea94c3d53f262203e776e3d92882aca84c6 is 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+2020-11-26 17:20:28,966 INFO  [http-116] UserOperations - inactivePeriod  30 
+2020-11-26 17:20:28,990 INFO  [http-116] [user=sysadmin] PkiLoader - SHA1 of 0433305777364bcc6f883bb836e192d04715fe75668cb8dcdeebcd772a9f5bcded95e0c57c3516e78fa302b28c55406ea94c3d53f262203e776e3d92882aca84c6 is 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+2020-11-26 17:20:29,457 INFO  [mq-perf-monitor] MqPerfMonitor - Message Queue Processing speed =0 msg per 1 sec
+2020-11-26 17:20:30,465 INFO  [mq-perf-monitor] MqPerfMonitor - Message Queue Processing speed =0 msg per 1 sec
+
+
+020-11-26 17:20:58,042 INFO  [dtls-pool-5] DTLSECDHKeyExchange - createCertificateMessage 
+2020-11-26 17:20:58,043 INFO  [dtls-pool-5] DTLSECDHKeyExchange - createCertificateMessage has trustedKeys 
+2020-11-26 17:20:58,043 INFO  [dtls-pool-5] DTLSECDHKeyExchange - createCertificateMessage has trustedKeys with SHA1 hash 
+2020-11-26 17:20:58,043 INFO  [dtls-pool-5] ServerDtlsDomainCache - searchDomainBySha1Hash
+2020-11-26 17:20:58,043 INFO  [dtls-pool-5] ServerDtlsDomainCache - searchDomainBySha1Hash target=58b2604832def562fa28ebc48e5f3b8e2d21c8f5 from 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+2020-11-26 17:20:58,043 INFO  [dtls-pool-5] ServerDtlsDomainCache - (matched) searchDomainBySha1Hash target=58b2604832def562fa28ebc48e5f3b8e2d21c8f5 from 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+2020-11-26 17:20:58,050 INFO  [dtls-pool-6] DTLSECDHKeyExchange - createCertificateMessage 
+2020-11-26 17:20:58,056 INFO  [dtls-pool-6] DTLSECDHKeyExchange - createCertificateMessage has trustedKeys 
+2020-11-26 17:20:58,056 INFO  [dtls-pool-6] DTLSECDHKeyExchange - createCertificateMessage has trustedKeys with SHA1 hash 
+2020-11-26 17:20:58,057 INFO  [dtls-pool-6] ServerDtlsDomainCache - searchDomainBySha1Hash
+2020-11-26 17:20:58,058 INFO  [dtls-pool-6] ServerDtlsDomainCache - searchDomainBySha1Hash target=58b2604832def562fa28ebc48e5f3b8e2d21c8f5 from 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+2020-11-26 17:20:58,059 INFO  [dtls-pool-6] ServerDtlsDomainCache - (matched) searchDomainBySha1Hash target=58b2604832def562fa28ebc48e5f3b8e2d21c8f5 from 58b2604832def562fa28ebc48e5f3b8e2d21c8f5
+2020-11-26 17:20:58,888 INFO  [mq-perf-monitor] MqPerfMonitor - Message Queue Processing speed =0 msg per 1 sec
+2020-11-26 17:20:59,806 INFO  [dtls-pool-4] MessageQueuePersister - Sending to queue Queue-03 message for nodeId=2 of  type class com.connode.service.terminal.mq.MessagesFromNode and seqNum: 2381. Message={}
+2020-11-26 17:20:59,806 INFO  [dtls-pool-1] MessageQueuePersister - Sending to queue Queue-02 message for nodeId=1 of  type class com.connode.service.terminal.mq.MessagesFromNode and seqNum: 2384. Message={}
+2020-11-26 17:20:59,893 INFO  [mq-perf-monitor] MqPerfMonitor - Message Queue Processing speed =0 msg per 1 sec
+
+
+
 
 
 
