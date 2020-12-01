@@ -31143,6 +31143,17 @@ sudo journalctl --vacuum-size=100M
 2020-11-26 17:20:59,893 INFO  [mq-perf-monitor] MqPerfMonitor - Message Queue Processing speed =0 msg per 1 sec
 
 
+---------------------------------------------------------------
+
+stty -F /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTA01CAS-if00-port0 9600 raw
+stty -F /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0 9600 raw
+socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTA01CAS-if00-port0,raw,echo=0,crnl
+
+build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0 -controllerport 5000 -loglevel debug -logfile /Data/Logs/node228.log
+
+
+
+
 
 
 
