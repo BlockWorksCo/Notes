@@ -31151,6 +31151,10 @@ socat -x /dev/serial/by-id/usb-FTDI_KMK116_A5G6O7M-if00-port0,raw,echo=0,crnl /d
 
 build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0 -controllerport 5000 -loglevel debug -logfile /Data/Logs/node228.log
 
+-----------------------------------
+NMS SMA logging debug
+
+in logback.xml, change all DENY to ACCEPT
 
 
 
