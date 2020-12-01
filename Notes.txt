@@ -31156,6 +31156,24 @@ NMS SMA logging debug
 
 in logback.xml, change all DENY to ACCEPT
 
+--------------------------------------------
+
+./tools/c4-tools/coap_request.py --ctrlporthub :5000  --config-list
+./tools/c4-tools/coap_request.py --ctrlporthub 5000 --load-key client-cert /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-04/node.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key client-cert /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-04/node.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key client-key /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-04/node.key.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key root-cert /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-04/ca.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key root-cert /Data/Temp/DevStack/.data/pki/ca.crt.der 
+
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key client-cert /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-04/node.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key client-key /Data/Temp/DevStack/.data/pki/00-00-00-00-00-00-00-04/node.key.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key root-cert /Data/Temp/DevStack/.data/pki/ca.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key client-cert /Data/Temp/NewCA/node.crt.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key client-key /Data/Temp/NewCA/node.key.der 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key root-cert /Data/Temp/NewCA/ca.crt.der 
+
+
+
 
 
 
