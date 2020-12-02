@@ -31180,7 +31180,7 @@ analysis & reporting:
 - Analysis of NMS data, netork topology, etx, etc, geographic presentation.
 - declarative jobs (declare the desired end state, not the operation). e.g. fw upgrade.
 - declarative configuration (declare the desired configuration to Agent, allow it to modify as needed). Robustness.
--
+- MS Power BI, Amazon QuickSight, ELK
 
 
 ------------------------
@@ -31189,6 +31189,7 @@ mbedtls
 - disabled cookies by not using MBEDTLS_SSL_DTLS_HELLO_VERIFY.
 - amplification attack mitigation.
 
+--------------------------
 
 
 
