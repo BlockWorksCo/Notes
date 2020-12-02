@@ -31173,6 +31173,14 @@ in logback.xml, change all DENY to ACCEPT
 ./tools/c4-tools/coap_request.py --ctrlporthub :5000 --load-key root-cert /Data/Temp/NewCA/ca.crt.der 
 
 
+------------------------------------------
+Future tech
+analysis & reporting:
+
+- Analysis of NMS data, netork topology, etx, etc, geographic presentation.
+- declarative jobs (declare the desired end state, not the operation). e.g. fw upgrade.
+- declarative configuration (declare the desired configuration to Agent, allow it to modify as needed). Robustness.
+-
 
 
 
