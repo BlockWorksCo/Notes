@@ -31183,6 +31183,13 @@ analysis & reporting:
 -
 
 
+------------------------
+mbedtls
+
+- disabled cookies by not using MBEDTLS_SSL_DTLS_HELLO_VERIFY.
+- amplification attack mitigation.
+
+
 
 
 
