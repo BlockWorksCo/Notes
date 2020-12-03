@@ -31217,6 +31217,7 @@ mbedtls remaining work.
 - characterisation (RAM & CPU usage).
 - timeout & heartbeat functionality.
 - Firmware upgrade (may just work).
+- session renewal.
 
 
 
