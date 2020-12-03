@@ -31189,7 +31189,6 @@ mbedtls
 - disabled cookies by not using MBEDTLS_SSL_DTLS_HELLO_VERIFY.
 - amplification attack mitigation.
 
-<<<<<<< HEAD
 --------------------------
 elasticsearch
 POST test-index/_search
@@ -31207,7 +31206,6 @@ POST test-index/_doc/_mapping
         }
     }
 }
-=======
 -----------------------------------------------
 mbedtls remaining work.                             
                                                     
@@ -31217,11 +31215,7 @@ mbedtls remaining work.
 - proper certificate loading from module.           
 - session caching and resumption.                   
 - characterisation (RAM & CPU usage).
-<<<<<<< HEAD
->>>>>>> WIP
-=======
 - timeout & heartbeat functionality.
->>>>>>> WIP
 
 
 
