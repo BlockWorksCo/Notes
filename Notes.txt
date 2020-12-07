@@ -31273,6 +31273,11 @@ Meter context:
 
 
 
+Phase 1:
+- Collect all context data into a global context structure that is suitable for being switched.
+- Add ability to save & restore this context.
+- (possibly) use this as an optimisation to not require discovery at all on startup if meter
+state can be restored.
 
 
 
