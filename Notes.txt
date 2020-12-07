@@ -31229,10 +31229,13 @@ over all the configured meters.
 swap the data to a file "/meterstate.0", "/meterstate.2", etc.
 - Likely have to at least start off with alarm polling rather than push.
 - discovery of 38 meters will take almost 90 minutes as-is. Need to optimise this and 
-also have meters in different states. Sampligng of some meters will be happening when
+also have meters in different states. Sampling of some meters will be happening when
 discovery is still happening for others.
 
 
+Meter context:
+- discovery state
+- DeviceInfo
 
 
 
