@@ -31278,6 +31278,9 @@ Phase 1:
 - Add ability to save & restore this context.
 - (possibly) use this as an optimisation to not require discovery at all on startup if meter
 state can be restored.
+- Initially, use a preconfigred set of addresses. at each point that a scheduled operation is
+kicked off, iterate over all devices.
+- Add scanning to discover the devices.
 
 
 
