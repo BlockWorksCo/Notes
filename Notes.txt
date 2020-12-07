@@ -31219,6 +31219,15 @@ mbedtls remaining work.
 - Firmware upgrade (may just work).
 - session renewal.
 
+------------------------------------------
+mdcu aeml meter-driver mods
+
+- have to isolate meter-specific state and "context swap" this state as we iterate
+over all the configured meters.
+- Do we need to scan for the meters?
+- "device" level can already handle multiple meters, but dev-dlms will need to
+swap the data to a file "/meterstate.0", "/meterstate.2", etc.
+- Likely have to at least start off with alarm polling rather than push.
 
 
 
