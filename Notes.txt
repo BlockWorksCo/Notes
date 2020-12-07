@@ -31234,8 +31234,22 @@ discovery is still happening for others.
 
 
 Meter context:
-- discovery state
+- DevDiscoveryState
 - DeviceInfo
+- firstBreathAlreadyTriggered
+- s_sendFirstBreathWhenWeHaveAlarmProfile
+- s_profiles & s_numProfiles
+- s_alarmInProcess
+- s_alarmInProcessClearSchedule
+- s_alarmIsrSkipCounter
+- DeviceAlarmsActivationRequest
+- State
+- s_registerIx
+- ReadingState
+- s_regValue
+- s_regType
+- s_requestCompletedDrop
+
 
 
 
