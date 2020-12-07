@@ -31228,6 +31228,9 @@ over all the configured meters.
 - "device" level can already handle multiple meters, but dev-dlms will need to
 swap the data to a file "/meterstate.0", "/meterstate.2", etc.
 - Likely have to at least start off with alarm polling rather than push.
+- discovery of 38 meters will take almost 90 minutes as-is. Need to optimise this and 
+also have meters in different states. Sampligng of some meters will be happening when
+discovery is still happening for others.
 
 
 
