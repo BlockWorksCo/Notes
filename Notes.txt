@@ -31249,6 +31249,28 @@ Meter context:
 - s_regValue
 - s_regType
 - s_requestCompletedDrop
+- MeterProfile
+- s_firstProfileField
+- s_profileRegIndex
+- s_profilesHash
+- s_alarmHash
+- s_alarmsMask
+- DataProfileSampleCb
+- DataProfileCtxChangedCb
+- MeterTime
+- s_meterTimeDifferAvaliable
+- s_meterTimeDiffer
+- SelectiveAccessData
+- OnDemandProfilesReadingState
+- s_scalerUnitBufferAttr2 
+- s_scalerUnitBufferAttr3
+- s_scalerUnitBufferLenAttr2
+- s_scalerUnitBufferLenAttr3
+- s_complexDataProfileScheduleId
+- s_complexDataProfileCronId
+- s_progressCounter
+- s_message
+
 
 
 
