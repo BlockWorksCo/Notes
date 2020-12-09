@@ -31289,6 +31289,17 @@ Date:   Tue Apr 28 16:32:52 2020 +0200
     Initial Commit
 
 
+-----------------------------------------
+PUT test-index/_mapping
+{
+        "properties" : {
+            "outageStart" : {"type" : "date"},
+            "outageEnd" : {"type" : "date"},
+        }   
+}   
+
+
+
 
 
 
