@@ -31204,8 +31204,89 @@ POST test-index/_doc/_mapping
             "outageEnd" : {"type" : "date"},
         }
 }
+-----------------------------------------------
+mbedtls remaining work.                             
+                                                    
+- RNG                                               
+- tidying of dtls_mbedtls.                          
+- make config and test all builds (IPA1, HW1, IAP3, GW, CNIC).      
+- proper certificate loading from module.           
+- session caching and resumption.                   
+- characterisation (RAM & CPU usage).
+- timeout & heartbeat functionality.
+- Firmware upgrade (may just work).
+- session renewal.
+
+------------------------------------------
+mdcu aeml meter-driver mods
+
+- have to isolate meter-specific state and "context swap" this state as we iterate
+over all the configured meters.
+- Do we need to scan for the meters?
+- "device" level can already handle multiple meters, but dev-dlms will need to
+swap the data to a file "/meterstate.0", "/meterstate.2", etc.
+- Likely have to at least start off with alarm polling rather than push.
+- discovery of 38 meters will take almost 90 minutes as-is. Need to optimise this and 
+also have meters in different states. Sampling of some meters will be happening when
+discovery is still happening for others.
 
 
+Meter context:
+- DevDiscoveryState
+- DeviceInfo
+- firstBreathAlreadyTriggered
+- s_sendFirstBreathWhenWeHaveAlarmProfile
+- s_profiles & s_numProfiles
+- s_alarmInProcess
+- s_alarmInProcessClearSchedule
+- s_alarmIsrSkipCounter
+- DeviceAlarmsActivationRequest
+- State
+- s_registerIx
+- ReadingState
+- s_regValue
+- s_regType
+- s_requestCompletedDrop
+- MeterProfile
+- s_firstProfileField
+- s_profileRegIndex
+- s_profilesHash
+- s_alarmHash
+- s_alarmsMask
+- DataProfileSampleCb
+- DataProfileCtxChangedCb
+- MeterTime
+- s_meterTimeDifferAvaliable
+- s_meterTimeDiffer
+- SelectiveAccessData
+- OnDemandProfilesReadingState
+- s_scalerUnitBufferAttr2 
+- s_scalerUnitBufferAttr3
+- s_scalerUnitBufferLenAttr2
+- s_scalerUnitBufferLenAttr3
+- s_complexDataProfileScheduleId
+- s_complexDataProfileCronId
+- s_progressCounter
+- s_message
+
+
+
+- Collect all context data into a global context structure that is suitable for being switched.
+- Add ability to save & restore this context.
+- (possibly) use this as an optimisation to not require discovery at all on startup if meter
+state can be restored.
+- Initially, use a preconfigred set of addresses. at each point that a scheduled operation is
+kicked off, iterate over all devices.
+- Add scanning to discover the devices.
+
+
+---------------------------------------------
+
+commit 63b764d841a98b63d20c1bb46218dde99f274d4b
+Author: Tuomas Maattanen <Tuomas.Maattanen@silabs.com>
+Date:   Tue Apr 28 16:32:52 2020 +0200
+
+    Initial Commit
 
 
 
