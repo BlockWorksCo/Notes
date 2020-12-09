@@ -31585,14 +31585,10 @@ Advanced
 
 PUT test-index
 {
-  "mappings": {
-    "_doc": {
-      "properties": {
-        "MeterID": { "type": "keyword" },
-        "outageStart": { "type": "date" },
-        "outageEnd": { "type": "date" }
-      }
-    }
+  "properties": {
+    "MeterID": { "type": "keyword" },
+    "outageStart": { "type": "date" },
+    "outageEnd": { "type": "date" }
   }
 }
 
