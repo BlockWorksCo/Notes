@@ -31199,12 +31199,10 @@ POST test-index/_search
 
 POST test-index/_doc/_mapping
 {
-    "_doc" : {
         "properties" : {
             "outageStart" : {"type" : "date"},
             "outageEnd" : {"type" : "date"},
         }
-    }
 }
 
 
