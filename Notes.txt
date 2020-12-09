@@ -31282,6 +31282,17 @@ kicked off, iterate over all devices.
 - Add scanning to discover the devices.
 
 
+---------------------------------------------
+
+commit 63b764d841a98b63d20c1bb46218dde99f274d4b
+Author: Tuomas Maattanen <Tuomas.Maattanen@silabs.com>
+Date:   Tue Apr 28 16:32:52 2020 +0200
+
+    Initial Commit
+
+
+
+
 
 
 
