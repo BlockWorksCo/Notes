@@ -31299,6 +31299,213 @@ PUT test-index/_mapping
 }   
 
 
+Elastic
+
+Trial - 9 days left
+
+T
+Cloud
+Deployments
+i-o-optimized-deployment
+Elasticsearch
+API console
+Deployments
+i-o-optimized-deployment
+Edit
+Elasticsearch
+Snapshots
+API console
+Kibana
+APM
+Enterprise Search
+Logs and metrics
+Activity
+Security
+Performance
+Extensions
+API keys
+Traffic filters
+Help
+API console
+US East (N. Virginia)
+Perform operations-related tasks from this console. You can run search queries, review the list of snapshots, check the health of your clusters, and more.
+
+GET
+test-index/_mapping
+
+Recent
+
+Submit
+
+Advanced
+200 — OK (510 ms)
+{
+  "test-index": {
+    "mappings": {
+      "properties": {
+        "AverageVoltage": {
+          "type": "long"
+        },
+        "author": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "text": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "TimeOfAlarm": {
+          "type": "date"
+        },
+        "outageStart": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "AlarmType": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "AverageCurrent": {
+          "type": "long"
+        },
+        "timestamp": {
+          "type": "date"
+        },
+        "outageEnd": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "MeterID": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "TimeOfSample": {
+          "type": "date"
+        },
+        "employee-id": {
+          "index": false,
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
+
+
+GET /test-index/_mapping
+{
+  "test-index": {
+    "mappings": {
+      "properties": {
+        "AverageVoltage": {
+          "type": "long"
+        },
+        "author": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "text": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "TimeOfAlarm": {
+          "type": "date"
+        },
+        "outageStart": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "AlarmType": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "AverageCurrent": {
+          "type": "long"
+        },
+        "timestamp": {
+          "type": "date"
+        },
+        "outageEnd": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "MeterID": {
+          "fields": {
+            "keyword": {
+              "ignore_above": 256,
+              "type": "keyword"
+            }
+          },
+          "type": "text"
+        },
+        "TimeOfSample": {
+          "type": "date"
+        },
+        "employee-id": {
+          "index": false,
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}
+
+
 
 
 
