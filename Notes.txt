@@ -31422,92 +31422,84 @@ Advanced
 }
 
 
-GET /test-index/_mapping
 {
-  "test-index": {
-    "mappings": {
-      "properties": {
-        "AverageVoltage": {
-          "type": "long"
-        },
-        "author": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "text": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "TimeOfAlarm": {
-          "type": "date"
-        },
-        "outageStart": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "AlarmType": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "AverageCurrent": {
-          "type": "long"
-        },
-        "timestamp": {
-          "type": "date"
-        },
-        "outageEnd": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "MeterID": {
-          "fields": {
-            "keyword": {
-              "ignore_above": 256,
-              "type": "keyword"
-            }
-          },
-          "type": "text"
-        },
-        "TimeOfSample": {
-          "type": "date"
-        },
-        "employee-id": {
-          "index": false,
-          "type": "keyword"
-        }
-      }
-    }
-  }
+	"test-index": {
+		"mappings": {
+			"properties": {
+				"AverageVoltage": {
+					"type": "long"
+				},
+				"author": {
+					"fields": {
+						"keyword": {
+							"ignore_above": 256,
+							"type": "keyword"
+						}
+					},
+					"type": "text"
+				},
+				"text": {
+					"fields": {
+						"keyword": {
+							"ignore_above": 256,
+							"type": "keyword"
+						}
+					},
+					"type": "text"
+				},
+				"TimeOfAlarm": {
+					"type": "date"
+				},
+				"outageStart": {
+					"type": "date"
+				}
+			},
+			"outageEnd": {
+				"type": "date"
+			}
+		},
+		"AlarmType": {
+			"fields": {
+				"keyword": {
+					"ignore_above": 256,
+					"type": "keyword"
+				}
+			},
+			"type": "text"
+		},
+		"AverageCurrent": {
+			"type": "long"
+		},
+		"timestamp": {
+			"type": "date"
+		},
+		"outageEnd": {
+			"fields": {
+				"keyword": {
+					"ignore_above": 256,
+					"type": "keyword"
+				}
+			},
+			"type": "text"
+		},
+		"MeterID": {
+			"fields": {
+				"keyword": {
+					"ignore_above": 256,
+					"type": "keyword"
+				}
+			},
+			"type": "text"
+		},
+		"TimeOfSample": {
+			"type": "date"
+		},
+		"employee-id": {
+			"index": false,
+			"type": "keyword"
+		}
+	}
 }
-
-
-
-
 
 
 
