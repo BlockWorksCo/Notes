@@ -31217,6 +31217,10 @@ mbedtls remaining work.
 - proper certificate loading from module.           
 - session caching and resumption.                   
 - characterisation (RAM & CPU usage).
+<<<<<<< HEAD
+>>>>>>> WIP
+=======
+- timeout & heartbeat functionality.
 >>>>>>> WIP
 
 
