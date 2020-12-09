@@ -31190,6 +31190,22 @@ mbedtls
 - amplification attack mitigation.
 
 --------------------------
+elasticsearch
+POST test-index/_search
+{
+    "query": {"exists":{"field":"outageStart"}}
+}
+
+
+POST test-index/_doc/_mapping
+{
+    "_doc" : {
+        "properties" : {
+            "outageStart" : {"type" : "date"},
+            "outageEnd" : {"type" : "date"},
+        }
+    }
+}
 
 
 
