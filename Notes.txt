@@ -31641,10 +31641,16 @@ PUT metering-alarms
 PUT /metering-alarms/_mapping
 {
       "properties" : {
-        "AverageCurrent" : {
-          "type" : "float"
+        "AlarmType" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
         },
-        "AverageVoltage" : {
+        "TimeOfAlarm" : {
           "type" : "float"
         },
         "MeterID" : {
@@ -31656,7 +31662,7 @@ PUT /metering-alarms/_mapping
             }
           }
         },
-        "TimeOfSample" : {
+        "TimeOfAlarm" : {
           "type" : "date"
         }
       }
