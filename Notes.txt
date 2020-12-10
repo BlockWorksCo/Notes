@@ -31593,6 +31593,17 @@ PUT test-index
   }
 }
 
+----------------------------------------------------
+elastic search container
+
+
+docker pull nshou/elasticsearch-kibana
+docker run -d -p 9200:9200 -p 5601:5601 nshou/elasticsearch-kibana
+
+Kibana@
+https://localhost:5601
+
+elasticsearch api @ localhost:9200
 
 
 
