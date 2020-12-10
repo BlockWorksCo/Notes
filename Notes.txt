@@ -31690,4 +31690,43 @@ PUT /metering-outages/_mapping
       }
     }
 
+----------------------------------------
+kibana vega gantt chart
+
+{
+
+  $schema: https://vega.github.io/schema/vega-lite/v2.json
+  title: Gantt Visualization Using Vega
+
+
+  data: {
+    url: {
+      // Apply dashboard context filters when set
+      %context%: true
+      // Filter the time picker (upper right corner) with this field
+      %timefield%: outageStart
+
+/*
+See .search() documentation for :  https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/api-reference.html#api-search
+*/
+
+      // Which index to search
+      index: maseca
+
+      body: {
+
+      }
+    }
+
+    format: {property: "hits.hits"}
+  }
+
+"mark": "bar",
+  "encoding": {
+    "y": {"field": "MeterID", "type": "nominal"},
+    "x": {"field": "outageStart", "type": "nominal"},
+    "x2": {"field": "outageEnd", "type": "nominal"}
+  }
+}
+
 
