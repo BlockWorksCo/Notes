@@ -31035,6 +31035,7 @@ source address rewrite
 outgoing requests from the NMS do not get their source-address rewritten unless the connection
 has been setup from an incoming packet from the agent. This connection times out after 5 mins.
 
+sudo modprobe ip6table_filter
 ip6tables -t nat -A POSTROUTING --source fd00::101 -j SNAT --to-source fd00::100 
 
 ---------------------------------------------------
