@@ -31606,4 +31606,28 @@ https://localhost:5601
 elasticsearch api @ localhost:9200
 
 
+PUT /metering-blockload/_mapping
+{
+      "properties" : {
+        "AverageCurrent" : {
+          "type" : "float"
+        },
+        "AverageVoltage" : {
+          "type" : "float"
+        },
+        "MeterID" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "TimeOfSample" : {
+          "type" : "date"
+        }
+      }
+    }
+
 
