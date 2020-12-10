@@ -31650,9 +31650,6 @@ PUT /metering-alarms/_mapping
             }
           }
         },
-        "TimeOfAlarm" : {
-          "type" : "float"
-        },
         "MeterID" : {
           "type" : "text",
           "fields" : {
