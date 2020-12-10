@@ -31666,3 +31666,28 @@ PUT /metering-alarms/_mapping
     }
 
 
+
+PUT metering-outages
+
+PUT /metering-outages/_mapping
+{
+      "properties" : {
+        "outageStart" : {
+          "type" : "date"
+        },
+        "outageEnd" : {
+          "type" : "date"
+        },
+        "MeterID" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        }
+      }
+    }
+
+
