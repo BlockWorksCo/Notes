@@ -31711,7 +31711,7 @@ See .search() documentation for :  https://www.elastic.co/guide/en/elasticsearch
 */
 
       // Which index to search
-      index: maseca
+      index: metering-outages
 
       body: {
 
