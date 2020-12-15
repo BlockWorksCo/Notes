@@ -31734,4 +31734,9 @@ mbedtls unittest work:
 - ipsec_sad.c
 - test_dtls.c
 
+----------------------------------------------
+regulator on efm32
+halInitChipSpecific()
+R5VOUTLEVEL
+
 
