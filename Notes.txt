@@ -31739,4 +31739,7 @@ regulator on efm32
 halInitChipSpecific()
 R5VOUTLEVEL
 
+-----------------------------------
+
+ mysql> grant all on mdms.* to 'root'@'%';flush privileges;
 
