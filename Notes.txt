@@ -31748,3 +31748,10 @@ R5VOUTLEVEL
 
  mysql> grant all on mdms.* to 'root'@'%';flush privileges;
 
+------------------------------------
+technology group
+- NB-IoT interaction. PPP? dev-board & SIM?
+- OSCORE?
+- LWM2M?
+
+
