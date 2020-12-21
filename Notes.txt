@@ -31754,4 +31754,21 @@ technology group
 - OSCORE?
 - LWM2M?
 
+--------------------------------------------
+last gasp
+
+
+~/c4-agent-tools-v149.5/coap_request.py --ctrlporthub :4001 --eui64 "00-1b-c5-0c-60-09-13-6b" --config-list
+
+node.power_fail.fake_delay               : 3600
+node.power_fail.expected_lifetime        : 100
+node.power_fail.disable_mq_scheduled_push : 0
+node.power_fail.disable_coap_ack         : 0
+node.power_fail.disable_event            : 0
+node.power_fail.no_radio_disable         : 0
+
+
+
+
+
 
