@@ -31767,6 +31767,11 @@ node.power_fail.disable_coap_ack         : 0
 node.power_fail.disable_event            : 0
 node.power_fail.no_radio_disable         : 0
 
+----------------------------------
+superset:
+
+select Devices.nodeId,Devices.deviceId,nodeType,parentNodeId,status,updateTime,address,currentFirmwareVersion,latitude,longitude,gatewayNodeId,hardwareVersion,createTime from Devices left join Nodes on Devices.nodeId = Nodes.nodeId;
+
 
 
 
