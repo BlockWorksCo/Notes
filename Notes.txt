@@ -31772,6 +31772,9 @@ superset:
 
 select Devices.nodeId,Devices.deviceId,nodeType,parentNodeId,status,updateTime,address,currentFirmwareVersion,latitude,longitude,gatewayNodeId,hardwareVersion,createTime from Devices left join Nodes on Devices.nodeId = Nodes.nodeId;
 
+mysql://root:blaa@172.21.0.6/superset
+mysql://root:blaa@172.21.0.6/mdms
+
 
 
 
