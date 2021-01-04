@@ -31777,6 +31777,10 @@ select Devices.nodeId,Devices.deviceId,nodeType,parentNodeId,status,updateTime,a
 mysql://root:blaa@172.21.0.6/superset
 mysql://root:blaa@172.21.0.6/mdms
 
+------------------------------
+Block-load/Voltage: 1.0.48.1b.0.255/2
+Daily-load/Cum. Apparent Import Energy: 1.0.9.8.0.255/2
+Daily-load/Cum. Active Import Energy: 1.0.1.8.0.255/2
 
 
 
