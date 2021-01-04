@@ -31778,10 +31778,15 @@ mysql://root:blaa@172.21.0.6/superset
 mysql://root:blaa@172.21.0.6/mdms
 
 ------------------------------
+Billing 1.0.98.1.0.255
+Block load 1.0.99.1.0.255
+Daily load 1.0.99.2.0.255
+Instantaneous 1.0.94.91.0.255
+
 Block-load/Voltage: 1.0.72.27.0.255/2
 Daily-load/Cum. Apparent Import Energy: 1.0.9.8.0.255/2
 Daily-load/Cum. Active Import Energy: 1.0.1.8.0.255/2
-Instantaneous/L3 voltage: 1.0.48.7.0.255/2
+Instantaneous/L3 voltage: 1.0.72.7.0.255/2
 billing/power-on-duration: 1.0.94.91.13.255/2
 
 
