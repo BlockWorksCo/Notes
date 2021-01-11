@@ -31797,6 +31797,15 @@ D1 - DO   ---|
 D2 - DI   ---|--- SWDIO
 D5 - TRST
 
+------------------------------------
+host-agent drop connection to server:
+
+drop:
+sudo iptables -A INPUT -s omnidev-in-01.dev.cyanconnode.com -j DROP
+
+restore:
+sudo iptables -D INPUT -s omnidev-in-01.dev.cyanconnode.com -j DROP
+
 
 
 
