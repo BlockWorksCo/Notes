@@ -31810,6 +31810,61 @@ sudo iptables -A INPUT -s omnidev-in-01.dev.cyanconnode.com -j DROP
 restore:
 sudo iptables -D INPUT -s omnidev-in-01.dev.cyanconnode.com -j DROP
 
+------------------------------------------
+
+gareth@mea-cc-hes-2:~$ coap_request.py --server localhost:8080 --agent fd74:9b23:b2ce:0:21b:c50c:6008:9376 --net-stats
+rxFramesToMe: 233351
+rxDroppedWrongCRC: 0
+rxDroppedNotDestinedToMe: 2047379
+rxDroppedOther: 4
+rxDroppedAuthFailed: 1239
+rxAcksSent: 125438
+rxAcksSendErrors: 0
+rxAckFrames: 1441563
+rxUniqueFrames: 214904
+txDataFrames: 49789
+txRetransmits: 34514
+txCollisions: 835668
+txDropNoAck: 10951
+txDropCollision: 0
+txQuotaLimited: 50304
+internetTxPackets: 30605
+internetTxErrors: 210
+internetRxPackets: 32857
+modemResets: 12
+rxToMePackets: 172555
+rxToMeBytes: 7169574
+rxForwardPackets: 58488
+rxForwardBytes: 8506120
+txForwardPackets: 56133
+txForwardBytes: 9766853
+txFromMePackets: 41448
+txFromMeBytes: 2230031
+rxErrors: 0
+dropIpToInternet: 4
+dropIpToLowpan: 2577
+dropHoplimit: 0
+bcastBlocks: 0
+unicastBlocks: 0
+errorBlocks: 0
+rankErrors: 0
+joins: 0
+leaves: 9
+rankUpdates: 4
+ppChanges: 0
+dagSwitches: 0
+login: 12
+logout: 12
+loginFail: 0
+keepAliveOk: 0
+keepAliveError: 5
+relogin: 11
+dtlsStart: 3
+dtlsFinish: 3
+coapPacketsSent: 1797
+coapPacketsReceived: 1759
+
+
 
 
 
