@@ -31864,6 +31864,11 @@ dtlsFinish: 3
 coapPacketsSent: 1797
 coapPacketsReceived: 1759
 
+-----------------------------
+NMS API
+soap
+https://omnidev-in-01.dev.cyanconnode.com/nms/ws/
+
 
 
 
