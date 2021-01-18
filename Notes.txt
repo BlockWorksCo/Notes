@@ -31869,6 +31869,13 @@ NMS API
 soap
 https://omnidev-in-01.dev.cyanconnode.com/nms/ws/
 
+--------------------------------------
+session resumption requires secure database access:
+
+2021-01-18 22:04:06.604 [dtls-pool-2] WARN c.c.s.t.session.NodeStorageProvider - Unable to decode terminal session info from db - server security private key is not defined
+2021-01-18 22:04:06.604 [dtls-pool-2] TRACE c.c.d.DTLSHandshakeProcedureFactory - Cannot read session info from the database - reverting to full handshake, clientSessionId=SessionId(5a413c6ae4c1b408de25b6c2e42b8e586dbc4646e220787b01bfb5ffb465677e)
+
+
 
 
 
