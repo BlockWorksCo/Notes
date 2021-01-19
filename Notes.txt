@@ -31894,6 +31894,9 @@ via Logic analyser.
 
 EFR32FG12P231F1024GM48 (QFN48) 31 GPIO, 1MB FLASH, 128KB RAM
 
+Device/SiliconLabs/EFR32FG12P/Include/efr32fg12p_prs.h 
+
+
 
 
 
