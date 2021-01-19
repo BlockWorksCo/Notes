@@ -31892,6 +31892,8 @@ https://www.silabs.com/community/mcu/32-bit/forum.topic.html/prs_and_le_peripher
 Aim is to get modem-clock and modem-data out of two GPIOs as a SPI format waveform to record
 via Logic analyser.
 
+EFR32FG12P231F1024GM48 (QFN48) 31 GPIO, 1MB FLASH, 128KB RAM
+
 
 
 
