@@ -31896,6 +31896,45 @@ EFR32FG12P231F1024GM48 (QFN48) 31 GPIO, 1MB FLASH, 128KB RAM
 
 Device/SiliconLabs/EFR32FG12P/Include/efr32fg12p_prs.h 
 
+https://silabs-prod.adobecqms.net/content/usergenerated/asi/cloud/content/siliconlabs/en/community/wireless/proprietary/knowledge-base/jcr:content/content/primary/blog/rail_tutorial_debug-NbEG.social.0.10.html
+
+#include "em_cmu.h"
+#include "em_gpio.h"
+#include <string.h>
+#include "hal_common.h"
+
+void enablePrs(char *debugPinName, uint16_t prsSig){
+  uint32_t count;
+  uint32_t pin = 0;
+  const debugPin_t *debugPins = halGetDebugPins(&count);
+  while ( pin<count && strcmp(debugPins[pin].name, debugPinName) ){
+    pin++;
+  }
+  if (pin<count){
+    CMU_ClockEnable(cmuClock_GPIO, true);
+    GPIO_PinModeSet(debugPins[pin].gpioPort, debugPins[pin].gpioPin, gpioModePushPull, 0);
+    halEnablePrs(debugPins[pin].prsChannel, debugPins[pin].prsLocation,
+                 prsSig>>8, prsSig&0xff);
+  }
+
+}
+
+void setupDebugPins(){
+  enablePrs("PC11", PRS_RAC_TX);
+}
+You can also use the comments in hal-efr32/hal_efr.c to figure out where are these wired on a WSTK:
+
+{
+  .name = "PC10", // EFR32xG1/EFR32xG12/EFR32xG13 - EXP_HEADER15, WSTK_P12
+  .prsChannel = 9, // PRS 0/12 9/15 10/4 11/3
+  .prsLocation = 15,
+  .gpioPort = gpioPortC,
+  .gpioPin = 10
+},
+This means it's on the EXP connector, pin 15, or P12, on the connector below (and above) the display. Note that not all pins are available on all boards, e.g., PC9 is only available on xG12 (xG14 is never mentioned, but it's always pin-compatible with xG1). Sometimes these pins share functionality, e.g., PF4 is also LED0 on xG1/xG13/xG14.
+
+
+
 
 
 
