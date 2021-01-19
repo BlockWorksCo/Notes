@@ -31876,6 +31876,19 @@ session resumption requires secure database access:
 2021-01-18 22:04:06.604 [dtls-pool-2] TRACE c.c.d.DTLSHandshakeProcedureFactory - Cannot read session info from the database - reverting to full handshake, clientSessionId=SessionId(5a413c6ae4c1b408de25b6c2e42b8e586dbc4646e220787b01bfb5ffb465677e)
 
 
+---------------------------------------------
+EFR32 transmit stream on GPIO PRS tx output
+
+PRS Peripheral Reflex System
+https://www.silabs.com/community/wireless/proprietary/knowledge-base.entry.html/2018/06/26/rail_tutorial_debug-NbEG
+
+https://www.silabs.com/community/wireless/proprietary/forum.topic.html/efr32_rail_getting-sqdH
+
+section 4.1.2:
+https://www.silabs.com/documents/public/application-notes/an972-efr32-rf-eval-guide.pdf
+
+
+
 
 
 
