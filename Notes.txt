@@ -31887,6 +31887,9 @@ https://www.silabs.com/community/wireless/proprietary/forum.topic.html/efr32_rai
 section 4.1.2:
 https://www.silabs.com/documents/public/application-notes/an972-efr32-rf-eval-guide.pdf
 
+https://www.silabs.com/community/mcu/32-bit/forum.topic.html/prs_and_le_periphera-2AhC
+
+
 
 
 
