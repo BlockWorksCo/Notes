@@ -31889,6 +31889,8 @@ https://www.silabs.com/documents/public/application-notes/an972-efr32-rf-eval-gu
 
 https://www.silabs.com/community/mcu/32-bit/forum.topic.html/prs_and_le_periphera-2AhC
 
+Aim is to get modem-clock and modem-data out of two GPIOs as a SPI format waveform to record
+via Logic analyser.
 
 
 
