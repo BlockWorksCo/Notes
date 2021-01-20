@@ -31933,6 +31933,29 @@ You can also use the comments in hal-efr32/hal_efr.c to figure out where are the
 },
 This means it's on the EXP connector, pin 15, or P12, on the connector below (and above) the display. Note that not all pins are available on all boards, e.g., PC9 is only available on xG12 (xG14 is never mentioned, but it's always pin-compatible with xG1). Sometimes these pins share functionality, e.g., PF4 is also LED0 on xG1/xG13/xG14.
 
+----------------------------------------------------
+generate root certificate:
+
+https://confluence.cyco.io/display/ENG/Security+credentials+and+Order+Generation
+
+$ /var/prod/release/prod/prodserver/bin/generate_import_ca_crt.pl --name customer-name --days 3650
+2019-06-10T17:37:38|INFO: /var/prod/release/prod/prodserver/bin/generate_import_ca_crt.pl --name customer-name --days 3650
+2019-06-10T17:37:38|INFO: {"days":"3650","help":null,"name":"customer-name","outdir":"/tmp"}
+[19027] debug @0.000006> trying to find CA ca_customer-name.crt on the database in /var/prod/release/prod/prodserver/bin/generate_import_ca_crt.pl l. 47
+[19027] debug @0.000134> select id, name from ca_crt where name = "ca_customer-name.crt" in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 90
+[19027] debug @0.000887> number of rows:0 in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 90
+2019-06-10T17:37:38|INFO: openssl ecparam -out /tmp/ca_customer-name.key -name prime256v1 -genkey
+2019-06-10T17:37:38|INFO: openssl req -new -key /tmp/ca_customer-name.key -x509 -nodes -days 3650 -out /tmp/ca_customer-name.crt -subj '/C=UK/ST=Cambridge/L=Cambridge/O=CyanConnode/OU=R&D/CN=customer-name.cyanconnode.com'
+[19027] debug @0.011537> create_ca_crt{"crt_path":"/tmp/ca_customer-name.crt","key_path":"/tmp/ca_customer-name.key"} in /var/prod/release/prod/prodserver/bin/generate_import_ca_crt.pl l. 59
+[19027] debug @0.012099> openssl x509 -in /tmp/ca_customer-name.crt -outform DER -out /tmp/zl_fpcxyOg/ca_customer-name.crt.crt.der in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 413
+[19027] debug @0.017102> openssl ec -in /tmp/ca_customer-name.key -outform DER -out /tmp/zl_fpcxyOg/ca_customer-name.crt.key.der in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 414
+read EC key
+writing EC key
+[19027] debug @0.022932> INSERT INTO ca_crt (ca_crt_der,ca_key_der_md5sum,ca_key_pem,create_time,ca_key_der,ca_crt_pem,name,ca_crt_der_md5sum) VALUES (?,?,?,?,?,?,?,?) in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 192
+[19027] debug @0.027343> insert to ca_crt in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 417
+[19027]  info @0.027491> {"stdout":"\ninsert into ca_crt OK\n"} in /var/prod/release/prod/prodserver/bin/generate_import_ca_crt.pl l. 59
+
+
 
 
 
