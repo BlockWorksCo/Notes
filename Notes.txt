@@ -31955,6 +31955,13 @@ writing EC key
 [19027] debug @0.027343> insert to ca_crt in /var/prod/release/prod/prodserver/bin/../lib/PROD.pm l. 417
 [19027]  info @0.027491> {"stdout":"\ninsert into ca_crt OK\n"} in /var/prod/release/prod/prodserver/bin/generate_import_ca_crt.pl l. 59
 
+-----------------------------------
+docker pull failure
+
+wrong repository, so do it manually:
+
+docker pull docker-dev.artifactory.cyco.io/omnimesh/devstack
+
 
 
 
