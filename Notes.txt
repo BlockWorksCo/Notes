@@ -31964,13 +31964,13 @@ docker pull docker-dev.artifactory.cyco.io/omnimesh/devstack
 
 ----------------------------------------------------
 virtualenv for dev-stack
-
 . ~/.venv/omnimesh/bin/activate
 
 generate additional certs for node:
 ./src/omnimesh/devstack/data/scripts/pki-create-additional.sh ~/.devstack/.data/pki ~/.devstack/.data/pki/00-00-00-00-00-00-00-03 node 00-00-00-00-00-00-00-03
 
-
+Install dev-stack as developer:
+pip3 install -e .
 
 
 
