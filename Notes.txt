@@ -31972,6 +31972,35 @@ generate additional certs for node:
 Install dev-stack as developer:
 pip3 install -e .
 
+-------------------------------------------
+DTLS testing:
+
+Using the "AddTShark" branch of dev-stack (which produces ~/.devstack/.data/nms-0/logs/dtls_trace.log)
+
+This command:
+'grep "DTLSv1.2 Record Layer:" ~/.devstack/.data/nms-0/logs/dtls_trace.log'
+Produces this on a "short"/"resumed" session:
+DTLSv1.2 Record Layer: Handshake Protocol: Client Hello
+DTLSv1.2 Record Layer: Handshake Protocol: Hello Verify Request
+DTLSv1.2 Record Layer: Handshake Protocol: Client Hello
+DTLSv1.2 Record Layer: Handshake Protocol: Server Hello
+DTLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+DTLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+
+and this for a full handshake (with no session-cache):
+DTLSv1.2 Record Layer: Handshake Protocol: Client Hello
+DTLSv1.2 Record Layer: Handshake Protocol: Hello Verify Request
+DTLSv1.2 Record Layer: Handshake Protocol: Client Hello
+DTLSv1.2 Record Layer: Handshake Protocol: Server Hello
+DTLSv1.2 Record Layer: Handshake Protocol: Certificate
+DTLSv1.2 Record Layer: Handshake Protocol: Server Key Exchange
+DTLSv1.2 Record Layer: Handshake Protocol: Certificate Request
+DTLSv1.2 Record Layer: Handshake Protocol: Server Hello Done
+DTLSv1.2 Record Layer: Handshake Protocol: Certificate
+DTLSv1.2 Record Layer: Handshake Protocol: Client Key Exchange
+DTLSv1.2 Record Layer: Handshake Protocol: Certificate Verify
+DTLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
+DTLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
 
 
 
