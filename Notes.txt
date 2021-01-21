@@ -32002,6 +32002,14 @@ DTLSv1.2 Record Layer: Handshake Protocol: Certificate Verify
 DTLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
 DTLSv1.2 Record Layer: Change Cipher Spec Protocol: Change Cipher Spec
 
+For the cipher-suites verification:
+'grep -A 3 "Cipher Suites" ~/.devstack/.data/nms-0/logs/dtls_trace.log'
+Gives the following:
+Cipher Suites Length: 4
+Cipher Suites (2 suites)
+    Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (0xc0ae)
+    Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+Compression Methods Length: 1
 
 
 
