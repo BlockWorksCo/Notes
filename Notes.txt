@@ -32012,6 +32012,12 @@ Cipher Suites (2 suites)
 Compression Methods Length: 1
 
 
+--------------------------
+ToDo:
+
+- session renewal (periodically)
+- memory leak during resumption/session-cache.
+
 
 
 
