@@ -32172,6 +32172,28 @@ Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=32)
 #9  0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
 
 
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=32)
+    at build/3pp/mbedtls/library/platform.c:78
+78	        LOG_DEBUG("32 bytes allocated.(%zd,%zd)",n,sizeElement);
+(gdb) where
+#0  myCalloc (n=1, sizeElement=32) at build/3pp/mbedtls/library/platform.c:78
+#1  0x00005555557e29e6 in mbedtls_calloc (nmemb=1, size=32) at build/3pp/mbedtls/library/platform.c:108
+#2  0x0000555555830e17 in mbedtls_ssl_session_copy (dst=0x610000010c64, 
+    src=0x555555b908c0 <savedSession.10039>) at build/3pp/mbedtls/library/ssl_tls.c:215
+#3  0x0000555555839b69 in mbedtls_ssl_set_session (ssl=0x555555b8ff80 <ssl>, 
+    session=0x555555b908c0 <savedSession.10039>) at build/3pp/mbedtls/library/ssl_tls.c:4169
+#4  0x0000555555615342 in setupSession (session=0x60d000010ae0)
+    at src/communication/dtls/dtls_mbedtls.c:1081
+#5  0x0000555555612ac4 in setupSessions () at src/communication/dtls/dtls_mbedtls.c:426
+#6  0x000055555561391b in dtlsTask (arg=0x0) at src/communication/dtls/dtls_mbedtls.c:687
+#7  0x0000555555795db6 in taskWrapper (arg=0x555555b8ec40 <s_dtlsTask>)
+    at src/platform/osal/osal-posix/osal_posix.c:134
+#8  0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#9  0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+
+
+
 
 
 
