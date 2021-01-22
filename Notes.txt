@@ -32018,6 +32018,108 @@ ToDo:
 - session renewal (periodically)
 - memory leak during resumption/session-cache.
 
+----------------------------------
+
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=4, sizeElement=8)
+    at build/3pp/mbedtls/library/platform.c:91
+91	    uint32_t*   ptr = (uint32_t*)MALLOCZ( (n*sizeElement) + sizeof(uint32_t) );
+(gdb) where
+#0  myCalloc (n=4, sizeElement=8) at build/3pp/mbedtls/library/platform.c:91
+#1  0x00005555557e2b14 in mbedtls_calloc (nmemb=4, size=8) at build/3pp/mbedtls/library/platform.c:117
+#2  0x00005555557b5ba3 in mbedtls_mpi_grow (X=0x614000004174, nblimbs=4)
+    at build/3pp/mbedtls/library/bignum.c:125
+#3  0x00005555557b6ca7 in mbedtls_mpi_read_binary (X=0x614000004174, 
+    buf=0x6190000803ec "30Ww6K\314o\210;\270\066\341\222\320G\025\376uf\214\270\334\336\353\315w*\237[\315\355\225\340\305|5\026珣\002\262\214U@n\251L=S\362b >wn=\222\210*ʄƣP0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", buflen=32) at build/3pp/mbedtls/library/bignum.c:891
+#4  0x00005555557c6efc in mbedtls_ecp_point_read_binary (grp=0x614000004064, pt=0x614000004174, 
+    buf=0x6190000803eb "\004\063\060Ww6K\314o\210;\270\066\341\222\320G\025\376uf\214\270\334\336\353\315w*\237[\315\355\225\340\305|5\026珣\002\262\214U@n\251L=S\362b >wn=\222\210*ʄƣP0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", ilen=65) at build/3pp/mbedtls/library/ecp.c:986
+#5  0x00005555557dfd31 in pk_get_ecpubkey (p=0x7fffefaf7990, 
+    end=0x61900008042c "\243P0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", 
+    key=0x614000004064) at build/3pp/mbedtls/library/pkparse.c:500
+#6  0x00005555557e0931 in mbedtls_pk_parse_subpubkey (p=0x7fffefaf7990, 
+    end=0x61900008042c "\243P0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", 
+    pk=0x555555b8fb28 <cacert+360>) at build/3pp/mbedtls/library/pkparse.c:659
+#7  0x00005555557fc0d3 in x509_crt_parse_der_core (crt=0x555555b8f9c0 <cacert>, 
+    buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554, make_copy=0, cb=0x0, 
+    p_ctx=0x0) at build/3pp/mbedtls/library/x509_crt.c:1236
+#8  0x00005555557fc9d0 in mbedtls_x509_crt_parse_der_internal (chain=0x555555b8f9c0 <cacert>, 
+    buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554, make_copy=0, cb=0x0, 
+    p_ctx=0x0) at build/3pp/mbedtls/library/x509_crt.c:1372
+#9  0x00005555557fca71 in mbedtls_x509_crt_parse_der_nocopy (chain=0x555555b8f9c0 <cacert>, 
+    buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554)
+    at build/3pp/mbedtls/library/x509_crt.c:1391
+#10 0x0000555555614ec2 in setupSession (session=0x60d000012340)
+    at src/communication/dtls/dtls_mbedtls.c:973
+#11 0x0000555555612ba4 in setupSessions () at src/communication/dtls/dtls_mbedtls.c:426
+#12 0x0000555555613a16 in dtlsTask (arg=0x0) at src/communication/dtls/dtls_mbedtls.c:687
+#13 0x0000555555795e96 in taskWrapper (arg=0x555555b8ed00 <s_dtlsTask>)
+    at src/platform/osal/osal-posix/osal_posix.c:134
+#14 0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#15 0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+
+
+
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=4, sizeElement=8)
+    at build/3pp/mbedtls/library/platform.c:91
+91	    uint32_t*   ptr = (uint32_t*)MALLOCZ( (n*sizeElement) + sizeof(uint32_t) );
+(gdb) where
+#0  myCalloc (n=4, sizeElement=8) at build/3pp/mbedtls/library/platform.c:91
+#1  0x00005555557e2b14 in mbedtls_calloc (nmemb=4, size=8) at build/3pp/mbedtls/library/platform.c:117
+#2  0x00005555557b5ba3 in mbedtls_mpi_grow (X=0x61400000418c, nblimbs=4) at build/3pp/mbedtls/library/bignum.c:125
+#3  0x00005555557b6ca7 in mbedtls_mpi_read_binary (X=0x61400000418c, 
+    buf=0x61900008040c "\225\340\305|5\026珣\002\262\214U@n\251L=S\362b >wn=\222\210*ʄƣP0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", buflen=32) at build/3pp/mbedtls/library/bignum.c:891
+#4  0x00005555557c6f2c in mbedtls_ecp_point_read_binary (grp=0x614000004064, pt=0x614000004174, 
+    buf=0x6190000803eb "\004\063\060Ww6K\314o\210;\270\066\341\222\320G\025\376uf\214\270\334\336\353\315w*\237[\315\355\225\340\305|5\026珣\002\262\214U@n\251L=S\362b >wn=\222\210*ʄƣP0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", ilen=65) at build/3pp/mbedtls/library/ecp.c:987
+#5  0x00005555557dfd31 in pk_get_ecpubkey (p=0x7fffefaf7990, 
+    end=0x61900008042c "\243P0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", key=0x614000004064) at build/3pp/mbedtls/library/pkparse.c:500
+#6  0x00005555557e0931 in mbedtls_pk_parse_subpubkey (p=0x7fffefaf7990, 
+    end=0x61900008042c "\243P0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", pk=0x555555b8fb28 <cacert+360>) at build/3pp/mbedtls/library/pkparse.c:659
+#7  0x00005555557fc0d3 in x509_crt_parse_der_core (crt=0x555555b8f9c0 <cacert>, buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554, make_copy=0, cb=0x0, p_ctx=0x0)
+    at build/3pp/mbedtls/library/x509_crt.c:1236
+#8  0x00005555557fc9d0 in mbedtls_x509_crt_parse_der_internal (chain=0x555555b8f9c0 <cacert>, buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554, make_copy=0, cb=0x0, p_ctx=0x0)
+    at build/3pp/mbedtls/library/x509_crt.c:1372
+#9  0x00005555557fca71 in mbedtls_x509_crt_parse_der_nocopy (chain=0x555555b8f9c0 <cacert>, buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554)
+    at build/3pp/mbedtls/library/x509_crt.c:1391
+#10 0x0000555555614ec2 in setupSession (session=0x60d000012340) at src/communication/dtls/dtls_mbedtls.c:973
+#11 0x0000555555612ba4 in setupSessions () at src/communication/dtls/dtls_mbedtls.c:426
+#12 0x0000555555613a16 in dtlsTask (arg=0x0) at src/communication/dtls/dtls_mbedtls.c:687
+#13 0x0000555555795e96 in taskWrapper (arg=0x555555b8ed00 <s_dtlsTask>) at src/platform/osal/osal-posix/osal_posix.c:134
+#14 0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#15 0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+
+
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=4, sizeElement=8) at build/3pp/mbedtls/library/platform.c:91
+91	    uint32_t*   ptr = (uint32_t*)MALLOCZ( (n*sizeElement) + sizeof(uint32_t) );
+(gdb) where
+#0  myCalloc (n=4, sizeElement=8) at build/3pp/mbedtls/library/platform.c:91
+#1  0x00005555557e2b14 in mbedtls_calloc (nmemb=4, size=8) at build/3pp/mbedtls/library/platform.c:117
+#2  0x00005555557b5ba3 in mbedtls_mpi_grow (X=0x7fffefaf7390, nblimbs=4) at build/3pp/mbedtls/library/bignum.c:125
+#3  0x00005555557b614b in mbedtls_mpi_copy (X=0x7fffefaf7390, Y=0x7fffefaf7690) at build/3pp/mbedtls/library/bignum.c:212
+#4  0x00005555557b8d68 in mbedtls_mpi_sub_abs (X=0x7fffefaf7690, A=0x7fffefaf7510, B=0x7fffefaf7690) at build/3pp/mbedtls/library/bignum.c:1387
+#5  0x00005555557ccfcd in fix_negative (N=0x7fffefaf7690, c=-2 '\376', C=0x7fffefaf7510, bits=256) at build/3pp/mbedtls/library/ecp_curves.c:1057
+#6  0x00005555557d1723 in ecp_mod_p256 (N=0x7fffefaf7690) at build/3pp/mbedtls/library/ecp_curves.c:1116
+#7  0x00005555557c7664 in ecp_modp (N=0x7fffefaf7690, grp=0x614000004064) at build/3pp/mbedtls/library/ecp.c:1183
+#8  0x00005555557c778a in mbedtls_mpi_mul_mod (grp=0x614000004064, X=0x7fffefaf7690, A=0x61400000418c, B=0x61400000418c) at build/3pp/mbedtls/library/ecp.c:1230
+#9  0x00005555557cbad3 in ecp_check_pubkey_sw (grp=0x614000004064, pt=0x614000004174) at build/3pp/mbedtls/library/ecp.c:2739
+#10 0x00005555557cc125 in mbedtls_ecp_check_pubkey (grp=0x614000004064, pt=0x614000004174) at build/3pp/mbedtls/library/ecp.c:2949
+#11 0x00005555557dfd54 in pk_get_ecpubkey (p=0x7fffefaf7990, 
+    end=0x61900008042c "\243P0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", key=0x614000004064) at build/3pp/mbedtls/library/pkparse.c:503
+#12 0x00005555557e0931 in mbedtls_pk_parse_subpubkey (p=0x7fffefaf7990, 
+    end=0x61900008042c "\243P0N0\035\006\003U\035\016\004\026\004\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\037\006\003U\035#\004\030\060\026\200\024X\262`H2\336\365b\372(\353Ď_;\216-!\310\365\060\f\006\003U\035\023\004\005\060\003\001\001\377\060\t\006\a*\206H\316=\004\001\003G", pk=0x555555b8fb28 <cacert+360>) at build/3pp/mbedtls/library/pkparse.c:659
+#13 0x00005555557fc0d3 in x509_crt_parse_der_core (crt=0x555555b8f9c0 <cacert>, buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554, make_copy=0, cb=0x0, p_ctx=0x0)
+    at build/3pp/mbedtls/library/x509_crt.c:1236
+#14 0x00005555557fc9d0 in mbedtls_x509_crt_parse_der_internal (chain=0x555555b8f9c0 <cacert>, buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554, make_copy=0, cb=0x0, p_ctx=0x0)
+    at build/3pp/mbedtls/library/x509_crt.c:1372
+#15 0x00005555557fca71 in mbedtls_x509_crt_parse_der_nocopy (chain=0x555555b8f9c0 <cacert>, buf=0x6190000802a8 "0\202\002&0\202\001Π\003\002\001\002\002\t", buflen=554)
+    at build/3pp/mbedtls/library/x509_crt.c:1391
+#16 0x0000555555614ec2 in setupSession (session=0x60d000012340) at src/communication/dtls/dtls_mbedtls.c:973
+#17 0x0000555555612ba4 in setupSessions () at src/communication/dtls/dtls_mbedtls.c:426
+#18 0x0000555555613a16 in dtlsTask (arg=0x0) at src/communication/dtls/dtls_mbedtls.c:687
+#19 0x0000555555795e96 in taskWrapper (arg=0x555555b8ed00 <s_dtlsTask>) at src/platform/osal/osal-posix/osal_posix.c:134
+#20 0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#21 0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
 
 
 
