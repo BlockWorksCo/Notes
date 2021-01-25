@@ -32193,6 +32193,45 @@ Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=32)
 
 
 
+---------------------------------
+
+2021-01-25 16:06:42.655 #1   001bc50c600677b6 <log> 0:05:02.480 [debug] [        dtls] {     dtls}: ssl_msg.c:1215: |2| => decrypt buf
+2021-01-25 16:06:42.655 #1   001bc50c600677b6 <log> 0:05:02.489 [debug] [        dtls] {     dtls}: ssl_msg.c:1325: |4| dumping 'additional data used for AEAD' (13 bytes)
+2021-01-25 16:06:42.655 #1   001bc50c600677b6 <log> 0:05:02.501 [debug] [        dtls] {     dtls}: ssl_msg.c:1325: |4| 0000:  00 01 00 00 00 00 00 00 16 fe fd 00 18           .............
+2021-01-25 16:06:42.700 #1   001bc50c600677b6 <log> 0:05:02.514 [debug] [        dtls] {     dtls}: ssl_msg.c:1333: |4| dumping 'IV used' (12 bytes)
+2021-01-25 16:06:42.700 #1   001bc50c600677b6 <log> 0:05:02.524 [debug] [        dtls] {     dtls}: ssl_msg.c:1333: |4| 0000:  f2 8c 58 73 00 01 00 00 00 00 00 00              ..Xs........
+2021-01-25 16:06:42.700 #1   001bc50c600677b6 <log> 0:05:02.537 [debug] [        dtls] {     dtls}: ssl_msg.c:1335: |4| dumping 'TAG used' (8 bytes)
+2021-01-25 16:06:42.700 #1   001bc50c600677b6 <log> 0:05:02.547 [debug] [        dtls] {     dtls}: ssl_msg.c:1335: |4| 0000:  4a bb 4e f6 b1 b0 18 a6                          J.N.....
+2021-01-25 16:06:42.744 #1   001bc50c600677b6 <log> 0:05:02.561 [debug] [        dtls] {     dtls}: ssl_msg.c:1761: |2| <= decrypt buf
+2021-01-25 16:06:42.744 #1   001bc50c600677b6 <log> 0:05:02.569 [debug] [        dtls] {     dtls}: ssl_msg.c:3815: |4| dumping 'input payload after decrypt' (24 bytes)
+2021-01-25 16:06:42.744 #1   001bc50c600677b6 <log> 0:05:02.581 [debug] [        dtls] {     dtls}: ssl_msg.c:3815: |4| 0000:  14 00 00 0c 00 06 00 00 00 00 00 0c ed a6 06 dc  ................
+2021-01-25 16:06:42.744 #1   001bc50c600677b6 <log> 0:05:02.595 [debug] [        dtls] {     dtls}: ssl_msg.c:3815: |4| 0010:  4c 20 f4 0e 23 27 25 d9                          L ..#'%.
+2021-01-25 16:06:42.788 #1   001bc50c600677b6 <log> 0:05:02.608 [debug] [        dtls] {     dtls}: ssl_msg.c:3040: |3| handshake message: msglen = 24, type = 20, hslen = 24
+2021-01-25 16:06:42.788 #1   001bc50c600677b6 <log> 0:05:02.620 [debug] [        dtls] {     dtls}: ssl_msg.c:3996: |2| <= read record
+2021-01-25 16:06:42.788 #1   001bc50c600677b6 <log> 0:05:02.628 [debug] [        dtls] {     dtls}: ssl_msg.c:0072: |3| set_timer to 0 ms
+2021-01-25 16:06:42.788 #1   001bc50c600677b6 <log> 0:05:02.637 [debug] [        dtls] {     dtls}: ssl_tls.c:3561: |2| <= parse finished
+2021-01-25 16:06:42.832 #1   001bc50c600677b6 <log> 0:05:02.646 [debug] [        dtls] {     dtls}: ssl_cli.c:4249: |2| client state: 14
+2021-01-25 16:06:42.832 #1   001bc50c600677b6 <log> 0:05:02.654 [debug] [        dtls] {     dtls}: ssl_msg.c:2124: |2| => flush output
+2021-01-25 16:06:42.832 #1   001bc50c600677b6 <log> 0:05:02.663 [debug] [        dtls] {     dtls}: ssl_msg.c:2136: |2| <= flush output
+2021-01-25 16:06:42.832 #1   001bc50c600677b6 <log> 0:05:02.671 [debug] [        dtls] {     dtls}: ssl_cli.c:4360: |2| handshake: done
+2021-01-25 16:06:42.832 #1   001bc50c600677b6 <log> 0:05:02.680 [debug] [        dtls] {     dtls}: ssl_cli.c:4249: |2| client state: 15
+2021-01-25 16:06:42.832 #1   001bc50c600677b6 <log> 0:05:02.688 [debug] [        dtls] {     dtls}: ssl_msg.c:2124: |2| => flush output
+2021-01-25 16:06:42.877 #1   001bc50c600677b6 <log> 0:05:02.697 [debug] [        dtls] {     dtls}: ssl_msg.c:2136: |2| <= flush output
+2021-01-25 16:06:42.877 #1   001bc50c600677b6 <log> 0:05:02.705 [debug] [        dtls] {     dtls}: ssl_tls.c:3305: |3| => handshake wrapup
+2021-01-25 16:06:42.877 #1   001bc50c600677b6 <log> 0:05:02.714 [debug] [        dtls] {     dtls}: ssl_tls.c:3278: |3| => handshake wrapup: final free
+2021-01-25 16:06:42.877 #1   001bc50c600677b6 <log> 0:05:02.726 [debug] [        dtls] {     dtls}: ssl_tls.c:3298: |3| <= handshake wrapup: final free
+2021-01-25 16:06:42.920 #1   001bc50c600677b6 <log> 0:05:02.736 [debug] [        dtls] {     dtls}: ssl_tls.c:3360: |3| <= handshake wrapup
+2021-01-25 16:06:42.921 #1   001bc50c600677b6 <log> 0:05:02.745 [debug] [        dtls] {     dtls}: ssl_tls.c:5698: |2| <= handshake
+2021-01-25 16:06:42.921 #1   001bc50c600677b6 <log> 0:05:02.753 [debug] [        dtls] {     dtls}: ssl_msg.c:3922: |2| => read record
+2021-01-25 16:06:42.921 #1   001bc50c600677b6 <log> 0:05:02.761 [debug] [        dtls] {     dtls}: ssl_msg.c:1904: |2| => fetch input
+2021-01-25 16:06:42.921 #1   001bc50c600677b6 <log> 0:05:02.770 [debug] [        dtls] {     dtls}: ssl_msg.c:1965: |2| in_left: 0, nb_want: 13
+2021-01-25 16:06:42.969 #1   001bc50c600677b6 <log> 0:05:02.779 [debug] [        dtls] {     dtls}: ssl_msg.c:2006: |3| f_recv_timeout: 0 ms
+2021-01-25 16:06:42.969 #1   001bc50c600677b6 <log> 0:05:02.788 [debug] [        dtls] {     dtls}: ssl_msg.c:2014: |2| ssl->f_recv(_timeout)() returned 0 (-0x0000)
+2021-01-25 16:06:42.969 #1   001bc50c600677b6 <log> 0:05:02.799 [debug] [        dtls] {     dtls}: ssl_msg.c:4590: |1| mbedtls_ssl_fetch_input() returned -29312 (-0x7280)
+2021-01-25 16:06:42.969 #1   001bc50c600677b6 <log> 0:05:02.811 [debug] [        dtls] {     dtls}: ssl_msg.c:3955: |1| ssl_get_next_record() returned -29312 (-0x7280)
+
+
+
 
 
 
