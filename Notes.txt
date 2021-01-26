@@ -32230,6 +32230,18 @@ Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=32)
 2021-01-25 16:06:42.969 #1   001bc50c600677b6 <log> 0:05:02.799 [debug] [        dtls] {     dtls}: ssl_msg.c:4590: |1| mbedtls_ssl_fetch_input() returned -29312 (-0x7280)
 2021-01-25 16:06:42.969 #1   001bc50c600677b6 <log> 0:05:02.811 [debug] [        dtls] {     dtls}: ssl_msg.c:3955: |1| ssl_get_next_record() returned -29312 (-0x7280)
 
+---------------------------------------------------
+0x00013cbe in setupSession (session=0x20016890) at src/communication/dtls/dtls_mbedtls.c:962
+962	    ret = mbedtls_x509_crt_parse_der( &clicert, agentCertBuffer->data, agentCertBuffer->len );
+(gdb) where
+#0  0x00013cbe in setupSession (session=0x20016890) at src/communication/dtls/dtls_mbedtls.c:962
+#1  setupSessions () at src/communication/dtls/dtls_mbedtls.c:427
+#2  dtlsTask (arg=<optimized out>) at src/communication/dtls/dtls_mbedtls.c:689
+#3  0x0004e274 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
+
 
 
 
