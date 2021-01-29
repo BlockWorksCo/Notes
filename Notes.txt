@@ -32250,6 +32250,13 @@ Heap usage: 3110 (max 14323)
 ipa3-mbedtls: after login:
 Heap usage: 9244 (max 16393)
 
+-------------------------------
+memory leak:
+- no free for mbed_AesDecryptDirect/mbed_AesEcbSetKey
+- in dlms.c, paths exist for SetKey to allocate and the corresponding free operation
+in the Decrypt calls not to be called.
+
+dlms.c:3352, 3251, 3220
 
 
 
