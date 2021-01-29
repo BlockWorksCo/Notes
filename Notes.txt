@@ -32248,6 +32248,7 @@ ipa3-wolfssl: after login:
 Heap usage: 3110 (max 14323)
 
 ipa3-mbedtls: after login:
+Heap usage: 9244 (max 16393)
 
 
 
