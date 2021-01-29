@@ -32242,6 +32242,15 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
 
+--------------------------------
+RAM usage:
+ipa3-wolfssl: after login:
+Heap usage: 3110 (max 14323)
+
+ipa3-mbedtls: after login:
+
+
+
 
 
 
