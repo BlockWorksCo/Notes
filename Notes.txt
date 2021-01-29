@@ -32258,6 +32258,24 @@ in the Decrypt calls not to be called.
 
 dlms.c:3352, 3251, 3220
 
+--------------------------------------------------------
+possible leak during session renewal:
+
+296969 2021-01-29 17:17:17.944 #2   0000000000000003 <log> 1:53:58.901 [debug] [        dtls] { schedule}: session timed out and needs to be renewed (max duration) (Session 56)
+296970 2021-01-29 17:17:17.944 #2   0000000000000003 <log> 1:53:58.901 [ info] [       login] { schedule}: Renewing session.
+296971 2021-01-29 17:17:17.944 #2   0000000000000003 <log> 1:53:58.901 [debug] [        dtls] { schedule}: session 56 marked for removal
+296972 2021-01-29 17:17:17.944 #2   0000000000000003 <log> 1:53:58.901 [debug] [       login] { schedule}: Starting login procedure
+296973 2021-01-29 17:17:17.944 #2   0000000000000003 <log> 1:53:58.902 [debug] [        dtls] { schedule}: Session 57: Created
+296974 2021-01-29 17:17:17.944 #2   0000000000000003 <log> 1:53:58.902 [debug] [       login] { schedule}: Changing state: logged in -> negotiating DTLS
+296975 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [  dtls/cache] { schedule}: dtlsSessionCacheLoad: Loading 128 bytes
+296976 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [        dtls] {     dtls}: Session 56: Removed
+296977 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [        dtls] {     dtls}: Freeing previous DTLS session.
+296978 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [      fs_api] { schedule}: fsOpen (/dtls_state, , fd=11)
+296979 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [      fs_api] { schedule}: fsClose (fd=11)
+296980 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [ info] [  dtls/cache] { schedule}: DTLS session restored
+296981 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [        dtls] {     dtls}: ssl_tls.c:6693: |2| => free
+
+
 
 
 
