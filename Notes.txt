@@ -32282,6 +32282,74 @@ mbedtls leftovers:
 - STM32 bootloader
 - CONFIG_ENABLE_DTLS_DEBUG_LOG
 
+----------------------------------------
+
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=24)
+    at build/3pp/mbedtls/library/platform.c:78
+78	        LOG_DEBUG("24 bytes allocated.(%zd,%zd)",n,sizeElement);
+(gdb) where
+#0  myCalloc (n=1, sizeElement=24) at build/3pp/mbedtls/library/platform.c:78
+#1  0x00005555557d936f in mbedtls_calloc (nmemb=1, size=24) at build/3pp/mbedtls/library/platform.c:108
+#2  0x00005555558305e3 in ssl_append_key_cert (head=0x555555b85868 <conf+136>, cert=0x61a000000308, 
+    key=0x61a000000570) at build/3pp/mbedtls/library/ssl_tls.c:4215
+#3  0x0000555555830799 in mbedtls_ssl_conf_own_cert (conf=0x555555b857e0 <conf>, 
+    own_cert=0x61a000000308, pk_key=0x61a000000570) at build/3pp/mbedtls/library/ssl_tls.c:4243
+#4  0x000055555561544e in mbedtlsSSL_new (ctx=0x61a0000000a0, timeoutMinMs=8000, timeoutMaxMs=127000, 
+    ioCtx=0x60d000010120, fSend=0x555555611ec5 <sendData>, fRecv=0x555555611afc <recvData>)
+    at src/communication/dtls/mbedtls_client.c:203
+#5  0x0000555555613086 in setupSession (session=0x60d000010120) at src/communication/dtls/dtls.c:659
+#6  0x0000555555613250 in setupSessions () at src/communication/dtls/dtls.c:697
+#7  0x000055555561457d in dtlsTask (arg=0x0) at src/communication/dtls/dtls.c:1011
+#8  0x000055555578c72b in taskWrapper (arg=0x555555b84ac0 <s_dtlsTask>)
+    at src/platform/osal/osal-posix/osal_posix.c:134
+#9  0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#10 0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+(gdb) 
+
+
+
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=24)
+    at build/3pp/mbedtls/library/platform.c:78
+78	        LOG_DEBUG("24 bytes allocated.(%zd,%zd)",n,sizeElement);
+(gdb) where
+#0  myCalloc (n=1, sizeElement=24) at build/3pp/mbedtls/library/platform.c:78
+#1  0x00005555557d936f in mbedtls_calloc (nmemb=1, size=24) at build/3pp/mbedtls/library/platform.c:108
+#2  0x000055555580c9e9 in ssl_flight_append (ssl=0x555555b858e0 <ssl>) at build/3pp/mbedtls/library/ssl_msg.c:2203
+#3  0x000055555580f5de in mbedtls_ssl_write_handshake_msg (ssl=0x555555b858e0 <ssl>) at build/3pp/mbedtls/library/ssl_msg.c:2680
+#4  0x000055555582e1db in mbedtls_ssl_write_finished (ssl=0x555555b858e0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:3461
+#5  0x000055555580851e in mbedtls_ssl_handshake_client_step (ssl=0x555555b858e0 <ssl>) at build/3pp/mbedtls/library/ssl_cli.c:4337
+#6  0x0000555555832091 in mbedtls_ssl_handshake_step (ssl=0x555555b858e0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5668
+#7  0x000055555583219e in mbedtls_ssl_handshake (ssl=0x555555b858e0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5692
+#8  0x0000555555612e29 in negotiate (session=0x60d000010120) at src/communication/dtls/dtls.c:579
+#9  0x000055555561362c in processIncomingPacket (session=0x60d000010120) at src/communication/dtls/dtls.c:743
+#10 0x0000555555613a72 in readFromFifo () at src/communication/dtls/dtls.c:798
+#11 0x0000555555614584 in dtlsTask (arg=0x0) at src/communication/dtls/dtls.c:1015
+#12 0x000055555578c72b in taskWrapper (arg=0x555555b84ac0 <s_dtlsTask>) at src/platform/osal/osal-posix/osal_posix.c:134
+#13 0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#14 0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+Thread 9 "dtls" hit Breakpoint 1, myCalloc (n=1, sizeElement=24)
+    at build/3pp/mbedtls/library/platform.c:78
+78	        LOG_DEBUG("24 bytes allocated.(%zd,%zd)",n,sizeElement);
+(gdb) where
+#0  myCalloc (n=1, sizeElement=24) at build/3pp/mbedtls/library/platform.c:78
+#1  0x00005555557d936f in mbedtls_calloc (nmemb=1, size=24) at build/3pp/mbedtls/library/platform.c:108
+#2  0x00005555558305e3 in ssl_append_key_cert (head=0x555555b85868 <conf+136>, cert=0x61a000000308, 
+    key=0x61a000000570) at build/3pp/mbedtls/library/ssl_tls.c:4215
+#3  0x0000555555830799 in mbedtls_ssl_conf_own_cert (conf=0x555555b857e0 <conf>, 
+    own_cert=0x61a000000308, pk_key=0x61a000000570) at build/3pp/mbedtls/library/ssl_tls.c:4243
+#4  0x000055555561544e in mbedtlsSSL_new (ctx=0x61a0000000a0, timeoutMinMs=8000, timeoutMaxMs=127000, 
+    ioCtx=0x60d000010d50, fSend=0x555555611ec5 <sendData>, fRecv=0x555555611afc <recvData>)
+    at src/communication/dtls/mbedtls_client.c:203
+#5  0x0000555555613086 in setupSession (session=0x60d000010d50) at src/communication/dtls/dtls.c:659
+#6  0x0000555555613250 in setupSessions () at src/communication/dtls/dtls.c:697
+#7  0x000055555561457d in dtlsTask (arg=0x0) at src/communication/dtls/dtls.c:1011
+#8  0x000055555578c72b in taskWrapper (arg=0x555555b84ac0 <s_dtlsTask>)
+    at src/platform/osal/osal-posix/osal_posix.c:134
+#9  0x00007ffff6c026db in start_thread (arg=0x7fffefaf8700) at pthread_create.c:463
+#10 0x00007ffff692ba3f in clone () at ../sysdeps/unix/sysv/linux/x86_64/clone.S:95
+
+
 
 
 
