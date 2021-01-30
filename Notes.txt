@@ -32275,6 +32275,11 @@ possible leak during session renewal:
 296980 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [ info] [  dtls/cache] { schedule}: DTLS session restored
 296981 2021-01-29 17:17:17.945 #2   0000000000000003 <log> 1:53:58.902 [debug] [        dtls] {     dtls}: ssl_tls.c:6693: |2| => free
 
+----------------------------------------------
+mbedtls leftovers:
+- CSR generation
+- STM32 random-nuber-generator
+- STM32 bootloader
 
 
 
