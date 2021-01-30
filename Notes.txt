@@ -32423,6 +32423,13 @@ Thread 9 "dtls" hit Breakpoint 2, myCalloc (n=1, sizeElement=32)
 
 
 
+void mbedtlsSSL_free(mbedtls_ssl_context* ssl)  
+{                                               
+    mbedtls_ssl_session_free( &savedSession );  
+    mbedtls_ssl_config_free( &conf );           
+    mbedtls_ssl_free(ssl);                      
+}                                               
+
 
 
 
