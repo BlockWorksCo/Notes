@@ -32284,6 +32284,7 @@ mbedtls leftovers:
 - SMIP / CPA
 - IPSEC testing.
 - unit test dependencies on particular random sequence.
+- Check new WolfSSL builds to ensure no regression.
 
 ----------------------------------------
 
