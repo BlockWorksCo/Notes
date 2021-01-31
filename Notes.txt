@@ -32285,6 +32285,7 @@ mbedtls leftovers:
 - IPSEC testing.
 - unit test dependencies on particular random sequence.
 - Check new WolfSSL builds to ensure no regression.
+- Check entropy-generation is working correctly.
 
 ----------------------------------------
 
