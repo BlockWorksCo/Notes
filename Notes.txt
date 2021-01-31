@@ -32282,6 +32282,8 @@ mbedtls leftovers:
 - STM32 bootloader
 - CONFIG_ENABLE_DTLS_DEBUG_LOG
 - SMIP / CPA
+- IPSEC testing.
+- unit test dependencies on particular random sequence.
 
 ----------------------------------------
 
