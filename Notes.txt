@@ -32520,6 +32520,42 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
 
+(gdb) where
+#0  myCalloc (n=9, sizeElement=4) at build/3pp/mbedtls/library/platform.c:76
+#1  0x0003fb7c in mbedtls_mpi_grow (nblimbs=9, X=0x20002c50 <s_dtlsTaskStack+7416>) at build/3pp/mbedtls/library/bignum.c:125
+#2  mbedtls_mpi_grow (X=0x20002c50 <s_dtlsTaskStack+7416>, nblimbs=9) at build/3pp/mbedtls/library/bignum.c:115
+#3  0x00040428 in mbedtls_mpi_mul_mpi (X=X@entry=0x20002c50 <s_dtlsTaskStack+7416>, A=A@entry=0x20002c5c <s_dtlsTaskStack+7428>, B=B@entry=0x20002c3c <s_dtlsTaskStack+7396>)
+    at build/3pp/mbedtls/library/bignum.c:1628
+#4  0x000404ae in mbedtls_mpi_mul_int (X=X@entry=0x20002c50 <s_dtlsTaskStack+7416>, A=A@entry=0x20002c5c <s_dtlsTaskStack+7428>, b=b@entry=3) at build/3pp/mbedtls/library/bignum.c:1658
+#5  0x00042962 in ecp_double_jac (grp=grp@entry=0x2001608c, R=0x20017b34, P=0x20017b34) at build/3pp/mbedtls/library/ecp.c:1499
+#6  0x0004352a in ecp_precompute_comb (rs_ctx=<optimized out>, d=52, w=<optimized out>, P=0x28, T=0x20017aa4, grp=0x2001608c) at build/3pp/mbedtls/library/ecp.c:1892
+#7  ecp_mul_comb (rs_ctx=<optimized out>, p_rng=0x2001472c <ctr_drbg>, f_rng=0x41bd9 <mbedtls_ctr_drbg_random>, P=0x28, m=0x20016108, R=0x20016114, grp=0x2001608c) at build/3pp/mbedtls/library/ecp.c:2338
+#8  mbedtls_ecp_mul_restartable (rs_ctx=0x0, p_rng=<optimized out>, f_rng=<optimized out>, P=0x28, m=0x20016108, R=0x20016114, grp=0x2001608c) at build/3pp/mbedtls/library/ecp.c:2684
+#9  mbedtls_ecp_mul_restartable (grp=grp@entry=0x2001608c, R=R@entry=0x20016114, m=m@entry=0x20016108, P=P@entry=0x200160b4, f_rng=<optimized out>, f_rng@entry=0x41bd9 <mbedtls_ctr_drbg_random>, 
+    p_rng=<optimized out>, p_rng@entry=0x2001472c <ctr_drbg>, rs_ctx=0x0) at build/3pp/mbedtls/library/ecp.c:2637
+#10 0x00041c14 in ecdh_gen_public_restartable (rs_ctx=0x0, p_rng=0x2001472c <ctr_drbg>, f_rng=0x41bd9 <mbedtls_ctr_drbg_random>, Q=0x20016114, d=0x20016108, grp=0x2001608c)
+    at build/3pp/mbedtls/library/ecdh.c:86
+#11 mbedtls_ecdh_gen_public (grp=grp@entry=0x2001608c, d=d@entry=0x20016108, Q=Q@entry=0x20016114, f_rng=f_rng@entry=0x41bd9 <mbedtls_ctr_drbg_random>, p_rng=p_rng@entry=0x2001472c <ctr_drbg>)
+    at build/3pp/mbedtls/library/ecdh.c:104
+#12 0x00041df6 in ecdh_make_public_internal (restart_enabled=0, p_rng=0x2001472c <ctr_drbg>, f_rng=0x41bd9 <mbedtls_ctr_drbg_random>, blen=1000, buf=0x20016bed "", point_format=0, 
+    olen=0x20002e68 <s_dtlsTaskStack+7952>, ctx=0x2001608c) at build/3pp/mbedtls/library/ecdh.c:548
+#13 mbedtls_ecdh_make_public (ctx=0x20016088, olen=olen@entry=0x20002e68 <s_dtlsTaskStack+7952>, buf=0x20016bed "", blen=blen@entry=1000, f_rng=0x41bd9 <mbedtls_ctr_drbg_random>, p_rng=0x2001472c <ctr_drbg>)
+    at build/3pp/mbedtls/library/ecdh.c:587
+#14 0x0004da64 in ssl_write_client_key_exchange (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_cli.c:3668
+#15 mbedtls_ssl_handshake_client_step (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_cli.c:4325
+#16 0x00053ba4 in mbedtls_ssl_handshake_step (ssl=ssl@entry=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5668
+#17 0x00053be2 in mbedtls_ssl_handshake (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5692
+#18 mbedtls_ssl_handshake (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5681
+#19 0x0001372e in negotiate (session=0x20016458) at src/communication/dtls/dtls.c:582
+#20 0x00013bea in processIncomingPacket (session=0x20016458) at src/communication/dtls/dtls.c:746
+#21 readFromFifo () at src/communication/dtls/dtls.c:803
+#22 dtlsTask (arg=<optimized out>) at src/communication/dtls/dtls.c:1020
+#23 0x0003d28c in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb) 
+
+
+
 
 
 
