@@ -32555,6 +32555,11 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 (gdb) 
 
 
+-------------------------------------------------
+memory leak in fs_crypt.
+
+- fscryptClose needs to perform an mbedtls_free() operation in fscryptClose().
+- SOmething like: aesCtrCleanUp(&fd.security->aes);
 
 
 
