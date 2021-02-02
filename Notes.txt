@@ -32567,6 +32567,85 @@ memory leak in fs_crypt.
 (gdb) p t3  LEN_PREFIXDATA = 4
 (gdb) 
 
+-------------------------------------------
+
+
+Breakpoint 3, myCalloc (n=8, sizeElement=4) at build/3pp/mbedtls/library/platform.c:78
+78	        LOG_DEBUG("32 bytes allocated.(%zd,%zd)",n,sizeElement);
+(gdb) where
+#0  myCalloc (n=8, sizeElement=4) at build/3pp/mbedtls/library/platform.c:78
+#1  0x0003fd5c in mbedtls_mpi_grow (nblimbs=8, X=0x200028c4 <s_dtlsTaskStack+6508>) at build/3pp/mbedtls/library/bignum.c:125
+#2  mbedtls_mpi_grow (X=0x200028c4 <s_dtlsTaskStack+6508>, nblimbs=8) at build/3pp/mbedtls/library/bignum.c:115
+#3  0x0003fe2a in mbedtls_mpi_copy (X=X@entry=0x200028c4 <s_dtlsTaskStack+6508>, Y=Y@entry=0x20002934 <s_dtlsTaskStack+6620>) at build/3pp/mbedtls/library/bignum.c:212
+#4  0x00040452 in mbedtls_mpi_sub_abs (X=X@entry=0x20002934 <s_dtlsTaskStack+6620>, A=A@entry=0x20002c08 <s_dtlsTaskStack+7344>, B=B@entry=0x20002934 <s_dtlsTaskStack+6620>)
+    at build/3pp/mbedtls/library/bignum.c:1387
+#5  0x00040504 in mbedtls_mpi_add_mpi (X=X@entry=0x20002934 <s_dtlsTaskStack+6620>, A=A@entry=0x20002934 <s_dtlsTaskStack+6620>, B=B@entry=0x20002c08 <s_dtlsTaskStack+7344>)
+    at build/3pp/mbedtls/library/bignum.c:1445
+#6  0x00042666 in mbedtls_mpi_sub_mod (A=<optimized out>, B=<optimized out>, X=<optimized out>, grp=<optimized out>) at build/3pp/mbedtls/library/ecp.c:1250
+#7  mbedtls_mpi_sub_mod (grp=<optimized out>, X=0x20002934 <s_dtlsTaskStack+6620>, A=<optimized out>, B=<optimized out>) at build/3pp/mbedtls/library/ecp.c:1243
+#8  0x00042b1c in ecp_double_jac (grp=grp@entry=0x20002c04 <s_dtlsTaskStack+7340>, R=0x20018fd4, P=0x20018fd4) at build/3pp/mbedtls/library/ecp.c:1497
+#9  0x0004370a in ecp_precompute_comb (rs_ctx=<optimized out>, d=64, w=<optimized out>, P=<optimized out>, T=0x20018f8c, grp=0x20002c04 <s_dtlsTaskStack+7340>) at build/3pp/mbedtls/library/ecp.c:1892
+#10 ecp_mul_comb (rs_ctx=<optimized out>, p_rng=0x200029b0 <s_dtlsTaskStack+6744>, f_rng=0x425a3 <ecp_drbg_random>, P=<optimized out>, m=0x20002b48 <s_dtlsTaskStack+7152>, R=0x20002b54 <s_dtlsTaskStack+7164>, 
+    grp=0x20002c04 <s_dtlsTaskStack+7340>) at build/3pp/mbedtls/library/ecp.c:2338
+#11 mbedtls_ecp_mul_restartable (rs_ctx=0x0, p_rng=<optimized out>, f_rng=<optimized out>, P=<optimized out>, m=0x20002b48 <s_dtlsTaskStack+7152>, R=0x20002b54 <s_dtlsTaskStack+7164>, 
+    grp=0x20002c04 <s_dtlsTaskStack+7340>) at build/3pp/mbedtls/library/ecp.c:2684
+#12 mbedtls_ecp_mul_restartable (grp=0x20002c04 <s_dtlsTaskStack+7340>, R=0x20002b54 <s_dtlsTaskStack+7164>, m=0x20002b48 <s_dtlsTaskStack+7152>, P=<optimized out>, f_rng=<optimized out>, 
+    p_rng=<optimized out>, rs_ctx=0x0) at build/3pp/mbedtls/library/ecp.c:2637
+#13 0x000439f6 in mbedtls_ecp_mul_shortcuts (grp=0x20002c04 <s_dtlsTaskStack+7340>, R=0x20002b54 <s_dtlsTaskStack+7164>, m=0x20002b48 <s_dtlsTaskStack+7152>, P=0x20002c8c <s_dtlsTaskStack+7476>, rs_ctx=0x0)
+    at build/3pp/mbedtls/library/ecp.c:2791
+#14 0x00043a3a in mbedtls_ecp_muladd_restartable (grp=grp@entry=0x20002c04 <s_dtlsTaskStack+7340>, R=R@entry=0x20002b54 <s_dtlsTaskStack+7164>, m=m@entry=0x20002b3c <s_dtlsTaskStack+7140>, 
+    P=P@entry=0x20002c2c <s_dtlsTaskStack+7380>, n=n@entry=0x20002b48 <s_dtlsTaskStack+7152>, Q=Q@entry=0x20002c8c <s_dtlsTaskStack+7476>, rs_ctx=rs_ctx@entry=0x0) at build/3pp/mbedtls/library/ecp.c:2854
+#15 0x00042388 in ecdsa_verify_restartable (grp=grp@entry=0x20002c04 <s_dtlsTaskStack+7340>, 
+    buf=buf@entry=0x20002d14 <s_dtlsTaskStack+7612> "6\"\265\253\373\336Z\330\367lo\341d<\252\262E\332X\303\035]ԯ4uw\357\020\020\244X\314u\001 ", blen=blen@entry=32, 
+    Q=Q@entry=0x20002c8c <s_dtlsTaskStack+7476>, r=r@entry=0x20002ba0 <s_dtlsTaskStack+7240>, s=s@entry=0x20002bac <s_dtlsTaskStack+7252>, rs_ctx=0x0) at build/3pp/mbedtls/library/ecdsa.c:663
+#16 0x0004252c in mbedtls_ecdsa_read_signature_restartable (ctx=ctx@entry=0x20002c04 <s_dtlsTaskStack+7340>, 
+    hash=hash@entry=0x20002d14 <s_dtlsTaskStack+7612> "6\"\265\253\373\336Z\330\367lo\341d<\252\262E\332X\303\035]ԯ4uw\357\020\020\244X\314u\001 ", hlen=hlen@entry=32, 
+    sig=sig@entry=0x20016762 "0E\002 L~\222\273\063\025<V!\273\243\223\207\252u\341\371\270J4Ek\211\345U\340\320M\257zy\n\002!", slen=slen@entry=71, rs_ctx=rs_ctx@entry=0x0)
+    at build/3pp/mbedtls/library/ecdsa.c:881
+#17 0x0004255a in mbedtls_ecdsa_read_signature (ctx=ctx@entry=0x20002c04 <s_dtlsTaskStack+7340>, 
+    hash=hash@entry=0x20002d14 <s_dtlsTaskStack+7612> "6\"\265\253\373\336Z\330\367lo\341d<\252\262E\332X\303\035]ԯ4uw\357\020\020\244X\314u\001 ", hlen=hlen@entry=32, 
+    sig=sig@entry=0x20016762 "0E\002 L~\222\273\063\025<V!\273\243\223\207\252u\341\371\270J4Ek\211\345U\340\320M\257zy\n\002!", slen=slen@entry=71) at build/3pp/mbedtls/library/ecdsa.c:832
+#18 0x000461d4 in ecdsa_verify_wrap (ctx=ctx@entry=0x20002c04 <s_dtlsTaskStack+7340>, md_alg=md_alg@entry=MBEDTLS_MD_SHA256, 
+    hash=hash@entry=0x20002d14 <s_dtlsTaskStack+7612> "6\"\265\253\373\336Z\330\367lo\341d<\252\262E\332X\303\035]ԯ4uw\357\020\020\244X\314u\001 ", hash_len=hash_len@entry=32, 
+    sig=sig@entry=0x20016762 "0E\002 L~\222\273\063\025<V!\273\243\223\207\252u\341\371\270J4Ek\211\345U\340\320M\257zy\n\002!", sig_len=sig_len@entry=71) at build/3pp/mbedtls/library/pk_wrap.c:633
+#19 0x00046216 in eckey_verify_wrap (ctx=<optimized out>, md_alg=<optimized out>, 
+    hash=0x20002d14 <s_dtlsTaskStack+7612> "6\"\265\253\373\336Z\330\367lo\341d<\252\262E\332X\303\035]ԯ4uw\357\020\020\244X\314u\001 ", hash_len=32, 
+    sig=0x20016762 "0E\002 L~\222\273\063\025<V!\273\243\223\207\252u\341\371\270J4Ek\211\345U\340\320M\257zy\n\002!", sig_len=71) at build/3pp/mbedtls/library/pk_wrap.c:252
+#20 0x00045d82 in mbedtls_pk_verify (ctx=ctx@entry=0x200159b4, md_alg=<optimized out>, hash=<optimized out>, hash_len=<optimized out>, 
+    sig=0x20016762 "0E\002 L~\222\273\063\025<V!\273\243\223\207\252u\341\371\270J4Ek\211\345U\340\320M\257zy\n\002!", sig_len=71) at build/3pp/mbedtls/library/pk.c:326
+#21 0x00045f00 in mbedtls_pk_verify_ext (type=<optimized out>, options=<optimized out>, ctx=ctx@entry=0x200159b4, md_alg=<optimized out>, hash=<optimized out>, 
+    hash@entry=0x20002d14 <s_dtlsTaskStack+7612> "6\"\265\253\373\336Z\330\367lo\341d<\252\262E\332X\303\035]ԯ4uw\357\020\020\244X\314u\001 ", hash_len=<optimized out>, hash_len@entry=32, 
+    sig=0x20016762 "0E\002 L~\222\273\063\025<V!\273\243\223\207\252u\341\371\270J4Ek\211\345U\340\320M\257zy\n\002!", sig_len=71) at build/3pp/mbedtls/library/pk.c:390
+#22 0x0004aa2e in x509_crt_check_signature (rs_ctx=<optimized out>, parent=0x200158e8, child=0x200175cc) at build/3pp/mbedtls/library/x509_crt.c:2474
+#23 x509_crt_find_parent_in (rs_ctx=<optimized out>, self_cnt=<optimized out>, path_cnt=<optimized out>, top=<optimized out>, r_signature_is_good=<optimized out>, r_parent=<optimized out>, 
+    candidates=<optimized out>, child=<optimized out>) at build/3pp/mbedtls/library/x509_crt.c:2612
+#24 x509_crt_find_parent (rs_ctx=<optimized out>, self_cnt=<optimized out>, path_cnt=<optimized out>, signature_is_good=<optimized out>, parent_is_trusted=<optimized out>, parent=<optimized out>, 
+    trust_ca=<optimized out>, child=<optimized out>) at build/3pp/mbedtls/library/x509_crt.c:2709
+#25 x509_crt_verify_chain (ca_crl=<optimized out>, f_ca_cb=<optimized out>, p_ca_cb=<optimized out>, rs_ctx=<optimized out>, ver_chain=0x20002d34 <s_dtlsTaskStack+7644>, 
+    profile=0x6dbb4 <mbedtls_x509_crt_profile_default>, trust_ca=0x200158e8, crt=0x200175cc) at build/3pp/mbedtls/library/x509_crt.c:2919
+#26 x509_crt_verify_restartable_ca_cb (crt=crt@entry=0x200175cc, trust_ca=trust_ca@entry=0x200158e8, profile=0x6dbb4 <mbedtls_x509_crt_profile_default>, cn=<optimized out>, flags=0x200163ac, f_vrfy=0x0, 
+    p_vrfy=0x0, rs_ctx=<optimized out>, p_ca_cb=<optimized out>, f_ca_cb=<optimized out>, ca_crl=<optimized out>) at build/3pp/mbedtls/library/x509_crt.c:3150
+#27 0x0004b454 in mbedtls_x509_crt_verify_restartable (crt=crt@entry=0x200175cc, trust_ca=trust_ca@entry=0x200158e8, ca_crl=<optimized out>, profile=<optimized out>, cn=<optimized out>, flags=<optimized out>, 
+    f_vrfy=<optimized out>, p_vrfy=0x0, rs_ctx=rs_ctx@entry=0x0) at build/3pp/mbedtls/library/x509_crt.c:3257
+#28 0x00054af0 in ssl_parse_certificate_verify (rs_ctx=0x0, chain=0x200175cc, authmode=<optimized out>, ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:2542
+#29 mbedtls_ssl_parse_certificate (ssl=ssl@entry=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:2795
+#30 0x0004d58c in mbedtls_ssl_handshake_client_step (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_cli.c:4298
+#31 0x00053d84 in mbedtls_ssl_handshake_step (ssl=ssl@entry=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5668
+--Type <RET> for more, q to quit, c to continue without paging--
+#32 0x00053dc2 in mbedtls_ssl_handshake (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5692
+#33 mbedtls_ssl_handshake (ssl=0x20003bd0 <ssl>) at build/3pp/mbedtls/library/ssl_tls.c:5681
+#34 0x0001372e in negotiate (session=0x20016490) at src/communication/dtls/dtls.c:582
+#35 0x00013bea in processIncomingPacket (session=0x20016490) at src/communication/dtls/dtls.c:746
+#36 readFromFifo () at src/communication/dtls/dtls.c:803
+#37 dtlsTask (arg=<optimized out>) at src/communication/dtls/dtls.c:1020
+#38 0x0003d474 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb) b x509_crt_check_signature
+
+
+
+ecp_double_jac
+
 
 
 
