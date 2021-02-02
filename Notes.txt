@@ -32561,6 +32561,14 @@ memory leak in fs_crypt.
 - fscryptClose needs to perform an mbedtls_free() operation in fscryptClose().
 - SOmething like: aesCtrCleanUp(&fd.security->aes);
 
+(gdb) p t0  OFFSET_PREAMBLE -4
+(gdb) p t1  LEN_PREFIX = 8
+(gdb) p t2  ALIGN_SIZE = 8
+(gdb) p t3  LEN_PREFIXDATA = 4
+(gdb) 
+
+
+
 
 
 
