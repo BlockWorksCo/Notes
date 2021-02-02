@@ -32646,6 +32646,7 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 ecp_double_jac
 
+ecp_precompute_comb() repeats
 
 
 
