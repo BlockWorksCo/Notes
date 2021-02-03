@@ -19055,6 +19055,10 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
         - upgradability
 
     General:
+    - Filesystem (CndFS)
+       - bad-blocks (obviously will fail here).
+       - wear-levelling
+       - encryption
     - stability, mesh, cellular
        - long duration tests.
        - mesh reform without power-cycle.
