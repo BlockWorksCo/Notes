@@ -19024,6 +19024,7 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
         - Use network simulator to simulate bad uplink.
         - fuzzing.
         - versioning, network isolation (RPL-id, PAN-id, etc).
+        - Max. supported nodes (1000).
     - Key update
         - groups
         - interaction
@@ -19048,6 +19049,10 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     - Time sync.
         - accuracy.
         - accuracy in disturbed mesh situations.
+    - Modem
+        - stability
+        - recovery (reset)
+        - upgradability
 
     General:
     - stability, mesh, cellular
