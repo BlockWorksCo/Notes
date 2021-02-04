@@ -32703,6 +32703,11 @@ control        0x0                 0
 
 
 
+------------------------------------------------------------
+
+MBEDTLS_SSL_MSG_CHANGE_CIPHER_SPEC
+ssl_swap_epochs
+cur_out_ctr
 
 
 
