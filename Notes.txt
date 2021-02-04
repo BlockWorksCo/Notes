@@ -32673,6 +32673,35 @@ J�<�fzxM�U�ق����J�  5:29:29.949 #1   001bc50c60067631 <log> 7
  BFc6a2d890@0L0S03  5:29:29.949 #1   001bc50c60067631 <log> 7:13:29.736 BVgw200-insecure:v20.27.6+g1f7a9c0b6 HI
 2480486-2021-02-03  5:29:52.919 #1   001bc50c60067631 <hub> 0:00:00.004 [ info] Expected message# 1025870 but got 1, node restarted?
 
+------------------------------
+(gdb) info reg
+r0             0x1d0b0b16          487262998
+r1             0x2001472c          536954668
+r2             0x80198f70          -2145808528
+r3             0x20014150          536953168
+r4             0x0                 0
+r5             0x20014218          536953368
+r6             0xe6db6b81          -421827711
+r7             0x20014144          536953156
+r8             0xb0b07bcb          -1330611253
+r9             0x0                 0
+r10            0x3c                60
+r11            0x0                 0
+r12            0x30eced69          820833641
+sp             0x2001ff70          0x2001ff70
+lr             0xfffffff1          -15
+pc             0x28666             0x28666 <HardFault_Handler+18>
+xPSR           0x61000003          1627389955
+fpscr          0x0                 0
+msp            0x2001ff70          0x2001ff70
+psp            0x20012c08          0x20012c08 <s_ethdrvTaskStack+1688>
+primask        0x0                 0
+basepri        0xa0                -96
+faultmask      0x0                 0
+control        0x0                 0
+(gdb) 
+
+
 
 
 
