@@ -32713,6 +32713,18 @@ cur_out_ctr
 
 mbedtls_ssl_parse_change_cipher_spec()
 - Incremements in_epoch.
+- Checks for wrapping.
+
+/* Increment epoch */
+if( ++ssl->in_epoch == 0 )
+{
+    MBEDTLS_SSL_DEBUG_MSG( 1, ( "DTLS epoch would wrap" ) );
+    /* This is highly unlikely to happen for legitimate reasons, so
+       treat it as an attack and don't send an alert. */
+    return( MBEDTLS_ERR_SSL_COUNTER_WRAPPING );
+}
+
+
 
 
 
