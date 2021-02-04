@@ -32709,6 +32709,25 @@ MBEDTLS_SSL_MSG_CHANGE_CIPHER_SPEC
 ssl_swap_epochs
 cur_out_ctr
 
+2021-02-03 15:39:34.000 [dtls-pool-4] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:8:21b:c50c:6006:740b:5684, gotEpoch=1, gotSeqNo=643
+2021-02-03 15:39:35.635 [dtls-pool-3] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:8:21b:c50c:6006:740b:5684, gotEpoch=1, gotSeqNo=644
+2021-02-03 15:39:43.791 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26895
+2021-02-03 15:39:46.492 [dtls-pool-3] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26896
+2021-02-03 15:39:56.114 [dtls-pool-1] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:8:21b:c50c:6006:740b:5684, gotEpoch=1, gotSeqNo=645
+2021-02-03 15:39:58.295 [dtls-pool-4] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26897
+2021-02-03 15:40:20.991 [dtls-pool-4] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26898
+2021-02-03 15:41:43.804 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26899
+2021-02-03 15:42:03.937 [dtls-pool-4] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26900
+2021-02-03 15:42:14.088 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26901
+2021-02-03 15:42:34.452 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26902
+2021-02-03 15:43:21.045 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26903
+2021-02-03 15:43:33.345 [dtls-pool-4] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26904
+2021-02-03 15:43:43.792 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26905
+2021-02-03 15:43:57.155 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26906
+2021-02-03 15:45:43.794 [dtls-pool-2] TRACE com.connode.dtls.DTLSConnection - Wrong epoch address=/fd80:302b:6c43:28:21b:c50c:6006:7631:5684, gotEpoch=1, gotSeqNo=26907
+
+
+
 /Data/Logs/node214.log:31158:2020-10-16 13:44:28.445 #20  0000000000000002 <log> 0:00:05.750 [debug] [        dtls] {     dtls}: ssl_msg.c:3703: |1| record from another epoch: expected 0, received 1       
 
 mbedtls_ssl_parse_change_cipher_spec()
