@@ -32773,6 +32773,56 @@ faultmask      0x0                 0
 control        0x0                 0
 
 
+(gdb) disas HardFault_Handler 
+Dump of assembler code for function HardFault_Handler:
+   0x00028644 <+0>:	movs	r3, #0
+   0x00028646 <+2>:	sub	sp, #8
+   0x00028648 <+4>:	strb.w	r3, [sp, #7]
+   0x0002864c <+8>:	ldrb.w	r3, [sp, #7]
+   0x00028650 <+12>:	cmp	r3, #0
+   0x00028652 <+14>:	beq.n	0x2864c <HardFault_Handler+8>
+   0x00028654 <+16>:	add	sp, #8
+   0x00028656 <+18>:	bx	lr
+
+(gdb) info reg
+r0             0x44                68
+r1             0x2001472c          536954668
+r2             0x80198f70          -2145808528
+r3             0x20014150          536953168
+r4             0x0                 0
+r5             0x20014218          536953368
+r6             0x47                71
+r7             0x20014144          536953156
+r8             0xbaba6fd5          -1162186795
+r9             0x1                 1
+r10            0x2ca0843f          748717119
+r11            0x0                 0
+r12            0x5de62f31          1575366449
+sp             0x2001ff70          0x2001ff70
+lr             0xfffffff1          -15
+pc             0x28656             0x28656 <HardFault_Handler+18>
+xPSR           0x61000003          1627389955
+fpscr          0x0                 0
+msp            0x2001ff70          0x2001ff70
+psp            0x20012c08          0x20012c08 <s_ethdrvTaskStack+1688>
+primask        0x0                 0
+basepri        0xa0                -96
+faultmask      0x0                 0
+control        0x0                 0
+
+
+(gdb) disas HardFault_Handler 
+Dump of assembler code for function HardFault_Handler:
+   0x00028644 <+0>:	movs	r3, #0
+   0x00028646 <+2>:	sub	sp, #8
+   0x00028648 <+4>:	strb.w	r3, [sp, #7]
+   0x0002864c <+8>:	ldrb.w	r3, [sp, #7]
+   0x00028650 <+12>:	cmp	r3, #0
+   0x00028652 <+14>:	beq.n	0x2864c <HardFault_Handler+8>
+   0x00028654 <+16>:	add	sp, #8                              <--- set $pc=<here>
+   0x00028656 <+18>:	bx	lr
+
+
 
 
 
