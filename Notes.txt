@@ -32830,6 +32830,13 @@ mbedtls review
 - ipsec_sad.c #error
 
 
+-----------------------------------------
+
+149758 2021-02-09 12:44:07.072 :: [014:07:51.068] device                                                                                                                                                           
+149759 2021-02-09 12:44:07.073 :: [014:07:51.068] BVipa3-genus-dlms-insecure:v21.1.8+b26646+g5c47dd0 Hde DV0@3cbeeL35d1bS2000c9b8                                                                                  
+149760 2021-02-09 12:44:32.121 :: [000:00:00.003] [ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl-insecure:v21.1.8+b26646+g5c47dd0   
+
+
 
 
 
