@@ -32823,6 +32823,12 @@ Dump of assembler code for function HardFault_Handler:
    0x00028656 <+18>:	bx	lr
 
 
+------------------------------------------------------
+mbedtls review
+- #error in empty #ifdef MBEDTLS clauses
+- mbedts keys file?
+
+
 
 
 
