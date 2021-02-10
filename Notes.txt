@@ -32837,6 +32837,10 @@ mbedtls review
 149760 2021-02-09 12:44:32.121 :: [000:00:00.003] [ info] [  bootloader] {       bl}: Bootloader starting. Version ipa3-bl-insecure:v21.1.8+b26646+g5c47dd0   
 
 
+2021-02-10 01:30:16.408 :: [000:00:03.028] [ info] [    terminal] { terminal}: Reboot reason: S~BVipa3-genus-dlms-insecure:v21.1.8+b26646+g5c47dd0 H 400:0/0@6ecaeL4f1efS20008ba8 
+
+2021-02-10 03:59:06.045 :: [000:00:05.886] [ info] [    terminal] { terminal}: Reboot reason: S~BVipa3-genus-dlms-insecure:v21.1.8+b26646+g5c47dd0 H 400:0/0@6ecaeL4f1efS20008ba8<Paste>
+
 
 
 
