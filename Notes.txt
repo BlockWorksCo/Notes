@@ -32912,6 +32912,8 @@ outermost fn that gets called repeatedly: mbedtls_mpi_sub_abs()
 
 
 https://forums.mbed.com/t/mbedtls-never-exits-ecp-double-jac-function-call/8292/6
+https://forums.mbed.com/t/the-ecdsa-ecp-mul-comb-function-take-more-than-10-minutes-to-execute-on-msp430-f6779-controller/6695
+
 
 
 
