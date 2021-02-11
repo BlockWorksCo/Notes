@@ -32908,6 +32908,7 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 (gdb) 
 
 
+outermost fn that gets called repeatedly: mbedtls_mpi_sub_abs()
 
 
 
