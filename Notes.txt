@@ -32920,6 +32920,19 @@ ecp.c:1496
 
 428745 2021-02-11 00:25:08.983 :: [000:00:02.733] [ info] [    terminal] { terminal}: Reboot reason: S~BVipa3-genus-dlms-insecure:v21.1.12+b26657+ga65ec83 H 400:0/0@6ed0eL4f29fS20008ba8
 
+nm gives:
+
+20008e30 b s_filedlStack
+                    <------------- 20008ba8 therefore RPL task was active.
+20008638 b s_rplStack
+20005e00 b s_macRxStack
+200043d8 b s_lowpanTxStack
+20001268 b s_dtlsTaskStack
+200008f0 b s_coapTaskStack
+
+memcpys in RPL:
+
+
 
 
 
