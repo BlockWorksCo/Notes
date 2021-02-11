@@ -32918,6 +32918,10 @@ https://forums.mbed.com/t/the-ecdsa-ecp-mul-comb-function-take-more-than-10-minu
 ecp.c:1496
 
 
+428745 2021-02-11 00:25:08.983 :: [000:00:02.733] [ info] [    terminal] { terminal}: Reboot reason: S~BVipa3-genus-dlms-insecure:v21.1.12+b26657+ga65ec83 H 400:0/0@6ed0eL4f29fS20008ba8
+
+
+
 
 
 
