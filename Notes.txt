@@ -32938,6 +32938,25 @@ nm gives:
 memcpys in RPL:
 
 
+(gdb) 
+0x0006e36a in memcpy ()
+(gdb) where
+#0  0x0006e36a in memcpy ()
+#1  0x0004e990 in prvCopyDataFromQueue (pxQueue=<optimized out>, pvBuffer=<optimized out>)
+    at build/3pp/freertos/FreeRTOS/Source/queue.c:1789
+#2  0x0004ecfe in xQueueGenericReceive (xQueue=xQueue@entry=0x2000845c <s_queue>, 
+    pvBuffer=pvBuffer@entry=0x20008acc <s_rplStack+1532>, xTicksToWait=<optimized out>, 
+    xTicksToWait@entry=0, xJustPeeking=xJustPeeking@entry=0)
+    at build/3pp/freertos/FreeRTOS/Source/queue.c:1270
+#3  0x0004db5c in OS_queueReceive (q=q@entry=0x2000845c <s_queue>, 
+    item=item@entry=0x20008acc <s_rplStack+1532>, waitMSec=waitMSec@entry=0)
+    at src/platform/osal/osal-freertos/osal_freertos.c:255
+#4  0x0001fb18 in rplTask (arg=<optimized out>) at src/communication/rpl/rpl_task.c:434
+#5  0x00000000 in ?? ()
+(gdb) 
+
+
+
 
 
 
