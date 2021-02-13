@@ -33064,6 +33064,19 @@ $45 = 0x2000849c
 (gdb) 
 
 
+p 'rpl_task.c'::s_queue
+(gdb) p &'rpl_task.c'::s_queue
+$4 = (OS_Queue *) 0x2000845c <s_queue>
+(gdb) p/x &((Queue_t*)&'rpl_task.c'::s_queue)->uxLength
+$5 = 0x20008498
+(gdb) watch 0x20008498
+Cannot watch constant value `0x20008498'.
+(gdb) p/x &((Queue_t*)&'rpl_task.c'::s_queue)->uxItemSize
+$6 = 0x2000849c
+
+
+
+
 
 
 
