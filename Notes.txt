@@ -32955,6 +32955,24 @@ memcpys in RPL:
 #5  0x00000000 in ?? ()
 (gdb) 
 
+(gdb) p pxQueue->uxItemSize
+$13 = 1741597031
+(gdb) p pxQueue->u.pcReadFrom
+$14 = (int8_t *) 0x200084ac <s_queueData> "\001"
+(gdb) p/x pxQueue
+$15 = 0x2000845c
+(gdb) p/x *pxQueue
+$16 = {pcHead = 0x200084ac, pcTail = 0x200084cc, pcWriteTo = 0x200084b8, u = {pcReadFrom = 0x200084ac, 
+    uxRecursiveCallCount = 0x200084ac}, xTasksWaitingToSend = {uxNumberOfItems = 0x0, 
+    pxIndex = 0x20008474, xListEnd = {xItemValue = 0xffffffff, pxNext = 0x20008474, 
+      pxPrevious = 0x20008474}}, xTasksWaitingToReceive = {uxNumberOfItems = 0x0, 
+    pxIndex = 0x20008488, xListEnd = {xItemValue = 0xe31ffcfc, pxNext = 0x8940c9c9, 
+      pxPrevious = 0x20008570}}, uxMessagesWaiting = 0x887bc, uxLength = 0xaaaa4fe5, 
+  uxItemSize = 0x67cea967, cRxLock = 0x88, cTxLock = 0x10, uxQueueNumber = 0x21000000, 
+  ucQueueType = 0x0}
+
+
+
 
 
 
