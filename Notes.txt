@@ -33055,6 +33055,15 @@ $40 = {
   cRxLock = -1 '\377', cTxLock = -1 '\377', uxQueueNumber = 0, ucQueueType = 0 '\000'}
 (gdb) 
 
+(gdb) p/x ((Queue_t*)&s_queue)->uxLength
+$43 = 0x8
+(gdb) p/x &((Queue_t*)&s_queue)->uxLength
+$44 = 0x20008498
+(gdb) p/x &((Queue_t*)&s_queue)->uxItemSize
+$45 = 0x2000849c
+(gdb) 
+
+
 
 
 
