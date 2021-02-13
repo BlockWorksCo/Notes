@@ -32998,6 +32998,36 @@ faultmask      0x0                 0
 control        0x2                 2
 
 
+in HardFaultHandler:
+
+r0             0x20008acc          536906444
+r1             0x200201e3          537002467
+r2             0x87cf2e13          -2016465389
+r3             0x20020801          537004033
+r4             0x0                 0
+r5             0x887bc             559036
+r6             0x200084b4          536904884
+r7             0x0                 0
+r8             0x20008acc          536906444
+r9             0x0                 0
+r10            0xe000ed04          -536810236
+r11            0x101               257
+r12            0x28d1b031          684830769
+sp             0x20020000          0x20020000
+lr             0xfffffffd          -3
+pc             0x2052c             0x2052c <HardFault_Handler>
+xPSR           0x91000003          -1862270973
+fpscr          0x0                 0
+msp            0x20020000          0x20020000
+psp            0x20008a40          0x20008a40 <s_rplStack+1392>
+--Type <RET> for more, q to quit, c to continue without paging--
+primask        0x0                 0
+basepri        0xa0                -96
+faultmask      0x0                 0
+control        0x0                 0
+
+
+
 
 
 
