@@ -32971,6 +32971,34 @@ $16 = {pcHead = 0x200084ac, pcTail = 0x200084cc, pcWriteTo = 0x200084b8, u = {pc
   uxItemSize = 0x67cea967, cRxLock = 0x88, cTxLock = 0x10, uxQueueNumber = 0x21000000, 
   ucQueueType = 0x0}
 
+(gdb) info reg
+r0             0x20008acc          536906444
+r1             0x200201e2          537002466
+r2             0x87cf2e13          -2016465389
+r3             0x20020800          537004032
+r4             0x0                 0
+r5             0x887bc             559036
+r6             0x200084b4          536904884
+r7             0x0                 0
+r8             0x20008acc          536906444
+r9             0x0                 0
+r10            0xe000ed04          -536810236
+r11            0x101               257
+r12            0x28d1b031          684830769
+sp             0x20008a60          0x20008a60 <s_rplStack+1424>
+lr             0x4ecff             322815
+pc             0x6e36a             0x6e36a <memcpy+18>
+xPSR           0x91000000          -1862270976
+fpscr          0x0                 0
+msp            0x20020000          0x20020000
+psp            0x20008a60          0x20008a60 <s_rplStack+1424>
+primask        0x0                 0
+basepri        0xa0                -96
+faultmask      0x0                 0
+control        0x2                 2
+
+
+
 
 
 
