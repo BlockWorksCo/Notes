@@ -33040,6 +33040,23 @@ $34 = 0x4
 
 
 
+When good:
+
+(gdb)  p (Queue_t)s_queue
+$40 = {
+  pcHead = 0x200084ac <s_queueData> "\250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 ", pcTail = 0x200084cc "", 
+  pcWriteTo = 0x200084b0 <s_queueData+4> "\250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 ", u = {
+    pcReadFrom = 0x200084ac <s_queueData> "\250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 \250\\\001 ", uxRecursiveCallCount = 536904876}, xTasksWaitingToSend = {
+    uxNumberOfItems = 0, pxIndex = 0x20008474 <s_queue+24>, xListEnd = {xItemValue = 4294967295, 
+      pxNext = 0x20008474 <s_queue+24>, pxPrevious = 0x20008474 <s_queue+24>}}, 
+  xTasksWaitingToReceive = {uxNumberOfItems = 1, pxIndex = 0x20008488 <s_queue+44>, xListEnd = {
+      xItemValue = 4294967295, pxNext = 0x20008b28 <s_rplTask+24>, 
+      pxPrevious = 0x20008b28 <s_rplTask+24>}}, uxMessagesWaiting = 0, uxLength = 8, uxItemSize = 4, 
+  cRxLock = -1 '\377', cTxLock = -1 '\377', uxQueueNumber = 0, ucQueueType = 0 '\000'}
+(gdb) 
+
+
+
 
 
 
