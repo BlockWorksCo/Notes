@@ -33075,6 +33075,64 @@ Cannot watch constant value `0x20008498'.
 $6 = 0x2000849c
 
 
+2nd crash:
+
+(gdb) 
+Program received signal SIGTRAP, Trace/breakpoint trap.
+xPortSysTickHandler ()
+    at build/3pp/freertos/FreeRTOS/Source/include/../../Source/portable/GCC/ARM_CM3/portmacro.h:237
+237		__asm volatile
+(gdb) where
+#0  xPortSysTickHandler ()
+    at build/3pp/freertos/FreeRTOS/Source/include/../../Source/portable/GCC/ARM_CM3/portmacro.h:237
+#1  <signal handler called>
+#2  0x00000000 in ?? ()
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+(gdb) disas
+Dump of assembler code for function xPortSysTickHandler:
+=> 0x0004f944 <+0>:	push	{r3, lr}
+   0x0004f946 <+2>:	mov.w	r3, #191	; 0xbf
+   0x0004f94a <+6>:	msr	BASEPRI, r3
+   0x0004f94e <+10>:	isb	sy
+   0x0004f952 <+14>:	dsb	sy
+   0x0004f956 <+18>:	bl	0x4f198 <xTaskIncrementTick>
+   0x0004f95a <+22>:	cbz	r0, 0x4f964 <xPortSysTickHandler+32>
+   0x0004f95c <+24>:	mov.w	r2, #268435456	; 0x10000000
+   0x0004f960 <+28>:	ldr	r3, [pc, #8]	; (0x4f96c <xPortSysTickHandler+40>)
+   0x0004f962 <+30>:	str	r2, [r3, #0]
+   0x0004f964 <+32>:	movs	r3, #0
+   0x0004f966 <+34>:	msr	BASEPRI, r3
+   0x0004f96a <+38>:	pop	{r3, pc}
+   0x0004f96c <+40>:			; <UNDEFINED> instruction: 0xed04e000
+End of assembler dump.
+(gdb) info reg
+r0             0x54c5c591          1422247313
+r1             0x567d2b2b          1451043627
+r2             0x20008520          536904992
+r3             0x887bc             559036
+r4             0xc                 12
+r5             0x200085b8          536905144
+r6             0xb16f6fde          -1318096930
+r7             0xa56363c6          -1520213050
+r8             0xd7d7b562          -673729182
+r9             0x6                 6
+r10            0x67cea967          1741597031
+r11            0x6b6bd6bd          1802229437
+r12            0x847c7cf8          -2072216328
+sp             0x20020000          0x20020000
+lr             0xfffffffd          -3
+pc             0x4f944             0x4f944 <xPortSysTickHandler>
+xPSR           0x2100000f          553648143
+fpscr          0x0                 0
+msp            0x20020000          0x20020000
+psp            0x20008488          0x20008488 <s_queue+44>
+primask        0x0                 0
+basepri        0x0                 0
+faultmask      0x0                 0
+control        0x0                 0
+
+
+
 
 
 
