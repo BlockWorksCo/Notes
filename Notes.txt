@@ -33172,6 +33172,15 @@ after return from int.
 #12 0x0004f844 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
 
 
+Stack depth is greater than usual when a rnd16() call results in a HW-RNG reseed interval.
+Because the RNG performs an AES cipher operation to randomise the data, this results in quite
+a deep stack usage.
+Because the stack is relatively small, and the s_queue is immediately prior to the rpl_stack, it
+gets overwritten.
+The values that get overwritten include the uxItemSize and uxLength.
+This results in the next memcpy (from a qReceive op) to overwrite more of the stack and cause the hard-fault.
+
+result is this happens when a reseed interval corresponds with a timer interrupt
 
 
 
