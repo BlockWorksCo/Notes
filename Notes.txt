@@ -33132,6 +33132,47 @@ faultmask      0x0                 0
 control        0x0                 0
 
 
+after return from int.
+
+(gdb) si
+0x00050eba in mbedtls_internal_aes_encrypt (ctx=ctx@entry=0x20008580 <s_rplStack+176>, 
+    input=input@entry=0x20008520 <s_rplStack+80> "", output=output@entry=0x20008520 <s_rplStack+80> "")
+    at build/3pp/mbedtls/library/aes.c:879
+879	    for( i = ( ctx->nr >> 1 ) - 1; i > 0; i-- )
+(gdb) where
+#0  0x00050eba in mbedtls_internal_aes_encrypt (ctx=ctx@entry=0x20008580 <s_rplStack+176>, 
+    input=input@entry=0x20008520 <s_rplStack+80> "", output=output@entry=0x20008520 <s_rplStack+80> "")
+    at build/3pp/mbedtls/library/aes.c:879
+#1  0x0005160a in mbedtls_aes_crypt_ecb (ctx=ctx@entry=0x20008580 <s_rplStack+176>, mode=mode@entry=1, 
+    input=input@entry=0x20008520 <s_rplStack+80> "", output=output@entry=0x20008520 <s_rplStack+80> "")
+    at build/3pp/mbedtls/library/aes.c:1053
+#2  0x00053e3c in block_cipher_df (
+    output=output@entry=0x20008860 <s_rplStack+912> "%`\354\370e\022B\340\271K\276Fv\211\200\035\373\213\270\001׀\242\365>F\274\032?\372n\204", 
+    data=data@entry=0x20008860 <s_rplStack+912> "%`\354\370e\022B\340\271K\276Fv\211\200\035\373\213\270\001׀\242\365>F\274\032?\372n\204", data_len=data_len@entry=32)
+    at build/3pp/mbedtls/library/ctr_drbg.c:186
+#3  0x00053ffc in mbedtls_ctr_drbg_reseed_internal (ctx=ctx@entry=0x200145f4 <ctr_drbg>, 
+    additional=additional@entry=0x0, len=len@entry=0, nonce_len=nonce_len@entry=0)
+    at build/3pp/mbedtls/library/ctr_drbg.c:401
+#4  0x0005403c in mbedtls_ctr_drbg_reseed (ctx=ctx@entry=0x200145f4 <ctr_drbg>, 
+    additional=additional@entry=0x0, len=len@entry=0) at build/3pp/mbedtls/library/ctr_drbg.c:417
+#5  0x000540e0 in mbedtls_ctr_drbg_random_with_add (p_rng=p_rng@entry=0x200145f4 <ctr_drbg>, 
+    output=output@entry=0x20008a6c <s_rplStack+1436> "", output_len=output_len@entry=4, 
+    additional=additional@entry=0x0, add_len=add_len@entry=0)
+    at build/3pp/mbedtls/library/ctr_drbg.c:531
+#6  0x00054192 in mbedtls_ctr_drbg_random (p_rng=p_rng@entry=0x200145f4 <ctr_drbg>, 
+    output=output@entry=0x20008a6c <s_rplStack+1436> "", output_len=output_len@entry=4)
+    at build/3pp/mbedtls/library/ctr_drbg.c:596
+#7  0x0004a022 in rnd16 () at src/platform/core/random_mbedtls.c:75
+#8  0x0004a0e2 in rnd32 () at src/platform/core/random_mbedtls.c:82
+#9  0x0001fea0 in startInterval (state=0x2000836c <s_rplState+296>)
+    at src/communication/rpl/trickle.c:81
+#10 0x000200ca in trickleListTick (states=states@entry=0x20008ad0 <s_rplStack+1536>, num=num@entry=4)
+    at src/communication/rpl/trickle.c:226
+#11 0x0001fb02 in rplTask (arg=<optimized out>) at src/communication/rpl/rpl_task.c:426
+#12 0x0004f844 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+
+
+
 
 
 
