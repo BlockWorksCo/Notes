@@ -33178,7 +33178,8 @@ a deep stack usage.
 Because the stack is relatively small, and the s_queue is immediately prior to the rpl_stack, it
 gets overwritten.
 The values that get overwritten include the uxItemSize and uxLength.
-This results in the next memcpy (from a qReceive op) to overwrite more of the stack and cause the hard-fault.
+This results in the next memcpy (from a qReceive op) to overwrite more of the stack and cause 
+the hard-fault.
 
 result is this happens when a reseed interval corresponds with a timer interrupt
 
