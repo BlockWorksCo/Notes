@@ -33188,7 +33188,12 @@ result is this happens when a reseed interval corresponds with a timer interrupt
 
 - CC1200 (128 byte FIFO in hw). Overflow results in flushing of rx-buffer.
 - MAX_RADIO_PAYLOAD_SIZE = 253, multiple cc1200 frames can make up one "MAC" frame.
-- MAC module reads into 
+- If packet fails header check or is not targetted at us, is dropped.
+- otherwise, MAC module reads into a single-packet reassembly buffer (reassembles multiple 
+radio-level packets into a full packet).
+- MAC layer can drop or continue to process the packet based on IPv6 header values and packet
+validity.
+- MAC layer then places frame into q
 
 
 
