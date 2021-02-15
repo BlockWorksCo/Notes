@@ -33213,10 +33213,12 @@ validity.
 - Depending on whether frame is compressed or not, the fragment will take up more or less space
 in the buffer. Up to 8 6LoWPAN fragments can be stored simulataneously for reassembly into an
 IP layer packet.
-- IP layer packets are handled according to protocol (e.g. ICMP, UDP, CoAP, DTLS, etc) or
+- IP layer packets are handled according to protocol (e.g. IPSEC, ICMP, UDP, CoAP, DTLS, etc) or
 forwarded if the destination IPv6 address dictates.
 
 Transmit path:
+- Either the IP core forwards a packet or a packet is generated from a higher level protocol.
+- Packet is passed to LoWPAN layer for fragmentation/disassembly into a buffer (which may block).
 - 
 
 
