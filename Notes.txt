@@ -33184,6 +33184,10 @@ the hard-fault.
 result is this happens when a reseed interval corresponds with a timer interrupt
 
 
+--------------------------------------------------
+
+- CC1200 (128 byte FIFO in hw). Overflow results in flushing of rx-buffer.
+- cc1200 module reads into 
 
 
 
