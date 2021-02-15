@@ -33245,6 +33245,14 @@ Having said that, this is a list of the files that you may find stored:
 "MAC security state": Used to store the framecounter for radio level packets
 "MQ data files": Data storage for the persistent message-queue.
 
+If a unit is being refurbished, and will have a new EUI-64, then all the files should be erased
+along with the settings (via the SETTINGS_service API).
+If the unit will continue to have the same EUI, then the settings will need to be retained as 
+well as the "Activity Report" and "MAC security state" if it is to go back into the same network.
+If its is acceptable to lose the data that is in the mq (but not pushed up to the server) then
+all the (ten) mq files can be removed. Either all the mq-files or none should be removed, never
+partially remove the mq files.
+
 
 
  static const SlotEntry s_filenameToSlotMap[] = {                                                        
