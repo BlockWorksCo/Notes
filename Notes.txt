@@ -33223,6 +33223,13 @@ Transmit path:
 - CC1200 has a 128-byte transmit FIFO.
 - ACKs to be transmitted short-circuit the above IP-level transmit path for efficiency reasons.
 
+So, the queueing depth you will observe depends greatly on:
+- The environmental conditions (i.e time spent waiting for ACKs from remote nodes).
+- The details of the packets themselves (can they be dropped early in the receive path?)
+- The validity of the packets (Again, may cause them to be dropped).
+- The number of fragments that need to be reassambled before forwarding.
+- Whether any current activity within the node is generating packets to be transmitted also.
+- The size of the packets themselves and how much space they take up in the FIFO(s).
 
 
 
