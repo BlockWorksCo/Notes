@@ -33220,7 +33220,8 @@ Transmit path:
 - Either the IP core forwards a packet or a packet is generated from a higher level protocol.
 - Packet is passed to LoWPAN layer for fragmentation/disassembly into a buffer (which may block).
 - For the 6LoWPAN interface, there is a 3 full packet (i.e. 1280 byte) queue for transmit packets.
-
+- CC1200 has a 128-byte transmit FIFO.
+- ACKs to be transmitted short-circuit the above IP-level transmit path for efficiency reasons.
 
 
 
