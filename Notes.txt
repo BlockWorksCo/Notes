@@ -33191,7 +33191,12 @@ packets to handle per second (depending on environment).
 For this reason, there is no point having a large queue on the receive-side. The queueing happens
 on the transmit-path, where multiple sources of packets may need to be transmitted through the
 CC1200 radio.
+Since packets are transmitted with MAC-level ACKs enabled, the MAC layer must wait for the ACK
+from the remote receiver and potentially retry based on that result.
+This obviously can cause delays which backup through the transmit queue and ultimately become 
+lossy at the input (receive) side.
 
+Receive path:
 - CC1200 (128 byte FIFO in hw). Overflow results in flushing of rx-buffer.
 - MAX_RADIO_PAYLOAD_SIZE = 253, multiple cc1200 frames can make up one "MAC" frame.
 - If packet fails header check or is not targetted at us, is dropped.
@@ -33203,8 +33208,10 @@ validity.
 - Depending on whether frame is compressed or not, the fragment will take up more or less space
 in the buffer. Up to 8 6LoWPAN fragments can be stored simulataneously for reassembly into an
 IP layer packet.
-- IP layer packets are handled according to protocol (e.g. ICMP, UDP, CoAP, DTLS, etc).
-- 
+- IP layer packets are handled according to protocol (e.g. ICMP, UDP, CoAP, DTLS, etc) or
+forwarded if the destination IPv6 address dictates.
+
+Transmit path
 
 
 
