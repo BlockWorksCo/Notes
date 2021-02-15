@@ -33230,6 +33230,8 @@ So, the queueing depth you will observe depends greatly on:
 - The number of fragments that need to be reassambled before forwarding.
 - Whether any current activity within the node is generating packets to be transmitted also.
 - The size of the packets themselves and how much space they take up in the FIFO(s).
+- The degree of "interleaving" of 6LoWPAN fragments and how they interact with the other sources
+of 6LoWPAN packets.
 
 
 
