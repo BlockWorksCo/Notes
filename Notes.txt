@@ -33194,8 +33194,9 @@ radio-level packets into a full packet).
 - MAC layer can drop or continue to process the packet based on IPv6 header values and packet
 validity.
 - 6LoWPAN layer then places packet into a fragment-reassembly buffer.
-- Depending on whether frame is compressed or not, the fragemnt will take up more or less space
-in the buffer. UP to 8 6LoWPAN fragments can be stored simulatensously.
+- Depending on whether frame is compressed or not, the fragment will take up more or less space
+in the buffer. Up to 8 6LoWPAN fragments can be stored simulatensously for reassembly into an
+IP layer packet.
 - 
 
 
