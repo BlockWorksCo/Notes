@@ -33239,11 +33239,11 @@ In general, everything the Agent uses via the CH FILE_Service is non-critical. A
 Agent "Configuration", i.e. EUI-64, radio-channel, etc are stored via the "SETTINGS_Service".
 Having said that, this is a list of the files that you may find stored:
 
-"Activity report":
-"Encrypted filedl storage":
-"Plaintext filedl storage":
-"MAC security state":
-"MQ data files":
+"Activity report": timestamp of last activity report.
+"Encrypted filedl storage": Used to store the encrypted file as packets are received.
+"Plaintext filedl storage": Used to decrypt the entire downloaded file (when entire file is complete)
+"MAC security state": Used to store the framecounter for radio level packets
+"MQ data files": Data storage for the persistent message-queue.
 
 
 
