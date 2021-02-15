@@ -33186,6 +33186,12 @@ result is this happens when a reseed interval corresponds with a timer interrupt
 
 --------------------------------------------------
 
+In general, the Agent is I/O bound, not CPU-bound. There will generally only be a handfull of 
+packets to handle per second (depending on environment).
+For this reason, there is no point having a large queue on the receive-side. The queueing happens
+on the transmit-path, where multiple sources of packets may need to be transmitted through the
+CC1200 radio.
+
 - CC1200 (128 byte FIFO in hw). Overflow results in flushing of rx-buffer.
 - MAX_RADIO_PAYLOAD_SIZE = 253, multiple cc1200 frames can make up one "MAC" frame.
 - If packet fails header check or is not targetted at us, is dropped.
@@ -33197,6 +33203,7 @@ validity.
 - Depending on whether frame is compressed or not, the fragment will take up more or less space
 in the buffer. Up to 8 6LoWPAN fragments can be stored simulataneously for reassembly into an
 IP layer packet.
+- IP layer packets are handled according to protocol (e.g. ICMP, UDP, CoAP, DTLS, etc).
 - 
 
 
