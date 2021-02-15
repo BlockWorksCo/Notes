@@ -33193,7 +33193,7 @@ result is this happens when a reseed interval corresponds with a timer interrupt
 radio-level packets into a full packet).
 - MAC layer can drop or continue to process the packet based on IPv6 header values and packet
 validity.
-- MAC layer then places frame into q
+- 6LoWPAN layer then places packet into a fragment-reassembly buffer.
 
 
 
