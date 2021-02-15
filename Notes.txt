@@ -33233,6 +33233,39 @@ So, the queueing depth you will observe depends greatly on:
 - The degree of "interleaving" of 6LoWPAN fragments and how they interact with the other sources
 of 6LoWPAN packets.
 
+--------------------------------
+
+In general, everything the Agent uses via the CH FILE_Service is non-critical. All of the 
+Agent "Configuration", i.e. EUI-64, radio-channel, etc are stored via the "SETTINGS_Service".
+Having said that, this is a list of the files that you may find stored:
+
+"Activity report":
+"Encrypted filedl storage":
+"Plaintext filedl storage":
+"MAC security state":
+"MQ data files":
+
+
+
+ static const SlotEntry s_filenameToSlotMap[] = {                                                        
+         { FILE_NAME_ACTIVITY_REPORT, FILE_ConActivityReportSlot },                                      
+         { FILE_NAME_FILEDL_ENCRYPTED, FILE_ConFwDlEncryptedFileSlot },                                  
+         { FILE_NAME_FILEDL_CLEARTEXT, FILE_ConFwDlFileSlot },                                           
+         { FILE_NAME_FILEDL_STATE, FILE_ConFwDlStateSlot },                                              
+         { FILE_NAME_MACSEC_STATE, FILE_ConMacSecStateSlot },                                            
+         { "/mq/000.mq", FILE_ConMsgQ0Slot },                                                            
+         { "/mq/001.mq", FILE_ConMsgQ1Slot },                                                            
+         { "/mq/002.mq", FILE_ConMsgQ2Slot },                                                            
+         { "/mq/003.mq", FILE_ConMsgQ3Slot },                                                            
+         { "/mq/004.mq", FILE_ConMsgQ4Slot },                                                            
+         { "/mq/005.mq", FILE_ConMsgQ5Slot },                                                            
+         { "/mq/006.mq", FILE_ConMsgQ6Slot },                                                            
+         { "/mq/007.mq", FILE_ConMsgQ7Slot },                                                            
+         { "/mq/008.mq", FILE_ConMsgQ8Slot },                                                            
+         { "/mq/009.mq", FILE_ConMsgQ9Slot },                                                            
+ };                                                                                                      
+
+
 
 
 
