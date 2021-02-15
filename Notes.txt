@@ -33187,7 +33187,8 @@ result is this happens when a reseed interval corresponds with a timer interrupt
 --------------------------------------------------
 
 In general, the Agent is I/O bound, not CPU-bound. There will generally only be a handfull of 
-packets to handle per second (depending on environment).
+packets to handle per second (depending on environment). This does not present a significant
+processor load.
 For this reason, there is no point having a large queue on the receive-side. The queueing happens
 on the transmit-path, where multiple sources of packets may need to be transmitted through the
 CC1200 radio.
@@ -33195,6 +33196,10 @@ Since packets are transmitted with MAC-level ACKs enabled, the MAC layer must wa
 from the remote receiver and potentially retry based on that result.
 This obviously can cause delays which backup through the transmit queue and ultimately become 
 lossy at the input (receive) side.
+Ultimately, the queueing depth is determined by the environmental conditions as that will 
+throttle the packet transmit rate, causing packets to be queued, but exactly how that will 
+happen will also depend on the details of the packets themselves and what layer they make it
+through to.
 
 Receive path:
 - CC1200 (128 byte FIFO in hw). Overflow results in flushing of rx-buffer.
@@ -33211,7 +33216,8 @@ IP layer packet.
 - IP layer packets are handled according to protocol (e.g. ICMP, UDP, CoAP, DTLS, etc) or
 forwarded if the destination IPv6 address dictates.
 
-Transmit path
+Transmit path:
+- 
 
 
 
