@@ -33297,6 +33297,8 @@ remaining mbedtls work
 - stack usage optimisation
 - image size optimisation
 - high-cpu usage issue.
+- hard fault while renewing session, HF in calloc, called from mpi modules and handshake routines.
+
 
 
 
