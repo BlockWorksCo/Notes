@@ -33275,6 +33275,23 @@ partially remove the mq files.
 
 
 
+--------------------------------------------
+
+DtlsSession from dlist
+
+(gdb) p s_sessions
+$54 = {next = 0x20016498, prev = 0x20016498}
+(gdb) p *(DtlsSession*)((s_sessions->next)-64)
+$55 = {id = 0, ssl = 0x0, localAddress = {x = "pa\001 \001\a\345\002\020\000\t,\000\000\001J"}, remoteAddress = {x = '\000' <repeats 15 times>}, localPort = 0, remotePort = 536961320, callback = 0x2e50701, 
+  timeOfLastTransmissionMSec = 16, timeoutUpdated = false, timeout = false, negotiated = true, abandoned = 74, remove = false, connect = false, list = {next = 0x0, prev = 0x0}}
+(gdb) p *(DtlsSession*)((0x20016498)-64)
+$56 = {id = 51, ssl = 0x20002d20 <ssl>, localAddress = {x = "\375\200\060+lC\000(\002\033\305\f`\006w\266"}, remoteAddress = {x = "\375", '\000' <repeats 14 times>, "\001"}, localPort = 5684, 
+  remotePort = 5684, callback = 0x2418d <dtlsCallback>, timeOfLastTransmissionMSec = 6495018, timeoutUpdated = true, timeout = false, negotiated = true, abandoned = false, remove = false, connect = true, 
+  list = {next = 0x200000d4 <s_sessions>, prev = 0x200000d4 <s_sessions>}}
+(gdb) 
+
+
+
 
 
 
