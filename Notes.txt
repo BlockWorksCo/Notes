@@ -33301,6 +33301,33 @@ remaining mbedtls work
 
 
 
+-----------------------------------------
+Debugging hard faults:
+
+(gdb) tar rem :3333
+Remote debugging using :3333
+0x0fe10000 in ?? ()
+(gdb) disas HardFault_Handler 
+Dump of assembler code for function HardFault_Handler:
+   0x00020534 <+0>:	movs	r3, #0
+   0x00020536 <+2>:	sub	sp, #8
+   0x00020538 <+4>:	strb.w	r3, [sp, #7]
+   0x0002053c <+8>:	ldrb.w	r3, [sp, #7]
+   0x00020540 <+12>:	cmp	r3, #0
+   0x00020542 <+14>:	beq.n	0x2053c <HardFault_Handler+8>
+   0x00020544 <+16>:	add	sp, #8
+   0x00020546 <+18>:	bx	lr
+End of assembler dump.
+(gdb) b HardFault_Handler 
+Breakpoint 1 at 0x20534: file src/hw/efr32/crash.c, line 52.
+(gdb) b panicHalt_ 
+Breakpoint 2 at 0x4872c: file src/platform/core/assert.c, line 33.
+(gdb) b powerDownResetEfr32 
+Breakpoint 3 at 0x4b450: file src/platform/drivers/powerdown/powerdown_efr32.c, line 19.
+(gdb) 
+
+
+
 
 
 
