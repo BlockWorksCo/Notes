@@ -33354,6 +33354,18 @@ $9 = {src = {x = "\375", '\000' <repeats 14 times>, "\001"}, dst = {
     x = "\002\033\305\f`\006w\266"}, callback = 0x0, cbData = 0x0}
 
 
+------------------------------------
+tracking down heap-corruption.
+- Perform mem check periodically
+- Perform mem check on alloc and free.
+- Trap on HardFault_Handler, panicHalt_ and powerDownResetEfr32.
+- When HardFault occurs, identify location of fault. Examine stacks & data in-use.
+- When panicHalt_ occurs due to memCheck issue, step back up and place mem-checs around
+the operations in-use.
+- check for stack-overruns by examinging stack for 0xa5 values.
+- Check pxCurrentTCB to determine current task. examine values within the structure for being valid.
+
+
 
 
 
