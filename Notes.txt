@@ -33342,6 +33342,18 @@ Breakpoint 3 at 0x4b450: file src/platform/drivers/powerdown/powerdown_efr32.c, 
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
+#4  0x000151de in freeIPdata (data=data@entry=0x2000640c <s_macRxStack+1900>)
+    at src/communication/ip/ip_core.c:2294
+2294	    FREE(data->payload);
+(gdb) p *data
+$9 = {src = {x = "\375", '\000' <repeats 14 times>, "\001"}, dst = {
+    x = "\375\200\060+lC\000(\002\033\305\f`\006w\266"}, hopLimit = 63 '?', 
+  ifaceOut = INTERFACE_UNSPECIFIED, ifaceIn = INTERFACE_LOWPAN, extHeader = 0x200187f0, 
+  type = HDR_UDP, payload = 0x200187a0 "\026\064\026\064", len = 54, origPayload = 0x0, 
+  typeNHC = 1 '\001', srcIID = {x = "\002\033\305\f`\006v1"}, dstIID = {
+    x = "\002\033\305\f`\006w\266"}, callback = 0x0, cbData = 0x0}
+
+
 
 
 
