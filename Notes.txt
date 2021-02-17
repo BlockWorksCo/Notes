@@ -33365,6 +33365,10 @@ the operations in-use.
 - check for stack-overruns by examinging stack for 0xa5 values.
 - Check pxCurrentTCB to determine current task. examine values within the structure for being valid.
 
+arm-none-eabi-objdump -x build/ipa3-gstar-dlms-insecure-mbedtls/bin/agent.elf > t.map
+arm-none-eabi-objdump -S build/ipa3-gstar-dlms-insecure-mbedtls/bin/agent.elf > t.s
+
+
 
 
 
