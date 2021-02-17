@@ -33326,6 +33326,23 @@ Breakpoint 2 at 0x4872c: file src/platform/core/assert.c, line 33.
 Breakpoint 3 at 0x4b450: file src/platform/drivers/powerdown/powerdown_efr32.c, line 19.
 (gdb) 
 
+---------------------------------------------
+
+#0  panicHalt_ (file=file@entry=0x71e6b "ip_core", line=line@entry=2294, message=0x200126cc <s_panicMessage> "garbled 0x200187a0 size 54 pre 0 post 4") at src/platform/core/assert.c:33
+#1  0x00049268 in reallocInternal (p=<optimized out>, size=size@entry=0, zeroFill=zeroFill@entry=false, file=file@entry=0x71e6b "ip_core", line=line@entry=2294) at src/platform/core/memory.c:261
+#2  0x00049390 in freeWrapper (line=2294, file=0x71e6b "ip_core", p=<optimized out>) at src/platform/core/memory.c:652
+#3  freeWrapper (p=<optimized out>, file=file@entry=0x71e6b "ip_core", line=line@entry=2294) at src/platform/core/memory.c:649
+#4  0x000151de in freeIPdata (data=data@entry=0x2000640c <s_macRxStack+1900>) at src/communication/ip/ip_core.c:2294
+#5  0x00016474 in ipReceive (src=<optimized out>, dst=<optimized out>, payload=<optimized out>, len=<optimized out>, packetinfo=0x200067ec <s_packetInfo>) at src/communication/ip/ip_core.c:1052
+#6  0x00017296 in receiveCallback (src=0x200064f8 <s_macRxStack+2136>, dst=0x20006500 <s_macRxStack+2144>, data=<optimized out>, size=<optimized out>, packetinfo=0x200067ec <s_packetInfo>)
+    at src/communication/lowpan/lowpan_rx.c:44
+#7  0x000187da in processReceivedDataFrame (data=0x200065e0 <s_packetData> "i\334]", packetInfo=0x200067ec <s_packetInfo>, size=110) at src/communication/mac/mac_rx.c:368
+#8  macRxTask (arg=<optimized out>) at src/communication/mac/mac_rx.c:653
+#9  0x0004ecfc in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
+
 
 
 
