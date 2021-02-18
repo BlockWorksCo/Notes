@@ -33415,6 +33415,11 @@ HardFault in mbedtls (due to heap corruption).
 #25 0x0004eff0 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
+------------------------
+gnuplot chart
+
+
+sed -n -e "s/.*CPU load: \(.*\)%/\1/p" < /Data/Logs/node280.log |  feedgnuplot --points --legend 0 "data 0" --title "Test plot" --y2 1 --terminal 'dumb 120,40' --exit
 
 
 
