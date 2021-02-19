@@ -33430,13 +33430,20 @@ FS issues:
 
 
 
-~/ProduceNode.sh 00-1B-C5-0C-60-09-13-6B usb-FTDI_TTL232R_FTATHSMB-if00-port0
+
+usb-FTDI_TTL232R_FTATOVZP-if00-port0
+READ flash id: 1f 47 00
+Unsupported flash id: 1f 47 00
+No flash
 
 
+usb-FTDI_TTL232R_FTG4DKEY-if00-port
+READ flash id: ff ff ff
+Unsupported flash id: ff ff ff
+No flash
 
 
-
-
+usb-FTDI_TTL232R_FTATOW2K-if00-port0 
 
 
 
