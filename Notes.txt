@@ -33542,7 +33542,10 @@ headers on the dev board I think.
 - Ignore all the talk about low-energy and power-modes, we're not interested in the PRS for that,
 we're just looking to make a trace of the radio output.
 - Some examples exist (https://www.silabs.com/community/mcu/32-bit/forum.topic.html/prs_and_le_periphera-2AhC)
-that aren't quite what we want but show you the sort of code that we need.
+that aren't quite what we want but show you the sort of code that we need. We need to select
+the radio as the source(s) and GPIO's as the destination.
+- Need to decide which pins to route the signals to based on the GPIO functionality table in the
+EFR32 reference manual (e.g PA0 can take PRS_CH6/7/8/9).
 
 
 
