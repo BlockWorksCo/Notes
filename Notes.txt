@@ -33539,6 +33539,10 @@ processor reading and writing to/from them.
 - The code is just for a demo and may involve some hardware "hacks" i.e. wiring to the GPIOs to
 allow us to monitor them. During development, we should be able to get these lines out via the
 headers on the dev board I think.
+- Ignore all the talk about low-energy and power-modes, we're not interested in the PRS for that,
+we're just looking to make a trace of the radio output.
+- Some examples exist (https://www.silabs.com/community/mcu/32-bit/forum.topic.html/prs_and_le_periphera-2AhC)
+that aren't quite what we want but show you the sort of code that we need.
 
 
 
