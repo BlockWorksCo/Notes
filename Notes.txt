@@ -33546,6 +33546,9 @@ that aren't quite what we want but show you the sort of code that we need. We ne
 the radio as the source(s) and GPIO's as the destination.
 - Need to decide which pins to route the signals to based on the GPIO functionality table in the
 EFR32 reference manual (e.g PA0 can take PRS_CH6/7/8/9).
+- The RAILTest application can apparently do what we want, but we need this feature integrated
+into our Agent. You can apparently generate a RAILTest application via SimplicityStudio to see
+the source.
 
 
 
