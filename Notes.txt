@@ -33453,6 +33453,11 @@ No flash
 one device shows "bad config magic", HMAC failure on /configuration.pb
 but when placed into different debug board allows to be configured fine and comes up fine.
 
+one device still shows flash failures with last byte of id zeroed. All others seem to identify flash ok
+when on my dev board.
+
+one node would not receive packets unless antenna was attached, this is in the office with a
+gw a few metres away.
 
 
 
