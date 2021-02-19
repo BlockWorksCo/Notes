@@ -33579,7 +33579,8 @@ void enableDebugGpios(void)
 (from https://docs.silabs.com/rail/2.4/efr32-main)
 
 
-- The sources we want are described at (https://silabs-prod.adobecqms.net/content/usergenerated/asi/cloud/content/siliconlabs/en/community/wireless/proprietary/knowledge-base/jcr:content/content/primary/blog/rail_tutorial_debug-NbEG.social.0.10.html)
+- The sources we want are described at 
+(https://silabs-prod.adobecqms.net/content/usergenerated/asi/cloud/content/siliconlabs/en/community/wireless/proprietary/knowledge-base/jcr:content/content/primary/blog/rail_tutorial_debug-NbEG.social.0.10.html)
 with the (unhelpful) line: "The last two signals are direct outputs of the modem (just before modulation for tx and after demodulation for rx). They don't have proper names, so the recommended way to access them is to increment PRS_MODEM_PRESENT..."
 "MODEM" in this case is the radio on the EFR32.
 i.e.
@@ -33587,6 +33588,13 @@ PRS_MODEM_PRESENT+1	CUSTOM_PRS 0x56 0x6	Modem clock out
 PRS_MODEM_PRESENT+2	CUSTOM_PRS 0x56 0x7	Modem data out
 (taken from the table)
 
+
+----------------------------------------
+radio throughput bitrate
+
+A module named "radiostress" has been implemented that can send MAC frames and ICMPv6 pings. It is triggered by RPC commands (see the RPC page on the wiki).
+
+The throughput on the lowpan layer is measured to about 1700 bytes/s of payload (for 100B payloads, which is the maximum). That figure was measured in a non-quiet environment, so both CSMA collisions and dropped frames makes it lower than what could be achieved in an ideal lab system.
 
 
 
