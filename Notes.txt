@@ -33444,6 +33444,10 @@ No flash
 
 
 usb-FTDI_TTL232R_FTATOW2K-if00-port0 
+READ flash id: 1f 47 00
+Unsupported flash id: 1f 47 00
+No flash
+
 
 
 
