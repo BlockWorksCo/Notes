@@ -33455,8 +33455,9 @@ but when placed into different debug board allows to be configured fine and come
 
 one device still shows flash failures with last byte of id zeroed. All others seem to identify flash ok
 when on my dev board.
+flash failure seems intermittent.
 
-one node would not receive packets unless antenna was attached, this is in the office with a
+two node would not receive packets unless antenna was attached, this is in the office with a
 gw a few metres away.
 
 
