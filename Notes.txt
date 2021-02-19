@@ -33551,6 +33551,32 @@ into our Agent. You can apparently generate a RAILTest application via Simplicit
 the source.
 - Example on GitHub of using PRS (https://github.com/SiliconLabs/peripheral_examples/blob/master/series1/prs/logic_unit/src/em_prs.c)
 
+#include "em_cmu.h"
+#include "em_prs.h"
+#include "em_gpio.h"
+#include "em_device.h"
+void enableDebugGpios(void)
+{
+  // Turn on the PRS and GPIO clocks to access their registers.
+  CMU_ClockEnable(cmuClock_PRS, true);
+  CMU_ClockEnable(cmuClock_GPIO, true);
+  // Configure PC10 as an output.
+  GPIO_PinModeSet(gpioPortC, 10, gpioModePushPull, 0);
+  // Configure PRS Channel 0 to output RAC_RX.
+  PRS_SourceSignalSet(0,
+                      ((PRS_RAC_RX & _PRS_CH_CTRL_SOURCESEL_MASK)
+                       >> _PRS_CH_CTRL_SOURCESEL_SHIFT),
+                      ((PRS_RAC_RX & _PRS_CH_CTRL_SIGSEL_MASK)
+                       >> _PRS_CH_CTRL_SIGSEL_SHIFT),
+                      prsEdgeOff);
+  // Configure PRS Channel 0 to use output location 12 (PC10 - see data sheet).
+  PRS->ROUTELOC0 &= ~_PRS_ROUTELOC0_CH0LOC_MASK;
+  PRS->ROUTELOC0 |= PRS_ROUTELOC0_CH0LOC_LOC12;
+  // Enable PRS Channel 0.
+  PRS->ROUTEPEN |= PRS_ROUTEPEN_CH0PEN;
+}
+
+(from https://docs.silabs.com/rail/2.4/efr32-main)
 
 
 
