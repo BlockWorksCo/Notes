@@ -33462,6 +33462,70 @@ gw a few metres away.
 
 
 
+----------------------------------------------------
+oSo, regarding capturing the transmitted packet, yes that should be possible
+
+(section 4.1.2 in https://www.silabs.com/documents/public/application-notes/an972-efr32-rf-eval-guide.pdf
+AN972: EFR32 RF Evaluation Guide - Silicon Labs
+AN972: EFR32 RF Evaluation Guide This evaluation guide provides an easy way to evaluate the performance of the Wire-less Gecko EFR32 devices using the Silicon Labs Radio Abstraction Interface Layer
+www.silabs.com
+)
+
+ 
+
+Basically, the EFR32 has the ability to transmit what is effectively a SPI waveform of the data prior to it being modulated.
+
+ 
+
+The complexity is in configuring the internal peripheral routing system and there is a risk that we can't configure it to come out of a (convenient) GPIO.
+
+ 
+
+Guessing that it would take (roughly) a few days to a week to get it going (or at least bottom out investigating it).
+
+ 
+
+Once done tho, the feature would be useful for getting the BER (instead of PER) test working, so its not entirely wasted work.
+
+ 
+
+SteveT
+Ok, the actual DLMS-profile content contained within a packet will make up (at a guess) ~60% of the bits transmitted. The data is also encrypted, making it non human-readable (which may work in our favour).
+
+If needed, I think we can get the raw packet data (as transmitted) including, sync, preamble, payload, header, etc which will show the correct bit-rate, but the real picture is much more complex than that.
+
+It may be more appropriate to setup a demo sending simulated profile samples to the server and measuring at that point (assuming the uplink isn't a bottleneck). If we do go down that route, we may also want to make it a raw UDP packet test rather than protobuf-encoded samples (which just adds overhead).
+
+SteveT
+
+ 
+
+A few points to consider before the engg team get too deep into feasibility/estimation:
+
+ 
+
+Do we have a risk that packetized data is not the same as constant transmission?
+
+i.e. Even if we had an air rate of 100kbps you would not have 100k bits coming out of the module per second?
+
+If MEA want to count up the data and divide by the time then they will see a lower number.
+
+ 
+
+Do we have a second risk that MEA see the air data is not DLMS over UDP?
+This is probably what some of their team expects and demoing differently may take the lid off another can of worms.
+
+ 
+
+Assuming the above risks can be managed, we could make the proposal better by also capturing the logs for the original DLMS conversation using our standard debug log.
+
+These logs are essential for justifying our effective bitrate statements.
+(I know MEA are asking to see the raw bitrate at this point but we should also stand by our RFP commitment on effective bitrate.)
+
+ 
+
+Matt
+
 
 
 
