@@ -33549,6 +33549,8 @@ EFR32 reference manual (e.g PA0 can take PRS_CH6/7/8/9).
 - The RAILTest application can apparently do what we want, but we need this feature integrated
 into our Agent. You can apparently generate a RAILTest application via SimplicityStudio to see
 the source.
+- Example on GitHub of using PRS (https://github.com/SiliconLabs/peripheral_examples/blob/master/series1/prs/logic_unit/src/em_prs.c)
+
 
 
 
