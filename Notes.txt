@@ -33450,6 +33450,10 @@ No flash
 
 
 
+one device shows "bad config magic", HMAC failure on /configuration.pb
+but when placed into different debug board allows to be configured fine and comes up fine.
+
+
 
 
 
