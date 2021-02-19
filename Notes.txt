@@ -33525,6 +33525,18 @@ These logs are essential for justifying our effective bitrate statements.
  
 
 Matt
+-----------------------------------------------------------------
+- Investigate PRS channels in the EFR32 with an aim to getting the radio symbol data to be
+output from a GPIO. It should look like a SPI waveform (i.e. clock & data traces). We hopefully
+can redirect the traces to LED GPIOs on an IPA3 module.
+- See https://www.silabs.com/documents/public/application-notes/an972-efr32-rf-eval-guide.pdf 
+section 4.1.2 for an example of what we want.
+- Aim is to demonstrate that the rate that we transmit data from the radio.
+- The trace shown in 4.1.2 is taken from a USB logic analyser monitoring the 2xGPIOs.
+- PRS == Peripheral Reflex System (https://www.silabs.com/documents/public/application-notes/an0025-efm32-prs.pdf)
+and is used to wire together peripherals such that they can communicate without the use of the
+processor reading and writing to/from them.
+
 
 
 
