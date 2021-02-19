@@ -33536,6 +33536,10 @@ section 4.1.2 for an example of what we want.
 - PRS == Peripheral Reflex System (https://www.silabs.com/documents/public/application-notes/an0025-efm32-prs.pdf)
 and is used to wire together peripherals such that they can communicate without the use of the
 processor reading and writing to/from them.
+- The code is just for a demo and may involve some hardware "hacks" i.e. wiring to the GPIOs to
+allow us to monitor them. During development, we should be able to get these lines out via the
+headers on the dev board I think.
+
 
 
 
