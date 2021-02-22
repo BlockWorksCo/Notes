@@ -33622,7 +33622,11 @@ static const SlotEntry s_filenameToSlotMap[] = {
 };                                                                         
 
 For the SETTINGS_service:
-
+All parameters are listed in config_parameters.xml along with their type.
+Types are mapped as follows:
+- CC Integer values -> CH Int.
+- CC Boolean values -> CH Int.
+- CC String values -> CH String.
 
 
 
