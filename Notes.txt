@@ -33638,6 +33638,17 @@ Wi-SUN EAPOL frames
 EAP-TLS PANA using UDP?
 
 
+"https://security.stackexchange.com/questions/3477/tls-at-layer-4-but-802-1x-eap-tls-at-layer-2"
+"EAP-TLS is not TLS, it does not provide a tunnel for data; it is a protocol which reuses parts of the handshake which occurs at the beginning of a TLS connection"
+
+
+https://tools.ietf.org/html/rfc5216
+This document defines EAP-Transport Layer Security (EAP-TLS), which
+   includes support for certificate-based mutual authentication and key
+   derivation, utilizing the protected ciphersuite negotiation, mutual
+   authentication and key management capabilities of the TLS protocol,
+   described in "The Transport Layer Security (TLS) Protocol
+   Version 1.1" [RFC4346]. 
 
 
 
