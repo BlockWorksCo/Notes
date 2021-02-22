@@ -33633,6 +33633,9 @@ Types are mapped as follows:
 GW7 review
 
 
+------------------------------------------------
+Wi-SUN EAPOL frames
+EAP-TLS PANA using UDP?
 
 
 
