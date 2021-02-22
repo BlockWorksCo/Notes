@@ -33596,8 +33596,33 @@ A module named "radiostress" has been implemented that can send MAC frames and I
 The throughput on the lowpan layer is measured to about 1700 bytes/s of payload (for 100B payloads, which is the maximum). That figure was measured in a non-quiet environment, so both CSMA collisions and dropped frames makes it lower than what could be achieved in an ideal lab system.
 
 -------------------------------------
+SMIPDEV-180
 
-All our use of the FILE_service uses files opened with "FILE_Open"
+- All our use of the FILE_service uses files opened with "FILE_Open"
+
+The mappings use enumerations that we are not privy to, but our
+enumerations/mappings are as follows:
+
+static const SlotEntry s_filenameToSlotMap[] = {                           
+        { FILE_NAME_ACTIVITY_REPORT, FILE_ConActivityReportSlot },         
+        { FILE_NAME_FILEDL_ENCRYPTED, FILE_ConFwDlEncryptedFileSlot },     
+        { FILE_NAME_FILEDL_CLEARTEXT, FILE_ConFwDlFileSlot },              
+        { FILE_NAME_FILEDL_STATE, FILE_ConFwDlStateSlot },                 
+        { FILE_NAME_MACSEC_STATE, FILE_ConMacSecStateSlot },               
+        { "/mq/000.mq", FILE_ConMsgQ0Slot },                               
+        { "/mq/001.mq", FILE_ConMsgQ1Slot },                               
+        { "/mq/002.mq", FILE_ConMsgQ2Slot },                               
+        { "/mq/003.mq", FILE_ConMsgQ3Slot },                               
+        { "/mq/004.mq", FILE_ConMsgQ4Slot },                               
+        { "/mq/005.mq", FILE_ConMsgQ5Slot },                               
+        { "/mq/006.mq", FILE_ConMsgQ6Slot },                               
+        { "/mq/007.mq", FILE_ConMsgQ7Slot },                               
+        { "/mq/008.mq", FILE_ConMsgQ8Slot },                               
+        { "/mq/009.mq", FILE_ConMsgQ9Slot },                               
+};                                                                         
+
+For the SETTINGS_service:
+
 
 
 
