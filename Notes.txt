@@ -33595,6 +33595,9 @@ A module named "radiostress" has been implemented that can send MAC frames and I
 
 The throughput on the lowpan layer is measured to about 1700 bytes/s of payload (for 100B payloads, which is the maximum). That figure was measured in a non-quiet environment, so both CSMA collisions and dropped frames makes it lower than what could be achieved in an ideal lab system.
 
+-------------------------------------
+
+All our use of the FILE_service uses files opened with "FILE_Open"
 
 
 
