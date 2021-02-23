@@ -33657,6 +33657,8 @@ Show contents of dp_config:
 
 cat AgentState/dp_config | protoc --decode_raw
 
+protoc --decode DataProfileConfigPb src/device/addons/dataprofile/dataprofile.proto < AgentState/dp_config
+
 
 
 
