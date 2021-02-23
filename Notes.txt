@@ -33650,6 +33650,14 @@ This document defines EAP-Transport Layer Security (EAP-TLS), which
    described in "The Transport Layer Security (TLS) Protocol
    Version 1.1" [RFC4346]. 
 
+------------------------------------------
+Show contents of dp_config:
+
+ ~/pbd `cat AgentState/dp_config | od -t x1 -A none -v | sed -e "s/ //g" | tr -d "\n"`
+
+cat AgentState/dp_config | protoc --decode_raw
+
+
 
 
 
