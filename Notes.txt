@@ -33653,6 +33653,8 @@ This document defines EAP-Transport Layer Security (EAP-TLS), which
 ------------------------------------------
 Show contents of dp_config:
 
+./tools/c4-tools/coap_request.py --ctrlporthub :5000 --fs-read /dp_config
+
  ~/pbd `cat AgentState/dp_config | od -t x1 -A none -v | sed -e "s/ //g" | tr -d "\n"`
 
 cat AgentState/dp_config | protoc --decode_raw
