@@ -33710,6 +33710,11 @@ config {
 - 1.0.98.1.0.255
 - 0.0.99.98.2.255
 
+---------------------------------------------------
+mbedtls crash:
+- Got one node boot event in one meter node out of 10 on 25th Jan. - "S~BVipa3-sei-dlms-mbedtls:v21.2.0+b26852+gea47914 Hdt DV14@6da72L6da41S20001c60"
+(Crash in free, known & fixed, MALLOCZ & heap/platform integration issues).
+
 
 
 
