@@ -33718,16 +33718,16 @@ mbedtls crash:
 -----------------------------------------
 SMIP v20.2.0 resource requirements:
 
-s_coapTaskStack         =
-s_dtlsTaskStack         =
-s_uplinkTxStack         =
-s_lowpanTxStack         =
-s_macRxStack            =
-s_rplStack              =
-s_filedlStack           =
-s_scheduleTaskStack     =
-s_cc1200TaskStack       =
-s_terminalTaskStack     =
+s_coapTaskStack         = 512   = 2048b
+s_dtlsTaskStack         = 400   = 1600b
+s_uplinkTxStack         = 150   = 600b
+s_lowpanTxStack         = 250   = 1000b
+s_macRxStack            = 350   = 1400b
+s_rplStack              = 400   = 1600b
+s_filedlStack           = 400   = 1600b
+s_scheduleTaskStack     = 360   = 1440b
+s_cc1200TaskStack       = 200   = 800b
+s_terminalTaskStack     = 400   = 1600b
 
 
 
