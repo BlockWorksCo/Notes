@@ -33923,6 +33923,10 @@ technical debt
 - Robust (atomic) configuration.
 - Communications watchdog.
 - Recovery mechanism.
+- Common programming mechanism.
+- Documentation (HLD).
+- Profiling for server (for performance issues).
+- dev-stack: integration of dev-conf, outstanding bugs, usability.
 
 
 
