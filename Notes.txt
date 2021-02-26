@@ -33927,21 +33927,21 @@ technical debt
 - Communications watchdog. Provide a recovery mechanism if comms are ever lost.
 - Recovery mechanism. Ability to recover node to a safe image if OTA ever goes bad.
 - Common programming mechanism. e.g. Use FTDI programmers throughout instead of Jlink/STLInk/FTDI combinations.
-- Documentation (HLD).
-- Profiling for server (for performance issues).
-- dev-stack: integration of dev-conf, outstanding bugs, usability.
+- Documentation (HLD). Improve development speed by sharing knowledge.
+- Profiling for server (for performance issues). Server always under pressure for performance, this provides data to make that possible.
+- dev-stack: integration of dev-conf, outstanding bugs, usability. Currently has different issues for everyone.
 - sample-timestamps-on-SMA: At this point, we know it fixes so many issues, I consider it tech-debt.
-- Static analysis.
-- Fuzz Testing.
-- Agent is over-tasked: remove some to reduce resource-usage.
+- Static analysis. Just goood practice.
+- Fuzz Testing. Just goood practice.
+- Agent is over-tasked: remove some to reduce resource-usage. Allow us to flexible as to platform in future.
 - Manage global meter-driver state better (needed for MDCU work).
-- Simplify abstractions: "AddOns" is pointless for example.
-- Prioritisation in Agent mq.
-- MISRA issues. Specifically function pointer usage and no handling of return-values.
-- Use of AXDR library instead of direct byte manipulation.
-- Meter-driver is *seriously* inefficient regarding HDLC comms with the meter, AA setup overhead is ridiculous.
-- Configuration re-org (using aliases)
-- Test automation
+- Simplify abstractions: "AddOns" is pointless for example. Part of reducing the amount of code we maintain.
+- Prioritisation in Agent mq. Eases a lot of problems (e.g. last-gasp would have been easier if we had this).
+- MISRA issues. Specifically function pointer usage and no handling of return-values. Good practice & something that we can use to indicate our quality.
+- Use of AXDR library instead of direct byte manipulation. Part of makign meter-driver more maintainable & consistent.
+- Meter-driver is *seriously* inefficient regarding HDLC comms with the meter, AA setup overhead is ridiculous. Needed for MDCU also. Reduces timing issues sucah as queue overflows.
+- Configuration re-org (using aliases). Simplify for end-user.
+- Test automation. I consider any manual-test as technical debt.
 
 
 
