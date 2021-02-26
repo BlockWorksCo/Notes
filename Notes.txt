@@ -33942,6 +33942,7 @@ technical debt
 - Meter-driver is *seriously* inefficient regarding HDLC comms with the meter, AA setup overhead is ridiculous. Needed for MDCU also. Reduces timing issues sucah as queue overflows.
 - Configuration re-org (using aliases). Simplify for end-user.
 - Test automation. I consider any manual-test as technical debt.
+- Improve power-control.
 
 
 
