@@ -33783,6 +33783,7 @@ Oh yeah... connection to the tranceiver is SPI to a CC1200 (we currently don't h
 mbedtls upgrade/downgrade issue:
 
 Bad:
+
 <HDLC len="75" >
 <TargetAddress Value="1" />
 <SourceAddress Value="1" />
@@ -33810,6 +33811,7 @@ Bad:
   </InitiateRequest>
 </AssociationRequest>
 </PDU>
+
 </HDLC>
 <HDLC len="87" >
 <TargetAddress Value="1" />
@@ -33848,43 +33850,71 @@ Bad:
 
 
 Good:
-<HDLC len="106" >
+
+<HDLC len="75" >
 <TargetAddress Value="1" />
 <SourceAddress Value="1" />
 <!--AARQ frame.-->
 <FrameType Value="10" />
 <PDU>
 <AssociationRequest>
-  <ApplicationContextName Value="LN_WITH_CIPHERING" />
-  <CallingAPTitle Value="4D4D4D0000BC614E" />
+  <ApplicationContextName Value="LN" />
   <SenderACSERequirements Value="1" />
-  <MechanismName Value="HighGMac" />
+  <MechanismName Value="High" />
   <CallingAuthentication Value="30654537456363633938356635344342" />
-  <glo_InitiateRequest Value="30000000D0B5E3EC1479BE4A6E6CAFC8C5FB34AC18D8F61FD4AB790F14EDB3" />
+  <InitiateRequest>
+    <ProposedDlmsVersionNumber Value="6" />
+    <ProposedConformance>
+      <ConformanceBit Name="Action" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="MultipleReferences" />
+      <ConformanceBit Name="BlockTransferWithAction" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </ProposedConformance>
+    <ProposedMaxPduSize Value="65535" />
+  </InitiateRequest>
 </AssociationRequest>
 </PDU>
+
 </HDLC>
-<HDLC len="118" >
+<HDLC len="87" >
 <TargetAddress Value="1" />
 <SourceAddress Value="1" />
 <!--AARE frame.-->
 <FrameType Value="30" />
 <PDU>
 <AssociationResponse>
-  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <ApplicationContextName Value="LN" />
   <AssociationResult Value="0" />
   <ResultSourceDiagnostic>
     <!--AUTHENTICATION_REQUIRED-->
     <ACSEServiceUser Value="14" />
   </ResultSourceDiagnostic>
-  <RespondingAPTitle Value="5354412003699019" />
   <ResponderACSERequirement Value="1" />
-  <RespondingAuthentication Value="77BBDDEE77BB5DAE57ABD56AB55A2D96" />
-  <MechanismName Value="HighGMac" />
-  <glo_InitiateResponse Value="30000000D0B64A14677721E7C51FDF65549AC50FD4A84F74141824AA6A3A2F" />
+  <RespondingAuthentication Value="793C9ECF67B359AC56ABD56AB55A2D96" />
+  <MechanismName Value="High" />
+  <InitiateResponse>
+    <NegotiatedDlmsVersionNumber Value="6" />
+    <NegotiatedConformance>
+      <ConformanceBit Name="Action" />
+      <ConformanceBit Name="SelectiveAccess" />
+      <ConformanceBit Name="Set" />
+      <ConformanceBit Name="Get" />
+      <ConformanceBit Name="MultipleReferences" />
+      <ConformanceBit Name="BlockTransferWithSetOrWrite" />
+      <ConformanceBit Name="BlockTransferWithGetOrRead" />
+    </NegotiatedConformance>
+    <NegotiatedMaxPduSize Value="256" />
+    <VaaName Value="7" />
+  </InitiateResponse>
 </AssociationResponse>
 </PDU>
 </HDLC>
+
+
 
 
 
