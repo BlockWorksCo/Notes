@@ -33715,6 +33715,20 @@ mbedtls crash:
 - Got one node boot event in one meter node out of 10 on 25th Jan. - "S~BVipa3-sei-dlms-mbedtls:v21.2.0+b26852+gea47914 Hdt DV14@6da72L6da41S20001c60"
 (Crash in free, known & fixed, MALLOCZ & heap/platform integration issues).
 
+-----------------------------------------
+SMIP v20.2.0 resource requirements:
+
+s_coapTaskStack         =
+s_dtlsTaskStack         =
+s_uplinkTxStack         =
+s_lowpanTxStack         =
+s_macRxStack            =
+s_rplStack              =
+s_filedlStack           =
+s_scheduleTaskStack     =
+s_cc1200TaskStack       =
+s_terminalTaskStack     =
+
 
 
 
