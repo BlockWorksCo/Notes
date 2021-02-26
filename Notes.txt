@@ -33914,6 +33914,12 @@ Good:
 </PDU>
 </HDLC>
 
+----------------------------------------------
+technical debt
+
+- Improve ability to debug in the field. debug-log-to-file, sniff-to-file, coordinated-net-stats
+- Meter-driver complexity.
+- 
 
 
 
