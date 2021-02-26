@@ -33937,6 +33937,8 @@ technical debt
 - MISRA issues. Specifically function pointer usage and no handling of return-values.
 - Use of AXDR library instead of direct byte manipulation.
 - Meter-driver is *seriously* inefficient regarding HDLC comms with the meter, AA setup overhead is ridiculous.
+- Configuration re-org (using aliases)
+- 
 
 
 
