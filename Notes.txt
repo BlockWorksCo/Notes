@@ -33920,13 +33920,16 @@ technical debt
 - Improve ability to debug in the field. debug-log-to-file, sniff-to-file, coordinated-net-stats.
 - Meter-driver complexity.
 - Robust credentials upgrade.
-- Robust (atomic) configuration.
+- Robust (atomic, versioned) configuration (meter & node).
 - Communications watchdog.
 - Recovery mechanism.
 - Common programming mechanism.
 - Documentation (HLD).
 - Profiling for server (for performance issues).
 - dev-stack: integration of dev-conf, outstanding bugs, usability.
+- sample-timestamps-on-SMA: At this point, we know it fixes so many issues, I consider it tech-debt.
+- Static analysis.
+- Fuzz Testing.
 
 
 
