@@ -33757,6 +33757,28 @@ RAM-wise: ~70KB (static) + 16KB (stack) + ~30KB (heap) = 116KB
 
 
 
+(Slack discussion with Matt).
+
+Yes, we need a multitasking OS (of any description really, we currently support FreeRTOS, Linux & whatever the modem is running in SMIP). We have an abstraction layer to adapt and no difficult requirement other than basic tasks/mutex/semaphores/queues/etc.
+09:58
+We do have a "high-res" timer that helps us, but is not a requirement
+09:58
+generally, timing requirements are on the order of 10's of milliseconds, not microseconds for example.
+09:59
+a "Nice to have" is a dedicated debug-log channel for our ctrlporthub.... that has been a sore point in SMIP development.
+09:59
+We can support either a dedicated HSM (as in SMIP) or our own filesystem (which can also be adapted to the host).
+10:01
+CPU-usage requirements tend to be pretty low as we're dealing with ~1KB/second of data max, so on a 38MHzCortex-M, our typical CPU-usage is ~2%
+10:04
+Regarding how we transfer data to/from the cellular side, we have a dedicated API for that that is effectively equivalent to PPP on a modem.
+10:06
+Architecture-wise, we can support most. SMIP is an ARMv7 (think original RPi), we obviously support ARM-Cortex-M, x86 (linux), ARMhf (linux). Again, we have an abstraction layer for this stuff.
+10:07
+(Thats all that comes to mind right now).
+10:09
+Oh yeah... connection to the tranceiver is SPI to a CC1200 (we currently don't have drivers for anything other than CC1200 or EFR32 unfortunately).
+
 
 
 
