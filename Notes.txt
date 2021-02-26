@@ -33917,9 +33917,13 @@ Good:
 ----------------------------------------------
 technical debt
 
-- Improve ability to debug in the field. debug-log-to-file, sniff-to-file, coordinated-net-stats
+- Improve ability to debug in the field. debug-log-to-file, sniff-to-file, coordinated-net-stats.
 - Meter-driver complexity.
-- 
+- Robust credentials upgrade.
+- Robust (atomic) configuration.
+- Communications watchdog.
+- Recovery mechanism.
+
 
 
 
