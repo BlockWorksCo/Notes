@@ -33743,6 +33743,21 @@ s_terminalTaskStack     = 400   = 1600b
 Total                           = 13688b
 
 
+Heap-wise, there is (unfortunately) a lot of dynamic allocation going on, so peak usage is not
+easily to determine statically.
+For guidance, the heap on the IPA1 version of the above code is ~60KB in size, so that represents
+a maximum.
+I do know that we don't come anywhere near using all of that in the SMIP encironment which is 
+relatively light, so conservatively halve that to 30KB heap.
+
+
+So...
+Code-wise: <400KB
+RAM-wise: ~70KB (static) + 16KB (stack) + ~30KB (heap) = 116KB
+
+
+
+
 
 
 
