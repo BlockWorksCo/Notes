@@ -33718,8 +33718,15 @@ mbedtls crash:
 -----------------------------------------
 SMIP v20.2.0 resource requirements:
 
+Regarding the library itself, 'size' reports:
+
+   text	   data	    bss	    dec	    hex	filename
+ 321223	  12682	  54885	 388790	  5eeb6	c4_agent.o (ex smip-v20.2.0_libc4-smip-v20.2.0.a)
+
+But...
 Stack space is unknown as it is managed by the host-OS in SMIP, presumably via a dynamic
-stack mechanism as it has an MMU.
+stack mechanism as it has an MMU. For this reason, in the library, the stack-sizes are 
+zero bytes long so don't reflect their actual resource requirements.
 For guidance, the IPA1 (STM32) stack sizes are:
 
 s_coapTaskStack         = 512   = 2048b
@@ -33734,6 +33741,7 @@ s_cc1200TaskStack       = 200   = 800b
 s_terminalTaskStack     = 400   = 1600b
 
 Total                           = 13688b
+
 
 
 
