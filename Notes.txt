@@ -33930,6 +33930,13 @@ technical debt
 - sample-timestamps-on-SMA: At this point, we know it fixes so many issues, I consider it tech-debt.
 - Static analysis.
 - Fuzz Testing.
+- Agent is over-tasked: remove some to reduce resource-usage.
+- Manage global meter-driver state better (needed for MDCU work).
+- Simplify abstractions: "AddOns" is pointless for example.
+- Prioritisation in Agent mq.
+- MISRA issues. Specifically function pointer usage and no handling of return-values.
+- Use of AXDR library instead of direct byte manipulation.
+- 
 
 
 
