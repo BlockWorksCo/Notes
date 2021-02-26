@@ -33921,12 +33921,12 @@ Good:
 technical debt
 
 - Improve ability to debug in the field. debug-log-to-file, sniff-to-file, coordinated-net-stats.
-- Meter-driver complexity.
-- Robust credentials upgrade.
-- Robust (atomic, versioned) configuration (meter & node).
-- Communications watchdog.
-- Recovery mechanism.
-- Common programming mechanism.
+- Meter-driver complexity. Speed up meter-integration.
+- Robust credentials upgrade. Could be disastrous if it goes wrong in the field as meters could be bricked (not nodes).
+- Robust (atomic, versioned) configuration (meter & node). Provide proper control over version of configuration on nodes&meter.
+- Communications watchdog. Provide a recovery mechanism if comms are ever lost.
+- Recovery mechanism. Ability to recover node to a safe image if OTA ever goes bad.
+- Common programming mechanism. e.g. Use FTDI programmers throughout instead of Jlink/STLInk/FTDI combinations.
 - Documentation (HLD).
 - Profiling for server (for performance issues).
 - dev-stack: integration of dev-conf, outstanding bugs, usability.
