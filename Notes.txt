@@ -33718,6 +33718,10 @@ mbedtls crash:
 -----------------------------------------
 SMIP v20.2.0 resource requirements:
 
+Stack space is unknown as it is managed by the host-OS in SMIP, presumably via a dynamic
+stack mechanism as it has an MMU.
+For guidance, the IPA1 (STM32) stack sizes are:
+
 s_coapTaskStack         = 512   = 2048b
 s_dtlsTaskStack         = 400   = 1600b
 s_uplinkTxStack         = 150   = 600b
@@ -33728,6 +33732,8 @@ s_filedlStack           = 400   = 1600b
 s_scheduleTaskStack     = 360   = 1440b
 s_cc1200TaskStack       = 200   = 800b
 s_terminalTaskStack     = 400   = 1600b
+
+Total                           = 13688b
 
 
 
