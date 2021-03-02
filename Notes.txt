@@ -33945,6 +33945,11 @@ technical debt
 - Improve power-control.
 
 
+----------------------------------------------
+pcap analysis:
+
+tshark -r 10plus10.pcap -Y "ipv6.addr eq 2a03:dd00:803:3::149" -T fields -e data | xxd -r -p | strings > tt
+
 
 
 
