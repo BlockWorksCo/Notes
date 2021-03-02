@@ -33949,6 +33949,8 @@ technical debt
 pcap analysis:
 
 tshark -r 10plus10.pcap -Y "ipv6.addr eq 2a03:dd00:803:3::149" -T fields -e data | xxd -r -p | strings > tt
+tshark -r 10plus10.pcap -T fields -e frame.time -e ipv6.src -e ipv6.dst -e udp.port -E header=y -E separator=,
+
 
 
 
