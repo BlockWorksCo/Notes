@@ -33956,6 +33956,7 @@ cat t2.tsv | sed -e "s/$(echo -ne '\u2192')/->/g" > t3.csv
 
 SELECT DATE_ADD(DATE(`frame.time`), INTERVAL (HOUR(`frame.time`)*60*60 + MINUTE(`frame.time`)*60 + SECOND(`frame.time`)) SECOND) AS __timestamp, COUNT(*) AS count FROM `PacketTrace` GROUP BY DATE_ADD(DATE(`frame.time`), INTERVAL (HOUR(`frame.time`)*60*60 + MINUTE(`frame.time`)*60 + SECOND(`frame.time`)) SECOND) LIMIT 50000
 
+tshark -r 10plus10.pcap -T fields -e data | xxd -r -p | strings
 
 ------------------------------------
 cluster issue
