@@ -33958,6 +33958,9 @@ SELECT DATE_ADD(DATE(`frame.time`), INTERVAL (HOUR(`frame.time`)*60*60 + MINUTE(
 
 tshark -r 10plus10.pcap -T fields -e data | xxd -r -p | strings
 
+tshark -r 10plus10.pcap -T fields -e data -e frame.time -E separator=@ | python3 -c $'import binascii;import sys;\nfor line in sys.stdin: r=line.split("@");r[0]=binascii.unhexlify(r[0]).decode("utf-8");print("@".join(r))'
+
+
 ------------------------------------
 cluster issue
 
