@@ -34016,6 +34016,17 @@ ok, for next years hols, I'll book April 5th->9th and August 2nd to 6th an 30/31
 
 
 
+------------------------------------------------------------------
+Wi-SUN notes:
+- What:
+    - Our naming is not great. Omnimesh-the-application and Omnimesh-the-mesh.
+- Why:
+    - interoperability
+    - standards compliance
+    - market has spoken.
+- Omnimesh vs Wi-SUN overview
+    - Authentication
+    - interoperability: Omnimesh
 
 
 
