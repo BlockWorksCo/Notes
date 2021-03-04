@@ -34026,9 +34026,12 @@ Wi-SUN notes:
     - market has spoken.
 - Omnimesh vs Wi-SUN overview
     - Authentication
+        - bottom-up as opposed to top-down in Omnimesh.
+        - Cooperates with licensing/provisioning.
     - interoperability: Omnimesh
     - FHSS (Frequency Hopping Spread Spectrum)
-        - Avoids interference
+        - Uses a wide frequency band and only transmits on each frequency for a small amount of time (milliseconds).
+        - Avoids interference (certain types of noise can be avoided)
         - Difficult to jam due to need to know hopping-schedule or use wide-band jammer which is energy intensive.
         - 
 
@@ -34036,6 +34039,9 @@ Things that are the same:
     - Application (SMA & Agent)
     - RPL
     - DTLS
+    - 802.15.4
+    - IPv6
+    - CoAP
 
 Things that are different:
     - Authentication
