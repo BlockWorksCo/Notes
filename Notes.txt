@@ -34009,6 +34009,11 @@ ucast_recv_buf_size 5M
     "sendOffline":true,"type":"IncomingMessage"
 }
 
+--------------------------------
+holiday:
+
+ok, for next years hols, I'll book April 5th->9th and August 2nd to 6th an 30/31st of August.
+
 
 
 
