@@ -33973,6 +33973,8 @@ RemoteDTLSService::expireConnection()
 DTLSConnectionRegistry
 DTLSConnectionMigrator
 
+https://confluence.cyco.io/display/ENG/%5BDesignSpec%5D+C4+-+Terminal+State+Management+on+Server+Side
+
 
 
 
