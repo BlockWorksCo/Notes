@@ -33995,9 +33995,17 @@ ucast_recv_buf_size 5M
                 "address":"2a03:dd00:251:30f2:8873:8402:1a:33e1",
                 "port":5684
             },
-             "terminalType":"GATEWAY","hardwareVersion":"PRODUCTION_SKU2","firmwareVersion":"smip:v90","isDnsUpdated":false,"dbTerminalId":877123049,"configurationHash":"a11b5ebce1920aa776717bb3a4e4864b"}"
-             ,"class":"com.connode.service.terminal.app.Login","terminal_id":"8a738402001a33e1"},
-             "sendOffline":true,"type":"IncomingMessage"
+            "terminalType":"GATEWAY",
+            "hardwareVersion":"PRODUCTION_SKU2",
+            "firmwareVersion":"smip:v90",
+            "isDnsUpdated":false,
+            "dbTerminalId":877123049,
+            "configurationHash":"a11b5ebce1920aa776717bb3a4e4864b"
+        }",
+        "class":"com.connode.service.terminal.app.Login",
+        "terminal_id":"8a738402001a33e1"
+    },
+    "sendOffline":true,"type":"IncomingMessage"
 }
 
 
