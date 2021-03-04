@@ -34045,6 +34045,8 @@ Things that are the same:
 
 Things that are different:
     - Authentication
+    - radio/PHY layer uses different parts of 802.15.4. Not compatible with Omnimesh-mesh.
+    - Gateway now has a role to play other than "dumb router".
 
 
 
