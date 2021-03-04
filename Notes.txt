@@ -33985,7 +33985,8 @@ ucast_recv_buf_size 5M
 {
     "payload":
     {
-        "message_type":"Login","message":
+        "message_type":"Login",
+        "message":
         "{
             "nodeId":"8a738402001a33e1",
             "aliasId":"88738402001A33E1",
