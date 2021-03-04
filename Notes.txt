@@ -33975,6 +33975,10 @@ DTLSConnectionMigrator
 
 https://confluence.cyco.io/display/ENG/%5BDesignSpec%5D+C4+-+Terminal+State+Management+on+Server+Side
 
+nms/config/cluster_view.xml:
+mcast_recv_buf_size 5M
+ucast_recv_buf_size 5M
+
 
 
 
