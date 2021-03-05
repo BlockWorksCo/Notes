@@ -34013,7 +34013,7 @@ ucast_recv_buf_size 5M
 Traffic rates per minute during ramp up:
 UDP:        454k    296k    165k    93.1k
 DTLSv1.2:   1.36k   545     25      11
-multiple:
+multiple:   333     543     303     843
 
 
 --------------------------------
