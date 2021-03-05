@@ -34055,6 +34055,12 @@ Things that are different:
     - radio/PHY layer uses different parts of 802.15.4. Not compatible with Omnimesh-mesh.
     - Gateway now has a role to play other than "dumb router".
 
+---------------------------------------
+ble bluetooth sniffer
+
+https://jimmywongiot.com/2020/07/08/how-to-install-nrf-sniffer-through-nrf52-dk-board/
+
+
 
 
 
