@@ -34009,6 +34009,13 @@ ucast_recv_buf_size 5M
     "sendOffline":true,"type":"IncomingMessage"
 }
 
+
+Traffic rates per minute during ramp up:
+UDP:        454k    296k    165k    93.1k
+DTLSv1.2:   1.36k   545     25      11
+multiple:
+
+
 --------------------------------
 holiday:
 
