@@ -34060,6 +34060,58 @@ ble bluetooth sniffer
 
 https://jimmywongiot.com/2020/07/08/how-to-install-nrf-sniffer-through-nrf52-dk-board/
 
+---------------------------------------
+
+Guys, 
+I've been looking at the "10+10 load" dataset and have some points to share.
+
+The above chart shows the total number of packets passed between the cluster-nodes during the period in question (JGroups traffic).
+The points to note here are:
+The traffic scales up smoothly and linearly up until just under the 8K packets/second mark.
+After this point, the traffic rate becomes chaotic, but the average rate stays at about the 8K packets/second rate (i.e. no real increase in traffic rate after this point).
+Note that there is a short period of no traffic, after which, the chaotic period appears to start. In fact, on closer inspection, the chaotic pattern actually starts just prior to that point.
+From examination of both the server code and the packet trace, we can see that for every packet received from an Agent, a corresponding multicast packet is transmitted to the other cluster-nodes.
+The linear ramp in traffic we see in these charts is directly due to a cluster-message being sent for every "FileBlock" request received.
+
+
+The above chart is similar to the first with the exception of the fact that the data is now grouped by the source-address.
+Note that now:
+The first phase is still a linear and smooth increase up till the same point, but...
+The maximum spread of the second (chaotic) phase now can be seen to continue its upward trend while its average stays flat at around 2K packets/second (per source address). 
+The interpretation of the above two charts is that in the second chart, the rate of packets does actually continue its upward trend but when combined together (as in the first chart), the total rate is exceeds a maximum and is then clipped to that maximum (roughly 2K packets/second). 
+The alternative here is that the rate naturally tops out at the 2K packets/second. This is unlikely due to the fact we can see the rate from each source increasing.
+
+It is proposed that the chaotic pattern could be due to the limited size of the JGroups input queue causing lost packets and a consequent oscillation in the transfer rate which is due to the scheduling and queuing characteristics of the code in question.
+
+
+This theory is borne out by the above chart showing the rate that "cluster_view_member" messages are received from each cluster-node (server).
+These messages are sent out at 1Hz from each cluster-node and seem to act as a heartbeat indicating the health of each server to the rest of the cluster.
+
+The initial part of the chart, which corresponds to the smooth/linear increase phase in the first two charts shows "heartbeats" at a constant 1Hz for all servers. During the chaotic traffic phase, we can see the heartbeat rate drop drastically and continue its downward trend slightly as the traffic rate increases.
+
+It is proposed that the "flapping" of server alarms is a result of the amount of internal cluster-traffic overloading the JGroups input queue. This overload subsequently causes "cluster_view_member" messages (heartbeats) to be dropped.
+
+What can we do about it?
+
+As was already proposed (and tried out), in the short term, the "mcast_recv_buf_size" should be scaled to accomodate the number of nodes in the cluster. The reason why this had a beneficial effect can now be seen. By providing a larger receive-buffer, the threshold at which the pattern becomes chaotic is pushed back (to a new higher limit which was not quite sufficient in that case).
+
+This should be however, a temporary fix. The real issue is that the internal cluster traffic scales linearly with the number of packets received. This is precisely the problem we have seen here, where the heaviest external traffic (file distribution) causes a storm of internal cluster traffic which ultimately overloads the receive buffer.
+Since the size of the buffer handling this traffic does not scale with the size of the cluster, it will always have a threshold at which the behaviour becomes chaotic (as here).
+
+ What we should aim for (and I think we can achieve) is to scale linearly (or better than linearly) with the number of nodes instead.
+ Since the whole purpose of the cluster updates is to indicate the "liveness" of each Agent session, this can instead be done by a periodic update between servers that indicate to the rest of the cluster all the nodes that are "alive" in that period. This is as opposed to each server sending out an internal message for every packet received from an Agent. This is a mechanism that scales better than linearly with the number of nodes as opposed to the number of packets-transferred.
+
+ It's also worth noting that this could also have a significant effect on performance during other stressful scenarios such as mass login & registration.
+
+ The next steps should be to prove this effect internally with different size queues versus different cluster sizes and then provide a deployment guideline that scales this buffer size with the cluster-size.
+
+ Once this is shown to be the correct interpretation of the data, then we can move to removing (or at least reducing) this factor as a performance bottleneck.
+
+ SteveT
+
+
+
+
 
 
 
