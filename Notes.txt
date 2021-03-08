@@ -34111,6 +34111,21 @@ Since the size of the buffer handling this traffic does not scale with the size 
 
 
 
+----------------------------------------
+EFR32fg12p
+QFN48
+
+pins:
+PB12 - 
+PB13 - 
+
+
+
+
+
+
+
+
 
 
 
