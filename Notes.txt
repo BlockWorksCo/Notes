@@ -34116,8 +34116,8 @@ EFR32fg12p
 QFN48
 
 pins:
-PB12 - 
-PB13 - 
+PB12 - PRS_CH6/7/8/9
+PB13 - PRS_CH6/7/8/9 
 
 
 
