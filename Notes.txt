@@ -33962,6 +33962,8 @@ tshark -r 10plus10.pcap -T fields -e data -e frame.time -E separator=@ | python3
 
 tshark -r 10plus10.pcap -T fields -e data -e frame.time -e ipv6.src -e ipv6.dst -e udp.port -e ip.proto -e ip.len -e ip.src -e ip.dst -e _ws.col.Protocol -e _ws.col.Info  -E separator=@ | python3 -c $'import binascii;import sys;import re;\nfor line in sys.stdin: r=line.split("@");r[0]=re.sub("[^\w\{\},\\" ;:]+","",binascii.unhexlify(r[0]).decode("utf-8",errors="ignore"));print("@".join(r));' | strings
 
+tshark -r trace3.pcap -Y "udp.port eq 45588" -V > t
+
 PacketTrace_JGroups:
 ./ParsePackets.sh > t5.csv
 
