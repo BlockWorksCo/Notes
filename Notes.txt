@@ -34143,6 +34143,9 @@ dto.setServerTime(SerializationUtils.format(meterSample.getCreateTime()));
 dto.setNodeTime(SerializationUtils.format(meterSample.getMqTime()));              
 
 
+sampleTime  = 
+serverTime  = create Time == time at node that wrapper was created.
+nodeTime    = mqTime
 
 
 
