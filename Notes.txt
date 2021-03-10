@@ -34121,6 +34121,18 @@ pins:
 PB12 - PRS_CH6/7/8/9
 PB13 - PRS_CH6/7/8/9 
 
+-------------------------------------------
+setup:
+
+gw:
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 5001 -serial /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0  -loglevel debug -logfile /Data/Logs/node285.log
+
+main node:
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 5000 -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0 -loglevel debug -logfile /Data/Logs/node286.log
+
+interferer node:
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 5003 -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0 -loglevel debug
+
 
 
 
