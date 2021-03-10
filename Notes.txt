@@ -34155,6 +34155,15 @@ persistBatch()
 MessageWithPayloads
 MessagePayload
 
+[{'alarmActive': ['METER_LAST_GASP'],
+  'alarmTime': '2021-03-10T19:08:23+00:00',
+  'createTime': '2021-03-10T19:08:25Z',
+  'meterAlarmId': 165757,
+  'meterId': '5701333',
+  'sequenceNumber': 12401}]
+
+
+
 
 
 
