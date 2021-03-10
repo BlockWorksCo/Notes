@@ -34133,6 +34133,14 @@ main node:
 interferer node:
 ./build/host-ctrlporthub/bin/ctrlporthub -controllerport 5003 -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0 -loglevel debug
 
+---------------------------------
+sample time server time create time
+
+DeviceMapper.java:
+
+dto.setSampleTime(SerializationUtils.format(meterSample.getSampleTime()));        
+dto.setServerTime(SerializationUtils.format(meterSample.getCreateTime()));        
+dto.setNodeTime(SerializationUtils.format(meterSample.getMqTime()));              
 
 
 
