@@ -34163,6 +34163,13 @@ MessagePayload
   'sequenceNumber': 12401}]
 
 
+columns in SMA db:
+mq_time
+create_time
+
+
+select id,create_time,mq_time,TIMEDIFF(create_time,mq_time) from meter_sample;
+
 
 
 
