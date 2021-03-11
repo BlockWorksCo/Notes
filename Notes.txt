@@ -34176,6 +34176,14 @@ create_time:
 select id,create_time,mq_time,TIMEDIFF(create_time,mq_time) from meter_sample;
 
 
+API response from:
+
+In deviceMapper.java, function  covertDeviceAlarmToDTO()
+result.setRegisteredTime(SerializationUtils.format(deviceAlarm.getCreateTime()));
+        result.setAlarmTime(SerializationUtils.format(deviceAlarm.getAlarmTime()));
+
+
+
 
 
 
