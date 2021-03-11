@@ -34164,8 +34164,12 @@ MessagePayload
 
 
 columns in SMA db:
-mq_time
-create_time
+
+mq_time:
+    - From sample.setMqTime(profileMessage.getTimestamp());in DataProfileSampleMessageProcessor.
+create_time:
+    - From sample.setCreateTime(new Date()); in DataProfileSampleMessageProcessor.java.
+    - Current time.
 
 
 select id,create_time,mq_time,TIMEDIFF(create_time,mq_time) from meter_sample;
