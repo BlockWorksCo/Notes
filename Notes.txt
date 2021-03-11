@@ -34167,8 +34167,9 @@ columns in SMA db:
 
 mq_time:
     - From sample.setMqTime(profileMessage.getTimestamp());in DataProfileSampleMessageProcessor.
+    - 
 create_time:
-    - From sample.setCreateTime(new Date()); in DataProfileSampleMessageProcessor.java.
+    - deviceAlarm.setCreateTime(new Date()); in DeviceAlarmMessageProcessor.java
     - Current time.
 
 
