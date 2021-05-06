@@ -35526,7 +35526,8 @@ TEF SMIP
 - ethtool -S <if>
 - /proc/net/udp6 (5684 == 0x1634)
 - /proc/net/tcp6 
-
+- JavaTop
+- jstack -e `pgrep java` > ThreadDumpWith167KNode.log
 
 
 
