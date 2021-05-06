@@ -35534,6 +35534,9 @@ TEF SMIP
 - sysctl net.ipv6.route.max_size=524288
 - net.ipv4.route.max_size = 2147483647
 - net.ipv6.route.max_size = 4096
+- iftop
+- iotop
+- htop
 
 
 
