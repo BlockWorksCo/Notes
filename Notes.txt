@@ -35513,6 +35513,11 @@ while true; do ~/terminal-emulator -server fd00::100 -tun6d 172.16.32.110 -tun6d
 
 dev-stack --pkidir ~/smip setup -p smip -n 1 -e -a 1 -g 1
 
+--------------------------------------------------------
+WiSUN stack integration:
+
+clone from git@github.com:SiliconLabs/proprietary_wisun_stack.git
+git archive master | tar -x -C ../terminalGL/3pp/SiLabsWiSUNStack/src
 
 
 
