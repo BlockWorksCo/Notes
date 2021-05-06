@@ -35527,7 +35527,11 @@ TEF SMIP
 - /proc/net/udp6 (5684 == 0x1634)
 - /proc/net/tcp6 
 - JavaTop
-- jstack -e `pgrep java` > ThreadDumpWith167KNode.log
+- jstack -e `pgrep java` 
+- server.log ("queue full", "JGRP").
+- iperf gives same errors?
+- logging amount? Try disabling logging?
+- sysctl net.ipv6.route.max_size=524288
 
 
 
