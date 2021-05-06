@@ -35519,6 +35519,14 @@ WiSUN stack integration:
 clone from git@github.com:SiliconLabs/proprietary_wisun_stack.git
 git archive master | tar -x -C ../terminalGL/3pp/SiLabsWiSUNStack/src
 
+---------------------------
+TEF SMIP
+
+- netstat -s <if>
+- ethtool -S <if>
+- /proc/net/udp6 (5684 == 0x1634)
+- /proc/net/tcp6 
+
 
 
 
