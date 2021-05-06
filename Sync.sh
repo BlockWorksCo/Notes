@@ -2,7 +2,7 @@
 
 set -e
 
-cd ~/BlockWorks/Notes
+cd ~/Notes
 git add -A .
 git commit -am WIP
 git pull
