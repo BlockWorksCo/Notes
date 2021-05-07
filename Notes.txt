@@ -35542,6 +35542,7 @@ TEF SMIP
 - jstat
 - jstack
 - jmap -histo 256331
+- jmap -dump:live,format=b,file=/tmp/dump.hprof 256331 
 
 
 ----------------------------------
