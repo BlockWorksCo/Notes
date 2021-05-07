@@ -35587,6 +35587,32 @@ com.connode.dtls.DTLSMasterSecretException: No server security public key found 
 - CSS wont load
 - JGRP issues
 
+:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12026], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:34,458 INFO  [UI-http-132] HealthCheckServlet - HealthCheckServlet initiated
+2021-05-07 15:44:35,309 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12032], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:36,309 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12033], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:36,560 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (57 bytes), headers: FD_ALL: heartbeat, UDP: [channel_name=cluster_view]
+2021-05-07 15:44:37,397 INFO  [coap-scavenger] [job=20, meshnet=fd5b:2b5b:5bc4:259a, node=00-00-00-00-00-00-25-9b] MeshNetworkExecutableJob - ENTER meshNetworkJobTaskCompleted meshNetworkPrefix=fd5b:2b5b:5bc4:259a
+2021-05-07 15:44:37,408 INFO  [executor-pool-02] [user=sysadmin] MeshNetworkExecutableJob - EXIT meshNetworkJobTaskCompleted meshNetworkPrefix=fd5b:2b5b:5bc4:259a
+2021-05-07 15:44:42,561 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (57 bytes), headers: FD_ALL: heartbeat, UDP: [channel_name=cluster_view]
+2021-05-07 15:44:44,311 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12041], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:44,539 INFO  [UI-http-132] HealthCheckServlet - HealthCheckServlet initiated
+2021-05-07 15:44:45,311 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12042], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:46,311 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12043], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:47,311 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12044], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:48,311 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12045], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:49,311 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12046], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:51,312 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12048], UDP: [channel_name=cluster_view]
+2021-05-07 15:44:54,561 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (57 bytes), headers: FD_ALL: heartbeat, UDP: [channel_name=cluster_view]
+2021-05-07 15:44:54,630 INFO  [UI-http-131] HealthCheckServlet - HealthCheckServlet initiated
+2021-05-07 15:44:57,561 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (57 bytes), headers: FD_ALL: heartbeat, UDP: [channel_name=cluster_view]
+2021-05-07 15:45:00,317 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12057], UDP: [channel_name=cluster_view]
+2021-05-07 15:45:03,318 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12060], UDP: [channel_name=cluster_view]
+2021-05-07 15:45:04,318 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (219 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=12061], UDP: [channel_name=cluster_view]
+2021-05-07 15:45:04,711 INFO  [UI-http-131] HealthCheckServlet - HealthCheckServlet initiated
+2021-05-07 15:45:06,562 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (57 bytes), headers: FD_ALL
+
+
 
 
 
