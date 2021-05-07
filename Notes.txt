@@ -35541,7 +35541,7 @@ TEF SMIP
 - containerise my setup for them to run... that wouldd isolate platform or software.
 - jstat
 - jstack
-- jmap
+- jmap -histo 256331
 
 
 ----------------------------------
