@@ -35540,6 +35540,51 @@ TEF SMIP
 - Disable health-check/ load-balancing setup.
 
 
+----------------------------------
+16 server, 25K logged in, 20,500 gw file download jobs.
+
+:0:0:e408:808:45588 (222 bytes), headers: NAKACK2: [MSG, seqno=9886], UDP: [channel_name=cluster_view]                                                                                                             
+2021-05-07 15:29:45,516 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:
+0:0:e408:808:45588 (57 bytes), headers: FD_ALL: heartbeat, UDP: [channel_name=cluster_view]                                                                                                                        
+2021-05-07 15:29:46,265 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (289 bytes): java.lang.Exception: dest=/ff0e:0:0:0
+:0:0:e408:808:45588 (292 bytes), headers: NAKACK2: [MSG, seqno=9892], UDP: [channel_name=cluster_view]                                                                                                             
+2021-05-07 15:29:46,390 INFO  [UI-http-120] HealthCheckServlet - HealthCheckServlet initiated                                                                                                                      
+2021-05-07 15:29:46,533 WARN  [Incoming-2,cluster_view,nms-0(nms-0)] [user=sysadmin] RemoteDTLSService - Unable to encrypt master secret to send the connection to remoteServer=nms-3                              
+com.connode.dtls.DTLSMasterSecretException: No server security public key found for encryption                                                                                                                     
+        at com.connode.service.terminal.session.NodeStorageProvider.encryptMasterSecret(NodeStorageProvider.java:234)                                                                                              
+        at com.connode.dtls.DTLSConnection.getState(DTLSConnection.java:1302)                                                                                                                                      
+        at com.connode.service.ha.dtls.RemoteDTLSService.consumeGetConnectionMessage(RemoteDTLSService.java:356)                                                                                                   
+        at com.connode.service.ha.dtls.RemoteDTLSService.consumeMessage(RemoteDTLSService.java:335)                                                                                                                
+        at com.connode.service.ha.view.ClusterViewService.receive(ClusterViewService.java:357)                                                                                                                     
+        at org.jgroups.JChannel.up(JChannel.java:738)                                                                                                                                                              
+        at org.jgroups.stack.ProtocolStack.up(ProtocolStack.java:1019)                                                                                                                                             
+        at org.jgroups.stack.Protocol.up(Protocol.java:409)                                                                                                                                                        
+        at org.jgroups.protocols.RSVP.up(RSVP.java:221)                                                                                                                                                            
+        at org.jgroups.protocols.FRAG2.up(FRAG2.java:182)                                                                                                                                                          
+        at org.jgroups.protocols.FlowControl.up(FlowControl.java:434)                                                                                                                                              
+        at org.jgroups.protocols.FlowControl.up(FlowControl.java:434)                                                                                                                                              
+        at org.jgroups.stack.Protocol.up(Protocol.java:409)                                                                                                                                                        
+        at org.jgroups.protocols.pbcast.STABLE.up(STABLE.java:294)                                                                                                                                                 
+        at org.jgroups.protocols.UNICAST3.removeAndDeliver(UNICAST3.java:792)                                                                                                                                      
+        at org.jgroups.protocols.UNICAST3.handleDataReceived(UNICAST3.java:704)                                                                                                                                    
+        at org.jgroups.protocols.UNICAST3.up(UNICAST3.java:382)                                                                                                                                                    
+        at org.jgroups.protocols.pbcast.NAKACK2.up(NAKACK2.java:600)                                                                                                                                               
+        at org.jgroups.protocols.BARRIER.up(BARRIER.java:103)                                                                                                                                                      
+        at org.jgroups.protocols.VERIFY_SUSPECT.up(VERIFY_SUSPECT.java:147)                                                                                                                                        
+        at org.jgroups.protocols.FD_ALL.up(FD_ALL.java:184)                                                                                                                                                        
+        at org.jgroups.protocols.FD_SOCK.up(FD_SOCK.java:301)                                                                                                                                                      
+        at org.jgroups.protocols.MERGE2.up(MERGE2.java:209)                                                                                                                                                        
+        at org.jgroups.protocols.Discovery.up(Discovery.java:379)                                                                                                                                                  
+        at org.jgroups.protocols.TP.passMessageUp(TP.java:1404)                                                                                                                                                    
+        at org.jgroups.protocols.TP$MyHandler.run(TP.java:1590)                                                                                                                                                    
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)                                                                                                                         
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)                                                                                                                         
+        at java.lang.Thread.run(Thread.java:748)                                                                                                                                                                   
+2021-05-07 15:29:46,961 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP -
+
+
+- CSS wont load
+- JGRP issues
 
 
 
