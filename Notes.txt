@@ -35537,7 +35537,7 @@ TEF SMIP
 - iftop
 - iotop
 - htop
-- Disable health-check
+- Disable health-check/ load-balancing setup.
 
 
 
