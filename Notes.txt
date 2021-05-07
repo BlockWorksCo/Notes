@@ -35538,6 +35538,7 @@ TEF SMIP
 - iotop
 - htop
 - Disable health-check/ load-balancing setup.
+- containerise my setup for them to run... that wouldd isolate platform or software.
 
 
 ----------------------------------
