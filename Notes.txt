@@ -35617,6 +35617,13 @@ com.connode.dtls.DTLSMasterSecretException: No server security public key found 
 2021-05-07 15:45:06,562 ERROR [TransferQueueBundler,cluster_view,nms-0(nms-0)] [user=sysadmin] UDP - JGRP000029: nms-0(nms-0): failed sending message to cluster (54 bytes): java.lang.Exception: dest=/ff0e:0:0:0:0:0:e408:808:45588 (57 bytes), headers: FD_ALL
 
 
+------------------------------
+bluetooth anker earphones
+
+bluetooth scan on
+bluetoothctl connect 7A:5B:C5:7C:70:7E
+
+
 
 
 
