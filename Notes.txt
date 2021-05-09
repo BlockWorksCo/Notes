@@ -35625,9 +35625,12 @@ bluetoothctl connect 7A:5B:C5:7C:70:7E
 
 -----------------------------
 
+Keep alives:
 200,000 keepalives every 3600s = 56/sec
 @91b each = 5KB/sec
 
+fwup:
+10000 nodes in 20jobs = 20 simultaneouts jobs: 128b every second = 2.5KB/sec
 
 
 
