@@ -35623,6 +35623,10 @@ bluetooth anker earphones
 bluetooth scan on
 bluetoothctl connect 7A:5B:C5:7C:70:7E
 
+-----------------------------
+
+200,000 keepalives every 3600s = 56/sec
+@91b each = 5KB/sec
 
 
 
