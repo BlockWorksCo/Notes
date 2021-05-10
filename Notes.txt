@@ -35620,7 +35620,7 @@ com.connode.dtls.DTLSMasterSecretException: No server security public key found 
 ------------------------------
 bluetooth anker earphones
 
-bluetooth scan on
+bluetoothctl scan on
 bluetoothctl connect 7A:5B:C5:7C:70:7E
 
 -----------------------------
