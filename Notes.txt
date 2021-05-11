@@ -35632,6 +35632,14 @@ Keep alives:
 fwup:
 10000 nodes in 20jobs = 20 simultaneouts jobs: 128b every second = 2.5KB/sec
 
+-----------------------------------
+pki xfs
+
+sudo losetup /dev/loop21 ~/pki_smip_xfs.img
+sudo mount /dev/loop21 ~/smip              
+
+
+
 
 
 
