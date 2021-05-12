@@ -35661,6 +35661,8 @@ Login_500gw_2npgw_1nms.sh                       -
 <6>[172.16.21.3:38340] Peer 02-00-40-cd-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a523::/64
 <6>[172.16.21.4:44009] Peer 02-01-75-c8-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a524::/64
 
+sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel debug --prefix=fd5b:2b5b::/40
+
 
 
 
