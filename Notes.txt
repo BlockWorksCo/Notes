@@ -35647,6 +35647,20 @@ Login_50000gw_3npgw_1nms_filedl_20x500jobs.sh   -
 Login_500gw_2npgw_1nms.sh                       -
 
 
+------------------------
+
+ connected with prefix fd5b:2b5b:5bc4:a51a::/64                                                    
+<6>[172.16.21.3:43069] Peer 02-00-40-c9-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a51b::/64                                                    
+<6>[172.16.21.4:40211] Peer 02-01-75-c4-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a51c::/64                                                    
+<6>[172.16.21.3:55789] Peer 02-00-40-ca-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a51d::/64
+<6>[172.16.21.4:51404] Peer 02-01-75-c5-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a51e::/64
+<6>[172.16.21.3:49721] Peer 02-00-40-cb-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a51f::/64
+<6>[172.16.21.4:50558] Peer 02-01-75-c6-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a520::/64
+<6>[172.16.21.3:36280] Peer 02-00-40-cc-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a521::/64
+<6>[172.16.21.4:40461] Peer 02-01-75-c7-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a522::/64
+<6>[172.16.21.3:38340] Peer 02-00-40-cd-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a523::/64
+<6>[172.16.21.4:44009] Peer 02-01-75-c8-00-00-00-01 connected with prefix fd5b:2b5b:5bc4:a524::/64
+
 
 
 
