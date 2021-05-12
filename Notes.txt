@@ -35638,6 +35638,14 @@ pki xfs
 sudo losetup /dev/loop21 ~/pki_smip_xfs.img
 sudo mount /dev/loop21 ~/smip              
 
+-----------------------------------
+
+Login_10000gw_2npgw_1nms_filedl_20x500jobs.sh   - 78 minutes
+Login_10000gw_2npgw_1nms.sh                     -
+Login_50000gw_1npgw_1nms_filedl_20x500jobs.sh   - 87 minutes
+Login_50000gw_3npgw_1nms_filedl_20x500jobs.sh   -
+Login_500gw_2npgw_1nms.sh                       -
+
 
 
 
