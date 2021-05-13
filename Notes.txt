@@ -27858,14 +27858,17 @@ Note: STM32 on IPA1 is 5v tolerant.
 
 Release process:
 - Gitlab: repository->tags->new tag.
-- Enter tag name and message with even-numbered tag name & message.
+- Enter tag name and message with even-numbered tag name & message. (e.g. v21.2)
 - Create tag.
-- Repeat for dev tag (odd numbered). 
+- Repeat for dev tag (odd numbered). (e.g. v21.3)
 - Repository->branches->new branch
 - Create "release/v20.8.x" branch
 - Enter branch name 
 - Create Branch
 - Request build of new branch, CI/CD->pipelines->Run pipeline-> Run for branch, run pipeline
+
+even == release
+odd = dev
 
 --------------------------------
 
