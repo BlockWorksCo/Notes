@@ -35625,6 +35625,8 @@ bluetooth anker earphones
 
 bluetoothctl scan on
 bluetoothctl connect 7A:5B:C5:7C:70:7E
+bluetoothctl connect AC:12:2F:50:79:36
+
 
 -----------------------------
 
