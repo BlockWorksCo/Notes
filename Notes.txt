@@ -35668,6 +35668,10 @@ Login_500gw_2npgw_1nms.sh                       -
 
 sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel debug --prefix=fd5b:2b5b::/40
 
+-------------------------------
+wisun set wisun.network_name tickles
+wisun set wisun.regulatory_domain 3
+
 
 
 
