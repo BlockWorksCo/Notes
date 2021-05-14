@@ -35720,6 +35720,8 @@ wisun PC side
 
 docker pull silabswisun/backhaul-connection
 docker network create --driver macvlan --opt parent=enp0s3 wisun-net
+docker run -ti --privileged --network=wisun-net silabswisun/backhaul-connection --shell
+
 
 
 
