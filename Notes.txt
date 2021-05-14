@@ -35715,6 +35715,11 @@ wisun set wisun.network_size 4
 
 wisun start
 
+------------------------------------------
+wisun PC side
+
+docker pull silabswisun/backhaul-connection
+docker network create --driver macvlan --opt parent=enp0s3 wisun-net
 
 
 
