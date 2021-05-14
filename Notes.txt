@@ -35669,9 +35669,34 @@ Login_500gw_2npgw_1nms.sh                       -
 sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel debug --prefix=fd5b:2b5b::/40
 
 -------------------------------
+https://github.com/SiliconLabs/proprietary_wisun_applications/blob/master/documentation/create_your_first_wisun_network.md
+
 wisun set wisun.network_name tickles
 wisun set wisun.regulatory_domain 3
+wisun set wisun.operating_class 3
+wisun set wisun.operating_mode 26
+wisun set wisun.network_size 4
 
+> wisun get wisun
+wisun.network_name = "tickles"
+wisun.regulatory_domain = EU (3)
+wisun.operating_class = 3
+wisun.operating_mode = 0x1a
+wisun.network_size = test (4)
+wisun.tx_power = 20
+wisun.channel_mask.000-031 = 0xffffffff
+wisun.channel_mask.032-063 = 0xffffffff
+wisun.channel_mask.064-095 = 0xffffffff
+wisun.channel_mask.096-127 = 0xffffffff
+wisun.channel_mask.128-159 = 0xffffffff
+wisun.channel_mask.160-191 = 0xffffffff
+wisun.channel_mask.192-223 = 0xffffffff
+wisun.channel_mask.224-255 = 0xffffffff
+wisun.join_state = 0
+wisun.mac = 90:fd:9f:ff:fe:6d:5e:05
+
+
+wisun start
 
 
 
