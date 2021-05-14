@@ -35695,6 +35695,8 @@ wisun.channel_mask.224-255 = 0xffffffff
 wisun.join_state = 0
 wisun.mac = 90:fd:9f:ff:fe:6d:5e:05
 
+wisun save
+
 
 wisun start
 
