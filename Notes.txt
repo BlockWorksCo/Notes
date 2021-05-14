@@ -35669,6 +35669,8 @@ Login_500gw_2npgw_1nms.sh                       -
 sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel debug --prefix=fd5b:2b5b::/40
 
 -------------------------------
+wisun node
+
 https://github.com/SiliconLabs/proprietary_wisun_applications/blob/master/documentation/create_your_first_wisun_network.md
 
 wisun set wisun.network_name tickles
@@ -35700,6 +35702,10 @@ wisun save
 
 wisun start
 
+
+---------------------------------------
+wisun router
+/Data/Projects/proprietary_wisun_applications/border_router_images/EFR32xG12_BRD41xx/wisun_border_router_cli.bin
 
 
 
