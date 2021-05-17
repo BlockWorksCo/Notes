@@ -35746,5 +35746,9 @@ sudo sysctl -q net.ipv6.conf.default.accept_ra=2
 sudo sysctl -q net.ipv6.conf.all.accept_ra=2
 
 
+wisun.ip_addresses = [ll: fe80::92fd:9fff:fe6d:5ff8 gua: fda4:805e:3355:1dc9:92fd:9fff:fe6d:5ff8 dodagid: fd00:6172:6d00:0:92fd:9fff:fe6d:5ff8]
+
+
+sudo /Data/Scripts/init-container.sh site_local -s /dev/serial/by-id/usb-Silicon_Labs_J-Link_Pro_OB_0004401820
 
 
