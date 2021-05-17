@@ -35754,6 +35754,6 @@ sudo /Data/Scripts/init-container.sh site_local -s /dev/serial/by-id/usb-Silicon
 wisun.ip_addresses = [ll: fe80::92fd:9fff:fe6d:5ff8 gua: fd00:7283:7e00:0:92fd:9fff:fe6d:5ff8 dodagid: fd00:6172:6d00:0:92fd:9fff:fe6d:5ff8]
 
 
-sudo /Data/Scripts/init-container.sh subnet -s /dev/serial/by-id/usb-Silicon_Labs_J-Link_Pro_OB_0004401820
+sudo /Data/Scripts/init-container.sh subnet fe80:1:2:3:4::1 -s /dev/serial/by-id/usb-Silicon_Labs_J-Link_Pro_OB_0004401820
 
 
