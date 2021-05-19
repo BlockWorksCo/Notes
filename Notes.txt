@@ -35756,4 +35756,17 @@ wisun.ip_addresses = [ll: fe80::92fd:9fff:fe6d:5ff8 gua: fd00:7283:7e00:0:92fd:9
 
 sudo /Data/Scripts/init-container.sh subnet fe80:1:2:3:4::1 -s /dev/serial/by-id/usb-Silicon_Labs_J-Link_Pro_OB_0004401820
 
+---------------------------------------------------
+wisunbridge container
+
+docker build -t bridge .
+
+docker run -it --rm --name wisunbridge  --privileged bridge:latest  --shell  --device /dev/ttyACM0
+
+docker exec -it wisunbridge tshark -i tun0
+
+docker exec -it wisunbridge JLinkExe -device EFR32MG12PXXXF1024
+
+docker exec -it wisunbridge JLinkRTTClient
+
 
