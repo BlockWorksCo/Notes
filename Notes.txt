@@ -35769,4 +35769,10 @@ docker exec -it wisunbridge JLinkExe -device EFR32MG12PXXXF1024
 
 docker exec -it wisunbridge JLinkRTTClient
 
+----------------------------------------
+server performance issue:
+- upgrade from 16.04 to 18.04 to 20.04
+-  login performance tops out at ~70K on one run, then ~40K on another.
+- significant, unexplained disk I/O
+- mq seems low and constant indicating SMA processing is keeping up.
 
