@@ -35640,8 +35640,10 @@ fwup:
 -----------------------------------
 pki xfs
 
-sudo losetup /dev/loop21 ~/pki_smip_xfs.img
-sudo mount /dev/loop21 ~/smip              
+#sudo losetup /dev/loop21 ~/pki_smip_xfs.img
+#sudo mount /dev/loop21 ~/smip              
+sudo mount -o loop /Data/Temp/pki_smip_xfs.img ~/smip
+
 
 -----------------------------------
 
