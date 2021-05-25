@@ -35788,6 +35788,8 @@ https://wiki.segger.com/J-Link_Commander#Perform_flash_download
 -------------------------------
 bulk mdms api
 
+NMS needs lwm2m API as well as SMA.
+
 ---------------------------------
 lwm2m
 - device management only?
