@@ -35778,6 +35778,13 @@ server performance issue:
 - significant, unexplained disk I/O
 - mq seems low and constant indicating SMA processing is keeping up.
 
+-------------------------
+jlink RTT
+
+https://wiki.segger.com/RTT
+
+https://wiki.segger.com/J-Link_Commander#Perform_flash_download
+
 
 
 
