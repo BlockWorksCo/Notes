@@ -35785,6 +35785,9 @@ https://wiki.segger.com/RTT
 
 https://wiki.segger.com/J-Link_Commander#Perform_flash_download
 
+-------------------------------
+bulk mdms api
+
 
 
 
