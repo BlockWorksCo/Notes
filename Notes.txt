@@ -35796,6 +35796,58 @@ lwm2m
 - bulk, efficient data API?
 - need to store expanded data in db, for lwm2m access.?
 
+-------------------------------------
+alternative MCUs
+
+
+1.) STM32WB50CG microcontroller + S2-LPQTR radio
+
+               Tasks/challenges:
+
+               -Port the code to STM32 platform
+
+               -Radio driver
+
+-Radio is SPI, but we only have 1 SPI in the MCU, which would be shared between the flash and the radio. So, I reckon, either the flash should be removed (that need the work that we already talked about) or we need to ensure that the radio and the flash can work on the same bus.
+
+-No Log UART scenario as the MCU has only 1 UART
+
+-Possible rework of the timers. The MCU has 6 timers (1x advanced, 3x general-purpose, 2x low power)
+
+ 
+
+2.) Rohm ML7436N microcontroller with integrated radio
+
+               Tasks/challenges:
+
+               -Port the code to the Rohm platform
+
+               -Radio driver (it’s integrated into the same package with the MCU, but it works as an external IC, through an SPI and GPIOs)
+
+-We would possibly need to share 1 SPI between the radio/flash, flash/ethernet, radio/ethernet (well, it needs the product manager to decide which functions we want to implement, so it’s early days to tell, but I listed it as a heads up)
+
+               -Possible timer re-configuration. It has 10 timers (4x std 32-bit, 6x multi-function 32-bit), so timers should be ok, I guess.
+
+ 
+
+3.) Renesas RX651 + RAA604S00 radio
+
+               Tasks/challenges:
+
+               -Port the code to the Rohm platform (it’s a completely different architecture - RXv2 Core, 32-bit CISC)
+
+               -Radio driver (SPI). It only supports 860-920MHz range, so it wouldn’t cover the 4xx MHz channels. It will probably be a project killer, but I’d like to give predictions for this option anyway
+
+               -Plenty of peripherals USART, SPI and I2C channels
+
+               -Plenty of timers (up to 25)
+
+               -It’s quite an exotic architecture compared to the ARM solutions, I don’t know what else needs to be re-configured, but I guess that there would be quite a few things…
+
+
+
+
+
 
 
 
