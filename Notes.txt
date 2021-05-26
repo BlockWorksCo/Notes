@@ -35802,6 +35802,7 @@ alternative MCUs
 - STM32+S2 radio
     - radio/PHY layer rewrite (adapt from ARM WiSUN stack?)     - 4w
     - UART driver (adapt from IPA1?)                            - 1w
+    - Clock driver                                              - 1w
     - GPIO driver (adapt from IPA1?)                            - 1w
     - SPI driver                                                - 1w
     - I2C driver                                                - 1w
@@ -35823,6 +35824,7 @@ alternative MCUs
 - Rohm with integrated radio
     - radio/PHY layer rewrite                                   - 1w
     - UART driver                                               - 1w
+    - Clock driver                                              - 1w
     - GPIO driver                                               - 1w
     - SPI driver                                                - 1w
     - I2C driver                                                - 1w
@@ -35840,19 +35842,20 @@ alternative MCUs
           (Can be low latency and in parallel with flash).                                          - 3w
     
 - Renesas RX651 + RAA604S00 radio
-    - toolchain
-    - familiarisation
-    - radio/PHY layer rewrite
-    - UART driver
-    - GPIO driver
-    - I2C driver
-    - SPI driver
-    - RTC driver
-    - RNG driver
-    - Watchdog driver
-    - Internal flash driver
-    - bootloader rewrite
-    - timers
+    - toolchain                                                 - 1w
+    - familiarisation                                           - 1w
+    - radio/PHY layer rewrite                                   - 1w
+    - UART driver                                               - 1w
+    - Clock driver                                              - 1w
+    - GPIO driver                                               - 1w
+    - I2C driver                                                - 1w
+    - SPI driver                                                - 1w
+    - RTC driver                                                - 1w
+    - RNG driver                                                - 1w
+    - Watchdog driver                                           - 1w
+    - Internal flash driver                                     - 1w
+    - bootloader rewrite                                        - 1w
+    - timers                                                    - 1w
 
 - Removal of flash (mostly PoC state on ~2yr old code).
     - circular buffers for MQ in internal-flash.
