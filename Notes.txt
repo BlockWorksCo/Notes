@@ -35948,6 +35948,8 @@ Job management notes.
 - scheduling of jobs
     - manage load on network
     - aim to maintain a given percentage of bandwidth for jobs? bandwidth allocation.
+    - breaking down of large jobs into batches of small jobs.
+    -
 
 
 - on-demand
