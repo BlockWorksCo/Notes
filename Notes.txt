@@ -35944,7 +35944,12 @@ Job management notes.
     - we currently try once and only once.
     - no ability to retry till comoplete.
     - for all types of job.
-- 
+
+- scheduling of jobs
+    - manage load on network
+    - aim to maintain a given percentage of bandwidth for jobs? bandwidth allocation.
+
+
 - on-demand
 
 
