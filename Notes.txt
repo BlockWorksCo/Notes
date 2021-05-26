@@ -35848,8 +35848,15 @@ alternative MCUs
     - RNG driver
     - Watchdog driver
     - Internal flash driver
-    - bootloader adjustments
+    - bootloader rewrite
     - timers
+
+- Removal of flash
+    - circular buffers for MQ in internal-flash.
+    - circular buffers for config in internal-flash.
+    - circular buffers for app-state in internal-flash.
+    - server to store meter-driver state.
+    - size reduction.
 
 
 
