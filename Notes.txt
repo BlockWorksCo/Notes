@@ -35837,6 +35837,17 @@ alternative MCUs
         - Bitbang or timer/CLK trigged DMA SPI to radio over GPIO lines 
           (Can be low latency and in parallel with flash).
     
+- Renesas RX651 + RAA604S00 radio
+    - radio/PHY layer rewrite
+    - UART driver
+    - GPIO driver
+    - I2C driver
+    - RTC driver
+    - RNG driver
+    - Watchdog driver
+    - Internal flash driver
+    - bootloader adjustments
+    - timers
 
 
 
