@@ -35815,14 +35815,18 @@ alternative MCUs
     - SPI-sharing:
         - Use CS to switch between radio & flash, then run SPI quicker than current 8MHz for flash.
           There is only 128b buffer, so latency on larger packets is important.                     - 1w
-        - Remove need for flash (best long term option).                                            -
+        - Remove need for flash (best long term option).                                            - 20w
         - Bitbang or timer/CLK trigged DMA SPI to radio over GPIO lines 
           (Can be low latency and in parallel with flash).                                          - 3w
     - Log UART can be replaced by JLink RTT (common to all boards but requires using a JLink).      - 1w
     (RTT is a much-improved semi-hosting mechanism).
 
+                                                Total (CS)      - 17w
+                                                Total (no flash)- 36w
+                                                Total (bitbang) - 19w
+
 - Rohm with integrated radio
-    - radio/PHY layer rewrite                                   - 1w
+    - radio/PHY layer rewrite                                   - 4w
     - UART driver                                               - 1w
     - Clock driver                                              - 1w
     - GPIO driver                                               - 1w
@@ -35837,13 +35841,13 @@ alternative MCUs
     - SPI-sharing:
         - Use CS to switch between radio & flash, then run SPI quicker than current 8MHz for flash.
           There is only 128b buffer, so latency on larger packets is important.                     - 1w
-        - Remove need for flash (best long term option).                                            - 1w
+        - Remove need for flash (best long term option).                                            - 20w
         - Bitbang or timer/CLK trigged DMA SPI to radio over GPIO lines 
           (Can be low latency and in parallel with flash).                                          - 3w
                                 
-                                                Total (CS)      - 12w+
-                                                Total (no flash)- 12w+
-                                                Total (bitbang) - 12w+
+                                                Total (CS)      - 16w
+                                                Total (no flash)- 35w
+                                                Total (bitbang) - 19w
     
 - Renesas RX651 + RAA604S00 radio
     - toolchain                                                 - 1w
