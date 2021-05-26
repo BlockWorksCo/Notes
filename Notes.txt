@@ -35928,6 +35928,11 @@ MTS & test-jig (Common to all)?
 
                -It’s quite an exotic architecture compared to the ARM solutions, I don’t know what else needs to be re-configured, but I guess that there would be quite a few things…
 
+---------------------------------
+
+Job management notes.
+
+
 
 
 
