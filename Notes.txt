@@ -35940,7 +35940,7 @@ Job management notes.
     - Testing of robustness at scale, SLA attainment rate. 
     - cluster traffic issues on filedl.
 
-- Job anageent retries:
+- Job manageent retries:
     - we currently try once and only once.
     - no ability to retry till comoplete.
     - for all types of job.
@@ -35949,7 +35949,11 @@ Job management notes.
     - manage load on network
     - aim to maintain a given percentage of bandwidth for jobs? bandwidth allocation.
     - breaking down of large jobs into batches of small jobs.
-    -
+    - have to serialise on target address, but do conncurrent targets.
+
+- BIS LITD 128 on demand reads
+    - handling on-demand reads via coap-blockwise.
+    - 
 
 
 - on-demand
