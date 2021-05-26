@@ -35932,6 +35932,14 @@ MTS & test-jig (Common to all)?
 
 Job management notes.
 
+- concurrent jobs for all network types & performance at scale
+    - SLA to complete job regardless of scale
+    - jobs on small numbers in minutes
+    - jobs on large numbers in hours
+    - upgrade jobs in a day.
+    - 
+- 
+- on-demand
 
 
 
