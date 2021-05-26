@@ -35946,19 +35946,19 @@ Job management notes.
     - for all types of job.
 
 - scheduling of jobs
-    - manage load on network
-    - aim to maintain a given percentage of bandwidth for jobs? bandwidth allocation.
+    - Need to manage load on network.
+    - Aim to maintain a given percentage of bandwidth for jobs? bandwidth allocation?
     - breaking down of large jobs into batches of small jobs.
-    - have to serialise on target address, but do conncurrent targets.
+    - have to serialise on target address, but do conncurrent targets up to allocated bandwidth.
+    - allocate according to job priority?
 
-- BIS LITD 128 on demand reads and writes (calendar)
+- BIS LITD 128 requires large on-demand reads requests and large writes (calendar)
     - handling on-demand reads via coap-blockwise.
     - on top of bandwidth management/scheduling to avoid swamping network.
     - No SLA value.
     - reasonable maximums
 
 
-- on-demand
 
 
 
