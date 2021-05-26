@@ -35951,9 +35951,11 @@ Job management notes.
     - breaking down of large jobs into batches of small jobs.
     - have to serialise on target address, but do conncurrent targets.
 
-- BIS LITD 128 on demand reads
+- BIS LITD 128 on demand reads and writes (calendar)
     - handling on-demand reads via coap-blockwise.
-    - 
+    - on top of bandwidth management/scheduling to avoid swamping network.
+    - No SLA value.
+    - reasonable maximums
 
 
 - on-demand
