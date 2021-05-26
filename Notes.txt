@@ -35800,14 +35800,14 @@ lwm2m
 alternative MCUs
 
 - STM32+S2 radio
-    - radio/PHY layer rewrite (adapt from ARM WiSUN stack?)
-    - UART driver (adapt from IPA1?)
-    - GPIO driver (adapt from IPA1?)
-    - I2C driver
-    - RTC driver (adapt from IPA1?)
-    - RNG driver (adapt from IPA1?)
-    - Watchdog driver (adapt from IPA1?)
-    - Internal flash driver (adapt from IPA1?)
+    - radio/PHY layer rewrite (adapt from ARM WiSUN stack?)     - 4w
+    - UART driver (adapt from IPA1?)                            - 1w
+    - GPIO driver (adapt from IPA1?)                            - 1w
+    - I2C driver                                                - 1w
+    - RTC driver (adapt from IPA1?)                             - 1w
+    - RNG driver (adapt from IPA1?)                             - 1w
+    - Watchdog driver (adapt from IPA1?)                        - 1w
+    - Internal flash driver (adapt from IPA1?)                  - 1w
     - bootloader adjustments (adapt from IPA1?)
     - timers (adapt from IPA1?)
     - SPI-sharing:
@@ -35851,12 +35851,14 @@ alternative MCUs
     - bootloader rewrite
     - timers
 
-- Removal of flash
+- Removal of flash (mostly PoC state on ~2yr old code).
     - circular buffers for MQ in internal-flash.
     - circular buffers for config in internal-flash.
     - circular buffers for app-state in internal-flash.
     - server to store meter-driver state.
     - size reduction.
+    - new bootloader.
+    - fwup.
 
 
 
