@@ -35840,6 +35840,10 @@ alternative MCUs
         - Remove need for flash (best long term option).                                            - 1w
         - Bitbang or timer/CLK trigged DMA SPI to radio over GPIO lines 
           (Can be low latency and in parallel with flash).                                          - 3w
+                                
+                                                Total (CS)      - 12w+
+                                                Total (no flash)- 12w+
+                                                Total (bitbang) - 12w+
     
 - Renesas RX651 + RAA604S00 radio
     - toolchain                                                 - 1w
@@ -35856,15 +35860,17 @@ alternative MCUs
     - Internal flash driver                                     - 1w
     - bootloader rewrite                                        - 1w
     - timers                                                    - 1w
+                                                Total:          - 14w
 
 - Removal of flash (mostly PoC state on ~2yr old code).
-    - circular buffers for MQ in internal-flash.
-    - circular buffers for config in internal-flash.
-    - circular buffers for app-state in internal-flash.
-    - server to store meter-driver state.
-    - size reduction.
-    - new bootloader.
-    - fwup.
+    - circular buffers for MQ in internal-flash.                - 2w
+    - circular buffers for config in internal-flash.            - 2w
+    - circular buffers for app-state in internal-flash.         - 2w
+    - server to store meter-driver state.                       - 4w
+    - size reduction.                                           - 4w
+    - new bootloader.                                           - 3w
+    - fwup.                                                     - 3w
+                                                Total:          - 20w
 
 
 
