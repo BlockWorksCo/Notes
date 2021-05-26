@@ -35803,6 +35803,7 @@ alternative MCUs
     - radio/PHY layer rewrite (adapt from ARM WiSUN stack?)     - 4w
     - UART driver (adapt from IPA1?)                            - 1w
     - GPIO driver (adapt from IPA1?)                            - 1w
+    - SPI driver                                                - 1w
     - I2C driver                                                - 1w
     - RTC driver (adapt from IPA1?)                             - 1w
     - RNG driver (adapt from IPA1?)                             - 1w
@@ -35823,6 +35824,7 @@ alternative MCUs
     - radio/PHY layer rewrite                                   - 1w
     - UART driver                                               - 1w
     - GPIO driver                                               - 1w
+    - SPI driver                                                - 1w
     - I2C driver                                                - 1w
     - RTC driver                                                - 1w
     - RNG driver                                                - 1w
@@ -35844,6 +35846,7 @@ alternative MCUs
     - UART driver
     - GPIO driver
     - I2C driver
+    - SPI driver
     - RTC driver
     - RNG driver
     - Watchdog driver
