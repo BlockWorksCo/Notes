@@ -35810,6 +35810,9 @@ alternative MCUs
     - Internal flash driver (adapt from IPA1?)
     - bootloader adjustments (adapt from IPA1?)
     - timers (adapt from IPA1?)
+    - SPI-sharing:
+        - Use CS to switch between radio & flash, then run SPI quicker than current 8MHz for flash.
+        - Remove need for flash
 
 
 1.) STM32WB50CG microcontroller + S2-LPQTR radio
