@@ -35852,7 +35852,7 @@ alternative MCUs
 - Renesas RX651 + RAA604S00 radio
     - toolchain                                                 - 1w
     - familiarisation                                           - 1w
-    - radio/PHY layer rewrite                                   - 1w
+    - radio/PHY layer rewrite                                   - 4w
     - UART driver                                               - 1w
     - Clock driver                                              - 1w
     - GPIO driver                                               - 1w
@@ -35864,7 +35864,7 @@ alternative MCUs
     - Internal flash driver                                     - 1w
     - bootloader rewrite                                        - 1w
     - timers                                                    - 1w
-                                                Total:          - 14w
+                                                Total:          - 17w
 
 - Removal of flash (mostly PoC state on ~2yr old code).
     - circular buffers for MQ in internal-flash.                - 2w
@@ -35876,6 +35876,11 @@ alternative MCUs
     - fwup.                                                     - 3w
                                                 Total:          - 20w
 
+MTS & test-jig (Common to all)?
+    - MTS mods (SWD/JTAG)                                       - 2w
+    - Agent-side tests                                          - 4w
+    - Test jig                                                  - ?w
+                                                Total:          - ?w
 
 
 
