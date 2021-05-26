@@ -35937,7 +35937,13 @@ Job management notes.
     - jobs on small numbers in minutes
     - jobs on large numbers in hours
     - upgrade jobs in a day.
-    - 
+    - Testing of robustness at scale, SLA attainment rate. 
+    - cluster traffic issues on filedl.
+
+- Job anageent retries:
+    - we currently try once and only once.
+    - no ability to retry till comoplete.
+    - for all types of job.
 - 
 - on-demand
 
