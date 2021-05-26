@@ -35812,7 +35812,8 @@ alternative MCUs
     - timers (adapt from IPA1?)
     - SPI-sharing:
         - Use CS to switch between radio & flash, then run SPI quicker than current 8MHz for flash.
-        - Remove need for flash
+        - Remove need for flash (best long term option).
+        - Bitbang or GPIO trigged DMA SPI to radio over GPIO lines (Can be low latency and in parallel with flash).
 
 
 1.) STM32WB50CG microcontroller + S2-LPQTR radio
