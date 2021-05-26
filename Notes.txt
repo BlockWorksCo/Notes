@@ -35838,6 +35838,8 @@ alternative MCUs
           (Can be low latency and in parallel with flash).
     
 - Renesas RX651 + RAA604S00 radio
+    - toolchain
+    - familiarisation
     - radio/PHY layer rewrite
     - UART driver
     - GPIO driver
