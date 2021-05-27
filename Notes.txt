@@ -35958,6 +35958,11 @@ Job management notes.
     - No SLA value.
     - reasonable maximums
 
+--------------------------------------------
+jlink gdb server
+
+JLinkGDBServer -device EFR32MG12PXXXF1024 -if SWD
+
 
 
 
