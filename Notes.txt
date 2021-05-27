@@ -35961,7 +35961,12 @@ Job management notes.
 --------------------------------------------
 jlink gdb server
 
+https://wiki.segger.com/J-Link_GDB_Server#-jtagconf
+
+
+JLinkExe -device EFR32MG12PXXXF1024 -if SWD
 JLinkGDBServer -device EFR32MG12PXXXF1024 -if SWD
+JLinkRTTClient
 
 
 
