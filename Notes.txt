@@ -35968,6 +35968,32 @@ JLinkExe -device EFR32MG12PXXXF1024 -if SWD
 JLinkGDBServer -device EFR32MG12PXXXF1024 -if SWD
 JLinkRTTClient
 
+---------------------------------------------
+
+[GwId=15195][MeshId=15195]: received packet for meshIx=0 meshState=3
+[GwId=15195][MeshId=15195]: in retransmit list now 2
+[GwId=15195][MeshId=15195]: no data from wolfSSL (-1 - 2)
+[GwId=15195][MeshId=15195]: received packet for meshIx=0 meshState=3
+[GwId=15195][MeshId=15195]: in retransmit list now 2
+[GwId=15195][MeshId=15195]: no data from wolfSSL (-1 - 2)
+[GwId=15195][MeshId=15195]: Login is timeout the 2 time
+[GwId=15195][MeshId=15195]: PUT login is sent
+[GwId=15195][MeshId=15195]: received packet for meshIx=0 meshState=3
+[GwId=15195][MeshId=15195]: in retransmit list now 2
+[GwId=15195][MeshId=15195]: no data from wolfSSL (-1 - 2)
+[GwId=15195][MeshId=15195]: received packet for meshIx=0 meshState=3
+[GwId=15195][MeshId=15195]: in retransmit list now 2
+[GwId=15195][MeshId=15195]: no data from wolfSSL (-1 - 2)
+[GwId=15195][MeshId=15195]: Login is timeout the 3 time
+[GwId=15195][MeshId=15195]: PUT login is sent
+[GwId=15195][MeshId=15195]: Login is timeout the last time, do re-handshake
+[GwId=15195][MeshId=15195]: Login is failed eventually
+[GwId=15195][MeshId=15195]: received packet for meshIx=0 meshState=3
+[GwId=15195][MeshId=15195]: OUCH! 2 
+[GwId=15195][MeshId=15195]: received data of size 13
+[GwId=15195][MeshId=15195]: OUCH! 3
+
+
 
 
 
