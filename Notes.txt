@@ -36000,6 +36000,10 @@ mbed
 python3 -m pip install mbed-cli
 apt install ninja-build
 
+cd nanostack-border-router
+mbed config root .
+mbed target DISCO_F769NI
+
 
 
 
