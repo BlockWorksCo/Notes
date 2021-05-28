@@ -36003,7 +36003,7 @@ apt install ninja-build
 cd nanostack-border-router
 mbed config root .
 mbed target DISCO_F769NI
-
+mbed compile
 
 
 
