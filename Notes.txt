@@ -36025,6 +36025,8 @@ sysctl net.ipv6.neigh.default.gc_thresh2=2048
 
 sysctl net.ipv6.neigh.default.gc_thresh3=4096
 
+---------------------------------
+idea: rpi pinout USB dongle.
 
 
 
