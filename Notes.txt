@@ -36036,6 +36036,11 @@ fhss Configuration set, UC channel: 44, BC channel: 26, UC CF: 0, BC CF: 0, chan
 fhss Configuration set, UC channel: 40, BC channel: 21, UC CF: 2, BC CF: 2, channels: BC 55 UC 55, uc dwell: 255, bc dwell: 255, bc interval: 1020, bsi:42842, ch retries: 4
 
 
+keys & certs in :
+gecko_sdk_3.1.1/protocol/wisun/wisun/inc/wisun_custom_certificates.h
+
+
+
 
 
 
