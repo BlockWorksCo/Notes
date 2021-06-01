@@ -36028,6 +36028,14 @@ sysctl net.ipv6.neigh.default.gc_thresh3=4096
 ---------------------------------
 idea: rpi pinout USB dongle.
 
+---------------------------------------
+
+
+fhss Configuration set, UC channel: 44, BC channel: 26, UC CF: 0, BC CF: 0, channels: BC 55 UC 55, uc dwell: 255, bc dwell: 255, bc interval: 0, bsi:0, ch retries: 0
+
+fhss Configuration set, UC channel: 40, BC channel: 21, UC CF: 2, BC CF: 2, channels: BC 55 UC 55, uc dwell: 255, bc dwell: 255, bc interval: 1020, bsi:42842, ch retries: 4
+
+
 
 
 
