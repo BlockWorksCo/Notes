@@ -36040,6 +36040,18 @@ keys & certs in :
 gecko_sdk_3.1.1/protocol/wisun/wisun/inc/wisun_custom_certificates.h
 
 
+2021-06-01 22:09:33.768 [ info] [               emu]: [GwId=1][MeshId=1]: Keepalive timeout
+
+2021-06-01 22:09:40.819 [ info] [               emu]: [GwId=59][MeshId=25407]: Keepalive timeout                                                      
+[Switching to Thread 0x7ffff7712700 (LWP 27184)]                                                                                                      
+                                                                                                                                                      
+Thread 4 "terminal_emulat" hit Breakpoint 1, poolHandlerThread (                                                                                      pThreadData=0x5555555b84d0)
+    at src/tools/terminal_emulator/terminal_emulator.c:1880                
+1880                    LOG_INFO("[MeshId=%u]: retransmit, meshState=%u, tmoSec=%u",
+(gdb) p mesh->pCon->lastActivity
+$1 = 1622581773
+
+
 
 
 
