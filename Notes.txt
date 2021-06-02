@@ -36051,6 +36051,12 @@ Thread 4 "terminal_emulat" hit Breakpoint 1, poolHandlerThread (                
 (gdb) p mesh->pCon->lastActivity
 $1 = 1622581773
 
+-------------------------------
+nanostack
+
+arm_net_phy_register()          // register rf device with nanostack.
+in s2lp:rf_device_register()    // NanostackRfPhys2lp.cpp
+in sl:rf_device_register()      // sli_wisun_driver.c
 
 
 
