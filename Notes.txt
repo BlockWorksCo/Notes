@@ -36064,6 +36064,9 @@ grpc
 sudo apt install protobuf-compiler-grpc libgrpc-dev python3-grpcio python3-grpc-tools libgrpc++-dev
 
 
+protoc -I./ --grpc_out=. --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` omnimesh.proto
+
+
 
 
 
