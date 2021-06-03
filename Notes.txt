@@ -36061,7 +36061,7 @@ in sl:rf_device_register()      // sli_wisun_driver.c
 --------------------------------------
 grpc
 
-sudo apt install protobuf-compiler-grpc libgrpc-dev python3-grpcio python3-grpc-tools
+sudo apt install protobuf-compiler-grpc libgrpc-dev python3-grpcio python3-grpc-tools libgrpc++-dev
 
 
 
