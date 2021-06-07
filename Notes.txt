@@ -36067,6 +36067,21 @@ sudo apt install protobuf-compiler-grpc libgrpc-dev python3-grpcio python3-grpc-
 protoc -I./ --grpc_out=. --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` omnimesh.proto
 protoc -I./ --cpp_out=. omnimesh.proto
 
+------------------------------------------
+Application onto mbed
+- silabs wisun driver into ARM mbed stack.
+- ethernet driver into ARM mbed stack.
+- I2C driver into ARM mbed stack.
+- application into library
+- port configuration.
+- port schedule.
+- port module system.
+- port terminal module.
+- buildsystem support for mbed code layout.
++ gain greater abstraction from platform.
++ own platform does not have a future.
++ gain KeyValue & LittleFileSystem.
++ 
 
 
 
