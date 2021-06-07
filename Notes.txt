@@ -36081,7 +36081,7 @@ Application onto mbed
 + gain greater abstraction from platform.
 + own platform does not have a future.
 + gain KeyValue & LittleFileSystem.
-+ 
++ gain modem drivers
 
 
 
