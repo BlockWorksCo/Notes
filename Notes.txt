@@ -36078,12 +36078,24 @@ Application onto mbed
 - port module system.
 - port terminal module.
 - buildsystem support for mbed code layout.
+- metrics port.
 + gain greater abstraction from platform.
 + own platform does not have a future.
 + gain KeyValue & LittleFileSystem.
 + gain modem drivers
 
+MBed into Application
+- ethernet driver into nanostack.
+- i2c driver into nanostack.
+- application port onto "top" API.
+- import nanostack into application.
+- metrics port
 
+
+---------------------------
+NMSStub RAM usage @200K logins.
+
+869M 1774M  3236 
 
 
 
