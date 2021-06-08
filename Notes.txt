@@ -36097,6 +36097,11 @@ NMSStub RAM usage @200K logins.
 
 869M 1774M  3236 
 
+------------------------
+html to pdf
+
+khtmltopdf coverage.html coverage.pdf
+
 
 
 
