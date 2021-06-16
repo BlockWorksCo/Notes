@@ -36130,7 +36130,9 @@ resolutions:
 
 
 
-
+>2.4V, CPU OK, flash OK     - normal.
+<2.4V, CPU OK, flash bad    - prodmode.
+<2V, CPU off, flash off     - off.
 
 
 
