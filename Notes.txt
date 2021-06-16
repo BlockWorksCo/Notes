@@ -36112,6 +36112,11 @@ grpc video
 
 https://www.youtube.com/watch?v=fMq3IpPE3TU
 
+-----------------------------------------
+flash lockup issue
+
+- before entering prodmode, check that flash is accessible, if not, wait 10 sec and restart.
+
 
 
 
