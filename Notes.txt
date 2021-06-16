@@ -36124,6 +36124,7 @@ h/w failure modes:
 - when CPU supply is marginal, processor comes out of reset for ~2sec, then resets as more current drawn (~2.1V).
 - when CPU is powered and stable, but flash is not out of reset, prodmode is entered (2.46V).
 - "temporary" failure is actually the CPU coming out of reset before the flash. Can be mitigated.
+- one case of flash corruption of config resuling in permanent prodmode.
 
 resolutions:
 - before entering prodmode, check that flash is accessible, if not, wait 10 sec and restart.
