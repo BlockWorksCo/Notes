@@ -36122,6 +36122,7 @@ s/w failure modes:
 h/w failure modes:
 - complete lock-up, requires power-drop back down to <1V to recover.
 - when CPU supply is marginal, processor comes out of reset for ~2sec, then resets as more current drawn (~2.1V).
+- when CPU is powered and stable, but flash is not out of reset, prodmode is entered (2.46V).
 - "temporary" failure is actually the CPU coming out of reset before the flash. Can be mitigated.
 
 resolutions:
