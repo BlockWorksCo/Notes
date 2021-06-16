@@ -36119,8 +36119,10 @@ s/w failure modes:
 - flash-id failure "00 00 00", results in prodmode being entered.
 - flash id is ok, and normal mode entered, but all writes and some reads fail. Potentially damaging due to indeterminate state of writing.
 
-flash failure modes:
+h/w failure modes:
 - complete lock-up, requires power-drop back down to <1V to recover.
+- when CPU supply is marginal, processor comes out of reset for ~2sec, then resets as more current drawn (~2.1V).
+- "temporary" failure is actually the CPU coming out of reset before the flash. Can be mitigated.
 
 resolutions:
 - before entering prodmode, check that flash is accessible, if not, wait 10 sec and restart.
