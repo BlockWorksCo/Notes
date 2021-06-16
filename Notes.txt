@@ -36135,5 +36135,6 @@ resolutions:
 <2V, CPU off, flash off     - off.
 
 
+"AVDD and VREGVDD need to be 1.8 V or higher for the MCU to operate across all conditions; however the rest of the system will operate down to 1.62 V, "
 
 
