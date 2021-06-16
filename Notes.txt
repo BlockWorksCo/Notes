@@ -36119,6 +36119,9 @@ s/w failure modes:
 - flash-id failure "00 00 00", results in prodmode being entered.
 - flash id is ok, and normal mode entered, but all writes and some reads fail. Potentially damaging due to indeterminate state of writing.
 
+flash failure modes:
+- complete lock-up, requires power-drop back down to <1V to recover.
+
 resolutions:
 - before entering prodmode, check that flash is accessible, if not, wait 10 sec and restart.
 
