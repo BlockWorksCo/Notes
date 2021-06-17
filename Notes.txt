@@ -36142,6 +36142,26 @@ resolutions:
 
 
 S
+-------------------------
+wisun crash
+
+#0  0x0003fd18 in mac_data_interface_tx_done_cb (rf_ptr=rf_ptr@entry=0x2000e948, status=<optimized out>, cca_retry=<optimized out>,
+    tx_retry=<optimized out>) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_pd_sap.c:583
+#1  0x000405c8 in mac_data_interface_tx_done_cb (tx_retry=<optimized out>, cca_retry=<optimized out>, status=<optimized out>, rf_ptr=0x2000e948)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_pd_sap.c:1201
+#2  mac_pd_sap_data_cb (identifier=0x2000e948, message=message@entry=0x20008180 <rf_task_stack+1944>)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_pd_sap.c:1201
+#3  0x0003d5fc in sw_mac_net_phy_tx_done (driver_id=<optimized out>, tx_handle=<optimized out>, status=<optimized out>, cca_retry=<optimized out>,
+    tx_retry=0 '\000') at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/sw_mac.c:677
+#4  0x0009a4c2 in rf_handle_tx_success () at build/3pp/nanostack/sl/wisun/src/sli_wisun_driver.c:443
+#5  rf_task_loop (arg=<optimized out>) at build/3pp/nanostack/sl/wisun/src/sli_wisun_driver.c:517
+#6  0x0001ef88 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>)
+    at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+
+ p rf_ptr->active_pd_data_request
+$12 = (struct mac_pre_build_frame *) 0x0
+
+
 
 
 
