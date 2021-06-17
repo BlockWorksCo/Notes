@@ -36162,6 +36162,38 @@ wisun crash
 $12 = (struct mac_pre_build_frame *) 0x0
 
 
+    at build/3pp/freertos/FreeRTOS/Source/list.c:192
+#1  0x0001e606 in vTaskPlaceOnEventList (pxEventList=<optimized out>, xTicksToWait=4294967295) at build/3pp/freertos/FreeRTOS/Source/tasks.c:2860
+#2  0x0001dd88 in xQueueGenericReceive (xQueue=xQueue@entry=0x20003af4 <s_state+12>, pvBuffer=pvBuffer@entry=0x0, xTicksToWait=<optimized out>,
+    xTicksToWait@entry=4294967295, xJustPeeking=xJustPeeking@entry=0) at build/3pp/freertos/FreeRTOS/Source/queue.c:1397
+#3  0x0001cf68 in OS_semaphoreTake (s=s@entry=0x20003af4 <s_state+12>, waitMSec=waitMSec@entry=4294967295)
+    at src/platform/osal/osal-freertos/osal_freertos.c:367
+#4  0x0001c826 in uartWriteBlockingWithTimeout (port=0, buffer=0x20001830 <buf> "\300\333\001\001\001\001", length=<optimized out>,
+    timeout=4294967295) at src/platform/drivers/uart/uart-efr32.c:281
+#5  0x000160ba in ctrlportSendExInternal (calledFromFaultHandler=false, data2Size=65, data2=0x2000347d <s_logBuf>, data1Size=36,
+    data1=0x20001848 <header>, contentType=<optimized out>, msgType=CTRLPORT_MSG_LOG) at src/services/ctrlport/ctrlport_service.c:298
+#6  ctrlportSendExInternal (msgType=<optimized out>, contentType=<optimized out>, data1=0x20001848 <header>, data1Size=36,
+    data2=0x2000347d <s_logBuf>, data2Size=65, calledFromFaultHandler=false) at src/services/ctrlport/ctrlport_service.c:253
+#7  0x00016184 in ctrlportLogServiceCallback (str=0x2000347d <s_logBuf> " [DBG ][fhss]: TX slot length setting too high 160ms, using 100ms",
+    module=0xc23d0 "wisun", level=cnd_LogLevelDebug) at src/services/ctrlport/ctrlport_service.c:231
+#8  ctrlportLogServiceCallback (level=<optimized out>, module=0xc23d0 "wisun",
+    str=0x2000347d <s_logBuf> " [DBG ][fhss]: TX slot length setting too high 160ms, using 100ms") at src/services/ctrlport/ctrlport_service.c:199
+#9  0x0001a524 in logFormatted (level=<optimized out>, module=0xc23d0 "wisun", format=0xbde9f "%s") at src/platform/core/log.c:593
+#10 0x00095610 in mbed_vtracef (dlevel=<optimized out>, grp=grp@entry=0xb19b0 "fhss",
+    fmt=0xb19b5 "TX slot length setting too high %lums, using %lums", fmt@entry=0x10 "\235\n", ap=..., ap@entry=...)
+    at build/3pp/nanostack/frameworks/mbed-trace/source/mbed_trace.c:345
+#11 0x000957ec in mbed_tracef (dlevel=dlevel@entry=16 '\020', grp=grp@entry=0xb19b0 "fhss",
+    fmt=0xb19b5 "TX slot length setting too high %lums, using %lums") at build/3pp/nanostack/frameworks/mbed-trace/source/mbed_trace.c:312
+#12 0x0003be12 in fhss_set_txrx_slot_length (fhss_structure=0x20012250)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Service_Libs/fhss/fhss_ws.c:227
+#13 fhss_set_txrx_slot_length (fhss_structure=0x20012250) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Service_Libs/fhss/fhss_ws.c:198
+#14 0x0003c078 in fhss_ws_set_parent (fhss_structure=0x20012250, eui64=0x2000f8a5 "b\253\261\001\203#\303", <incomplete sequence \321>,
+    bc_timing_info=0x2001012c, force_synch=<optimized out>)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Service_Libs/fhss/fhss_ws.c:1120
+#15 0x0003ac9c in ns_fhss_ws_set_parent (fhss_api=<optimized out>, eui64=<optimized out>, bc_timing_info=<optimized out>,
+    force_synch=force_synch@entry=true)
+
+
 
 
 
