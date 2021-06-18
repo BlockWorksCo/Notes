@@ -36242,6 +36242,15 @@ INFO][brro]:  [2] 2a00:23c5:b39f:6a00:60ab:b101:8323:c3d1
 
 
 
+selected parent:8e:cf:40:1a:1e:f5:ac:a5 panid 11989
+FHSS activate
+MAC init
+MAC: Start network 255 channel 2ed5 panid
+Register Device 1, mac16 ffff mac64: 8e:cf:40:1a:1e:f5:ac:a5, 0
+Added new neighbor 8e:cf:40:1a:1e:f5:ac:a5 : index:1
+
+
+
 
 
 
