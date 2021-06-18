@@ -36198,6 +36198,48 @@ $12 = (struct mac_pre_build_frame *) 0x0
 fhss_ws.c:227
 
 
+--------------------------------------------
+wisun BR output during handshake
+
+
+
+INFO][brro]:  [2] 2a00:23c5:b39f:6a00:60ab:b101:8323:c3d1
+[INFO][wsks]: KeyS get array: 0x2004F5B4 i: 0 eui64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][wsks]: KeyS read TIME 1577919387 1577909269 PMK PMK CNT 11 00:00:00:00:00:00:00:00
+[INFO][ksep]: Initial-key init
+[INFO][ksep]: Initial EAPOL-Key recv, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][ksep]: PMK not live PTK not live GTKL 0
+[INFO][wspa]: PAE start EAP-TLS, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][eapa]: EAP-TLS init
+[INFO][eapa]: EAP-TLS start, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][eapa]: EAP-TLS: send REQ type IDENTITY id 1 flags ff len 9, eui-64: 08:6b:d7:ff:f6
+[INFO][ksep]: Initial-key finished, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][eapa]: EAP-TLS: recv RESPONSE type IDENTITY id 1 flags 41 len 14, eui-64 08:6b:d76
+[INFO][eapa]: EAP-TLS: send REQ type TLS id 2 flags 20 len 10, eui-64: 08:6b:d7:ff:fe:e76
+[INFO][eapa]: EAP-TLS: recv RESPONSE type TLS id 2 flags 0 len 113, eui-64 08:6b:d7:ff:f6
+[INFO][eapa]: EAP-TLS: send REQ type TLS id 3 flags c0 len 614, eui-64: 08:6b:d7:ff:fe:e6
+[INFO][eapa]: EAP-TLS: recv RESPONSE type TLS id 3 flags 0 len 6, eui-64 08:6b:d7:ff:fe:6
+[INFO][eapa]: EAP-TLS: send REQ type TLS id 4 flags 0 len 525, eui-64: 08:6b:d7:ff:fe:e76
+[INFO][mMCp]: MAC tx fail
+[INFO][eapa]: EAP-TLS: recv RESPONSE type TLS id 4 flags c0 len 610, eui-64 08:6b:d7:ff:6
+[INFO][eapa]: EAP-TLS: send REQ type TLS id 5 flags 0 len 10, eui-64: 08:6b:d7:ff:fe:e7:6
+[INFO][eapa]: EAP-TLS: recv RESPONSE type TLS id 5 flags 0 len 365, eui-64 08:6b:d7:ff:f6
+[INFO][tlsl]: id-on-hardwareModuleName 1.3.6.1.4.1.42.1
+[INFO][tlsl]: id-on-hardwareModuleName hwSerialNum 31:32:33:34:35:36
+[INFO][eapa]: EAP-TLS: handshake success
+[INFO][eapa]: EAP-TLS: send REQ type TLS id 6 flags 0 len 53, eui-64: 08:6b:d7:ff:fe:e7:6
+[INFO][eapa]: EAP-TLS: recv RESPONSE type TLS id 6 flags 0 len 6, eui-64 08:6b:d7:ff:fe:6
+[INFO][eapa]: EAP-TLS: send SUCCESS type TLS id 6 flags ff len 8, eui-64: 08:6b:d7:ff:fe6
+[INFO][eapa]: EAP-TLS finish, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][wspa]: PAE start 4WH, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][wspa]: PAE update GTK index: 0, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][afwh]: 4WH: init
+[INFO][afwh]: 4WH: start, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][secl]: PMKID be:03:4b:71:52:3d:89:2a:7e:9b:3d:78:18:65:0d:d1 EUI-64 62:ab:b1:01:86
+[INFO][afwh]: 4WH: send Message 1, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][afwh]: 4WH: recv Message 2, eui-64: 08:6b:d7:ff:fe:e7:10:56
+[INFO][afwh]: 4WH: send Message 3, eui-64: 08:6b:d7:ff:fe:e7:10:56
+
 
 
 
