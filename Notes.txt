@@ -36249,6 +36249,11 @@ MAC: Start network 255 channel 2ed5 panid
 Register Device 1, mac16 ffff mac64: 8e:cf:40:1a:1e:f5:ac:a5, 0
 Added new neighbor 8e:cf:40:1a:1e:f5:ac:a5 : index:1
 
+-------------------------------------
+wisun terminology:
+
+Unicast Fractional Slot Interval (UFSI)
+
 
 
 
