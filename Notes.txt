@@ -36254,6 +36254,12 @@ wisun terminology:
 
 Unicast Fractional Slot Interval (UFSI)
 
+----------------------------------
+VMON voltage monitoring
+
+- bootloader VMON -> dont boot application while voltage is low. Don't upgrade while voltage is low.
+- Agent VMON -> Wait until voltage steady and cap charged before booting application. These are two separate activities. flash cannot be accessed while voltage is low. cap-charge-delay must be configurable via the config on flash.
+
 
 
 
