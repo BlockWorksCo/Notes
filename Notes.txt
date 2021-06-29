@@ -36265,6 +36265,11 @@ VMON voltage monitoring
 - When fieldl initiates bl_request to bootloader to perform upgrade. Wait until cap has sufficient charge to complete the operation before doing that.
 
 
+----------------------------------
+job management API.
+
+- needs both deviceID and nodeID dbs.
+- Needs to be able to start jobs with both deviceID and nodeID.
 
 
 
