@@ -36273,6 +36273,14 @@ job management API.
 - jobs can be prioritised but will have a (low) default.
 
 
+-----------------------------------
+DTLS session setup on WiSUN
+
+socket_buffer_sendmsg
+protocol_push
+
+
+
 
 
 
