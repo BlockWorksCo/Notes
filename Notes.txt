@@ -36278,6 +36278,7 @@ DTLS session setup on WiSUN
 
 socket_buffer_sendmsg
 protocol_push
+protocol_buffer_poll
 
 
 
