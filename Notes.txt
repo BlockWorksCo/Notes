@@ -36281,6 +36281,9 @@ protocol_push
 protocol_buffer_poll
  1069: cur->if_stack_buffer_handler(b); calls interface method to send.
 
+ns_socket: socket_interface_determine
+protocol_core:
+
 
 
 
