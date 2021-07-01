@@ -36284,6 +36284,20 @@ protocol_buffer_poll
 ns_socket: socket_interface_determine
 protocol_core:
 
+--------------------------------------
+
+gdb) where
+#0  0x000a747c in abort ()
+#1  0x000a56f8 in __assert_func ()
+#2  0x0009c60a in rf_handle_event_rx_failure () at build/3pp/nanostack/sl/wisun/src/sli_wisun_driver.c:1830
+#3  radioEventHandler (railHandle=<optimized out>, events=1) at build/3pp/nanostack/sl/wisun/src/sli_wisun_driver.c:1897
+#4  radioEventHandler (railHandle=<optimized out>, events=<optimized out>) at build/3pp/nanostack/sl/wisun/src/sli_wisun_driver.c:1871
+#5  0x000a1a20 in RAILINT_2c0c7ba0065447faa0ab7205349f5d73 ()
+#6  0x0009f62c in RAILINT_978af8e4393fb6ecb4e92f5256373899 ()
+#7  0x000a0494 in FRC_IRQHandler ()
+#8  <signal handler called>
+
+
 
 
 
