@@ -36279,6 +36279,7 @@ DTLS session setup on WiSUN
 socket_buffer_sendmsg
 protocol_push
 protocol_buffer_poll
+ 1069: cur->if_stack_buffer_handler(b); calls interface method to send.
 
 
 
