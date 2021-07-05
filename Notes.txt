@@ -36297,6 +36297,12 @@ gdb) where
 #7  0x000a0494 in FRC_IRQHandler ()
 #8  <signal handler called>
 
+---------------------------------
+holiday cd
+
+- the orb: little fluffy clouds
+- The Sabres Of Paradise - Smokebelch II (Beatless mix)
+
 
 
 
