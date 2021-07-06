@@ -36316,6 +36316,7 @@ oneM2M
 - new server?
 - new layer above server for common-services layer?
 - Never any applications mentioned combining data.
+- test bed? oneM2Mtester? SmartCity/ElectronicsCity
 
 
 - energy
@@ -36330,6 +36331,10 @@ oneM2M
 - waste management
 - environmental
 - e-governance
+
+
+- monitor environment and direct traffic away from bad areas using
+traffic signals.
 
 
 
