@@ -36309,6 +36309,14 @@ holiday cd
 possibly: The Chillout Session: Ibiza Sunsets
 
 
+-----------------------
+oneM2M
+
+- NTC (Natianal Trust Centre) == CPA certs?
+- new server?
+- new layer above server for common-services layer?
+- Never any applications mentioned combining data.
+
 
 
 
