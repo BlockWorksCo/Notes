@@ -36318,6 +36318,19 @@ oneM2M
 - Never any applications mentioned combining data.
 
 
+- energy
+- parking
+- water
+- fleet mgmt
+- surveillance
+- traffic monitoring
+- traffic control
+- street lighting
+- incident maagement
+- waste management
+- environmental
+- e-governance
+
 
 
 
