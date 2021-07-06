@@ -36324,6 +36324,8 @@ oneM2M
 - Time sync between devices and servers.
 - s/w campaigning - fwup?
 - licensing/provisioning/subscriptions
+- Thread mentioned.
+- Semantic organsiation reminiscent of DLMS/COSEM org.
 
 
 - energy
