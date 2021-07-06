@@ -36352,7 +36352,7 @@ device in this sense. Meters will already have a meter-ontology
 - alarms
 - locks
 - agriculture
--
+- home/consumer devices
 
 
 - monitor environment and direct traffic away from bad areas using
