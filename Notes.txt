@@ -36317,6 +36317,7 @@ oneM2M
 - new layer above server for common-services layer?
 - Never any applications mentioned combining data.
 - test bed? oneM2Mtester? SmartCity/ElectronicsCity
+- IPE - Interworking Proxy Entity
 
 
 - energy
