@@ -36325,8 +36325,11 @@ oneM2M
 - s/w campaigning - fwup?
 - licensing/provisioning/subscriptions
 - Thread mentioned.
-- Semantic organsiation reminiscent of DLMS/COSEM org.
+- Semantic organsiation reminiscent of DLMS/COSEM org. "Smart Device Template"
+-
 
+
+- any value in "native oneM2M" system? as opposed to using IPE?
 
 - energy
 - parking
