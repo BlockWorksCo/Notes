@@ -36330,7 +36330,8 @@ device in this sense. Meters will already have a meter-ontology
 - Ontologies in "SAREF" by ETSI.
 - https://saref.etsi.org/
 - Overlap with "Matter" in consumer space?
--
+-ipv6 is a given
+- performance? no mention.
 
 
 - any value in "native oneM2M" system? as opposed to using IPE?
