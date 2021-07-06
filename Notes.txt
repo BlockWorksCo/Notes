@@ -36325,7 +36325,11 @@ oneM2M
 - s/w campaigning - fwup?
 - licensing/provisioning/subscriptions
 - Thread mentioned.
-- Semantic organsiation reminiscent of DLMS/COSEM org. "Smart Device Template"
+- Semantic organsiation reminiscent of DLMS/COSEM org. "Smart Device Template". Used to build a model of the device. A node could be a
+device in this sense. Meters will already have a meter-ontology
+- Ontologies in "SAREF" by ETSI.
+- https://saref.etsi.org/
+- Overlap with "Matter" in consumer space?
 -
 
 
@@ -36343,6 +36347,12 @@ oneM2M
 - waste management
 - environmental
 - e-governance
+- buildings
+- lifts
+- alarms
+- locks
+- agriculture
+-
 
 
 - monitor environment and direct traffic away from bad areas using
