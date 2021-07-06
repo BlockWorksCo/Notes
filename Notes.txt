@@ -36318,6 +36318,12 @@ oneM2M
 - Never any applications mentioned combining data.
 - test bed? oneM2Mtester? SmartCity/ElectronicsCity
 - IPE - Interworking Proxy Entity
+- Primitive Profile Feature - data reduction using templates to adapt.
+- congestion monitoring
+- QoS for comms.
+- Time sync between devices and servers.
+- s/w campaigning - fwup?
+- licensing/provisioning/subscriptions
 
 
 - energy
