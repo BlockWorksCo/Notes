@@ -36355,7 +36355,8 @@ device in this sense. Meters will already have a meter-ontology
 - agriculture
 - home/consumer devices
 - car charging
-load control- washing machines
+- load control- washing machines
+- wildfire detection and monitoring
 
 
 - monitor environment and direct traffic away from bad areas using
