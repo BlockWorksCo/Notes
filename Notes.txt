@@ -36334,8 +36334,10 @@ device in this sense. Meters will already have a meter-ontology
 - performance? no mention.
 - iot reference architectures tec.gov.in
 - enrollment/bootstrapping process onto network is specced. ITU.Y.3056
+- M2M enrollment Function (MEF)
 - security certification required.
 - TR069
+- may need to implement different auth mechanisms for different customers/deployments?
 
 
 
