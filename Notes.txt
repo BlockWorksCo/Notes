@@ -36339,7 +36339,7 @@ device in this sense. Meters will already have a meter-ontology
 - TR069
 - may need to implement different auth mechanisms for different customers/deployments?
 - Privacy Policy Manager PPM.
-- Test procedures
+- Test procedures (cyber "range")
 
 
 
