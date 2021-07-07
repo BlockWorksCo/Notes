@@ -36338,6 +36338,7 @@ device in this sense. Meters will already have a meter-ontology
 - security certification required.
 - TR069
 - may need to implement different auth mechanisms for different customers/deployments?
+- Privacy Policy Manager PPM.
 
 
 
