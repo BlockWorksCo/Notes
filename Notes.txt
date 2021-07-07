@@ -36333,7 +36333,8 @@ device in this sense. Meters will already have a meter-ontology
 -ipv6 is a given
 - performance? no mention.
 - iot reference architectures tec.gov.in
-- bootstrapping process onto network is specced. Y.0.356
+- bootstrapping process onto network is specced. ITU.Y.3056
+- security certification required.
 
 
 - any value in "native oneM2M" system? as opposed to using IPE?
