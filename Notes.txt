@@ -36342,6 +36342,8 @@ device in this sense. Meters will already have a meter-ontology
 - Test procedures (cyber "range")
 - IUDX Indian Urban Data Exchange Uses OM2M server 3TB/year
 - 128 data instances per node???
+- performance is an issue (data retrieval times).
+- OM2M not up to date.
 
 
 
