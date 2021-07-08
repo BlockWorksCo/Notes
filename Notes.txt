@@ -36345,6 +36345,7 @@ device in this sense. Meters will already have a meter-ontology
 - performance is an issue (data retrieval times).
 - OM2M not up to date.
 - Need to do an Omnimesh IPE Interworknig Proxy Entity
+- oneM2M provides abstraction but is it actually Least-Common-Denomiator? e.g. Can we configure everything we need to on meters or a subset?
 
 
 
