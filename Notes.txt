@@ -36366,6 +36366,12 @@ device in this sense. Meters will already have a meter-ontology
 - car charging
 - load control- washing machines
 - wildfire detection and monitoring
+- crowd monitoring
+- weather
+- power distribution
+- solar power
+- health monitoring
+
 
 
 - monitor environment and direct traffic away from bad areas using
