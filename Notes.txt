@@ -36344,6 +36344,7 @@ device in this sense. Meters will already have a meter-ontology
 - 128 data instances per node???
 - performance is an issue (data retrieval times).
 - OM2M not up to date.
+- Need to do an Omnimesh IPE Interworknig Proxy Entity
 
 
 
