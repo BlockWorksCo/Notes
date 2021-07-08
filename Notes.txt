@@ -36341,6 +36341,7 @@ device in this sense. Meters will already have a meter-ontology
 - Privacy Policy Manager PPM.
 - Test procedures (cyber "range")
 - IUDX Indian Urban Data Exchange Uses OM2M server 3TB/year
+- 128 data instances per node???
 
 
 
@@ -36348,7 +36349,7 @@ device in this sense. Meters will already have a meter-ontology
 
 - energy
 - parking
-- water
+- water flow & levels
 - fleet mgmt
 - surveillance
 - traffic monitoring
@@ -36372,6 +36373,7 @@ device in this sense. Meters will already have a meter-ontology
 - power distribution
 - solar power
 - health monitoring
+- air conditioning
 
 
 
