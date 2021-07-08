@@ -36353,6 +36353,7 @@ device in this sense. Meters will already have a meter-ontology
 - GCF authroised test labs
 - ETSI tests use TTCN-3 (language).
 - interop events free of charge to non-members with NDA.
+- certification bodies exist for oneM2M that use the ETSI test suite.
 
 
 
