@@ -36340,6 +36340,7 @@ device in this sense. Meters will already have a meter-ontology
 - may need to implement different auth mechanisms for different customers/deployments?
 - Privacy Policy Manager PPM.
 - Test procedures (cyber "range")
+- IUDX Indian Urban Data Exchange Uses OM2M server 3TB/year
 
 
 
