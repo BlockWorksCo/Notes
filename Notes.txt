@@ -36401,6 +36401,13 @@ CND-12009 CND-12010 Brownout recovery and voltage monitoring
 Prevent access to the flash under brownout conditions and delay startup
 until charge has accumulated on the cap.
 
+-----------------------------------------------
+wisun DTLS
+
+sudo tshark -i enp0s3 -Y "ipv6.addr eq 2a00:23c5:b3a4:2a00:821f:12ff:fe11:63ec" -V | tee gw.log
+
+
+
 
 
 
