@@ -36354,6 +36354,8 @@ device in this sense. Meters will already have a meter-ontology
 - ETSI tests use TTCN-3 (language).
 - interop events free of charge to non-members with NDA.
 - certification bodies exist for oneM2M that use the ETSI test suite.
+- hackster.io/onem2m demo projects
+- lots of dev resources & tutorials out there.
 
 
 
