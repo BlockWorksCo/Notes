@@ -36351,6 +36351,8 @@ device in this sense. Meters will already have a meter-ontology
 - prioritised data/control.
 - TS34 recmomendations to prevent harm to the network for ASN-CSE
 - GCF authroised test labs
+- ETSI tests use TTCN-3 (language).
+- interop events free of charge to non-members with NDA.
 
 
 
