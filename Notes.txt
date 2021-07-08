@@ -36347,8 +36347,10 @@ device in this sense. Meters will already have a meter-ontology
 - Need to do an Omnimesh IPE Interworknig Proxy Entity
 - oneM2M provides abstraction but is it actually Least-Common-Denomiator? e.g. Can we configure everything we need to on meters or a subset?
 - specifics for cellular connected devices. (3GPP)
-- 3GPP aligns with oneM2M abstraction/split. includes device-side and server-side portions. IN-CSE
+- 3GPP aligns with oneM2M abstraction/split. includes device-side and server-side portions. IN-CSE an MN-CSE for MNO, ASN-CSE.
 - prioritised data/control.
+- TS34 recmomendations to prevent harm to the network for ASN-CSE
+- GCF authroised test labs
 
 
 
