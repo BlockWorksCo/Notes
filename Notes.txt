@@ -36415,7 +36415,7 @@ Intellismart
 - The spreadsheet indicates that TCP/IP is used (the emphasis on the "IP"). Is this meaning from the cellular module? or from the meter itself?
 - UART settings? 9600N81? flow control?
 - Credentials
-- Configuration OBISs?
+- Configuration OBISs for TCP/UDP (section 4.9.1 in Blue Book)? Are they implemented in either modem or meter?
 
 Alarms:
 3 pins:
