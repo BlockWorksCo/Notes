@@ -36421,7 +36421,7 @@ communicated to the modem/node?
 Alarms:
 3 pins:
 - alert (nEVENT)
-- Ready To Receive (Clear To Send, i.e. CTS pin?) Can this be tied permanently to always enable?
+- Ready To Receive (Clear To Send, i.e. CTS pin?) Can this be tied permanently to always enable? will this interfere with your comms?
 - PFAIL
 
 - Alarms on periodic push (i.e. push of profile data?) also?
