@@ -36424,7 +36424,7 @@ Alarms:
 - Ready To Receive (Clear To Send, i.e. CTS pin?) Can this be tied permanently to always enable?
 - PFAIL
 
-- Alarms on periodic push also?
+- Alarms on periodic push (i.e. push of profile data?) also?
 - "Meter will send the push packet with “64” client address when Ready to receive pin found from High to Low."
   Which client address are we talking about here? HDLC addresses? Wrapper port?
 - "Ready to receive pin will go from Low to High after push packet sent to TCP server and ACK received."
