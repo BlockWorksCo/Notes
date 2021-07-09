@@ -36410,6 +36410,17 @@ sudo tshark -i enp0s3 -Y "ipv6.addr eq 2a00:23c5:b3a4:2a00:821f:12ff:fe11:63ec" 
 Intellismart
 
 - TCP directly on the UART, no underlying TCP stack?
+- what retry/framing/integrity-checking protocol is performed on the data trasferred over the UART?
+- The spreadsheet indicates that HDLC is present in the meter, presumably for the opto. Can we enable it for this UART?
+- The spreadsheet indicates that TCP/IP is used (the emphasis on the "IP"). Is this meaning from the cellular module? or from the meter itself?
+
+Alarms:
+3 pins:
+- alert (nEVENT)
+- Ready To Receive (Clear To Send, i.e. CTS pin?) Can this be tied permanently to always enable?
+- PFAIL
+
+- Alarms on periodic push also?
 
 
 
