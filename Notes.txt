@@ -36414,6 +36414,8 @@ Intellismart
 - The spreadsheet indicates that HDLC is present in the meter, presumably for the opto. Can we enable it for this UART?
 - The spreadsheet indicates that TCP/IP is used (the emphasis on the "IP"). Is this meaning from the cellular module? or from the meter itself?
 - UART settings? 9600N81? flow control?
+- Credentials
+- Configuration OBISs?
 
 Alarms:
 3 pins:
@@ -36426,6 +36428,7 @@ Alarms:
   Which client address are we talking about here? HDLC addresses? Wrapper port?
 - "Ready to receive pin will go from Low to High after push packet sent to TCP server and ACK received."
   This implies a protocol with "ACKing" (and presumably also "NACKing"). What protocol is this? HDLC??
+- Does the existing protocol need a 10-second delay to drop the TCP channel? does the meter rely on that?
 
 
 
