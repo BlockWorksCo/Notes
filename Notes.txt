@@ -36406,6 +36406,10 @@ wisun DTLS
 
 sudo tshark -i enp0s3 -Y "ipv6.addr eq 2a00:23c5:b3a4:2a00:821f:12ff:fe11:63ec" -V | tee gw.log
 
+------------------------------------------------
+Intellismart
+
+- TCP directly on the UART, no underlying TCP stack?
 
 
 
