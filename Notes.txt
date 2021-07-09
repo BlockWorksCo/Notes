@@ -36413,6 +36413,7 @@ Intellismart
 - what retry/framing/integrity-checking protocol is performed on the data trasferred over the UART?
 - The spreadsheet indicates that HDLC is present in the meter, presumably for the opto. Can we enable it for this UART?
 - The spreadsheet indicates that TCP/IP is used (the emphasis on the "IP"). Is this meaning from the cellular module? or from the meter itself?
+- UART settings? 9600N81? flow control?
 
 Alarms:
 3 pins:
@@ -36421,6 +36422,10 @@ Alarms:
 - PFAIL
 
 - Alarms on periodic push also?
+- "Meter will send the push packet with “64” client address when Ready to receive pin found from High to Low."
+  Which client address are we talking about here? HDLC addresses? Wrapper port?
+- "Ready to receive pin will go from Low to High after push packet sent to TCP server and ACK received."
+  This implies a protocol with "ACKing" (and presumably also "NACKing"). What protocol is this? HDLC??
 
 
 
