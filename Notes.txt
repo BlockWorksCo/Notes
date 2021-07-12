@@ -36432,6 +36432,14 @@ Alarms:
   Can we get an "on-wire" representation of an ACK?
 - Does the existing protocol need a 10-second delay to drop the TCP channel? does the meter rely on that?
 
+---------------------------------------------
+WiSUN tasks
+
+- DTLS session.
+- CoAP/login session.
+- dev-stack setup for plain IPv6.
+- host-agent OS adaptation (CMSIS/POSIX)
+- host-agent network interface adaptation
 
 
 
