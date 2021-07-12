@@ -36452,6 +36452,12 @@ Alarms:
   Can we get an "on-wire" representation of an ACK?
 - Does the existing protocol need a 10-second delay to drop the TCP channel? does the meter rely on that?
 
+Intellismart tasks:
+- Drop HDLC
+- Create WPDULink using WPDU+DLMSPDU annd flow-control lines.
+- Use alarm scheme with CTS/RTS from Kaifa.
+- Ignore pushed-data (or disable it) to allow use of our sampling algorithm to allow catch-up, etc.
+
 ---------------------------------------------
 WiSUN tasks
 
