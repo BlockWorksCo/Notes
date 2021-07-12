@@ -36435,6 +36435,8 @@ Alarms:
 ---------------------------------------------
 WiSUN tasks
 
+Development
+
 - familiarisation, SiLabs & ST border-routers and nodes.                                = Done.
 - Removal of existing IP stack (creation of ipa3-bare build).                           = Done.
 - Initial nanostack build integration (non-functional) into ipa3-bare.                  = Done.
@@ -36445,16 +36447,16 @@ WiSUN tasks
 - ipa3-wisun build.                                                                     = Done.
 - UDP API adapter to nanostack API.                                                     = Done.
 - Connectivity Manager (conman) implementation.                                         = Partial.
-- DTLS session.                                                                         = Partial.
+- DTLS session.                                                                         = Done (on ethernet. via radio outstanding but should be no change).
 - CoAP/login session.                                                                   = Partial.
 - dev-stack setup for plain IPv6.                                                       =
-- host-agent OS adaptation (CMSIS/POSIX)                                                =
+- host-agent OS adaptation (CMSIS/POSIX)                                                = Partial
 - host-agent network interface adaptation (uplink-tun)                                  =
 - nanostack configurables                                                               =
 - nanostack cert/key data loading.                                                      =
 - nanostack monitoring/statistics.                                                      =
-- gw200-wisun build.                                                                    =
-- gw200 Ethernet adapter to nanostack.                                                  =
+- gw200-wisun build.                                                                    = Done.
+- gw200 Ethernet adapter to nanostack.                                                  = Done.
 - Enable nanostack as border-router (on gw200-wisun).                                   =
 - Get to bottom of trickle-timer/multiple event issues.                                 =
 - Get to bottom of very-long mesh-join time.                                            =
@@ -36468,6 +36470,10 @@ WiSUN tasks
 - radio test support with new RAIL library.                                             =
 - MTS radio test                                                                        =
 - performance at scale.                                                                 =
+- NMS network-dentity changes.                                                          =
+- Agent network-identity changes                                                        =
+
+
 
 
 
