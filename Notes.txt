@@ -36435,38 +36435,39 @@ Alarms:
 ---------------------------------------------
 WiSUN tasks
 
-- familiarisation, SiLabs & ST border-routers and nodes.
-- Initial nanostack build integration (non-functional) into ipa3-bare.
-- FreeRTOS/CMSIS RTOS adaptation.
-- New Flex & RAIL library.
-- New board-support library.
-- Basic nanostack connect to ST border-router.
-- ipa3-wisun build.
-- UDP API adapter to nanostack API.
-- Connectivity Manager (conman) implementation.
-- DTLS session.
-- CoAP/login session.
-- dev-stack setup for plain IPv6.
-- host-agent OS adaptation (CMSIS/POSIX)
-- host-agent network interface adaptation (uplink-tun)
-- nanostack configurables
-- nanostack cert/key data loading.
-- nanostack monitoring/statistics.
-- gw200-wisun build.
-- gw200 Ethernet adapter to nanostack.
-- Enable nanostack as border-router (on gw200-wisun).
-- Get to bottom of trickle-timer/multiple event issues.
-- Get to bottom of very-long mesh-join time.
-- RADIUS integration into dev-stack.
-- RADIUS integration with border-router.
-- RADIUS integration into NMS (design feature-set? monitoring-only or control also?)
-- Mesh Time sync.
-- File distribution.
-- I2CIP network interface for GW7 support (rather than GW200).
-- MTS support for nanostack cert/key loading.
-- radio test support with new RAIL library.
-- MTS radio test
-- performance at scale.
+- familiarisation, SiLabs & ST border-routers and nodes.                                = Done.
+- Removal of existing IP stack (creation of ipa3-bare build).                           = Done.
+- Initial nanostack build integration (non-functional) into ipa3-bare.                  = Done.
+- FreeRTOS/CMSIS RTOS adaptation.                                                       = Done.
+- New Flex & RAIL library.                                                              = Done.
+- New board-support library.                                                            = Done.
+- Basic nanostack connect to ST border-router.                                          = Done.
+- ipa3-wisun build.                                                                     = Done.
+- UDP API adapter to nanostack API.                                                     = Done.
+- Connectivity Manager (conman) implementation.                                         = Partial.
+- DTLS session.                                                                         = Partial.
+- CoAP/login session.                                                                   = Partial.
+- dev-stack setup for plain IPv6.                                                       =
+- host-agent OS adaptation (CMSIS/POSIX)                                                =
+- host-agent network interface adaptation (uplink-tun)                                  =
+- nanostack configurables                                                               =
+- nanostack cert/key data loading.                                                      =
+- nanostack monitoring/statistics.                                                      =
+- gw200-wisun build.                                                                    =
+- gw200 Ethernet adapter to nanostack.                                                  =
+- Enable nanostack as border-router (on gw200-wisun).                                   =
+- Get to bottom of trickle-timer/multiple event issues.                                 =
+- Get to bottom of very-long mesh-join time.                                            =
+- RADIUS integration into dev-stack.                                                    =
+- RADIUS integration with border-router.                                                =
+- RADIUS integration into NMS (design feature-set? monitoring-only or control also?)    =
+- Mesh Time sync.                                                                       =
+- File distribution.                                                                    =
+- I2CIP network interface for GW7 support (rather than GW200).                          =
+- MTS support for nanostack cert/key loading.                                           =
+- radio test support with new RAIL library.                                             =
+- MTS radio test                                                                        =
+- performance at scale.                                                                 =
 
 
 
