@@ -36533,6 +36533,7 @@ pip3 install -e .
 
 -------------------------------------
 
+ip6tables -t nat -L -v -n
 
 ip6tables -t nat -A PREROUTING -p udp --dport 5684 -j DNAT --to-destination [fd00::100]:5684
 
