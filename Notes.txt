@@ -36457,6 +36457,7 @@ Intellismart tasks:
 - Create WPDULink using WPDU+DLMSPDU annd flow-control lines.
 - Use alarm scheme with CTS/RTS from Kaifa.
 - Ignore pushed-data (or disable it) to allow use of our sampling algorithm to allow catch-up, etc.
+- Any purpose in putting IPv6 parameters into meter OBISs? (4.9.3)
 
 ---------------------------------------------
 WiSUN tasks
