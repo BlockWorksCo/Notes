@@ -36450,6 +36450,7 @@ WiSUN tasks
 - host-agent OS adaptation (CMSIS/POSIX)
 - host-agent network interface adaptation
 - nanostack configurables
+- nanostack cert/key data loading.
 - gw200-wisun build.
 - gw200 Ethernet adapter to nanostack.
 - Enable nanostack as border-router (on gw200-wisun).
@@ -36461,6 +36462,9 @@ WiSUN tasks
 - Mesh Time sync.
 - File distribution.
 - I2CIP network interface for GW7 support (rather than GW200).
+- MTS support for nanostack cert/key loading.
+- radio test support with new RAIL library.
+- MTS radio test
 
 
 
