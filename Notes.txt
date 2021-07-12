@@ -36461,6 +36461,7 @@ Intellismart tasks:
 - I/F board needs to have flow-control lines on it.
 - Alarms are just pushes from the meter and controlled vi flow-control lines. This logic will need to
 be at the WPDULink layer.
+- Robustness on WPDULink (use constant header as a preamble for syncing & timeout).
 
 ---------------------------------------------
 WiSUN tasks
