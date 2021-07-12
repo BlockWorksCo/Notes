@@ -36449,6 +36449,10 @@ WiSUN tasks
 - gw200-wisun build.
 - gw200 Ethernet adapter to nanostack.
 - Enable nanostack as border-router (on gw200-wisun).
+- Get to bottom of trickle-timer/multiple event issues.
+- Get to bottom of very-long mesh-join time.
+- RADIUS integration into dev-stack.
+- RADIUS integration with border-router.
 
 
 
