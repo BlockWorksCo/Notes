@@ -36448,7 +36448,7 @@ WiSUN tasks
 - CoAP/login session.
 - dev-stack setup for plain IPv6.
 - host-agent OS adaptation (CMSIS/POSIX)
-- host-agent network interface adaptation
+- host-agent network interface adaptation (uplink-tun)
 - nanostack configurables
 - nanostack cert/key data loading.
 - gw200-wisun build.
@@ -36465,6 +36465,7 @@ WiSUN tasks
 - MTS support for nanostack cert/key loading.
 - radio test support with new RAIL library.
 - MTS radio test
+- performance at scale.
 
 
 
