@@ -36481,6 +36481,19 @@ Testing
 - Non-certification oriented tests                                                      =
 
 
+Current state:
+- SiLabs,ST, IPA3 & GW200 boards can form and join a WiSUN network using SiLabs s/w.
+- ipa3 can join network formed by ST border-router.
+- gw200 can join network formed by ST border router (as a node).
+- gw200 ethernet is plumbed into nanostack.
+- UDP works from the application-level (simple "echo" client).
+- ICMP works from the application-level (ICMP "ping" request/reply).
+- "conman" initiates login & DTLS session when ethernet interface brought up.
+- DTLS session works (currently over ethernet, but no changes expected for over WiSUN).
+- host-agent porting in progress (integrating nanostack into host-agent).
+- FreeRADIUS server can be installed but current ST border-router does not use it as yet.
+
+
 
 
 
