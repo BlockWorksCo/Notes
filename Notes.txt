@@ -36451,6 +36451,7 @@ WiSUN tasks
 - host-agent network interface adaptation (uplink-tun)
 - nanostack configurables
 - nanostack cert/key data loading.
+- nanostack monitoring/statistics.
 - gw200-wisun build.
 - gw200 Ethernet adapter to nanostack.
 - Enable nanostack as border-router (on gw200-wisun).
