@@ -36437,9 +36437,13 @@ WiSUN tasks
 
 - familiarisation, SiLabs & ST border-routers and nodes.
 - Initial nanostack build integration (non-functional) into ipa3-bare.
+- FreeRTOS/CMSIS RTOS adaptation.
+- New Flex & RAIL library.
+- New board-support library.
 - Basic nanostack connect to ST border-router.
 - ipa3-wisun build.
 - UDP API adapter to nanostack API.
+- Connectivity Manager (conman) implementation.
 - DTLS session.
 - CoAP/login session.
 - dev-stack setup for plain IPv6.
@@ -36454,6 +36458,9 @@ WiSUN tasks
 - RADIUS integration into dev-stack.
 - RADIUS integration with border-router.
 - RADIUS integration into NMS (design feature-set? monitoring-only or control also?)
+- Mesh Time sync.
+- File distribution.
+- I2CIP network interface for GW7 support (rather than GW200).
 
 
 
