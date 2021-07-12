@@ -36435,11 +36435,20 @@ Alarms:
 ---------------------------------------------
 WiSUN tasks
 
+- familiarisation, SiLabs & ST border-routers and nodes.
+- Initial nanostack build integration (non-functional) into ipa3-bare.
+- Basic nanostack connect to ST border-router.
+- ipa3-wisun build.
+- UDP API adapter to nanostack API.
 - DTLS session.
 - CoAP/login session.
 - dev-stack setup for plain IPv6.
 - host-agent OS adaptation (CMSIS/POSIX)
 - host-agent network interface adaptation
+- nanostack configurables
+- gw200-wisun build.
+- gw200 Ethernet adapter to nanostack.
+- Enable nanostack as border-router (on gw200-wisun).
 
 
 
