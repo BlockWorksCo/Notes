@@ -36436,7 +36436,6 @@ Alarms:
 WiSUN tasks
 
 Development
-
 - familiarisation, SiLabs & ST border-routers and nodes.                                = Done.
 - Removal of existing IP stack (creation of ipa3-bare build).                           = Done.
 - Initial nanostack build integration (non-functional) into ipa3-bare.                  = Done.
@@ -36472,6 +36471,19 @@ Development
 - performance at scale.                                                                 =
 - NMS network-dentity changes.                                                          =
 - Agent network-identity changes                                                        =
+
+
+Testing
+- Obtaining certification test suite                                                    =
+- Familiarisation with certificationn test suite                                        =
+- Familiarisation with hardware (SiLabs, ST)                                            =
+- Creation of automation for examining and testing against packet-traces                =
+- Non-certification oriented tests                                                      =
+
+
+
+
+
 
 
 
