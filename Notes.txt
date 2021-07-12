@@ -36537,7 +36537,7 @@ ip6tables -t nat -L -v -n
 
 sudo iptables -L --line-numbers
 
-sudo iptables -D INPUT 3
+sudo ip6tables -t nat -D PREROUTING 1
 
 ip6tables -t nat -A PREROUTING -p udp --dport 5684 -j DNAT --to-destination [fd00::100]:5684
 
