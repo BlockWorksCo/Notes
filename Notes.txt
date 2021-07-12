@@ -36514,6 +36514,12 @@ Current state:
 - FreeRADIUS server can be installed but current ST border-router does not use it as yet.
 
 
+-------------------------------
+dev-stack development
+
+
+pip3 install -e .
+
 
 
 
