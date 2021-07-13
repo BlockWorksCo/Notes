@@ -36462,6 +36462,7 @@ Intellismart tasks:
 - Alarms are just pushes from the meter and controlled via flow-control lines. This logic will need to
 be at the WPDULink layer.
 - Robustness on WPDULink (use constant header as a preamble for syncing & timeout).
+- Using data-push for instantaneous might be possible on this meter? Better to stick with existing scheme.
 
 ---------------------------------------------
 WiSUN tasks
