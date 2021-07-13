@@ -36472,6 +36472,8 @@ be at the WPDULink layer.
 
 - Replace HDLC layer with WPDULink layer. This uses UART and 1xGPIO in ready-to-receive type flow control arrangement to martial packets
 from meter. WPDU header used as a "preamble" for syncing&framing and timeout of higher level causes a retry. (3 weeks).
+- Alert pin is really a "push-data is ready to be sent" pin and should probably be marshalled by WPDULink which can then push the DLMS PDU
+up into the DLMS layer.
 
 ---------------------------------------------
 WiSUN tasks
