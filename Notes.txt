@@ -36470,6 +36470,8 @@ be at the WPDULink layer.
 - Meter integration will need mods as it examines byte streams from meter UART.
 
 
+Intellismart tasks:
+
 - Replace HDLC layer with WPDULink layer. This uses UART and 1xGPIO in ready-to-receive type flow control arrangement to martial packets
 from meter. WPDU header used as a "preamble" for syncing&framing and timeout of higher level causes a retry. (3 weeks).
 - Alert pin is really a "push-data is ready to be sent" pin and should probably be marshalled by WPDULink which can then push the DLMS PDU
@@ -36478,6 +36480,7 @@ but we can ignore or turn that off and just use push for alarms which can bypass
 - Mainly normal Genus driver but Alarm process will need adjustment. Assumption here is that normal profile reads will work, allowing us to
 ignore the data-push or turn that feature off. Some contingency here in case that does not work cleanly. Also, might need to update the IPv6 OBIS
 registers with appropriate information.(4 weeks).
+- New interface board integration (1 week).
 
 
 ---------------------------------------------
