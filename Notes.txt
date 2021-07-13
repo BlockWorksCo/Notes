@@ -36469,6 +36469,10 @@ be at the WPDULink layer.
 - Network signal strength is in block-load now, so we must fill it in? we were previously using hop-count which probably isn't the best metric.
 - Meter integration will need mods as it examines byte streams from meter UART.
 
+
+- Replace HDLC layer with WPDULink layer. This uses UART and 1xGPIO in ready-to-receive type flow control arrangement to martial packets
+from meter. WPDU header used as a "preamble" for syncing&framing and timeout of higher level causes a retry. (3 weeks).
+
 ---------------------------------------------
 WiSUN tasks
 
