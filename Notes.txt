@@ -36467,6 +36467,7 @@ be at the WPDULink layer.
 - profiles look standard
 - ESWF/Alarms look standard.
 - Network signal strength is in block-load now, so we must fill it in? we were previously using hop-count which probably isn't the best metric.
+- Meter integration will need mods as it examines byte streams from meter UART.
 
 ---------------------------------------------
 WiSUN tasks
