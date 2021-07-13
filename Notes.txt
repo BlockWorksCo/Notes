@@ -36463,6 +36463,10 @@ Intellismart tasks:
 be at the WPDULink layer.
 - Robustness on WPDULink (use constant header as a preamble for syncing & timeout).
 - Using data-push for instantaneous might be possible on this meter? Better to stick with existing scheme.
+- Events look standard.
+- profiles look standard
+- ESWF/Alarms look standard.
+- Network signal strength is in block-load now, so we must fill it in? we were previously using hop-count which probably isn't the best metric.
 
 ---------------------------------------------
 WiSUN tasks
