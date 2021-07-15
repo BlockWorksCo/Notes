@@ -36575,6 +36575,12 @@ debug.c:265
 
 
 
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --load-key root-cert ~/omnimeshPKI/ca.crt.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --load-key client-key ~/omnimeshPKI/00-00-00-00-00-00-00-0B/node.key.der
+./tools/c4-tools/coap_request.py --ctrlporthub :4000 --load-key client-cert ~/omnimeshPKI/00-00-00-00-00-00-00-0B/node.crt.der
+
+
+
 
 
 
