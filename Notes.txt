@@ -36580,6 +36580,13 @@ debug.c:265
 ./tools/c4-tools/coap_request.py --ctrlporthub :4000 --load-key client-cert ~/omnimeshPKI/00-00-00-00-00-00-00-0B/node.crt.der
 
 
+-----------------------------------------
+WiSUN DTLS with dev stack:
+
+ip6tables -t nat -A PREROUTING -p udp --dport 5684 -j DNAT --to-destination [fd00::101]:5684
+and set server.ip to ip6 of NMS host. above rule redirects packets into fd00:101 in devstack.
+
+
 
 
 
