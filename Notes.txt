@@ -36591,6 +36591,16 @@ and set server.ip to ip6 of NMS host. above rule redirects packets into fd00:101
 06e91967fbdc948315820235e98bccadd7d90e09 works
 0760e163e917bb6ac14040301f6b65d795a5f93d works
 
+------------------------------------------------
+Intelismart tasks.
+
+- Create WPDULink to replace HDLC.
+- WPDULink reads 8 bytes, confirms the header is as expected, then reads the next n bytes into
+a PDU buffer. when complete, PDU buffer is passed up the chain to the DLMS module in the same
+way as the HDLC payload currently does.
+
+
+
 
 
 
