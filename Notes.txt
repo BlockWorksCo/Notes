@@ -36599,6 +36599,28 @@ Intelismart tasks.
 a PDU buffer. when complete, PDU buffer is passed up the chain to the DLMS module in the same
 way as the HDLC payload currently does.
 
+------------------------------------
+sendDataCb: : (10/10): 000400020017000b00020100
+packet placed into outgoing q
+flushOutgoingData startin.
+flushOutgoingData start 156 0x20003cf4
+socket_buffer_sendmsg 16
+socket_buffer_sendmsg 16.1
+socket_buffer_sendmsg 16.4
+socket_interface_determine 1615
+socket_interface_determine 1630
+socket_interface_determine 1644
+socket_interface_determine 1647
+ipv6_buffer_route 279
+ipv6_buffer_route 178
+ipv6_route_choose_next_hop 1472
+ipv6_route_choose_next_hop 1494
+ipv6_route_choose_next_hop 423
+ipv6_map_ip_to_ll_and_call_ll_addr_handler 245
+ipv6_map_ip_to_ll_and_call_ll_addr_handler 247
+ipv6_map_ip_to_ll_and_call_ll_addr_handler 249
+ipv6_map_ip_to_ll_and_call_ll_addr_handler 256
+ipv6_map_ip_to_ll_and_call_ll_addr_handler 262
 
 
 
