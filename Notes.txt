@@ -36586,10 +36586,8 @@ WiSUN DTLS with dev stack:
 ip6tables -t nat -A PREROUTING -p udp --dport 5684 -j DNAT --to-destination [fd00::101]:5684
 and set server.ip to ip6 of NMS host. above rule redirects packets into fd00:101 in devstack.
 
-
-8244fcb579980cf9b58f66288daf8a5df74a214c fails
-06e91967fbdc948315820235e98bccadd7d90e09 works
-0760e163e917bb6ac14040301f6b65d795a5f93d works
+sudo modprobe ip6table_filter
+ip6tables -t nat -A POSTROUTING --source fd00::101 -j SNAT --to-source fd00::100
 
 ------------------------------------------------
 Intelismart tasks.
