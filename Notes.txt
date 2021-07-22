@@ -36626,6 +36626,45 @@ gdb task backtrace:
 source tools/gdb/walktaks.gdb
 backtracetask (tskTCB*)&s_dtlsTask
 
+----------------------------------
+dtls lockup:
+
+#0  xQueueGenericReceive (xQueue=0x20007da8 <uxDeletedTasksWaitingCleanUp>, xQueue@entry=0x20011ea8, pvBuffer=0xa5a5a5a5, pvBuffer@entry=0x0, xTicksToWait=<optimized out>, xTicksToWait@entry=4294967295,
+    xJustPeeking=-1515870811, xJustPeeking@entry=0) at build/3pp/freertos/FreeRTOS/Source/queue.c:1401
+#1  0x000209f6 in xQueueTakeMutexRecursive (xMutex=xMutex@entry=0x20011ea8, xTicksToWait=xTicksToWait@entry=4294967295) at build/3pp/freertos/FreeRTOS/Source/queue.c:646
+#2  0x0009c39a in osMutexAcquire (mutex_id=<optimized out>, timeout=timeout@entry=4294967295) at build/3pp/nanostack/cmsis_os2/cmsis_os2.c:1711
+#3  0x0009d686 in sli_wisun_trace_mutex_wait () at build/3pp/nanostack/sl/wisun/src/sli_wisun_task.c:599
+#4  sli_wisun_trace_mutex_wait () at build/3pp/nanostack/sl/wisun/src/sli_wisun_task.c:593
+#5  0x00097c5c in mbed_trace_ipv6 (addr_ptr=addr_ptr@entry=0x20018759) at build/3pp/nanostack/frameworks/mbed-trace/source/mbed_trace.c:521
+#6  0x00088a7e in ipv6_buffer_route_to (next_if=0xa5a5a5a5, next_hop=0x0, buf=0x20018750) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Common_Protocols/ipv6.c:179
+#7  ipv6_buffer_route_to (buf=0x20018750, next_hop=<optimized out>, next_if=<optimized out>) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Common_Protocols/ipv6.c:96
+#8  0x00086a0e in socket_interface_determine (socket_ptr=socket_ptr@entry=0x20011408, buf=buf@entry=0x20018750) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Core/ns_socket.c:1610
+#9  0x00086e68 in socket_buffer_sendmsg (sid=<optimized out>, buf=0x20018750, buf@entry=0x0, msg=msg@entry=0x20003314 <s_dtlsTaskStack+7604>, flags=flags@entry=16384)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Core/ns_socket.c:1382
+#10 0x0008ef98 in socket_sendmsg (socket=<optimized out>, msg=msg@entry=0x20003314 <s_dtlsTaskStack+7604>, flags=flags@entry=16384)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/libNET/src/socket_api.c:517
+#11 0x0008efca in socket_sendto (socket=socket@entry=1 '\001', address=address@entry=0x2000333c <s_dtlsTaskStack+7644>, buffer=buffer@entry=0x2001b2b0, length=length@entry=88)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/libNET/src/socket_api.c:538
+#12 0x00014852 in udpSendFrom (src=src@entry=0x0, srcPort=<optimized out>, dst=dst@entry=0x2001bf08, dstPort=<optimized out>, interface=INTERFACE_UNSPECIFIED, payload=payload@entry=0x2001b2b0,
+    len=len@entry=88, cb=cb@entry=0x0, cbData=cbData@entry=0x0) at src/communication/udp/udp_nanostack.c:252
+#13 0x000148ac in udpSend (dst=dst@entry=0x2001bf08, srcPort=<optimized out>, dstPort=<optimized out>, iface=iface@entry=INTERFACE_UNSPECIFIED, payload=payload@entry=0x2001b2b0, len=len@entry=88,
+    cb=cb@entry=0x0, cbData=cbData@entry=0x0) at src/communication/udp/udp_nanostack.c:268
+#14 0x0001324e in sendDataCb (sz=88, buf=0x2001b2b0 "\027\376", <incomplete sequence \375>, session=0x2001bef0) at src/communication/dtls/dtls.c:322
+#15 sendData (ioCtx=0x2001bef0, buf=0x2001b2b0 "\027\376", <incomplete sequence \375>, sz=88) at src/communication/dtls/dtls.c:363
+#16 0x00033dc2 in mbedtls_ssl_flush_output (ssl=<optimized out>) at build/3pp/mbedtls/library/ssl_msg.c:2146
+#17 mbedtls_ssl_flush_output (ssl=0x200043a0 <ssl>) at build/3pp/mbedtls/library/ssl_msg.c:2119
+#18 0x00034262 in mbedtls_ssl_write_record (ssl=ssl@entry=0x200043a0 <ssl>, force_flush=force_flush@entry=1 '\001') at build/3pp/mbedtls/library/ssl_msg.c:2872
+#19 0x000351d2 in ssl_write_real (len=59,
+    buf=0x20003cf4 <s_packetBuf> "hE\366\177\366\367\306p\245\305\350\303\302\375\350\377\n\003mac\022\021\n\nkeyChanged\020\001\032\001\003\022\021\n\nunknownKey\020\002\032\001\001\065\066\071b46+dirty\"\004ipa3*\027\060\060-00-00-00-00-00-00-019\001", ssl=0x200043a0 <ssl>) at build/3pp/mbedtls/library/ssl_msg.c:5717
+#20 mbedtls_ssl_write (ssl=0x200043a0 <ssl>,
+    buf=buf@entry=0x20003cf4 <s_packetBuf> "hE\366\177\366\367\306p\245\305\350\303\302\375\350\377\n\003mac\022\021\n\nkeyChanged\020\001\032\001\003\022\021\n\nunknownKey\020\002\032\001\001\065\066\071b46+dirty\"\004ipa3*\027\060\060-00-00-00-00-00-00-019\001", len=<optimized out>) at build/3pp/mbedtls/library/ssl_msg.c:5797
+#21 0x00013944 in processOutgoingPacket (session=0x2001bef0) at src/communication/dtls/dtls.c:785
+#22 readFromFifo () at src/communication/dtls/dtls.c:836
+#23 dtlsTask (arg=<optimized out>) at src/communication/dtls/dtls.c:1052
+#24 0x00021b80 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
 
 
 
