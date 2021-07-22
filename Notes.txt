@@ -36623,7 +36623,7 @@ ipv6_map_ip_to_ll_and_call_ll_addr_handler 262
 --------------------------------
 gdb task backtrace:
 
-source tools/gdb/walktaks.gdb
+source tools/gdb/walktask.gdb
 backtracetask (tskTCB*)&s_dtlsTask
 
 ----------------------------------
