@@ -36625,6 +36625,8 @@ gdb task backtrace:
 
 source tools/gdb/walktask.gdb
 backtracetask (tskTCB*)&s_dtlsTask
+backtracetask (tskTCB*)&sli_wisun_task_tcb
+backtracetask (tskTCB*)&sli_wisun_event_task_tcb
 
 ----------------------------------
 dtls lockup:
