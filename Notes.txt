@@ -36666,6 +36666,12 @@ dtls lockup:
 #24 0x00021b80 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
+----------------------
+nanostack/sl/util/third_party/lwip/lwip-contrib/addons/ipv6_static_routing/README
+
+ip6_add_route_entry
+ip6_get_gateway
+
 
 
 
