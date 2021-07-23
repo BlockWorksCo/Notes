@@ -36775,6 +36775,13 @@ ipv6_buffer_route_to 287
 
 addr_select_source()
 
+(gdb) p *route
+$1 = {route_info = {source = ROUTE_RPL_ROOT, source_id = 1 '\001',
+    interface_id = 1 '\001', pmtu = 1576, info = 0x200170c0,
+    next_hop_addr = "\376\200\000\000\000\000\000\000\270\365`\332R\306", <incomplete sequence \317>}, ip_dest = 0x0, ref_count = 1 '\001'}
+(gdb)
+
+
 
 
 
