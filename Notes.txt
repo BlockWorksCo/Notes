@@ -36822,6 +36822,14 @@ https://developer.pelion.com/docs/device-management/current/connecting/wi-sun-tu
 Pelion Border router requires memory mainly based on the network size. Roughly 650B of RAM for every device connected.
 
 
+NUCLEO F429ZI cant be used as BR without modification:
+https://os.mbed.com/teams/ST/wiki/Nucleo-144pins-ethernet-spi-conflict
+https://github.com/PelionIoT/nanostack-border-router/issues/236
+
+
+
+
+
 
 
 
