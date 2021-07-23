@@ -36025,6 +36025,8 @@ mbed config root .
 mbed target DISCO_F769NI
    or:
 mbed target NUCLEO_F429ZI
+mbed deploy
+mbed toolchain GCC_ARM
 mbed compile
 
 ------------------------------
