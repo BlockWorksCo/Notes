@@ -36819,6 +36819,8 @@ wisun limitations
     4,000KB of RAM is good for a 6,000-device network.
 https://developer.pelion.com/docs/device-management/current/connecting/wi-sun-tutorial.html
 
+Pelion Border router requires memory mainly based on the network size. Roughly 650B of RAM for every device connected.
+
 
 
 
