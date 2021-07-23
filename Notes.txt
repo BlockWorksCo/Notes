@@ -36748,6 +36748,30 @@ ipv6_buffer_route_to()
 #7  0x000131ba in flushOutgoingData (session=0x2001bfd8) at src/communication/dtls/dtls.c:301
 
 
+negotiate.
+flushOutgoingData start
+ipv6_buffer_route_to 115
+ipv6_buffer_route_to 124
+ipv6_buffer_route_to 131
+ipv6_buffer_route_to 141
+ipv6_buffer_route_to 177
+ipv6_buffer_route_to 193
+ipv6_buffer_route_to 195
+ [DBG ][etx ]: etx=256. Ack=3, attempt=3, sample=6, sample_count=3
+ipv6_buffer_route_to 197
+ipv6_buffer_route_to 203
+ipv6_buffer_route_to 213
+ipv6_buffer_route_to 216
+ipv6_buffer_route_to 223
+ipv6_buffer_route_to 239
+ipv6_buffer_route_to 257
+ipv6_buffer_route_to 260
+ipv6_buffer_route_to 263
+ipv6_buffer_route_to 275
+ipv6_buffer_route_to 287
+ [ERR ][core]: protocol_core_buffers_in_event_queue negative
+
+
 
 
 
