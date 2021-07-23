@@ -36808,6 +36808,19 @@ wisun border router on NUCLEO_F429ZI
 mbed target NUCLEO_F429ZI
 mbed compile
 
+------------------------------------
+wisun limitations
+- image size ~750KB
+- Routing table/RAM usage:
+  Example memory sizes for border router:
+
+    320KB of RAM is good for a 200-device network.
+    500KB of RAM is good for a 650-device network.
+    4,000KB of RAM is good for a 6,000-device network.
+https://developer.pelion.com/docs/device-management/current/connecting/wi-sun-tutorial.html
+
+
+
 
 
 
