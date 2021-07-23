@@ -36732,6 +36732,22 @@ ipv6_buffer_route_to()
  ipv6_destination_lookup()
 
 
+#0  ipv6_buffer_route_to (buf=0x2001ad38, next_hop=0x0, next_if=0x0) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Common_Protocols/ipv6.c:101
+#1  0x00086a32 in socket_interface_determine (socket_ptr=socket_ptr@entry=0x20011400, buf=buf@entry=0x2001ad38) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Core/ns_socket.c:1610
+#2  0x00086e8c in socket_buffer_sendmsg (sid=<optimized out>, buf=0x2001ad38, buf@entry=0x0, msg=msg@entry=0x200033a4 <s_dtlsTaskStack+7748>, flags=flags@entry=16384)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Core/ns_socket.c:1382
+#3  0x0008efbc in socket_sendmsg (socket=<optimized out>, msg=msg@entry=0x200033a4 <s_dtlsTaskStack+7748>, flags=flags@entry=16384)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/libNET/src/socket_api.c:517
+#4  0x0008efee in socket_sendto (socket=socket@entry=1 '\001', address=address@entry=0x200033cc <s_dtlsTaskStack+7788>, buffer=buffer@entry=0x20003cf4 <s_packetBuf>, length=length@entry=156)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/libNET/src/socket_api.c:538
+#5  0x00014852 in udpSendFrom (src=src@entry=0x0, srcPort=<optimized out>, dst=dst@entry=0x2001bff0, dstPort=<optimized out>, interface=INTERFACE_UNSPECIFIED, payload=payload@entry=0x20003cf4 <s_packetBuf>,
+    len=len@entry=156, cb=cb@entry=0x0, cbData=cbData@entry=0x0) at src/communication/udp/udp_nanostack.c:252
+#6  0x000148ac in udpSend (dst=dst@entry=0x2001bff0, srcPort=<optimized out>, dstPort=<optimized out>, iface=iface@entry=INTERFACE_UNSPECIFIED, payload=payload@entry=0x20003cf4 <s_packetBuf>, len=156,
+    cb=cb@entry=0x0, cbData=cbData@entry=0x0) at src/communication/udp/udp_nanostack.c:268
+#7  0x000131ba in flushOutgoingData (session=0x2001bfd8) at src/communication/dtls/dtls.c:301
+
+
+
 
 
 
