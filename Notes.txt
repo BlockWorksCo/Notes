@@ -36732,6 +36732,8 @@ ipv6_buffer_route_to()
  ipv6_destination_lookup()
   ipv6_route_choose_next_hop()
 protocol_push()
+mac_plme_cca_req()
+rf_tx
 
 
 #0  ipv6_buffer_route_to (buf=0x2001ad38, next_hop=0x0, next_if=0x0) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/Common_Protocols/ipv6.c:101
