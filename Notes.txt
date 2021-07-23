@@ -36673,6 +36673,48 @@ ip6_add_route_entry
 ip6_get_gateway
 
 
+routing table on border router:
+Routing table:
+ 2a00:23c5:b3a4:2a00:20b:57ff:fe85:bb18/128 if:1 src:'RPL DAO SR' id:0 lifetime:5211
+     next-hop 2a00:23c5:b3a4:2a00:20b:57ff:fe85:bb18 (met 1128)
+ 2a00:23c5:b3a4:2a00:b8f5:60da:52c6:4ccf/128 if:1 src:'Loopback' id:0 lifetime:infinite
+     On-link (met 1128)
+ 2a00:23c5:b3a4:2a00::/ 64 if:2 src:'Thread BBR' id:0 lifetime:infinite
+     On-link (met 128)
+ fd00:6172:6d00:0:b8f5:60da:52c6:4ccf/128 if:1 src:'Loopback' id:0 lifetime:infinite
+     On-link (met 1128)
+ fd09:2534:54fc:0:280:e1ff:fe30:36/128 if:2 src:'Loopback' id:0 lifetime:infinite
+     On-link (met 128)
+ fdf8:ea68:e7b3:0:280:e1ff:fe30:36/128 if:2 src:'Loopback' id:0 lifetime:infinite
+     On-link (met 128)
+ 2a00:23c5:b3a4:2a00:280:e1ff:fe30:36/128 if:2 src:'Loopback' id:0 lifetime:infinite
+     On-link (met 128)
+ fd09:2534:54fc::/ 48 if:2 src:'RAdv' id:0 lifetime:1769
+     next-hop fe80::9272:82ff:fe76:4bbe (met 128)
+ 2a00:23c5:b3a4:2a00::/ 56 if:2 src:'RAdv' id:0 lifetime:1769
+     next-hop fe80::9272:82ff:fe76:4bbe (met 128)
+ fd09:2534:54fc::/ 64 if:2 src:'RAdv' id:0 lifetime:infinite
+     On-link (met 128)
+ 2a00:23c5:b3a4:2a00::/ 64 if:2 src:'RAdv' id:0 lifetime:8589826
+     On-link (met 128)
+ ::/  0 if:2 src:'RAdv' id:0 lifetime:1769
+     next-hop fe80::9272:82ff:fe76:4bbe (met 128)
+ fdf8:ea68:e7b3::/ 48 if:2 src:'RAdv' id:0 lifetime:1540
+     next-hop fe80::ba27:ebff:feb8:4f2e (met 128)
+ fdf8:ea68:e7b3::/ 64 if:2 src:'RAdv' id:0 lifetime:infinite
+     On-link (met 128)
+ ff00::/  8 if:2 src:'Static' id:0 lifetime:infinite
+     On-link (met 192)
+ fe80::/ 64 if:2 src:'Static' id:0 lifetime:infinite
+     On-link (met 128)
+ ff00::/  8 if:1 src:'Static' id:0 lifetime:infinite
+     On-link (met 1192)
+ fe80::/ 64 if:1 src:'Static' id:0 lifetime:infinite
+     On-link (met 1128)
+Time 17:32:41.0 (63161.0) RPL memory usage 648
+
+
+
 
 
 
