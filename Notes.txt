@@ -36726,6 +36726,21 @@ MBED_CONF_MBED_MESH_API_RADIUS_SHARED_SECRET
 MBED_CONF_MBED_MESH_API_RADIUS_SERVER_IPV6_ADDRESS
 
 
+cfg_ws_border_router.h
+
+/* Config Flags for WS Border router */
+#include "cfg_ws_router.h"
+
+#define HAVE_RPL_ROOT
+#define HAVE_RPL_DAO_HANDLING
+#define HAVE_6LOWPAN_BORDER_ROUTER
+#define HAVE_WS_BORDER_ROUTER
+#define HAVE_ND_PROXY
+#define MULTICAST_FORWARDING
+#define HAVE_PAE_AUTH
+#define HAVE_EAPOL_RELAY
+
+
 --------------------------
 nanostack routing
 
