@@ -36671,6 +36671,7 @@ nanostack/sl/util/third_party/lwip/lwip-contrib/addons/ipv6_static_routing/READM
 
 ip6_add_route_entry
 ip6_get_gateway
+arm_print_routing_table
 
 
 routing table on border router:
@@ -36712,6 +36713,16 @@ Routing table:
  fe80::/ 64 if:1 src:'Static' id:0 lifetime:infinite
      On-link (met 1128)
 Time 17:32:41.0 (63161.0) RPL memory usage 648
+
+
+-----------------------
+wisun border router
+
+mbed-os/connectivity/nanostack/mbed-mesh-api/mbed-mesh-api/WisunBorderRouter.h
+69:class WisunBorderRouter {
+
+MBED_CONF_MBED_MESH_API_RADIUS_SHARED_SECRET
+MBED_CONF_MBED_MESH_API_RADIUS_SERVER_IPV6_ADDRESS
 
 
 
