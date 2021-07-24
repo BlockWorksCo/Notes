@@ -36826,6 +36826,9 @@ NUCLEO F429ZI cant be used as BR without modification:
 https://os.mbed.com/teams/ST/wiki/Nucleo-144pins-ethernet-spi-conflict
 https://github.com/PelionIoT/nanostack-border-router/issues/236
 
+- Persistent RPL to speed up mesh-connect?
+- What is 580b used for, a routing tree could use (8+2+2)bytes per node.
+- storing-mode (omnimesh) vs non-storing (wisun).
 
 
 
