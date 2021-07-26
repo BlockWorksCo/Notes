@@ -36809,6 +36809,7 @@ mbed target NUCLEO_F429ZI
 mbed compile
 
 mbed compile -m NUCLEO_F429ZI --app-config mesh_wisun.json
+mbed compile -m DISCO_F769NI_AGGRESSIVE --app-config mesh_wisun.json
 
 ------------------------------------
 wisun limitations
