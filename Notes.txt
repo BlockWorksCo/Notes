@@ -36808,6 +36808,8 @@ wisun border router on NUCLEO_F429ZI
 mbed target NUCLEO_F429ZI
 mbed compile
 
+mbed compile -m NUCLEO_F429ZI --app-config mesh_wisun.json
+
 ------------------------------------
 wisun limitations
 - image size ~750KB
