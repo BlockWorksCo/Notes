@@ -36833,6 +36833,12 @@ https://github.com/PelionIoT/nanostack-border-router/issues/236
 - What is 580b used for, a routing tree could use (8+2+2)bytes per node.
 - storing-mode (omnimesh) vs non-storing (wisun).
 
+-----------------------------------------------------------------
+Ethernet & S2-LP board on F429ZI issue
+
+https://forums.mbed.com/t/have-trouble-using-nucleo-f429zi-for-nanostack-border-router/9354
+
+
 
 
 
