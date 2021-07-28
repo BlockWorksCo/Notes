@@ -36501,9 +36501,9 @@ Development
 - ipa3-wisun build.                                                                     = Done.
 - UDP API adapter to nanostack API.                                                     = Done.
 - Connectivity Manager (conman) implementation.                                         = Partial.
-- DTLS session.                                                                         = Done (on ethernet. via radio outstanding but should be no change).
-- CoAP/login session.                                                                   = Partial.
-- dev-stack setup for plain IPv6.                                                       =
+- DTLS session.                                                                         = Done.
+- CoAP/login session.                                                                   = Done.
+- dev-stack setup for plain IPv6.                                                       = Partial
 - host-agent OS adaptation (CMSIS/POSIX)                                                = Partial
 - host-agent network interface adaptation (uplink-tun)                                  =
 - nanostack configurables                                                               =
@@ -36511,10 +36511,10 @@ Development
 - nanostack monitoring/statistics.                                                      =
 - gw200-wisun build.                                                                    = Done.
 - gw200 Ethernet adapter to nanostack.                                                  = Done.
-- Enable nanostack as border-router (on gw200-wisun).                                   =
+- Enable nanostack as border-router (on gw200-wisun).                                   = Partial
 - Get to bottom of trickle-timer/multiple event issues.                                 =
 - Get to bottom of very-long mesh-join time.                                            =
-- RADIUS integration into dev-stack.                                                    =
+- RADIUS integration into dev-stack.                                                    = Partial
 - RADIUS integration with border-router.                                                =
 - RADIUS integration into NMS (design feature-set? monitoring-only or control also?)    =
 - Mesh Time sync.                                                                       =
@@ -36526,8 +36526,9 @@ Development
 - performance at scale.                                                                 =
 - NMS network-dentity changes.                                                          =
 - Agent network-identity changes                                                        =
-- size optimisation                                                                     =
-
+- flash size optimisation                                                               =
+- RAM optimisation (650b/node on gw)                                                    =
+- Rearrange 3pp to make it possible to apply our patches on top of 3pp code.            =
 
 Testing
 - Obtaining certification test suite                                                    =
