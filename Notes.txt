@@ -36844,6 +36844,17 @@ nanostack border router
 source/border_router_main.cpp
 
 
+modem.csq.rssi: Signal strength indication.
+modem.rx.bytes: Number of bytes received by the modem.
+modem.tx.bytes: Number of bytes transmitted by the modem.
+modem.cesq.rxlev:
+modem.cesq.ber: Bit Error Rate.
+modem.cesq.rscp:
+modem.cesq.ecno:
+modem.cesq.rsrq:
+modem.cesq.rsrp:
+modem.csq.ber:
+
 
 
 
