@@ -36869,7 +36869,6 @@ rpl.route_add_failures: Number of failures when adding routes.
 
 
 coap.failure.percentage: Number of times an end-to-end CoAP request has failed.
-ip.rx.packets: Number of packets received
 ip.rx.bytes: number of bytes received.
 ip.forward.packets: number of packets forwarded to other nodes.
 ip.tx.packets: number of packets transmitted.
