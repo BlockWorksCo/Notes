@@ -36844,16 +36844,20 @@ nanostack border router
 source/border_router_main.cpp
 
 
-modem.csq.rssi: Signal strength indication.
+modem.csq.rssi: Signal strength indication as defined by ETSI.
 modem.rx.bytes: Number of bytes received by the modem.
 modem.tx.bytes: Number of bytes transmitted by the modem.
-modem.cesq.rxlev:
+modem.cesq.rxlev: Signal strenth indication as defined by 3GPP.
 modem.cesq.ber: Bit Error Rate.
-modem.cesq.rscp:
-modem.cesq.ecno:
-modem.cesq.rsrq:
-modem.cesq.rsrp:
-modem.csq.ber:
+modem.cesq.rscp: Received Signal Code Power.
+modem.cesq.ecno: Energy per chip/noise ratio
+modem.cesq.rsrq: Reference Signal Received Quality.
+modem.cesq.rsrp: Reference Signal Received Power.
+modem.csq.ber: Bit Error Rate as defined by ETSI.
+
+For further details, see the relevant specifications:
+- ETSI TS 127 007
+- 3GPP TS 45.008
 
 
 
