@@ -36862,7 +36862,7 @@ For further details, see the relevant specifications:
 
 rpl.down_routes: number of known routes to a nodes children.
 rpl.rank:
-rpl.etx_to_parent:
+rpl.etx_to_parent: Expected Transmission Count to a nodes parent.
 rpl.hop_count:
 rpl.parent_changes:
 rpl.route_add_failures:
