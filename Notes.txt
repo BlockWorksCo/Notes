@@ -36868,13 +36868,13 @@ rpl.parent_changes: Number of times a node has changed its parent.
 rpl.route_add_failures: Number of failures when adding routes.
 
 
-coap.failure.percentage:
-ip.rx.packets:
-ip.rx.bytes:
-ip.forward.packets:
-ip.tx.packets:
-ip.rx.errors:
-ip.tx.dropped:
+coap.failure.percentage: Number of times an end-to-end CoAP request has failed.
+ip.rx.packets: Number of packets received
+ip.rx.bytes: number of bytes received.
+ip.forward.packets: number of packets forwarded to other nodes.
+ip.tx.packets: number of packets transmitted.
+ip.rx.errors: number of unparseable packets received.
+ip.tx.dropped: Number of outbound packets dropped due to queueing issues.
 
 
 
