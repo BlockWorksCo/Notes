@@ -36884,6 +36884,19 @@ ip.tx.packets: number of packets transmitted.
 ip.rx.errors: number of unparseable packets received.
 ip.tx.dropped: Number of outbound packets dropped due to queueing issues.
 
+monitor.profile.default.sample.interval
+monitor.profile.modem.enabled
+monitor.profile.radio.enabled
+monitor.profile.network.sample.interval
+monitor.profile.ip.enabled
+monitor.profile.environment.enabled
+monitor.profile.environment.sample.interval
+monitor.profile.network.enabled
+monitor.profile.ip.sample.interval
+monitor.profile.modem.sample.interval
+monitor.profile.radio.sample.interval
+monitor.profile.default.enabled
+
 
 
 
