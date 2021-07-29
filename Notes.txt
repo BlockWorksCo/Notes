@@ -36860,6 +36860,14 @@ For further details, see the relevant specifications:
 - 3GPP TS 45.008
 
 
+network.rpl.down_routes:
+network.rpl.rank:
+network.rpl.etx_to_parent:
+network.rpl.hop_count:
+network.rpl.parent_changes:
+network.rpl.route_add_failures:
+network.rpl.failure.percentage:
+
 
 
 
