@@ -36866,6 +36866,14 @@ rpl.etx_to_parent: Expected Transmission Count to a nodes parent.
 rpl.hop_count: The number of radio "hops" from a node the gateway.
 rpl.parent_changes: Number of times a node has changed its parent.
 rpl.route_add_failures: Number of failures when adding routes.
+contention.percentage:
+mac.tx.frames:
+mac.rx.frames:
+mac.tx.noack.percentage:
+mac.attenuation.parent:
+mac.tx.dutycycle:
+mac.noise:
+
 
 
 coap.failure.percentage: Number of times an end-to-end CoAP request has failed.
