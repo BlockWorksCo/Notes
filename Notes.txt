@@ -36844,37 +36844,37 @@ nanostack border router
 source/border_router_main.cpp
 
 
-modem.csq.rssi: Signal strength indication as defined by ETSI.
-modem.rx.bytes: Number of bytes received by the modem.
-modem.tx.bytes: Number of bytes transmitted by the modem.
-modem.cesq.rxlev: Signal strenth indication as defined by 3GPP.
-modem.cesq.ber: Bit Error Rate.
-modem.cesq.rscp: Received Signal Code Power.
-modem.cesq.ecno: Energy per chip/noise ratio
-modem.cesq.rsrq: Reference Signal Received Quality.
-modem.cesq.rsrp: Reference Signal Received Power.
-modem.csq.ber: Bit Error Rate as defined by ETSI.
+csq.rssi: Signal strength indication as defined by ETSI.
+rx.bytes: Number of bytes received by the modem.
+tx.bytes: Number of bytes transmitted by the modem.
+cesq.rxlev: Signal strenth indication as defined by 3GPP.
+cesq.ber: Bit Error Rate.
+cesq.rscp: Received Signal Code Power.
+cesq.ecno: Energy per chip/noise ratio
+cesq.rsrq: Reference Signal Received Quality.
+cesq.rsrp: Reference Signal Received Power.
+csq.ber: Bit Error Rate as defined by ETSI.
 
 For further details, see the relevant specifications:
 - ETSI TS 127 007
 - 3GPP TS 45.008
 
 
-network.rpl.down_routes: number of known routes to a nodes children.
-network.rpl.rank:
-network.rpl.etx_to_parent:
-network.rpl.hop_count:
-network.rpl.parent_changes:
-network.rpl.route_add_failures:
+rpl.down_routes: number of known routes to a nodes children.
+rpl.rank:
+rpl.etx_to_parent:
+rpl.hop_count:
+rpl.parent_changes:
+rpl.route_add_failures:
 
 
-network.coap.failure.percentage:
-ip.rx.packets
-ip.rx.bytes
-ip.forward.packets
-ip.tx.packets
-ip.rx.errors
-ip.tx.dropped
+coap.failure.percentage:
+ip.rx.packets:
+ip.rx.bytes:
+ip.forward.packets:
+ip.tx.packets:
+ip.rx.errors:
+ip.tx.dropped:
 
 
 
