@@ -36529,6 +36529,7 @@ Development
 - flash size optimisation                                                               =
 - RAM optimisation (650b/node on gw)                                                    =
 - Rearrange 3pp to make it possible to apply our patches on top of 3pp code.            =
+- Update wisun stack from current (SimplicityStudio) to latest ARM.                     =
 
 Testing
 - Obtaining certification test suite                                                    =
