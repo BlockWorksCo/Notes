@@ -36899,6 +36899,14 @@ monitor.profile.default.enabled
 
 ------------------------------------------
 
+
+ws_pae_controller.c:
+controller->sec_keys_nw_info.network_name
+and
+controller->sec_keys_nw_info.key_pan_id
+are not set.
+
+ws_cfg_gen_set
 ws_cfg_to_get
 
 
