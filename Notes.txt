@@ -36897,6 +36897,10 @@ monitor.profile.modem.sample.interval
 monitor.profile.radio.sample.interval
 monitor.profile.default.enabled
 
+------------------------------------------
+
+ws_cfg_to_get
+
 
 
 
