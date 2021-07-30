@@ -36918,6 +36918,11 @@ global ws_cfg is set at point of HF.
 ws_bbr_pan_version_increase()
  updates PAE nw info from ws_cfg.
 
+ws_bbr_configure?
+ws_bbr_pan_version_increase?
+ws_bbr_seconds_timer?
+ws_bootstrap_pan_version_increment?
+
 
 
 
