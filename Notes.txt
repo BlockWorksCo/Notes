@@ -36915,6 +36915,9 @@ ws_cfg_to_get
 
 global ws_cfg is set at point of HF.
 
+ws_bbr_pan_version_increase()
+ updates PAE nw info from ws_cfg.
+
 
 
 
