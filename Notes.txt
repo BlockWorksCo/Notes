@@ -36913,6 +36913,8 @@ ws_management_node_init
  ws_cfg_gen_set
 ws_cfg_to_get
 
+global ws_cfg is set at point of HF.
+
 
 
 
