@@ -36906,6 +36906,9 @@ and
 controller->sec_keys_nw_info.key_pan_id
 are not set.
 
+ws_bootstrap_start_authentication
+
+
 ws_cfg_gen_set
 ws_cfg_to_get
 
