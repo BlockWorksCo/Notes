@@ -36930,6 +36930,30 @@ mac_mcps_sap.c:388
 
 ws_bootstrap_asynch_ind or receiving initial bootstrap packets
 rf_tx
+
+
+stack @ transmit point:
+#0  rf_tx (data_ptr=0x20017900 "\252\252\001㪪wM\216\376\377\237\375\220\005\025\001", data_length=50, tx_handle=1 '\001', data_protocol=PHY_LAYER_PAYLOAD)
+    at build/3pp/nanostack/sl/wisun/src/sli_wisun_driver.c:1004
+#1  0x000462d4 in mac_plme_cca_req (rf_mac_setup=rf_mac_setup@entry=0x20012a98) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_pd_sap.c:195
+#2  0x00048a3c in mcps_pd_data_cca_trig (rf_ptr=rf_ptr@entry=0x20012a98, buffer=buffer@entry=0x200197f8) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:2198
+#3  0x00048b72 in mcps_pd_data_request (rf_ptr=rf_ptr@entry=0x20012a98, buffer=buffer@entry=0x200197f8) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:2250
+#4  0x0004979c in mcps_sap_pd_req_queue_write (buffer=0x200197f8, rf_mac_setup=0x20012a98) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:2344
+#5  mcps_sap_pd_req_queue_write (rf_mac_setup=0x20012a98, buffer=0x200197f8) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:2315
+#6  0x0004a6fc in mcps_sap_data_req_handler_ext (rf_mac_setup=0x20012a98, data_req=0x2000ac54 <sli_wisun_event_loop_task_stack+5892>, ie_list=0x200198c0, asynch_channel_list=<optimized out>,
+    priority=<optimized out>) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:391
+#7  0x00083182 in ws_llc_asynch_request (interface=interface@entry=0x20013100, request=request@entry=0x2000ac9c <sli_wisun_event_loop_task_stack+5964>)
+    at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/6LoWPAN/ws/ws_llc_data_service.c:1807
+#8  0x0007a17a in ws_bootstrap_pan_advert (cur=0x20013100) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/6LoWPAN/ws/ws_bootstrap.c:3616
+#9  ws_bootstrap_trickle_timer (cur=cur@entry=0x20013100, ticks=ticks@entry=1) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/6LoWPAN/ws/ws_bootstrap.c:4081
+#10 0x0007cf64 in ws_common_fast_timer (cur=cur@entry=0x20013100, ticks=ticks@entry=1) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/6LoWPAN/ws/ws_common.c:542
+#11 0x0008fa30 in core_timer_event_handle (ticksUpdate=<optimized out>) at build/3pp/nanostack/nanostack/sal-stack-nanostack/source/NWK_INTERFACE/protocol_core.c:329
+#12 0x0003d726 in eventOS_scheduler_dispatch_event () at build/3pp/nanostack/nanostack/sal-stack-nanostack-eventloop/source/event.c:344
+#13 0x0003d746 in eventOS_scheduler_run () at build/3pp/nanostack/nanostack/sal-stack-nanostack-eventloop/source/event.c:368
+#14 0x0003cdd2 in event_loop_thread (arg=<optimized out>) at build/3pp/nanostack/sl/wisun/src/nanostack-hal/ns_event_loop.c:63
+#15 0x0002462c in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+
+
 ----------------------------------------
 
 
