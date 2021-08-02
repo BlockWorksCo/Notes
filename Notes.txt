@@ -36929,7 +36929,7 @@ mcps_sap_data_req_handler_ext()
 mac_mcps_sap.c:388
 
 ws_bootstrap_asynch_ind or receiving initial bootstrap packets
-
+rf_tx
 ----------------------------------------
 
 
