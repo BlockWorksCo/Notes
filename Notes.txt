@@ -36511,7 +36511,7 @@ Development
 - nanostack monitoring/statistics.                                                      =
 - gw200-wisun build.                                                                    = Done.
 - gw200 Ethernet adapter to nanostack.                                                  = Done.
-- Enable nanostack as border-router (on gw200-wisun).                                   = Partial
+- Enable nanostack as border-router (on gw200-wisun).                                   = Done.
 - Get to bottom of trickle-timer/multiple event issues.                                 =
 - Get to bottom of very-long mesh-join time.                                            =
 - RADIUS integration into dev-stack.                                                    = Partial
@@ -37001,7 +37001,9 @@ long-term: Create SDK
 - single SKU for Agent, combined with multiple individual builds for MeterDrivers. Nodes can be supplied with just Agent and then can be
 updated with a MeterDriver on first boot? Much easier path to get to a single-SKU node manufacturing.
 - address tech debt, refactor & increases dev speed for meter work. Use existing DLMS2 work.
-- Security. MeterDriver can be effectively sandboxed using MPU. Reminder security-requirements will become more stringent.
+- Security. MeterDriver can be effectively sandboxed using MPU. Reminder security-requirements will become more stringent with
+OneM2M & NTC (CPA equivalent).
+
 
 
 Disadvantages:
