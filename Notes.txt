@@ -36966,6 +36966,13 @@ mcps_req_ext
 mcps_sap_data_req_handler_ext
 
 
+----------------------
+Outsourcing / SDK.
+
+- testability, separation of concerns.
+- single SKU
+- tech debt & increased dev speed for meter work.
+- security. meter-driver can be effectively sandboxed.
 
 
 
