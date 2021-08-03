@@ -36966,6 +36966,19 @@ mcps_req_ext
 mcps_sap_data_req_handler_ext
 
 
+ EAP-TLS: recv RESPONSE type TLS id 2 flags 0 len 113, eui-64
+ TLS: start, eui-64:
+ no own cert
+ cert conf fail
+ TLS: library connect fail
+ TLS: finish, eui-64:
+ EAP-TLS: handshake fatal error
+ EAP-TLS: send FAILURE type TLS id 2 flags ff len 8, eui-64:
+ EAP-TLS finish, eui-64:
+ 6LoWPAN push down to protocol 3
+
+
+
 ----------------------
 Outsourcing / SDK.
 
