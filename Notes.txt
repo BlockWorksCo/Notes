@@ -36955,6 +36955,12 @@ stack @ transmit point:
 
 
 ----------------------------------------
+PAN advertisements
+
+ws_bootstrap_pan_advertisement_analyse
+ws_bootstrap_pan_advertisement_solicit_analyse
+
+ws_bootstrap_pan_advert
 
 
 
