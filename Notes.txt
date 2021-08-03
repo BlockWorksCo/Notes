@@ -36987,27 +36987,29 @@ short-term; bringing people in:
 - speed of becoming familiar with code is an issue.
 - cost of management & review of code.
 - opening dev env to them to work remotely (i.e. to make meters available to remote host-agents).
--
 
 medium-term: Outsource
 - leave current meter-driver as-is.
 - develop new meter-drivers in the same style as currently, just with remote-work
 - working as TECPoint did.
 
-
 long-term: Create SDK
 - separate single Agent binary into two (Agent & MeterDriver).
 - Create API that allows MeterDriver to perform only needed functions.
 - testability, separation of concerns. MeterDriver can be rigorously tested in isolation. Agent can have a "stub" MeterDriver to aid testing.
+- External companies can build MeterDriver binaries and use test-harness.
 - single SKU for Agent, combined with multiple individual builds for MeterDrivers. Nodes can be supplied with just Agent and then can be
 updated with a MeterDriver on first boot? Much easier path to get to a single-SKU node manufacturing.
-- address tech debt, refactor & increas dev speed for meter work. Use DLMS2 work.
-- security. meter-driver can be effectively sandboxed.
+- address tech debt, refactor & increases dev speed for meter work. Use existing DLMS2 work.
+- Security. MeterDriver can be effectively sandboxed using MPU. Reminder security-requirements will become more stringent.
 
 
-Concerns:
+Disadvantages:
 - Loss of knowledge. What is core to CC? networks? smart-metering? system?
 
+Advantages:
+- Increased speed of integrations
+- single-SKU hardware (if that option is taken).
 
 
 
