@@ -36982,9 +36982,6 @@ mcps_sap_data_req_handler_ext
 ----------------------
 Outsourcing / SDK.
 
-Concerns:
-- Loss of knowledge. What is core to CC? networks? smart-metering? system?
-
 short-term; bringing people in:
 - basically working as a contractor.
 - speed of becoming familiar with code is an issue.
@@ -36999,11 +36996,17 @@ medium-term: Outsource
 
 
 long-term: Create SDK
-- testability, separation of concerns.
-- single SKU
-- tech debt & increased dev speed for meter work.
+- separate single Agent binary into two (Agent & MeterDriver).
+- Create API that allows MeterDriver to perform only needed functions.
+- testability, separation of concerns. MeterDriver can be rigorously tested in isolation. Agent can have a "stub" MeterDriver to aid testing.
+- single SKU for Agent, combined with multiple individual builds for MeterDrivers. Nodes can be supplied with just Agent and then can be
+updated with a MeterDriver on first boot? Much easier path to get to a single-SKU node manufacturing.
+- address tech debt, refactor & increas dev speed for meter work. Use DLMS2 work.
 - security. meter-driver can be effectively sandboxed.
 
+
+Concerns:
+- Loss of knowledge. What is core to CC? networks? smart-metering? system?
 
 
 
