@@ -37028,6 +37028,8 @@ network:2a00:23c5:b3a6:300::/64
 
 Address added to IF 1: 2a00:23c5:b3a6:300:20b:57ff:fe85:bb18
 
+route -6 add 2a00:23c5:b3a6:0300::/64 enp0s3
+route -6 add fd00:6172:6d00:0000::/64 enp0s3
 
 
 
