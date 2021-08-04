@@ -36544,6 +36544,7 @@ Current state:
 - ipa3 can join network formed by ST border-router.
 - gw200 can join network formed by ST border router (as a node).
 - gw200 ethernet is plumbed into nanostack.
+- gw200 can form a wisun mesh as a border router and have an ipa3-wisun join it.
 - UDP works from the application-level (simple "echo" client).
 - ICMP works from the application-level (ICMP "ping" request/reply).
 - "conman" initiates login & DTLS session when ethernet interface brought up.
