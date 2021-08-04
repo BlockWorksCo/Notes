@@ -36504,8 +36504,8 @@ Development
 - DTLS session.                                                                         = Done.
 - CoAP/login session.                                                                   = Done.
 - dev-stack setup for plain IPv6.                                                       = Partial
-- host-agent OS adaptation (CMSIS/POSIX)                                                = Partial
-- host-agent network interface adaptation (uplink-tun)                                  =
+- host-agent OS adaptation (CMSIS/POSIX)                                                = Done
+- host-agent network interface adaptation (uplink-tun)                                  = Partial.
 - nanostack configurables                                                               =
 - nanostack cert/key data loading.                                                      =
 - nanostack monitoring/statistics.                                                      =
