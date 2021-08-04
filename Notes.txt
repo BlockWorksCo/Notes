@@ -37020,8 +37020,8 @@ routing in nanostack:
 
 icmpv6_echo_request_handler
 
-node: 2a00:23c5:b3a6:300:20b:57ff:fe85:bb18
-gw:
+node:   2a00:23c5:b3a6:300:20b:57ff:fe85:bb18
+gw:     2a00:23c5:b3a6:300:821f:12ff:fe11:63ec
 
 
 Address added to IF 1: 2a00:23c5:b3a6:300:20b:57ff:fe85:bb18
