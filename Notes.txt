@@ -37032,6 +37032,18 @@ route -6 add 2a00:23c5:b3a6:0300::/64 enp0s3
 route -6 add fd00:6172:6d00:0000::/64 enp0s3
 
 
+Backhaul interface addresses:
+ [0] fe80::821f:12ff:fe11:63ec
+ [1] fdf8:ea68:e7b3:0:821f:12ff:fe11:63ec
+ [2] 2a00:23c5:b3a6:300:821f:12ff:fe11:63ec
+ [3] fd09:2534:54fc:0:821f:12ff:fe11:63ec
+RF interface addresses:
+ [0] fe80::92fd:9fff:fe8e:4d77
+ [1] fd00:6172:6d00:0:92fd:9fff:fe8e:4d77
+ [2] 2a00:23c5:b3a6:300:92fd:9fff:fe8e:4d77
+
+
+
 
 
 
