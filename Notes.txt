@@ -37086,7 +37086,7 @@ New IPA3
 
 
 Tasks:
-- Board support (timers, internal flash, USART, SPI, I2C, RNG, ADC, GPIO, ReadProtect).
+- Board support (clocks&BSP, timers, internal flash, USART, SPI, DMA, I2C, RNG, ADC, GPIO, ReadProtect, VMon).
 - Dedicated key-storage is available (possibly use for CNFS key?)
 - Use SPI for external flash.
 - Use bitbanged (or DMA, or offload to M0) SPI for radio driver (needs investigation here as to the best approach).
