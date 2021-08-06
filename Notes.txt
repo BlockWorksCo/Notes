@@ -37079,7 +37079,23 @@ fe80::92fd:9fff:fe8e:4d77
 ---------------------------------------
 New IPA3
 
-- STM32
+- STM32WB50CG
+- S2LP
+- One UART, debug or meter?
+- Create alternate debug (I2C)?
+
+
+Tasks:
+- Board support
+- S2LP MAC/PHY layer (possibly base on WiSUN/mBed driver as its already in the codebase)
+-
+
+
+
+
+
+
+
 
 
 
