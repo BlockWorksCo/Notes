@@ -37086,12 +37086,23 @@ New IPA3
 
 
 Tasks:
-- Board support (clocks&BSP, timers, internal flash, USART, SPI, DMA, I2C, RNG, ADC, GPIO, ReadProtect, VMon).
-- Dedicated key-storage is available (possibly use for CNFS key?)
-- Use SPI for external flash.
-- Use bitbanged (or DMA, or offload to M0) SPI for radio driver (needs investigation here as to the best approach).
-- S2LP MAC/PHY layer (possibly base on WiSUN/mBed driver as its already in the codebase)
-- I2CDebug (possibly use also for GW7/CNIC also?).
+- clocks&BSP initial integration                                            =
+- timers                                                                    =
+- internal flash                                                            =
+- USART                                                                     =
+- SPI                                                                       =
+- DMA                                                                       =
+- I2C                                                                       =
+- RNG                                                                       =
+- ADC                                                                       =
+- GPIO                                                                      =
+- ReadProtect                                                               =
+- VMon                                                                      =
+- Dedicated key-storage is available (possibly use for CNDFS key?)          =
+- Use SPI for external flash.                                               =
+- Use bitbanged/offloaded-to-M0/DMA SPI for radio driver.                   =
+- S2LP MAC/PHY layer (note: WiSUN/mBed driver is already in the codebase)   =
+- I2CDebug (possibly use also for GW7/CNIC also?).                          =
 
 
 
