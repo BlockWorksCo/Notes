@@ -37087,7 +37087,10 @@ New IPA3
 
 Tasks:
 - Board support
+- Use SPI for external flash.
+- Use bitbanged (or DMA) SPI for radio driver (needs investigation here as to the best approach).
 - S2LP MAC/PHY layer (possibly base on WiSUN/mBed driver as its already in the codebase)
+- I2CDebug (possibly use also for GW7/CNIC also?).
 -
 
 
