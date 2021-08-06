@@ -37070,7 +37070,16 @@ RF interface addresses:
  [2] 2a00:23c5:b3a6:300:92fd:9fff:fe8e:4d77
 
 
+route -A inet6 add fd09:2534:54fc:0000::/64 dev br-lan
+route -A inet6 add fe80::/64 dev br-lan
 
+fe80::92fd:9fff:fe8e:4d77
+
+
+---------------------------------------
+New IPA3
+
+- STM32
 
 
 
