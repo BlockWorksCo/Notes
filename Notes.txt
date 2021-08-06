@@ -37086,12 +37086,12 @@ New IPA3
 
 
 Tasks:
-- Board support
+- Board support (timers, internal flash, USART, SPI, I2C).
+- Dedicated key-storage is available (possibly use for CNFS key?)
 - Use SPI for external flash.
 - Use bitbanged (or DMA) SPI for radio driver (needs investigation here as to the best approach).
 - S2LP MAC/PHY layer (possibly base on WiSUN/mBed driver as its already in the codebase)
 - I2CDebug (possibly use also for GW7/CNIC also?).
--
 
 
 
