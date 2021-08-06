@@ -37086,23 +37086,23 @@ New IPA3
 
 
 Tasks:
-- clocks&BSP initial integration                                            =
-- timers                                                                    =
-- internal flash                                                            =
-- USART                                                                     =
-- SPI                                                                       =
-- DMA                                                                       =
-- I2C                                                                       =
-- RNG                                                                       =
-- ADC                                                                       =
-- GPIO                                                                      =
-- ReadProtect                                                               =
-- VMon                                                                      =
-- Dedicated key-storage is available (possibly use for CNDFS key?)          =
-- Use SPI for external flash.                                               =
-- Use bitbanged/offloaded-to-M0/DMA SPI for radio driver.                   =
-- S2LP MAC/PHY layer (note: WiSUN/mBed driver is already in the codebase)   =
-- I2CDebug (possibly use also for GW7/CNIC also?).                          =
+- clocks&BSP initial integration                                            = 2w
+- timers                                                                    = 1w
+- internal flash                                                            = 1w
+- USART                                                                     = 1w
+- SPI (external flash)                                                      = 1w
+- DMA                                                                       = 1w
+- I2C                                                                       = 1w
+- RNG                                                                       = 1w
+- ADC                                                                       = 1w
+- GPIO                                                                      = 1w
+- ReadProtect                                                               = 1w
+- VMon                                                                      = 1w
+- Dedicated key-storage is available (possibly use for CNDFS key?)          = 1w
+- Use bitbanged/offloaded-to-M0/DMA SPI for radio driver.                   = 3w
+- S2LP MAC/PHY layer (note: WiSUN/mBed driver is already in the codebase)   = 4w
+- I2CDebug (possibly use also for GW7/CNIC7/NIC7 also?).                    = 2w
+                                                                Total       = 23w
 
 
 
