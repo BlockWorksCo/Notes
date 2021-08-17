@@ -37103,6 +37103,10 @@ Tasks:
 - S2LP MAC/PHY layer (note: WiSUN/mBed driver is already in the codebase)   = 4w
 - I2CDebug (possibly use also for GW7/CNIC7/NIC7 also?).                    = 2w
                                                                 Total       = 23w
+-------------------------------------
+sample decode from protobuf
+
+DataObjectFormatter in java code performs formatting into JSON float/int.
 
 
 
