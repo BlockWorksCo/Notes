@@ -37113,8 +37113,7 @@ DataProfileSample
 ---------------------------------------------
 Power saving on last-gasp
 
-- stop transmitting normal messages. Only last-gasp transmitted.
--
+- The pattern of transmissions after a power-fail is designed to prolong the lifetime of the node in order to spread the transmissions out in time. Since the most power-hungry operation is operating the radio, this provides a degree of power-saving.
 
 
 
