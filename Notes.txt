@@ -37110,6 +37110,11 @@ DataObjectFormatter in java code performs formatting into JSON float/int.
 pbEncodeDataProfileValues
 DataProfileSample
 
+---------------------------------------------
+Power saving on last-gasp
+
+- stop transmitting normal messages. Only last-gasp transmitted.
+-
 
 
 
