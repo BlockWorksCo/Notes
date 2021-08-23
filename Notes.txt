@@ -37130,6 +37130,10 @@ diff -qr 3pp/nanostack/nanostack/frameworks/nanostack-libservice/ /Data/Projects
 - nsdynmemLIB.c different.
 
 
+diff -qr 3pp/nanostack/nanostack/frameworks/mbed-trace/ /Data/Projects/mbed-os/platform/mbed-trace/
+- 3pp/nanostack/nanostack/frameworks/mbed-trace/source/mbed_trace.c
+
+
 
 
 
