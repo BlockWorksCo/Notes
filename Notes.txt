@@ -37122,6 +37122,8 @@ directory diff in nanostack:
 diff -qr 3pp/nanostack/nanostack/mbed-os /Data/Projects/mbed-os
 - only files missing from terminal.
 
+diff -qr 3pp/nanostack/nanostack/libraries/mbed-coap/ /Data/Projects/mbed-os/connectivity/libraries/mbed-coap/
+- zero change.
 
 
 
