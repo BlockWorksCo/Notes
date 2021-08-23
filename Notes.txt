@@ -37127,7 +37127,7 @@ diff -qr 3pp/nanostack/nanostack/libraries/mbed-coap/ /Data/Projects/mbed-os/con
 
 
 diff -qr 3pp/nanostack/nanostack/frameworks/nanostack-libservice/ /Data/Projects/mbed-os/connectivity/libraries/nanostack-libservice/
-- nsdynmemLIB.c
+- nsdynmemLIB.c different.
 
 
 
