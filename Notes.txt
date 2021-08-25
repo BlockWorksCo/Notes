@@ -37134,6 +37134,12 @@ diff -qr 3pp/nanostack/nanostack/frameworks/mbed-trace/ /Data/Projects/mbed-os/p
 - 3pp/nanostack/nanostack/frameworks/mbed-trace/source/mbed_trace.c
 
 
+diff -qr nanostack-temp/sal-stack-nanostack/source/Security mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security
+Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/fwh_sec_prot/auth_fwh_sec_prot.c and mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/fwh_sec_prot/auth_fwh_sec_prot.c differ
+Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/sec_prot_cfg.h and mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/sec_prot_cfg.h differ
+Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/tls_sec_prot_lib.c and mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/tls_sec_prot_lib.c differ
+
+
 
 
 
