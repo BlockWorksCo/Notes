@@ -37146,6 +37146,8 @@ Technology group meeting:
   - remote logging/sniffer device.
   - log-to-file
   - mesh debugging aids
+  - network planning aids
+  - diagnosing/investigating MNO issues such as traffic "management".
 
 - new technologies:
   - OneM2M / lwm2m
