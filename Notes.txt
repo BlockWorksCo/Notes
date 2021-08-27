@@ -37142,18 +37142,19 @@ Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/
 ---------------------------
 Technology group meeting:
 
-- in-house technology
+- in-house technology:
   - remote logging/sniffer device.
   - log-to-file
   - mesh debugging aids
 
-- new technologies
+- new technologies:
   - OneM2M / lwm2m
 
-- low power
+- low power:
   - async/sync mqtt?
 
-
+- mdms-side technologies:
+  - http3 for streaming
 
 
 
