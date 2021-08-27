@@ -37169,6 +37169,9 @@ Technology group meeting:
 - Production:
   -
 
+- software technologies
+  - Rust, C++
+  - SDK?
 
 
 
