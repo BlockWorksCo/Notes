@@ -37142,6 +37142,10 @@ Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/
 ---------------------------
 Technology group meeting:
 
+- Issues with current CC technology & devices in the field
+- up and coming technologies that may prove useful to CC.
+- new applications of technologies & devices
+
 - in-house technology:
   - remote logging/sniffer device.
   - log-to-file
@@ -37152,12 +37156,18 @@ Technology group meeting:
 - new technologies:
   - OneM2M / lwm2m
 
+- new applications:
+  - visualisation
+  - analysis
+
 - low power:
   - async/sync mqtt?
 
 - mdms-side technologies:
   - http3 for streaming
 
+- Production:
+  -
 
 
 
