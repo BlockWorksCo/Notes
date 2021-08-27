@@ -37178,6 +37178,8 @@ to improve our devices & solutions whether internally or as they apply to our cu
   - Rust, C++
   - SDK?
 
+- potential upcoming issues:
+  - prepayment, changes network traffic pattern substantially.
 
 
 
