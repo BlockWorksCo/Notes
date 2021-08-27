@@ -37139,6 +37139,19 @@ Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/fwh_sec_prot/
 Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/sec_prot_cfg.h and mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/sec_prot_cfg.h differ
 Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/tls_sec_prot_lib.c and mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/tls_sec_prot_lib.c differ
 
+---------------------------
+Technology group meeting:
+
+- in-house technology
+  - remote logging/sniffer device.
+  - log-to-file
+  - mesh debugging aids
+
+- new technologies
+  - OneM2M / lwm2m
+
+- low power
+  - async/sync mqtt?
 
 
 
