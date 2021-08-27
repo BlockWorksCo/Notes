@@ -37147,6 +37147,10 @@ to improve our devices & solutions whether internally or as they apply to our cu
 - meeting?
 - slack discussion?
 
+- pain points
+
+
+
 - Issues with current CC technology & devices in the field
 - up and coming technologies that may prove useful to CC.
 - new applications of technologies & devices
@@ -37180,6 +37184,11 @@ to improve our devices & solutions whether internally or as they apply to our cu
 
 - potential upcoming issues:
   - prepayment, changes network traffic pattern substantially.
+
+- Testing:
+  - Network emulation
+  - scaling
+  - performance
 
 
 
