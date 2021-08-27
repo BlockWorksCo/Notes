@@ -37142,6 +37142,11 @@ Files nanostack-temp/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/
 ---------------------------
 Technology group meeting:
 
+Disucssion about technologies that we should investigate w.r.t how they can be applied
+to improve our devices & solutions whether internally or as they apply to our customers.
+- meeting?
+- slack discussion?
+
 - Issues with current CC technology & devices in the field
 - up and coming technologies that may prove useful to CC.
 - new applications of technologies & devices
