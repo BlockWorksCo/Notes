@@ -37200,6 +37200,7 @@ to improve our devices & solutions whether internally or as they apply to our cu
 - cant bl upgrade due to release bl.
 - no indication of file filesystem corruption (superficial, based on log).
 - flash map seems reasonable.
+- MAGIC check passes.
 - position of pb-decode failure message is *after* check for CRC.
     - CRC check *must* have passed to get to that point.
     - Since CRC is generated at the application-level, this indicates that the filesystem is most likely ok but
