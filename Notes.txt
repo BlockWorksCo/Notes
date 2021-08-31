@@ -37192,6 +37192,18 @@ to improve our devices & solutions whether internally or as they apply to our cu
   - performance
 
 
+---------------------------------------------------
+2 ndoes with potential filesystem/flash issues:
 
+- Cant debug due to being in release mode.
+- Cant upgrade due to not being online.
+- cant bl upgrade due to release bl.
+- no indication of file filesystem corruption (superficial, based on log).
+- flash map seems reasonable.
+- position of pb-decode failure message is *after* check for CRC.
+    - CRC check *must* have passed to get to that point.
+    - Since CRC is generated at the application-level, this indicates that the filesystem is most likely ok but
+    some issue caused a corrupt protobuf structure to be created.
+    - Unknown cause for this behaviour, but may be unrelated to filesystem.
 
 
