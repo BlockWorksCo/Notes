@@ -37208,6 +37208,13 @@ to improve our devices & solutions whether internally or as they apply to our cu
     - Unknown cause for this behaviour, but may be unrelated to filesystem.
 
 
+-------------------------------------
+gw bricking:
+
+pb_decode_noinit_no_required_check
+468 bytes at start.
+467
+42
 
 
 
