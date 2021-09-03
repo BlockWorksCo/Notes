@@ -37225,6 +37225,20 @@ pb_decode_noinit_no_required_check
 1
 
 
+Breakpoint 4, pb_decode_noinit_no_required_check (stream=0x20014b58 <s_terminalTaskStack+1560>,
+    fields=0xb6618 <Configuration_Modem_fields>, dest_struct=0x2000f9cc <s_configuration+588>)
+    at src/communication/protobuf/protobuf.c:271
+271                 return false;
+(gdb) p tag
+$1 = 5
+(gdb) p wire_type
+$2 = PB_WT_VARINT
+(gdb) p *stream
+$3 = {callback = 0x4a975 <crcIstreamRead>, state = 0x20014c0c <s_terminalTaskStack+1740>,
+  bytes_left = 56}
+(gdb)
+
+
 
 
 
