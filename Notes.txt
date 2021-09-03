@@ -37241,6 +37241,15 @@ $3 = {callback = 0x4a975 <crcIstreamRead>, state = 0x20014c0c <s_terminalTaskSta
 
 6th time of protobuf.c:233 is false.
 
+in pb_dec_string, the size is 8050 which looks very much like the value from the port config value.
+this results in alloc_size being 8051
+
+This condition fails:
+1401         if (alloc_size > field->data_size)
+1402             PB_RETURN_ERROR(stream, "string overflow");
+
+
+
 
 
 
