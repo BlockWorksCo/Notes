@@ -37250,6 +37250,10 @@ This condition fails:
 
 wire_type is PB_WT_VARINT but its being interpreted as a string (with a varint length first).
 
+the port number should be of type PB_LTYPE_VARINT but actually has PB_LTYPE_STRING in Configuration_Modem_fields.
+This means the integer value (8050) gets translated as the length header for the string which is obviously tooo big.
+
+
 
 
 
