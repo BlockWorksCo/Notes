@@ -37257,6 +37257,11 @@ when nodes running v20.26.6 were upgraded to v21.4.61 release image, they were f
 [2:31 PM] when upgrading the same nodes to v21.10.9, they bricked
 [2:32 PM] so the 1691 nodes that I'm using for LG testing now have never been running v20.26.6
 
+
+branch to check for build errors:
+ConfigParametersChecker
+
+
 --------------------------------------------------
 
 
