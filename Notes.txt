@@ -37263,6 +37263,12 @@ ConfigParametersChecker
 
 
 --------------------------------------------------
+return to office:
+
+- microsoft stopped working from home when our rate is higher.
+- schools going back
+- most people have links to school, kids & relatives
+
 
 
 
