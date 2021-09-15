@@ -37269,6 +37269,10 @@ return to office:
 - schools going back
 - most people have links to school, kids & relatives
 
+-------------------------------------
+wpdu:
+00 01 00 01 00 20 00 04 0e 05 06
+0001 0001 0020 0004    0e0506
 
 
 
