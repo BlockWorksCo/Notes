@@ -37445,6 +37445,8 @@ KPI generation and storing
 
 - Potentially use a timeseries db as all this is time-series data.
 - Have to generate useful diagnostic data for internal statistics:
+    - Received samples stats
+    - Derived stats from samples (SLA)
     - raw packets received & transmitted
     - traffic rates to different networks/gateways
     - query rates
@@ -37454,9 +37456,9 @@ KPI generation and storing
     - node migrations.
     - Exception stats
     - Login/logout rates
-    - Received samples stats (for SLA generation).
     - Heap usage stats
     - message-type statistics
+    - Current dashboard stats (meter-types logged in counts, node-type counts, etc).
 - KPI db to be accessible from outside of Java app also:
     - tun6d traffic rates
     - tun6d error rates
@@ -37465,6 +37467,7 @@ KPI generation and storing
     - Thread usage stats.
     - SSD stats.
     - db stats
+- Collection will be periodic for some, event-driven for others.
 
 Visualisation?
 
