@@ -37330,6 +37330,36 @@ rx: 0001 0001 0020 0004   0e0506...
 2021-09-16 11:02:43.828 #1   001bc50c60067407 <log> 0:00:30.795 [debug] [        wpdu] {     wpdu}: rx: ( 5/ 6): d740cfc0c7c498735aa8aec0acceacea
 2021-09-16 11:02:43.828 #1   001bc50c60067407 <log> 0:00:30.795 [debug] [        wpdu] {     wpdu}: rx: ( 6/ 6): 6f92
 
+<AssociationResponse>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <!--PERMANENT_REJECTED-->
+  <AssociationResult Value="01" />
+  <ResultSourceDiagnostic>
+    <!--AUTHENTICATION_FAILURE-->
+    <ACSEServiceUser Value="0D" />
+  </ResultSourceDiagnostic>
+  <RespondingAPTitle Value="474F45000043C1FB" />
+  <glo_InitiateResponse Value="30000000342C8DD22ACB9B7E7CD740CFC0C7C498735AA8AEC0ACCEACEA6F92" />
+</AssociationResponse>
+
+
+
+
+0001 0020 0001 0068 60 66 A1 09 06 07 60 85 74 05 08 01 03 A6 0A 04 08 47 4F 45 30 30 30 30 30 8A 02 07 80 8B 07 60 85 74 05 08 02 01 AC 0A 80 08 31 41 32 42 33 43 34 44 BE 34 04 32 21 30 30 00 00 00 00 4D 0B 92 B4 ED 0C 34 CA D6 BA 9C 98 F0 18 53 0C E5 EC EC D7 32 FD E4 22 70 75 3A EB 30 20 B9 33 63 D5 C5 A7 8B 35 F3 65 B1 AB 40
+
+<AssociationRequest>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <CallingAPTitle Value="474F453030303030" />
+  <SenderACSERequirements Value="1" />
+  <MechanismName Value="Low" />
+  <CallingAuthentication Value="3141324233433444" />
+  <glo_InitiateRequest Value="30000000004D0B92B4ED0C34CAD6BA9C98F018530CE5ECECD732FDE42270753AEB3020B93363D5C5A78B35F365B1AB40" />
+</AssociationRequest>
+
+
+
+
+
 
 ------------------------------
 Aging out data in mysql
