@@ -37454,11 +37454,13 @@ KPI generation and storing
     - active job stats
     - cluster traffic rates and types.
     - node migrations.
+    - cluster health.
     - Exception stats
     - Login/logout rates
     - Heap usage stats
     - message-type statistics
     - Current dashboard stats (meter-types logged in counts, node-type counts, etc).
+    - UI actions.
 - KPI db to be accessible from outside of Java app also:
     - tun6d traffic rates
     - tun6d error rates
@@ -37470,7 +37472,9 @@ KPI generation and storing
 - Collection will be periodic for some, event-driven for others.
 
 Visualisation?
-
+- SuperSet?
+- Grafana?
+- Kibana?
 
 
 
