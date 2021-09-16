@@ -37330,6 +37330,7 @@ Aging out data options:
 - PARTITION by time-range, then DROP PARTITION (quicker than DELETE). (https://www.vertabelo.com/blog/everything-you-need-to-know-about-mysql-partitions/)
 
 Questions:
+- Can we use partitioning on the sample table? (foreign-key restrictions).
 - size of partition/frequency of deletion. Similar to garbage-collection frequency.
 - Performance calculations need to take this into account.
 - Can DROP PARTITION be done without affecting performance (i.e. is it async to active partition)?
