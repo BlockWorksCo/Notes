@@ -37292,6 +37292,8 @@ CREATE EVENT cleaning ON SCHEDULE EVERY 1 MONTH ENABLE
 
 Or partition by age and have cron job drop a partition and build new partition:
 PARTITION BY RANGE(TO_DAYS(...));
+then:
+DROP PARTITION is faster than DELETE
 
 
 
