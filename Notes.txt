@@ -37476,6 +37476,11 @@ Visualisation?
 - Grafana?
 - Kibana?
 
+Performance/Deployment issues:
+- May have to have a read-replica and use Vis tool on that.
+    - Must isolate heavy analysis load from main operation.
+- Collection must be lightweight & efficient.
+
 
 
 
