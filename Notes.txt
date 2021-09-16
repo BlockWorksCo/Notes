@@ -37455,12 +37455,15 @@ KPI generation and storing
     - Exception stats
     - Login/logout rates
     - Received samples stats (for SLA generation).
+    - Heap usage stats
+    - message-type statistics
 - KPI db to be accessible from outside of Java app also:
     - tun6d traffic rates
     - tun6d error rates
     - packet drops (e.g. /proc/net/udp6)
     - Processor(s) loading.
     - Thread usage stats.
+    - db stats
 
 Visualisation?
 
