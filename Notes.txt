@@ -37323,6 +37323,17 @@ then:
 DROP PARTITION is faster than DELETE
 
 
+----------------------------
+Aging out data options:
+- Replace general purpose db (mysql) with timeseries db for time series data such as samples & KPI.
+- Simple "DELETE from xxx WHERE now-timestamp>4w"?
+- PARTITION by time-range, then DROP PARTITION (quicker than DELETE).
+
+
+
+
+
+
 
 
 
