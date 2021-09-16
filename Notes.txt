@@ -37369,6 +37369,21 @@ rx: 0001 0001 0020 0004   0e0506...
 </AssociationResponse>
 
 
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.675 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): 7e
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.675 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): a057
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.675 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): 03
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.675 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): 41
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.675 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): 10
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): df07
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): e6e600
+2021-09-16 15:12:13.363 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 5): 6049a109060760857405080103a60a04
+2021-09-16 15:12:13.364 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 2/ 5): 08474f4530303030308a0207808b0760
+2021-09-16 15:12:13.364 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 3/ 5): 857405080201ac0a8008314132423343
+2021-09-16 15:12:13.364 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 4/ 5): 3444be17041521132000040fec82191c
+2021-09-16 15:12:13.364 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 5/ 5): 1673733237ee4739157e74
+2021-09-16 15:12:13.364 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): d220
+2021-09-16 15:12:13.364 #1   001bc50c600677b0 <log> 0:00:30.676 [debug] [        hdlc] {     hdlc}: tx: ( 1/ 1): 7e
+
 
 
 
@@ -37410,6 +37425,9 @@ My preference:
 - Try partitioning first as an obvious solution that should be quick (DROP PARTITION is very quick).
 - Consider a timeseries db for longer term performance gain.
 
+
+--------------------------------------------
+server performance scaling to 2 million.
 
 
 
