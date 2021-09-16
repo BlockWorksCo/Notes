@@ -37333,6 +37333,7 @@ Questions:
 - size of partition/frequency of deletion. Similar to garbage-collection frequency.
 - Performance calculations need to take this into account.
 - Can DROP PARTITION be done without affecting performance (i.e. is it async to active partition)?
+- Need to benchmark the different approaches? Not clear (to me) if mysql with DROP PARTITION can outperform a dedicated timeseries db.
 
 
 
