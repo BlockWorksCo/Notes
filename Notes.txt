@@ -37290,6 +37290,8 @@ CREATE EVENT cleaning ON SCHEDULE EVERY 1 MONTH ENABLE
   WHERE `timestamp_column` < CURRENT_TIMESTAMP - INTERVAL 6 MONTH;
 
 
+Or partition by age and have cron job drop a partition and build new partition:
+PARTITION BY RANGE(TO_DAYS(...));
 
 
 
