@@ -37429,6 +37429,36 @@ My preference:
 --------------------------------------------
 server performance scaling to 2 million.
 
+In order to scale the server performance, we first need a reliable test setup. We currently have a powerful PC to use but the setup
+is still not reliable. This needs to be resolved (for this and other testing).
+
+We may wish to do the KPI gathering task before the optimisaton work so we can use the KPI feature in the optimisation work.
+
+
+----------------------------------------------
+KPI generation and storing
+
+- Potentially use a timeseries db as all this is time-series data.
+- Have to generate useful diagnostic data for internal statistics:
+    - raw packets received & transmitted
+    - traffic rates to different networks/gateways
+    - query rates
+    - queue depths
+    - active job stats
+    - cluster traffic rates and types.
+    - node migrations.
+    - Exception stats
+    - Login/logout rates
+    - Received samples stats (for SLA generation).
+- KPI db to be accessible from outside of Java app also:
+    - tun6d traffic rates
+    - tun6d error rates
+    - packet drops (e.g. /proc/net/udp6)
+    - Processor(s) loading.
+    - Thread usage stats.
+
+Visualisation?
+
 
 
 
