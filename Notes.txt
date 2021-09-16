@@ -37279,6 +37279,33 @@ rx: 0001 0001 0020 0004   0e0506...
 0001 0020 0001 0020 D0 1E 30 00 00 00 01 61 B5 AC FD 23 77 2B 2D E2 41 0B F7 D7 98 E2 20 EE 33 A2 4A 02 14 A5 42 E2
 0001 0001 0020 0004 0e050006
 
+
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 1/ 7): 6066a109060760857405080103a60a04
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 2/ 7): 08474f4530303030308a0207808b0760
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 3/ 7): 857405080201ac0a8008314132423343
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 4/ 7): 3444be340432213030000000004d0b92
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 5/ 7): b4ed0c34cad6ba9c98f018530ce5ecec
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 6/ 7): d732fde42270753aeb3020b93363d5c5
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: tx: ( 7/ 7): a78b35f365b1ab40
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [        wpdu] {   device}: ** Giving s_responseSem to start the timeout cycle... **
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.710 [debug] [  meter/dlms] {   device}:  -- waiting on s_dlmsSemaphore for 100000ms --
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.711 [debug] [        wpdu] {     wpdu}: Yen ^^^^^^^^^^^^^^^^^ semaphoreTaken == true, good event s_nextAction = 4
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.711 [debug] [        wpdu] {     wpdu}: Restarting WPDU timeout due to WPDU send operation
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.711 [debug] [        wpdu] {     wpdu}: Yen ************************* release mutex, s_nextAction 1
+2021-09-16 10:02:23.716 #1   001bc50c60067407 <log> 0:00:30.711 [debug] [        wpdu] {     wpdu}: ** Waiting for WPDU event (60000ms) **
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {  unknown}: Yen ******************** full packet received
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {  unknown}: Yen ****************** packet length is 00 4a
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {  unknown}: Yen *********************** received length is 74
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: Yen ^^^^^^^^^^^^^^^^^ semaphoreTaken == true, good event s_nextAction = 1
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: ACTION_WAIT_FOR_RESPONSE
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: rx: ( 1/ 5): 000100010020004a6148a10906076085
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: rx: ( 2/ 5): 7405080103a203020101a305a1030201
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: rx: ( 3/ 5): 0da40a0408474f45000043c1fbbe2304
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: rx: ( 4/ 5): 21281f300000001171203a0cd7db2831
+2021-09-16 10:02:23.816 #1   001bc50c60067407 <log> 0:00:30.811 [debug] [        wpdu] {     wpdu}: rx: ( 5/ 5): c878
+
+
+
 ------------------------------
 Aging out data in mysql
 
