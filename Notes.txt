@@ -37327,13 +37327,18 @@ DROP PARTITION is faster than DELETE
 Aging out data options:
 - Replace general purpose db (mysql) with timeseries db for time series data such as samples & KPI.
 - Simple periodic "DELETE from xxx WHERE now-timestamp>4w"?
-- PARTITION by time-range, then DROP PARTITION (quicker than DELETE).
+- PARTITION by time-range, then DROP PARTITION (quicker than DELETE). (https://www.vertabelo.com/blog/everything-you-need-to-know-about-mysql-partitions/)
 
 Questions:
 - size of partition/frequency of deletion. Similar to garbage-collection frequency.
 - Performance calculations need to take this into account.
 - Can DROP PARTITION be done without affecting performance (i.e. is it async to active partition)?
 - Need to benchmark the different approaches? Not clear (to me) if mysql with DROP PARTITION can outperform a dedicated timeseries db.
+
+
+My preference:
+- Try partitioning first as an obvious solution that should be quick (DROP PARTITION is very quick).
+- Consider a timeseries db for longer term performance gain.
 
 
 
