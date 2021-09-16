@@ -37356,6 +37356,20 @@ rx: 0001 0001 0020 0004   0e0506...
   <glo_InitiateRequest Value="30000000004D0B92B4ED0C34CAD6BA9C98F018530CE5ECECD732FDE42270753AEB3020B93363D5C5A78B35F365B1AB40" />
 </AssociationRequest>
 
+0001 0001 0020 004A 61 48 A1 09 06 07 60 85 74 05 08 01 03 A2 03 02 01 00 A3 05 A1 03 02 01 00 A4 0A 04 08 47 4F 45 00 00 53 EE D7 BE 23 04 21 28 1F 30 00 00 00 9C 8E E6 F2 A4 55 44 76 AB B4 41 C7 B6 B9 EE 12 74 4E 8D FC B2 E5 45 4B B7 68 02
+
+<AssociationResponse>
+  <ApplicationContextName Value="LN_WITH_CIPHERING" />
+  <AssociationResult Value="00" />
+  <ResultSourceDiagnostic>
+    <ACSEServiceUser Value="00" />
+  </ResultSourceDiagnostic>
+  <RespondingAPTitle Value="474F45000053EED7" />
+  <glo_InitiateResponse Value="300000009C8EE6F2A4554476ABB441C7B6B9EE12744E8DFCB2E5454BB76802" />
+</AssociationResponse>
+
+
+
 
 
 
