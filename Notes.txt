@@ -37434,6 +37434,11 @@ is still not reliable. This needs to be resolved (for this and other testing).
 
 We may wish to do the KPI gathering task before the optimisaton work so we can use the KPI feature in the optimisation work.
 
+Optimisation work will be iterative:
+- Measure
+- Identify
+- Modify
+
 
 ----------------------------------------------
 KPI generation and storing
