@@ -37279,6 +37279,21 @@ rx: 0001 0001 0020 0004   0e0506...
 0001 0020 0001 0020 D0 1E 30 00 00 00 01 61 B5 AC FD 23 77 2B 2D E2 41 0B F7 D7 98 E2 20 EE 33 A2 4A 02 14 A5 42 E2
 0001 0001 0020 0004 0e050006
 
+------------------------------
+Aging out data in mysql
+
+https://dba.stackexchange.com/questions/148308/how-to-remove-6-months-old-data-automatically-from-mysql-innodb-table
+
+CREATE EVENT cleaning ON SCHEDULE EVERY 1 MONTH ENABLE
+  DO
+  DELETE FROM MyTable
+  WHERE `timestamp_column` < CURRENT_TIMESTAMP - INTERVAL 6 MONTH;
+
+
+
+
+
+
 
 
 
