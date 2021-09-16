@@ -37472,7 +37472,7 @@ KPI generation and storing
 - Collection will be periodic for some, event-driven for others.
 
 Visualisation?
-- SuperSet?
+- SuperSet? UI can be customised to more resemble Omnimesh family of UIs.
 - Grafana?
 - Kibana?
 
