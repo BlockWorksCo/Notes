@@ -37463,6 +37463,7 @@ KPI generation and storing
     - packet drops (e.g. /proc/net/udp6)
     - Processor(s) loading.
     - Thread usage stats.
+    - SSD stats.
     - db stats
 
 Visualisation?
