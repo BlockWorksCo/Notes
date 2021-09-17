@@ -37400,7 +37400,7 @@ rx: 0001 0001 0020 0004   0e0506...
   <SenderACSERequirements Value="1" />
   <MechanismName Value="Low" />
   <CallingAuthentication Value="3141324233433444" />
-  <glo_InitiateRequest Value="20000000008C9438CE3962E11A3AC56028718B" />
+  <glo_InitiateRequest Value="20 00 00 00 00 8C9438CE3962E11A3AC56028718B" />
 </AssociationRequest>
 
 
