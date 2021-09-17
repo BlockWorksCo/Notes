@@ -37481,6 +37481,11 @@ Performance/Deployment issues:
     - Must isolate heavy analysis load from main operation.
 - Collection must be lightweight & efficient.
 
+-------------------------------
+socat serial/tcp redirection
+
+socat -v tcp4-listen:12345 open:/dev/serial/by-id/usb-FTDI_TTL232R_FTFDDCTH-if00-port0,raw,nonblock,waitlock=/tmp/s0.locak,echo=0,b57600,parenb,cstopb=0,cs8
+
 
 
 
