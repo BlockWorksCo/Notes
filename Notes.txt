@@ -37578,6 +37578,11 @@ mass disconnect
 - API specify group of meters to disconnect from feeder data.
 
 
+------------------------------------------------------------
+node cleaning:
+- Remove mq entries?
+- Remove dlms_state
+-
 
 
 
