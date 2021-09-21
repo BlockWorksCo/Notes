@@ -37572,6 +37572,7 @@ mass disconnect
 - Need some guaranteed maximum time to configure all the meters/nodes.
 - geographical area? dynamic groups select by geography? distance from a point?
 - Do we need a timed reconnect also?
+- feeder metadata? to allow group selection? Dynamic-group select by feeder?
 
 
 
