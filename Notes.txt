@@ -37571,6 +37571,7 @@ mass disconnect
 - synchronised? timed-disconnect. Spread the requests in time, not instant disconnect.
 - Need some guaranteed maximum time to configure all the meters/nodes.
 - geographical area? dynamic groups select by geography? distance from a point?
+- Do we need a timed reconnect also?
 
 
 
