@@ -37582,6 +37582,11 @@ mass disconnect
 node cleaning:
 - Remove mq entries?
 - Remove dlms_state
+- Remove dp_config
+- Remove device_config
+- Stop device task?
+- Implement coap-handler
+
 -
 
 
