@@ -37575,6 +37575,7 @@ mass disconnect
 - feeder metadata? to allow group selection? Dynamic-group select by feeder?
 - API or UI?
 
+- API specify group of meters to disconnect from feeder data.
 
 
 
