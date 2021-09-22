@@ -37642,7 +37642,9 @@ Worst case bus utilisation for flash (longest single operation)
     - 256byte page write @ 8ns per cycle = (8*8*256)ns = 16384ns = 16us. (say 20us).
 - Radio packet receive @50Kbps, 256bytes = (256*8) bits = 2048 bits   2048/50000 = 0.04096sec = 41ms (say 50ms).
 
-Need to service the S2 twice to receive 256 bytes (128 byte FIFO) at 25ms intervals.
+- Need to service the S2 twice to receive 256 bytes (128 byte FIFO) at 25ms intervals.
+- Can set the page erase going asynchronously and poll for completion. This leaves the 256byte page write as the longest operation.
+    - 256b write takes 20us, 20us is time for 1 RF bit @50kbps
 
 
 driver in:
