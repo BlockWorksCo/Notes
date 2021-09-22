@@ -37646,6 +37646,11 @@ Worst case bus utilisation for flash (longest single operation)
 - Can set the page erase going asynchronously and poll for completion. This leaves the 256byte page write as the longest operation.
     - 256b write takes 20us, 20us is time for 1 RF bit @50kbps Actual erase take 8ms which would be 400bits = 50 bytes.
 
+Alg.
+- When starting a flash operation, check for any bytes in S2-FIFO. Is any are there, wait until packet is received and then
+process it. Only start flash operation when zero bytes are in S2-FIFO.
+- The packet can then be received while the flash operation in in progress.
+
 
 driver in:
 3pp/nanostack/nanostack/mbed-os/connectivity/drivers/802.15.4_RF/stm-s2lp-rf-driver
