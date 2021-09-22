@@ -37635,6 +37635,10 @@ bus utilisation test:
 - Use IPA3 and do contiuous writes to a file.
 - use precise timestamp to record bus utilisation stats.
 
+Worst case bus utilisation for flash (longest single operation)
+- Erase?
+- full size write (256 byte?)
+
 
 driver in:
 3pp/nanostack/nanostack/mbed-os/connectivity/drivers/802.15.4_RF/stm-s2lp-rf-driver
