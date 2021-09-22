@@ -37625,9 +37625,13 @@ New IPA3
 - interrupt line from S2?
 
 
-Test:
+rx/tx fifo Test:
 - Have known 255 byte pattern being transmitted from an existing IPA3.
 - Read FIFO via SPI
+
+bus utilisation test:
+- Use IPA3 and do contiuous writes to a file.
+- use precise timestamp to record bus utilisation stats.
 
 
 driver in:
