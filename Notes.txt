@@ -37618,11 +37618,15 @@ New IPA3
     - two full buffers to be transmitted/received per packet.
     - Interrupts from the S2 and refilling. Or polling?
 - Can use the M0 core to manage transfers to/from the S2.
+- In TX mode, first byte is sent 1us after byte is received in FIFO.
+- flash driver has no timing requirements but will have higher throughput with potentially larger blocks.
+- should flash/radio driver block each other till completion or can flash driver "hold"?
 
 
 Test:
 - Have known 255 byte pattern being transmitted from an existing IPA3.
 - Read FIFO via SPI
+
 
 
 
