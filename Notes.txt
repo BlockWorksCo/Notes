@@ -37474,6 +37474,11 @@ C:q
 2021-09-21 16:33:20.621 #1   001bc50c60067407 <log> 0:00:30.649 [debug] [        wpdu] {   device}: tx: ( 5/ 6): 5561ba4408275e985e24b459ee767cb0
 2021-09-21 16:33:20.621 #1   001bc50c60067407 <log> 0:00:30.649 [debug] [        wpdu] {   device}: tx: ( 6/ 6): c333456247e6d0
 
+
+2021-09-22  7:43:54.766 #1   001bc50c60067407 <log> 0:00:30.936 [debug] [        dlms] {     dlms}: Encrypted:: ( 1/ 3): 820029300000000252365553c1f83cf3
+2021-09-22  7:43:54.766 #1   001bc50c60067407 <log> 0:00:30.936 [debug] [        dlms] {     dlms}: Encrypted:: ( 2/ 3): fb898c87f061ce7f9e9cc523b578df8a
+2021-09-22  7:43:54.766 #1   001bc50c60067407 <log> 0:00:30.936 [debug] [        dlms] {     dlms}: Encrypted:: ( 3/ 3): cd6489e6afefaee9941318c6
+
 ------------------------------
 Aging out data in mysql
 
@@ -37594,6 +37599,19 @@ node cleaning:
 - Implement coap-handler
 
 -
+
+
+--------------------------------------------------------
+Server backend & frontend performance issues:
+
+- This is an investigation task as we can't plan to change what we don't know the details of.
+- Get proper, good testing facilities in place. server-dev4 is a good start.
+    - Must be able to scale up to 2million nodes
+    - Must be able to scale up to 4? servers.
+- Get KPI mechanism in place. This will give us raw data.
+- Get profiling in place. More raw data.
+
+
 
 
 
