@@ -37620,6 +37620,11 @@ New IPA3
 - Can use the M0 core to manage transfers to/from the S2.
 
 
+Test:
+- Have known 255 byte pattern being transmitted from an existing IPA3.
+- Read FIFO via SPI
+
+
 
 
 
