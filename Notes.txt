@@ -37637,7 +37637,7 @@ bus utilisation test:
 
 Worst case bus utilisation for flash (longest single operation)
 - Erase?
-    - 4KB block erase
+    - 4KB block erase 66ms typical, 115ms after 100K cycles.
 - full size write (256 byte?)
     - 256byte page write @ 8ns per cycle = (8*8*256)ns = 16384ns = 16us. (say 20us).
 
