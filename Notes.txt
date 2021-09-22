@@ -37630,6 +37630,9 @@ Test:
 - Read FIFO via SPI
 
 
+driver in:
+3pp/nanostack/nanostack/mbed-os/connectivity/drivers/802.15.4_RF/stm-s2lp-rf-driver
+
 
 
 
