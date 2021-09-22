@@ -37621,6 +37621,8 @@ New IPA3
 - In TX mode, first byte is sent 1us after byte is received in FIFO.
 - flash driver has no timing requirements but will have higher throughput with potentially larger blocks.
 - should flash/radio driver block each other till completion or can flash driver "hold"?
+- What speed to run SPI at?
+- interrupt line from S2?
 
 
 Test:
