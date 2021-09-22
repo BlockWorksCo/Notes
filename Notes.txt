@@ -37623,6 +37623,7 @@ New IPA3
 - should flash/radio driver block each other till completion or can flash driver "hold"?
 - What speed to run SPI at?
 - interrupt line from S2?
+- Max SPI clock rate is 10MHz for S2LP
 
 
 rx/tx fifo Test:
