@@ -37611,6 +37611,12 @@ Server backend & frontend performance issues:
 - Get KPI mechanism in place. This will give us raw data.
 - Get profiling in place. More raw data.
 
+------------------------------------------------
+New IPA3
+
+- S2-LP FIFO only 128 bytes, but frame-size is 255. Will need:
+    - two full buffers to be transmitted/received per packet.
+    - Interrupts from the S2 and refilling. Or polling?
 
 
 
