@@ -37663,6 +37663,10 @@ waitForWriteCompletion() -> poll S2 Rx FIFO.
 
 
 
+Flash read:
+- 4 byte command & offset
+- 256 bytes data.
+
 
 
 
