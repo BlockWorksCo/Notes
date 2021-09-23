@@ -37671,8 +37671,14 @@ Flash read:
 
 Flash write:
 - 4 byte command & offset
-- 256 bytytes data
+- 256 bytes data
 = 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
+
++ periodic (1ms) status checks
+- 2 byte command & data
+= 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
+
+
 
 
 
