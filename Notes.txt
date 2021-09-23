@@ -37666,6 +37666,13 @@ waitForWriteCompletion() -> poll S2 Rx FIFO.
 Flash read:
 - 4 byte command & offset
 - 256 bytes data.
+= 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
+
+
+Flash write:
+- 4 byte command & offset
+- 256 bytytes data
+= 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
 
 
 
