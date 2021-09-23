@@ -37691,6 +37691,10 @@ In 220us, the radio can receive:
 220/6.6 = 34 bits.
 
 so.... 4 bytes can be received in the time taken by the longest flash operation
+There are 128 bytes possible in the FIFO and they can be retrieved in
+
+rf_read_rx_fifo
+- 2byte header command/offset
 
 
 
