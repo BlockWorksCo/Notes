@@ -37668,7 +37668,7 @@ Flash read:
 - 4 byte command & offset
 - 256 bytes data.
 = 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
-= 260bytes @ 104ns/bit = (260*8*8)ns = 16.64us
+= 260bytes @ 104ns/bit = (260*8*104)ns = 16.64us
 
 
 Flash write:
@@ -37678,14 +37678,17 @@ Flash write:
 + periodic (1ms) status checks
 - 2 byte command & data
 = 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
+= 2 bytes @ 104ns/bit = (2*8*104)ns = 128ns
 
 
 Flash page erase (4096 bytes):
 - 32bit command & offset:
 = 4bytes @ 8ns/bit = (4*8*8)    = 256ns
+= 4bytes @ 104ns/bit = (4*8*104)    = 256ns
 + periodic (1ms) status checks
 - 2 byte command & data
 = 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
+= 2 bytes @ 104ns/bit = (2*8*104)ns = 128ns
 
 largest single operation is 16.64us (say 20us).
 In 20us, the radio can receive:
