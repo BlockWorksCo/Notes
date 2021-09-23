@@ -37695,6 +37695,8 @@ There are 128 bytes possible in the FIFO and they can be retrieved in
 
 rf_read_rx_fifo
 - 2byte header command/offset
+- 128bytes data
+= 130bytes @ 104ns/bit = (130*8*104)ns = 108us.
 
 
 
