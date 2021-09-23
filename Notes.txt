@@ -37704,7 +37704,7 @@ So, max bus utilisation by single flash operation is 220us,
 The added latency due to that operation and subsequent extra data read from the S2 FIFO is:
 220+5 = 225us.
 
-BTW Time taken at 150Kbps to fill the FIFO with 128bytes is 7ms.
+BTW Time taken at 150Kbps to fill the FIFO with 128bytes and then read it is 6.8ms+108us = <7ms.
 
 
 
