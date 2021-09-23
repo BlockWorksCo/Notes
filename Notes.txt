@@ -37662,33 +37662,27 @@ driver in:
 waitForWriteCompletion() -> poll S2 Rx FIFO.
 
 104ns/bit = 9.6MHz
-8ns/bit     = 104MHz
 
 Flash read:
 - 4 byte command & offset
 - 256 bytes data.
-= 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
 = 260bytes @ 104ns/bit = (260*8*104)ns = 216us
 
 
 Flash write:
 - 4 byte command & offset
 - 256 bytes data
-= 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
 = 260bytes @ 104ns/bit = (260*8*104)ns = 216us
 + periodic (1ms) status checks
 - 2 byte command & data
-= 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
 = 2 bytes @ 104ns/bit = (2*8*104)ns = 1.7us
 
 
 Flash page erase (4096 bytes):
 - 32bit command & offset:
-= 4bytes @ 8ns/bit = (4*8*8)    = 256ns
 = 4bytes @ 104ns/bit = (4*8*104)    =  3.3us
 + periodic (1ms) status checks
 - 2 byte command & data
-= 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
 = 2 bytes @ 104ns/bit = (2*8*104)ns = 1.7us
 
 largest single operation is 216us (say 220us).
