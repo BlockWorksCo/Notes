@@ -37661,12 +37661,14 @@ driver in:
 
 waitForWriteCompletion() -> poll S2 Rx FIFO.
 
-
+104ns/bit = 9.6MHz
+8ns/bit     = 104MHz
 
 Flash read:
 - 4 byte command & offset
 - 256 bytes data.
 = 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
+= 260bytes @ 104ns/bit = (260*8*8)ns = 16.64us
 
 
 Flash write:
