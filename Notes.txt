@@ -37647,6 +37647,7 @@ Worst case bus utilisation for flash (longest single operation)
 - Need to service the S2 twice to receive 256 bytes (128 byte FIFO) at 25ms intervals.
 - Can set the page erase going asynchronously and poll for completion. This leaves the 256byte page write as the longest operation.
     - 256b write takes 20us, 20us is time for 1 RF bit @50kbps Actual erase take 8ms which would be 400bits = 50 bytes.
+- Read of FIFO from S2 at 10MHz = 100ns per bit, 800ns per byte (say 1us per byte) = 128us per full FIFO
 
 Alg.
 - When starting a flash operation, check for any bytes in S2-FIFO. Is any are there, wait until packet is received and then
