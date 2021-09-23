@@ -37686,6 +37686,14 @@ Flash page erase (4096 bytes):
 = 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
 
 largest single operation is 16.64us (say 20us).
+In 20us, the radio can receive:
+1/150000s per bit = 6.6us per bit.
+20/6.6 = 3 bits.
+
+so.... not even a single byte can be received in the time taken by the longest flash operation
+if we drive the flash at 104MHz.
+If we leave the flash rate as-is, 30 bits/4bytes can be received in the time take by the longest
+flash operation.
 
 
 
