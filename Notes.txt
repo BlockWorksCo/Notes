@@ -37685,6 +37685,7 @@ Flash page erase (4096 bytes):
 - 2 byte command & data
 = 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
 
+largest single operation is 16.64us (say 20us).
 
 
 
