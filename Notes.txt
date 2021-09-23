@@ -37673,11 +37673,17 @@ Flash write:
 - 4 byte command & offset
 - 256 bytes data
 = 260bytes @ 8ns/bit = (260*8*8)ns = 16.64us
-
 + periodic (1ms) status checks
 - 2 byte command & data
 = 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
 
+
+Flash page erase (4096 bytes):
+- 32bit command & offset:
+= 4bytes @ 8ns/bit = (4*8*8)    = 256ns
++ periodic (1ms) status checks
+- 2 byte command & data
+= 2 bytes @ 8ns/bit = (2*8*8)ns = 128ns
 
 
 
