@@ -37698,10 +37698,13 @@ Working out the time to read those 4 extra bytes:
 rf_read_rx_fifo
 - 2byte header command/offset
 - 4bytes data
-= 6bytes @ 104ns/bit = (6*8*104)ns = 108us.
+= 6bytes @ 104ns/bit = (6*8*104)ns = 5us.
 
 So, max bus utilisation by single flash operation is 220us,
-This is the added latency to a packet receive operation.
+The added latency due to that operation and subsequent extra data read from the S2 FIFO is:
+220+5 = 225us.
+
+BTW Time taken at 150Kbps to fill the FIFO with 128bytes is 7ms.
 
 
 
