@@ -37706,6 +37706,17 @@ The added latency due to that operation and subsequent extra data read from the 
 
 BTW Time taken at 150Kbps to fill the FIFO with 128bytes and then read it is 6.8ms+108us = <7ms.
 
+---------------------------------
+s2lp dev board test
+
+S2-LP
+CSN     -
+MOSI    -
+MISO    -
+SCK     -
+GND     -
+Vcc     -
+
 
 
 
