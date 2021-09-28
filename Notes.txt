@@ -37718,6 +37718,11 @@ GND     -
 Vcc     -
 
 
+---------------------------------------
+wisun TBC test setup:
+
+- "A set of 14 test bed devices sourced from up to ‘n’ different Wi-SUN FAN vendors. From a practical point of view of minimizing complexity, the number of vendors ‘n’ supplying test bed devices should be limited to a number of 3 or so."
+- nodes at different ranks must be controllable. Implies multiple devices.
 
 
 
