@@ -37718,6 +37718,13 @@ GND     -
 Vcc     -
 
 
+
+* Note: Occasional  task-switches do break the measurement and add spurious times on top to produce
+cycle counts of ~38000.
+
+node304.log
+
+
 ---------------------------------------
 wisun TBC test setup:
 
