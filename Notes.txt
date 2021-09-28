@@ -37725,6 +37725,9 @@ cycle counts of ~38000.
 node304.log
 
 
+9400 cycles @38MHz = 9400/38000000 = 247us
+240 cycles @38MHz = 240/38000000 = 6.3us
+
 ---------------------------------------
 wisun TBC test setup:
 
