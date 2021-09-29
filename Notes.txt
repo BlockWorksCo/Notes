@@ -37750,7 +37750,8 @@ BOM:
 - ethernet cabling.
 - USB cables
 - 9+ port powered USB hub.
-- 13 2 way splitters (https://www.minicircuits.com/pdfs/ZFRSC-42+.pdf)
+- 13 2-way splitters (https://www.minicircuits.com/pdfs/ZFRSC-42+.pdf)
+- 2 3-way splitters (https://www.minicircuits.com/pdfs/ZF3RSC-542-S+.pdf)
 
 
 
