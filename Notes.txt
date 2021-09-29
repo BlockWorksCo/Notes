@@ -36536,11 +36536,15 @@ Development
 - Agent network-identity changes                                                        =
 - flash size optimisation                                                               =
 - RAM optimisation (650b/node on gw)                                                    =
-- Rearrange 3pp to make it possible to apply our patches on top of 3pp code.            =
-- Update wisun stack from current (SimplicityStudio) to latest ARM.                     =
+- Rearrange 3pp to make it possible to apply our patches on top of 3pp code.            = Partial
+- Update wisun stack from current (SimplicityStudio) to latest ARM.                     = Partial
 - mesh join seems to be one-shot, needs to repeat.                                      =
 
 Testing
+- Obtain TBC from ProCubed                                                              =
+- Obtain TBUs from various (Cisco, Nissin, etc) and physically form the TestBed         =
+- Get all provided s/w components configured and working with certs, etc.               =
+- Develop TBC/TBU adapter for IPA3/GW200 board                                          =
 - Obtaining certification test suite                                                    =
 - Familiarisation with certificationn test suite                                        =
 - Familiarisation with hardware (SiLabs, ST)                                            =
