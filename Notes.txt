@@ -37746,7 +37746,11 @@ BOM:
 - Pro Cubed Part Number: PRO-Wi-SUN-FAN1.0-915-TBC
 - Ubuntu 18.04 Machine for FreeRADIUS and ISC DHCP server.
 - CISCO list.
--
+- Gigabit 8 port switch.
+- ethernet cabling.
+- USB cables
+- 9+ port powered USB hub.
+- 13 2 way splitters (https://www.minicircuits.com/pdfs/ZFRSC-42+.pdf)
 
 
 
