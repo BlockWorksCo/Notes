@@ -37741,3 +37741,11 @@ wisun TBC test setup:
 
 
 
+BOM:
+- Windows machine to act as "control computer".
+- Pro Cubed Part Number: PRO-Wi-SUN-FAN1.0-915-TBC
+- Ubuntu 18.04 Machine for FreeRADIUS and ISC DHCP server.
+-
+
+
+
