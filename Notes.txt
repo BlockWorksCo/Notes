@@ -36530,7 +36530,7 @@ Development
 - I2CIP network interface for GW7 support (rather than GW200).                          =
 - MTS support for nanostack cert/key loading.                                           =
 - radio test support with new RAIL library.                                             =
-- MTS radio test                                                                        =
+- MTS radio test (multi-frequency)                                                      =
 - performance at scale.                                                                 =
 - NMS network-dentity changes.                                                          =
 - Agent network-identity changes                                                        =
@@ -36541,11 +36541,10 @@ Development
 - mesh join seems to be one-shot, needs to repeat.                                      =
 
 Testing
-- Obtain TBC from ProCubed                                                              =
+- Obtaining certification test suite (TBC from Procube)                                 =
 - Obtain TBUs from various (Cisco, Nissin, etc) and physically form the TestBed         =
 - Get all provided s/w components configured and working with certs, etc.               =
 - Develop TBC/TBU adapter for IPA3/GW200 board                                          =
-- Obtaining certification test suite                                                    =
 - Familiarisation with certificationn test suite                                        =
 - Familiarisation with hardware (SiLabs, ST)                                            =
 - Creation of automation for examining and testing against packet-traces                =
