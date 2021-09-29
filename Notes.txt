@@ -36513,6 +36513,7 @@ Development
 - dev-stack setup for plain IPv6.                                                       = Partial
 - host-agent OS adaptation (CMSIS/POSIX)                                                = Done
 - host-agent network interface adaptation (uplink-tun)                                  = Partial.
+- host-agent split into host-agent and host-gw                                          =
 - nanostack configurables                                                               =
 - nanostack cert/key data loading.                                                      =
 - nanostack monitoring/statistics.                                                      =
