@@ -37757,5 +37757,30 @@ BOM:
 - 13 2-way splitters (https://www.minicircuits.com/pdfs/ZFRSC-42+.pdf)
 - 2 3-way splitters (https://www.minicircuits.com/pdfs/ZF3RSC-542-S+.pdf)
 
+-----------------------------------
+radius
+
+
+#0  kmp_socket_if_send (service=<optimized out>, instance_id=<optimized out>, kmp_id=<optimized out>,
+    addr=<optimized out>, pdu=0x200173a0, size=36, tx_identifier=1 '\001', connection_num=0 '\000',
+    flags=0 '\000')
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/kmp/kmp_socket_if.c:219
+#1  0x0009312c in kmp_sec_prot_conn_send (prot=<optimized out>, pdu=0x200173a0, size=<optimized out>,
+    conn_number=conn_number@entry=0 '\000', flags=flags@entry=0 '\000')
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/kmp/kmp_api.c:274
+#2  0x0009314e in kmp_sec_prot_send (prot=<optimized out>, pdu=<optimized out>, size=<optimized out>)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/kmp/kmp_api.c:251
+--Type <RET> for more, q to quit, c to continue without paging--
+#3  0x00099328 in radius_eap_tls_sec_prot_message_send (prot=prot@entry=0x2001932c, eap_type=1 '\001', eap_code=1 '\001')
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/eap_tls_sec_prot/radius_eap_tls_sec_prot.c:269
+#4  0x000993d0 in radius_eap_tls_sec_prot_state_machine (prot=0x2001932c)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/eap_tls_sec_prot/radius_eap_tls_sec_prot.c:448
+#5  0x0003d7c6 in eventOS_scheduler_dispatch_event () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:344
+#6  0x0003d7e6 in eventOS_scheduler_run () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:368
+#7  0x0003ce72 in event_loop_thread (arg=<optimized out>) at build/3pp/nanostack/silabs/wisun/src/nanostack-hal/ns_event_loop.c:63
+#8  0x000246d4 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+
+
+
 
 
