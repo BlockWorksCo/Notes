@@ -37781,6 +37781,24 @@ radius
 #8  0x000246d4 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
 
 
+732 108.092114472 192.168.2.125 → 255.255.255.255 UDP 214 52733 → 6667 Len=172
+  740 109.103174250 192.168.2.233 → 255.255.255.255 UDP 214 58166 → 6667 Len=172
+  743 109.289946545 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 RADIUS 238 Access-Request id=0
+  744 109.290001990 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  751 109.815315884 192.168.2.112 → 255.255.255.255 UDP 230 49154 → 6667 Len=188
+  788 110.553003360 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 RADIUS 238 Access-Request id=0, Duplicate Request
+  789 110.553056769 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  803 113.122130511 192.168.2.125 → 255.255.255.255 UDP 214 52733 → 6667 Len=172
+  804 113.455736348 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 RADIUS 238 Access-Request id=0, Duplicate Request
+  805 113.455789287 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  814 114.132607862 192.168.2.233 → 255.255.255.255 UDP 214 58166 → 6667 Len=172
+  819 114.814993008 192.168.2.112 → 255.255.255.255 UDP 230 49154 → 6667 Len=188
+  825 116.203457086 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 RADIUS 238 Access-Request id=0, Duplicate Request
+  826 116.203491445 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  831 118.141105959 192.168.2.125 → 255.255.255.255 UDP 214 52733 → 6667 Len=172
+
+
+
 
 
 
