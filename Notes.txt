@@ -37797,8 +37797,23 @@ radius
   826 116.203491445 2a00:23c5:b3a6:300:b77b:9f63:a1c6:5f54 → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
   831 118.141105959 192.168.2.125 → 255.255.255.255 UDP 214 52733 → 6667 Len=172
 
+To run FreeRADIUS in debugging mode:
+
+sudo freeradius -X
+
+results in:
 
 
+Ignoring request to auth address :: port 1812 bound to server default from unknown client 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d port 54669 proto udp
+Ready to process requests
+Ignoring request to auth address :: port 1812 bound to server default from unknown client 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d port 54669 proto udp
+Ready to process requests
+Ignoring request to auth address :: port 1812 bound to server default from unknown client 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d port 54669 proto udp
+Ready to process requests
+Ignoring request to auth address :: port 1812 bound to server default from unknown client 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d port 54669 proto udp
+Ready to process requests
+
+Those packets have been sent from t he WiSUN BR as a response to the WiSUN node attempting to get on the network.
 
 
 
