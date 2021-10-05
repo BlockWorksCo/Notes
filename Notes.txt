@@ -37815,5 +37815,6 @@ Ready to process requests
 
 Those packets have been sent from t he WiSUN BR as a response to the WiSUN node attempting to get on the network.
 
+-> client.conf needs testing123 replaced by a configurable shared secret.
 
 
