@@ -37820,6 +37820,10 @@ Those packets have been sent from t he WiSUN BR as a response to the WiSUN node 
 ---------------------------------------------------
 IPv4 send up to NMS on login.
 
+- Obtain IPv4 from tunnel.
+- modify login.proto to include a tunnelId
+
+- ask tun6d for IPv6->IPv4 mapping?
 
 
 
