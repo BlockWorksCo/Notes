@@ -37817,4 +37817,11 @@ Those packets have been sent from t he WiSUN BR as a response to the WiSUN node 
 
 -> client.conf needs testing123 replaced by a configurable shared secret.
 
+---------------------------------------------------
+IPv4 send up to NMS on login.
+
+
+
+
+
 
