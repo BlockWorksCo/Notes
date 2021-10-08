@@ -37849,6 +37849,9 @@ No symbol "data" in current context.
 0x2001a020:     0xb8    0x87    0x67    0x28    0xe4    0x0d    0x9c    0x9e
 
 
+echo "User-Name = Anonymous" | radclient -x -6 [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:1812 auth testing123
+
+
 
 
 
