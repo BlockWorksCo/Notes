@@ -37852,6 +37852,25 @@ No symbol "data" in current context.
 echo "User-Name = Anonymous" | radclient -x -6 [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:1812 auth testing123
 
 
+radclient -f r1.rad -x -6 [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:1812 auth testing123
+Sent Access-Request Id 84 from [::]:49425 to [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:1812 length 176
+        User-Name = "Anonymous"
+        Calling-Station-Id = "A8-C6-34-F7-7B-35-18-A6"
+        Called-Station-Id = "29-E0-3D-CA-78-9A-1B-DD"
+        NAS-Identifier = "29-E0-3D-CA-78-9A-1B-DD"
+        NAS-Port = 1
+        Framed-MTU = 600
+        NAS-Port-Type = Wireless-802.11
+        NAS-IPv6-Address = 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d
+        EAP-Message = 0x0201000e01416e6f6e796d6f7573
+        Message-Authenticator = 0xf46bd9f1c5c1af95e72a1cb9bfb77fee
+Received Access-Challenge Id 84 from [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:1812 to [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:49425 length 64
+        EAP-Message = 0x010200060d20
+        Message-Authenticator = 0x75801b0a02a9a43214e92f8ad3591f8a
+        State = 0xbd95ce0dbd97c33e79c0683c8c43ee4b
+(0) r1.rad: Expected Access-Accept got Access-Challenge
+
+
 
 
 
