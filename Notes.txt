@@ -37870,6 +37870,12 @@ Received Access-Challenge Id 84 from [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:18
         State = 0xbd95ce0dbd97c33e79c0683c8c43ee4b
 (0) r1.rad: Expected Access-Accept got Access-Challenge
 
+-----------------------
+
+"prod.product.identifier"
+"prod.customer.ordercode"
+"prod.manufacturing.code"
+
 
 
 
