@@ -37880,7 +37880,7 @@ Received Access-Challenge Id 84 from [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:18
 --------------------------------------------
 freeradius:
 
-apt install libkqueue-dev libtalloc-dev
+apt install libkqueue-dev libtalloc-dev libssl-dev
 https://github.com/FreeRADIUS/freeradius-server.git
 
 
