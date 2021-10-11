@@ -37883,6 +37883,13 @@ freeradius:
 apt install libkqueue-dev libtalloc-dev libssl-dev
 https://github.com/FreeRADIUS/freeradius-server.git
 
+sudo cp -R raddb/certs/rsa /usr/local/etc/raddb/certs
+sudo cp -R raddb/certs/dh /usr/local/etc/raddb/certs
+
+sudo radiusd -X -C
+
+
+
 
 
 
