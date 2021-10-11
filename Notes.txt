@@ -37877,6 +37877,12 @@ Received Access-Challenge Id 84 from [2a00:23c5:b3a6:300:f4ba:3eb1:3d21:a580]:18
 "prod.manufacturing.code"
 
 
+--------------------------------------------
+freeradius:
+
+apt install libkqueue-dev libtalloc-dev
+https://github.com/FreeRADIUS/freeradius-server.git
+
 
 
 
