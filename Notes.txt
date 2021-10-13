@@ -37923,6 +37923,13 @@ Capturing on 'enp0s3'
  3308 250.464064577 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0, Duplicate Request
  3309 250.464090153 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
 
+----------------------------------
+smip analysis
+
+ 843   833 [     72.913][yyyy-mm-dd hh:mm:ss:mmm][ERROR][  dtls            ]Session 1: Error -330: no support for error strings built in
+
+
+
 
 
 
