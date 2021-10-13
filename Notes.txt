@@ -37890,6 +37890,25 @@ sudo radiusd -X -C
 
 
 ---------------------------------------------------------
+radius eap tls
+
+sudo tshark -i enp0s3 -Y "ipv6.addr eq 2a00:23c5:b3a6:
+300:821f:12ff:fe10:f9d"
+Running as user "root" and group "root". This could be dangerous.
+Capturing on 'enp0s3'
+
+
+
+
+  172 10.904452360 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0
+  173 10.904486016 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  219 13.232755217 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0, Duplicate Request
+  220 13.232790916 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  261 15.115776609 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0, Duplicate Request
+  262 15.115801278 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+  283 15.972162351 fe80::9514:c8e2:9a4:f135 → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 86 Neighbor Solicitation for 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d from 08:00:27:75:f6:39
+  306 16.262472636 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → fe80::9514:c8e2:9a4:f135 ICMPv6 86 Neighbor Advertisement 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d (sol, ovr) is at 80:1f:12:10:0f:9d
+
 
 
 
