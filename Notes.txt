@@ -37889,6 +37889,24 @@ sudo cp -R raddb/certs/dh /usr/local/etc/raddb/certs
 sudo radiusd -X -C
 
 
+---------------------------------------------------------
+
+
+
+ 3146 242.976456840 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0
+ 3147 242.976476490 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+ 3168 245.065339018 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0, Duplicate Request
+ 3169 245.065367740 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+
+ 3252 248.379090206 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0, Duplicate Request
+ 3253 248.379140030 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+
+ 3308 250.464064577 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d → 2a00:23c5:b3a6:300:3749:d903:fe49:face RADIUS 238 Access-Request id=0, Duplicate Request
+ 3309 250.464090153 2a00:23c5:b3a6:300:3749:d903:fe49:face → 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d ICMPv6 286 Destination Unreachable (Port unreachable)
+
+
+
+
 
 
 
