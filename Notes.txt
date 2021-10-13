@@ -37928,6 +37928,8 @@ smip analysis
 
  843   833 [     72.913][yyyy-mm-dd hh:mm:ss:mmm][ERROR][  dtls            ]Session 1: Error -330: no support for error strings built in
 
+happens after every packet tx or rx.
+
 
 
 
