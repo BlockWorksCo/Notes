@@ -37941,6 +37941,11 @@ happens after every packet tx or rx.
 ./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4000 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0
 ./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4001 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0
 
+-------------------------------------------
+todo:
+
+- last-gasp to master
+- wisun silabs image adapter for TBC.
 
 
 
