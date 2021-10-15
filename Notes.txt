@@ -37940,6 +37940,9 @@ happens after every packet tx or rx.
 
 ./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4000 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0
 ./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4001 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTG4DEXG-if00-port0
+sudo tshark -i enp0s3 -Y "ipv6.addr eq 2a00:23c5:b3a6:300:821f:12ff:fe10:f9d"
+/Data/Projects/freeradius-server/build/bin/radiusd -X -d /Data/Projects/freeradiusconfig/raddb
+
 
 -------------------------------------------
 todo:
