@@ -37950,6 +37950,12 @@ todo:
 - last-gasp to master
 - wisun silabs image adapter for TBC.
 
+-------------------------------------
+birthday
+
+- apple watch strap
+- pj
+
 
 
 
