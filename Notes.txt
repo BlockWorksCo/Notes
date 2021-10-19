@@ -37969,11 +37969,11 @@ CND-11578
 -------------------------------------------
 to be done:
 
-    Wisun TBC adaptor implementation
-    GW7 phase 1 review completion and tests.
-    Node clean implemetation completion
-    WPDU alerts
-    Avon meter integration phase 1. AMI schedulre reads
+    Wisun TBC adaptor implementation (Me)
+    GW7 phase 1 review completion and tests. (Lixin, Vivek)
+    Node clean implemetation completion (Ayush)
+    WPDU alerts (Ayush/Yen)
+    Avon meter integration phase 1. AMI schedulre reads (Pritvhi)
 
 
 
