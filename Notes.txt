@@ -37966,6 +37966,16 @@ CND-11508
 CND-11580
 CND-11578
 
+-------------------------------------------
+to be done:
+
+    Wisun TBC adaptor implementation
+    GW7 phase 1 review completion and tests.
+    Node clean implemetation completion
+    WPDU alerts
+    Avon meter integration phase 1. AMI schedulre reads
+
+
 
 
 
