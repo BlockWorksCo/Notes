@@ -37982,6 +37982,11 @@ wisun package:
 https://cyanconnode.sharepoint.com/sites/Engineering/TeamSites/WiSUN%20FAN
 
 
+-----------------------------
+gw7
+
+- Forgotten about encryptionon backplane? WLL key? or resuse RLL key?
+
 
 
 
