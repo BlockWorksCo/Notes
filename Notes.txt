@@ -37988,6 +37988,7 @@ gw7
 - Forgotten about encryptionon backplane? WLL key? or resuse RLL key?
 - unit tests?
 - group id in network-id.
+- slot id reading.
 
 
 
