@@ -37989,7 +37989,9 @@ gw7
 - unit tests?
 - group id in network-id.
 - slot id reading.
+- watchdog for CNIC.
 
+https://jira.cyco.io/browse/CND-12277
 The data transferred over I2CIP between the CNIC and master needs to be encrypted in order to remove and easy way to listen to plaintext comms (given physical access).
 The encryption should be modelled on the MAC layer radio security (performed using the RLL key and using the same cipher-suite).
 
