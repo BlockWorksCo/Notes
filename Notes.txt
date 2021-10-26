@@ -37996,6 +37996,15 @@ The data transferred over I2CIP between the CNIC and master needs to be encrypte
 The encryption should be modelled on the MAC layer radio security (performed using the RLL key and using the same cipher-suite).
 
 
+----------------------------------------------------
+max ports linux
+
+cat /proc/sys/net/ipv4/ip_local_port_range
+
+sysctl -w net.ipv4.ip_local_port_range="15000 64000"
+net.ipv4.ip_local_port_range = 15000 64000
+
+
 
 
 
