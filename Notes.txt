@@ -38003,6 +38003,11 @@ cat /proc/sys/net/ipv4/ip_local_port_range
 
 sysctl -w net.ipv4.ip_local_port_range="15000 64000"
 net.ipv4.ip_local_port_range = 15000 64000
+-------------------------------
+IPv6 cellular MNO
+
+- Enable CONFIG_MODEM_IPV6.
+- Kaifa-cellulat IMGW build is only build that uses this.
 
 
 
