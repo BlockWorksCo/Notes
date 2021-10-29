@@ -38009,6 +38009,45 @@ IPv6 cellular MNO
 - Enable CONFIG_MODEM_IPV6.
 - Kaifa-cellulat IMGW build is only build that uses this.
 
+------------------------------------
+SiLabs WiSUN certification TBC
+
+
+cd adapter && python3 -m swagger_server --tcp-port=8080 --serial-port='/dev/ttyUSB2' --mac-addr='00:0d:6f:ff:fe:00:00:d1'
+
+
+
+09:48:48.512 INFO     witef.device.ncp     < Disconnect
+09:48:48.527 INFO     witef.device.ncp     > Disconnect
+127.0.0.1 - - [29/Oct/2021 09:48:48] "PUT /Wi-SUN/TBU/1.0.0/runMode/0 HTTP/1.1" 200 -
+09:50:24.969 INFO     witef.device.ncp     < Get IP address
+09:50:24.983 INFO     witef.device.ncp     > Get IP address
+09:50:24.984 INFO     witef.device.ncp     < Get IP address
+09:50:24.999 INFO     witef.device.ncp     > Get IP address
+127.0.0.1 - - [29/Oct/2021 09:50:25] "GET /Wi-SUN/TBU/1.0.0/config/ipAddresses HTTP/1.1" 400 -
+09:56:35.356 INFO     witef.device.ncp     < Set channel mask
+09:56:35.368 INFO     witef.device.ncp     > Set channel mask
+09:56:35.368 INFO     witef.device.ncp     < Allow MAC address
+09:56:35.386 INFO     witef.device.ncp     > Allow MAC address
+09:56:35.386 INFO     witef.device.ncp     < Set TX power
+09:56:35.402 INFO     witef.device.ncp     > Set TX power
+09:56:35.402 INFO     witef.device.ncp     < Get IP address
+09:56:35.416 INFO     witef.device.ncp     > Get IP address
+09:56:35.416 INFO     witef.device.ncp     < Set network size
+09:56:35.432 INFO     witef.device.ncp     > Set network size
+09:56:35.457 INFO     witef.device.ncp     < Set trusted certificate
+09:56:35.640 INFO     witef.device.ncp     > Set trusted certificate
+09:56:35.664 INFO     witef.device.ncp     < Set device certificate
+09:56:35.847 INFO     witef.device.ncp     > Set device certificate
+09:56:35.873 INFO     witef.device.ncp     < Set device private key
+09:56:35.943 INFO     witef.device.ncp     > Set device private key
+09:56:35.945 INFO     witef.device.ncp     < Connect
+09:56:36.009 INFO     witef.device.ncp     > Connect
+09:56:36.013 INFO     witef.device         Join state = 1
+127.0.0.1 - - [29/Oct/2021 09:56:36] "PUT /Wi-SUN/TBU/1.0.0/runMode/1 HTTP/1.1" 200 -
+
+
+
 
 
 
