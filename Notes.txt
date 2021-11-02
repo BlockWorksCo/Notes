@@ -38047,6 +38047,13 @@ cd adapter && python3 -m swagger_server --tcp-port=8080 --serial-port='/dev/ttyU
 127.0.0.1 - - [29/Oct/2021 09:56:36] "PUT /Wi-SUN/TBU/1.0.0/runMode/1 HTTP/1.1" 200 -
 
 
+-----------------------------------
+pixel 6 bose claim number
+
+https://pixel-offers.com/headphones/en-GB/track-claim
+694-619-541
+
+
 
 
 
