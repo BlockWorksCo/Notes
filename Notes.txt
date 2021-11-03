@@ -38069,6 +38069,15 @@ efr32 bootloader:
 0xfe10016:   ands    r6, r1                                 : data for R3 at first line.
 
 
+-----------------------------
+resetting IPA3 dev board from FTDI:
+
+debug log RTS pin is actually nRST.
+
+stty -F /dev/ttyUSB1 -hupcl     # places board in reset.
+stty -F /dev/ttyUSB1 hupcl      # takes board out of reset.
+
+
 
 
 
