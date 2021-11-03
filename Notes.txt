@@ -38058,7 +38058,7 @@ efr32 bootloader:
 
 0xfe10000:   ldr     r3, [pc, #16]   ; (0xfe10014)          : r3 = 0x400e0000 after this.
 0xfe10002:   movs    r2, #1                                 : r2 = 1 after this
-0xfe10004:   str     r2, [r3, #68]   ; 0x44                 : [0x400e0044] =
+0xfe10004:   str     r2, [r3, #68]   ; 0x44                 : [0x400e0044] = 0 after this, not 1 because 0x400e0044 is not writable (or is MSC peripheral?).
 0xfe10006:   movs    r3, #0                                 :
 0xfe10008:   ldr.w   sp, [r3]                               :
 0xfe1000c:   movs    r3, #4                                 :
