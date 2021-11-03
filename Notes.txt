@@ -38059,14 +38059,14 @@ efr32 bootloader:
 0xfe10000:   ldr     r3, [pc, #16]   ; (0xfe10014)          : r3 = 0x400e0000 after this.
 0xfe10002:   movs    r2, #1                                 : r2 = 1 after this
 0xfe10004:   str     r2, [r3, #68]   ; 0x44                 : [0x400e0044] = 0 after this, not 1 because 0x400e0044 is not writable (or is MSC peripheral?).
-0xfe10006:   movs    r3, #0                                 :
-0xfe10008:   ldr.w   sp, [r3]                               :
-0xfe1000c:   movs    r3, #4                                 :
-0xfe1000e:   ldr     r2, [r3, #0]                           :
-0xfe10010:   bx      r2                                     :
-0xfe10012:   b.n     0xfe10012                              :
-0xfe10014:   movs    r0, r0                                 :
-0xfe10016:   ands    r6, r1                                 :
+0xfe10006:   movs    r3, #0                                 : set R3 to zero (setting flags).
+0xfe10008:   ldr.w   sp, [r3]                               : load SP from *0x0 (stack pointer from vector table)
+0xfe1000c:   movs    r3, #4                                 : set R3 to 4
+0xfe1000e:   ldr     r2, [r3, #0]                           : load R2 from *0x4 (entry point from vector table).
+0xfe10010:   bx      r2                                     : jump to R2
+0xfe10012:   b.n     0xfe10012                              : infinite loop.
+0xfe10014:   movs    r0, r0                                 : data for R3 at first line.
+0xfe10016:   ands    r6, r1                                 : data for R3 at first line.
 
 
 
