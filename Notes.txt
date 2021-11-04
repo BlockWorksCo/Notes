@@ -36844,6 +36844,7 @@ https://developer.pelion.com/docs/device-management/current/connecting/wi-sun-tu
 
 Pelion Border router requires memory mainly based on the network size. Roughly 650B of RAM for every device connected.
 
+Note: EFR32FG25 (new device) has up to 512KB RAM, which would support up to ~650 devices so looks like a good option for a border-router.
 
 NUCLEO F429ZI cant be used as BR without modification:
 https://os.mbed.com/teams/ST/wiki/Nucleo-144pins-ethernet-spi-conflict
