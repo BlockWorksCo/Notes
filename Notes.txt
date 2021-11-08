@@ -38079,6 +38079,15 @@ stty -F /dev/ttyUSB1 -hupcl     # places board in reset.
 stty -F /dev/ttyUSB1 hupcl      # takes board out of reset.
 
 
+---------------------------------------
+wisun setup
+
+br:
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4000 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0
+
+node:
+./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4001 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATOT8S-if00-port0
+
 
 
 
