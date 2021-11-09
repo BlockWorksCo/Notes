@@ -38093,6 +38093,61 @@ radius:
 gdb --args ~/Projects/freeradius-server/build/bin/radiusd -X -d ~/Projects/freeradiusconfig/raddb
 
 
+EAP TLS client hello:
+
+ Transport Layer Security
+     TLSv1.2 Record Layer: Handshake Protocol: Client Hello
+         Content Type: Handshake (22)
+         Version: TLS 1.2 (0x0303)
+         Length: 102
+         Handshake Protocol: Client Hello
+             Handshake Type: Client Hello (1)
+             Length: 98
+             Version: TLS 1.2 (0x0303)
+             Random: 530f8afbdbcfe768691b5c5fec84a8d125cb74ed776c715d8775c7b9b9672d8b
+                 GMT Unix Time: Feb 27, 2014 18:59:07.000000000 GMT
+                 Random Bytes: dbcfe768691b5c5fec84a8d125cb74ed776c715d8775c7b9b9672d8b
+             Session ID Length: 0
+             Cipher Suites Length: 4
+             Cipher Suites (2 suites)
+                 Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (0xc0ae)
+                 Cipher Suite: TLS_EMPTY_RENEGOTIATION_INFO_SCSV (0x00ff)
+             Compression Methods Length: 1
+             Compression Methods (1 method)
+                 Compression Method: null (0)
+             Extensions Length: 53
+             Extension: trusted_ca_keys (len=21)
+                 Type: trusted_ca_keys (3)
+                 Length: 21
+                 Data: 010000000000000000000000000000000000000000
+             Extension: signature_algorithms (len=10)
+                 Type: signature_algorithms (13)
+                 Length: 10
+                 Signature Hash Algorithms Length: 8
+                 Signature Hash Algorithms (4 algorithms)
+                     Signature Algorithm: ecdsa_secp256r1_sha256 (0x0403)
+                         Signature Hash Algorithm Hash: SHA256 (4)
+                         Signature Hash Algorithm Signature: ECDSA (3)
+                     Signature Algorithm: rsa_pkcs1_sha256 (0x0401)
+                         Signature Hash Algorithm Hash: SHA256 (4)
+                         Signature Hash Algorithm Signature: RSA (1)
+                     Signature Algorithm: SHA224 ECDSA (0x0303)
+                         Signature Hash Algorithm Hash: SHA224 (3)
+                         Signature Hash Algorithm Signature: ECDSA (3)
+                     Signature Algorithm: SHA224 RSA (0x0301)
+                         Signature Hash Algorithm Hash: SHA224 (3)
+                         Signature Hash Algorithm Signature: RSA (1)
+             Extension: supported_groups (len=4)
+                 Type: supported_groups (10)
+                 Length: 4
+                 Supported Groups List Length: 2
+                 Supported Groups (1 group)
+                     Supported Group: secp256r1 (0x0017)
+             Extension: ec_point_formats (len=2)
+                 Type: ec_point_formats (11)
+
+
+
 
 
 
