@@ -38089,6 +38089,11 @@ node:
 ./build/host-ctrlporthub/bin/ctrlporthub -controllerport 4001 -loglevel debug -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATOT8S-if00-port0
 
 
+radius:
+gdb --args ~/Projects/freeradius-server/build/bin/radiusd -X -d ~/Projects/freeradiusconfig/raddb
+
+
+
 
 
 
