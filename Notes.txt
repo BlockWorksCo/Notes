@@ -38177,7 +38177,7 @@ Cipher Suite: TLS_ECDHE_ECDSA_WITH_AES_128_CCM_8 (0xc0ae)
 ---------------------------
 building freeradius with fresh openssl
 
-./configure --with-openssl-lib-dir=/home/steve/Projects/openssl
+./configure --with-openssl-lib-dir=/home/steve/Projects/openssl --enable-developer
 sudo ldconfig ~/Projects/openssl
 make
 
