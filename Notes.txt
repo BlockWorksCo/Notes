@@ -38182,6 +38182,10 @@ sudo ldconfig ~/Projects/openssl
 make
 
 
+fr_openssl_fips_mode in:
+build/lib/.libs/libfreeradius-tls.so
+
+
 
 
 
