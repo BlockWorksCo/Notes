@@ -38185,6 +38185,16 @@ make
 fr_openssl_fips_mode in:
 build/lib/.libs/libfreeradius-tls.so
 
+sudo ldconfig ~/Projects/freeradius-server/build/lib/.libs
+running with "LD_DEBUG=libs" gives:
+
+find library=libfreeradius-tls.so [0]; searching
+ search path=/home/steve/Projects/openssl:/usr/local/lib                (RUNPATH from file /home/steve/Projects/freeradius-server/build/bin/radiusd)
+  trying file=/home/steve/Projects/openssl/libfreeradius-tls.so
+  trying file=/usr/local/lib/libfreeradius-tls.so
+
+
+so wrong libfreeradius-tlks.so is being used.
 
 
 
