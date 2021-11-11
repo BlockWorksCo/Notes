@@ -38197,6 +38197,10 @@ find library=libfreeradius-tls.so [0]; searching
 so wrong libfreeradius-tlks.so is being used.
 
 
+~/Projects/freeradius-server/build/bin/radiusd -X -d ~/Projects/frc/raddb/
+
+
+
 
 
 
