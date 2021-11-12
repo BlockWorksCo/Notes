@@ -38199,6 +38199,7 @@ so wrong libfreeradius-tlks.so is being used.
 
 ~/Projects/freeradius-server/build/bin/radiusd -X -d ~/Projects/frc/raddb/
 
+Needs FreeRADIUS 3.0.25 with OpenSSL 1.1.1K
 
 
 
