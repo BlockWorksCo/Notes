@@ -38210,7 +38210,7 @@ Needs FreeRADIUS 3.0.25 with OpenSSL 1.1.1K
 openssl 1.1.1k
 
 ----------------------------------------------------------
-OpenSSL
+OpenSSL 1.1.1l
 
 1.1.1l = fb047ebc87b18bdc4cf9ddee9ee1f5ed93e56aff
 git clone https://github.com/openssl/openssl.git
@@ -38219,11 +38219,12 @@ git checkout fb047ebc87b18bdc4cf9ddee9ee1f5ed93e56aff
 make
 
 ---------------------------------------------------------
-FreeRADIUS
+FreeRADIUS 3.0.25
 
 git clone https://github.com/FreeRADIUS/freeradius-server.git
 git checkout 0d0b5aabaf29884ee46d5296c96f3db1353e61dc
 ./configure --with-openssl-lib-dir=/home/steve/Projects/openssl  -with-openssl-include-dir=/home/steve/Projects/openssl   --enable-developer
+make
 
 
 
