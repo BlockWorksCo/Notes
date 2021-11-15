@@ -38218,6 +38218,13 @@ git checkout fb047ebc87b18bdc4cf9ddee9ee1f5ed93e56aff
 ./config
 make
 
+---------------------------------------------------------
+FreeRADIUS
+
+git clone https://github.com/FreeRADIUS/freeradius-server.git
+git checkout 0d0b5aabaf29884ee46d5296c96f3db1353e61dc
+./configure --with-openssl-lib-dir=/home/steve/Projects/openssl  -with-openssl-include-dir=/home/steve/Projects/openssl   --enable-developer
+
 
 
 
