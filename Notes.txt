@@ -29195,6 +29195,12 @@ mbedtls=EUK0-112-1
         17/09 - SW+WiSUN
         24/09 - SW+WiSUN
 
+         1/10 - SW+WiSUN
+         8/10 - SW+WiSUN
+        15/10 - SW+WiSUN
+        22/10 - SW+WiSUN
+        29/10 - SW+WiSUN
+
 -------------------------------------------------
 dev-stack
 dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -a 1
