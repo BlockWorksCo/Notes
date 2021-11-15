@@ -38203,6 +38203,17 @@ Needs FreeRADIUS 3.0.25 with OpenSSL 1.1.1K
 
 openssl 1.1.1k
 
+----------------------------------------------------------
+OpenSSL
+
+1.1.1l = fb047ebc87b18bdc4cf9ddee9ee1f5ed93e56aff
+git clone https://github.com/openssl/openssl.git
+git checkout fb047ebc87b18bdc4cf9ddee9ee1f5ed93e56aff
+./config
+make
+
+
+
 
 
 
