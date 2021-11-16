@@ -38266,6 +38266,42 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
 
+Breakpoint 5, mbedtls_ssl_parse_certificate (ssl=ssl@entry=0x20018260)
+    at build/3pp/mbedtls/library/ssl_tls.c:2720
+2720        const int authmode = ssl->conf->authmode;
+(gdb) where
+#0  mbedtls_ssl_parse_certificate (ssl=ssl@entry=0x20018260) at build/3pp/mbedtls/library/ssl_tls.c:2720
+#1  0x00032a10 in mbedtls_ssl_handshake_client_step (ssl=0x20018260)
+    at build/3pp/mbedtls/library/ssl_cli.c:4295
+#2  0x00039268 in mbedtls_ssl_handshake_step (ssl=ssl@entry=0x20018260)
+    at build/3pp/mbedtls/library/ssl_tls.c:5668
+#3  0x00094dfe in tls_sec_prot_lib_process (sec=sec@entry=0x200181e8)
+    at build/3pp/nanostack/patched/tls_sec_prot_lib.c:423
+#4  0x000943ba in client_tls_sec_prot_state_machine (prot=0x20018124)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/tls_sec_prot.c:348
+#5  0x00094280 in tls_sec_prot_receive (prot=0x20018124, pdu=0x2001b2d0, size=<optimized out>)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/tls_sec_prot/tls_sec_prot.c:261
+--Type <RET> for more, q to quit, c to continue without paging--
+#6  0x0009734e in supp_eap_tls_sec_prot_state_machine (prot=0x20016f9c)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/eap_tls_sec_prot/supp_eap_tls_sec_prot.c:494
+#7  0x000970b8 in supp_eap_tls_sec_prot_receive (prot=0x20016f9c, pdu=<optimized out>, size=<optimized out>)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/eap_tls_sec_prot/supp_eap_tls_sec_prot.c:172
+#8  0x000907c0 in kmp_eapol_pdu_if_receive (interface_ptr=<optimized out>, eui_64=<optimized out>, pdu=0x2001a397, size=<optimized out>)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/kmp/kmp_eapol_pdu_if.c:164
+#9  0x0007fca4 in ws_llc_eapol_indication_cb (ws_utt=..., ie_ext=<optimized out>, data=<optimized out>, api=<optimized out>) at build/3pp/nanostack/silabs/source/6LoWPAN/ws/ws_llc_data_service.c:752
+#10 ws_llc_mac_indication_cb (api=<optimized out>, data=<optimized out>, ie_ext=0x2000974c <sli_wisun_event_loop_task_stack+6004>) at build/3pp/nanostack/silabs/source/6LoWPAN/ws/ws_llc_data_service.c:906
+#11 0x000476c0 in mac_data_sap_rx_handler (mac=0x20012b08, rf_mac_setup=0x20012b70, buf=0x2001a338)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:824
+#12 mac_data_interface_frame_handler (buf=0x2001a338) at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:1075
+#13 mac_mcps_sap_data_tasklet (event=<optimized out>) at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/MAC/IEEE802_15_4/mac_mcps_sap.c:1256
+#14 0x0003ad36 in eventOS_scheduler_dispatch_event () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:344
+#15 0x0003ad56 in eventOS_scheduler_run () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:368
+#16 0x0003a3e2 in event_loop_thread (arg=<optimized out>) at build/3pp/nanostack/silabs/wisun/src/nanostack-hal/ns_event_loop.c:63
+#17 0x00021c3c in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
+
 
 
 
