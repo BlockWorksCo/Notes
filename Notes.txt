@@ -38359,6 +38359,27 @@ inland prohibit holder initial$A1
 don't worry about the certificate warning -- it is for hpseb-hes.hpseb.prod.cyanconnode.com but that FQDN is currently on the temporary server pending migration
 
 
+MMSC
+http://mms.um.three.co.uk:10021/mmsc
+
+mms proxy
+mms.three.co.uk
+
+mms port
+8799
+
+mcc
+234
+
+mnc
+20
+
+apn type
+default,mms,supl
+
+apn enable/disable
+enable
+
 
 
 
