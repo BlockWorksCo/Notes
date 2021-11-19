@@ -38324,6 +38324,17 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
 
+As explained in the original post, the PMKID is derived by using data which is known to us:
+
+
+---------------------------------------------------
+ipv6 gateway
+
+https://hpseb-ph1-hes-north.hpseb.prod.cyanconnode.com/
+steve.tickle@cyanconnode.com
+inland prohibit holder initial$A1
+
+
 
 
 
