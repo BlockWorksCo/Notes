@@ -38335,6 +38335,31 @@ steve.tickle@cyanconnode.com
 inland prohibit holder initial$A1
 
 
+it has a couple of addresses with different names to make it easier to configure gateways for IPv6 and/or IPv4:
+
+mwk@titan:/tmp/aws$ host hpseb-ph1-hes-ipv6-south.hpseb.prod.cyanconnode.com
+hpseb-ph1-hes-ipv6-south.hpseb.prod.cyanconnode.com has IPv6 address 2400:3b00:20:4::1:160
+mwk@titan:/tmp/aws$ host hpseb-ph1-hes-ipv4-south.hpseb.prod.cyanconnode.com
+hpseb-ph1-hes-ipv4-south.hpseb.prod.cyanconnode.com has address 45.113.191.28
+mwk@titan:/tmp/aws$ host hpseb-ph1-hes-south.hpseb.prod.cyanconnode.com
+hpseb-ph1-hes-south.hpseb.prod.cyanconnode.com has address 45.113.191.28
+hpseb-ph1-hes-south.hpseb.prod.cyanconnode.com has IPv6 address 2400:3b00:20:4::1:160
+
+13:36
+i would suggest pointing the test ipv6 end-to-end gateway at hpseb-ph1-hes-ipv6-south.hpseb.prod.cyanconnode.com
+Steve Tickle  13:36
+ok, its something to try... I can try an ethernet ipv6 setup here.
+Matt Kern:spiral_calendar_pad:  13:37
+i have created a temporary admin user on the system for you:
+13:38
+https://hpseb-ph1-hes-north.hpseb.prod.cyanconnode.com/
+steve.tickle@cyanconnode.com
+inland prohibit holder initial$A1
+13:38
+don't worry about the certificate warning -- it is for hpseb-hes.hpseb.prod.cyanconnode.com but that FQDN is currently on the temporary server pending migration
+
+
+
 
 
 
