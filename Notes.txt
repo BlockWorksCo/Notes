@@ -38414,5 +38414,8 @@ password : ir6fvscu
 q
 
 
+Dolphon is terminated
+
+Vodafone is IPv4/6 mixed
 
 
