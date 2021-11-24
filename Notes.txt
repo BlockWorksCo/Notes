@@ -38431,8 +38431,8 @@ Options:
 ipv6 gateway investigation summary:
 
 - Toby L210 modem
-- 2x IPv6 SIMs on two Different MNO/ISPs (Dolphin & Vodafone India).
-
+- 2xIPv6 SIMs on two Different MNO/ISPs (Dolphin & Vodafone India).
+- "IPV6" profile, (not "IPV4V6"/dual-stack) profiles are supported and can work in an Android phone.
 
 
 
