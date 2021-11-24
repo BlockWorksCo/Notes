@@ -38396,7 +38396,7 @@ pppCpSendProtocolReject
 
 https://www.networkacademy.io/ccna/ipv6/ipv4-vs-ipv6
 proto   ver  class label len  nexthdr hoplim source-addx                      dest-addx
-IPv4    IPv6                  ICMPv6
+IPv4    IPv6                  ICMPv6                                          all-nodes multicast
 21      6    88    00000 0038 3a      ff     fe8000000000000000000068dae27040 ff020000000000000000000000000001
 +
 payload (58 bytes):
@@ -38405,7 +38405,7 @@ payload (58 bytes):
 ffffffffffffffff0000
 000024023a80170b000b
 00000000000000000501
-0000000005 dc
+0000000005dc
 
 
 
