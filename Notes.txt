@@ -38418,13 +38418,12 @@ Dolphon is terminated
 
 Vodafone is IPv4/6 mixed
 
-IPCP
+IPCP configure-request for IP-address to be 0.0.0.0 (invalid)
 80210105000a030600000000
 protoid code id length options
 8021    01   05 000a   030600000000
 
 Options:
-auth-proto
 03         06 00000000
 
 
