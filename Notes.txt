@@ -38381,6 +38381,19 @@ apn enable/disable
 enable
 
 
+unhandled protocol packet 21
+unhandled protocol packet: ( 1/ 7): 216880000000383afffe800000000000
+unhandled protocol packet: ( 2/ 7): 0000000068dae27040ff020000000000
+unhandled protocol packet: ( 3/ 7): 00000000000000000186006dc2ff00ff
+unhandled protocol packet: ( 4/ 7): ff000000000000000003044040ffffff
+unhandled protocol packet: ( 5/ 7): ffffffffff0000000024023a80170b00
+unhandled protocol packet: ( 6/ 7): 0b000000000000000005010000000005
+unhandled protocol packet: ( 7/ 7): dc
+pppCpSendProtocolReject
+
+
+216880000000383afffe800000000000 0000000068dae27040ff020000000000 00000000000000000186006dc2ff00ff ff000000000000000003044040ffffff ffffffffff0000000024023a80170b00 0b000000000000000005010000000005 dc
+
 
 
 
