@@ -38423,6 +38423,9 @@ IPCP
 protoid code id length options
 8021    01   05 000a   030600000000
 
+Options:
+auth-proto
+03         06 00000000
 
 
 
