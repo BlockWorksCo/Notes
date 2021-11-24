@@ -38400,9 +38400,9 @@ IPv4    IPv6                  ICMPv6                                          al
 21      6    88    00000 0038 3a      ff     fe8000000000000000000068dae27040 ff020000000000000000000000000001
 +
 payload (58 bytes):
-type code chsum
+type code chsum hoplim rsvd lifetime reachable retrans-timer options
 RA
-86   00   6dc2  ff00ffff0000 00000000000003044040 ffffffffffffffff0000 000024023a80170b000b 00000000000000000501 0000000005dc
+86   00   6dc2  ff     00   ffff     00000000  00000000      03044040 ffffffff ffffffff 00000000 24023a80 170b000b 000000000000000005010000000005dc
 
 
 
