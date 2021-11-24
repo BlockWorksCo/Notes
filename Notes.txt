@@ -38427,6 +38427,19 @@ Options:
 03         06 00000000
 
 
+------------------------------------------------
+ipv6 gateway investigation summary:
+
+- Toby L210 modem
+- 2x IPv6 SIMs on two Different MNO/ISPs (Dolphin & Vodafone India).
+
+
+
+
+
+
+
+
 
 
 
