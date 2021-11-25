@@ -38381,6 +38381,7 @@ apn enable/disable
 enable
 
 
+
 unhandled protocol packet 21
 unhandled protocol packet: ( 1/ 7): 216880000000383afffe800000000000
 unhandled protocol packet: ( 2/ 7): 0000000068dae27040ff020000000000
@@ -38572,6 +38573,24 @@ sendPacket:: ( 1/ 1): 02010012
 sendPacket:: ( 1/ 1): 010405dc0206ffffffff07020802
 lcp(tx): #1 ConfAck (18)
 pppSend(c021)
+
+------------------------------
+ipv6 packet decode
+
+6000000000383afffe80000000000000 0000000000000002ff02000000000000 00000000000000018600be6fff00ffff 000000000000000003044040ffffffff ffffffff00000000200144900c000007 000000000000000005010000000005b8
+
+proto   ver  class label len  nexthdr hoplim source-addx                      dest-addx
+IPv4    IPv6                  ICMPv6                                          all-nodes multicast
+21      6    88    00000 0038 3a      ff     fe8000000000000000000068dae27040 ff020000000000000000000000000001
+        6    00    00000 0038 3a      ff     fe800000000000000000000000000002 ff020000000000000000000000000001
+
++
+payload (58 bytes):
+type code chsum hoplim dhcp&rsvd lifetime reachable  retrans-timer options
+RA                     no-dhcpv6          not-def-rt
+86   00   6dc2  ff     00        ffff     00000000   00000000      03044040 ffffffff ffffffff 00000000 24023a80 170b000b 000000000000000005010000000005dc
+86   00   be6f  ff     00        ffff     00000000   00000000      03044040 ffffffff ffffffff 00000000 20014490 0c000007 000000000000000005010000000005b8
+
 
 
 
