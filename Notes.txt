@@ -38618,7 +38618,7 @@ change to 0000000001 EUI to check filtering.
 
 
 ------------------------------------
-ping packet:
+ping packet pcap tshark:
 
 6000000000083a20200144900c000000
 0000000000000003fe80000000000000
@@ -38645,15 +38645,15 @@ echo 000000030000003C6000000000083a20200144900c0000000000000000000003fe800000000
 
 from scapy.all import *
 import binascii
-wrpcap('t.pcap', [IP(binascii.unhexlify('6000000000083a20200144900c0000000000000000000003fe80000000000000000000000000000180005fd9abcd0500'))])
+wrpcap('t.pcap', [IPv6v6(binascii.unhexlify('6000000000083a20200144900c0000000000000000000003fe80000000000000000000000000000180005fd9abcd0500'))])
 
 tshark -r t.pcap  -V
 
 Frame 1: 48 bytes on wire (384 bits), 48 bytes captured (384 bits)
-    Encapsulation type: Raw IPv4 (129)
-    Arrival Time: Nov 29, 2021 16:23:57.857767000 GMT
+    Encapsulation type: Raw IPv6 (130)
+    Arrival Time: Nov 29, 2021 16:28:28.139615000 GMT
     [Time shift for this packet: 0.000000000 seconds]
-    Epoch Time: 1638203037.857767000 seconds
+    Epoch Time: 1638203308.139615000 seconds
     [Time delta from previous captured frame: 0.000000000 seconds]
     [Time delta from previous displayed frame: 0.000000000 seconds]
     [Time since reference or first frame: 0.000000000 seconds]
@@ -38662,7 +38662,7 @@ Frame 1: 48 bytes on wire (384 bits), 48 bytes captured (384 bits)
     Capture Length: 48 bytes (384 bits)
     [Frame is marked: False]
     [Frame is ignored: False]
-    [Protocols in frame: ip:ipv6:icmpv6]
+    [Protocols in frame: ipv6:icmpv6]
 Internet Protocol Version 6, Src: 2001:4490:c00::3, Dst: fe80::1
     0110 .... = Version: 6
     .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
@@ -38681,6 +38681,7 @@ Internet Control Message Protocol v6
     [Checksum Status: Good]
     Identifier: 0xabcd
     Sequence: 1280
+
 
 
 
