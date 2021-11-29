@@ -38643,5 +38643,46 @@ echo 000000030000003C6000000000083a20200144900c0000000000000000000003fe800000000
 0a0d0d0a000000b81a2b3c4d00000001ffffffffffffffff0037000265746e492952286c726f43204d542865376920293037372d20514830205550432e322040484730387728207a20687469344553530029322e00170003756e694c2e352078302e31312d30342d656e656700636972003a0004706d754420706163726957286168736520296b722e322e3347282033762074692e322e336170203367616b63612064652e3320732d332e320000293100000000000000b80000000100000048
 
 
+from scapy.all import *
+import binascii
+wrpcap('t.pcap', [IP(binascii.unhexlify('6000000000083a20200144900c0000000000000000000003fe80000000000000000000000000000180005fd9abcd0500'))])
+
+tshark -r t.pcap  -V
+
+Frame 1: 48 bytes on wire (384 bits), 48 bytes captured (384 bits)
+    Encapsulation type: Raw IPv4 (129)
+    Arrival Time: Nov 29, 2021 16:23:57.857767000 GMT
+    [Time shift for this packet: 0.000000000 seconds]
+    Epoch Time: 1638203037.857767000 seconds
+    [Time delta from previous captured frame: 0.000000000 seconds]
+    [Time delta from previous displayed frame: 0.000000000 seconds]
+    [Time since reference or first frame: 0.000000000 seconds]
+    Frame Number: 1
+    Frame Length: 48 bytes (384 bits)
+    Capture Length: 48 bytes (384 bits)
+    [Frame is marked: False]
+    [Frame is ignored: False]
+    [Protocols in frame: ip:ipv6:icmpv6]
+Internet Protocol Version 6, Src: 2001:4490:c00::3, Dst: fe80::1
+    0110 .... = Version: 6
+    .... 0000 0000 .... .... .... .... .... = Traffic Class: 0x00 (DSCP: CS0, ECN: Not-ECT)
+        .... 0000 00.. .... .... .... .... .... = Differentiated Services Codepoint: Default (0)
+        .... .... ..00 .... .... .... .... .... = Explicit Congestion Notification: Not ECN-Capable Transport (0)
+    .... .... .... 0000 0000 0000 0000 0000 = Flow Label: 0x00000
+    Payload Length: 8
+    Next Header: ICMPv6 (58)
+    Hop Limit: 32
+    Source: 2001:4490:c00::3
+    Destination: fe80::1
+Internet Control Message Protocol v6
+    Type: Echo (ping) request (128)
+    Code: 0
+    Checksum: 0x5fd9 [correct]
+    [Checksum Status: Good]
+    Identifier: 0xabcd
+    Sequence: 1280
+
+
+
 
 
