@@ -38689,6 +38689,8 @@ hw-test-server-in
 ~/c4-agent-tools-v120/coap_request.py --ctrlporthub :4000 --eui64 00-1b-c5-0c-60-06-74-77 --config-list
 
 
++CGCONTRDP: 4,5,"ipv6testing.gdsp.com.mnc011.mcc404.gprs","36.2.58.128.23.11.0.11.0.0.0.0.0.0.0.1.255.255.255.255.255.255.25        5.255.255.255.255.255.255.255.255.255","36.2.58.128.23.11.0.11.0.0.0.0.0.0.
+
 
 
 
