@@ -38683,6 +38683,12 @@ Internet Control Message Protocol v6
     Sequence: 1280
 
 
+--------------------------------
+hw-test-server-in
+
+~/c4-agent-tools-v120/coap_request.py --ctrlporthub :4000 --eui64 00-1b-c5-0c-60-06-74-77 --config-list
+
+
 
 
 
