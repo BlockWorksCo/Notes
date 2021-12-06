@@ -38701,6 +38701,13 @@ hw-test-server-in
 "32.1.72.96.72.96.0.0.0.0.0.
  2001:4860:4860::1
 
+---------------------------------------
+
+apt install rustc
+pip3 install setuptools_rust
+apt install build-tools
+pip3 install paramiko
+
 
 
 
