@@ -38703,9 +38703,8 @@ hw-test-server-in
 
 ---------------------------------------
 
-apt install rustc
+apt install rustc libpython3-dev libssl-dev
 pip3 install setuptools_rust
-apt install build-tools
 pip3 install paramiko
 
 
