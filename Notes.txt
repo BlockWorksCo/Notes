@@ -38714,6 +38714,12 @@ reliable 10k terminal emulator
 
 gdb --args ./build/terminal_emulator-genus/bin/terminal_emulator -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 10000 -db /home/steve/smip/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/smip/ca.crt.pem -server fd00::1 -numOfGateways 1 -numOfThreads 1 -logLevel info -handshakeBurstRate 10
 
+------------------------------------------
+WiSUN recertification
+- Self certification
+- explicitly not interested in application level
+- Certification Manager @ test house (CPM) reviews self-certification and determines the type of recertification required.
+- Propose to only recertify when mbedos (containing nanostack) is updated or silabs driver is updated.
 
 
 
