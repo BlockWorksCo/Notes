@@ -38723,6 +38723,7 @@ WiSUN recertification
 - Different hardware (e.g. IPA3a+ STM32-based board would have different certification with same repo).
 - Update of mbed-os repo would trigger a need for recertification but the extent would be determined by the delta (i.e. ARMs development).
 - Initial certification needs to be full (obviously).
+- Certification does not specify reliance on configuration of the stack.
 
 
 
