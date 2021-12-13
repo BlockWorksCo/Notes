@@ -38731,6 +38731,9 @@ termem tun
 sudo ip tuntap add mode tun termem0
 ifconfig termem0 up
 
+sudo route -6 add fd00::/64 enp0s3
+
+
 
 
 
