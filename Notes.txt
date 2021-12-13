@@ -38725,6 +38725,11 @@ WiSUN recertification
 - Initial certification needs to be full (obviously).
 - Certification does not specify reliance on configuration of the stack.
 
+-----------------------------------------
+termem tun
+
+sudo ip tuntap add mode tun termem0
+ifconfig termem0 up
 
 
 
