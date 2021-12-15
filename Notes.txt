@@ -38734,6 +38734,12 @@ ifconfig termem0 up
 sudo route -6 add fd00::/64 enp0s3
 sudo route -6 add fd01::/64 termem0
 
+------------------------------------------------------
+ipv6 terminal emulator termem
+
+sudo gdb --args ./build/terminal_emulator-genus/bin/terminal_emulator -prefixBase fd3006:: -6  -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 100 -db /home/steve/smip/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/smip/ca.crt.pem -server fd00::1 -numOfGateways 10 -numOfThreads 1 -logLevel info -handshakeBurstRate 200
+
+
 
 
 
