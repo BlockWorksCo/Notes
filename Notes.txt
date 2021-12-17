@@ -38810,6 +38810,8 @@ or removing flash.
 - What does bootloader do?
 
 
+*Check size of variant object files to estimate combined size.
+
 meter-types:
 - Genus
 - GStar
