@@ -38814,6 +38814,7 @@ or removing flash.
 
 
 *Check size of variant object files to estimate combined size.
+*Code size reduction is an open-ended and difficult task (past the low-hanging fruit).
 
 meter-types:
 - Genus
