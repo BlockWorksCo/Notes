@@ -38797,7 +38797,9 @@ relatively high-level. Can keep current low-level version as a build option for 
 certificates in via SWD? but that would leave them in plaintext. Could embed a set of "prod"
 certificates into the image that are only used if they aren't present on the filesystem.
 embedded certs could then be erased/randomised to prevent exploitation by forcing a fallback
-to them.
+to them. This would improve security as currently we can force entry into prodmode by replacing
+or removing flash.
+- What does bootloader do?
 
 
 
