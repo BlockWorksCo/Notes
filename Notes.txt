@@ -38765,6 +38765,13 @@ Long term:
 
 Challenges:
 - Flash size of combined builds.
+- Complexity of merging meter-drivers.
+
+Possible ways forward:
+- split binaries (platform & meter-driver).
+- single binary (as-is) with unified "DLMS" driver,DLT645 drivr, mbus driver.
+- split binaries reduces impact of flash size problems and is likely more scalable. cannot
+continue putting more meter-integrations into one binary forever.
 
 
 
