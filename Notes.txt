@@ -38792,6 +38792,8 @@ split binary:
 - Define an interface between platform & meter-driver that can be implemented as a function-table.
 - Also creates a form of "sandbox" around the meter-driver & platform areas. Can use the MPU to
 add and enforce isolation (important for CPA type requirements in future).
+- Allows simplified 3rd party development of meter-drivers without platform source.
+- Can implement a test-harness around the meter-driver binary to test-in-place.
 
 secure&insecure builds:
 - Currently when out of prodmode a secure build disallows use of local coap-requests.
