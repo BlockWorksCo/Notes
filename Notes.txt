@@ -38757,6 +38757,9 @@ gw2
 ---------------------------------------
 Build unification
 
+Why:
+- primary: Improving test coverage
+- side-effect: Improve CI build times and reduce disk usage.
 
 Short term:
 - remove unused builds (wolfssl).
@@ -38779,6 +38782,12 @@ Possible ways forward:
 - split binaries reduces impact of flash size problems and is likely more scalable. cannot
 continue putting more meter-integrations into one binary forever.
 - Combining insecure&secure would require prodmode to still be present.
+
+
+
+secure&insecure builds:
+- Currently when out of prodmode a secure build disallows use of coap-requests.
+- we need to be able to use coap-requests in
 
 
 
