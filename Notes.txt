@@ -38790,7 +38790,9 @@ secure&insecure builds:
 - we need to be able to use coap-requests in dev and test.
 - Propose to remove "prodmode" as a "mode" and move to a secure-local-coap using DTLS over SLIP.
 - SLIP already prototyped in handheld investigation.
-- Using a local IP link also then allows use of I2CIP and remove need for UART (as in IPA3A+).
+- Using a local IP link for coap-request also then allows use of I2CIP and remove need for UART (as in IPA3A+).
+- Drawback for local-coap-over-IP is that it debug text must go through IP stack which is
+relatively high-level. Can keep current low-level version as a build option for developers.
 
 
 
