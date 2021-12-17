@@ -38746,8 +38746,12 @@ sudo gdb --args ./build/terminal_emulator-genus/bin/terminal_emulator -prefixBas
 -------------------------------------
 MEA gateways
 
-001bc50c600d73da
+gw1 001bc50c600d73da
 - Starting version gw200:v21.14.10+b31082+ge3bded2 on hardware gw200
+- seems to be ok.
+
+gw2
+- dead, no log output.
 
 
 ---------------------------------------
