@@ -38760,9 +38760,10 @@ Build unification
 
 Short term:
 - remove unused builds (wolfssl).
+- combine insecure into secure.
 
 Medium term:
-- do new features in unified builds.
+- do new integrations in unified builds.
 
 Long term:
 - Move old builds into unified build.
@@ -38770,6 +38771,7 @@ Long term:
 Challenges:
 - Flash size of combined builds.
 - Complexity of merging meter-drivers.
+- prodmode issue with insecure+secure cmobination.
 
 Possible ways forward:
 - split binaries (platform & meter-driver).
