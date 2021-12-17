@@ -38798,6 +38798,7 @@ platform and network around it.
 
 secure&insecure builds:
 - Currently when out of prodmode a secure build disallows use of local coap-requests.
+- secure-local-coap removes need for disabling of local-coap in "secure" mode.
 - we need to be able to use coap-requests in dev and test.
 - Propose to remove "prodmode" as a "mode" and move to a secure-local-coap using DTLS over SLIP.
 - SLIP already prototyped in handheld investigation.
