@@ -38785,6 +38785,11 @@ continue putting more meter-integrations into one binary forever.
 
 
 
+split binary:
+- relocatable/relative-addressing.
+- one build per processor/meter-type. e.g. efr32-genus, stm32-sei, efm32-avon, efr32-mbus, stm32-dlt645.
+- one build for platform. e.g. ipa3a-wisun, ipa3-c4, hw1-c4, nic7-c4
+
 secure&insecure builds:
 - Currently when out of prodmode a secure build disallows use of local coap-requests.
 - we need to be able to use coap-requests in dev and test.
