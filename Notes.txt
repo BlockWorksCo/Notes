@@ -38793,6 +38793,11 @@ secure&insecure builds:
 - Using a local IP link for coap-request also then allows use of I2CIP and remove need for UART (as in IPA3A+).
 - Drawback for local-coap-over-IP is that it debug text must go through IP stack which is
 relatively high-level. Can keep current low-level version as a build option for developers.
+- MTS must be able to put certificates on device without secure-local-coap, so maybe place
+certificates in via SWD? but that would leave them in plaintext. Could embed a set of "prod"
+certificates into the image that are only used if they aren't present on the filesystem.
+embedded certs could then be erased/randomised to prevent exploitation by forcing a fallback
+to them.
 
 
 
