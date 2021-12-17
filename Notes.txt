@@ -38774,20 +38774,23 @@ Long term:
 Challenges:
 - Flash size of combined builds.
 - Complexity of merging meter-drivers.
-- prodmode issue with insecure+secure combination.
+- local-coap restriction with insecure+secure combination.
 
 Possible ways forward:
 - split binaries (platform & meter-driver).
 - single binary (as-is) with unified "DLMS" driver,DLT645 drivr, mbus driver.
 - split binaries reduces impact of flash size problems and is likely more scalable. cannot
 continue putting more meter-integrations into one binary forever.
-- Combining insecure&secure would require prodmode to still be present.
+- Combining insecure&secure would require local-coap to still be present.
 
 
 
 secure&insecure builds:
-- Currently when out of prodmode a secure build disallows use of coap-requests.
-- we need to be able to use coap-requests in
+- Currently when out of prodmode a secure build disallows use of local coap-requests.
+- we need to be able to use coap-requests in dev and test.
+- Propose to remove "prodmode" as a "mode" and move to a secure-local-coap using DTLS over SLIP.
+- SLIP already prototyped in handheld investigation.
+- Using a local IP link also then allows use of I2CIP and remove need for UART (as in IPA3A+).
 
 
 
