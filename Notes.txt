@@ -38764,7 +38764,7 @@ Long term:
 - Move old builds into unified build.
 
 Challenges:
-- Flash size.
+- Flash size of combined builds.
 
 
 
