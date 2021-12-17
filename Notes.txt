@@ -38750,6 +38750,21 @@ MEA gateways
 - Starting version gw200:v21.14.10+b31082+ge3bded2 on hardware gw200
 
 
+---------------------------------------
+Build unification
+
+
+Short term:
+- remove unused builds (wolfssl).
+
+Medium term:
+- do new features in unified builds.
+
+Long term:
+- Move old builds into unified build.
+
+Challenges:
+- Flash size.
 
 
 
