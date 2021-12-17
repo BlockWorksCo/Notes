@@ -38810,5 +38810,35 @@ or removing flash.
 - What does bootloader do?
 
 
+meter-types:
+- Genus
+- GStar
+- SEI
+- Kaifa
+- Avon
+- LinkWell
+- Precise
+- HPL
+- EMax
+- Fake
+- MBus
+- DLT645
+
+Platform-types:
+- IPA3
+- IPA3A
+- IPA3B
+- GW200 (propose leaving this for now).
+- GW7 (propose leaving this for now).
+- IPA1 (propose leaving this for now).
+- HW1 (propose leaving this for now).
+
+Processor-types:
+- STM32 (IPA1, HW1)
+- STM32w (IPA3A)
+- EFR32 (IPA3, IPA3b, NIC7).
+- EFM32 (CNIC7).
+
+
 
 
