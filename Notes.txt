@@ -38737,7 +38737,16 @@ sudo route -6 add fd01::/64 termem0
 ------------------------------------------------------
 ipv6 terminal emulator termem
 
+sudo ip tuntap add mode tun termem0
+sudo ifconfig termem0 up
+
+
 sudo gdb --args ./build/terminal_emulator-genus/bin/terminal_emulator -prefixBase fd3006:: -6  -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 100 -db /home/steve/smip/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/smip/ca.crt.pem -server fd00::1 -numOfGateways 10 -numOfThreads 1 -logLevel info -handshakeBurstRate 200
+
+-------------------------------------
+MEA gateways
+
+- Starting version gw200:v21.14.10+b31082+ge3bded2 on hardware gw200
 
 
 
