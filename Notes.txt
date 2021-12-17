@@ -38789,6 +38789,9 @@ split binary:
 - relocatable/relative-addressing.
 - one build per processor/meter-type. e.g. efr32-genus, stm32-sei, efm32-avon, efr32-mbus, stm32-dlt645.
 - one build for platform. e.g. ipa3a-wisun, ipa3-c4, hw1-c4, nic7-c4
+- Define an interface between platform & meter-driver that can be implemented as a function-table.
+- Also creates a form of "sandbox" around the meter-driver & platform areas. Can use the MPU to
+add and enforce isolation (important for CPA type requirements in future).
 
 secure&insecure builds:
 - Currently when out of prodmode a secure build disallows use of local coap-requests.
