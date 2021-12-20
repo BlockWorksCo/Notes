@@ -38877,7 +38877,7 @@ this can be assumed to form the "platform + WAN side handlers" portion of the sp
 
 /bin/ls build/**/src/device/drivers/dlms/variants/*.o | ag -v defaults | xargs -I '{}' -n 1 size {}
    text    data     bss     dec     hex filename
-  10414       7     517   10938    2aba build/ipa3b-sei-dlms/src/device/drivers/dlms/variants/sei.o
+  10413       7     517   10938    2aba build/ipa3b-sei-dlms/src/device/drivers/dlms/variants/sei.o
    9241      11       1    9253    2425 build/ipa3-emax-dlms-g2/src/device/drivers/dlms/variants/emax.o
    9241      11       1    9253    2425 build/ipa3-emax-dlms/src/device/drivers/dlms/variants/emax.o
   11232       8       2   11242    2bea build/ipa3-genus-dlms-g2/src/device/drivers/dlms/variants/genus.o
