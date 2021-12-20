@@ -38860,3 +38860,14 @@ ls build/**/src/device/drivers/dlms/variants/*.o | ag -v defaults
 
 
 
+ls build/**/release/*.image
+-rw-rw-r-- 1 steve steve 499483 Dec 17 13:35 build/ipa3b-sei-dlms/release/agent-ipa3b-sei-dlms-v21.27.4+dirty.image
+-rw-rw-r-- 1 steve steve 373674 Dec 20 09:43 build/ipa3-dlt645/release/agent-ipa3-dlt645-v21.27.4.image
+-rw-rw-r-- 1 steve steve 502821 Dec 20 09:36 build/ipa3-emax-dlms/release/agent-ipa3-emax-dlms-v21.27.4.image
+-rw-rw-r-- 1 steve steve 506654 Dec 20 09:29 build/ipa3-genus-dlms/release/agent-ipa3-genus-dlms-v21.27.4.image
+-rw-rw-r-- 1 steve steve 503078 Dec 20 09:34 build/ipa3-gstar-dlms/release/agent-ipa3-gstar-dlms-v21.27.4.image
+-rw-rw-r-- 1 steve steve 504348 Dec 20 09:39 build/ipa3-hpl-dlms/release/agent-ipa3-hpl-dlms-v21.27.4.image
+-rw-rw-r-- 1 steve steve 503848 Dec 20 09:31 build/ipa3-precise-dlms/release/agent-ipa3-precise-dlms-v21.27.4.image
+-rw-rw-r-- 1 steve steve 502036 Dec 20 09:41 build/ipa3-sei-dlms/release/agent-ipa3-sei-dlms-v21.27.4.image
+
+
