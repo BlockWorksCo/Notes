@@ -38873,5 +38873,5 @@ ls build/**/release/*.image
 
 
 Using "fake dlms" as a minimal meter-driver (368KB) that just short-circuits most meter-driver behaviour. In this case
-the
+this can be assumed to form the "platform + WAN side handlers" portion of the split-build.
 
