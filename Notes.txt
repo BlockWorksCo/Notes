@@ -38875,3 +38875,22 @@ ls build/**/release/*.image
 Using "fake dlms" as a minimal meter-driver (368KB) that just short-circuits most meter-driver behaviour. In this case
 this can be assumed to form the "platform + WAN side handlers" portion of the split-build.
 
+/bin/ls build/**/src/device/drivers/dlms/variants/*.o | ag -v defaults | xargs -I '{}' -n 1 size {}
+   text    data     bss     dec     hex filename
+  10414       7     517   10938    2aba build/ipa3b-sei-dlms/src/device/drivers/dlms/variants/sei.o
+   9241      11       1    9253    2425 build/ipa3-emax-dlms-g2/src/device/drivers/dlms/variants/emax.o
+   9241      11       1    9253    2425 build/ipa3-emax-dlms/src/device/drivers/dlms/variants/emax.o
+  11232       8       2   11242    2bea build/ipa3-genus-dlms-g2/src/device/drivers/dlms/variants/genus.o
+  11232       8       2   11242    2bea build/ipa3-genus-dlms/src/device/drivers/dlms/variants/genus.o
+   9561      11       1    9573    2565 build/ipa3-gstar-dlms-g2/src/device/drivers/dlms/variants/gstar.o
+   9561      11       1    9573    2565 build/ipa3-gstar-dlms/src/device/drivers/dlms/variants/gstar.o
+   8731       7       1    8739    2223 build/ipa3-hpl-dlms-g2/src/device/drivers/dlms/variants/hpl.o
+   8731       7       1    8739    2223 build/ipa3-hpl-dlms/src/device/drivers/dlms/variants/hpl.o
+   9798      11       1    9810    2652 build/ipa3-precise-dlms-g2/src/device/drivers/dlms/variants/precise.o
+   9798      11       1    9810    2652 build/ipa3-precise-dlms/src/device/drivers/dlms/variants/precise.o
+  10414       7     517   10938    2aba build/ipa3-sei-dlms-g2/src/device/drivers/dlms/variants/sei.o
+  10414       7     517   10938    2aba build/ipa3-sei-dlms/src/device/drivers/dlms/variants/sei.o
+  82130    9920     131   92181   16815 build/terminal_emulator-genus/src/device/drivers/dlms/variants/genus.o
+
+
+
