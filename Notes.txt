@@ -38872,5 +38872,6 @@ ls build/**/release/*.image
 -rw-rw-r-- 1 steve steve 502036 Dec 20 09:41 build/ipa3-sei-dlms/release/agent-ipa3-sei-dlms-v21.27.4.image
 
 
-Using "fake dlms" as a minimal meter-driver (368KB)
+Using "fake dlms" as a minimal meter-driver (368KB) that just short-circuits most meter-driver behaviour. In this case
+the
 
