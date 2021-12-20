@@ -38848,4 +38848,15 @@ Processor-types:
 
 
 
+ls build/**/src/device/drivers/dlms/variants/*.o | ag -v defaults
+-rw-rw-r-- 1 steve steve 185200 Dec 17 13:34 build/ipa3b-sei-dlms/src/device/drivers/dlms/variants/sei.o
+-rw-rw-r-- 1 steve steve 164812 Dec 20 09:35 build/ipa3-emax-dlms/src/device/drivers/dlms/variants/emax.o
+-rw-rw-r-- 1 steve steve 206896 Dec 20 09:28 build/ipa3-genus-dlms/src/device/drivers/dlms/variants/genus.o
+-rw-rw-r-- 1 steve steve 165900 Dec 20 09:33 build/ipa3-gstar-dlms/src/device/drivers/dlms/variants/gstar.o
+-rw-rw-r-- 1 steve steve 173808 Dec 20 09:37 build/ipa3-hpl-dlms/src/device/drivers/dlms/variants/hpl.o
+-rw-rw-r-- 1 steve steve 164060 Dec 20 09:30 build/ipa3-precise-dlms/src/device/drivers/dlms/variants/precise.o
+-rw-rw-r-- 1 steve steve 185200 Dec 20 09:40 build/ipa3-sei-dlms/src/device/drivers/dlms/variants/sei.o
+-rw-rw-r-- 1 steve steve 333032 Dec  8 14:22 build/terminal_emulator-genus/src/device/drivers/dlms/variants/genus.o
+
+
 
