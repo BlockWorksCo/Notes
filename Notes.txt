@@ -38771,6 +38771,7 @@ Medium term:
 
 Long term:
 - Move old builds into unified build.
+- Refactor each variant modification into a generic option in unified build, e.g. "reverse alarm bits". Nevertheless, differences will inevitably be something like "parseGenusFormatFaceplate".
 
 Challenges:
 - Flash size of combined builds.
