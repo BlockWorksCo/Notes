@@ -38771,7 +38771,7 @@ Medium term:
 
 Long term:
 - Move old builds into unified build.
-- Refactor each variant modification into a generic option in unified build, e.g. "reverse alarm bits". Nevertheless, differences will inevitably be something like "parseGenusFormatFaceplate".
+- Refactor each variant modification into a generic option in unified build, e.g. "reverse alarm bits". Nevertheless, some differences will inevitably be config options something like "parseGenusFormatFaceplate".
 
 Challenges:
 - Flash size of combined builds.
@@ -38784,6 +38784,7 @@ Possible ways forward:
 - split binaries reduces impact of flash size problems and is likely more scalable. cannot
 continue putting more meter-integrations into one binary forever.
 - Combining insecure&secure would require local-coap to still be present.
+- Introduce C++ wrapper classes to the meter-driver, allowing for the current WEAK-linking to map to virtual functions. Then can just instantiate the correct class type at startup.
 
 
 
