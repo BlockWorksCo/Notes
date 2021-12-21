@@ -38764,6 +38764,7 @@ Why:
 Short term:
 - remove unused builds (wolfssl).
 - combine insecure into secure.
+- Initial build will be "ipa3-unified" with Genus & WPDULink code?
 
 Medium term:
 - do new integrations in unified builds.
@@ -38782,7 +38783,6 @@ Possible ways forward:
 - split binaries reduces impact of flash size problems and is likely more scalable. cannot
 continue putting more meter-integrations into one binary forever.
 - Combining insecure&secure would require local-coap to still be present.
-- Initial build will be "ipa3-unified" with LinkWell & WPDULink code?
 
 
 
