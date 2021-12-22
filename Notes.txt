@@ -38861,6 +38861,7 @@ ls build/**/src/device/drivers/dlms/variants/*.o | ag -v defaults
 -rw-rw-r-- 1 steve steve 164060 Dec 20 09:30 build/ipa3-precise-dlms/src/device/drivers/dlms/variants/precise.o
 -rw-rw-r-- 1 steve steve 185200 Dec 20 09:40 build/ipa3-sei-dlms/src/device/drivers/dlms/variants/sei.o
 -rw-rw-r-- 1 steve steve 333032 Dec  8 14:22 build/terminal_emulator-genus/src/device/drivers/dlms/variants/genus.o
++Linkwell?
 
 
 
