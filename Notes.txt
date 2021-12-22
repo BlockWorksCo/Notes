@@ -38758,7 +38758,8 @@ gw2
 Build unification
 
 Why:
-- primary: Improving test coverage
+- primary: Improving test coverage (but just combining binaries does not increase test-coverage,
+that requires tests for each feature to be written).
 - side-effect: Improve CI build times and reduce disk usage.
 
 Short term:
