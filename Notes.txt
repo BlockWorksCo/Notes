@@ -38901,6 +38901,7 @@ this can be assumed to form the "platform + WAN side handlers" portion of the sp
 undefined references list
 
 ag -o "undefined reference.*" | sed -e "s/^.* to \`//g" | sed -e "s/'//g" | xargs -n 1 -I '{}' ag {} src/device/drivers/dlms/variants/GenusMeterDriver.h
+cat undef.list | xargs -n 1 -I '{}' ag --nonumbers {} src/device/drivers/dlms/variants/GenusMeterDriver.cpp | ag -v "^[ ]+" > t3
 
 
 
