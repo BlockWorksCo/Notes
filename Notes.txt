@@ -38897,5 +38897,10 @@ this can be assumed to form the "platform + WAN side handlers" portion of the sp
   10414       7     517   10938    2aba build/ipa3-sei-dlms/src/device/drivers/dlms/variants/sei.o
   82130    9920     131   92181   16815 build/terminal_emulator-genus/src/device/drivers/dlms/variants/genus.o
 
+--------------------------------------------------------------
+undefined references list
+
+ag -o "undefined reference.*" | sed -e "s/^.* to \`//g" | sed -e "s/'//g"
+
 
 
