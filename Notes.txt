@@ -38904,6 +38904,7 @@ ag -o "undefined reference.*" | sed -e "s/^.* to \`//g" | sed -e "s/'//g" | xarg
 cat undef.list | xargs -n 1 -I '{}' ag --nonumbers {} src/device/drivers/dlms/variants/GenusMeterDriver.cpp | ag -v "^[ ]+" > t3
 edit t3 till all looks correct.
 cat undef.proto | sed -e "s/^/\tvirtual /g" | sed -e "s/$/ = 0;/g" | sed -e "s/GenusMeterDriver:://g" > undef.abstract
+cat undef.proto | sed -e "/::/a{\n\treturn false;\n}\n" | sed -e "s/GenusMeterDriver::/BaseMeterDriver::/g" > undef.base
 
 
 
