@@ -38914,6 +38914,19 @@ sudo /sbin/ip link set termem0 txqueuelen 100000
 
 same issue with tun6d?
 
+handshake burst: 8000
+
+----------Common info ---------
+Emu_start_time:              2022-01-04 07:41:45
+Current_time:                2022-01-04 09:14:15
+----------Protocol statistic---
+DTLS_start_time:                2022-01-04 07:42:47
+Login_start_time:               2022-01-04 07:47:47
+Registration_start_time:        2022-01-04 08:46:52
+DTLS_finish_time:               2022-01-04 08:47:09
+Login_finish_time:              2022-01-04 08:47:12
+Registration_finish_time:       2022-01-04 08:53:12
+
 100K run.
 @9am 2523MB
 
