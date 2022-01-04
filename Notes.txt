@@ -38906,5 +38906,16 @@ edit t3 till all looks correct.
 cat undef.proto | sed -e "s/^/\tvirtual /g" | sed -e "s/$/ = 0;/g" | sed -e "s/GenusMeterDriver:://g" > undef.abstract
 cat undef.proto | sed -e "/::/a{\n\treturn false;\n}\n" | sed -e "s/GenusMeterDriver::/BaseMeterDriver::/g" > undef.base
 
+---------------------------------------------------------
+termem problems:
+
+packet loss solved by:
+sudo /sbin/ip link set termem0 txqueuelen 100000
+
+same issue with tun6d?
+
+100K run.
+@9am 2523MB
+
 
 
