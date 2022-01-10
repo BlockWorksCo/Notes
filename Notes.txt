@@ -38945,7 +38945,7 @@ GW7 traceability matrix:
 - service proxies for split of functionality (e.g. events, metrics, mq, etc). CND-9959, CND-9954, CND-9955,
 - time-sync across backplane. CND-9962
 - file-distribution across backplane. CND-9960, CND-9956, CND-9960
-- power-failure notification across backplane for safe shutdown. CND-11983
+- power-failure notification across backplane for safe shutdown. CND-11983 CND-12267
 - LED/UI control CND-11982
 - configuration distribution CND-9953
 - ipcore routing rules
