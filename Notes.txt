@@ -38942,9 +38942,9 @@ GW7 traceability matrix:
 - I2CIP core (CND-9961, CND-12112,
 - I2CIP encryption.
 - master control of reset. CND-12279
-- service proxies for split of functionality (e.g. events, metrics, mq, etc). CND-9959, CND-9954
-- time-sync across backplane.
-- file-distribution across backplane. CND-9960, CND-9956
+- service proxies for split of functionality (e.g. events, metrics, mq, etc). CND-9959, CND-9954, CND-9955,
+- time-sync across backplane. CND-9962
+- file-distribution across backplane. CND-9960, CND-9956, CND-9960
 - power-failure notification across backplane for safe shutdown. CND-11983
 - LED/UI control CND-11982
 - configuration distribution CND-9953
