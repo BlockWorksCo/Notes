@@ -38937,9 +38937,9 @@ Registration_finish_time:       2022-01-04 08:53:12
 ------------------------------------------
 GW7 traceability matrix:
 
-- slot role identification
+- slot role identification (CND-10834, CND-12278)
 - revision identification.
-- I2CIP core
+- I2CIP core (CND-9961, CND-12112,
 - I2CIP encryption.
 - master control of reset.
 - service proxies for split of functionality (e.g. events, metrics, mq, etc).
@@ -38951,8 +38951,11 @@ GW7 traceability matrix:
 - ipcore routing rules
 - Dual SIM support
 - PSU support (ADC & expander support)
-- Product & Network identity.
-
+- Product & Network identity. (CND-10817,
+- Ethernet support (CND-12232,
+- tun6d address allocation issue. (CND-12281, CND-12290,
+- temperature monitoring
+- Low power mode
 
 
 
