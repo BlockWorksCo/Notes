@@ -38938,7 +38938,7 @@ Registration_finish_time:       2022-01-04 08:53:12
 GW7 traceability matrix:
 
 - slot role identification (CND-10834, CND-12278)
-- revision identification.
+- revision identification. CND-11852
 - I2CIP core (CND-9961, CND-12112,
 - I2CIP encryption. CND-12277
 - master control of reset. CND-12279
