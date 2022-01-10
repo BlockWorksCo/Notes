@@ -38937,7 +38937,19 @@ Registration_finish_time:       2022-01-04 08:53:12
 ------------------------------------------
 GW7 traceability matrix:
 
-
+- slot role identification
+- revision identification.
+- I2CIP core
+- I2CIP encryption.
+- master control of reset.
+- service proxies for split of functionality (e.g. events, metrics, etc).
+- time-sync across backplane.
+- file-distribution across backplane.
+- power-failure notification across backplane for safe shutdown.
+- LED control
+- configuration distribution
+- ipcore routing rules
+-
 
 
 
