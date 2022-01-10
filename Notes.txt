@@ -38940,7 +38940,7 @@ GW7 traceability matrix:
 - slot role identification (CND-10834, CND-12278)
 - revision identification.
 - I2CIP core (CND-9961, CND-12112,
-- I2CIP encryption.
+- I2CIP encryption. CND-12277
 - master control of reset. CND-12279
 - service proxies for split of functionality (e.g. events, metrics, mq, etc). CND-9959, CND-9954, CND-9955,
 - time-sync across backplane. CND-9962
@@ -38984,7 +38984,7 @@ xCND-12267 	GW7: support low power mode 	Story 	Testing 	LixinCheng
 	CND-12369 	GW7: gw7 release failed on publishing stage 	Story 	Done 	Unassigned
 	CND-12372 	GW7: Telit modem do unnessary hard reset 	Bug 	Testing 	LixinCheng
 	CND-12280 	(GW7) Add unit-tests -login: new identities 	Story 	Designing 	LixinCheng
-	CND-12277 	(GW7) Encryption of the backplane-I2C link 	Story 	Testing 	LixinCheng
+xCND-12277 	(GW7) Encryption of the backplane-I2C link 	Story 	Testing 	LixinCheng
 	CND-12406 	GW7/CNIC7 Telit modem hard reset fail 	Bug 	Implementing 	LixinCheng
 	CND-12426 	(GW7) Add unit-tests -modem state mechine 	Story 	Todo 	LixinCheng
 	CND-12427 	(GW7) Add unit-tests -coap proxy 	Story 	Todo 	LixinCheng
