@@ -38949,7 +38949,9 @@ GW7 traceability matrix:
 - LED/UI control
 - configuration distribution
 - ipcore routing rules
--
+- Dual SIM support
+- PSU support (ADC & expander support)
+- Product & Network identity.
 
 
 
