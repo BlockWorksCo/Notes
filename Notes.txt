@@ -38941,46 +38941,46 @@ GW7 traceability matrix:
 - revision identification.
 - I2CIP core (CND-9961, CND-12112,
 - I2CIP encryption.
-- master control of reset.
+- master control of reset. CND-12279
 - service proxies for split of functionality (e.g. events, metrics, mq, etc).
 - time-sync across backplane.
 - file-distribution across backplane.
-- power-failure notification across backplane for safe shutdown.
-- LED/UI control
+- power-failure notification across backplane for safe shutdown. CND-11983
+- LED/UI control CND-11982
 - configuration distribution
 - ipcore routing rules
 - Dual SIM support CND-10834
-- PSU support (ADC & expander support)
+- PSU support (ADC & expander support) CND-11974, CND-11975, CND-10830
 - Product & Network identity. (CND-10817,
-- Ethernet support (CND-12232,
+- Ethernet support (CND-12232, CND-11976
 - tun6d address allocation issue. (CND-12281, CND-12290,
 - temperature monitoring CND-12314
-- Low power mode
+- Low power mode CND-12267 CND-11983
 
 
 
 xCND-10834 	GW7: Dual SIM Support 	Story 	Done 	LixinCheng
 	CND-11157 	GW7: Requirements review 	Story 	Done 	SteveTickle
 xCND-9961 	(IGW) I2C error handling 	Story 	Done 	LixinCheng
-	CND-11974 	GW7: I2C ADC driver 	Story 	Done 	LixinCheng
-	CND-11975 	GW7: I2C-GPIO expander driver 	Story 	Done 	LixinCheng
-	CND-11976 	GW7: Ethernet driver 	Story 	Done 	LixinCheng
-	CND-11982 	GW7: ui driver 	Story 	Done 	VivekMittal
-	CND-11983 	GW7: powerdown driver 	Story 	Done 	VivekMittal
-	CND-10830 	GW7: Power Supply Monitoring for consistent operation 	Story 	Todo 	LixinCheng
+xCND-11974 	GW7: I2C ADC driver 	Story 	Done 	LixinCheng
+xCND-11975 	GW7: I2C-GPIO expander driver 	Story 	Done 	LixinCheng
+xCND-11976 	GW7: Ethernet driver 	Story 	Done 	LixinCheng
+xCND-11982 	GW7: ui driver 	Story 	Done 	VivekMittal
+xCND-11983 	GW7: powerdown driver 	Story 	Done 	VivekMittal
+xCND-10830 	GW7: Power Supply Monitoring for consistent operation 	Story 	Todo 	LixinCheng
 xCND-12112 	GW7: I2C transfer issues 	Story 	Done 	LixinCheng
 	CND-12116 	Test- GW7-integration and end-to-end 	Story 	Done 	RuchiTyagi
 xCND-10817 	GW7 Product name plate and product codes 	Story 	Done 	LixinCheng
 	CND-11963 	GW7: basic functions 	Story 	Done 	LixinCheng
 xCND-12232 	GW7: support Ethernet uplink 	Story 	Done 	LixinCheng
 	CND-12233 	GW7 bootloader 	Story 	Done 	LixinCheng
-	CND-12278 	(GW7) Slot ID should be read from the hardware 	Story 	Done 	LixinCheng
-	CND-12279 	(GW7) Reset and monitoring of slave devices by the master 	Story 	Testing 	LixinCheng
+xCND-12278 	(GW7) Slot ID should be read from the hardware 	Story 	Done 	LixinCheng
+xCND-12279 	(GW7) Reset and monitoring of slave devices by the master 	Story 	Testing 	LixinCheng
 xCND-12281 	GW7: I2C remove broadcast 	Story 	Done 	Unassigned
 xCND-12290 	GW7: use the same EUI64 on CNIC and Master 	Story 	Done 	LixinCheng
 xCND-12314 	GW7: temperture minitoring 	Story 	Pending 	Unassigned
 	CND-12325 	GW7: IPA3B demo 	Story 	Testing 	LixinCheng
-	CND-12267 	GW7: support low power mode 	Story 	Testing 	LixinCheng
+xCND-12267 	GW7: support low power mode 	Story 	Testing 	LixinCheng
 	CND-12369 	GW7: gw7 release failed on publishing stage 	Story 	Done 	Unassigned
 	CND-12372 	GW7: Telit modem do unnessary hard reset 	Bug 	Testing 	LixinCheng
 	CND-12280 	(GW7) Add unit-tests -login: new identities 	Story 	Designing 	LixinCheng
