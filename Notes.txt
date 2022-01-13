@@ -39016,10 +39016,10 @@ technologies we deal with:
 - UART, SPI, I2C (related: any knowledge of microcontroller interconnect protocols).
 - cellular communications (related: NbIOT, Cat-M1, PLC)
 - flash storage devices (related: EEPROM, MRAM, filesystems)
-- 802.15.4 radio protocols (related: Thread, ZigBee, WiSUN, Bluetooth).
-- IPv6/6LoWPAN (related: layer 2 and 3 protocols).
-- Linux
-- CI/Automated Testing
+- 802.15.4 radio protocols (related: Thread, ZigBee, WiSUN, Z-Wave, Bluetooth, WiFi).
+- IPv6/6LoWPAN (related: layer 2 and 3 protocols or general networking experience).
+- DLMS/HDLC (related: ModBUS, MBus, HART, or any industrial control protocol).
+- Docker
 
 Skills:
 - C/C++ development
@@ -39027,6 +39027,9 @@ Skills:
 - Linux development environment
 - Multi-platform builds
 - Debugging and analysis of faults (e.g. Hard faults & stack corruption).
+- Linux
+- Scripting for log file analysis
+- CI/Automated Testing/pytest
 
 
 
