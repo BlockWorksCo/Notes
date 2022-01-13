@@ -39030,6 +39030,7 @@ Skills:
 - Linux
 - Scripting for log file analysis
 - CI/Automated Testing/pytest
+- Written/visual communication skills.
 
 
 
