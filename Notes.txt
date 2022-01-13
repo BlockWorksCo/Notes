@@ -39010,13 +39010,18 @@ gprof executable gmon.out > prof.txt
 senior engineer skills list:
 
 technologies we deal with:
-- Cortex M0/M3/M4
-- TLS/DTLS
-- CoAP
-- HTTP
-- UART, SPI, I2C
-- cellular communications.
-- flash storage devices
+- Cortex M0/M3/M4 (related: any microcontroller or resource-constrained systems).
+- DTLS/TLS (related: any ancryption and authentication scheme).
+- CoAP (related: MQTT, UDP, HTTP, OSCORE).
+- UART, SPI, I2C (related: any knowledge of microcontroller interconnect protocols).
+- cellular communications (related: NbIOT, Cat-M1, PLC)
+- flash storage devices (related: EEPROM, MRAM, filesystems)
+- 802.15.4 radio protocols (related: Thread, ZigBee, WiSUN, Bluetooth).
+- IPv6/6LoWPAN (related: layer 2 and 3 protocols).
+- Linux
+- CI/Automated Testing
+
+
 
 
 
