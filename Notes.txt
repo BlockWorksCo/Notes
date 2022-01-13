@@ -39021,6 +39021,13 @@ technologies we deal with:
 - Linux
 - CI/Automated Testing
 
+Skills:
+- C/C++ development
+- Python for general scripting and test development.
+- Linux development environment
+- Multi-platform builds
+- Debugging and analysis of faults (e.g. Hard faults & stack corruption).
+
 
 
 
