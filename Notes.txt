@@ -38997,4 +38997,13 @@ xCND-12277 	(GW7) Encryption of the backplane-I2C link 	Story 	Testing 	LixinChe
 	CND-12438 	(GW7) Functions test-use master EUI64 	Story 	Todo 	LixinCheng
 
 
+----------------------------------------------
+profiling gprof profiler
+
+https://www.thegeekstuff.com/2012/08/gprof-tutorial/
+
+compile with -pg
+run executable
+gprof executable gmon.out > prof.txt
+
 
