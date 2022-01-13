@@ -39022,15 +39022,14 @@ technologies we deal with:
 - Docker
 
 Skills:
-- C/C++ development
-- Python for general scripting and test development.
-- Linux development environment
-- Multi-platform builds
-- Debugging and analysis of faults (e.g. Hard faults & stack corruption).
-- Linux
-- Scripting for log file analysis
-- CI/Automated Testing/pytest
-- Written/visual communication skills.
+- C/C++ development                                                         -
+- Debugging and analysis of faults (e.g. Hard faults & stack corruption).   -
+- Python for general scripting and test development.                        -
+- Written/visual communication skills.                                      -
+- CI/Automated Testing/pytest                                               -
+- Linux development environment                                             -
+- Multi-platform builds                                                     -
+- Scripting for log file analysis                                           -
 
 
 
