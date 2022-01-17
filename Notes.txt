@@ -39037,6 +39037,8 @@ wisun radius
 2022-01-17 15:03:33.421 #1   0000000000000000 <log> 0:00:25.348 [debug] [        ksep] {Wi-SUN Ev}: Initial EAPOL-Key send, PMKID not set PTKID not set GTKL 0
 
 
+https://github.com/PelionIoT/nanostack-border-router
+
 
 
 
