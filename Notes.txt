@@ -39042,6 +39042,9 @@ https://github.com/PelionIoT/nanostack-border-router
 Good EAP-TLS diagram
 https://wifininjas.net/wp-content/uploads/2019/08/WNB012-01.png
 
+PMK generation from MK and MK transfer from AS:
+https://tldp.org/HOWTO/8021X-HOWTO/intro.html
+
 
 
 
