@@ -39039,6 +39039,8 @@ wisun radius
 
 https://github.com/PelionIoT/nanostack-border-router
 
+Good EAP-TLS diagram
+https://wifininjas.net/wp-content/uploads/2019/08/WNB012-01.png
 
 
 
