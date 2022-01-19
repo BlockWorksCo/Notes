@@ -39056,6 +39056,20 @@ PMK generation from MK and MK transfer from AS:
 https://tldp.org/HOWTO/8021X-HOWTO/intro.html
 
 
+There is a sequence of events that occur prior to the creation of an LDAP communication session using TLS. These include the following steps:
+
+    Both the LDAP server and client need to be configured with a shared copy of a CA certificate beforehand.
+    When the TLS LDAP connection is made, the client and server negotiate their SSL encryption scheme.
+    The LDAP server then sends its public encryption key and its server certificate.
+    The LDAP client inspects the server certificate to make sure that it hasn't expired and takes note of the name and key ID of the CA server that issued it. It then checks this CA information with all the CA certificates in its database to determine whether the server certificate should be trusted.
+    If everything is valid, the LDAP client then creates a random "premaster" secret encryption key that it encrypts with the LDAP server's public key. It then sends the encrypted encryption key to the LDAP server.
+    When public keys are created, a special "private" key is also simultaneously created. Anything encrypted with the public key can only be decrypted with the private key and vice versa. The server then uses its private key to extract the premaster key.
+    The client and server then use the premaster key to generate a master secret that will be the same for both, but will never be transmitted so that a third-party cannot intercept it.
+    The master secret key is then used to create session keys that will be used to encrypt all future communication between client and server for the duration of the TLS session.
+
+
+
+
 
 
 
