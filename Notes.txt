@@ -29201,15 +29201,15 @@ mbedtls=EUK0-112-1
         22/10 - SW+WiSUN
         29/10 - SW+WiSUN
 
-         5/11 -
-        12/11 -
-        19/11 -
-        26/11 -
+         5/11 - SW+WiSUN
+        12/11 - SW+WiSUN+hol 12th
+        19/11 - SW+WiSUN
+        26/11 - SW+WiSUN
 
-         3/12 -
-        10/12 -
-        17/12 -
-        24/12 -
+         3/12 - SW+IPv6gw
+        10/12 - SW+IPv6gw
+        17/12 - SW+IPv6gw
+        24/12 - SW+IPv6gw
         31/12 - holiday
 -------------------------------------------------
 dev-stack
