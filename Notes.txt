@@ -39070,9 +39070,25 @@ There is a sequence of events that occur prior to the creation of an LDAP commun
 supplicant:
 ssl_compute_master
 premaster pre-master
+sec_prot_lib_pmkid_calc()
 
 authenticator:
-
+(gdb) where
+#0  sec_prot_lib_pmkid_calc (pmk=pmk@entry=0x2001a318 "\356\275s_\3114\035\366\035\315Ԁ\340L\350\347\035\033\b\340C\177G\211\221\361!ͺ",
+    auth_eui64=0x2000aca8 <sli_wisun_event_loop_task_stack+5912> "\220\375\237\377\376\216Mw\bk\327\377\376\354\361\v\001",
+    supp_eui64=0x2000acb0 <sli_wisun_event_loop_task_stack+5920> "\bk\327\377\376\354\361\v\001", pmkid=0x2000ace0 <sli_wisun_event_loop_task_stack+5968> "")
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/sec_prot_lib.c:288
+#1  0x0009573e in sec_prot_lib_pmkid_generate (prot=prot@entry=0x2001acc4, pmkid=pmkid@entry=0x2000ace0 <sli_wisun_event_loop_task_stack+5968> "", is_auth=is_auth@entry=true,
+    alt_remote_eui64_use=alt_remote_eui64_use@entry=false, used_remote_eui64=used_remote_eui64@entry=0x0)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/sec_prot_lib.c:480
+#2  0x000944a4 in auth_fwh_sec_prot_message_send (prot=prot@entry=0x2001acc4, msg=msg@entry=FWH_MESSAGE_1, retry=retry@entry=false)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/fwh_sec_prot/auth_fwh_sec_prot.c:238
+#3  0x0009471c in auth_fwh_sec_prot_state_machine (prot=0x2001acc4) at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/fwh_sec_prot/auth_fwh_sec_prot.c:365
+#4  0x0003d756 in eventOS_scheduler_dispatch_event () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:344
+#5  0x0003d776 in eventOS_scheduler_run () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:368
+#6  0x0003ce02 in event_loop_thread (arg=<optimized out>) at build/3pp/nanostack/silabs/wisun/src/nanostack-hal/ns_event_loop.c:63
+#7  0x00024668 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
 
