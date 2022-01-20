@@ -39070,9 +39070,11 @@ There is a sequence of events that occur prior to the creation of an LDAP commun
 supplicant:
 ssl_compute_master
 premaster pre-master
+sec_prot_keys_pmk_write()
 sec_prot_lib_pmkid_calc()
 
 authenticator:
+sec_prot_keys_pmk_write()
 (gdb) where
 #0  sec_prot_lib_pmkid_calc (pmk=pmk@entry=0x2001a318 "\356\275s_\3114\035\366\035\315Ԁ\340L\350\347\035\033\b\340C\177G\211\221\361!ͺ",
     auth_eui64=0x2000aca8 <sli_wisun_event_loop_task_stack+5912> "\220\375\237\377\376\216Mw\bk\327\377\376\354\361\v\001",
