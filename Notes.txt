@@ -39067,6 +39067,11 @@ There is a sequence of events that occur prior to the creation of an LDAP commun
     The client and server then use the premaster key to generate a master secret that will be the same for both, but will never be transmitted so that a third-party cannot intercept it.
     The master secret key is then used to create session keys that will be used to encrypt all future communication between client and server for the duration of the TLS session.
 
+supplicant:
+ssl_compute_master
+premaster pre-master
+
+authenticator:
 
 
 
