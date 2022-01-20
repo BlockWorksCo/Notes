@@ -39110,6 +39110,11 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
+-----------------------------------------------------------
+
+tcpdump ip6 and udp and port 4321 or port 4322
+
+
 
 
 
