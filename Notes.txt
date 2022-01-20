@@ -39093,6 +39093,23 @@ sec_prot_keys_pmk_write()
 Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 
 
+(gdb) where
+#0  sec_prot_keys_pmk_write (sec_keys=0x2001a4a8, pmk=pmk@entry=0x2001aff9 "Eݕ\364\n\273", pmk_lifetime=10368000)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/sec_prot_keys.c:116
+#1  0x00098acc in radius_client_sec_prot_state_machine (prot=0x2001af64)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/radius_sec_prot/radius_client_sec_prot.c:1150
+#2  0x00098294 in radius_client_sec_prot_receive (prot=0x2001af64, pdu=<optimized out>, size=<optimized out>, conn_number=<optimized out>)
+    at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/protocols/radius_sec_prot/radius_client_sec_prot.c:523
+#3  0x00092cf4 in kmp_socket_if_socket_cb (ptr=0x2000b520 <socket_cb_structure>) at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Security/kmp/kmp_socket_if.c:285
+#4  0x000897b4 in socket_tasklet_event_handler (event=<optimized out>) at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Core/ns_socket.c:247
+#5  socket_tasklet_event_handler (event=<optimized out>) at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack/source/Core/ns_socket.c:210
+#6  0x0003d756 in eventOS_scheduler_dispatch_event () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:344
+#7  0x0003d776 in eventOS_scheduler_run () at build/3pp/nanostack/mbed-os/connectivity/nanostack/sal-stack-nanostack-eventloop/source/event.c:368
+#8  0x0003ce02 in event_loop_thread (arg=<optimized out>) at build/3pp/nanostack/silabs/wisun/src/nanostack-hal/ns_event_loop.c:63
+#9  0x00024668 in xEventGroupSetBitsFromISR (xEventGroup=<optimized out>, uxBitsToSet=<optimized out>, pxHigherPriorityTaskWoken=<optimized out>) at build/3pp/freertos/FreeRTOS/Source/event_groups.c:724
+Backtrace stopped: previous frame identical to this frame (corrupt stack?)
+
+
 
 
 
