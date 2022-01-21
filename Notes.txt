@@ -39073,6 +39073,8 @@ premaster pre-master
 sec_prot_keys_pmk_write()
 sec_prot_lib_pmkid_calc()
 
+handshake->tls_prf == tls_prf_sha256
+
 0x00038610 in ssl_compute_master (ssl=<optimized out>, master=<optimized out>, handshake=<optimized out>) at build/3pp/mbedtls/library/ssl_tls.c:1424
 mbedtls_ssl_derive_keys (ssl=ssl@entry=0x20018050) at build/3pp/mbedtls/library/ssl_tls.c:1598
 0x000332cc in ssl_write_certificate_verify (ssl=0x20018050) at build/3pp/mbedtls/library/ssl_cli.c:3969
