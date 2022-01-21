@@ -39170,6 +39170,7 @@ So:
 1)          <---- cert ---------------------------
 
 2) derive premaster
+   mbedtls_dhm_calc_secret()
           -----------------------------premaster-> (encrypted with AAAs public key from cert).
    derive PMK                               derive PMK
 
