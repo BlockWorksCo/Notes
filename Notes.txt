@@ -39145,6 +39145,14 @@ Backtrace stopped: previous frame identical to this frame (corrupt stack?)
 tcpdump ip6 and udp and port 4321 or port 4322
 
 
+--------------------------------------------------------------
+eap tls
+
+The authentication method of IEEE 802.1X with EAP-TLS comprises four sequences to carry out UE authentication and to establish a secure encrypted wireless link. The first sequence EAP Initiation exchanges UE identity information and negotiates the authentication method, in this case TLS. The second sequence TLS Handshake exchanges client (supplicant) and server (AAA server) certificates, coincidence values and encoded hash values. Furthermore, the premaster key is derived and mutually verified by the supplicant and the AAA server. This leads to the Pairwise Master Key (PMK) needed for the 4-way handshake. In the third sequence EAP Termination the successful TLS authentication will be confirmed additionally and the AAA server provides the PMK to the authenticator. Finally, in sequence four the PMK +Way Handshake is carried out. Based on coincidence values of authenticator and suppli cant as well as the PMK the Pairwise Transient Key (PTK) is derived by the suppli cant and the authenticator. Further, the Group Transient Key (GTK) is derived.
+
+
+
+
 
 
 
