@@ -39175,6 +39175,7 @@ So:
    derive PMK                               derive PMK
 
 3)                              <---- PMK --------
+                    sec_prot_keys_pmk_write()
 
 4) FWH
 
