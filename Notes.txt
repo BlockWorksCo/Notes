@@ -39167,13 +39167,15 @@ So:
 
         Supp                Auth                AAA
         ----                ----                ----
-1)
+1)          <---- cert ---------------------------
 
-2)
+2) derive premaster
+          -----------------------------premaster-> (encrypted with AAAs public key from cert).
+   derive PMK                               derive PMK
 
-3)
+3)                              <---- PMK --------
 
-4)
+4) FWH
 
 
 
