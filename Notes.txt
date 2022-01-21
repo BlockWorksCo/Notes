@@ -39163,8 +39163,17 @@ This leads to the Pairwise Master Key (PMK) needed for the 4-way handshake.
 is derived by the supplicant and the authenticator. Further, the Group Transient Key (GTK) is derived.
 
 
+So:
 
+        Supp                Auth                AAA
+        ----                ----                ----
+1)
 
+2)
+
+3)
+
+4)
 
 
 
