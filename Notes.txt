@@ -39180,6 +39180,16 @@ So:
 
 4) FWH
 
+--------------------------------------------
+disk usage space
+
+journalctl --disk-usage
+sudo journalctl --vacuum-time=3d
+
+sudo apt autoremove
+sudo apt autoclean
+
+
 
 
 
