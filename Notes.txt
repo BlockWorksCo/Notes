@@ -39189,6 +39189,12 @@ sudo journalctl --vacuum-time=3d
 sudo apt autoremove
 sudo apt autoclean
 
+--------------------------------------
+network sim netem
+
+in docker container:
+tc qdisc add dev br-535e40d88071 root netem delay 100ms
+
 
 
 
