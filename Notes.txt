@@ -39202,6 +39202,10 @@ tc qdisc add dev br-535e40d88071 root netem delay 100ms
 check with ping latency
 
 
+------------------------------------------
+simplicity studio install error:
+
+git command failed fatal: protocol/z-wave/Apps/bin/gbl/WallController_BRD4204D_REGION_JP.gbl: smudge filter lfs failed
 
 
 
