@@ -39201,6 +39201,8 @@ tc qdisc add dev br-535e40d88071 root netem delay 100ms
 
 check with ping latency
 
+to remove rules:
+sudo tc qdisc del dev termem0 root
 
 ------------------------------------------
 simplicity studio install error:
