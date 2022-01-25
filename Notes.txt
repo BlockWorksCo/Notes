@@ -39192,6 +39192,10 @@ sudo apt autoclean
 --------------------------------------
 network sim netem
 
+sudo tc qdisc add dev termem0 root netem                        # ned this first.
+sudo tc qdisc change dev termem0 root netem delay 100ms 10ms
+
+
 in docker container:
 tc qdisc add dev br-535e40d88071 root netem delay 100ms
 
