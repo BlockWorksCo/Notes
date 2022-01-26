@@ -39218,7 +39218,13 @@ export GDK_BACKEND=x11 ./studio
 
 WiSUN SDK now installs by default when you plug in a dev board and it identifies it.
 
+------------------------------------
+ipv6 cellualr plan:
 
+- Obtain IPv6 SIM and gateway in the correct location.
+- Attach debug cable to PC.
+- Upgrade target gateway with debug version of s/w.
+- Observe logi via ssh to PC and modify code as necessary.
 
 
 
