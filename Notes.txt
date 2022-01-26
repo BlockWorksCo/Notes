@@ -39226,6 +39226,9 @@ ipv6 cellualr plan:
 - Upgrade target gateway with debug version of s/w.
 - Observe logi via ssh to PC and modify code as necessary.
 
+As part of the prcoess, the gateway will be redirected to attempt to connect with a debug server rather than the production server, this is to allow closer
+observation of the packets being produced by the gateway and ensuring the route back to the gateway is functional.
+
 
 
 
