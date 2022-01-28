@@ -39233,4 +39233,9 @@ observation of the packets being produced by the gateway and ensuring the route 
 300K run NMSStub
 
 
+-----------------------------------------
+IPA3A
+
+example continuous transmit for RF proving.
+
 
