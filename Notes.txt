@@ -39238,4 +39238,9 @@ IPA3A
 
 example continuous transmit for RF proving.
 
+----------------------------------------
+wisun project fixups
+
+sed -i "s/\/home\/steve\/SimplicityStudio\/v5_workspace\/wisunncp_cyanconnode/\.\./g" objects.mk
+
 
