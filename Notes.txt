@@ -39255,15 +39255,14 @@ rm build/ipa3-genus-dlms-insecure/bin/agent.srec
 steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-unified-dlms-insecure/bin/agent.elf
    text    data     bss     dec     hex filename
  582512    1152   80652  664316   a22fc build/ipa3-unified-dlms-insecure/bin/agent.elf
-steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-seui-dlms-insecure/bin/agent.elf
-size: 'build/ipa3-seui-dlms-insecure/bin/agent.elf': No such file
-steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-sei-dlms-insecure/bin/agent.elf
-   text    data     bss     dec     hex filename
  502776    1128   83540  587444   8f6b4 build/ipa3-sei-dlms-insecure/bin/agent.elf
-steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-genus-dlms-insecure/bin/agent.elf
-   text    data     bss     dec     hex filename
  510136    1136   80108  591380   90614 build/ipa3-genus-dlms-insecure/bin/agent.elf
+ 317480     544   57156  375180   5b98c build/ipa3-insecure/bin/agent.elf
 
+
+ genus      = +193
+ sei        = =185
+ unified    =
 
 
 
