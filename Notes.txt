@@ -39262,7 +39262,7 @@ steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-unified-dlms-i
 
  genus      = +193
  sei        = =185
- unified    =
+ unified    = +265 (compared to +378 for above genus & sei).
 
 
 
