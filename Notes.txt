@@ -39264,5 +39264,32 @@ steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-unified-dlms-i
  sei        = =185
  unified    = +265 (compared to +378 for above genus & sei).
 
+ --------------------------------------------------
+ ActiveMQ reasons for implementing:
+
+Git commit says:
+CND-7970: Persist MQ entries in NMS with ActiveMQ
+
+As soon as NMS receives some MQ payloads, persist them in a local
+ActiveMQ instance. From that ActiveMQ instance, let the MqTracker
+class consume the messages and do further processing. In other words,
+replace the in-memory queue with a persisted one based on ActiveMQ.
+
+The idea is to minimize chances of lost messages after a node got
+a reply from NMS that its MQ entries were accepted.
+
+*** But CND-7970 is unrelated.
+
+
+
+
+"A MQ (message queue) is used as a mechanism to publish messages received by the network server to application servers. An application server can choose to subscribe to the messages it is interested in. A suitable MQ implementation has yet to be chosen based on detailed requirements and design but one possibility is to use Rabbit MQ which is an enterprise level message queue.
+A suggestion would be look at the available message brokers. ActiveMq or Kafka looks like suitable candidates. They are written in java and have better performance. An interesting read: https://dzone.com/articles/exploring-message-brokers
+Why do we want to use Message queues? Can ReST be used for communication?"from https://confluence.cyco.io/display/ENG/%5BDesignSpec%5D+C4+-+OmniMesh+server+architecture
+
+
+
+
+
 
 
