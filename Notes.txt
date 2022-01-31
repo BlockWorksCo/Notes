@@ -39321,6 +39321,48 @@ cd adapter && python3 -m swagger_server --tcp-port=8080 --serial-port='/dev/ttyU
 
 http://localhost:8080/Wi-SUN/TBU/1.0.0/ui/
 
+runMode 0
+configPhy:
+{
+  "modulation": 0,
+  "modulationIndex": 1,
+  "symbolRate": 50000
+}
+
+/config/chanPlan/regOp:
+{
+  "opClass": 0,
+  "regDomain": 0
+}
+
+/config/chanPlan/unicast:
+{
+  "channelFunction": 0,
+  "dwellInterval": 0,
+  "excludedChannelMask": [
+    0
+  ],
+  "excludedChannelRange": [
+    0
+  ]
+}
+
+/config/chanPlan/fixed:
+{
+  "chanNumber": 0
+}
+
+/config/router:
+{
+  "networkName": "tickles2",
+  "panSizeOffset": 6,
+  "routingCostOffset": 1,
+  "routingMethod": 0,
+  "sixLowpanMtu": 5
+}
+
+
+
 
 
 ---------------------------------
