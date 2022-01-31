@@ -39319,6 +39319,9 @@ cd WiSUNStuff (git@gitlab.cyco.io:Omnimesh/wisun_ncp.git)
 
 cd adapter && python3 -m swagger_server --tcp-port=8080 --serial-port='/dev/ttyUSB2' --mac-addr='00:0d:6f:ff:fe:00:00:d1'
 
+http://localhost:8080/Wi-SUN/TBU/1.0.0/ui/
+
+
 
 ---------------------------------
 debug certificates:
