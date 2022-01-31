@@ -39320,6 +39320,13 @@ cd WiSUNStuff (git@gitlab.cyco.io:Omnimesh/wisun_ncp.git)
 cd adapter && python3 -m swagger_server --tcp-port=8080 --serial-port='/dev/ttyUSB2' --mac-addr='00:0d:6f:ff:fe:00:00:d1'
 
 
+---------------------------------
+debug certificates:
+
+- stored in internal FLASH
+- Can be inserted via SWD by the MTS.
+- MTS then uses secure-local-debug to perform tests.
+- At the end of MTS run, the devug-cert is cleared from internal-flash. This effectively disables secure-local-coap features.
 
 
 
