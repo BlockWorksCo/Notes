@@ -39268,17 +39268,18 @@ steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-unified-dlms-i
  ActiveMQ reasons for implementing:
 
 Three possibilities as to why the ActiveMQ is the way it is are documented:
-1) The design work in Confluence mentions the use of ActiveMQ as a service-bus between NMS and (multiple) application servers such as the NMS.
+1) The design work in Confluence mentions the use of ActiveMQ as a service-bus between NMS and (multiple) application servers such as the SMA.
 2) A description of the queueing mechanism in Confluence applies to both the in-RAM and ActiveMQ instances and indicates the reason is to
-avoid transaction conficts reducing performance.
+avoid transaction conficts reducing performance when multiple requests are received and attempted to be processed concurrently.
 3) The git commit message indicates that the in-RAM queue was replaced by an ActiveMQ instance to ensure that mq messages are persisted to reduce
-the chances that messages are lost on the server-side.
+the chances that messages are lost due to server-side issues.
 
 Point 1) can be disregarded because that is no longer a design-aim. The ActiveMQ we have is also not in the correct location architecturally to be
 used in this manner.
 Point 2) I dont think applies because our data is naturally separated into unrelated streams. We have created a issue ourselves actually due to
 too much concurrency up-front in the DTLS threads. Removing this concurrency should be possible. If transaction conflicts still are an issue then
-the schema may be at issue (and the queries we're running on it).
+the schema may be at issue (and the queries we're running on it). Experimentally, we can see NMSStub easily handling up to 500K nodes on a single
+thread. The only issue is that the DTLS session setup (crypto-wise) is CPU-bound.
 Point 3) The real solution to this issue is to recv->process->commit->ACK rather than recv-->ACK->process->commit. Having an interlocked mechanism
 means that all messages are commited prior to the ACK being generated. If this is not implemented, it should be, and the ActiveMQ removed. If it is
 implemented, then ActiveMQ is not necessary and should be removed.
