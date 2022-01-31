@@ -39246,5 +39246,24 @@ sed -i "s/\/home\/steve\/SimplicityStudio\/v5_workspace\/wisunncp_cyanconnode/\.
 find . -iname "*.mk" -exec sed -i "s/\/home\/steve\/SimplicityStudio\/v5_workspace\/wisunncp_cyanconnode/\.\./g" {} \;
 
 
+-------------------------------------------------
+unified build sizes:
+
+Firmware image: build/ipa3-genus-dlms-insecure/release/agent-ipa3-genus-dlms-insecure-v21.27.7.image
+Agent ELF: build/ipa3-genus-dlms-insecure/release/agent-ipa3-genus-dlms-insecure-v21.27.7.elf
+rm build/ipa3-genus-dlms-insecure/bin/agent.srec
+steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-unified-dlms-insecure/bin/agent.elf
+   text    data     bss     dec     hex filename
+ 582512    1152   80652  664316   a22fc build/ipa3-unified-dlms-insecure/bin/agent.elf
+steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-seui-dlms-insecure/bin/agent.elf
+size: 'build/ipa3-seui-dlms-insecure/bin/agent.elf': No such file
+steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-sei-dlms-insecure/bin/agent.elf
+   text    data     bss     dec     hex filename
+ 502776    1128   83540  587444   8f6b4 build/ipa3-sei-dlms-insecure/bin/agent.elf
+steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-genus-dlms-insecure/bin/agent.elf
+   text    data     bss     dec     hex filename
+ 510136    1136   80108  591380   90614 build/ipa3-genus-dlms-insecure/bin/agent.elf
+
+
 
 
