@@ -39267,6 +39267,14 @@ steve@steve-VirtualBox:/Data/Projects/terminalGL$ size build/ipa3-unified-dlms-i
  --------------------------------------------------
  ActiveMQ reasons for implementing:
 
+Three possibilities as to why the ActiveMQ is the way it is are documented:
+1) The design work in Confluence mentions the use of ActiveMQ as a service-bus between NMS and (multiple) application servers such as the NMS.
+2) A description of the queueing mechanism in Confluence applies to both the in-RAM and ActiveMQ instances and indicates the reason is to
+avoid transaction conficts reducing performance.
+3) The git commit message indicates that the in-RAM queue was replaced by an ActiveMQ instance to ensure that mq messages are persisted to reduce
+the chances that messages are lost on the server-side.
+
+
 Git commit says:
 CND-7970: Persist MQ entries in NMS with ActiveMQ
 
