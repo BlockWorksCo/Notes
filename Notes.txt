@@ -39280,7 +39280,7 @@ Point 2) I dont think applies because our data is naturally separated into unrel
 too much concurrency up-front in the DTLS threads. Removing this concurrency should be possible. If transaction conflicts still are an issue then
 the schema may be at issue (and the queries we're running on it).
 Point 3) The real solution to this issue is to recv->process->commit->ACK rather than recv-->ACK->process->commit. Having an interlocked mechanism
-means that all messages are commited prior to the ACK being generated. If this is not implemented, it should be and the ActiveMQ remvoed. If it is
+means that all messages are commited prior to the ACK being generated. If this is not implemented, it should be, and the ActiveMQ removed. If it is
 implemented, then ActiveMQ is not necessary and should be removed.
 
 
