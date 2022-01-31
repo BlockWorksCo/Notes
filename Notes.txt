@@ -39361,6 +39361,65 @@ configPhy:
   "sixLowpanMtu": 5
 }
 
+/config/certificateAuthority:
+{
+  "certificateAuthority": 0
+}
+
+16:49:13.608 INFO     witef.device.ncp     > Get IP address
+16:49:13.609 INFO     witef.device.ncp     < Get IP address
+16:49:13.623 INFO     witef.device.ncp     > Get IP address
+127.0.0.1 - - [31/Jan/2022 16:49:13] "GET /Wi-SUN/TBU/1.0.0/config/ipAddresses HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 16:49:52] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 16:50:34] "PUT /Wi-SUN/TBU/1.0.0/transmitter/icmpv6Echo HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 16:51:02] "PUT /Wi-SUN/TBU/1.0.0/transmitter/udp HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 16:51:32] "PUT /Wi-SUN/TBU/1.0.0/targetReset HTTP/1.1" 200 -
+16:59:11.525 INFO     witef.device.ncp     < Disconnect
+16:59:11.548 INFO     witef.device.ncp     > Disconnect
+127.0.0.1 - - [31/Jan/2022 16:59:11] "PUT /Wi-SUN/TBU/1.0.0/runMode/0 HTTP/1.1" 200 -
+16:59:15.870 INFO     witef.device.ncp     < Disconnect
+16:59:15.894 INFO     witef.device.ncp     > Disconnect
+127.0.0.1 - - [31/Jan/2022 16:59:15] "PUT /Wi-SUN/TBU/1.0.0/runMode/0 HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jan/2022 16:59:54] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:00:22] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:00:38] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:00:45] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:00:55] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:02] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:11] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:20] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:32] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:41] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:52] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:01:58] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:02:06] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:02:13] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:03:28] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 400 -
+127.0.0.1 - - [31/Jan/2022 17:04:47] "PUT /Wi-SUN/TBU/1.0.0/config/phy HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jan/2022 17:06:06] "PUT /Wi-SUN/TBU/1.0.0/config/chanPlan/regOp HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jan/2022 17:07:05] "PUT /Wi-SUN/TBU/1.0.0/config/chanPlan/unicast HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jan/2022 17:07:57] "PUT /Wi-SUN/TBU/1.0.0/config/chanPlan/fixed HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jan/2022 17:08:44] "PUT /Wi-SUN/TBU/1.0.0/config/router HTTP/1.1" 200 -
+127.0.0.1 - - [31/Jan/2022 17:10:00] "PUT /Wi-SUN/TBU/1.0.0/config/certificateAuthority HTTP/1.1" 200 -
+17:10:50.164 INFO     witef.device.ncp     < Set channel mask
+17:10:50.179 INFO     witef.device.ncp     > Set channel mask
+17:10:50.180 INFO     witef.device.ncp     < Allow MAC address
+17:10:50.198 INFO     witef.device.ncp     > Allow MAC address
+17:10:50.198 INFO     witef.device.ncp     < Set TX power
+17:10:50.212 INFO     witef.device.ncp     > Set TX power
+17:10:50.213 INFO     witef.device.ncp     < Get IP address
+17:10:50.227 INFO     witef.device.ncp     > Get IP address
+17:10:50.227 INFO     witef.device.ncp     < Set network size
+17:10:50.243 INFO     witef.device.ncp     > Set network size
+17:10:50.244 INFO     witef.device.ncp     < Set trusted certificate
+17:10:50.435 INFO     witef.device.ncp     > Set trusted certificate
+17:10:50.437 INFO     witef.device.ncp     < Set device certificate
+17:10:50.627 INFO     witef.device.ncp     > Set device certificate
+17:10:50.629 INFO     witef.device.ncp     < Set device private key
+17:10:50.706 INFO     witef.device.ncp     > Set device private key
+17:10:50.707 INFO     witef.device.ncp     < Connect
+17:10:50.723 INFO     witef.device.ncp     > Connect
+
 
 
 
