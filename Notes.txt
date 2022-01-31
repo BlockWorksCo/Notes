@@ -39312,6 +39312,13 @@ Why do we want to use Message queues? Can ReST be used for communication?"from h
  (https://confluence.cyco.io/display/ENG/%5BDesignSpec%5D+C4+-+MessageQueue)
 "There may be many nodes sending CoAP requests with messages to the Connode server at the same time. If each request handling thread perists these messages in parallell to the database in separate transactions the system would quickly hit a transaction limit because of lock contention and conflicts. This reduces scalability of the system. At the same time one of the requirements is to guarantee delivery of messages to the Connode server. For this reason a message buffer queue component has been added to the architecture. The Connode server can queue received messages quickly in parallell to this queue without any preprocessing. A separate service thread reads messages from the buffer queue periodically and persists them in single transactions to the database."
 
+--------------------------
+wisun certification TBU TBC:
+
+cd WiSUNStuff (git@gitlab.cyco.io:Omnimesh/wisun_ncp.git)
+
+cd adapter && python3 -m swagger_server --tcp-port=8080 --serial-port='/dev/ttyUSB2' --mac-addr='00:0d:6f:ff:fe:00:00:d1'
+
 
 
 
