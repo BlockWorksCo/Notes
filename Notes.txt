@@ -39442,5 +39442,11 @@ Amrit:
 - good that he drew diagram to eplain
 - has reasonable low-level knowledge
 - little protocol experience
+- middling knowledge of concurrency.
+- book knowledge, not huge amount of experience.
+
+
+Sachin:
+-
 
 
