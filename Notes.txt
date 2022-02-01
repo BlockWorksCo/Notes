@@ -39433,5 +39433,14 @@ debug certificates:
 - At the end of MTS run, the devug-cert is cleared from internal-flash. This effectively disables secure-local-coap features.
 
 
+--------------------------------
+interviews:
+
+
+Amrit:
+- relatively junior
+- good that he drew diagram to eplain
+- has reasonable low-level knowledge
+- little protocol experience
 
 
