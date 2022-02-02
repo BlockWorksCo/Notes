@@ -39469,4 +39469,11 @@ dev-stack
 
 dev-stack --pkidir /home/steve/smip/ setup -n 1 -s 1 -a 100 -g 1 -e
 
+in server.sh, hostname --ipaddress can come back with "fd00::1 1.2.3.4". i.e. the IPv6 address also
+which causes the IPv6 address to be taken as the bind address and the IPv4 address to be taken
+as a class to load. which fails:
+
+something like this is needed:
+hostname --ip-address | sed "s/[0-9a-f]* \([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\)\+/\1/g"
+
 
