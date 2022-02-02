@@ -39487,6 +39487,30 @@ CA_PROFILE=Omnimesh ca fetch omnimesh/tund/v8.0.7/tun6d-v8.0.7.tar.gz; tar -xf t
 CA_PROFILE=Omnimesh ca fetch omnimesh/terminal/v22.10.0/terminal_emulator-genus-v22.10.0.tar.gz; tar -xf terminal_emulator-genus-v22.10.0.tar.gz -C /home/steve/.devstack/pkg/terminal_emulator-genus-v22.10.0
 
 
+------------------------------------------
+dev-stack performance:
+
+2022-02-02 18:04:53,027 ERROR [Timer-3,cluster_view,nms-0(nms-0)] TimeScheduler3 - failed executing task NAKACK2: RetransmitTask (interval=500 ms)
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+        at java.util.concurrent.ConcurrentHashMap$EntrySetView.iterator(ConcurrentHashMap.java:4746)
+        at org.jgroups.protocols.pbcast.NAKACK2.triggerXmit(NAKACK2.java:1420)
+        at org.jgroups.protocols.pbcast.NAKACK2$RetransmitTask.run(NAKACK2.java:1408)
+        at org.jgroups.util.TimeScheduler3$Task.run(TimeScheduler3.java:277)
+        at org.jgroups.util.TimeScheduler3$RecurringTask.run(TimeScheduler3.java:308)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+        at java.lang.Thread.run(Thread.java:748)
+2022-02-02 18:05:24,159 ERROR [Timer-2,cluster_view,nms-0(nms-0)] TimeScheduler3 - failed executing task UNICAST3: RetransmitTask (interval=500 ms)
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+2022-02-02 18:05:33,313 ERROR [ActiveMQ Journal Checkpoint Worker] MessageDatabase - Checkpoint failed
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+2022-02-02 18:05:57,107 ERROR [coap-scavenger] CoapSessionRegistry - Fatal error.
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+2022-02-02 18:06:14,172 ERROR [ActiveMQ BrokerService[localhost] Task-21] Queue - Failed to page in more queue messages
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+
+
+
 
 
 
