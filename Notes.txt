@@ -39484,6 +39484,8 @@ CA_PROFILE=Omnimesh ca fetch omnimesh/terminal/v22.10.0/terminal-emulator-genus-
 CA_PROFILE=Omnimesh ca fetch omnimesh/tund/v8.0.7/tun6d-v8.0.7.tar.gz; tar -xf tun6d-v8.0.7.tar.gz -C /home/steve/.devstack/pkg/tun6d-v8.0.7
 
 
+CA_PROFILE=Omnimesh ca fetch omnimesh/terminal/v22.10.0/terminal_emulator-genus-v22.10.0.tar.gz; tar -xf terminal_emulator-genus-v22.10.0.tar.gz -C /home/steve/.devstack/pkg/terminal_emulator-genus-v22.10.0
+
 
 
 
