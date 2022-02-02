@@ -39447,7 +39447,10 @@ Amrit:
 
 
 Sachin:
--
+- good application level DLMS knowledge but no depth.
+- claiming a lot on CV but not able to back it up.
+- narrow knowledge of I2C. not aware of multi-master for example.
+- He knows the hows and whats but not the whys.
 
 ------------------------------
 holiday:
