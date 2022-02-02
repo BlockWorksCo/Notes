@@ -39462,3 +39462,11 @@ Feb 21st
 April 1st
 April 4th->8th
 April 11th->12th
+
+
+-----------------------------
+dev-stack
+
+dev-stack --pkidir /home/steve/smip/ setup -n 1 -s 1 -a 100 -g 1
+
+
