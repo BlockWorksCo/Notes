@@ -39476,4 +39476,9 @@ as a class to load. which fails:
 something like this is needed:
 hostname --ip-address | sed "s/[0-9a-f]* \([0-9]\+\.[0-9]\+\.[0-9]\+\.[0-9]\)\+/\1/g"
 
+to develop dev-stack:
+"pip3 install -e ."
+
+
+
 
