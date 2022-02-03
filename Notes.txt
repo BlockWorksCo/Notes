@@ -39515,6 +39515,13 @@ docker exec -it devstack_tund_1 cat /proc/net/udp | ag 1F72         # port 8050 
 docker exec -it devstack_nms-0_1  cat /proc/net/udp6 | ag 1634      # port 5684 (DTLS)
 
 
+-----------------------------
+HMP IPA3b issue
+
+- CC1190 was also used in old Kaifa boards.
+- look into driving it in the same manner. radio-cc1200.c
+
+
 
 
 
