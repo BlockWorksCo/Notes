@@ -39545,6 +39545,38 @@ Record lock, heap no 10 PHYSICAL RECORD: n_fields 14; compact format; info bits 
  13: len 8; hex 8000000000000001; asc         ;;
 
 
+ ===========TERM EMU STATISTIC========
+----------Common info ---------
+Emu_start_time:              2022-02-03 16:36:59
+Current_time:                2022-02-03 18:38:14
+----------Protocol statistic---
+DTLS_start_time:                2022-02-03 16:37:14
+Login_start_time:               2022-02-03 16:37:24
+Registration_start_time:        2022-02-03 16:38:10
+DTLS_finish_time:               2022-02-03 17:59:42
+Login_finish_time:              2022-02-03 18:01:11
+----------Protocol counters------
+Handshake_finished:             20118
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       796
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        4
+COAP_login_finished:            20001
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              3
+COAP_registration_finished:     19506
+COAP_registration_ongoing:      495
+COAP_registration_resend:       36106
+Current_registraion_speed:      0
+Total_Registration_speed:       2
+Num_of_request_received:        410766
+
+
+
 -----------------------------
 HMP IPA3b issue
 
