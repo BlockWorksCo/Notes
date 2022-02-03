@@ -39515,6 +39515,36 @@ docker exec -it devstack_tund_1 cat /proc/net/udp | ag 1F72         # port 8050 
 docker exec -it devstack_nms-0_1  cat /proc/net/udp6 | ag 1634      # port 5684 (DTLS)
 
 
+------------------------                                                                                                                                                                                  [260/569]
+LATEST DETECTED DEADLOCK
+------------------------
+2022-02-03 17:24:34 0x7eff2426d700
+*** (1) TRANSACTION:
+TRANSACTION 391426, ACTIVE 0 sec starting index read
+mysql tables in use 1, locked 1
+LOCK WAIT 6 lock struct(s), heap size 1136, 2 row lock(s), undo log entries 3
+MySQL thread id 30, OS thread handle 139634157987584, query id 4431276 172.16.21.7 meshnet updating
+update mesh_network set create_time='2022-02-03 16:37:24', entity_version=13848, update_time=null, gateway_terminal_id=1, logged_in_node_count=13848, logged_out_node_count=0, max_count_exceeded=1, max_count_thre
+shold=100, max_depth_exceeded=0, max_depth_threshold=0, prefix='fd5b:2b5b:5bc4:0' where id=1 and entity_version=13847
+*** (1) WAITING FOR THIS LOCK TO BE GRANTED:
+RECORD LOCKS space id 119 page no 3 n bits 80 index PRIMARY of table `smc`.`mesh_network` trx id 391426 lock_mode X locks rec but not gap waiting
+Record lock, heap no 10 PHYSICAL RECORD: n_fields 14; compact format; info bits 0
+ 0: len 8; hex 8000000000000001; asc         ;;
+ 1: len 6; hex 00000005f8d3; asc       ;;
+ 2: len 7; hex 3b000001ed0584; asc ;      ;;
+ 3: len 5; hex 99ac070958; asc     X;;
+ 4: len 4; hex 80003618; asc   6 ;;
+ 5: SQL NULL;
+ 6: len 4; hex 80003618; asc   6 ;;
+ 7: len 4; hex 80000000; asc     ;;
+ 8: len 1; hex 81; asc  ;;
+ 9: len 4; hex 80000064; asc    d;;
+ 10: len 1; hex 80; asc  ;;
+ 11: len 4; hex 80000000; asc     ;;
+ 12: len 16; hex 666435623a326235623a356263343a30; asc fd5b:2b5b:5bc4:0;;
+ 13: len 8; hex 8000000000000001; asc         ;;
+
+
 -----------------------------
 HMP IPA3b issue
 
