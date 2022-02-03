@@ -39511,8 +39511,8 @@ java.lang.OutOfMemoryError: GC overhead limit exceeded
 
 
 Monitor packet drops:
-docker exec -it devstack_tund_1 cat /proc/net/udp | ag 1F72
-docker exec -it devstack_nms-0_1  cat /proc/net/udp6 | ag 1634
+docker exec -it devstack_tund_1 cat /proc/net/udp | ag 1F72         # port 8050 (tun6d)
+docker exec -it devstack_nms-0_1  cat /proc/net/udp6 | ag 1634      # port 5684 (DTLS)
 
 
 
