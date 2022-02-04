@@ -39590,6 +39590,20 @@ HMP IPA3b issue
 - turn off UDP log
 
 
+----------------------------------
+txqueeulen and buffers:
+
+
+7
+
+The net.core.wmem_default and wmem_max settings control the initial and maximum sizes of TX socket buffers in bytes. While the queue itself is just a linked list of skb pointers, the kernel also keeps track of the total byte-size consumed by the skb's as they're added and removed from the socket buffer. The wmem_default sysctl sets the default initial ceiling for new sockets (net/core/sock.c:sock_init_data()). Applications are allowed to increase the size of their sockets' buffers and wmem_max is the ceiling for that functionality (net/core/sock.c:sock_setsockopt()).
+
+When a packet has been removed from a socket buffer and finds its way through the kernel networks stack, it's placed on a transmission queue for an interface to wait to be loaded onto the NIC itself. The txqueuelen set by the ifconfig or ip commands is number of frames allowed per kernel transmission queue for the queuing discipline (net/sched/sch_generic.c:pfifo_fast_enqueue()).
+
+Finally, ethtool -G uses ioctl to set the number of ring entries for the ring buffer on the NIC itself.
+
+
+
 
 
 
