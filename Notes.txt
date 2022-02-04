@@ -39587,7 +39587,7 @@ HMP IPA3b issue
 
 - CC1190 was also used in old Kaifa boards.
 - look into driving it in the same manner. radio-cc1200.c
-
+- turn off UDP log
 
 
 
