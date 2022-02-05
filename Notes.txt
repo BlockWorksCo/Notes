@@ -39608,4 +39608,9 @@ https://www.coverfire.com/articles/queueing-in-the-linux-network-stack/
 
 
 
+sysctl net.ipv6.neigh.default.gc_thresh1=1024
+sysctl net.ipv6.neigh.default.gc_thresh2=2048
+sysctl net.ipv6.neigh.default.gc_thresh3=4096
+
+
 
