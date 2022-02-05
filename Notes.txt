@@ -39602,6 +39602,8 @@ When a packet has been removed from a socket buffer and finds its way through th
 
 Finally, ethtool -G uses ioctl to set the number of ring entries for the ring buffer on the NIC itself.
 
+https://www.coverfire.com/articles/queueing-in-the-linux-network-stack/
+
 
 
 
