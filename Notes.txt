@@ -39677,6 +39677,29 @@ select devicetype0_.firmware_version as col_0_0_, count(devices1_.id) as col_1_0
 
 
 
+/Data/Temp/login4nodes.sql
+
+6:# Query_time: 0.000373  Lock_time: 0.000248 Rows_sent: 0  Rows_examined: 0
+11:# Query_time: 0.000371  Lock_time: 0.000199 Rows_sent: 0  Rows_examined: 0
+16:# Query_time: 0.000125  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+21:# Query_time: 0.000289  Lock_time: 0.000094 Rows_sent: 0  Rows_examined: 0
+
+28:# Query_time: 0.000244  Lock_time: 0.000133 Rows_sent: 0  Rows_examined: 0
+33:# Query_time: 0.000318  Lock_time: 0.000194 Rows_sent: 0  Rows_examined: 0
+38:# Query_time: 0.000154  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+43:# Query_time: 0.000471  Lock_time: 0.000166 Rows_sent: 0  Rows_examined: 0
+
+51:# Query_time: 0.000281  Lock_time: 0.000146 Rows_sent: 0  Rows_examined: 0
+56:# Query_time: 0.000508  Lock_time: 0.000198 Rows_sent: 0  Rows_examined: 0
+61:# Query_time: 0.000134  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+66:# Query_time: 0.000187  Lock_time: 0.000084 Rows_sent: 0  Rows_examined: 0
+
+74:# Query_time: 0.000269  Lock_time: 0.000164 Rows_sent: 0  Rows_examined: 0
+79:# Query_time: 0.000250  Lock_time: 0.000114 Rows_sent: 0  Rows_examined: 0
+84:# Query_time: 0.000341  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+89:# Query_time: 0.000334  Lock_time: 0.000076 Rows_sent: 0  Rows_examined: 0
+
+
 
 
 
