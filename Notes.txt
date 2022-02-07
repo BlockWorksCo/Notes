@@ -39663,6 +39663,9 @@ use sma;
 SET timestamp=1644238068;
 select dt.hardware_version, case when d.update_time is null then 'OFFLINE' when d.update_time > DATE_SUB('2022-02-07 12:47:48', INTERVAL 24 HOUR) then 'ONLINE' else 'OFFLINE' end as meter_status, case  when d.consumer_status is null then 'UNKNOWN' when d.consumer_status = 1 then 'CONNECTED' else 'DISCONNECTED' end as consumer_status, ifnull(n.network_status, 'LOGOUT') as network_status, case when d.supply_status is null then 'UNKNOWN' when d.supply_status = 1 then 'POWERON' else 'POWEROFF' end as supply_status from device_type dt inner join device d on d.device_type = dt.id left join node n on n.id = d.device_node_id where d.
 state = 'ACTIVE';
+total time = 0.024938 + 0.001029 = 0.00255
+
+login + reg = 0.755 = 13.23/sec
 
 
 dashboard?
