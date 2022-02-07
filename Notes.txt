@@ -39706,6 +39706,20 @@ total: .001194
 average: 0.001162 = 860/sec
 
 
+Actyakky there is an importServerSecurityKeyPair
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.pki.service.connode.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:importServerSecurityKeyPair>
+         <publicKey>cid:590706821510</publicKey>
+         <privateKey>cid:224258458430</privateKey>
+         <!--Optional:-->
+         <password>?</password>
+      </ws:importServerSecurityKeyPair>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+
 
 
 
