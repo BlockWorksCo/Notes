@@ -39616,27 +39616,7 @@ sysctl net.ipv6.neigh.default.gc_thresh3=4096
 
 -----------------------
 
-
-login:
-
-# Time: 2022-02-07T12:46:57.644368Z
-# User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    19
-# Query_time: 0.024505  Lock_time: 0.000085 Rows_sent: 0  Rows_examined: 1
-use smc;
-SET timestamp=1644238017;
-update mesh_network set create_time='2022-02-07 12:46:57.597', entity_version=1, update_time=null, gateway_terminal_id=1, logged_in_node_count=1, logged_out_node_count=0, max_count_exceeded=0, max_count_threshol
-d=0, max_depth_exceeded=0, max_depth_threshold=0, prefix='fd5b:2b5b:5bc4:0' where id=1 and entity_version=0;
-# Time: 2022-02-07T12:46:58.326184Z
-# User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    18
-# Query_time: 0.000169  Lock_time: 0.000078 Rows_sent: 5  Rows_examined: 5
-SET timestamp=1644238018;
-select this_.id as id1_28_0_, this_.create_time as create_t2_28_0_, this_.entity_version as entity_v3_28_0_, this_.update_time as update_t4_28_0_, this_.code as code5_28_0_, this_.disabled as disabled6_28_0_, th
-is_.module_id as module_i8_28_0_, this_.name as name7_28_0_ from meta_data_terminal_event this_ where this_.disabled=0;
-# Time: 2022-02-07T12:46:58.807526Z
-# User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    18
-# Query_time: 0.024342  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
-SET timestamp=1644238018;
-commit;
+timestamp update:
 # Time: 2022-02-07T12:46:59.325895Z
 # User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    20
 # Query_time: 0.456534  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
@@ -39649,9 +39629,21 @@ SET timestamp=1644238019;
 commit;
 
 
+login:
+# Time: 2022-02-07T12:46:57.644368Z
+# User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    19
+# Query_time: 0.024505  Lock_time: 0.000085 Rows_sent: 0  Rows_examined: 1
+use smc;
+SET timestamp=1644238017;
+update mesh_network set create_time='2022-02-07 12:46:57.597', entity_version=1, update_time=null, gateway_terminal_id=1, logged_in_node_count=1, logged_out_node_count=0, max_count_exceeded=0, max_count_threshold=0, max_depth_exceeded=0, max_depth_threshold=0, prefix='fd5b:2b5b:5bc4:0' where id=1 and entity_version=0;
+# Time: 2022-02-07T12:46:58.326184Z
+# User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    18
+# Query_time: 0.000169  Lock_time: 0.000078 Rows_sent: 5  Rows_examined: 5
+SET timestamp=1644238018;
+select this_.id as id1_28_0_, this_.create_time as create_t2_28_0_, this_.entity_version as entity_v3_28_0_, this_.update_time as update_t4_28_0_, this_.code as code5_28_0_, this_.disabled as disabled6_28_0_, this_.module_id as module_i8_28_0_, this_.name as name7_28_0_ from meta_data_terminal_event this_ where this_.disabled=0;
+
 
 registration:
-
 # Time: 2022-02-07T12:47:29.748215Z
 # User@Host: meshnet[meshnet] @  [172.16.21.6]  Id:    23
 # Query_time: 0.024938  Lock_time: 0.000098 Rows_sent: 0  Rows_examined: 0
