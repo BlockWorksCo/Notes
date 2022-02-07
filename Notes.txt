@@ -39617,6 +39617,8 @@ sysctl net.ipv6.neigh.default.gc_thresh3=4096
 -----------------------
 
 
+login:
+
 # Time: 2022-02-07T12:46:57.644368Z
 # User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    19
 # Query_time: 0.024505  Lock_time: 0.000085 Rows_sent: 0  Rows_examined: 1
@@ -39645,6 +39647,41 @@ commit;
 # Query_time: 0.026431  Lock_time: 0.000000 Rows_sent: 0  Rows_examined: 0
 SET timestamp=1644238019;
 commit;
+
+
+
+registration:
+
+# Time: 2022-02-07T12:47:29.748215Z
+# User@Host: meshnet[meshnet] @  [172.16.21.6]  Id:    23
+# Query_time: 0.024938  Lock_time: 0.000098 Rows_sent: 0  Rows_examined: 0
+use sma;
+SET timestamp=1644238049;
+insert into device_profile_set_profile (device_profile_set_id, device_profile_id) values (1, 4);
+# Time: 2022-02-07T12:47:34.445492Z
+# User@Host: meshnet[meshnet] @  [172.16.21.7]  Id:    19
+# Query_time: 0.025707  Lock_time: 0.000313 Rows_sent: 1  Rows_examined: 2
+use smc;
+SET timestamp=1644238054;
+select distinct this_.code as y0_ from node_event_undecoded this_;
+^[# Time: 2022-02-07T12:47:48.502275Z
+# User@Host: meshnet[meshnet] @  [172.16.21.6]  Id:    26
+# Query_time: 0.001029  Lock_time: 0.000492 Rows_sent: 2  Rows_examined: 5
+use sma;
+SET timestamp=1644238068;
+select dt.hardware_version, case when d.update_time is null then 'OFFLINE' when d.update_time > DATE_SUB('2022-02-07 12:47:48', INTERVAL 24 HOUR) then 'ONLINE' else 'OFFLINE' end as meter_status, case  when d.co
+nsumer_status is null then 'UNKNOWN' when d.consumer_status = 1 then 'CONNECTED' else 'DISCONNECTED' end as consumer_status, ifnull(n.network_status, 'LOGOUT') as network_status, case when d.supply_status is nul
+l then 'UNKNOWN' when d.supply_status = 1 then 'POWERON' else 'POWEROFF' end as supply_status from device_type dt inner join device d on d.device_type = dt.id left join node n on n.id = d.device_node_id where d.
+state = 'ACTIVE';
+# Time: 2022-02-07T12:47:48.894564Z
+# User@Host: meshnet[meshnet] @  [172.16.21.6]  Id:    26
+# Query_time: 0.000553  Lock_time: 0.000223 Rows_sent: 1  Rows_examined: 5
+SET timestamp=1644238068;
+select devicetype0_.firmware_version as col_0_0_, count(devices1_.id) as col_1_0_ from device_type devicetype0_ inner join device devices1_ on devicetype0_.id=devices1_.device_type group by devicetype0_.firmware
+_version order by col_1_0_ DESC limit 10;
+
+
+
 
 
 
