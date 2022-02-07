@@ -39706,5 +39706,9 @@ total: .001194
 average: 0.001162 = 860/sec
 
 
+as an example of where we are:
+1Million nodes/day = 1/86400 = 0.00001157/sec
+
+
 
 
