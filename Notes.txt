@@ -39729,7 +39729,8 @@ mq
 
 mq messages persisted @ MqTracker.java persist() method.
 
-
+MessageQueuePersister
+Eager & lazy persisters.
 
 
 
