@@ -39721,7 +39721,7 @@ Actyakky there is an importServerSecurityKeyPair
 
 
 query time mfrom slow log:
-sed -n "s/^# Query_time: \([0-9.]\+\).*/\1/p"  /Data/Logs/registration.log | paste -s -d+ querytimes | bc
+sed -n "s/^# Query_time: \([0-9.]\+\).*/\1/p"  /Data/Logs/registration.log | paste -s -d+ | bc
 
 
 ------------------------------------------
