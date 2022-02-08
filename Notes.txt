@@ -39734,7 +39734,7 @@ Eager & lazy persisters.
 
 
 
-MqCoapResource::executeReceivedPostRequest()->queueReceivedMessages()->MessageQueuePersister::enqueue()->ActiveMQ.
+CoapApplication::invoke()->MqCoapResource::executeReceivedPostRequest()->queueReceivedMessages()->MessageQueuePersister::enqueue()->ActiveMQ.
 
 
 
