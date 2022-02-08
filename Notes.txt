@@ -39737,7 +39737,7 @@ Eager & lazy persisters.
 CoapApplication::invoke()->MqCoapResource::executeReceivedPostRequest()->queueReceivedMessages()->MessageQueuePersister::enqueue()->ActiveMQ.
 
 Messages processed from ActiveMQ in:
-MessageQueueProcessor::dropMessage()
+MessageQueueProcessor::processMessage()->mqTracker.persist()
 
 
 
