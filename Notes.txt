@@ -39724,6 +39724,12 @@ query time mfrom slow log:
 sed -n "s/^# Query_time: \([0-9.]\+\).*/\1/p"  /Data/Logs/registration.log | paste -s -d+ querytimes | bc
 
 
+------------------------------------------
+mq
+
+mq messages persisted @ MqTracker.java persist() method.
+
+
 
 
 
