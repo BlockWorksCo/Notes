@@ -39740,6 +39740,16 @@ Messages processed from ActiveMQ in:
 MessageQueueProcessor::processMessage()->mqTracker.persist()
 
 
+-------------------------------------------------
+secure local coap
+
+- TLS server in Agent.
+- Debug certificate.
+    - cleared by MTS on prod line
+    - can be downloaded OTA via DTLS channel.
+    - Can be loaded via SWD by MTS.
+    - stored in internal flash.
+    - cleared when debug flag unset (i.e. nuked).
 
 
 
