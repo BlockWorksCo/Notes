@@ -39750,6 +39750,11 @@ secure local coap
     - Can be loaded via SWD by MTS.
     - stored in internal flash.
     - cleared when debug flag unset (i.e. nuked).
+- GW7 MTS use-case:
+    - Either re-manufacture CNIC & IPA3 and add debug-cert
+    - Or find a way to add cert locally.
+        - SWD? disabled.
+
 
 
 
