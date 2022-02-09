@@ -39740,6 +39740,12 @@ Messages processed from ActiveMQ in:
 MessageQueueProcessor::processMessage()->mqTracker.persist()
 
 
+--------------------------------------------------
+400K nodes login
+
+- NMSStub ~50% CPU (steady state) ~105% (login). 1 x mbedtls thread.
+- mq ~3MB/sec disk write, CPU ~30%
+
 -------------------------------------------------
 secure local coap
 
