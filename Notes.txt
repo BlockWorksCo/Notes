@@ -39775,6 +39775,7 @@ secure local coap
 - login CPU ~200% (3 threads).
 - steady state drops to mq
 - mq disk writes ~17 MB/sec.
+- termem0 incoming 7915 kpbs outgoing, 2352 kbps outgoing (steady state)
 
 ===========TERM EMU STATISTIC========
 ----------Common info ---------
