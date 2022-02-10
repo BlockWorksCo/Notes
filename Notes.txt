@@ -39769,6 +39769,13 @@ secure local coap
 -------------------------------------------------
 400K NMSStub run
 
+- 90 mins to login 400K
+- 73 logins/sec
+- steady state CPU 65->70%
+- login CPU ~200% (3 threads).
+- steady state drops to mq
+- mq disk writes ~17 MB/sec.
+
 ===========TERM EMU STATISTIC========
 ----------Common info ---------
 Emu_start_time:              2022-02-09 23:55:57
