@@ -39771,7 +39771,7 @@ secure local coap
 
 - 90 mins to login 400K
 - 73 logins/sec
-- steady state CPU 65->70%
+- steady state CPU 60% in NMSStub, mq 52%
 - login CPU ~200% (3 threads).
 - steady state drops to mq
 - mq disk writes ~17 MB/sec.
