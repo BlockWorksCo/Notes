@@ -39751,6 +39751,7 @@ secure local coap
 
 - TLS server in Agent.
 - Debug certificate.
+    - Can we keep it on-device or remove it?
     - cleared by MTS on prod line
     - can be downloaded OTA via DTLS channel.
     - Can be loaded via SWD by MTS.
@@ -39764,6 +39765,56 @@ secure local coap
         - SWD? disabled.
 
 
+
+-------------------------------------------------
+400K NMSStub run
+
+===========TERM EMU STATISTIC========
+----------Common info ---------
+Emu_start_time:              2022-02-09 23:55:57
+Current_time:                2022-02-10 06:32:29
+----------Protocol statistic---
+DTLS_start_time:                2022-02-09 23:58:22
+Login_start_time:               2022-02-09 23:58:25
+Registration_start_time:        2022-02-09 23:58:56
+DTLS_finish_time:               2022-02-10 01:29:33
+Login_finish_time:              2022-02-10 01:29:33
+Registration_finish_time:       2022-02-10 01:30:18
+----------Protocol counters------
+Handshake_finished:             400000
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       0
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        73
+COAP_login_finished:            400000
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              73
+COAP_registration_finished:     400000
+COAP_registration_ongoing:      0
+COAP_registration_resend:       0
+Current_registraion_speed:      0
+Total_Registration_speed:       72
+Num_of_request_received:        0
+Current_request_received_speed: 0
+Num_of_keepAlive_sent:          2146787
+Num_of_keepAlive_timeout:       0
+Current_keepAlive_speed:        203
+Num_of_event_sent:              29444588
+Current_event_speed:            1236
+Num_of_sample_sent:             19465919
+Current_sample_speed:           893
+Num_of_reading_sent:            0
+Current_reading_speed:          0
+Num_of_alarms_sent:             400000
+Current_alarms_speed:           0
+Num_of_file_download_ongoing:   0
+Num_of_file_download_finished:  0
+Num_of_broadcast_ongoing:       0
+Num_of_broadcast_finished:      0
 
 
 
