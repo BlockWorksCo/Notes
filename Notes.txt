@@ -39776,6 +39776,9 @@ secure local coap
 - steady state drops to mq
 - mq disk writes ~17 MB/sec.
 - termem0 incoming 7915 kpbs outgoing, 2352 kbps outgoing (steady state)
+- NMSStub 4.8GB, termem 4.5GB
+
+sudo ./build/terminal_emulator-genus/bin/terminal_emulator -prefixBase fd3006:: -6  -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 399999 -db /home/steve/smip/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/smip/ca.crt.pem -server fd00::1 -numOfGateways 1 -numOfThreads 1 -logLevel info -handshakeBurstRate 200
 
 ===========TERM EMU STATISTIC========
 ----------Common info ---------
