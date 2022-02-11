@@ -39880,4 +39880,14 @@ mq bechaviour
 4 -> highest = 5 request (4+1)->5 = None.
 
 
+- always have a last-received -> higest-received window open.
+- mq entries always recieved sequentially in the window.
+- window can extend at the high end.
+- window low-end moves upwards when next mq entry received.
+
+     highest = 0
+1 ->
+2 ->
+5 ->
+3 ->
 
