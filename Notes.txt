@@ -39830,3 +39830,39 @@ Num_of_broadcast_finished:      0
 
 
 
+400K nodes logged in in 51 minutes.
+
+----------Common info ---------
+Emu_start_time:              2022-02-11 13:58:49
+Current_time:                2022-02-11 14:52:42
+----------Protocol statistic---
+DTLS_start_time:                2022-02-11 14:01:18
+Login_start_time:               2022-02-11 14:01:21
+Registration_start_time:        2022-02-11 14:01:53
+DTLS_finish_time:               2022-02-11 14:51:18
+Login_finish_time:              2022-02-11 14:51:19
+Registration_finish_time:       2022-02-11 14:52:01
+----------Protocol counters------
+Handshake_finished:             400000
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       0
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        133
+COAP_login_finished:            400000
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              133
+COAP_registration_finished:     400000
+COAP_registration_ongoing:      0
+COAP_registration_resend:       0
+Current_registraion_speed:      0
+Total_Registration_speed:       132
+Num_of_request_received:        0
+Current_request_received_speed: 0
+Num_of_keepAlive_sent:          0
+Num_of_keepAlive_timeout:       0
+Current_keepAlive_speed:        0
+
