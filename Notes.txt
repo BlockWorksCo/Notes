@@ -39833,6 +39833,8 @@ Num_of_broadcast_finished:      0
 400K nodes logged in in 51 minutes.
 direct file writes from MQ = 600KB/sec
 writes to sqlite db = ~5MB/sec.
+NMSStub 56% CPU
+mq 14% CPU
 
 ----------Common info ---------
 Emu_start_time:              2022-02-11 13:58:49
