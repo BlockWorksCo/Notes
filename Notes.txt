@@ -39866,3 +39866,12 @@ Num_of_keepAlive_sent:          0
 Num_of_keepAlive_timeout:       0
 Current_keepAlive_speed:        0
 
+
+
+
+-----------------------------------------------------
+mq bechaviour
+
+
+
+
