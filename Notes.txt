@@ -39895,3 +39895,44 @@ mq bechaviour
 5 ->
 3 ->
 
+----------------------------------------
+500K run
+
+===========TERM EMU STATISTIC========
+----------Common info ---------
+Emu_start_time:              2022-02-12 14:53:47
+Current_time:                2022-02-12 16:11:33
+----------Protocol statistic---
+DTLS_start_time:                2022-02-12 14:56:56
+Login_start_time:               2022-02-12 14:56:59
+Registration_start_time:        2022-02-12 14:57:31
+DTLS_finish_time:               2022-02-12 16:01:09
+Login_finish_time:              2022-02-12 16:01:09
+Registration_finish_time:       2022-02-12 16:01:53
+----------Protocol counters------
+Handshake_finished:             500000
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       0
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        129
+COAP_login_finished:            500000
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              129
+COAP_registration_finished:     500000
+COAP_registration_ongoing:      0
+COAP_registration_resend:       0
+Current_registraion_speed:      0
+Total_Registration_speed:       129
+Num_of_request_received:        0
+Current_request_received_speed: 0
+Num_of_keepAlive_sent:          111740
+Num_of_keepAlive_timeout:       0
+Current_keepAlive_speed:        36
+Num_of_event_sent:              3962784
+Current_event_speed:            3483
+Num_of_sample_sent:             2291988
+
