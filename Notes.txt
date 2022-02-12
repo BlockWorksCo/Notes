@@ -39898,6 +39898,12 @@ mq bechaviour
 ----------------------------------------
 500K run
 
+termem0  si   18 Mbps |  so 6304 Kbps
+NMSStub 162%  & 3.6GB
+mq 45%
+disk write: 1.4MB/sec
+termem 5.7GB & 57% CPU.
+
 ===========TERM EMU STATISTIC========
 ----------Common info ---------
 Emu_start_time:              2022-02-12 14:53:47
