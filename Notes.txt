@@ -39942,3 +39942,14 @@ Num_of_event_sent:              3962784
 Current_event_speed:            3483
 Num_of_sample_sent:             2291988
 
+ GET devices/list
+ GET device/alarms/conf/hash
+
+ GET sm/profile/conf/hash
+GET sm/19204130/profiles
+
+GET sm/19204130/alarms
+POST sm/19204130/profile
+
+
+
