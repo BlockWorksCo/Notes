@@ -39951,5 +39951,11 @@ GET sm/19204130/profiles
 GET sm/19204130/alarms
 POST sm/19204130/profile
 
+----------------------------------------
+tun6d
+
+sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel info
+
+
 
 
