@@ -39956,6 +39956,12 @@ tun6d
 
 sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel info
 
+------------------------------------------
+ipv6 default route missing
+
+sudo ip -6 route add default via fe80::9272:82ff:fe76:4bbe dev enp0s8
+
+
 
 
 
