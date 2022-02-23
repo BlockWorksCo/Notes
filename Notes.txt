@@ -39961,6 +39961,16 @@ ipv6 default route missing
 
 sudo ip -6 route add default via fe80::9272:82ff:fe76:4bbe dev enp0s8
 
+----------------------------------------
+server scaling notes:
+
+- read replica for transactional processing & SLA.
+- split databases. sample data in a timeseries db, mysql for metadata.
+- mq state can be logically separate also, mq state potentially in a separate db
+- registration info can be sent up in /login potentially to save on multiple requests.
+- denormalise meshnetwork info to prevent conflcts on that table.
+- tun6d should use db for replication across cluster.
+- tun6d can combine load-balancer functionality to have more intelligent & responsive load-balancing based on tun6d session.
 
 
 
