@@ -39991,6 +39991,8 @@ nc -6u  fe00::1 8888 -vvv
 # Route all packets targetted at fd30:: to the termem0 interface
 route -6 add fd30::/64 termem0
 
+# Route all packets for remote term-em to remote machine.
+ip -6 route add fd30:6:0:100:200:1::/64  via 2a00:23c5:b3ad:fb00::f2d
 
 
 
