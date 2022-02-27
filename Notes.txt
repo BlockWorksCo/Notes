@@ -39973,5 +39973,15 @@ server scaling notes:
 - tun6d can combine load-balancer functionality to have more intelligent & responsive load-balancing based on tun6d session.
 
 
+--------------------------------
+
+
+ip -6 add add fe00::1 dev termem0
+ip -6 route add fe00::1 via 2a00:23c5:b3ad:fb00::f2d
+nc -6lu -p 8888 -s fe00::1  -vvv
+nc -6u  fe00::1 8888 -vvv
+
+
+
 
 
