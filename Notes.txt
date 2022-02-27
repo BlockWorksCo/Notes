@@ -39976,9 +39976,16 @@ server scaling notes:
 --------------------------------
 
 
+# add an address to termem0 to let us bind to it.
 ip -6 add add fe00::1 dev termem0
+
+# on client machine, add a route to de00::1 that goes to server machine.
 ip -6 route add fe00::1 via 2a00:23c5:b3ad:fb00::f2d
+
+# setup listener bound to fe00::1 on dest.
 nc -6lu -p 8888 -s fe00::1  -vvv
+
+# run client to connect to fe00::1 on dest
 nc -6u  fe00::1 8888 -vvv
 
 
