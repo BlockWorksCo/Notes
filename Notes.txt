@@ -39988,8 +39988,8 @@ nc -6lu -p 8888 -s fe00::1  -vvv
 # run client to connect to fe00::1 on dest
 nc -6u  fe00::1 8888 -vvv
 
-# Route all packets targetted at fd30:: to termem0
-sudo route -6 add fd30::/64 termem0
+# Route all packets targetted at fd30:: to the termem0 interface
+route -6 add fd30::/64 termem0
 
 
 
