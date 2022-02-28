@@ -40008,3 +40008,6 @@ INTERFACESv4="eth4"
 
 sudo systemctl restart isc-dhcp-server.service
 
+# disable apparmor for dhcpd
+sudo ln -s /etc/apparmor.d/local/usr.sbin.dhcpd /etc/apparmor.d/disable/
+
