@@ -40021,3 +40021,6 @@ routing issue:
 sudo sysctl -w net.ipv6.conf.default.forwarding=1
 sudo sysctl -w net.ipv4.conf.default.forwarding=1
 
+# start the dhcp server.
+sudo systemctl start isc-dhcp-server.service
+
