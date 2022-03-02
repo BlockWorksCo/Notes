@@ -40011,3 +40011,13 @@ sudo systemctl restart isc-dhcp-server.service
 # disable apparmor for dhcpd
 sudo ln -s /etc/apparmor.d/local/usr.sbin.dhcpd /etc/apparmor.d/disable/
 
+-----------------------------------------------------
+routing issue:
+
+# Ensure "Allow All" virtualbox network setting is set to prevent MAC filtering
+# of any machines ARP responses.
+
+# enable forwarding to bridged interface
+sudo sysctl -w net.ipv6.conf.default.forwarding=1
+sudo sysctl -w net.ipv4.conf.default.forwarding=1
+
