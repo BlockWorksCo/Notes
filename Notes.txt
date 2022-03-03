@@ -40076,3 +40076,14 @@ Tasks:
 - I2CDebug (possibly use also for GW7/CNIC7/NIC7 also?).                    = 2w
                                                                 Total       = 23w
 
+--------------------------------------------------
+NMS rate-limiting for server-scaling CoAP 429 4.29 Too Many Requests
+
+https://datatracker.ietf.org/doc/html/rfc8516
+
+In order to stop a vicious circle when the server is forced to drop packets, a better behviour would
+be for the NMS to initially issue 4.29 responses to /mq requests. The 4.29 response would be taken by
+the Agent as a directive to delay by the specified amount prior to retrying.
+This would allow the NMS to better control the rate that input is being received instead of simply
+causing more tries and the subsequent heavier vicious-circle that results from that.
+
