@@ -40036,7 +40036,7 @@ IPA3A tasks:
 - SPI driver
 - flash driver using SPI driver. Should allow filesystem bring-up.
 - internal flash driver (enables upgrade).
-- Driver for mac/radio-s2lp over SPI.
+- Driver for radio-s2lp over SPI.
 - DMA
 - I2C
 - ADC
