@@ -40024,3 +40024,37 @@ sudo sysctl -w net.ipv4.conf.default.forwarding=1
 # start the dhcp server.
 sudo systemctl start isc-dhcp-server.service
 
+-----------------------------------------------------
+IPA3A tasks:
+
+- import required external libraries into 3pp
+- make initial ipa3a target build function with empty platform specific modules. (Just an infinite loop in main to start with).
+
+
+New IPA3
+
+- STM32WB50CG
+- S2LP
+- One UART, debug or meter?
+- Create alternate debug (I2C)?
+
+
+Tasks:
+- clocks&BSP initial integration                                            = 2w
+- timers                                                                    = 1w
+- internal flash                                                            = 1w
+- USART                                                                     = 1w
+- SPI (external flash)                                                      = 1w
+- DMA                                                                       = 1w
+- I2C                                                                       = 1w
+- RNG                                                                       = 1w
+- ADC                                                                       = 1w
+- GPIO                                                                      = 1w
+- ReadProtect                                                               = 1w
+- VMon                                                                      = 1w
+- Dedicated key-storage is available (possibly use for CNDFS key?)          = 1w
+- Use bitbanged/offloaded-to-M0/DMA SPI for radio driver.                   = 3w
+- S2LP MAC/PHY layer (note: WiSUN/mBed driver is already in the codebase)   = 4w
+- I2CDebug (possibly use also for GW7/CNIC7/NIC7 also?).                    = 2w
+                                                                Total       = 23w
+
