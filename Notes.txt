@@ -40037,15 +40037,16 @@ IPA3A tasks:
 - flash driver using SPI driver. Should allow filesystem bring-up.
 - internal flash driver (enables upgrade).
 - Driver for radio-s2lp over SPI.
-- DMA
-- I2C
-- ADC
+- ADC (board ID lines).
 - ReadProtect
 - VMon
 - KeyStorage driver? May need investigation.
 - performance validation (radio)
 - performance validation (flash)
 - performance validation (combined radio & flash)
+- I2C (For GW7).
+- I2C debug (?).
+- DMA driver for UART?
 
 
 New IPA3
