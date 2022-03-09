@@ -40087,3 +40087,11 @@ the Agent as a directive to delay by the specified amount prior to retrying.
 This would allow the NMS to better control the rate that input is being received instead of simply
 causing more tries and the subsequent heavier vicious-circle that results from that.
 
+---------------------------------------------
+networkmanager ubuntu dnsmasq change dhcp addresses
+
+https://fedoramagazine.org/internet-connection-sharing-networkmanager/
+
+nmcli connection modify netplan-enp0s3 ipv4.addresses 192.168.3.1/24
+
+
