@@ -40092,6 +40092,7 @@ networkmanager ubuntu dnsmasq change dhcp addresses
 
 https://fedoramagazine.org/internet-connection-sharing-networkmanager/
 
+nmcli con
 nmcli connection modify netplan-enp0s3 ipv4.addresses 192.168.3.1/24
 
 
