@@ -40095,4 +40095,58 @@ https://fedoramagazine.org/internet-connection-sharing-networkmanager/
 nmcli con
 nmcli connection modify netplan-enp0s3 ipv4.addresses 192.168.3.1/24
 
+-----------------------------------------------
+500K nodes login in <90 minutes
+
+===========TERM EMU STATISTIC========
+----------Common info ---------
+Emu_start_time:              2022-03-10 07:36:07
+Current_time:                2022-03-10 08:58:37
+----------Protocol statistic---
+DTLS_start_time:                2022-03-10 07:38:28
+Login_start_time:               2022-03-10 07:38:30
+Registration_start_time:        2022-03-10 07:39:04
+DTLS_finish_time:               2022-03-10 08:43:25
+Login_finish_time:              2022-03-10 08:44:11
+Registration_finish_time:       2022-03-10 08:53:16
+----------Protocol counters------
+Handshake_finished:             500001
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       0
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        128
+COAP_login_finished:            500001
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              126
+COAP_registration_finished:     500001
+COAP_registration_ongoing:      0
+COAP_registration_resend:       114
+Current_registraion_speed:      0
+Total_Registration_speed:       112
+Num_of_request_received:        0
+Current_request_received_speed: 0
+Num_of_keepAlive_sent:          199708
+Num_of_keepAlive_timeout:       0
+Current_keepAlive_speed:        163
+Num_of_event_sent:              5632326
+Current_event_speed:            1626
+Num_of_sample_sent:             3521222
+Current_sample_speed:           1095
+Num_of_reading_sent:            0
+Current_reading_speed:          0
+Num_of_alarms_sent:             500001
+Current_alarms_speed:           0
+Num_of_file_download_ongoing:   0
+Num_of_file_download_finished:  0
+Num_of_broadcast_ongoing:       0
+Num_of_broadcast_finished:      0
+Num_of_firmware_update_ongoing: 0
+Num_of_firmware_update_finished:0
+Num_of_meter_upgrade_ongoing:   0
+Num_of_meter_upgrade_finished:  0
+
 
