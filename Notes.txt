@@ -40150,3 +40150,26 @@ Num_of_meter_upgrade_ongoing:   0
 Num_of_meter_upgrade_finished:  0
 
 
+--------------------------------------
+dns not reset aftet vpn quits
+
+https://unix.stackexchange.com/questions/588658/override-ubuntu-20-04-dns-using-systemd-resolved
+
+
+    Update /etc/systemd/resolved.conf
+
+[Resolve]
+DNS=1.1.1.1 8.8.8.8
+FallbackDNS=8.8.4.4
+
+    Restart system resolved: service systemd-resolved restart
+    Run systemd-resolve --status
+
+the output should look like this:
+
+Global
+         DNS Servers: 1.1.1.1
+                      8.8.8.8
+
+
+
