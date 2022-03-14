@@ -40172,10 +40172,14 @@ Global
                       8.8.8.8
 
 --------------------------------------------
-secule local coap
+secure local coap
 
 python-mbedtls
 TLS-ECDHE-ECDSA-WITH-AES-128-CCM-8
+
+def wrap_buffers(self, server_hostname: Optional[str]) -> TLSWrappedBuffer:
+
+does TLSWrappedBuffer get used for handshake phase?
 
 
 
