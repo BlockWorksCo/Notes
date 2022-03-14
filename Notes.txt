@@ -40181,5 +40181,10 @@ def wrap_buffers(self, server_hostname: Optional[str]) -> TLSWrappedBuffer:
 
 does TLSWrappedBuffer get used for handshake phase?
 
+receive_from_network()
+peek_outgoing()
+consume_outgoing()
+
+
 
 
