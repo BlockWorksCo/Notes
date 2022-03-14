@@ -40171,5 +40171,11 @@ Global
          DNS Servers: 1.1.1.1
                       8.8.8.8
 
+--------------------------------------------
+secule local coap
+
+python-mbedtls
+TLS-ECDHE-ECDSA-WITH-AES-128-CCM-8
+
 
 
