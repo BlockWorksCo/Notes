@@ -29212,15 +29212,15 @@ mbedtls=EUK0-112-1
         24/12 - SW+IPv6gw
         31/12 - holiday
 
-         7/1  - holiday
-        14/1  - holiday
-        21/1  - holiday
-        28/1  - holiday
+         7/1  - SW+Holiday
+        14/1  - SW+WiSUN
+        21/1  - SW
+        28/1  - SW
 
-         4/2  - holiday
-        11/2  - holiday
-        18/2  - holiday
-        25/2  - holiday
+         4/2  - SW
+        11/2  - SW
+        18/2  - SW+WiSUN
+        25/2  - SW
 -------------------------------------------------
 dev-stack
 dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -a 1
