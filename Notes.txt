@@ -29213,14 +29213,14 @@ mbedtls=EUK0-112-1
         31/12 - holiday
 
          7/1  - SW+Holiday ->5
-        14/1  - SW+Holiday 11->21
-        21/1  - HOliday 11->21
+        14/1  - SW
+        21/1  - SW
         28/1  - SW+WiSUN
 
          4/2  - SW
-        11/2  - SW
-        18/2  - SW+WiSUN
-        25/2  - SW
+        11/2  - SW+Holiday 11
+        18/2  - Holiday
+        25/2  - SW+Holiday ->21
 -------------------------------------------------
 dev-stack
 dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -a 1
