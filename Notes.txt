@@ -29212,10 +29212,10 @@ mbedtls=EUK0-112-1
         24/12 - SW+IPv6gw
         31/12 - holiday
 
-         7/1  - SW+Holiday
-        14/1  - SW+WiSUN
-        21/1  - SW
-        28/1  - SW
+         7/1  - SW+Holiday ->5
+        14/1  - SW+Holiday 11->21
+        21/1  - HOliday 11->21
+        28/1  - SW+WiSUN
 
          4/2  - SW
         11/2  - SW
