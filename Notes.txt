@@ -40199,4 +40199,24 @@ consume_outgoing()
 
 ctrlport_service-hw.c -> ctrlport_decoder.c(cpdProcessByte)
 
+-------------------------------------------------
+sound latency clicking ubuntu
+
+https://askubuntu.com/questions/475987/a2dp-on-pulseaudio-terrible-choppy-skipping-audio
+
+pactl list | grep -Pzo '.*bluez_card(.*\n)*'
+pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-output 250
+pactl list | grep -Pzo '.*bluez_card(.*\n)*'
+pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-output 2500
+pactl list | grep -Pzo '.*bluez_card(.*\n)*'
+sudo service bluetooth restart
+pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-output 45000
+sudo service bluetooth restart
+history
+pactl list | grep -Pzo '.*bluez_card(.*\n)*'
+pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-input 45000
+sudo service bluetooth restart
+
+
+
 
