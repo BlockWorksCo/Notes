@@ -40205,16 +40205,14 @@ sound latency clicking ubuntu
 https://askubuntu.com/questions/475987/a2dp-on-pulseaudio-terrible-choppy-skipping-audio
 
 pactl list | grep -Pzo '.*bluez_card(.*\n)*'
-pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-output 250
-pactl list | grep -Pzo '.*bluez_card(.*\n)*'
-pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-output 2500
-pactl list | grep -Pzo '.*bluez_card(.*\n)*'
-sudo service bluetooth restart
 pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-output 45000
-sudo service bluetooth restart
-history
-pactl list | grep -Pzo '.*bluez_card(.*\n)*'
 pactl set-port-latency-offset bluez_card.78_2B_64_16_94_F5 headphone-input 45000
+sudo service bluetooth restart
+
+
+pactl list | grep -Pzo '.*bluez_card(.*\n)*'
+pactl set-port-latency-offset bluez_card.AC_12_2F_50_79_36 headset-input 45000
+pactl set-port-latency-offset bluez_card.AC_12_2F_50_79_36 headset-output 45000
 sudo service bluetooth restart
 
 
