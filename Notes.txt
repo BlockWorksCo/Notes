@@ -40221,6 +40221,9 @@ sudo service bluetooth restart
 perf test bed doc review
 
 
+--------------------------------------
+fernando sla scripts
+use fio to compare IOPS between SQLite & MySQL.
 
 
 
