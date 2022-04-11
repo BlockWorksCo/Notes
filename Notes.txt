@@ -40232,6 +40232,15 @@ perf test bed review
 modular tests for individual modules.
 kernel based load balancer in deployed
 
+-------------------------------------------------
+I2C debug
+
+https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf
+
+- FT232H allows I2C master and slave.
+- FT232H dev boards cost ~ £10
+- connect pull ups from SCL and SDA to 3v3.
+- Connect DO & D1 together to allow reading and writing of SDA
 
 
 
