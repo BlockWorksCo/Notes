@@ -40242,5 +40242,9 @@ https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf
 - connect pull ups from SCL and SDA to 3v3.
 - Connect DO & D1 together to allow reading and writing of SDA
 
+- PC acts as second master on the bus in multi-master arrangement.
+- PC can send coap requests to Agent.
+- Agent can send coap responses to PC.
+
 
 
