@@ -40252,4 +40252,7 @@ https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf
 -----------------------------------------------------
 vagrant & ansible
 
+pip3 install --ignore-installed PyYAML==3.12
+pip3 install ca
+
 
