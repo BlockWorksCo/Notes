@@ -40265,7 +40265,8 @@ statsd:
 
 collectd:
 - lots of useful plugins https://collectd.org/wiki/index.php/Table_of_Plugins
--
+- including IOPS, CPU user&sys, filehandles, RAM stats, JMZ and Java integration.
+
 
 prometheus:
 - PULL model (active).
