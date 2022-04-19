@@ -40267,6 +40267,7 @@ collectd:
 - lots of useful plugins https://collectd.org/wiki/index.php/Table_of_Plugins
 - including IOPS, CPU user&sys, filehandles, RAM stats, JMZ and Java integration.
 - interrupts, context-switches, IP tables, IPVS, netlink (interfaces), MySQL and DBI for db stats.
+- syslog, vmem
 
 
 prometheus:
