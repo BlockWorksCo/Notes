@@ -40264,7 +40264,9 @@ statsd:
 - PUSH model (passive)
 
 collectd:
+- lots of useful plugins https://collectd.org/wiki/index.php/Table_of_Plugins
 -
+
 prometheus:
 - PULL model (active).
 - Grafana for viz.
