@@ -40271,6 +40271,9 @@ collectd:
 - PUSH model.
 - Java, C & Python integration.
 - https://collectd.org/features.shtml
+- kcollectd
+- collectd-web
+- grafana or Kibana via ElasticSearch.
 
 
 prometheus:
