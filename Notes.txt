@@ -40255,4 +40255,18 @@ vagrant & ansible
 pip3 install --ignore-installed PyYAML==3.12
 pip3 install ca
 
+------------------------------------------------------------
+KPI database
+
+statsd:
+- Java library https://metrics.dropwizard.io/3.1.0/getting-started/
+- sqlite backend https://github.com/ttogola/statsd-sqlite-backend
+
+collectd:
+-
+proetheus:
+-
+
+
+
 
