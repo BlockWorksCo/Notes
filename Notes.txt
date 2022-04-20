@@ -40293,6 +40293,7 @@ prometheus:
 ---------------------------------------------
 invalidDtlsPacket
 
+MAC failure after decrypt. MAC incorporates an element of epoch which is updated on re-keying.
 
 
 
