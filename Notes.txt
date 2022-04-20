@@ -40275,6 +40275,8 @@ collectd:
 - collectd-web
 - grafana or Kibana via ElasticSearch.
 - Collectd & MySQL https://anomaly.io/sql-monitoring-collectd/index.html
+- collectd data from command line https://adl1995.github.io/plotting-graphical-data-using-rrdtool-and-a-python-collectd-plugin.html
+
 
 
 
