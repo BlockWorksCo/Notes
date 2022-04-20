@@ -40274,6 +40274,8 @@ collectd:
 - kcollectd
 - collectd-web
 - grafana or Kibana via ElasticSearch.
+- Collectd & MySQL https://anomaly.io/sql-monitoring-collectd/index.html
+
 
 
 prometheus:
