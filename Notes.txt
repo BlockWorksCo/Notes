@@ -40248,5 +40248,12 @@ https://ftdichip.com/wp-content/uploads/2020/08/DS_FT232R.pdf
 
 - Can also be used on all existing boards that expose I2C (e.g. CNIC7, GW200, IPA3, IPA3B).
 
+------------------------------------------------
+virtualbox nested vt-x virtualisation
+
+vboxmanage list vms
+vboxmanage modifyvm "Ubuntu20" --neted-hw-virt on
+
+
 
 
