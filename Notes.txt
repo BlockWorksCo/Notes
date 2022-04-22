@@ -40256,4 +40256,51 @@ vboxmanage modifyvm "Ubuntu20" --neted-hw-virt on
 
 
 
+-----------------------------------------------------
+vagrant & ansible
+
+pip3 install --ignore-installed PyYAML==3.12
+pip3 install ca
+
+------------------------------------------------------------
+KPI database
+
+statsd:
+- Java library https://metrics.dropwizard.io/3.1.0/getting-started/
+- sqlite backend https://github.com/ttogola/statsd-sqlite-backend
+- PUSH model (passive)
+
+collectd:
+- lots of useful plugins https://collectd.org/wiki/index.php/Table_of_Plugins
+- including IOPS, CPU user&sys, filehandles, RAM stats, JMX and Java integration.
+- interrupts, context-switches, IP tables, IPVS, netlink (interfaces), MySQL and DBI for db stats.
+- syslog, vmem
+- PUSH model.
+- Java, C & Python integration.
+- https://collectd.org/features.shtml
+- kcollectd
+- collectd-web
+- grafana or Kibana via ElasticSearch.
+- Collectd & MySQL https://anomaly.io/sql-monitoring-collectd/index.html
+- collectd data from command line https://adl1995.github.io/plotting-graphical-data-using-rrdtool-and-a-python-collectd-plugin.html
+- rrdtool chart examples https://oss.oetiker.ch/rrdtool/gallery/index.en.html
+- python rrdtool bindings https://pythonhosted.org/rrdtool/usage.html
+
+
+
+
+
+
+prometheus:
+- PULL model (active).
+- Grafana for viz.
+-
+
+
+---------------------------------------------
+invalidDtlsPacket
+
+MAC failure after decrypt. MAC incorporates an element of epoch which is updated on re-keying.
+
+
 
