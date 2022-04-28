@@ -40303,4 +40303,18 @@ invalidDtlsPacket
 MAC failure after decrypt. MAC incorporates an element of epoch which is updated on re-keying.
 
 
+----------------------------------------------------
+SEI
+
+How much time  should wait before allowing the OBIS to read :Cyan
+  Node can read from meter from about 5 seconds after startup. Other meter read/write activity will be occurring at that time tho while in production mode.
+
+
+
+From startup, node can start talking to meter after ~5 seconds.
+Node will write EUI64, firmware-version into meter ASAP after startup.
+From startup, node can start talking to the modem after ~25 seconds.
+Node will read IMEI,ICCID,MSISDN from modem and write into meter.
+From then on, Node can poll the modem periodically to obtain RSSI, RSRQ, RSRP and write values into meter @ ~ 5sec intervals.
+Data from modem can be packed into a structure and sent to modem in one write.
 
