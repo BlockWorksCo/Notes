@@ -40318,3 +40318,11 @@ Node will read IMEI,ICCID,MSISDN from modem and write into meter.
 From then on, Node can poll the modem periodically to obtain RSSI, RSRQ, RSRP and write values into meter @ ~ 5sec intervals.
 Data from modem can be packed into a structure and sent to modem in one write.
 
+Propose that we have the following registers (OBIS):
+- Standard existing OBIS codes for EUI64, etc that are already present.
+- An OBIS for the static "From modem" values in a structure format (IMEI, ICCID, MSISDN). Written to meter once.
+- An OBIS for the dynamic "from modem" values in a structure format (RSSI, RSRQ, RSRP). Written to meter periodically during initial 5 minutes.
+- An OBIS for meter configuration in a structure format (APN, user, pw, authmethod(PAP/CHAP/None) )
+
+
+
