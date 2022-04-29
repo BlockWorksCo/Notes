@@ -40331,6 +40331,11 @@ Design protocol for control of GPIOs DevStat, etc from test system.
 writing "TEST" to test register disables production mode.
 
 
+-------------------------------------------
+contractor shortlist:
+- Atif Maqsood
+- Jonathan Commley
+
 
 
 
