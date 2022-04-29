@@ -40330,11 +40330,12 @@ Design protocol for control of GPIOs DevStat, etc from test system.
 20s is too long for modem startup, they say currently 8s.
 writing "TEST" to test register disables production mode.
 
-
 -------------------------------------------
 contractor shortlist:
+- Phil Speller (L&G)
 - Atif Maqsood
-- Jonathan Commley
+- Jonathan Comley
+- John Morgan
 
 
 
