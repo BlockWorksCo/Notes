@@ -40360,4 +40360,21 @@ TODO:
 - schema
 - caching
 
+-------------------------------------------------
+Kaynes CNIC test API
+
+- Kaynes kit does physical testing of board.
+- Kaynes kit runs on Windows/LabView
+- Need API to control kit from MTS
+    - Initiate test
+    - Get test result
+    - Program image
+    - Pass through UART (for MTS to use for coap commands).
+- Specify JLink as programmer for possibly removing Kaynes s/w in future.
+- API possibly used for GW7 in future also.
+
+
+
+
+
 
