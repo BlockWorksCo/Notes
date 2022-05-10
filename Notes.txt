@@ -40374,6 +40374,12 @@ Kaynes CNIC test API
 - API possibly used for GW7 in future also.
 
 
+-------------------------------------------------
+modem startup times:
+
+Telit LE910 - 2sec
+Neoway N58  - 9 (+10s?)
+Ublox L280  - 20
 
 
 
