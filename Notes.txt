@@ -40386,6 +40386,13 @@ Ublox L280  - 20
 6000000000383aff fe800000000000000000000000000002 ff020000000000000000000000000001 8600be75ff00ffff000000000000000003044040ffffffffffffffff00000000200144900c000001000000000000000005010000000005b8
 
 
+-------------------------------
+Does TOBY-L2 support IPv6??
+
+From AT reference for CGDCONT (define PDP context):
+"Since dial-up supports only IPv4 connectivity, the defined IPv6 EPS bearers / PDP contexts will not be used."
+
+
 
 
 
