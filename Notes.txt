@@ -40392,6 +40392,11 @@ Does TOBY-L2 support IPv6??
 From AT reference for CGDCONT (define PDP context):
 "Since dial-up supports only IPv4 connectivity, the defined IPv6 EPS bearers / PDP contexts will not be used."
 
+----------------------------------------
+JIO:
+config modem.use_initial_default_EPS_bearer 1
+
+BSNL:
 
 
 
