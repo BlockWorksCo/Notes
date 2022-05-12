@@ -40349,12 +40349,13 @@ TODO:
 - TestBed
 
 ------------------------------------------------
-- networking
+- networking, TCP, UDP, packet loss, TCP windowing, latency, queueing
+- testing approach.
 - load balancing
 - sharding vertical/horizontal partitioning
 - server design example
 - docker/VM
-- performance testing
+- performance testing, critical measurements? I/O, CPU bound.
 - approach to threading, considerations (No of cores, available concurrency, locality/caching, cpu affinity).
 - optimisation (RAM, speed, latency)
 - schema
