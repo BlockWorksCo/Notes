@@ -40406,9 +40406,18 @@ embedded interview:
 - interrupts, exceptions, differences.
 - RTOSs, priorities, threads
 - Linux, pipes, processes vs threads. paging.
-- Networking, TCP, UDP, latency, reordering, resource consumption, applications
+- Networking, TCP, UDP, latency, reordering, resource consumption, applications, ARP, address allocation
 - example, high throughput, no timing requirements, low data rate strict timing requirements
 - flash, eeprom
+- Protocols, CRC, retrying, windowing.
+- testing, automating embedded targets, unit testing, fuzzing, end-to-end, CI.
+- RF,
+- cellular, AT commands, LCP, IPCP, PPP
 
+Team:
+- Process
+- mentoring
+- requirements capture, derived requirements?
+- documentation
 
 
