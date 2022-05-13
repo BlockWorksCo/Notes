@@ -40400,6 +40400,15 @@ config modem.use_initial_default_EPS_bearer 1
 BSNL:
 
 
+------------------------------------
+embedded interview:
+- SPI, I2C, compare, comtrast, multi-master mode
+- interrupts, exceptions, differences.
+- RTOSs, priorities, threads
+- Linux, pipes, processes vs threads. paging.
+- Networking, TCP, UDP, latency, reordering, resource consumption, applications
+- example, high throughput, no timing requirements, low data rate strict timing requirements
+- flash, eeprom
 
 
 
