@@ -40434,4 +40434,19 @@ The CPU1 is only able to page erase the non-secure part of the user flash.
 The secure CPU2 is able to page erase both the secure and non-secure parts of the user
 flash memory.
 
+FLASH_OPTR reggister
+Bit 8 ESE: System security enabled flag.
+Indicates whether the system security is enabled user flash memory FSD = 0.
+0: Security disabled
+1: Security enabled
+
+CPU2 security (ESE)
+All or a part of the flash memory and the SRAM2a and SRAM2b can be made secure,
+exclusively accessible by the CPU2, protected against execution, read and write from third
+parties. Only the CPU2 can execute, read and write in these areas. It can only be reached
+by the CPU2, while all other accesses (CPU1 and DMA) are strictly prohibited.
+
+
+
+
 
