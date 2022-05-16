@@ -40446,6 +40446,11 @@ exclusively accessible by the CPU2, protected against execution, read and write 
 parties. Only the CPU2 can execute, read and write in these areas. It can only be reached
 by the CPU2, while all other accesses (CPU1 and DMA) are strictly prohibited.
 
+Bits 8 FSD: Flash memory security disabled.
+1: System and flash memory non-secure
+0: System and flash memory secure (the secure area of the flash memory is given by
+SFSA)
+
 
 
 
