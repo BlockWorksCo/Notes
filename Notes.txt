@@ -40420,4 +40420,18 @@ Team:
 - requirements capture, derived requirements?
 - documentation
 
+-----------------------------------------
+stm32wb50cg
+
+section 3.3.7:
+
+Flash main memory erase sequences
+The flash memory erase operation can be performed at page level (page erase), or on the
+whole memory (mass erase). Mass erase does not affect the Information block (system
+flash, OTP and option bytes).
+Flash memory page erase
+The CPU1 is only able to page erase the non-secure part of the user flash.
+The secure CPU2 is able to page erase both the secure and non-secure parts of the user
+flash memory.
+
 
