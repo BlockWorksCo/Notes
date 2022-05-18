@@ -40416,6 +40416,8 @@ embedded interview:
 - testing, automating embedded targets, unit testing, fuzzing, end-to-end, CI.
 - RF,
 - cellular, AT commands, LCP, IPCP, PPP
+- priority inversion.
+- internal vs external errors.
 
 Team:
 - Process
