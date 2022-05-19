@@ -40474,5 +40474,11 @@ ffffffff00000000240502032a0000f9
                                                                                    RA code chk  hoplim flags lifetime reachable retrans  option(prefix) len(32) prefixlen(64) rsvd valid    preferred rsvd     prefix                           option(MTU) len(8) mtu(1500)
 
 
+ETSI:
+If some external applications require RADIUS Accounting request (Start) information before they can process user
+packets, then the selected W-APN (PDG) may be configured in such a way that the PDG drops user data until the
+Accounting Response (START) is received from the AAA server.
+
+
 
 
