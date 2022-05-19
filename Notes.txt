@@ -40470,6 +40470,9 @@ ffffffff00000000240502032a0000f9
 000000000000000005010000000005dc
 
 
-6280000000383aff fe8000000000000000000001170e98a5 fe800000000000000000000000000003 86 00   3090 00     00    fd20     00000000  00000000 03             04      4040 ffffffffffffffff00000000 240502032a0000f90000000000000000 05          01     0000000005dc
-                                                                                   RA code chk  hoplim flags lifetime reachable retrans  option(prefix) len(32)      prefix mask              prefix                           option(MTU) len(8) mtu
+6280000000383aff fe8000000000000000000001170e98a5 fe800000000000000000000000000003 86 00   3090 00     00    fd20     00000000  00000000 03             04      40            40   ffffffff ffffffff  00000000 240502032a0000f90000000000000000 05          01     0000000005dc
+                                                                                   RA code chk  hoplim flags lifetime reachable retrans  option(prefix) len(32) prefixlen(64) rsvd valid    preferred rsvd     prefix                           option(MTU) len(8) mtu(1500)
+
+
+
 
