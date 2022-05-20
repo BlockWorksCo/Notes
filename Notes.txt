@@ -40457,6 +40457,7 @@ Bits 8 FSD: Flash memory security disabled.
 SFSA)
 
 
+920KB should be avail
 
 
 -----------------------------------
