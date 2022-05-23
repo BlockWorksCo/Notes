@@ -29224,9 +29224,9 @@ mbedtls=EUK0-112-1
 
 
         8/4   - holiday
-        15/4  - SW+
-        22/4  - SW+
-        29/4  - SW+
+        15/4  - SW+general(interviews)
+        22/4  - SW+general(interviews)
+        29/4  - SW+general(interviews)
 -------------------------------------------------
 dev-stack
 dev-stack --datadir /Data/Temp/DevStack/.data --pkgdir /Data/Temp/DevStack/pkg setup -n 1 -s 1 -a 1
