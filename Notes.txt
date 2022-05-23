@@ -40346,7 +40346,7 @@ StaticDataToNode (polled by node every 10s):
 - username
 - password
 - authentication method (CHAP/PAP/etc)
-- test identifier
+- test identifier (change from "" to terminate test).
 
 
 -------------------------------------------
