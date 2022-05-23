@@ -40324,11 +40324,30 @@ Propose that we have the following registers (OBIS):
 - An OBIS for the dynamic "from modem" values in a structure format (RSSI, RSRQ, RSRP). Written to meter periodically by node during initial 5 minutes.
 - An OBIS for meter configuration in a structure format (APN, user, pw, authmethod(PAP/CHAP/None) ). written to by test software and ready by node periodically until non-NULL.
 
-
 Add Test identifier register to "meter config" register.
 Design protocol for control of GPIOs DevStat, etc from test system.
 20s is too long for modem startup, they say currently 8s.
 writing "TEST" to test register disables production mode.
+
+
+StaticDataFromNode:
+- IMEI
+- ICCID
+- MSISDN
+
+DynamicDataFromNode (written once every 20s):
+- RSSI
+- RSRW
+- RSRP
+- test identifier (to verify update)
+
+StaticDataToNode (polled by node every 10s):
+- APN
+- username
+- password
+- authentication method (CHAP/PAP/etc)
+- test identifier
+
 
 -------------------------------------------
 contractor shortlist:
