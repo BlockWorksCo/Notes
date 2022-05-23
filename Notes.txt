@@ -40336,12 +40336,14 @@ Design protocol for control of GPIOs DevStat, etc from test system.
 writing "TEST" to test register disables production mode.
 
 
-StaticDataFromNode:
+One OBIS each for:
+
+StaticDataFromNode (written by node once after startup):
 - IMEI
 - ICCID
 - MSISDN
 
-DynamicDataFromNode (written once every 20s):
+DynamicDataFromNode (written by node once every 20s):
 - RSSI
 - RSRW
 - RSRP
