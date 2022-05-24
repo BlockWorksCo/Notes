@@ -40511,4 +40511,8 @@ Accounting Response (START) is received from the AAA server.
 Has there been any traffic recorded against that SIM? has it been activated?
 
 
+---------------------------------------------
+partitioning:
+
+panmesh/mysql_partitioning.pl
 
