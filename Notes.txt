@@ -40528,5 +40528,8 @@ https://confluence.cyco.io/pages/viewpage.action?pageId=89686485
 repo:
 https://gitlab.cyco.io/Omnimesh/prod-tools
 
+-------------------------------------------------------
+CNIC manufacturing estimate:
+
 
 
