@@ -40578,7 +40578,15 @@ Tasks:
 - implement reading of modem IMEI and writing into meter register (3d)
 - implement reading of modem ICCID and writing into meter register (1d)
 - implement reading of modem MSISDN and writing into meter register (1d)
-- implement reading of modem RSSI and writing into meter register (1d)
+- implement reading of modem RSSI and writing into meter register (2d)
 - implement reading of modem RSRW and writing into meter register (1d)
 - implement reading of modem RSRP and writing into meter register (1d)
+- Implement writing of TestID into meter register (1d)
+- Implement polling for TestID and disabling of production-mode (1d)
+- Implement polling of modem config parameters from registers and setting into node (3d)
+- Testing of the above (5d)
+
+Total ~21 days
+
+
 
