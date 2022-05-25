@@ -40573,4 +40573,12 @@ StaticDataToNode (polled by node every 10s):
 - test identifier (change from "" to terminate test).
 
 
+Tasks:
+- define and share structures for registers (2 days)
+- implement reading of modem IMEI and writing into meter register (3d)
+- implement reading of modem ICCID and writing into meter register (1d)
+- implement reading of modem MSISDN and writing into meter register (1d)
+- implement reading of modem RSSI and writing into meter register (1d)
+- implement reading of modem RSRW and writing into meter register (1d)
+- implement reading of modem RSRP and writing into meter register (1d)
 
