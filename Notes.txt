@@ -40315,8 +40315,6 @@ SEI/CNIC production test.
 How much time  should wait before allowing the OBIS to read :Cyan
   Node can read from meter from about 5 seconds after startup. Other meter read/write activity will be occurring at that time tho while in production mode.
 
-
-
 From startup, node can start talking to meter after ~5 seconds.
 Node will write EUI64, firmware-version into meter ASAP after startup.
 From startup, node can start talking to the modem after ~25 seconds.
@@ -40530,6 +40528,49 @@ https://gitlab.cyco.io/Omnimesh/prod-tools
 
 -------------------------------------------------------
 CNIC manufacturing estimate:
+
+
+How much time  should wait before allowing the OBIS to read :Cyan
+  Node can read from meter from about 5 seconds after startup. Other meter read/write activity will be occurring at that time tho while in production mode.
+
+From startup, node can start talking to meter after ~5 seconds.
+Node will write EUI64, firmware-version into meter ASAP after startup.
+From startup, node can start talking to the modem after ~25 seconds.
+Node will read IMEI,ICCID,MSISDN from modem and write into meter.
+From then on, Node can poll the modem periodically to obtain RSSI, RSRQ, RSRP and write values into meter @ ~ 5sec intervals.
+Data from modem can be packed into a structure and sent to modem in one write.
+
+Propose that we have the following registers (OBIS):
+- Standard existing OBIS codes for EUI64, etc that are already present.
+- An OBIS for the static "From modem" values in a structure format (IMEI, ICCID, MSISDN). Written to meter once by node.
+- An OBIS for the dynamic "from modem" values in a structure format (RSSI, RSRQ, RSRP). Written to meter periodically by node during initial 5 minutes.
+- An OBIS for meter configuration in a structure format (APN, user, pw, authmethod(PAP/CHAP/None) ). written to by test software and ready by node periodically until non-NULL.
+
+Add Test identifier register to "meter config" register.
+Design protocol for control of GPIOs DevStat, etc from test system.
+20s is too long for modem startup, they say currently 8s.
+writing "TEST" to test register disables production mode.
+
+
+One OBIS each for:
+
+StaticDataFromNode (written by node once after startup):
+- IMEI
+- ICCID
+- MSISDN
+
+DynamicDataFromNode (written by node once every 20s):
+- RSSI
+- RSRW
+- RSRP
+- test identifier (to verify update)
+
+StaticDataToNode (polled by node every 10s):
+- APN
+- username
+- password
+- authentication method (CHAP/PAP/etc)
+- test identifier (change from "" to terminate test).
 
 
 
