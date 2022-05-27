@@ -40589,4 +40589,9 @@ Tasks:
 Total ~21 days
 
 
+-----------------------------------------------
+performance test bed
+
+pytest --log-cli-level DEBUG
+
 
