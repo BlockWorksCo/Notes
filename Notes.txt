@@ -40573,6 +40573,10 @@ Contents are a structure containing all othe following:
 - username
 - password
 - authentication method (CHAP/PAP/etc)
+- PIN
+- lte.use_additional_pdp
+- lte.use_default_apn
+- rat.3g_preferred
 - test identifier (change from "" to terminate test).
 
 So, 3 OBIS codes for the above data, two that are written once (static) and one dynamic.
