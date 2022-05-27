@@ -40594,4 +40594,6 @@ performance test bed
 
 pytest --log-cli-level DEBUG
 
+dev-stack setup -p omnimesh -n 1 -s 1 -e -a 0 -gw 0
+
 
