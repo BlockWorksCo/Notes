@@ -40589,6 +40589,10 @@ Tasks:
 - implement reading of modem RSSI and writing into meter register (2d)
 - implement reading of modem RSRW and writing into meter register (1d)
 - implement reading of modem RSRP and writing into meter register (1d)
+- PIN
+- lte.use_additional_pdp
+- lte.use_default_apn
+- rat.3g_preferred
 - Implement writing of TestID into meter register (1d)
 - Implement polling for TestID and disabling of production-mode (1d)
 - Implement polling of modem config parameters from registers and setting into node (3d)
