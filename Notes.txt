@@ -40608,4 +40608,14 @@ pytest --log-cli-level DEBUG
 
 dev-stack setup -p omnimesh -n 1 -s 1 -e -a 0 -gw 0
 
+--------------------------------------
+garmin sdk
+
+openssl genrsa -out developer_key.pem 4096
+openssl pkcs8 -topk8 -inform PEM -outform DER -in developer_key.pem -out developer_key.der -nocrypt
+
+monkeyc -f monkey.jungle -o a.prg -y ~/.Garmin/ConnectIQ/developer_key.der
+
+
+
 
