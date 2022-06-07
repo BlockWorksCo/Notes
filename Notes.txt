@@ -40650,5 +40650,18 @@ cyanconnode@CC-X121e-001:~/SteveT$
 1251,3,50,50,0017,00c4025,80,00000000,ffff,ff,67,24,11.00,255,255,255,67,255,255,0,255,255,0,0
 OK
 
+<mode>= 2, <rat>= 4:
++UCGED: 2
+4,<svc>,<MCC>,<MNC>
+<earfcn>,<Lband>,<ul_BW>,
+<dl_BW>,<tac>,<LcellId>,<P-
+CID>,<mTmsi>,<mmeGrId>,
+<mmeCode>, <rsrp>,<rsrq>,
+<Lsinr>,<Lrrc>,<RI>,<CQI>,
+<avg_rsrp>,<totalPuschPwr>,
+<avgPucchPwr>,<drx>, <l2w>,
+<volte_mode>[,<meas_gap>,<tti_
+bundling>]
+
 
 
