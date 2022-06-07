@@ -40634,4 +40634,9 @@ PDP contexts. The counter is reset only with module reset. The range goes from 0
 
 
 
+~/c4-agent-tools-v115/coap_request.py --ctrlporthub :4001 --modem-at-cmd AT+UCGED=?
+2022-06-07 19:30:32,477 ctrlport : Connecting to ctrlporthub on localhost:4001
+b'+UCGED: (0,2)\nOK\n'
+
+
 
