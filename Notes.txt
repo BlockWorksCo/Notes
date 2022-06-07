@@ -40616,6 +40616,22 @@ openssl pkcs8 -topk8 -inform PEM -outform DER -in developer_key.pem -out develop
 
 monkeyc -f monkey.jungle -o a.prg -y ~/.Garmin/ConnectIQ/developer_key.der
 
+-----------------------------------
+ublox sara modem:
+
+SARA-R4 series - AT commands manual
+UBX-17003787 - R23
+C1-Public
+7 Network service Page 73 of 515
+Parameter Type Description
+• 255: unknown
+<UL_IPcounter> Number Counter of the uplink IP packets; it reports the aggregated value from all active PDP
+contexts. The counter is reset only with module reset. The range goes from 0 to
+4294967295.
+<DL_IPcounter> Number Counter of the downlink IP packets; it reports the aggregated value from all active
+PDP contexts. The counter is reset only with module reset. The range goes from 0 to
+4294967295.
+
 
 
 
