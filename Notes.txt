@@ -40663,5 +40663,9 @@ CID>,<mTmsi>,<mmeGrId>,
 <volte_mode>[,<meas_gap>,<tti_
 bundling>]
 
+--------------------------------------
+android test secret code:
+*#*#4636*#*#
+
 
 
