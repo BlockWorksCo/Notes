@@ -40667,5 +40667,10 @@ bundling>]
 android test secret code:
 *#*#4636*#*#
 
+---------------------------------------
+ipv6 gateway TOBY ublox at commands
+
+AT+UUSORF (recvFrom)
+AT+USOST (sendTo)
 
 
