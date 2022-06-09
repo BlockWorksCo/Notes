@@ -40679,4 +40679,5 @@ must be in bridge mode (UBMCONF:1 UDPDP: 1)
 
 maximum of 7 sockets.
 
+ping can be +UPING
 
