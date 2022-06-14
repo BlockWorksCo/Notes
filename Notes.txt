@@ -40681,3 +40681,9 @@ maximum of 7 sockets.
 
 ping can be +UPING
 
+
+TOBY-L210-62S / TOBY-L210-65S
+Only a single data PDP context (both internal and external) is allowed: the parameter can be set to "IPV4"
+only.
+
+
