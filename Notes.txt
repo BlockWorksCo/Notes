@@ -40569,15 +40569,15 @@ Contents are a structure containing all othe following:
 
 StaticDataToNode (polled by node every 10s):
 Contents are a structure containing all othe following:
-- APN
-- username
-- password
-- authentication method (CHAP/PAP/etc)
-- PIN
-- lte.use_additional_pdp
-- lte.use_default_apn
-- rat.3g_preferred
-- test identifier (change from "" to terminate test).
+- APN (64 byte string)
+- username (32 byte string)
+- password (32 byte string)
+- authentication method (CHAP/PAP/etc) (8 bit integer)
+- PIN (16 byte string)
+- lte.use_additional_pdp (boolean)
+- lte.use_default_apn (boolean)
+- rat.3g_preferred (boolean)
+- test identifier (change from "" to terminate test). (64 bytes string).
 
 So, 3 OBIS codes for the above data, two that are written once (static) and one dynamic.
 
