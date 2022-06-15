@@ -40686,4 +40686,10 @@ TOBY-L210-62S / TOBY-L210-65S
 Only a single data PDP context (both internal and external) is allowed: the parameter can be set to "IPV4"
 only.
 
+-----------------------------------------
+ipv4 at commands ipv6 equivalent.
+
+build/host-tools/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0 -controllerport 4000 -loglevel debug | ag at_chat
+
+
 
