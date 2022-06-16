@@ -40691,5 +40691,11 @@ ipv4 at commands ipv6 equivalent.
 
 build/host-tools/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0 -controllerport 4000 -loglevel debug | ag at_chat
 
+-----------------------------------------
+listen on AT command socket:
+
+AT+USOLI=<socket>,<port>
+then AT+USORF
+
 
 
