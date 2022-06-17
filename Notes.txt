@@ -40698,6 +40698,7 @@ AT+USOLI=<socket>,<port>
 then AT+USORF
 
 
+
 atChatCmd (null)
 atChatCmd (null)
 atChatCmd AT
@@ -40705,17 +40706,6 @@ rx: AT
 OK
 atChatCmd AT+CMEE=2
 rx: AT+CMEE=2
-OK
-atChatCmd AT+UBMCONF?
-rx: AT+UBMCONF?
-+UBMCONF: 2
-OK
-atChatCmd AT+UBMCONF=2
-rx: AT+UBMCONF=2
-OK
-atChatCmd AT+UBMCONF?
-rx: AT+UBMCONF?
-+UBMCONF: 2
 OK
 atChatCmd AT+CGDCONT=8,"IP","wlapn4.com"
 rx: AT+CGDCONT=8,"IP","wlapn4.com"
@@ -40725,9 +40715,14 @@ atChatCmd AT+UAUTHREQ=8,1,"cyan","cyan"
 rx: AT+UAUTHREQ=8,1,"cyan","cyan"
 +CME ERROR: Unknown error
 cmd 'AT+UAUTHREQ=8,1,"cyan","cyan"' failed: +CME ERROR: Unknown error
-atChatCmd AT+COPS?
-rx: AT+COPS?
-+COPS: 0
+atChatCmd AT+COPS=?
+
+
+
+
+rx: AT+COPS=?
++COPS: (1,"vodafone UK","voda UK","23415",0),(1,"vodafone UK","voda UK","23415",7),(3,"EE","EE","23430",7),
+
 OK
 atChatCmd AT+CGACT=1,8
 rx: AT+CGACT=1,8
@@ -40735,8 +40730,8 @@ rx: AT+CGACT=1,8
 cmd 'AT+CGACT=1,8' failed: +CME ERROR: operation not allowed
 atChatCmd AT+CGDCONT?
 rx: AT+CGDCONT?
-+CME ERROR: SIM PIN required
-cmd 'AT+CGDCONT?' failed: +CME ERROR: SIM PIN required
++CGDCONT: 1,"IP","wlapn4.com","",0,0,0,0,0,0
+OK
 atChatCmd AT+UPSD=0,100,8
 rx: AT+UPSD=0,100,8
 OK
@@ -40747,10 +40742,7 @@ atChatCmd AT+UPSD=0,1,"wlapn4.com"
 rx: AT+UPSD=0,1,"wlapn4.com"
 OK
 atChatCmd AT+UPSDA=0,3
-rx: AT+UPSDA=0,3
-+CME ERROR: SIM failure
-cmd 'AT+UPSDA=0,3' failed: +CME ERROR: SIM failure
-atChatCmd AT+UDNSRN=0,"echo.u-blox.com"
+
 
 
 
