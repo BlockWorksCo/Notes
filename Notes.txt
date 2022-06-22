@@ -40567,7 +40567,8 @@ Contents are a structure containing all othe following:
 - RSSI
 - RSRW
 - RSRP
-- test identifier (to verify update)
+- testIdentifier (64-bytes, to verify update has completed from StaticDataToNode.testIdentifier)
+- GPIO status (16-bits/2-bytes, read from GPIOs and written into meter).
 
 StaticDataToNode (polled by node every 10s):
 Contents are a structure containing all othe following:
@@ -40579,7 +40580,7 @@ Contents are a structure containing all othe following:
 - lte.use_additional_pdp (boolean)
 - lte.use_default_apn (boolean)
 - rat.3g_preferred (boolean)
-- test identifier (change from "" to terminate test). (64 bytes string).
+- testIdentifier (change from "" to terminate test). (64 bytes string).
 
 So, 3 OBIS codes for the above data, two that are written once (static) and one dynamic.
 
