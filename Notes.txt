@@ -40791,5 +40791,85 @@ ipv6 gw certs:
 
 00-1B-C5-0C-60-06-75-08
 
+----------------------------------------------
+
+(gdb) source tools/gdb/walktasks.gdb
+tools/gdb/walktasks.gdb: No such file or directory.
+(gdb) source gdb/walktasks.gdb
+gdb/walktasks.gdb: No such file or directory.
+(gdb) source ~/SteveT/gdb/walktasks.gdb
+Redefine command "dumptcb"? (y or n) [answered Y; input not from terminal]
+(gdb) source ~/SteveT/gdb/walktasks.gdb
+Redefine command "dumptcb"? (y or n) [answered Y; input not from terminal]
+Redefine command "walktasklist"? (y or n) [answered Y; input not from terminal]
+Redefine command "walktasks"? (y or n) [answered Y; input not from terminal]
+Redefine command "backtracetask"? (y or n) [answered Y; input not from terminal]
+(gdb) walktasks
+=== Ready tasks (per prio)
+== Priority 0
+$1 = {uxNumberOfItems = 1, pxIndex = 0x2001756c <s_idleTcb+4>, xListEnd = {xItemValue = 4294967295, pxNext = 0x2001756c <s_idleTcb+4>,
+    pxPrevious = 0x2001756c <s_idleTcb+4>}}
+*** TASK IDLE, TCB at *(tskTCB*)0x20017568:
+Stack size: 70 B, current use: 20 B
+$2 = (void *) 0x3a116 <vApplicationIdleHook+2>
+== Priority 1
+$3 = {uxNumberOfItems = 0, pxIndex = 0x20018284 <pxReadyTasksLists+28>, xListEnd = {xItemValue = 4294967295,
+    pxNext = 0x20018284 <pxReadyTasksLists+28>, pxPrevious = 0x20018284 <pxReadyTasksLists+28>}}
+== Priority 2
+$4 = {uxNumberOfItems = 0, pxIndex = 0x20018298 <pxReadyTasksLists+48>, xListEnd = {xItemValue = 4294967295,
+    pxNext = 0x20018298 <pxReadyTasksLists+48>, pxPrevious = 0x20018298 <pxReadyTasksLists+48>}}
+== Priority 3
+$5 = {uxNumberOfItems = 0, pxIndex = 0x200182ac <pxReadyTasksLists+68>, xListEnd = {xItemValue = 4294967295,
+    pxNext = 0x200182ac <pxReadyTasksLists+68>, pxPrevious = 0x200182ac <pxReadyTasksLists+68>}}
+== Priority 4
+$6 = {uxNumberOfItems = 0, pxIndex = 0x200182c0 <pxReadyTasksLists+88>, xListEnd = {xItemValue = 4294967295,
+    pxNext = 0x200182c0 <pxReadyTasksLists+88>, pxPrevious = 0x200182c0 <pxReadyTasksLists+88>}}
+== Priority 5
+$7 = {uxNumberOfItems = 0, pxIndex = 0x200182d4 <pxReadyTasksLists+108>, xListEnd = {xItemValue = 4294967295,
+    pxNext = 0x200182d4 <pxReadyTasksLists+108>, pxPrevious = 0x200182d4 <pxReadyTasksLists+108>}}
+=== Delayed tasks
+*** TASK rpl, TCB at *(tskTCB*)0x200112a0:
+Stack size: 600 B, current use: 58 B
+$8 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK radio, TCB at *(tskTCB*)0x20016584:
+Stack size: 600 B, current use: 46 B
+$9 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK ethdrv, TCB at *(tskTCB*)0x200157e8:
+Stack size: 650 B, current use: 50 B
+$10 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK schedule, TCB at *(tskTCB*)0x20013a40:
+Stack size: 1000 B, current use: 44 B
+$11 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK dtls, TCB at *(tskTCB*)0x20000f00:
+Stack size: 650 B, current use: 52 B
+$12 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK terminal, TCB at *(tskTCB*)0x20017720:
+Stack size: 500 B, current use: 48 B
+$13 = (void *) 0x4bcac <xQueueGenericReceive+252>
+=== Delayed tasks overflow
+*** TASK ctrlport, TCB at *(tskTCB*)0x20012d70:
+Stack size: 400 B, current use: 42 B
+---Type <return> to continue, or q <return> to quit---
+$14 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK mac_rx, TCB at *(tskTCB*)0x20008af0:
+Stack size: 550 B, current use: 58 B
+$15 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK coap, TCB at *(tskTCB*)0x20000578:
+Stack size: 512 B, current use: 68 B
+$16 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK filedl, TCB at *(tskTCB*)0x20011df8:
+Stack size: 600 B, current use: 72 B
+$17 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK uplink_tx, TCB at *(tskTCB*)0x20003d98:
+Stack size: 800 B, current use: 42 B
+$18 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK modem, TCB at *(tskTCB*)0x200096a8:
+Stack size: 2000 B, current use: 44 B
+$19 = (void *) 0x4bcac <xQueueGenericReceive+252>
+*** TASK lowpan_tx, TCB at *(tskTCB*)0x200077d0:
+Stack size: 800 B, current use: 48 B
+$20 = (void *) 0x4bcac <xQueueGenericReceive+252>
+(gdb)
+
 
 
