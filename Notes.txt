@@ -40882,10 +40882,13 @@ sma/ucz2H45qttGh4J6o
 MTS test controller pc
 
 REST API
-- Identify devices under test (multiple)
-- Upload .elf
-- Program DUT using named image.
-- Perform named test suite (potentially multiple?)
+- GET Identify devices under test (multiple)
+- Create DUT group using specified devices
+- PUT Upload .elf
+- Program DUT group using named image.
+- Perform named test suite (potentially multiple?) on DUT group.
+- GET last test report for DUT group.
+
 
 
 
