@@ -40878,4 +40878,16 @@ https://omnidev-in-01.dev.cyanconnode.com/devices
 sma/ucz2H45qttGh4J6o
 
 
+------------------------------------------------------
+MTS test controller pc
+
+REST API
+- Identify devices under test (multiple)
+- Upload .elf
+- Program DUT using named image.
+- Perform named test suite (potentially multiple?)
+
+
+
+
 
