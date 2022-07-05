@@ -40887,11 +40887,11 @@ REST API
 - Identify devices under test (multiple)                            (GET /devices)
 - Upload .elf                                                       (POST /image/<name>)
 - Create DUT group using specified devices                          (POST /group/<name>)
-- Program DUT group using named image.                              (PUT /group/<id>/program)
-- Perform named test suite (potentially multiple?) on DUT group.    (PUT /group/<id>/execute)
+- Program DUT group using named image.                              (PUT /group/<groupid>/program)
+- Perform named test suite (potentially multiple?) on DUT group.    (PUT /group/<groupid>/execute)
 - Get last test report for DUT.                                     (GET /device/<id>/testreport)
-- Activate passthrough for log UART from specified DUT to MTS.      (POST /device/<id>/provisionlock)
-- Reinquish passthrough for log UART from specified DUT to MTS.     (DELETE /dut/<id>/provisionlock)
+- Activate passthrough of log UART from specified DUT to MTS.       (POST /device/<id>/provisionlock)
+- Reinquish passthrough of log UART from specified DUT to MTS.      (DELETE /device/<id>/provisionlock)
 
 
 
