@@ -40885,13 +40885,13 @@ REST API
 - Provide test jig status                                           (GET /status)
 - Get available TestSuites (1 for now)                              (GET /testuites)
 - Identify devices under test (multiple)                            (GET /devices)
-- Upload .elf                                                       (POST /image/<name>)
-- Create DUT group using specified devices                          (POST /group/<name>)
+- Upload .elf                                                       (POST /image/<imageid>)
+- Create DUT group using specified devices                          (POST /group/<groupid>)
 - Program DUT group using named image.                              (PUT /group/<groupid>/program)
 - Perform named test suite (potentially multiple?) on DUT group.    (PUT /group/<groupid>/execute)
-- Get last test report for DUT.                                     (GET /device/<id>/testreport)
-- Activate passthrough of log UART from specified DUT to MTS.       (POST /device/<id>/provisionlock)
-- Reinquish passthrough of log UART from specified DUT to MTS.      (DELETE /device/<id>/provisionlock)
+- Get last test report for DUT.                                     (GET /device/<deviceid>/testreport)
+- Activate passthrough of log UART from specified DUT to MTS.       (POST /device/<deviceid>/provisionlock)
+- Reinquish passthrough of log UART from specified DUT to MTS.      (DELETE /device/<deviceid>/provisionlock)
 
 
 
