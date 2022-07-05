@@ -40886,8 +40886,8 @@ REST API
 - GET Identify devices under test (multiple)
 - POST Create DUT group using specified devices
 - POST Upload .elf
-- Program DUT group using named image.
-- Perform named test suite (potentially multiple?) on DUT group.
+- Program DUT group using named image. (PUT /testsuite/full/execute)
+- Perform named test suite (potentially multiple?) on DUT group. (PUT /testsuite/<name>/execute)
 - GET last test report for DUT group.
 
 
