@@ -40893,6 +40893,34 @@ REST API
 - Activate passthrough of log UART from specified DUT to MTS.       (POST /device/<deviceid>/provisionlock)
 - Reinquish passthrough of log UART from specified DUT to MTS.      (DELETE /device/<deviceid>/provisionlock)
 
+------------------------------------------------------
+crash
+
+#0  0x00034cfc in formatIPv4Address (format=0x2000bcc0 <s_modemTaskStack+10160>, value=<optimized out>, writer=0x2000bcb4 <s_modemTaskStack+10148>)
+    at src/platform/core/jprintf.c:574
+#1  jvsprintf (args=..., formatString=0x57e6d "Got IPv6 packet on %s from %p4:%u %zuB", writer=0x2000bcb4 <s_modemTaskStack+10148>)
+    at src/platform/core/jprintf.c:574
+#2  jvsnprintf (buf=buf@entry=0x200156ed <s_logBuf> "Got IPv6 packet on tunat from th 106\n", bufSize=bufSize@entry=200,
+    formatString=0x57e6d "Got IPv6 packet on %s from %p4:%u %zuB", formatString@entry=0x200044f8 <chunkCount.7769> "\001", args=..., args@entry=...)
+    at src/platform/core/jprintf.c:633
+#3  0x00034f92 in logFormatted (level=level@entry=cnd_LogLevelDebug, module=module@entry=0x57c30 "uplink-tunat",
+    format=0x57e6d "Got IPv6 packet on %s from %p4:%u %zuB") at src/platform/core/log.c:553
+#4  0x000160e4 in unchunk (iface=TUN_IF_TUNAT, src=0x0, dst=0x0, dstPort=<optimized out>, len=107,
+    buf=0x20004c14 <reconstructedPacket.7801> "\364`\n\276\"", srcPort=8050) at src/communication/uplink/uplink_tunat.c:269
+#5  tun6Receive (iface=TUN_IF_TUNAT, dst=<optimized out>, dstPort=8050, len=107, buf=0x20004c14 <reconstructedPacket.7801> "\364`\n\276\"",
+    srcPort=8050, src=<optimized out>) at src/communication/uplink/uplink_tunat.c:1129
+#6  tun6Receive (iface=<optimized out>, src=<optimized out>, dst=<optimized out>, srcPort=<optimized out>, dstPort=8050,
+    buf=0x20004c14 <reconstructedPacket.7801> "\364`\n\276\"", len=107) at src/communication/uplink/uplink_tunat.c:1109
+#7  0x000165bc in processReceivedURC (buf=<optimized out>) at src/communication/uplink/uplink_tunat.c:384
+#8  0x0001f1ca in processData (data=<optimized out>, cb=<optimized out>, cmd=<optimized out>) at src/communication/modem/at_chat.c:483
+#9  atChatCmd (cmd=cmd@entry=0x2000c038 <s_modemTaskStack+11048> "AT+USORF=0,512", cb=cb@entry=0x165f5 <atRecvFromCallback>, data=data@entry=0x0,
+    timeout=timeout@entry=100000) at src/communication/modem/at_chat.c:562
+#10 0x000168d8 in atRecvFrom (socketId=0) at src/communication/uplink/uplink_tunat.c:555
+#11 0x0001690a in atServiceReceiveQueue () at src/communication/uplink/uplink_tunat.c:411
+#12 0x0001e6fc in modemTask (arg=<optimized out>) at src/communication/modem/modem.c:3774
+#13 0x0004c384 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
+
+
 
 
 
