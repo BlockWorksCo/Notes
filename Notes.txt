@@ -40921,6 +40921,13 @@ crash
 #13 0x0004c384 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
 
 
+
+2022-07-08 16:39:38.656 #1   001bc50c60067509 <log> 0:02:06.159 [ERROR] [        osal] {    modem}: Timeout taking mutex, caller=0x1ed03
+2022-07-08 16:39:38.656 #1   001bc50c60067509 <log> 0:02:06.167 [panic] ======== Panic ========
+2022-07-08 16:39:38.656 #1   001bc50c60067509 <log> 0:02:06.167 [panic] osal_freertos:451, in task modem: Deadlock
+2022-07-08 16:40:05.885 #1   0000000000000000 <hub> 0:00:00.002 [ info] Expected message# 612 but got 1, node restarted?
+
+
 --------------------------------------------
 ipv6 gw outstanding
 
