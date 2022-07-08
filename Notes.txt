@@ -40921,6 +40921,14 @@ crash
 #13 0x0004c384 in pvTaskIncrementMutexHeldCount () at build/3pp/freertos/FreeRTOS/Source/tasks.c:4250
 
 
+--------------------------------------------
+ipv6 gw outstanding
+
+- low power mode
+- fallback from cellular to ethernet (and vice versa)
+- migration (from ipv4 to ipv6)
+- combined IPv4/IPv6 tun6d.
+- soft reset of modem prior to hard reset (i.e. reset escalation).
 
 
 
