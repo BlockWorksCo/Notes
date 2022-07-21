@@ -40953,4 +40953,12 @@ From a fresh Ubuntu 20.04 server VM installation:
 
 - Show builds: find build -iname *.elf
 
+-------------------------
+
+git clone --depth=1 URL
+git fetch --depth=1 origin SHA1
+git checkout SHA1
+git branch -D @{-1}  # if you want to tidy up the fetched branch
+
+
 
