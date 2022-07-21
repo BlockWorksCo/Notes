@@ -40951,5 +40951,6 @@ From a fresh Ubuntu 20.04 server VM installation:
 - ./BuildPackage.sh
 
 
+- Show builds: find build -iname *.elf
 
 
