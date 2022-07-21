@@ -40941,6 +40941,8 @@ ipv6 gw outstanding
 testserver NCC demo
 
 - sudo apt install net-tools docker.io
+- sudo usermod -aG docker $USER
+- newgrp docker
 
 
 
