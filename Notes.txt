@@ -40937,6 +40937,10 @@ ipv6 gw outstanding
 - combined IPv4/IPv6 tun6d.
 - soft reset of modem prior to hard reset (i.e. reset escalation).
 
+----------------------------
+testserver NCC demo
+
+- sudo apt install net-tools docker.io
 
 
 
