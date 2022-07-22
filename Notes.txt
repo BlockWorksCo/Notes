@@ -40978,12 +40978,12 @@ Comparisons:
 - tar --one-top-level=nms -x -f  ../Originals/nms-v21.18.0.tar.gz
 - tar --one-top-level=sma -x -f  ../Originals/sma-v21.18.0.tar.gz
 
-- tar --one-top-level=nms.New -x -f  ../ServerPackage-b9d620e0ec13d891b65b990d24773cbcddc736ed/dist/nms-.tar.gz
+- tar --one-top-level=nms.New -x -f  ../ServerPackage-b9d620e/dist/nms-v21.18.900.tar.gz
 - tree -s nms > a
 - tree -s nms.New > b
 - vimdiff a b
 
-- tar --one-top-level=sma.New -x -f  ../ServerPackage-b9d620e0ec13d891b65b990d24773cbcddc736ed/dist/sma-.tar.gz
+- tar --one-top-level=sma.New -x -f  ../ServerPackage-b9d620e/dist/sma-v21.18.900.tar.gz
 - tree -s sma > a
 - tree -s sma.New > b
 - vimdiff a b
