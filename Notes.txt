@@ -40953,12 +40953,12 @@ From a fresh Ubuntu 20.04 server VM installation:
 
 - Show builds: find build -iname *.elf
 
--------------------------
+AC11 - Generated build versions SHALL be
+NMS (v21.18.900),
+SMA (v21.18.900),
+Genus FW (version 21.16.905) , ipa3-genus-dlms-g2.image
+and GW FW (version 22.16.903)  gw200-g2.image
 
-git clone --depth=1 URL
-git fetch --depth=1 origin SHA1
-git checkout SHA1
-git branch -D @{-1}  # if you want to tidy up the fetched branch
 
 
 
