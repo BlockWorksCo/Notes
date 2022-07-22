@@ -40972,5 +40972,16 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e
 ./Agent/ExportPackage.sh 86a7e78 v22.16.903
 
 
+Comparisons:
+- tar --one-top-level=nms -x -f  ../Originals/nms-v21.18.0.tar.gz
+- tar --one-top-level=sma -x -f  ../Originals/sma-v21.18.0.tar.gz
+
+- tar --one-top-level=nms.New -x -f  ../ServerPackage-b9d620e0ec13d891b65b990d24773cbcddc736ed/dist/nms-.tar.gz
+- tar --one-top-level=sma.New -x -f  ../ServerPackage-b9d620e0ec13d891b65b990d24773cbcddc736ed/dist/sma-.tar.gz
+
+
+
+---------------------------------------------------
+
 
 
