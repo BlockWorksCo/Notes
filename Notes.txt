@@ -40968,8 +40968,8 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e
 - read pdf
 
 
-./Agent/ExportPackage.sh 8c190fa v21.16.5
-./Agent/ExportPackage.sh 86a7e78 v22.16.3
+./Agent/ExportPackage.sh 8c190fa v21.16.905
+./Agent/ExportPackage.sh 86a7e78 v22.16.903
 
 
 
