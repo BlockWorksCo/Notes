@@ -40959,10 +40959,10 @@ SMA (v21.18.900),
 Genus FW (version 21.16.905) , ipa3-genus-dlms-g2.image   v21.16.5+b31363+g8c190fa
 and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e78
 
-- readelf to compare
-- compare release directory to artifactory tgz
-- server scripts
-- version-short and version-long to be generated into package.
++ readelf to compare
++ compare release directory to artifactory tgz
++ server scripts
++ version-short and version-long to be generated into package.
 - binary docker image
 - readme
 - read pdf
@@ -40975,19 +40975,24 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e
 
 
 Comparisons:
+
+extractions for nms&sma
 - tar --one-top-level=nms -x -f  ../Originals/nms-v21.18.0.tar.gz
 - tar --one-top-level=sma -x -f  ../Originals/sma-v21.18.0.tar.gz
 
+nms
 - tar --one-top-level=nms.New -x -f  ../ServerPackage-b9d620e/dist/nms-v21.18.900.tar.gz
 - tree -s nms > a
 - tree -s nms.New > b
 - vimdiff a b
 
+sma
 - tar --one-top-level=sma.New -x -f  ../ServerPackage-b9d620e/dist/sma-v21.18.900.tar.gz
 - tree -s sma > a
 - tree -s sma.New > b
 - vimdiff a b
 
+ipa3
 - tar xvf ipa3-genus-dlms-g2-v21.16.5.tar.gz
 - tree -s ipa3-genus-dlms-g2-v21.16.5 > b
 - tree -s ../AgentPackage-8c190fa/build/ipa3-genus-dlms-g2/release > a
@@ -40996,11 +41001,15 @@ Comparisons:
 - readelf -e ../AgentPackage-8c190fa/build/ipa3-genus-dlms-g2/release/agent-ipa3-genus-dlms-g2-v21.16.5.elf > b
 - vimdiff a b
 
-
+gateway
 - tar xvf gw200-g2-v22.16.3.tar.gz
 - tree -s ../AgentPackage-86a7e78/build/gw200-g2/release/ > a
 - tree -s gw200-g2-v22.16.3 > b
 - vimdiff a b
+- readelf -e gw200-g2-v22.16.3/agent-gw200-g2-v22.16.3.elf > a
+- readelf -e ../AgentPackage-86a7e78/build/gw200-g2/release/agent-gw200-g2-v22.16.3.elf > b
+- vimdiff a b
+
 
 
 
