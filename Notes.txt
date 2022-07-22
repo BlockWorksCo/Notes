@@ -40965,7 +40965,7 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e
 + version-short and version-long to be generated into package.
 - binary docker image
 - readme
-- read pdf
++ read pdf
 
 
 ./Agent/ExportPackage.sh 8c190fa v21.16.905
