@@ -40992,6 +40992,10 @@ Comparisons:
 - tree -s ipa3-genus-dlms-g2-v21.16.5 > b
 - tree -s ../AgentPackage-8c190fa/build/ipa3-genus-dlms-g2/release > a
 - vimdiff a b
+- readelf -e ipa3-genus-dlms-g2-v21.16.5/agent-ipa3-genus-dlms-g2-v21.16.5.elf > a
+- readelf -e ../AgentPackage-8c190fa/build/ipa3-genus-dlms-g2/release/agent-ipa3-genus-dlms-g2-v21.16.5.elf > b
+- vimdiff a b
+
 
 - tar xvf gw200-g2-v22.16.3.tar.gz
 - tree -s ../AgentPackage-86a7e78/build/gw200-g2/release/ > a
