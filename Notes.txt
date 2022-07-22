@@ -40956,8 +40956,8 @@ From a fresh Ubuntu 20.04 server VM installation:
 AC11 - Generated build versions SHALL be
 NMS (v21.18.900),
 SMA (v21.18.900),
-Genus FW (version 21.16.905) , ipa3-genus-dlms-g2.image   v21.16.5+
-and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b31329+gb0270c9
+Genus FW (version 21.16.905) , ipa3-genus-dlms-g2.image   v21.16.5+b31363+g8c190fa
+and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e78
 
 - readelf to compare
 - compare release directory to artifactory tgz
@@ -40967,6 +40967,9 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b31329+gb0270
 - readme
 - read pdf
 
+
+./Agent/ExportPackage.sh g8c190fa v21.16.5
+./Agent/ExportPackage.sh g86a7e78 v22.16.3
 
 
 
