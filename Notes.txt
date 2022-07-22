@@ -40956,7 +40956,7 @@ From a fresh Ubuntu 20.04 server VM installation:
 AC11 - Generated build versions SHALL be
 NMS (v21.18.900),
 SMA (v21.18.900),
-Genus FW (version 22.16.905) , ipa3-genus-dlms-g2.image   v22.16.5+
+Genus FW (version 21.16.905) , ipa3-genus-dlms-g2.image   v21.16.5+
 and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b31329+gb0270c9
 
 - readelf to compare
