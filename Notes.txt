@@ -40970,6 +40970,8 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e
 
 ./Agent/ExportPackage.sh 8c190fa v21.16.905
 ./Agent/ExportPackage.sh 86a7e78 v22.16.903
+./Server/ExportPackage.sh b9d620e0ec13d891b65b990d24773cbcddc736ed v21.18.900
+./Server/ExportPackage.sh b9d620e v21.18.900
 
 
 Comparisons:
