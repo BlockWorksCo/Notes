@@ -40994,6 +40994,9 @@ Comparisons:
 - vimdiff a b
 
 - tar xvf gw200-g2-v22.16.3.tar.gz
+- tree -s ../AgentPackage-86a7e78/build/gw200-g2/release/ > a
+- tree -s gw200-g2-v22.16.3 > b
+- vimdiff a b
 
 
 
