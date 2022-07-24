@@ -40964,8 +40964,9 @@ and GW FW (version 22.16.903)  gw200-g2.image             v22.16.3+b37477+g86a7e
 + server scripts
 + version-short and version-long to be generated into package.
 - binary docker image
-- readme
++ readme
 + read pdf
+- vimdiff colour
 
 
 Export packages
