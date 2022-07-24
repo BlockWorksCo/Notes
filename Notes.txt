@@ -40941,7 +40941,7 @@ ipv6 gw outstanding
 testserver NCC demo
 
 From a fresh Ubuntu 20.04 server VM installation:
-- sudo apt install net-tools docker.io
+- sudo apt install net-tools docker.io binutils tree
 - sudo usermod -aG docker $USER
 - newgrp docker
 
