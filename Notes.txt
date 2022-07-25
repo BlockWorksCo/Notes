@@ -40974,6 +40974,11 @@ Export packages
 ./Agent/ExportPackage.sh 86a7e78 v22.16.903
 ./Server/ExportPackage.sh b9d620e v21.18.900
 
+Export buildenv docker containers
+- docker container ls -a
+- docker export boring_stonebraker -o buildenv_terminal.img
+- docker export naughty_edison -o buildenv_server.img
+
 
 
 Comparisons:
