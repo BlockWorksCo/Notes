@@ -40979,6 +40979,10 @@ Export buildenv docker containers
 - docker export boring_stonebraker -o buildenv_terminal.img
 - docker export naughty_edison -o buildenv_server.img
 
+Import buildenv docker containers
+- docker import /Data/buildenv_terminal.img
+- docker import /Data/buildenv_server.img
+
 
 
 Comparisons:
