@@ -41025,13 +41025,14 @@ gateway
 
 
 ---------------------------------------------------
+UGVCL
 
 v21.4.61 or v20.12.2 -> v21.10.9
 
 - an insecure version of v21.10.9 modified to allow retrieval of decrypted config-1 and config-2.
 - OTA this image to many (10?) old nodes until we reproduce issue.
 - at this point, the issue will be happening with debug s/w in place.
-- local coap_request --fs-read to retrieve config-1 andn config-2
+- local coap_request --fs-read to retrieve config-1 and config-2
 - manually examine and decode the retrieved files.
 
 - not device-key corruption due to error message in code.
@@ -41039,6 +41040,11 @@ v21.4.61 or v20.12.2 -> v21.10.9
 - not CRC failure.
 - because both files failed, more likely to be schema differences, but examination of schema(s) does not show significant differences.
 - Probably doesnt happen to all nodes due to fact that if the invalid field in the schema is not stored on the device then it wont fail.
+
+
+- MTS to add ---erase-flash when clearing.
+- device-key rewrite to only happen in prodmode. (may be slower due to other reboot).
+- maybe add MTS check for empty MQ before finalise
 
 
 
