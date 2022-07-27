@@ -41044,7 +41044,7 @@ v21.4.61 or v20.12.2 -> v21.10.9
 
 - MTS to add ---erase-flash when clearing.
 - device-key rewrite to only happen in prodmode. (may be slower due to other reboot).
-- maybe add MTS check for empty MQ before finalise
+- maybe add MTS check seq num for empty MQ before finalise
 
 
 
