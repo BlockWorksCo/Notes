@@ -41058,6 +41058,8 @@ nms & sma
 sma/ucz2H45qttGh4J6o
 
 
+./build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0 -controllerport 4000 -loglevel debug
+
 
 
 
