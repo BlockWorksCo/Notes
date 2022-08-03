@@ -41102,6 +41102,9 @@ data collection and test bed:
 
 - Zabbix in prod, so instrumentation must have compatibility with this.
 - JSON would be preferred for outptu from the application rather than JMX for compatibility reasons (Zabbix).
+- Prometheus?
+- separate host?
+- rates?
 
 
 
