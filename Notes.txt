@@ -41064,6 +41064,15 @@ sma/ucz2H45qttGh4J6o
 ------------------------------
 concurrency model
 
+- DTLSNetwork:
+    Implements an asynchronous channel for sending and receiving DTLS packets over UDP. The implementation is single threaded
+    which is used for both receiving and sending DTLS packets. Senders use the {@link #write(DTLSPacket)} to queue outgoing
+    DTLS packets for sending. Sending of DTLS packets is prioritized over receiving packets. As long as there are DTLS packets
+    to send the thread continues to send packets. Once the queue is empty it goes back to listening for incoming DTLS packets.
+    A separate thread pool is used for processing the incoming DTLS packets to releave the networking thread from having to handle
+    the DTLS packet processing. The network thread queues incoming DTLS packets with the thread pool for processing. The thread
+    pool uses up to as many threads as there are processor cores depending on the processing queue length.
+
 - ThreadPoolExecutor:
     - StandardCoapEndpoint.java
         - Implements an asynchronous channel for sending and receiving COAP messages over UDP. The implementation is single threaded
