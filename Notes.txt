@@ -41064,6 +41064,8 @@ sma/ucz2H45qttGh4J6o
 ------------------------------
 concurrency model
 
+- NetworkProcessor:
+    -
 - ThreadPoolExecutor:
     - StandardCoapEndpoint.java
         - Implements an asynchronous channel for sending and receiving COAP messages over UDP. The implementation is single threaded
