@@ -41065,6 +41065,7 @@ sma/ucz2H45qttGh4J6o
 concurrency model
 
 - NetworkProcessor:
+    - Services pendingWrites queue.
     -
 - ThreadPoolExecutor:
     - StandardCoapEndpoint.java
