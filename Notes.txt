@@ -41066,6 +41066,14 @@ concurrency model
 
 - ThreadPoolExecutor:
     - StandardCoapEndpoint.java
+        - Implements an asynchronous channel for sending and receiving COAP messages over UDP. The implementation is single threaded
+        which is used for both receiving and sending COAP messages. Senders use the {@link #write(CoapRawMessage)} to queue outgoing
+        COAP messages for sending. Sending of COAP messages is prioritized over receiving messages. As long as there are COAP messages
+        to send the thread continues to send messages. Once the queue is empty it goes back to listening for incoming COAP messages.
+        A separate thread pool is used for processing the incoming COAP messages to releave the networking thread from having to handle
+        the COAP message processing. The network thread queues incoming COAP messages with the thread pool for processing. The thread
+        pool uses up to as many threads as there are processor cores depending on the processing queue length.
+
     - NodeListenersRegistry.java
         - Executor used for sending the notifications to listeners, so that the incoming threads (DTLS, JGroups) are not abused.
 
