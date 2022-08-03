@@ -41105,6 +41105,7 @@ data collection and test bed:
 - Prometheus?
 - separate host?
 - rates?
+- real time visualisation.
 
 
 
