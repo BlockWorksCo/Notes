@@ -41061,7 +41061,21 @@ sma/ucz2H45qttGh4J6o
 
 ./build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATHVEA-if00-port0 -controllerport 4000 -loglevel debug
 
+------------------------------
+concurrency model
 
+- ThreadPoolExecutor:
+    - StandardCoapEndpoint.java
+    - NodeListenersRegistry.java
+        - Executor used for sending the notifications to listeners, so that the incoming threads (DTLS, JGroups) are not abused.
+
+    - NodeLicenseReportingService.java
+    - Executor.java
+    - DTLSNetwork.java
+
+- ScheduledExecutorService
+    - NodeListenersRegistry.java
+        - Scheduled thread pool, used for scheduling timeout checks for listeners that have a limited lifetime.
 
 
 
