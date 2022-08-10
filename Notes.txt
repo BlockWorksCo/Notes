@@ -41114,6 +41114,12 @@ tun6 test harness
 - use server bound to local address.
 
 
+------------------------------------------------
+ctrlporthub
+
+./build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0 -controllerport 4000 -loglevel debug
+
+
 
 
 
