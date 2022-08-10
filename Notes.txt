@@ -41107,6 +41107,11 @@ data collection and test bed:
 - rates?
 - real time visualisation.
 
+----------------------------------------------
+tun6 test harness
+
+- dont use pyshark as hard to deploy to CI.
+- use server bound to local address.
 
 
 
