@@ -41186,6 +41186,7 @@ EFR32FG25 upgrade.
 - OpenOCD
     - Mod to support device 
     - Support for FG12P was fairly simple but no guarantee the same again given security changes.
+    - dev boards use JLinks.
 
 
 
