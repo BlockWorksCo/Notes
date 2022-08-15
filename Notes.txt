@@ -41134,6 +41134,7 @@ EFR32FG25 upgrade.
 - New RAIL&Gecko libraries (Flex) 
     - need new gcc (10.3)
     - old is 8.3.1
+    - https://docs.silabs.com/gecko-platform/4.1/
 - debug flag/secure boot issue with manufacturing. (ULW User debug Lock Word does not exist in FG25).
 - memory map
 - mpu is different.
