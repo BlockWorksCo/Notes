@@ -41130,6 +41130,14 @@ EFR32FG25 upgrade.
 - debug flag/secure boot issue with manufacturing. (ULW User debug Lock Word does not exist in FG25).
 - memory map
 - mpu is different.
+- Additional features
+    - much more secure (TrustZone
+    - zeroisable on tamper
+    - secure boot
+    - more SRAM (WiSUN?)
+    - Key storage
+    - Cortex M33 instructions as opposed to M4.
+
 
 
 
