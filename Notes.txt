@@ -41191,21 +41191,28 @@ EFR32FG25 upgrade.
 -----------------------------------
 fg25 estimate
 
-- OpenOCD change
-- radio API change
-- secure bootloader
-- DMA
-- ADC
-- RNG
-- Watchdog
-- SPI
-- Clocks
-- Timers
-- Internal flash
-- I2C
-- UART
-- GPIO
-- MPU
+(Lots of question marks around some of these items still)
+
+- GCC (toolchain) update            - 1w
+- OpenOCD change                    - 3w
+- radio API change                  - 3w
+- secure bootloader (agent side)    - 2w
+- secure bootloader (MTS side)      - 2w
+- MTS programmer changes            - 2w
+- ReadOutProtection                 - 1w
+- DMA                               - 1w
+- ADC                               - 1w
+- RNG                               - 1w
+- Watchdog                          - 1w
+- SPI                               - 1w
+- Clocks                            - 1w
+- Timers                            - 1w
+- Internal flash                    - 1w
+- I2C                               - 1w
+- UART                              - 1w
+- GPIO                              - 1w
+- MPU                               - 1w
+                            Total   - 26w
 
 
 
