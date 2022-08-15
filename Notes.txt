@@ -41131,13 +41131,14 @@ EFR32FG25 upgrade.
 - memory map
 - mpu is different.
 - Additional features
-    - much more secure (TrustZone
+    - much more secure (e.g. TrustZone)
+    - features depends on which device (securevault mid/high specification).
     - zeroisable on tamper
     - secure boot
     - more SRAM (WiSUN?)
     - Key storage
     - Cortex M33 instructions as opposed to M4.
-    - crypto accellerator (AES-CCM and GMAC supported).
+    - crypto accellerator (AES-CCM, ECDH and GMAC supported).
 - GPIO
 - UART
     - USART in FG12, Extended USART in FG25 (different device?)
