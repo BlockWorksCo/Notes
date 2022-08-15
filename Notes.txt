@@ -41127,6 +41127,7 @@ EFR32FG25 upgrade.
     - old is RAIL V1.5
     - new is v4.1
     - Big API change at Flex 2->3
+    - https://community.silabs.com/s/article/versions-of-flex-sdk-rail-library-and-recommended-iar-and-gcc-compilers?language=en_US
 - Single image supported?
     - No... Flash starts @0x00000000 in FG12 and @0x08000000 in FG25
     - RAM starts @0x10000000 in FG12 and is consecutive, and @0x20000000 in FG25 and is not consecutive (3 banks).
@@ -41164,6 +41165,8 @@ EFR32FG25 upgrade.
 - ADC
     - device seems to be totally different.
 - DMA
+- Radio
+    - RAIL update.
 - OpenOCD
 
 
