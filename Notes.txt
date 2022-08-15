@@ -41188,6 +41188,25 @@ EFR32FG25 upgrade.
     - Support for FG12P was fairly simple but no guarantee the same again given security changes.
     - dev boards use JLinks.
 
+-----------------------------------
+fg25 estimate
+
+- OpenOCD change
+- radio API change
+- secure bootloader
+- DMA
+- ADC
+- RNG
+- Watchdog
+- SPI
+- Clocks
+- Timers
+- Internal flash
+- I2C
+- UART
+- GPIO
+- MPU
+
 
 
 
