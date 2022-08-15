@@ -41140,6 +41140,8 @@ EFR32FG25 upgrade.
     - Cortex M33 instructions as opposed to M4.
     - crypto accellerator (AES-CCM, ECDH and GMAC supported).
     - device can generate own keys (secure attestation process). Means our prodpak & production process changes
+        - Design MTS phase 3 to allow for this?
+        - Dont implement yet tho.
 - GPIO
 - UART
     - USART in FG12, Extended USART in FG25 (different device?)
@@ -41153,6 +41155,8 @@ EFR32FG25 upgrade.
 - TRNG
     - different NIST certifications 
     - No longer says is suitable for key generation... (?)
+- ADC
+    - device seems to be totally different.
 
 
 
