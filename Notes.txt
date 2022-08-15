@@ -41151,6 +41151,8 @@ EFR32FG25 upgrade.
     - device can generate own keys (secure attestation process). Means our prodpak & production process changes
         - Design MTS phase 3 to allow for this?
         - Dont implement yet tho.
+- MSC (Mem System Controller)
+    - According to OpenOCD branch docs, its very different.
 - GPIO
     - Gecko API updates.
 - UART
