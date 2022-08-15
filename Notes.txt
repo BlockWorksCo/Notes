@@ -41139,6 +41139,7 @@ EFR32FG25 upgrade.
     - Key storage
     - Cortex M33 instructions as opposed to M4.
     - crypto accellerator (AES-CCM, ECDH and GMAC supported).
+    - device can generate own keys (secure attestation process). Means our prodpak & production process changes
 - GPIO
 - UART
     - USART in FG12, Extended USART in FG25 (different device?)
@@ -41149,6 +41150,9 @@ EFR32FG25 upgrade.
 - SPI
     - USART in FG12, Extended USART in FG25 (different device?)
 - watchdog
+- TRNG
+    - different NIST certifications 
+    - No longer says is suitable for key generation... (?)
 
 
 
