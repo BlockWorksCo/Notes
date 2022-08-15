@@ -41137,13 +41137,17 @@ EFR32FG25 upgrade.
     - more SRAM (WiSUN?)
     - Key storage
     - Cortex M33 instructions as opposed to M4.
+    - crypto accellerator (AES-CCM and GMAC supported).
 - GPIO
 - UART
+    - USART in FG12, Extended USART in FG25 (different device?)
 - I2C
 - Internal Flash
 - timers
 - clocks
 - SPI
+    - USART in FG12, Extended USART in FG25 (different device?)
+- watchdog
 
 
 
