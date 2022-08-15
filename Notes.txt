@@ -41157,6 +41157,7 @@ EFR32FG25 upgrade.
     - No longer says is suitable for key generation... (?)
 - ADC
     - device seems to be totally different.
+- DMA
 
 
 
