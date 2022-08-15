@@ -41158,7 +41158,7 @@ EFR32FG25 upgrade.
 - ADC
     - device seems to be totally different.
 - DMA
-
+- OpenOCD
 
 
 
