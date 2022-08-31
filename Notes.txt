@@ -41226,6 +41226,16 @@ Gateway testing:
     - Prefix should be allocted by tun6d which allows gw to bring up mesh and nodes to join.
     - Prefix should be unique among all gateways.
 
+- IPv4/IPv6 switchover (note gw tries IPv4/v6 alternately and tun6-ip must be the name of server with IPv6 DNS setup).
+    - insert IPv4 SIM.
+    - observe gateway logs in.
+    - power off.
+    - insert IPv6 SIM.
+    - observe gateway logs in.
+    - power off.
+    - insert IPv4 SIM.
+    - observe gateway logs in.
+
 
 
 
