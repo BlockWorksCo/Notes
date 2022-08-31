@@ -41254,10 +41254,13 @@ Gateway testing:
     - Change the address of the NMS away from fd00::1 to stop pings.
     - DTLS session will eventually timeout and pings will fail. this will ultimately result in the tunnel session being restarted if it cant recover.
 
-- Mesh mode/gateway mode switch
+- Mesh mode/gateway mode switch (automatable)
     - Setup two gateways, one as the DUT.
     - Ensure that both gateways can log in.
-    -
+    - set tun6.ip to an invalid value to cause tun6 session to fail.
+    - observe the gw becoming a normal mesh node using the other gateway as uplink.
+    - Set tun6.ip to the correct value to cause tun6 session to succeed.
+    - Observe gw switching modes to become a gateway as uplink becomes functional.
 
 
 Automated tests
