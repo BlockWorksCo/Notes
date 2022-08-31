@@ -41226,7 +41226,7 @@ Gateway testing:
     - Prefix should be allocted by tun6d which allows gw to bring up mesh and nodes to join.
     - Prefix should be unique among all gateways.
 
-- IPv4/IPv6 switchover (note gw tries IPv4/v6 alternately and tun6-ip must be the name of server with IPv6 DNS setup).
+- IPv4/IPv6 switchover (note gw tries IPv4/v6 alternately and tun6-ip must be the name of server with IPv6 DNS setup):
     - insert IPv4 SIM.
     - observe gateway logs in.
     - power off.
@@ -41236,13 +41236,19 @@ Gateway testing:
     - insert IPv4 SIM.
     - observe gateway logs in.
 
-- Continuous throughput.
+- Continuous throughput:
     - Set all metrics to be monitored as often as possible.
     - set push-now
     - set mq period to be very often.
     - configure server file-dist settings to send blocks frequently (1Hz?)
     - Setup a file distribution of a large file.
     - monitor over a period of a number of hours/days/weeks. Traffic chart should be flat and continuous.
+
+- Error recovery:
+    - With gateway logged in, observe keepalive messages on debug log.
+    - With gateway logged in, observe ICMP pings on debug log.
+    - Change the address of the NMS away from fd00::1 to stop pings.
+    - DTLS session will eventually timeout and pings will fail. this will ultimately result in the tunnel session being restarted if it cant recover.
 
 
 
