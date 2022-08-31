@@ -41236,6 +41236,14 @@ Gateway testing:
     - insert IPv4 SIM.
     - observe gateway logs in.
 
+- Continuous throughput.
+    - Set all metrics to be monitored as often as possible.
+    - set push-now
+    - set mq period to be very often.
+    - configure server file-dist settings to send blocks frequently (1Hz?)
+    - Setup a file distribution of a large file.
+    - monitor over a period of a number of hours/days/weeks. Traffic chart should be flat and continuous.
+
 
 
 
