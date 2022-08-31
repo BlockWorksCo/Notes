@@ -41219,6 +41219,10 @@ todo:
 - notes regarding gw testing to testing team.
 - review sanjays tun6d testing work.
 
+Gateway testing:
+- IPv4 tunnel operation
+    - Set modem.tun.ip to IPv4 address of server.
+    - Observe normal session setup and login on debug log
 
 
 
