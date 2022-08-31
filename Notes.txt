@@ -41131,7 +41131,7 @@ EFR32FG25 upgrade.
 - Single image supported?
     - No... Flash starts @0x00000000 in FG12 and @0x08000000 in FG25
     - RAM starts @0x10000000 in FG12 and is consecutive, and @0x20000000 in FG25 and is not consecutive (3 banks).
-- New RAIL&Gecko libraries (Flex) 
+- New RAIL&Gecko libraries (Flex)
     - need new gcc (10.3)
     - old is 8.3.1
     - https://docs.silabs.com/gecko-platform/4.1/
@@ -41173,7 +41173,7 @@ EFR32FG25 upgrade.
     - Gecko API updates.
 - TRNG
     - Gecko API updates.
-    - different NIST certifications 
+    - different NIST certifications
     - No longer says is suitable for key generation... (?)
 - ADC
     - Gecko API updates.
@@ -41184,7 +41184,7 @@ EFR32FG25 upgrade.
     - Gecko API updates.
     - RAIL update.
 - OpenOCD
-    - Mod to support device 
+    - Mod to support device
     - Support for FG12P was fairly simple but no guarantee the same again given security changes.
     - dev boards use JLinks.
 
@@ -41213,6 +41213,13 @@ fg25 estimate
 - GPIO                              - 1w
 - MPU                               - 1w
                             Total   - 26w
+
+------------------------------------------
+todo:
+- notes regarding gw testing to testing team.
+- review sanjays tun6d testing work.
+
+
 
 
 
