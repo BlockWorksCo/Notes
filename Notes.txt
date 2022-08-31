@@ -41223,6 +41223,8 @@ Gateway testing:
 - IPv4 tunnel operation
     - Set modem.tun.ip to IPv4 address of server.
     - Observe normal session setup and login on debug log
+    - Prefix should be allocted by tun6d which allows gw to bring up mesh and nodes to join.
+    - Prefix should be unique among all gateways.
 
 
 
