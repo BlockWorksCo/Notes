@@ -19010,9 +19010,12 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     known-exploit testing.
 
     Gateway functionality:
-    - Cellular interface (PPP)
+    - IPv4 Cellular interface (PPP)
         - packet encoding/decoding (wireshark).
-        - fuzzing
+        - fuzzing on this interface?
+    - IPv6 Cellular interface (TunAT)
+        - chunking for IPv6.
+        - fuzzing on this interface?
     - Mesh radio interface (MAC, PHY)
         - packet encoding/decoding (wireshark).
         - fuzzing
@@ -19043,7 +19046,7 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
         - broadcast
         - unicast
         - multicast
-    - uplink ipv6 network managemen
+    - uplink ipv6 network management
         - neighbour discovery
         - gateway solicitation
     - uplink ipv4 network management (DHCP)
