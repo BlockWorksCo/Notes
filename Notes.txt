@@ -41286,7 +41286,8 @@ WiSUN
 
 Important tasks:
 - risk reduction for BR storage (650b/attached node).
-
+- modem uplink
+- RADIUS / EAP-TLS.
 
 
 
