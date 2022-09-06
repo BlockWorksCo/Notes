@@ -41276,9 +41276,18 @@ Automated tests
 
 
 --------------------------------------------
+WiSUN
+
+- Consider BorderRouterRADIUS the integration branch for WiSUN (its the  most advanced).
+- BorderRouterRADIUS branch needs to be rebased on master as its dropped behind.
+- Need to be able to replicate a WiSUN network setup for each developer.
+- Current target is gw200 or GW7?
+- modem uplink for Yen? Native IPv6 work from Omnimesh needs to be copied over?
+
+Important tasks:
+- risk reduction for BR storage (650b/attached node).
 
 
-https://cyanconnode.sharepoint.com/:f:/s/Engineering/Eh2kJhaqw95IrdIkOxVcn_0BbK-VCuMHeok8_W3xFP0xxQ?e=InrmyX
 
 
 
