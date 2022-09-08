@@ -41318,7 +41318,7 @@ testing interview:
 - Documentation Test strategy/plans
 - controlling devices
 - team aspects & Agile
-- Automation & scripting.
+- Automation & scripting & debugging (logging?). Good practices (commenting, code style, etc).
 - example test? firmware upgrade
 - REST/SOAP APIs.
 
