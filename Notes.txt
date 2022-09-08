@@ -41309,6 +41309,18 @@ blaa6
 ---------
 blaa7
 
+-----------------------
+testing interview:
+
+- Testing types
+- Python/pytest
+- Documentation
+- controlling devices
+- team aspects & Agile
+- Automation & scripting.
+- example test? firmware upgrade
+- REST/SOAP APIs.
+
 
 
 
