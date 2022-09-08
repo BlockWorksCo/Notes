@@ -41312,9 +41312,10 @@ blaa7
 -----------------------
 testing interview:
 
-- Testing types
+- Testing types (unit, integration, functional, non-functional, performance, security, fuzzing)
+- Build/test/CI automation
 - Python/pytest
-- Documentation
+- Documentation Test strategy/plans
 - controlling devices
 - team aspects & Agile
 - Automation & scripting.
