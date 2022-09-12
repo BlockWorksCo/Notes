@@ -41322,6 +41322,12 @@ testing interview:
 - example test? firmware upgrade
 - REST/SOAP APIs.
 
+---------------------------------
+wisun ethernet config
+
+- Needs prefix from RA
+- radvd needs to supply RAs.
+- sudo apt install radvd
 
 
 
