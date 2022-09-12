@@ -41328,8 +41328,9 @@ wisun ethernet config
 - Needs prefix from RA
 - radvd needs to supply RAs.
 - sudo apt install radvd
-- sysctl net.ipv6.conf.all.forwarding
-- maybe "sysctl accept_ra_rt_info_max_plen to 48 or 64"
+#- sysctl net.ipv6.conf.all.forwarding
+- Use /etc/radvd.conf
+- sudo /usr/sbin/radvd --nodaemon
 
 
 
