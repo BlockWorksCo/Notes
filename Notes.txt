@@ -40390,7 +40390,7 @@ server interview:
 - docker/VM
 - performance testing, critical measurements? I/O, CPU bound.
 - approach to threading, considerations (No of cores, available concurrency, locality/caching, cpu affinity).
-- optimisation (RAM, speed, latency)
+- optimisation (RAM, speed, latency) profiling.
 - schema
 - caching
 - reverse proxy
