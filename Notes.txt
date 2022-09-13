@@ -41331,6 +41331,8 @@ wisun ethernet config
 #- sysctl net.ipv6.conf.all.forwarding
 - Use /etc/radvd.conf
 - sudo /usr/sbin/radvd --nodaemon
+  or
+  sudo service radvd start
 
 
 
