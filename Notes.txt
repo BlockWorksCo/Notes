@@ -40395,6 +40395,8 @@ server interview:
 - caching
 - reverse proxy
 - design documentation
+- security/encryption/authentication
+- REST/SOAP APIs
 
 -------------------------------------------------
 Kaynes CNIC test API
