@@ -41337,6 +41337,11 @@ wisun ethernet config
   or
   sudo service radvd start
 
+-----------------------------
+wisun:
+./build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R_FTATOT8S-if00-port0 -controllerport 4001 -loglevel debug
+./build/host-ctrlporthub/bin/ctrlporthub -serial /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FT9S9STV-if00-port0 -controllerport 4000 -loglevel debug
+
 
 
 
