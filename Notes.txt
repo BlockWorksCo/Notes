@@ -41348,6 +41348,13 @@ radius trigger?
 - ws_bbr_radius_address_set() in borderrouter_ws.c
 -
 
+-------------------------
+radius docker image
+version 3.0.25
+openssl 1.1.1
+
+- docker build -t radius .
+- docker run -it radius bash
 
 
 
