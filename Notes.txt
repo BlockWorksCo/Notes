@@ -41355,6 +41355,7 @@ openssl 1.1.1
 
 - docker build -t radius .
 - docker run -it radius bash
+- docker run -it radius freeradius -f -X -d /etc/raddb
 
 
 
