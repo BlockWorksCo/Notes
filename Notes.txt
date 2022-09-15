@@ -41317,7 +41317,7 @@ testing interview:
 
 - Testing types (unit, integration, functional, non-functional, performance, security, fuzzing)
 - Build/test/CI automation
-- Python/pytest
+- Python/pytest decorators, yield, generators, OOP
 - Documentation Test strategy/plans
 - controlling devices
 - team aspects & Agile
