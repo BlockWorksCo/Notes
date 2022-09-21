@@ -41317,7 +41317,7 @@ testing interview:
 
 - Testing types (unit, integration, functional, non-functional, performance, security, fuzzing)
 - Build/test/CI automation
-- Python/pytest decorators, yield, generators, OOP, diff dict & tuple, mutability subprocess, httprequest
+- Python/pytest decorators, yield, generators, OOP, diff dict & tuple, mutability, subprocess, httprequest
 - Documentation Test strategy/plans
 - controlling devices
 - team aspects & Agile
@@ -41325,6 +41325,7 @@ testing interview:
 - example test? firmware upgrade
 - REST/SOAP APIs.
 - boundary value analysis (test data generation)
+- SQL, joins, truncate vs drop, distinct
 
 ---------------------------------
 wisun ethernet config
