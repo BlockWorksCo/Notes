@@ -41357,6 +41357,7 @@ openssl 1.1.1
 
 - docker build -t radius .
 - sudo sysctl net.ipv6.conf.all.forwarding=1
+- sudo ip -6 add add fd00::2 dev docker0
 - docker run -p 1812:1812/udp -v $PWD/FreeRADIUSConfig/raddb:/etc/raddb -it freeradius/freeradius-server freeradius -f -X -d /etc/raddb
 
 - docker run -p 1812:1812/udp -v $PWD/FreeRADIUSConfig/raddb:/etc/raddb -it freeradius/freeradius-server freeradius -f -X -d /etc/raddb
