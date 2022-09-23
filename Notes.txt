@@ -41370,6 +41370,12 @@ openssl pkey -pubout -in FreeRADIUSConfig/raddb/silabscerts/server.key | openssl
 verify crt against ca crt.
 openssl verify -verbose -CAfile ca.crt  server.crt
 
+---------------------------------------
+editor
+
+- list of overlay files
+- editor data structure is simply a list of (file, offset, length) tuples.
+- FUSE to resolve data structure and present as one working file.
 
 
 
