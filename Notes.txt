@@ -41411,26 +41411,38 @@ FUSE backend:
 case a)
 new does not overlap existing.
          |---------|      |--new--|
-  |--------------------------------------------|
+  |-------------original-----------------------|
 
 case b)
 new entirely contained within existing.
            |-new-|
          |---------|
-  |--------------------------------------------|
+  |-------------original-----------------------|
 
 
 case c)
 new start contained within existing.
                |--new--|
          |---------|
-  |--------------------------------------------|
+  |-------------original-----------------------|
 
 case d)
 new end contained within existing.
-               |--new--|
+      |--new--|
          |---------|
-  |--------------------------------------------|
+  |-------------original-----------------------|
+
+case e)
+new replaces existing
+      |------new------|
+         |---------|
+  |-------------original-----------------------|
+
+case f)
+new after existing
+                                               <-gap->|--new--|
+         |---------|
+  |-------------original-----------------------|
 
 
 
