@@ -41376,6 +41376,7 @@ editor
 - list of overlay files
 - editor data structure is simply a list of (file, offset, length) tuples.
 - FUSE to resolve data structure and present as one working file.
+- modifications (FUSE writes) create new patch files or combine with others.
 
 
 
