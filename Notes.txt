@@ -41394,6 +41394,8 @@ Edit:
     - grep --byte-offset --text "$" ~/Notes/Notes.txt
 - Standalone utility to do this quickly?
     - sed -n '40000,40100p;40101q' ~/Notes/Notes.txt
+    - awk 'FNR>=40000 && FNR<=40100' ~/Notes/Notes.txt
+    - sed seems quicker.
 
 Save:
 - Run 'cp' operation on FUSE file to original file.
