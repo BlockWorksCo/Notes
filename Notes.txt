@@ -41439,10 +41439,16 @@ new replaces existing
   |-------------original-----------------------|
 
 case f)
-new after existing
+new after original
                                                <-gap->|--new--|
          |---------|
   |-------------original-----------------------|
+
+case g)
+new before original
+ |--new--|<gap>
+                   |---------|
+               |-------------original-----------------------|
 
 
 
