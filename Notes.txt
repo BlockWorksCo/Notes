@@ -41391,6 +41391,7 @@ FUSE write (offset, size, data):
 
 Edit:
 - determine line number -> offset map.
+    - grep --byte-offset --text "$" ~/Notes/Notes.txt
 - Standalone utility to do this quickly?
 
 Save:
