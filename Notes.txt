@@ -41382,16 +41382,21 @@ FUSE read (offset, size):
 - determine set of files that contribute to bytes between offset->offset+size.
 - build up resulting data from combining files.
 
-FUSE write:
-- determine
+FUSE write (offset, size, data):
+- determine if range offset->offset+size lies within an existing patch file.
+    - if so, write data into new file.
+    - if not, write new patch file.
+    - if partial, break into data into two and do both above operations.
+- Run a patch combining operation to merge adjacent patch files.
 
 Edit:
+- determine line number -> offset map.
 
 Save:
-- 'cp' operation on FUSE file to original file.
+- Run 'cp' operation on FUSE file to original file.
 
 Search:
-- 'grep' operation on FUSE file.
+- Run 'grep' operation on FUSE file.
 
 --------------------------------------
 CNIC mfg test sequence.
