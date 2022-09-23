@@ -41378,6 +41378,21 @@ editor
 - FUSE to resolve data structure and present as one working file.
 - modifications (FUSE writes) create new patch files or combine with others.
 
+FUSE read (offset, size):
+- determine set of files that contribute to bytes between offset->offset+size.
+- build up resulting data from combining files.
+
+FUSE write:
+- determine
+
+Edit:
+
+Save:
+- 'cp' operation on FUSE file to original file.
+
+Search:
+- 'grep' operation on FUSE file.
+
 --------------------------------------
 CNIC mfg test sequence.
 
