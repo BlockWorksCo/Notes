@@ -41393,6 +41393,7 @@ Edit:
 - determine line number -> offset map.
     - grep --byte-offset --text "$" ~/Notes/Notes.txt
 - Standalone utility to do this quickly?
+    - sed -n '40000,40100p;40101q' ~/Notes/Notes.txt
 
 Save:
 - Run 'cp' operation on FUSE file to original file.
