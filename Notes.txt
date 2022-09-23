@@ -41399,9 +41399,40 @@ Edit:
 
 Save:
 - Run 'cp' operation on FUSE file to original file.
+- remove data-structure and restart/reread.
 
 Search:
 - Run 'grep' operation on FUSE file.
+
+
+FUSE backend:
+- two layers of patches, lowest-most is read-only, top is read/write.
+
+case a)
+new does not overlap existing.
+         |---------|      |--new--|
+  |--------------------------------------------|
+
+case b)
+new entirely contained within existing.
+           |-new-|
+         |---------|
+  |--------------------------------------------|
+
+
+case c)
+new start contained within existing.
+               |--new--|
+         |---------|
+  |--------------------------------------------|
+
+case d)
+new end contained within existing.
+               |--new--|
+         |---------|
+  |--------------------------------------------|
+
+
 
 --------------------------------------
 CNIC mfg test sequence.
