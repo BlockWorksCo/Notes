@@ -41360,6 +41360,7 @@ openssl 1.1.1
 - sudo ip -6 add add fd00::2 dev docker0
 - docker run --name radius -p [::]:1812:1812/udp -v $PWD/FreeRADIUSConfig/raddb:/etc/raddb -it freeradius/freeradius-server freeradius -f -X -d /etc/raddb
 ./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config wisun.radius.address fd00::242:ac11:2
+- ./tools/c4-tools/coap_request.py --ctrlporthub :4000 --config wisun.radius.address `docker inspect radius | jq -r '.[].NetworkSettings.GlobalIPv6Address'`
 
 verify key against cert
 openssl x509 -pubkey -in FreeRADIUSConfig/raddb/silabscerts/ca.pem -noout | openssl md5
