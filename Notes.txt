@@ -41378,6 +41378,14 @@ editor
 - FUSE to resolve data structure and present as one working file.
 - modifications (FUSE writes) create new patch files or combine with others.
 
+--------------------------------------
+CNIC mfg test sequence.
+
+- existing code on CNICManufacturingSequence branch.
+- On the meter production line, the test s/w (factory side) communicates with the node thru the meter via a set of DLMS/OBIS registers.
+- Purpose is to allow the factory-side s/w to retrieve mfg test info such as modem information & statuses from the CNIC node.
+- We're extending the existing manufacturing sequence to be suitable for CNIC nodes instead of mesh nodes.
+
 
 
 
