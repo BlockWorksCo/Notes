@@ -41381,10 +41381,19 @@ editor
 --------------------------------------
 CNIC mfg test sequence.
 
-- existing code on CNICManufacturingSequence branch.
 - On the meter production line, the test s/w (factory side) communicates with the node thru the meter via a set of DLMS/OBIS registers.
 - Purpose is to allow the factory-side s/w to retrieve mfg test info such as modem information & statuses from the CNIC node.
 - We're extending the existing manufacturing sequence to be suitable for CNIC nodes instead of mesh nodes.
+- Data is in 3 registers, StaticDataToNode, StaticDataFromNode and DynamicDataFromNode. All 3 contain structures with the requried information fields.
+- StaticDataFrom node is for data that is read once at startup and placed into the meter once only (e.g. modem equipment ID).
+- StaticDataToNode is for data that is to be transferred to the node once (i.e. the test-identifier string to contain a mfg specific identifier).
+- DynamicDataFromNode is for data that continuously changes and that the factory-side test s/w is intersted in (e.g. modem RSSI values). These get written to the meter every 5s by the CNIC.
+- When the testIdentifier is set to a non-empty string, then it indicates that the test has ended and that the test mode should be disabled.
+
+- existing code on CNICManufacturingSequence branch.
+- Existing code should have most of the code in place to get the modem info and write to the registers.
+- Next stage is to set the OBIS codes of the new registers correctly and to try the code out.
+- Code has so far been written without being able to test it, so we need to work through and resolve the issues as they come up.
 
 
 
