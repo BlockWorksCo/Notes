@@ -41391,6 +41391,7 @@ FUSE write (offset, size, data):
 
 Edit:
 - determine line number -> offset map.
+- Standalone utility to do this quickly?
 
 Save:
 - Run 'cp' operation on FUSE file to original file.
