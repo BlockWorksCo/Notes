@@ -41478,6 +41478,10 @@ CNIC SWD appnote
 https://www.silabs.com/documents/public/application-notes/an0062.pdf
 
 
+- EFM32 is actually powered by its own IOV regulated 3v3 line.
+- Since the default is <3v3, this causes issues.
+- To resolve, we need to provide external 3v3 power for at least the first programming, at which point the regulator is set correctly to 3v3.
+
 
 
 
