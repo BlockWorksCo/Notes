@@ -41472,6 +41472,12 @@ CNIC mfg test sequence.
 - Next stage is to set the OBIS codes of the new registers correctly and to try the code out.
 - Code has so far been written without being able to test it, so we need to work through and resolve the issues as they come up.
 
+---------------------------------------
+CNIC SWD appnote
+
+https://www.silabs.com/documents/public/application-notes/an0062.pdf
+
+
 
 
 
