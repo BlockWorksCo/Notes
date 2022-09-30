@@ -41482,6 +41482,11 @@ https://www.silabs.com/documents/public/application-notes/an0062.pdf
 - Since the default is <3v3, this causes issues.
 - To resolve, we need to provide external 3v3 power for at least the first programming, at which point the regulator is set correctly to 3v3.
 
+-----------------------------------------
+wisun RAM usage:
+
+650b per device connected
+- https://developer.izumanetworks.com/docs/device-management/current/connecting/wi-sun-tutorial.html
 
 
 
