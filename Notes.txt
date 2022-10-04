@@ -41488,6 +41488,62 @@ wisun RAM usage:
 650b per device connected
 - https://developer.izumanetworks.com/docs/device-management/current/connecting/wi-sun-tutorial.html
 
+------------------------------
+
+2022-10-04 16:16:56.320 [debug] [  meter/production] {    schedule}: Send read request for test flag and identifier
+2022-10-04 16:16:56.320 [debug] [              dlms] {    schedule}: Get 0.128.96.0.20.255 ic 1 attr 2 normal access
+2022-10-04 16:16:56.320 [debug] [              dlms] {    schedule}: tx unencrypted: ( 1/ 1): c0018100010080600014ff0200
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: ACTION_WAIT_FOR_RESPONSE
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: rx: ( 1/ 2): 7ea01e610373b57c8180120501800601
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: rx: ( 2/ 2): 80070400000001080400000001533b7e
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: HDLC_TYPE_UA
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: HDLC link disconnected
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: !! Result == ResultOK !!
+2022-10-04 16:16:56.336 [debug] [              hdlc] {        hdlc}: ** Waiting for HDLC event (60000ms) **
+2022-10-04 16:16:56.337 [debug] [              dlms] {        dlms}: DLMS result is 0 bytes with code 0
+2022-10-04 16:16:56.337 [debug] [        meter/dlms] {        dlms}: dlmsReceiveCb called with s_rxRes=0
+2022-10-04 16:16:56.337 [debug] [        meter/dlms] {      device}: ** processDlmsPayload (0) **
+2022-10-04 16:16:56.337 [debug] [          hdlclock] {      device}: -- unlocking HDLC --
+2022-10-04 16:16:56.337 [debug] [              hdlc] {      device}: disconnectLink 0x0
+2022-10-04 16:16:56.337 [debug] [        meter/dlms] {      device}: -- waiting on the userQueue for 90000ms --
+2022-10-04 16:16:56.337 [debug] [          hdlclock] {      device}: -- HDLC locked --
+2022-10-04 16:16:56.337 [debug] [              hdlc] {   timeSynch}: disconnectLink 0x0
+2022-10-04 16:16:56.337 [debug] [              dlms] {   timeSynch}: Setup AA with No Security
+2022-10-04 16:16:56.371 [debug] [              hdlc] {    schedule}: Connect HDLC link
+2022-10-04 16:16:56.371 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): 7e
+2022-10-04 16:16:56.371 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): a020
+2022-10-04 16:16:56.371 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): 03
+2022-10-04 16:16:56.371 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): 21
+2022-10-04 16:16:56.371 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): 93
+2022-10-04 16:16:56.372 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): 7dd9
+2022-10-04 16:16:56.372 [debug] [              hdlc] {    schedule}: tx: ( 1/ 2): 81801405020080060200800704000000
+2022-10-04 16:16:56.372 [debug] [              hdlc] {    schedule}: tx: ( 2/ 2): 01080400000001
+2022-10-04 16:16:56.372 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): ce6a
+2022-10-04 16:16:56.372 [debug] [              hdlc] {    schedule}: tx: ( 1/ 1): 7e
+2022-10-04 16:16:56.372 [debug] [              hdlc] {    schedule}: ** Giving s_responseSem to start the timeout cycle... **
+2022-10-04 16:16:56.372 [debug] [              dlms] {    schedule}: Set 0.128.96.0.19.255 ic 1 attr 2 valueLen 128 B
+2022-10-04 16:16:56.372 [debug] [              hdlc] {        hdlc}: Restarting HDLC timeout due to HDLC send operation
+2022-10-04 16:16:56.372 [debug] [              hdlc] {        hdlc}: ** Waiting for HDLC event (60000ms) **
+2022-10-04 16:16:56.438 [ERROR] [              dlms] {   timeSynch}: Previous send request is not yet processed (1)
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: ACTION_WAIT_FOR_RESPONSE
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: rx: ( 1/ 2): 7ea01e210373c37a8180120501800601
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: rx: ( 2/ 2): 80070400000001080400000001533b7e
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: HDLC_TYPE_UA
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 7e
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): a02c
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 03
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 21
+2022-10-04 16:16:56.451 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 10
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): daf8
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): e6e600
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 2): c81e3000000688b3eeb855242e463410
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: tx: ( 2/ 2): 83470aa50f1353d9bc623f7361b72c78
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): fbbd
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: tx: ( 1/ 1): 7e
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: ** Giving s_responseSem to start the timeout cycle... **
+2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: !! Result == ResultOK !!
+
+
 
 
 
