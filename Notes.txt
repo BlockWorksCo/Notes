@@ -41543,6 +41543,12 @@ wisun RAM usage:
 2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: ** Giving s_responseSem to start the timeout cycle... **
 2022-10-04 16:16:56.452 [debug] [              hdlc] {        hdlc}: !! Result == ResultOK !!
 
+------------------------------
+deviceconfigurator metertool
+
+URL:
+https://mea-cc-hes.mea.prod.cyanconnode.com/deviceconf/
+
 
 
 
