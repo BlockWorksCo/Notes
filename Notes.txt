@@ -41590,6 +41590,9 @@ f11020203120017090507ea071dff11020203120018090507ea071eff11020203120019090507eb0
 </SetRequest>
 
 
+swagger:
+https://omnidev-in-01.dev.cyanconnode.com/swagger-ui.html
+make sure you're logged in via NMS first.
 
 
 
