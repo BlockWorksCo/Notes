@@ -41594,6 +41594,12 @@ swagger:
 https://omnidev-in-01.dev.cyanconnode.com/swagger-ui.html
 make sure you're logged in via NMS first.
 
+Good
+c30181000f0000280000ff0101091110000000e1db07eb8528722d28ad0adac7
+
+Bad
+c30181000f0000280000ff0101550000b38ab5410000000000338b5555550000
+
 
 
 
