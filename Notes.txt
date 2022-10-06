@@ -41624,13 +41624,11 @@ cat LargeCal.json | xsel -ib
 
 MeterGroup call
 
+
 {
-  "meterGroupName": "string",
-  "meterGroupType": "STATIC",
-  "meters": [
-    "string"
-  ],
-  "query": "string"
+    "meterGroupName": "LargeCalGroup1",
+    "meterGroupType": "STATIC",
+    "meters": [ "2003699020" ]
 }
 
 
