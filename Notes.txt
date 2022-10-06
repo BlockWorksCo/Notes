@@ -41632,4 +41632,6 @@ MeterGroup call
 }
 
 
+POST /manageMeterJob/LargeCal1
+{ "instruction": "START" }
 
