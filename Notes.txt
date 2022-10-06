@@ -41596,10 +41596,27 @@ make sure you're logged in via NMS first.
 
 Good
 c30181000f0000280000ff0101091110000000e1db07eb8528722d28ad0adac7
+<ActionRequest>
+  <ActionRequestNormal>
+    <!--Priority: HIGH ServiceClass: UN_CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="81" />
+    <MethodDescriptor>
+      <!--ASSOCIATION_LOGICAL_NAME-->
+      <ClassId Value="000F" />
+      <!--0.0.40.0.0.255-->
+      <InstanceId Value="0000280000FF" />
+      <MethodId Value="01" />
+    </MethodDescriptor>
+    <MethodInvocationParameters>
+      <OctetString Value="10000000E1DB07EB8528722D28AD0ADAC7" />
+    </MethodInvocationParameters>
+  </ActionRequestNormal>
+</ActionRequest>
+
 
 Bad
 c30181000f0000280000ff0101550000b38ab5410000000000338b5555550000
-
+(invalid datatype 85)
 
 
 
