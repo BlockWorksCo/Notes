@@ -41622,5 +41622,16 @@ stdout to clipboard
 cat LargeCal.json | xsel -ib
 
 
+MeterGroup call
+
+{
+  "meterGroupName": "string",
+  "meterGroupType": "STATIC",
+  "meters": [
+    "string"
+  ],
+  "query": "string"
+}
+
 
 
