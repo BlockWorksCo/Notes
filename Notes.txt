@@ -41618,5 +41618,9 @@ Bad
 c30181000f0000280000ff0101550000b38ab5410000000000338b5555550000
 (invalid datatype 85)
 
+stdout to clipboard
+cat LargeCal.json | xsel -ib
+
+
 
 
