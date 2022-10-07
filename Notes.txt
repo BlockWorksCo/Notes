@@ -41635,3 +41635,24 @@ MeterGroup call
 POST /manageMeterJob/LargeCal1
 { "instruction": "START" }
 
+
+==727758==ERROR: AddressSanitizer: dynamic-stack-buffer-overflow on address 0x7fffecbf08ed at pc 0x7ffff761158d bp 0x7fffecbf07a0 sp 0x7fffecbeff48
+WRITE of size 256 at 0x7fffecbf08ed thread T15
+    #0 0x7ffff761158c in __interceptor_memcpy ../../../../src/libsanitizer/sanitizer_common/sanitizer_common_interceptors.inc:790
+    #1 0x55555576b9ea in prepareRequest src/device/communication/dlms/dlms.c:3335
+    #2 0x555555760234 in dlmsSendSetFirstRequest src/device/communication/dlms/dlms.c:956
+    #3 0x55555576055b in dlmsSendSetRequest src/device/communication/dlms/dlms.c:1023
+    #4 0x555555739fc2 in sendPassiveSpecialDays src/device/drivers/dlms/rate-calendar.c:339
+    #5 0x55555573a48f in setRateCalendarRequest src/device/drivers/dlms/rate-calendar.c:449
+    #6 0x555555732601 in configureRateCalendar src/device/drivers/dlms/meter_configuration.c:1339
+    #7 0x555555732aac in processRateCalendarConfigResponse src/device/drivers/dlms/meter_configuration.c:1466
+    #8 0x55555572db8e in processMeterConfigureResponse src/device/drivers/dlms/meter_configuration.c:264
+    #9 0x55555572baf8 in processDlmsPayload src/device/drivers/dlms/device-dlms.c:4527
+    #10 0x55555572bf25 in deviceTask src/device/drivers/dlms/device-dlms.c:4655
+    #11 0x5555557a8ea2 in taskWrapper src/platform/osal/osal-posix/osal_posix.c:134
+    #12 0x7ffff73e6608 in start_thread /build/glibc-SzIz7B/glibc-2.31/nptl/pthread_create.c:477
+    #13 0x7ffff730b132 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f132)
+
+
+
+
