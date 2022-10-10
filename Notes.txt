@@ -41900,6 +41900,75 @@ Send:
 2022-10-10 14:51:41.670 #1   0000000000000000 <log> 0:00:02.957 [panic] ======== Panic ========
 2022-10-10 14:51:41.670 #1   0000000000000000 <log> 0:00:02.957 [panic] terminal:262, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
 
+------------------------------------------------
+
+
+<SetRequest>
+  <SetRequestWithDataBlock>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="C1" />
+    <DataBlock>
+      <LastBlock Value="00" />
+      <BlockNumber Value="00000006" />
+      <RawData Value="0905FFFF0C1EFF11020203120058090507E6091E0511020203120059090507E6091E051102020312005A090507E6091E051102020312005B090507E6091E051101020312005C0905FF7E6091E051101020312005D090507E6091E051101020312005E090507E6091E051101020312005F090507E6091E0511010203120060090507E6091E0511010203120061090507E6091E0511010203120062090507E6091E0511010203120063090507E6091E051FF010203120064090507E6091E0511010203120065090507E6091E0511010203120066090507E6091E0511010203120067090507E6091E0511010203120068090507E6091E" />
+    </DataBlock>
+  </SetRequestWithDataBlock>
+</SetRequest>
+
+<HDLC len="21" >
+<TargetAddress Value="1" />
+<SourceAddress Value="16400" />
+<!--I frame.-->
+<FrameType Value="BC" />
+<PDU>
+<SetResponse>
+  <SetResponseDataBlock>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="193" />
+    <BlockNumber Value="6" />
+  </SetResponseDataBlock>
+</SetResponse>
+</PDU>
+</HDLC>
+
+<HDLC len="195" >
+<TargetAddress Value="16400" />
+<SourceAddress Value="1" />
+<!--I frame.-->
+<FrameType Value="FA" />
+<PDU>
+<SetRequest>
+  <SetRequestWithDataBlock>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="193" />
+    <DataBlock>
+      <LastBlock Value="1" />
+      <BlockNumber Value="7" />
+      <RawData Value="0511010203120069090507E6091E051101020312006A090507E6091E051101020312006B090507E6091E051101020312006C090507E6091E051101020312006D090507E6091E051101020312006E090507E6091E051101020312006F0
+90507E6091E0511010203120070090507E6091E0511010203120071090507E6091E0511010203120072090507E6091E0511010203120073090507E6091E0511010203120074090507E6091E051101" />
+    </DataBlock>
+  </SetRequestWithDataBlock>
+</SetRequest>
+</PDU>
+</HDLC>
+
+<HDLC len="22" >
+<TargetAddress Value="1" />
+<SourceAddress Value="16400" />
+<!--I frame.-->
+<FrameType Value="DE" />
+<PDU>
+<SetResponse>
+  <SetResponseWithLastDataBlock>
+    <!--Priority: HIGH ServiceClass: CONFIRMED invokeID: 1-->
+    <InvokeIdAndPriority Value="193" />
+    <Result Value="Success" />
+    <BlockNumber Value="7" />
+  </SetResponseWithLastDataBlock>
+</SetResponse>
+</PDU>
+</HDLC>
+
 
 
 
