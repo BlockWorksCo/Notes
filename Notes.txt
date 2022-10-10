@@ -41772,6 +41772,134 @@ Send:
 
 
 
+2022-10-10 14:51:28.658                       <HUB> 0:00:00.000 Node port was not opened because -listen was not specified.
+2022-10-10 14:51:28.658                       <HUB> 0:00:00.000 Waiting for controllers on port 4000...
+2022-10-10 14:51:28.659 #1   0000000000000000 <hub> 0:00:00.000 [ info] Serial port /dev/serial/by-id/usb-FTDI_TTL232R-3V3_FTC9PP5C-if00-port0 opened
+2022-10-10 14:51:38.738 #1   0000000000000000 <log> 0:00:00.019 [ info] [       flash] { terminal}: READ flash id: 1f 87 01
+2022-10-10 14:51:38.738 #1   0000000000000000 <log> 0:00:00.027 [ info] [       cndfs] { terminal}: Mounting with 1024 x 4096 KiB sectors = 4096 KiB
+2022-10-10 14:51:39.112 #1   0000000000000000 <log> 0:00:00.362 [ info] [       cndfs] { terminal}: Mounted: 310 sectors used, 26 files
+2022-10-10 14:51:39.112 #1   0000000000000000 <log> 0:00:00.371 [ info] [       cndfs] { terminal}: Flash map:
+2022-10-10 14:51:39.120 #1   0000000000000000 <log> 0:00:00.383 [ info] [       cndfs] { terminal}:   -------- -------- --I----- -------- -------- -------- -------- --------
+2022-10-10 14:51:39.120 #1   0000000000000000 <log> 0:00:00.402 [ info] [       cndfs] { terminal}:   -------- -------- ------D- D------- D-D----- ---DD--- -----D-- D------D
+2022-10-10 14:51:39.181 #1   0000000000000000 <log> 0:00:00.420 [ info] [       cndfs] { terminal}:   ---D---- -D----D- ---D--8- ---D---- ------D- D--2---- ---D---- ------EE
+2022-10-10 14:51:39.181 #1   0000000000000000 <log> 0:00:00.438 [ info] [       cndfs] { terminal}:   EEE-EE-E -E------ -------- -------- -------- -E------ ---E---- --------
+2022-10-10 14:51:39.181 #1   0000000000000000 <log> 0:00:00.456 [ info] [       cndfs] { terminal}:   ----E-EE E-EE---H -HHHHHHH H-HHH-HH -HHH---: :::::::: -:::::-: :-:--->>
+2022-10-10 14:51:39.181 #1   0000000000000000 <log> 0:00:00.475 [ info] [       cndfs] { terminal}:   >>>->->- ->>>>>-> ->>>>--- --?????? ???????? ?J??---- @@@@@@@@ @@@@-@@-
+2022-10-10 14:51:39.243 #1   0000000000000000 <log> 0:00:00.493 [ info] [       cndfs] { terminal}:   @@-@-9-A AAAAAAA- AAA-AAAA -AA----B BB-BBB-- B---B--B -567-B-B ---BF-FB
+2022-10-10 14:51:39.243 #1   0000000000000000 <log> 0:00:00.511 [ info] [       cndfs] { terminal}:   FFFFFF-F F-FFF-FF FFFFFFBF FFFFFFFF -FFFFFFF FFFFFFFF FFFFFF-F FFFFFFFF
+2022-10-10 14:51:39.243 #1   0000000000000000 <log> 0:00:00.529 [ info] [       cndfs] { terminal}:   FFFFFBFF FFFFFF-F FFF-FF-F F-BFFBFF --FC-F-F FFFFCF-- FFFFFFFF FCFFGFF1
+2022-10-10 14:51:39.312 #1   0000000000000000 <log> 0:00:00.547 [ info] [       cndfs] { terminal}:   FCFFFFCF FFF-FFF- FFFF-FFF F-FF-FFF FF-FFFF= -;------ -------- --------
+2022-10-10 14:51:39.312 #1   0000000000000000 <log> 0:00:00.566 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2022-10-10 14:51:39.312 #1   0000000000000000 <log> 0:00:00.584 [ info] [       cndfs] { terminal}:   -------- -------- ------34 -------- -------- -------- -------- --------
+2022-10-10 14:51:39.312 #1   0000000000000000 <log> 0:00:00.602 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- -----<--
+2022-10-10 14:51:39.372 #1   0000000000000000 <log> 0:00:00.620 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2022-10-10 14:51:39.372 #1   0000000000000000 <log> 0:00:00.639 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2022-10-10 14:51:39.372 #1   0000000000000000 <log> 0:00:00.657 [ info] [       cndfs] { terminal}:   -------- -------- -------- -------- -------- -------- -------- --------
+2022-10-10 14:51:39.372 #1   0000000000000000 <hub> 0:00:00.657 [ info] Received msg# 20 from node, sending settings
+2022-10-10 14:51:39.372 #1   0000000000000000 <hub> 0:00:00.000 [ info] Setting up node. Loglevel: debug, ignore tasks: none, ignore modules: none
+2022-10-10 14:51:39.372 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 145 size 27 bootloaderState: 0
+2022-10-10 14:51:39.372 #1   0000000000000000 <hub> 0:00:00.000 [ info] Giving lowpan prefix :: to node
+2022-10-10 14:51:39.373 #1   0000000000000000 <log> 0:00:00.668 [ info] [       cndfs] { terminal}:
+2022-10-10 14:51:39.402 #1   0000000000000000 <hub> 0:00:00.688 [debug] Got ack
+2022-10-10 14:51:39.402 #1   0000000000000000 <hub> 0:00:00.000 [debug] Writing message of type 144 size 77 bootloaderState: 0
+2022-10-10 14:51:39.402 #1   0000000000000000 <log> 0:00:00.690 [debug] [       cndfs] { terminal}: Found file /configuration-1.pb at sector 150
+2022-10-10 14:51:39.418 #1   0000000000000000 <hub> 0:00:00.722 [debug] Got ack
+2022-10-10 14:51:39.510 #1   0000000000000000 <log> 0:00:00.802 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2022-10-10 14:51:39.540 #1   0000000000000000 <log> 0:00:00.831 [debug] [       cndfs] { terminal}: Found file /configuration-2.pb at sector 171
+2022-10-10 14:51:39.677 #1   0000000000000000 <log> 0:00:00.942 [debug] [      fs/api] { terminal}: fsOpen (/configuration-2.pb, mode=1, fd=0)
+2022-10-10 14:51:39.677 #1   0000000000000000 <log> 0:00:00.955 [ info] [   config/pb] { terminal}: Config generations: 10, 11
+2022-10-10 14:51:39.677 #1   0000000000000000 <log> 0:00:00.963 [ info] [   config/pb] { terminal}: ==== Read Config File: /configuration-2.pb ====
+2022-10-10 14:51:39.677 #1   0000000000000000 <log> 0:00:00.972 [debug] [ cndfs/utils] { terminal}: Found metadata #1 for /configuration-2.pb: id=2 st=171 sz=587 refs=0
+2022-10-10 14:51:39.724 #1   0000000000000000 <log> 0:00:00.984 [debug] [      fs/api] { terminal}: fsOpen (/configuration-2.pb, mode=1, fd=0)
+2022-10-10 14:51:39.724 #1   0000000000000000 <log> 0:00:00.993 [debug] [       cndfs] { terminal}: Rewinding
+2022-10-10 14:51:39.724 #1   0000000000000000 <log> 0:00:01.003 [ info] [   config/pb] { terminal}: config file: : ( 1/34): 434f4e010b0000008f040a252083a49b
+2022-10-10 14:51:39.724 #1   0000000000000000 <log> 0:00:01.013 [ info] [   config/pb] { terminal}: config file: : ( 2/34): d3052a0032003a1730302d31422d4335
+2022-10-10 14:51:39.724 #1   0000000000000000 <log> 0:00:01.023 [ info] [   config/pb] { terminal}: config file: : ( 3/34): 2d30432d36302d30302d45452d443442
+2022-10-10 14:51:39.767 #1   0000000000000000 <log> 0:00:01.034 [ info] [   config/pb] { terminal}: config file: : ( 4/34): 001a320801180c2008280630b0094001
+2022-10-10 14:51:39.767 #1   0000000000000000 <log> 0:00:01.044 [ info] [   config/pb] { terminal}: config file: : ( 5/34): 48904e500470dc0b7806800100880140
+2022-10-10 14:51:39.767 #1   0000000000000000 <log> 0:00:01.054 [ info] [   config/pb] { terminal}: config file: : ( 6/34): a0014ba8019601b001a038b801904ec0
+2022-10-10 14:51:39.767 #1   0000000000000000 <log> 0:00:01.065 [ info] [   config/pb] { terminal}: config file: : ( 7/34): 0101c80100222708111020180330e003
+2022-10-10 14:51:39.810 #1   0000000000000000 <log> 0:00:01.075 [ info] [   config/pb] { terminal}: config file: : ( 8/34): 38a6ffffffffffffffff01400150a2ff
+2022-10-10 14:51:39.810 #1   0000000000000000 <log> 0:00:01.085 [ info] [   config/pb] { terminal}: config file: : ( 9/34): ffffffffffffff016802700578003214
+2022-10-10 14:51:39.810 #1   0000000000000000 <log> 0:00:01.095 [ info] [   config/pb] { terminal}: config file: : (10/34): 1207666430303a3a3118b42c68007084
+2022-10-10 14:51:39.811 #1   0000000000000000 <log> 0:00:01.106 [ info] [   config/pb] { terminal}: config file: : (11/34): 0778ac023a026005520e180320082814
+2022-10-10 14:51:39.853 #1   0000000000000000 <log> 0:00:01.116 [ info] [   config/pb] { terminal}: config file: : (12/34): 306438e80740fd015a0b1808207f3090
+2022-10-10 14:51:39.854 #1   0000000000000000 <log> 0:00:01.126 [ info] [   config/pb] { terminal}: config file: : (13/34): 1c38784004621510011880a305200028
+2022-10-10 14:51:39.854 #1   0000000000000000 <log> 0:00:01.137 [ info] [   config/pb] { terminal}: config file: : (14/34): 901c300038901c400048901ca201200a
+2022-10-10 14:51:39.854 #1   0000000000000000 <log> 0:00:01.147 [ info] [   config/pb] { terminal}: config file: : (15/34): 104953542d353a33304953542d353a33
+2022-10-10 14:51:39.897 #1   0000000000000000 <log> 0:00:01.157 [ info] [   config/pb] { terminal}: config file: : (16/34): 30101e18880e20901c28c0d102301eaa
+2022-10-10 14:51:39.897 #1   0000000000000000 <log> 0:00:01.168 [ info] [   config/pb] { terminal}: config file: : (17/34): 0106080a103c1803b201020801c201ba
+2022-10-10 14:51:39.897 #1   0000000000000000 <log> 0:00:01.178 [ info] [   config/pb] { terminal}: config file: : (18/34): 0108a03810001a103331343133323432
+2022-10-10 14:51:39.897 #1   0000000000000000 <log> 0:00:01.188 [ info] [   config/pb] { terminal}: config file: : (19/34): 33333433333434342220373536373736
+2022-10-10 14:51:39.897 #1   0000000000000000 <log> 0:00:01.198 [ info] [   config/pb] { terminal}: config file: : (20/34): 36333663363836633733373536373331
+2022-10-10 14:51:39.940 #1   0000000000000000 <log> 0:00:01.209 [ info] [   config/pb] { terminal}: config file: : (21/34): 333833363631363236332a2037353637
+2022-10-10 14:51:39.940 #1   0000000000000000 <log> 0:00:01.219 [ info] [   config/pb] { terminal}: config file: : (22/34): 37363633366336353662363136623637
+2022-10-10 14:51:39.940 #1   0000000000000000 <log> 0:00:01.229 [ info] [   config/pb] { terminal}: config file: : (23/34): 33313338333636313632363332203735
+2022-10-10 14:51:39.940 #1   0000000000000000 <log> 0:00:01.240 [ info] [   config/pb] { terminal}: config file: : (24/34): 36373736363336633635366236313662
+2022-10-10 14:51:39.983 #1   0000000000000000 <log> 0:00:01.250 [ info] [   config/pb] { terminal}: config file: : (25/34): 36373331333833363631363236333801
+2022-10-10 14:51:39.983 #1   0000000000000000 <log> 0:00:01.260 [ info] [   config/pb] { terminal}: config file: : (26/34): 4001480f500a58b40160f00168007001
+2022-10-10 14:51:39.984 #1   0000000000000000 <log> 0:00:01.270 [ info] [   config/pb] { terminal}: config file: : (27/34): 780f8001328a01203330333033303330
+2022-10-10 14:51:39.984 #1   0000000000000000 <log> 0:00:01.281 [ info] [   config/pb] { terminal}: config file: : (28/34): 33303330333033303330333033303330
+2022-10-10 14:51:40.027 #1   0000000000000000 <log> 0:00:01.291 [ info] [   config/pb] { terminal}: config file: : (29/34): 3330333033303330f00101ca01211000
+2022-10-10 14:51:40.027 #1   0000000000000000 <log> 0:00:01.301 [ info] [   config/pb] { terminal}: config file: : (30/34): 1800200a288cfcffffffffffffff0130
+2022-10-10 14:51:40.027 #1   0000000000000000 <log> 0:00:01.312 [ info] [   config/pb] { terminal}: config file: : (31/34): 057098757801800101880100900101d2
+2022-10-10 14:51:40.027 #1   0000000000000000 <log> 0:00:01.322 [ info] [   config/pb] { terminal}: config file: : (32/34): 01271001180020002800300038014000
+2022-10-10 14:51:40.080 #1   0000000000000000 <log> 0:00:01.332 [ info] [   config/pb] { terminal}: config file: : (33/34): 48007801800100880101900100980100
+2022-10-10 14:51:40.080 #1   0000000000000000 <log> 0:00:01.342 [ info] [   config/pb] { terminal}: config file: : (34/34): a00100a80100b00100652a
+2022-10-10 14:51:40.081 #1   0000000000000000 <log> 0:00:01.352 [debug] [ cndfs/utils] { terminal}: Found metadata #1 for /configuration-2.pb: id=2 st=171 sz=587 refs=0
+2022-10-10 14:51:40.081 #1   0000000000000000 <log> 0:00:01.364 [debug] [      fs/api] { terminal}: fsOpen (/configuration-2.pb, mode=1, fd=0)
+2022-10-10 14:51:40.081 #1   0000000000000000 <log> 0:00:01.373 [debug] [       cndfs] { terminal}: Rewinding
+2022-10-10 14:51:40.160 #1   0000000000000000 <log> 0:00:01.420 [ERROR] [   config/pb] { terminal}: Failed to pb-decode config
+2022-10-10 14:51:40.160 #1   0000000000000000 <log> 0:00:01.428 [ info] [   config/pb] { terminal}: ==== Read Config File: /configuration-1.pb ====
+2022-10-10 14:51:40.160 #1   0000000000000000 <log> 0:00:01.437 [debug] [ cndfs/utils] { terminal}: Found metadata #0 for /configuration-1.pb: id=8 st=150 sz=588 refs=0
+2022-10-10 14:51:40.160 #1   0000000000000000 <log> 0:00:01.449 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2022-10-10 14:51:40.160 #1   0000000000000000 <log> 0:00:01.458 [debug] [       cndfs] { terminal}: Rewinding
+2022-10-10 14:51:40.203 #1   0000000000000000 <log> 0:00:01.468 [ info] [   config/pb] { terminal}: config file: : ( 1/34): 434f4e010a00000090040a252083a49b
+2022-10-10 14:51:40.203 #1   0000000000000000 <log> 0:00:01.478 [ info] [   config/pb] { terminal}: config file: : ( 2/34): d3052a0032003a1730302d31422d4335
+2022-10-10 14:51:40.203 #1   0000000000000000 <log> 0:00:01.489 [ info] [   config/pb] { terminal}: config file: : ( 3/34): 2d30432d36302d30302d45452d443442
+2022-10-10 14:51:40.203 #1   0000000000000000 <log> 0:00:01.499 [ info] [   config/pb] { terminal}: config file: : ( 4/34): 001a320801180c2008280630b0094001
+2022-10-10 14:51:40.246 #1   0000000000000000 <log> 0:00:01.509 [ info] [   config/pb] { terminal}: config file: : ( 5/34): 48904e500470dc0b7806800100880140
+2022-10-10 14:51:40.246 #1   0000000000000000 <log> 0:00:01.520 [ info] [   config/pb] { terminal}: config file: : ( 6/34): a0014ba8019601b001a038b801904ec0
+2022-10-10 14:51:40.247 #1   0000000000000000 <log> 0:00:01.530 [ info] [   config/pb] { terminal}: config file: : ( 7/34): 0101c80100222708111020180330e003
+2022-10-10 14:51:40.247 #1   0000000000000000 <log> 0:00:01.540 [ info] [   config/pb] { terminal}: config file: : ( 8/34): 38a6ffffffffffffffff01400150a2ff
+2022-10-10 14:51:40.289 #1   0000000000000000 <log> 0:00:01.550 [ info] [   config/pb] { terminal}: config file: : ( 9/34): ffffffffffffff016802700578003214
+2022-10-10 14:51:40.290 #1   0000000000000000 <log> 0:00:01.561 [ info] [   config/pb] { terminal}: config file: : (10/34): 1207666430303a3a3118b42c68007084
+2022-10-10 14:51:40.290 #1   0000000000000000 <log> 0:00:01.571 [ info] [   config/pb] { terminal}: config file: : (11/34): 0778ac023a026005520e180320082814
+2022-10-10 14:51:40.290 #1   0000000000000000 <log> 0:00:01.581 [ info] [   config/pb] { terminal}: config file: : (12/34): 306438e80740fd015a0b1808207f3090
+2022-10-10 14:51:40.290 #1   0000000000000000 <log> 0:00:01.592 [ info] [   config/pb] { terminal}: config file: : (13/34): 1c38784004621510011880a305200028
+2022-10-10 14:51:40.333 #1   0000000000000000 <log> 0:00:01.602 [ info] [   config/pb] { terminal}: config file: : (14/34): 901c300038901c400048901ca201200a
+2022-10-10 14:51:40.333 #1   0000000000000000 <log> 0:00:01.612 [ info] [   config/pb] { terminal}: config file: : (15/34): 104953542d353a33304953542d353a33
+2022-10-10 14:51:40.333 #1   0000000000000000 <log> 0:00:01.622 [ info] [   config/pb] { terminal}: config file: : (16/34): 30101e18880e20901c28c0d102301eaa
+2022-10-10 14:51:40.333 #1   0000000000000000 <log> 0:00:01.633 [ info] [   config/pb] { terminal}: config file: : (17/34): 0106080a103c1803b201020801c201ba
+2022-10-10 14:51:40.376 #1   0000000000000000 <log> 0:00:01.643 [ info] [   config/pb] { terminal}: config file: : (18/34): 0108a03810001a103331343133323432
+2022-10-10 14:51:40.376 #1   0000000000000000 <log> 0:00:01.653 [ info] [   config/pb] { terminal}: config file: : (19/34): 33333433333434342220373536373736
+2022-10-10 14:51:40.376 #1   0000000000000000 <log> 0:00:01.664 [ info] [   config/pb] { terminal}: config file: : (20/34): 36333663363836633733373536373331
+2022-10-10 14:51:40.376 #1   0000000000000000 <log> 0:00:01.674 [ info] [   config/pb] { terminal}: config file: : (21/34): 333833363631363236332a2037353637
+2022-10-10 14:51:40.419 #1   0000000000000000 <log> 0:00:01.684 [ info] [   config/pb] { terminal}: config file: : (22/34): 37363633366336353662363136623637
+2022-10-10 14:51:40.419 #1   0000000000000000 <log> 0:00:01.694 [ info] [   config/pb] { terminal}: config file: : (23/34): 33313338333636313632363332203735
+2022-10-10 14:51:40.419 #1   0000000000000000 <log> 0:00:01.705 [ info] [   config/pb] { terminal}: config file: : (24/34): 36373736363336633635366236313662
+2022-10-10 14:51:40.420 #1   0000000000000000 <log> 0:00:01.715 [ info] [   config/pb] { terminal}: config file: : (25/34): 36373331333833363631363236333801
+2022-10-10 14:51:40.463 #1   0000000000000000 <log> 0:00:01.725 [ info] [   config/pb] { terminal}: config file: : (26/34): 4001480f500a58b40160f00168007001
+2022-10-10 14:51:40.463 #1   0000000000000000 <log> 0:00:01.736 [ info] [   config/pb] { terminal}: config file: : (27/34): 780f8001328a01203330333033303330
+2022-10-10 14:51:40.463 #1   0000000000000000 <log> 0:00:01.746 [ info] [   config/pb] { terminal}: config file: : (28/34): 33303330333033303330333033303330
+2022-10-10 14:51:40.463 #1   0000000000000000 <log> 0:00:01.756 [ info] [   config/pb] { terminal}: config file: : (29/34): 3330333033303330f00101ca01221000
+2022-10-10 14:51:40.506 #1   0000000000000000 <log> 0:00:01.767 [ info] [   config/pb] { terminal}: config file: : (30/34): 1800200a288cfcffffffffffffff0130
+2022-10-10 14:51:40.506 #1   0000000000000000 <log> 0:00:01.777 [ info] [   config/pb] { terminal}: config file: : (31/34): 0570d8b3017801800101880100900101
+2022-10-10 14:51:40.507 #1   0000000000000000 <log> 0:00:01.787 [ info] [   config/pb] { terminal}: config file: : (32/34): d2012710011800200028003000380140
+2022-10-10 14:51:40.507 #1   0000000000000000 <log> 0:00:01.797 [ info] [   config/pb] { terminal}: config file: : (33/34): 00480078018001008801019001009801
+2022-10-10 14:51:40.507 #1   0000000000000000 <log> 0:00:01.808 [ info] [   config/pb] { terminal}: config file: : (34/34): 00a00100a80100b0010065d0
+2022-10-10 14:51:40.543 #1   0000000000000000 <log> 0:00:01.818 [debug] [ cndfs/utils] { terminal}: Found metadata #0 for /configuration-1.pb: id=8 st=150 sz=588 refs=0
+2022-10-10 14:51:40.543 #1   0000000000000000 <log> 0:00:01.829 [debug] [      fs/api] { terminal}: fsOpen (/configuration-1.pb, mode=1, fd=0)
+2022-10-10 14:51:40.543 #1   0000000000000000 <log> 0:00:01.838 [debug] [       cndfs] { terminal}: Rewinding
+2022-10-10 14:51:40.618 #1   0000000000000000 <log> 0:00:01.886 [ERROR] [   config/pb] { terminal}: Failed to pb-decode config
+2022-10-10 14:51:40.618 #1   0000000000000000 <log> 0:00:01.894 [debug] [      module] { terminal}: Starting uiService
+2022-10-10 14:51:40.618 #1   0000000000000000 <log> 0:00:01.901 [debug] [      module] { terminal}: Starting srcRestrictedCfgService
+2022-10-10 14:51:40.618 #1   0000000000000000 <log> 0:00:01.909 [debug] [      module] { terminal}: Starting timeService
+2022-10-10 14:51:41.669 #1   0000000000000000 <log> 0:00:02.935 [ info] [    timezone] { terminal}: New TZ = CET-1CEST,M3.5.0/2,M10.5.0/3
+2022-10-10 14:51:41.669 #1   0000000000000000 <log> 0:00:02.945 [ info] [        time] { terminal}: Uptime: 2945, local time: 1970-01-01  1:00:00.009, UTC: 0.9, status: 0
+2022-10-10 14:51:41.670 #1   0000000000000000 <log> 0:00:02.957 [panic] ======== Panic ========
+2022-10-10 14:51:41.670 #1   0000000000000000 <log> 0:00:02.957 [panic] terminal:262, in task terminal: LoWPAN EUI-64 is missing, set prod.lowpan.eui64
+
 
 
 
