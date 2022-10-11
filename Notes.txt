@@ -41995,6 +41995,56 @@ Send:
 </PDU>
 </HDLC>
 
+-------------------------------------------------------
+special days:
+
+Sending special days data
+Multi-block request
+Set first 0.0.11.0.0.255 ic 11 attr 2 valueLen 64 B
+Adding fields for SetNext/SetFirst
+tx unencrypted: ( 1/ 6): c10281000b00000b0000ff0200000100
+tx unencrypted: ( 2/ 6): 000001730203120001090507e90202ff
+tx unencrypted: ( 3/ 6): 11010203120002090507e80303ff1102
+tx unencrypted: ( 4/ 6): 0203120003090507e80404ff11030203
+tx unencrypted: ( 5/ 6): 120004090507e60505ff110402031200
+tx unencrypted: ( 6/ 6): 0509000033000000300abfec
+tx: ( 1/ 1): 7e
+tx: ( 1/ 1): a07b
+tx: ( 1/ 1): 03
+tx: ( 1/ 1): 03
+tx: ( 1/ 1): ba
+tx: ( 1/ 1): 3e60
+tx: ( 1/ 1): e6e600
+tx: ( 1/ 7): c96d30000000d4701a2e64a2f9c06e1e
+tx: ( 2/ 7): 04881dec66041b5b635c19ee858e0209
+tx: ( 3/ 7): 7972cab4012bf07b2dc19e09f3cd38b0
+tx: ( 4/ 7): dc644eee58714db9581b95a8fb85cab6
+tx: ( 5/ 7): 3193d5a337af373149203110426db597
+tx: ( 6/ 7): 7208b5c589f44c2b781ece25057f8241
+tx: ( 7/ 7): a625c58d55af31b03906bcd53a0859
+tx: ( 1/ 1): efa9
+tx: ( 1/ 1): 7e
+** Giving s_responseSem to start the timeout cycle... **
+Restarting HDLC timeout due to HDLC send operation
+** Waiting for HDLC event (60000ms) **
+Sending special days data done
+ -- waiting on s_dlmsSemaphore for 100000ms --
+ACTION_WAIT_FOR_RESPONSE
+rx: ( 1/ 3): 7ea0230303daf633e6e700cd15300000
+rx: ( 2/ 3): 00d429b7a1765d1250619d2274c56649
+rx: ( 3/ 3): e31901687e
+HDLC_TYPE_I
+Passing IFrame up the stack to the DLMS task.
+!! Result == ResultOK !!
+** Waiting for HDLC event (60000ms) **
+Encrypted:: ( 1/ 2): 1530000000d429b7a1765d1250619d22
+Encrypted:: ( 2/ 2): 74c56649e319
+rx decrypted: ( 1/ 1): c5018113
+Data access result: data block number invalid
+
+
+
+c10281000b00000b0000ff0200000100000001730203120001090507e90202ff11010203120002090507e80303ff11020203120003090507e80404ff11030203120004090507e60505ff1104020312000509000033000000300abfec
 
 
 
