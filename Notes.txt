@@ -42201,4 +42201,6 @@ C1
 power control APC and duty cycle testing
 
 - radio test commandss bypass power-control. needs to be adjusted or a new command added to do this.
+- Cant find EN300220 referring to APC.
+- Alg. for settling time (in pwoercontrol.c)
 
