@@ -40383,6 +40383,7 @@ TODO:
 server interview:
 
 - concurrency
+- best practices
 - networking, TCP, UDP, packet loss, TCP windowing, latency, queueing
 - testing approach.
 - load balancing
