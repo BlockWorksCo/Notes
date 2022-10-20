@@ -42206,3 +42206,23 @@ power control APC and duty cycle testing
 - Cant find EN300220 referring to APC.
 - Alg. for settling time (in pwoercontrol.c)
 
+---------------------------------------------
+
+Bad:
+rx: AT+UPSDA=0,3
++CME ERROR: operation not allowed
+cmd 'AT+UPSDA=0,3' failed: +CME ERROR: operation not allowed
+rx: AT+UDPDP=?
+
+Good:
+rx: AT+UPSDA=0,3
+OK
++UUPSDA: 0,"2405:203:2a00:ea:200:ff:fe00:0"
+
+
+UPSDA is command to activate the PSD context (profile 0, 3== activate).
+
+
+
+
+
