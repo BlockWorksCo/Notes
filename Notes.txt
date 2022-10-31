@@ -42222,6 +42222,15 @@ OK
 
 UPSDA is command to activate the PSD context (profile 0, 3== activate).
 
+-----------------------------------------------
+
+ppp_cp::sendTerminateAck() is called to handle receipt of TermReq/RTA. No state machine changes currently happen as a result of this, but later the interface is marked as "down".
+
+Because the interface has been taken down nicely, neither the traffic monitor nor the tunnel-failure detect this and restart the uplink.
+
+uplink_tun6::tunnelFailure() and uplink_tun6::tun6StateMachine() both miss this condition.
+
+
 
 
 
