@@ -42253,3 +42253,12 @@ use:
 ln -s ~/pki ~/.devstack/.data/pki
 instead
 
+
+within NMS container:
+ sudo -u \#1003 -g \#1003 bash
+ jcmd 66 GC.heap_dump /tmp/heap.dump
+
+
+
+
+
