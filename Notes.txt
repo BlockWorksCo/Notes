@@ -42248,4 +42248,8 @@ solution is to clone CA, remvoe dependency and install with "setup.py install --
 sudo mount -o loop ~/pki_smip_xfs.img ~/pki
 dev-stack --pkidir /home/steve/pki/ setup -n 1 -s 1 -a 100 -g 1 -e
 
+--pkidir is no longer working...
+use:
+ln -s ~/pki ~/.devstack/.data/pki
+instead
 
