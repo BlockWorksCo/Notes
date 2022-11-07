@@ -42240,4 +42240,12 @@ modem version
 ./tools/c4-tools/coap_request.py --ctrlporthub :5001 --modem-at-cmd AT+GMR
 
 
+---------------------------------------
+new setup
+getting_started script fails due to inability to build ca with dependeny on PyYAML 3.12.
+solution is to clone CA, remvoe dependency and install with "setup.py install --user"
+
+sudo mount -o loop ~/pki_smip_xfs.img ~/pki
+dev-stack --pkidir /home/steve/pki/ setup -n 1 -s 1 -a 100 -g 1 -e
+
 
