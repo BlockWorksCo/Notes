@@ -42259,6 +42259,13 @@ within NMS container:
  jcmd 66 GC.heap_dump /tmp/heap.dump
 
 
+https://stackoverflow.com/questions/15245319/intermittent-junit-error-java-virtual-machine-connection-refused
+add:
+ -XX:+StartAttachListener\
+ to server.sh java startup
+ then:
+sudo -u \#1002 -g \#1002 jcmd 70 help
+
 
 
 
