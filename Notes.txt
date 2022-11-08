@@ -42266,6 +42266,9 @@ add:
  then:
 sudo -u \#1002 -g \#1002 jcmd 70 help
 
+ sudo -u \#1002 -g \#1002 jmap -dump:live,format=b,file=/tmp/heap.hprof 70
+
+
 
 
 
