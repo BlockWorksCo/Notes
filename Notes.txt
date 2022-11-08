@@ -42280,6 +42280,50 @@ sudo -u \#1002 -g \#1002 jcmd 70 Thread.print | grep os_prio
 2022-11-08 11:04:38,735 ERROR [dtls-pool-16] [node=00-00-00-00-00-00-18-6C] SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
 
 
+---------------------------
+server message processing call stack:
+
+"dtls-pool-54" #468 prio=5 os_prio=0 tid=0x00007f787c00d800 nid=0x242 waiting on condition [0x00007f7988ed0000]
+   java.lang.Thread.State: WAITING (parking)
+    at sun.misc.Unsafe.park(Native Method)
+    - parking to wait for  <0x00000000f90e1618> (a java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject)
+    at java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+    at java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+    at java.util.concurrent.ArrayBlockingQueue.take(ArrayBlockingQueue.java:403)
+    at org.apache.activemq.transport.FutureResponse.getResult(FutureResponse.java:48)
+    at org.apache.activemq.transport.ResponseCorrelator.request(ResponseCorrelator.java:87)
+    at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1392)
+    at org.apache.activemq.ActiveMQConnection.syncSendPacket(ActiveMQConnection.java:1436)
+    at org.apache.activemq.ActiveMQSession.syncSendPacket(ActiveMQSession.java:2088)
+    at org.apache.activemq.ActiveMQMessageProducer.<init>(ActiveMQMessageProducer.java:124)
+    at org.apache.activemq.ActiveMQSession.createProducer(ActiveMQSession.java:1119)
+    at com.connode.service.terminal.mq.broker.MessageQueuePersister.enqueue(MessageQueuePersister.java:154)
+    at com.connode.service.terminal.resources.MqCoapResource.queueReceivedMessages(MqCoapResource.java:116)
+    at com.connode.service.terminal.resources.MqCoapResource.access$100(MqCoapResource.java:45)
+    at com.connode.service.terminal.resources.MqCoapResource$2.handle(MqCoapResource.java:97)
+    at com.connode.service.terminal.resources.MqCoapResource$2.handle(MqCoapResource.java:92)
+    at com.connode.service.terminal.session.coap.IncomingCoapExchange.accept(IncomingCoapExchange.java:90)
+    at com.connode.service.terminal.resources.MqCoapResource.executeReceivedPostRequest(MqCoapResource.java:104)
+    at com.connode.coap.CoapApplication.invoke(CoapApplication.java:102)
+    at com.connode.coap.LocalCoapSession.handleConfirmableRequestMessage(LocalCoapSession.java:211)
+    at com.connode.coap.IncomingMessageTracker$HandleRequestComplete.run(IncomingMessageTracker.java:292)
+    at com.connode.coap.LocalCoapSession.receiveRequestMessage(LocalCoapSession.java:291)
+    at com.connode.coap.CoapEndpoint.handleMessage(CoapEndpoint.java:332)
+    at com.connode.coap.SecureCoapEndpoint.dataReceived(SecureCoapEndpoint.java:201)
+    at com.connode.dtls.DTLSConnection.receiveApplicationData(DTLSConnection.java:1200)
+    at com.connode.dtls.DTLSConnection.processRecord(DTLSConnection.java:800)
+    at com.connode.dtls.DTLSConnection.receiveOnePacket(DTLSConnection.java:739)
+    at com.connode.dtls.DTLSConnection.doWork(DTLSConnection.java:692)
+    at com.connode.dtls.DTLSConnection.access$000(DTLSConnection.java:48)
+    at com.connode.dtls.DTLSConnection$1.run(DTLSConnection.java:676)
+    at com.connode.logging.LoggingContext.wrap(LoggingContext.java:127)
+    at com.connode.dtls.DTLSConnection.run(DTLSConnection.java:673)
+    at com.connode.logging.LoggedRunnable.run(LoggedRunnable.java:34)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+    at java.lang.Thread.run(Thread.java:748)
+
+
 
 
 
