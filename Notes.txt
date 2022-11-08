@@ -42269,6 +42269,9 @@ sudo -u \#1002 -g \#1002 jcmd 70 help
 java heap dump:
 sudo -u \#1002 -g \#1002 jmap -dump:live,format=b,file=/tmp/heap.hprof 70
 
+dev-stack setup -n 1 -s 1 -e -a 10000 -g 5
+
+
 
 
 
