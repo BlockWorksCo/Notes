@@ -42272,6 +42272,13 @@ sudo -u \#1002 -g \#1002 jmap -dump:live,format=b,file=/tmp/heap.hprof 70
 dev-stack setup -n 1 -s 1 -e -a 10000 -g 5
 
 
+2022-11-08 11:04:38,734 DEBUG [mq-consumer-Queue-08] NodeEventPersister - Received event with code : 1441792 and message Id : 15859 and text code : node.boot
+2022-11-08 11:04:38,734 DEBUG [mq-consumer-Queue-04] NodeEventPersister - Received event with code : 1441792 and message Id : 15858 and text code : node.boot
+2022-11-08 11:04:38,734 ERROR [dtls-pool-14] [node=00-00-00-00-00-00-18-7D] SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+2022-11-08 11:04:38,735 ERROR [dtls-pool-16] [node=00-00-00-00-00-00-18-6C] SqlExceptionHelper - Deadlock found when trying to get lock; try restarting transaction
+
+
+
 
 
 
