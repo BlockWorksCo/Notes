@@ -42324,6 +42324,13 @@ server message processing call stack:
     at java.lang.Thread.run(Thread.java:748)
 
 
+---------------------------
+dev-stack with server build from artifcatory:
+
+unpack artifcats into ~Temp/dist/nms/pkg and ~Temp/dist/sma/pkg
+dev-stack setup -n 1 -s 1 -e -a 100000 -g 50 --nms-version ~/Temp/dist/nms --sma-version ~/Temp/dist/sma
+
+
 
 
 
