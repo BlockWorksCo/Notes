@@ -42349,20 +42349,34 @@ Training:
 
 System
 - CI
+- Metering backgrounder
+    - DLMS/COSEM
+    - Profiles
+    - Green/Blue/Yellow/White books AXDR
+    - Events/Alarms
 - Deployments Indian/Thai/SMIP/Sweden
-- Products HW1/IPA1/IPA3/GW200/CNIC7/GW7/IGW7?
+- Products HW1/IPA1/IPA3/GW200/CNIC7/GW7/Mbus/IGW7?
 - Projects FG25/WiSUN/S&P
 - General Introduction
+- dev-stack
+- "mq"
+    - architecture
+    - why?
+        - network load-spreading
 
 Agent
 - build system
 - Agent architecture
+    - task breakdown
+    - data flow
 - RPL, gateways & the mesh
 - cellular, CNIC
 - Meter driver(s)
 - Difficulties:
     - Debugging @ scale
     - ballooning number of builds
+    - meter-driver complexity
+    - resource issues
 - Production
     - MTS
     - Test Jigs
@@ -42377,6 +42391,7 @@ Agent
     - tun6 & tunAT
     - WiSUN
     - IPv6/6LoWPAN
+- Terminal Emulator
 
 Server
 - NMS
@@ -42385,6 +42400,9 @@ Server
 - Panmesh
 - SMIP
 - tun6d
+- MeterConfigurator
+- OpRep
+- Deployment architecture
 
 
 
