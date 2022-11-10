@@ -42370,6 +42370,7 @@ Agent
     - task breakdown
     - data flow
 - RPL, gateways & the mesh
+- protobufs
 - cellular, CNIC
 - Meter driver(s)
 - Difficulties:
@@ -42392,6 +42393,10 @@ Agent
     - WiSUN
     - IPv6/6LoWPAN
 - Terminal Emulator
+- prodmode & production
+- Manufacturing
+    - module mfg
+    - meter mfg & integration
 
 Server
 - NMS
