@@ -42354,6 +42354,13 @@ System
     - Profiles
     - Green/Blue/Yellow/White books AXDR
     - Events/Alarms
+    - the grid
+    - disconnection / load-shedding.
+    - prepayment / credit mode.
+    - ToU tariffs
+    - IS15959
+    - SMETS, MID
+    - MBus, powerline, WMBus
 - Deployments Indian/Thai/SMIP/Sweden
 - Products HW1/IPA1/IPA3/GW200/CNIC7/GW7/Mbus/IGW7?
 - Projects FG25/WiSUN/S&P
