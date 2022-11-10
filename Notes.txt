@@ -42339,6 +42339,11 @@ Useful one-liners:
 	(Thread dump of NMS) docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` Thread.print"
 
 
+--------------------------
+CVs
+
+Taimur Khan - 500089
+
 
 
 
