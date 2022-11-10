@@ -42361,6 +42361,7 @@ System
     - IS15959
     - SMETS, MID
     - MBus, powerline, WMBus
+    - Calendar
 - Deployments Indian/Thai/SMIP/Sweden
 - Products HW1/IPA1/IPA3/GW200/CNIC7/GW7/Mbus/IGW7?
 - Projects FG25/WiSUN/S&P
@@ -42371,7 +42372,7 @@ System
     - why?
         - network load-spreading
 - MDMS
-    - Swedish one
+    - Swedish one (forget the name)
     - Oracle
     - MDMSLite
 - API
