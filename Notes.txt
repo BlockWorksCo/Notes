@@ -42344,6 +42344,38 @@ CVs
 
 Taimur Khan - 500089
 
+--------------------------------
+Training:
+
+System
+- CI
+- Deployments Indian/Thai/SMIP/Sweden
+- Products HW1/IPA1/IPA3/GW200/CNIC7/GW7/IGW7?
+- Projects FG25/WiSUN/S&P
+- General Introduction
+
+Agent
+- build system
+- Agent architecture
+- RPL, gateways & the mesh
+- cellular, CNIC
+- Meter driver(s)
+- Difficulties:
+    - Debugging @ scale
+- Production
+    - MTS
+    - Test Jigs
+- SMIP specifics
+    - mostly gateways
+    - no meter driver
+    - runs on modem
+
+Server
+- NMS
+- SMA
+- MDMS
+- Panmesh
+- SMIP
 
 
 
