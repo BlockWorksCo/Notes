@@ -42362,6 +42362,7 @@ Agent
 - Meter driver(s)
 - Difficulties:
     - Debugging @ scale
+    - ballooning number of builds
 - Production
     - MTS
     - Test Jigs
@@ -42369,6 +42370,13 @@ Agent
     - mostly gateways
     - no meter driver
     - runs on modem
+- Technologies:
+    - CoAP
+    - DTLS
+    - AT commands
+    - tun6 & tunAT
+    - WiSUN
+    - IPv6/6LoWPAN
 
 Server
 - NMS
@@ -42376,6 +42384,7 @@ Server
 - MDMS
 - Panmesh
 - SMIP
+- tun6d
 
 
 
