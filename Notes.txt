@@ -42371,13 +42371,25 @@ System
     - why?
         - network load-spreading
 - MDMS
+    - Swedish one
+    - Oracle
+    - MDMSLite
 - API
     - SMA
     - NMS
     - Panmesh
+SLA
+    - samples
+    - alarms / last-gasp
 
 Agent
 - build system
+    - Make
+    - compiler configuration
+    - platform configuration
+    - hierarchy of .mk includes
+    - naming of builds
+- OTA
 - Different builds
     - sniffer
     - gateway
@@ -42390,6 +42402,8 @@ Agent
 - protobufs
 - cellular, CNIC
 - Meter driver(s)
+- time sync
+- last-gasp
 - Difficulties:
     - Debugging @ scale
     - ballooning number of builds
