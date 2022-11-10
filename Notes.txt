@@ -42378,7 +42378,7 @@ System
     - SMA
     - NMS
     - Panmesh
-SLA
+- SLA
     - samples
     - alarms / last-gasp
 
@@ -42425,6 +42425,14 @@ Agent
     - IPv6/6LoWPAN
 - Terminal Emulator
 - prodmode & production
+- porting to new platform
+- radio:
+    - MAC
+    - PHY
+- IP stack.
+    - IPv6
+    - IPv4
+    - network interface modules
 - Manufacturing
     - module mfg
     - meter mfg & integration
