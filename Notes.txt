@@ -42370,7 +42370,7 @@ System
     - why?
         - network load-spreading
 - MDMS
-    - Swedish one (forget the name)
+    - HMP one (forget the name)
     - Oracle
     - MDMSLite
 - API
@@ -42387,6 +42387,9 @@ System
     - file distribution & upgrade
     - network identity
     - sampling
+    - DLMS "pipe"
+    - configuration
+    - jobs & groups
 
 Agent
 - build system
@@ -42445,6 +42448,7 @@ Agent
 - Testing:
     - XMas tree
     - gaps
+- DLMS pipe.
 
 Server
 - NMS
