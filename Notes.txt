@@ -42382,6 +42382,12 @@ System
 - SLA
     - samples
     - alarms / last-gasp
+- behaviours & data-flow
+    - login
+    - registration
+    - configuration
+    - file distribution & upgrade
+    - network identity
 
 Agent
 - build system
