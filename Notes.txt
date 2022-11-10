@@ -42330,6 +42330,15 @@ dev-stack with server build from artifcatory:
 unpack artifcats into ~Temp/dist/nms/pkg and ~Temp/dist/sma/pkg
 dev-stack setup -n 1 -s 1 -e -a 100000 -g 50 --nms-version ~/Temp/dist/nms --sma-version ~/Temp/dist/sma
 
+-------------------------------------------
+devstack heap dump thread dump
+
+Useful one-liners:
+
+	(heap dump of NMS) docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jmap -dump:live,format=b,file=/tmp/heap5.hprof \`pidof java\`"
+	(Thread dump of NMS) docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` Thread.print"
+
+
 
 
 
