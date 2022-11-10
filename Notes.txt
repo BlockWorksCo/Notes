@@ -42370,9 +42370,19 @@ System
     - architecture
     - why?
         - network load-spreading
+- MDMS
+- API
+    - SMA
+    - NMS
+    - Panmesh
 
 Agent
 - build system
+- Different builds
+    - sniffer
+    - gateway
+    - meter-agents
+    - platforms
 - Agent architecture
     - task breakdown
     - data flow
@@ -42404,11 +42414,20 @@ Agent
 - Manufacturing
     - module mfg
     - meter mfg & integration
+- Testing:
+    - XMas tree
+    - gaps
 
 Server
 - NMS
+    - jobs
+    - events
+    - server alarms
+    - UI
+    - schema
 - SMA
-- MDMS
+    - jobs
+    - schema
 - Panmesh
 - SMIP
 - tun6d
