@@ -42348,24 +42348,22 @@ Taimur Khan - 500089
 Training:
 
 System
+- General Introduction
 - CI
 - Metering backgrounder
     - DLMS/COSEM
     - Profiles
     - Green/Blue/Yellow/White books AXDR
     - Events/Alarms
-    - the grid
     - disconnection / load-shedding.
     - prepayment / credit mode.
-    - ToU tariffs
+    - Calendar & ToU tariffs
     - IS15959
     - SMETS, MID
     - MBus, powerline, WMBus
-    - Calendar
 - Deployments Indian/Thai/SMIP/Sweden
 - Products HW1/IPA1/IPA3/GW200/CNIC7/GW7/Mbus/IGW7?
 - Projects FG25/WiSUN/S&P
-- General Introduction
 - dev-stack
 - "mq"
     - architecture
@@ -42388,6 +42386,7 @@ System
     - configuration
     - file distribution & upgrade
     - network identity
+    - sampling
 
 Agent
 - build system
