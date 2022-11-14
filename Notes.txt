@@ -42477,7 +42477,15 @@ Server feedback loop theory
 the notification.
 - The SMA then performs its discovery prcoess, but because that requires a conversation with the agent it creates
 threads for each Agent that logs in. These conversations can last a small number of minutes.
--
+- Each SMA thread will be attempting to have a conversation through the NMS to the Agent. Sending packets to the Agent
+is only performed when the DTLSNetwork thread is *not* handling the packets it has just received. In other words, The longer
+that the DTLSNetwork thread takes to process packets its read from the UDP socket, the less time it will have to send packets
+to that same socket.
+- As the size of the LinkedBlockingQueues for each DTLS-thread grows, the GC will kick-in more often, reducing the CPU-time
+available for other threads. This indirectly takes away CPU-time from being devoted to processing incoming packets which
+can cause the 'read' portion of the DTLSNetwork to take a proportionally longer amount of time.
+- Because a larger amount of time is spent on incoming/read packets, there is less time available to process outgoing/send
+packets. This increases the amount of threads in the SMA to handle the ongoing conversations with more nodes and
 
 
 
