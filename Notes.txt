@@ -42495,6 +42495,17 @@ are queued.
 - A feedback loop has formed.
 
 
+In other words, we have a 'message amplification feedback loop'.
+The message-amplification portion of that is because the SMA ultimately send (and receives) many messages triggered by the on
+login.
+The feedback-loop occurs because our CPU-usage devoted to receiving is directly linked (inversely proprotional) to the CPU-usage
+devoted to sending (because they're the same thread).
+Any event that causes the DTLSNetwork thread to take a bit longer to receive packets will cause more packets to be queued
+which in turn causes a greater likelihood of CPU-starvation for the DTLSNetwork thread and more delays.
+
+We can break this feedback loop by splitting the single DTLSNetwork thread into two. On thread to receive and one thread to send
+packets.
+
 
 
 
