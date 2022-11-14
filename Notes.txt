@@ -42467,6 +42467,20 @@ Server
 - OpRep
 - Deployment architecture
 
+-----------------------------------------------------
+Server feedback loop theory
+
+- DTLSNetwork thread takes turns reading then writing, although for each iteration it prioritises writes (sends).
+- DTLSNetwork thread puts each message into a LinkedBlockingQueue for execution in the DTLS thread pool (32 threads).
+- When logins occur, the discovery thread (in the NMS) forwards the notfication to the SMA.
+- The NMS discovery thread then blocks (up to 500ms) waiting for a response from the SMA to indicate that it has received
+the notification.
+- The SMA then performs its discovery prcoess, but because that requires a conversation with the agent it creates
+threads for each Agent that logs in. These conversations can last a small number of minutes.
+-
+
+
+
 
 
 
