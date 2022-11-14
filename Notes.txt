@@ -42477,6 +42477,7 @@ Server feedback loop theory
 the notification.
 - The SMA then performs its discovery prcoess, but because that requires a conversation with the agent it creates
 threads for each Agent that logs in. These conversations (and the threads) can last a small number of minutes.
+- During the period that these conversations are going on, many more Agents will be requesting a login.
 - Each SMA thread will be attempting to have a conversation through the NMS to the Agent. Sending packets to the Agent
 is only performed when the DTLSNetwork thread is *not* handling the packets it has just received. In other words, The longer
 that the DTLSNetwork thread takes to process packets its read from the UDP socket, the less time it will have to send packets
