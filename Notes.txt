@@ -42520,6 +42520,7 @@ Key points:
 - RAM-pressure gets converted into CPU-starvation in the NMS by the GC threads (after a limit is reached).
 - The two above points are a vicious circle.
 - Bounding the input-queue size in the DTLSNetwork prevents that effect, at the expense of dropping packets.
+- This means that the NMS will now become explicitly lossy at the NMS input-stage.
 - On a dev-stack-on-one-machine setup, the SMA will take the majority of CPU-time, starving term-em and NMS.
 - Limiting the SMA in dev-stack to 4 CPUs prevents this effect from happening.
 
