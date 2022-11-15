@@ -42517,17 +42517,20 @@ Server performance:
 
 Key points:
 - CPU-starvation (of the NMS by the SMA) gets turned into RAM-pressure in the NMS due to unbounded queueing.
-- Bounding the input-queue in the DTLSNetwork prevents that effect, at the expense of dropping packets.
-- The SMAs discovery-threads are difficult to analyse because they're one-per-meter and have short lifetimes.
+- RAM-pressure gets converted into CPU-starvation in the NMS by the GC threads (after a limit is reached).
+- The two above points are a vicious circle.
+- Bounding the input-queue size in the DTLSNetwork prevents that effect, at the expense of dropping packets.
 - On a dev-stack-on-one-machine setup, the SMA will take the majority of CPU-time, starving term-em and NMS.
 - Limiting the SMA in dev-stack to 4 CPUs prevents this effect from happening.
+
 - Typical login load now is:
     SMA: 350% CPU, 1GB RAM (constant)
     NMS: 65% CPU, 1.6GB RAM (slowly rising).
     term-em: 2x85% CPU, 2x1.3GB RAM (constant)
     mysqld: 2x50% CPU (variable), 2x450MB
 
-
+Additionally:
+- The SMAs discovery-threads are difficult to analyse because they're one-per-meter and have short lifetimes.
 
 
 
