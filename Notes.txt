@@ -42506,6 +42506,13 @@ which in turn causes a greater likelihood of CPU-starvation for the DTLSNetwork 
 We can break this feedback loop by splitting the single DTLSNetwork thread into two. On thread to receive and one thread to send
 packets.
 
+----------------------------------------
+Server performance:
+
+- Constant turnover of threads makes it impossible to see true CPU usage as they're constantly changing.
+- Discovery threads are taking ~20% each, on server-dev, 1000% CPU usage between them and GC threads.
+- NMS is CPU-starved by SMA.
+- bounded input queue in NMS solves GC issue in NMS.
 
 
 
