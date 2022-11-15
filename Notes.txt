@@ -42526,7 +42526,7 @@ Key points:
 - Limiting the SMA in dev-stack to 4 CPUs prevents this effect from happening.
 
 - Typical login load now is:
-    SMA: 350% CPU, 1GB RAM (constant)
+    SMA: 410% CPU, 1GB RAM (constant)
     NMS: 65% CPU, 1.6GB RAM (slowly rising).
     term-em: 2x85% CPU, 2x1.3GB RAM (constant)
     mysqld: 2x50% CPU (variable), 2x450MB
