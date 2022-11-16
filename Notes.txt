@@ -42566,6 +42566,7 @@ of packets still, so must be from the decrypt/decode process (DTLS/CoAP).
 
 - NMS gets to ~68K nodes and 6.7GB/8GB and CPU-usage drops to minimal and logins stop. All mq-consumer-Queue threads in
 state RUNNABLE but all at socketConnect trying to push messages to SMA(?).
+all mq-consumer threads trying to connect a socket to SMA.
 
 
 
