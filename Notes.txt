@@ -42564,7 +42564,8 @@ of packets still, so must be from the decrypt/decode process (DTLS/CoAP).
 - Need to check that NMS will retry outgoing packets since they can now be dropped iunder load.
 - Having a lossy output-queue seems to prevent the high CPU-usage condition in the SMA.
 
-- NMS gets to ~68K nodes and 6.7GB/8GB and CPU-usage drops to minimal and logins stop.
+- NMS gets to ~68K nodes and 6.7GB/8GB and CPU-usage drops to minimal and logins stop. All mq-consumer-Queue threads in
+state RUNNABLE but all at socketConnect trying to push messages to SMA(?).
 
 
 
