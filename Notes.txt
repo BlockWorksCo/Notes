@@ -42549,4 +42549,6 @@ docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jmap -dump:live,for
 (Thread dump of NMS)
 docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` Thread.print"
 
+Heap histogram
+docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` GC.class_histogram"
 
