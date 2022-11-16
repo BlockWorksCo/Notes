@@ -42552,3 +42552,12 @@ docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\`
 Heap histogram
 docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` GC.class_histogram"
 
+---------------------------------------
+performance learnings:
+
+- Contraint violations in NMS cos a big chunk of input-queue to be used. i.e. they're costly.
+- the 'add' operation on Java queues is blocking, use 'offer'  instead to dropdiscard when full.
+
+
+
+
