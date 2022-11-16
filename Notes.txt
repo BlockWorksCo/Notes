@@ -42540,4 +42540,13 @@ Dev-stack branch: MiscBugFixes
 server branch: BoundedInputQueue
 
 
+------------------------------------------------------------
+Useful one-liners:
+
+(heap dump of NMS)
+docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jmap -dump:live,format=b,file=/tmp/heap5.hprof \`pidof java\`"
+
+(Thread dump of NMS)
+docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` Thread.print"
+
 
