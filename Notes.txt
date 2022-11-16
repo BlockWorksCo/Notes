@@ -42562,6 +42562,7 @@ of packets still, so must be from the decrypt/decode process (DTLS/CoAP).
 - NMS RAM usage can still grow to bad levels and trigger the GC threads. At this point, everything falls apart again.
 - Persisting /mq messages (MessageQueuePersister) also takes a hit on available input-queue capacity.
 - Need to check that NMS will retry outgoing packets since they can now be dropped iunder load.
+- Having a lossy output-queue seems to prevent the high CPU-usage condition in the SMA.
 
 
 
