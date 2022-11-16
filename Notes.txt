@@ -42559,7 +42559,8 @@ performance learnings:
 - the 'add' operation on Java queues is blocking, use 'offer'  instead to dropdiscard when full.
 - NMS RAM usage continues to grow with fixed size input & output queues. class-histogram shows lots
 of packets still, so must be from the decrypt/decode process (DTLS/CoAP).
-- NMSRAM usage can still grow to bad levels and trigger the GC threads. At this point, everything falls apart again.
+- NMS RAM usage can still grow to bad levels and trigger the GC threads. At this point, everything falls apart again.
+- Persisting /mq messages also takes a hit on available input-queue capacity.
 
 
 
