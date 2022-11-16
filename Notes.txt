@@ -42569,4 +42569,54 @@ state RUNNABLE but all at socketConnect trying to push messages to SMA(?).
 all mq-consumer threads trying to connect a socket to SMA.
 
 
+----------Common info ---------
+Emu_start_time:              2022-11-16 20:04:43
+Current_time:                2022-11-16 22:29:28
+----------Protocol statistic---
+DTLS_start_time:                2022-11-16 20:06:03
+Login_start_time:               2022-11-16 20:06:08
+Registration_start_time:        2022-11-16 20:06:39
+DTLS_finish_time:               2022-11-16 22:28:23
+Login_finish_time:              2022-11-16 22:28:23
+----------Protocol counters------
+Handshake_finished:             160160
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       0
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        18
+COAP_login_finished:            160160
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              18
+COAP_registration_finished:     160159
+COAP_registration_ongoing:      1
+COAP_registration_resend:       1355
+Current_registraion_speed:      0
+Total_Registration_speed:       18
+Num_of_request_received:        629918
+Current_request_received_speed: 0
+Num_of_keepAlive_sent:          26462
+Num_of_keepAlive_timeout:       0
+Current_keepAlive_speed:        18
+Num_of_event_sent:              186622
+Current_event_speed:            18
+Num_of_sample_sent:             382002
+Current_sample_speed:           85
+Num_of_reading_sent:            0
+Current_reading_speed:          0
+Num_of_alarms_sent:             160160
+Current_alarms_speed:           0
+Num_of_file_download_ongoing:   0
+Num_of_file_download_finished:  0
+Num_of_broadcast_ongoing:       0
+Num_of_broadcast_finished:      0
+Num_of_firmware_update_ongoing: 0
+Num_of_firmware_update_finished:0
+Num_of_meter_upgrade_ongoing:   0
+Num_of_meter_upgrade_finished:  0
+
+
 
