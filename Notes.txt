@@ -42568,6 +42568,9 @@ of packets still, so must be from the decrypt/decode process (DTLS/CoAP).
 state RUNNABLE but all at socketConnect trying to push messages to SMA(?).
 all mq-consumer threads trying to connect a socket to SMA.
 
+- A small number of nodes are logged-out continuously (35 out of 160000).
+- The "no DTLS activity" bug sees to hit this build also. whn a ping is tried, the input-queue-available goes to zero (lots of input) indicating that the queue is not being emptied.
+
 
 ----------Common info ---------
 Emu_start_time:              2022-11-16 20:04:43
