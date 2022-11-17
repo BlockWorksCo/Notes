@@ -42622,4 +42622,7 @@ Num_of_meter_upgrade_ongoing:   0
 Num_of_meter_upgrade_finished:  0
 
 
+dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 200000 -g 200 --nms-version ~/Temp/nms --sma-version ~/Temp/smas
+
+
 
