@@ -42625,4 +42625,14 @@ Num_of_meter_upgrade_finished:  0
 dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 200000 -g 200 --nms-version ~/Temp/nms --sma-version ~/Temp/smas
 
 
+---------------------------
+Scaling and performance:
+
+- NMS RAM usage is very high during login and stays at high level (200K nodes == 11GB)
+- Making input & output packet queues lossy (5000 elements) tames RAM usage to some extent, but not entirely.
+- Despite lossy queues, not a lot of retries seen.
+- There is a low level of logouts happening (bug?). Not seen on term-em, only on server.
+- Performance limitation now limited by term-em performance. May need separate machine.
+- Need to separate SMA & NMS onto different CPUs otherwise feedback exists between cpu-usage & ram-pressure.
+- SMA CPU usage very, very high in discovery tasks (see bug).
 
