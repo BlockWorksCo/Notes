@@ -42626,8 +42626,9 @@ dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 200000 -g 200 --nms-version ~
 
 
 ---------------------------
-Scaling and performance:
+Scaling and performance points:
 
+- Reliable, repeatable, smooth runs now possible on server-dev4 to the 200K level.
 - NMS RAM usage is very high during login and stays at high level (200K nodes == 11GB)
 - Giving NMS lots of RAM allows pattern to be seen.
 - Making input & output packet queues lossy (5000 elements) tames RAM usage to some extent, but not entirely.
@@ -42637,7 +42638,9 @@ Scaling and performance:
 - Performance limitation now limited by term-em performance. May need separate machine.
 - Need to separate SMA & NMS onto different CPUs otherwise feedback exists between cpu-usage & ram-pressure.
 - SMA CPU usage very, very high in discovery tasks (see bug).
+- SMA discovery threads renaming themselves needs to be stopped as its confusing.
 - ActiveMQ is now set to NON_PERSISTENT and Async. Despite this, mq-data still grows continuously but slowly.
+- Should now be two avenues of attack, NMS RAM usage and SMA CPU usage.
 
 
 
