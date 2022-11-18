@@ -42640,7 +42640,7 @@ Scaling and performance points:
 - SMA CPU usage very, very high in discovery tasks (see bug).
 - SMA discovery threads renaming themselves needs to be stopped as its confusing.
 - ActiveMQ is now set to NON_PERSISTENT and Async. Despite this, mq-data still grows continuously but slowly.
-- Should now be two avenues of attack, NMS RAM usage and SMA CPU usage.
+- Should now be two avenues of attack, NMS RAM usage and SMA CPU usage. These are the two current limits to scaling.
 
 
 
