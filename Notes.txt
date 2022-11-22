@@ -42651,5 +42651,21 @@ office location: 28.50302017306155, 77.08184349843548
 https://www.opencellid.org/#zoom=17&lat=28.501008&lon=77.07905
 https://www.opencellid.org/#zoom=17&lat=28.50302017306155&lon=77.08184349843548
 
+JIO: 405872 location and info:
+
+MCC: 405
+MNC: 872
+LAC: 23
+CID: 593957
+Radio Type: LTE
+
+Latitude: 28.507461547852
+Longitude: 77.084884643555
+Range: 1000 m
+
+2 measurements
+Created: 2016-12-25T19:46:41.000Z
+Updated: 2016-12-26T11:51:28.000Z
+
 
 
