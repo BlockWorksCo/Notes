@@ -42644,4 +42644,12 @@ Scaling and performance points:
 
 
 
+--------------------------------------
+cell id location
+
+office location: 28.50302017306155, 77.08184349843548
+https://www.opencellid.org/#zoom=17&lat=28.501008&lon=77.07905
+https://www.opencellid.org/#zoom=17&lat=28.50302017306155&lon=77.08184349843548
+
+
 
