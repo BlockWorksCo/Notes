@@ -42667,5 +42667,55 @@ Range: 1000 m
 Created: 2016-12-25T19:46:41.000Z
 Updated: 2016-12-26T11:51:28.000Z
 
+---------------------------------------------
+
+===========TERM EMU STATISTIC========
+----------Common info ---------
+Emu_start_time:              2022-11-23 09:11:21
+Current_time:                2022-11-23 13:10:51
+----------Protocol statistic---
+DTLS_start_time:                2022-11-23 09:15:34
+Login_start_time:               2022-11-23 09:15:40
+Registration_start_time:        2022-11-23 09:16:11
+----------Protocol counters------
+Handshake_finished:             260526
+Handshake_ongoing:              146
+Handshake_failed (current):     233
+Handshake_failed (total):       233
+Handshake_restart (current)     1
+Current_HandshakeOK_speed:      17
+Total_HandshakeOK_speed:        18
+COAP_login_finished:            260452
+COAP_login_ongoing:             28
+COAP_login_failed:              0
+Current_login_speed:            17
+Total_login_speed:              18
+COAP_registration_finished:     259072
+COAP_registration_ongoing:      638
+COAP_registration_resend:       12257
+Current_registraion_speed:      17
+Total_Registration_speed:       18
+Num_of_request_received:        1320220
+Current_request_received_speed: 70
+Num_of_keepAlive_sent:          340207
+Num_of_keepAlive_timeout:       1
+Current_keepAlive_speed:        40
+Num_of_event_sent:              439232
+Current_event_speed:            37
+Num_of_sample_sent:             879192
+Current_sample_speed:           61
+Num_of_reading_sent:            0
+Current_reading_speed:          0
+Num_of_alarms_sent:             259710
+Current_alarms_speed:           17
+Num_of_file_download_ongoing:   0
+Num_of_file_download_finished:  0
+Num_of_broadcast_ongoing:       0
+Num_of_broadcast_finished:      0
+Num_of_firmware_update_ongoing: 0
+Num_of_firmware_update_finished:0
+Num_of_meter_upgrade_ongoing:   0
+Num_of_meter_upgrade_finished:  0
+
 
 
