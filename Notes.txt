@@ -42736,9 +42736,10 @@ https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/359
 Large calendar 116
 
 large BP
-more testing required on sampling
+more testing required on sampling due to fixed max size of 15KB
 
 DeadlockInvestigation branch
+tidied, needs retest.
 
 
 
