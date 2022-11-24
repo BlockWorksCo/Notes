@@ -42724,6 +42724,13 @@ securityEventLogout()
 securityEventLogin()
 in DbRemoteAddressesResolver.java
 
+---------------------------------------
+release:
+
+only start tunat when modem is online:
+https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/360
+
+
 
 
 
