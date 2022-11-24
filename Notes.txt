@@ -42730,6 +42730,12 @@ release:
 only start tunat when modem is online:
 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/360
 
+Captial:
+https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/359
+
+Large calendar 116
+
+large BP
 
 
 
