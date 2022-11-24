@@ -42727,13 +42727,18 @@ in DbRemoteAddressesResolver.java
 ---------------------------------------
 release:
 
-only start tunat when modem is online:
+bug: only start tunat when modem is online:
 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/360
 
-Captial:
+Capital:
 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/359
+review done.
+
+brownout fix:
+merge issues being resolved.
 
 Large calendar 116
+squashed & pushed
 
 large BP
 more testing required on sampling due to fixed max size of 15KB
