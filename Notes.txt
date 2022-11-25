@@ -42747,6 +42747,11 @@ more testing required on sampling due to fixed max size of 15KB
 DeadlockInvestigation branch
 tidied, needs retest.
 
+---------------------------------------------------
+monitoring:
+
+docker exec -it devstack_nms-0_1 bash -c "watch cat /proc/net/udp6"
+tail -f ~/.devstack/.data/nms-0/logs/security.log | ag logout
 
 
 
