@@ -42755,4 +42755,9 @@ tail -f ~/.devstack/.data/nms-0/logs/security.log | ag logout
 
 
 
+        // Set the input & output buffer sizes to avoid drops under heavy
+        // packet load.
+        channel.setOption( StandardSocketOptions.SO_SNDBUF, 1024*1024*8 );
+        channel.setOption( StandardSocketOptions.SO_RCVBUF, 1024*1024*8 );
+
 
