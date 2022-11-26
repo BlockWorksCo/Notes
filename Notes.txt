@@ -42761,3 +42761,8 @@ tail -f ~/.devstack/.data/nms-0/logs/security.log | ag logout
         channel.setOption( StandardSocketOptions.SO_RCVBUF, 1024*1024*8 );
 
 
+-----------------------------------------
+performance
+
+- dtls threads blocking on active-mq (still) when the login-rate drops off.
+
