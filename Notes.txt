@@ -42826,5 +42826,7 @@ Steady-state with 500K:
 - NMS @50% CPU usage
 - Disk read ~100K/sec
 - Disk write ~2.5MB/sec
+- atop says disk is 30% busy (slight disagreement, IOPS?).
+- network ~1% loading (with dashboard over ssh).
 
 
