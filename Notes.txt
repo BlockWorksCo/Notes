@@ -42819,4 +42819,12 @@ Num_of_firmware_update_finished:0
 Num_of_meter_upgrade_ongoing:   0
 Num_of_meter_upgrade_finished:  0
 
+Steady-state with 500K:
+- NMS 16GB RAM resident
+- SMA 1GB RAM resident
+- SMA @490% CPU usage.
+- NMS @50% CPU usage
+- Disk read ~100K/sec
+- Disk write ~2.5MB/sec
+
 
