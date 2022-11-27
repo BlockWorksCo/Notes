@@ -42822,11 +42822,13 @@ Num_of_meter_upgrade_finished:  0
 Steady-state with 500K:
 - NMS 16GB RAM resident
 - SMA 1GB RAM resident
-- SMA @490% CPU usage.
+- SMA @490% CPU usage (disvoery threads).
 - NMS @50% CPU usage
-- Disk read ~100K/sec
-- Disk write ~2.5MB/sec
+- Disk read stable @ ~100K/sec
+- Disk write highly variable, peaking @ ~2.5MB/sec
 - atop says disk is 30% busy (slight disagreement, IOPS?).
 - network ~1% loading (with dashboard over ssh).
+- Constant lowlevel turnover of nodes logging-in and being logged-out.
+- Disk write dominated by mysql, with java & docker not far behind (logging).
 
 
