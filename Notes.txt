@@ -42830,5 +42830,9 @@ Steady-state with 500K:
 - network ~1% loading (with dashboard over ssh).
 - Constant lowlevel turnover of nodes logging-in and being logged-out.
 - Disk write dominated by mysql, with java & docker not far behind (logging).
+- Low-level of packet-drops at NMS on port 5684 (DTLS).
+- bounded input queues not stressed at this load.
+- NMS/Panmesh UI responsiveness Ok, usable (pings, browsing nodes). dashboard count is slow.
+- SMA UI
 
 
