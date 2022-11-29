@@ -42836,4 +42836,9 @@ Steady-state with 500K:
 - SMA UI wont load. (no CPU available for SMA).
 - mq-store grew to 700MB after 8 hours of steady-state (continuous slow growth, unsure why).
 
+-----------------------------------------------------
+release:
+
+- YTL 116 days: malloc failure after attempt to read 4 days of block loads (~40 segments).
+- Precise 116 days: Data access result: r/w denied after SetNext request.
 
