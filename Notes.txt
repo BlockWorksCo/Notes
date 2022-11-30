@@ -42844,3 +42844,41 @@ release:
 
 FFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF14FFFFFFFFFFFFFFFF021F090C07E60B1A060A00000001A40014000000000000000014000000000000000014000009820000000014000004B3000003E814000000000000000014000000000000000014000008B500000000140000097500000000140000
 
+unittest-dlms: test_hdlc... ok.                                                                                                                                                                           [75/2792
+CC build/unittest-dlms/src/device/communication/dlms/test-linux/test_dlms.o
+LINK build/unittest-dlms/bin/test_dlms
+=================================================================
+==1352512==ERROR: AddressSanitizer: global-buffer-overflow on address 0x556f0fe01f70 at pc 0x556f0fbf8c57 bp 0x7fd6e11fea50 sp 0x7fd6e11fea40
+READ of size 4 at 0x556f0fe01f70 thread T1
+    #0 0x556f0fbf8c56 in reallocInternal src/platform/core/memory.c:533
+    #1 0x556f0fbf9112 in freeWrapper src/platform/core/memory.c:677
+    #2 0x556f0fa9c6b3 in testGetRequestNext src/device/communication/dlms/test-linux/test_dlms.c:456
+    #3 0x556f0fcb4726 in runTestCase src/base/test-linux/test/tester.c:593
+    #4 0x556f0fcb4fc2 in runTestSuite src/base/test-linux/test/tester.c:697
+    #5 0x556f0fcb58a9 in runTestContext src/base/test-linux/test/tester.c:802
+    #6 0x556f0fcb66f9 in runAllTests src/base/test-linux/test/tester.c:1091
+    #7 0x556f0faa44f2 in testTask src/device/communication/dlms/test-linux/test_dlms.c:1429
+    #8 0x556f0fc0df1a in taskWrapper src/platform/osal/osal-freertos/osal_freertos.c:106
+    #9 0x556f0fc0c830 in prvWaitForStart src/platform/freertos/freertos_port-linux/freertos_port/port.c:135
+    #10 0x7fd6e4821608 in start_thread /build/glibc-SzIz7B/glibc-2.31/nptl/pthread_create.c:477
+    #11 0x7fd6e4746132 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f132)
+
+0x556f0fe01f70 is located 44 bytes to the right of global variable 's_cosemBlockId' defined in 'src/device/communication/dlms/dlms.c:215:17' (0x556f0fe01f40) of size 4
+0x556f0fe01f70 is located 16 bytes to the left of global variable 's_totalDlmsPayloadBuf' defined in 'src/device/communication/dlms/dlms.c:223:17' (0x556f0fe01f80) of size 14336
+SUMMARY: AddressSanitizer: global-buffer-overflow src/platform/core/memory.c:533 in reallocInternal
+Shadow bytes around the buggy address:
+  0x0aae61fb8390: 00 f9 f9 f9 f9 f9 f9 f9 00 00 00 00 f9 f9 f9 f9
+  0x0aae61fb83a0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0aae61fb83b0: 00 00 00 00 f9 f9 f9 f9 04 f9 f9 f9 f9 f9 f9 f9
+  0x0aae61fb83c0: 04 f9 f9 f9 f9 f9 f9 f9 00 f9 f9 f9 f9 f9 f9 f9
+  0x0aae61fb83d0: 00 f9 f9 f9 f9 f9 f9 f9 04 f9 f9 f9 f9 f9 f9 f9
+=>0x0aae61fb83e0: 04 f9 f9 f9 f9 f9 f9 f9 04 f9 f9 f9 f9 f9[f9]f9
+  0x0aae61fb83f0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0aae61fb8400: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0aae61fb8410: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0aae61fb8420: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0aae61fb8430: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+
+
+
