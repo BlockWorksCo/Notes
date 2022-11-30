@@ -42881,4 +42881,12 @@ Shadow bytes around the buggy address:
 Shadow byte legend (one shadow byte represents 8 application bytes):
 
 
+---------------------------------
+release
+
+- large-calendar: https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/356
+- Large billing-profile: https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/363
+- IPv6 gateway: https://gitlab.cyco.io/Omnimesh/terminal/-/tree/DeadlockInvestigation
+- IPv6 gw crash on config: https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/360
+
 
