@@ -42896,6 +42896,9 @@ discovery
 - node has many devices.
 - devices has many profiles
 - deviceProfilesHash uniquely identifies the set of profiles for a single device.
+- Node sends devicesHash on login.
+- SMA actively decides to discover all devices from node based on deviceHash.
+- SMA actively decides to discover all profiles from all devices from node based on profilesHash.
 - Node initially sends the profilesHash on device-registration.
 
 
