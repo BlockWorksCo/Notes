@@ -42889,4 +42889,13 @@ release
 - IPv6 gateway: https://gitlab.cyco.io/Omnimesh/terminal/-/tree/DeadlockInvestigation
 - IPv6 gw crash on config: https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/360
 
+-------------------------------------------------
+discovery
+
+
+- node has many devices.
+- devices has many profiles
+- deviceProfilesHash uniquely identifies the set of profiles for a single device.
+- Node initially sends the profilesHash on device-registration.
+
 
