@@ -42913,4 +42913,10 @@ BT fibre installation
 - Engineer didnt turn up on the 5th December to install "due to workload". did not tell anyone, so we werent informed.
 - Arranged on the 6th to install on the 21st dec. Told to claim money back per-day from BT.
 
+-------------------------------------------
+performance server
+
+dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 512000 -g 512 --nms-version ~/Temp/nms --sma-version ~/Projects/server/smas
+
+
 
