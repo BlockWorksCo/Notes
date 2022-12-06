@@ -42552,6 +42552,12 @@ docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\`
 Heap histogram
 docker exec -it devstack_nms-0_1 bash -c "sudo -u app -g app jcmd \`pidof java\` GC.class_histogram"
 
+dropped packets:
+cat /proc/net/udp6
+
+monitor NMS<->SMA traffic.
+sudo tshark -i br-9de646c183d4 -V tcp port 8090
+
 ---------------------------------------
 performance learnings:
 
