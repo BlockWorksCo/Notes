@@ -42901,4 +42901,10 @@ discovery
 - SMA actively decides to discover all profiles from all devices from node based on profilesHash.
 - Node initially sends the profilesHash on device-registration.
 
+----------------------------------
+BT fibre installation
+
+- Engineer didnt turn up on the 5th December to install "due to workload". did not tell anyone, so we werent informed.
+- Arranged on the 6th to install on the 21st dec. Told to claim money back per-day from BT.
+
 
