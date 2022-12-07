@@ -42972,6 +42972,12 @@ cp: cannot stat 'build/dlt645/src/config/config_parameters.xml.pp': No such file
 make[1]: *** [tools/buildsys/configrules.mk:41: build/dlt645/release/config_parameters-dlt645-v22.35.11.xml] Error 1
 make: *** [Makefile:75: build-dlt645] Error 2
 
+---------------------------------
+running make onterminal repo as on CI/GitLab
+
+PROJECT='omnimesh hmp friendcom mea' make -j4 package
+*must* use PROJECT.
+
 
 
 
