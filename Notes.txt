@@ -42919,4 +42919,37 @@ performance server
 dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 512000 -g 512 --nms-version ~/Temp/nms --sma-version ~/Projects/server/smas
 
 
+----------------------------------------------
+
+CC build/cnic7-insecure-g2/generated/local_common.pb.o
+CC build/cnic7-sei-dlms-g2/src/platform/drivers/uart/uart-common.o
+CC build/cnic7-insecure-g2/generated/config_parameters.pb.o
+CC build/cnic7-sei-dlms-g2/src/platform/drivers/ui/ui-efm32.o
+CC build/cnic7-insecure-g2/src/c4-examples/c4_example/c4_example.o
+LINK build/cnic7-insecure-g2/bin/agent.elf
+LINK build/cnic7-insecure-g2/bin/c4_example.elf
+CC build/cnic7-sei-dlms-insecure-g2/src/device/drivers/dlms/alarm_filter.o
+CC build/cnic7-sei-dlms-g2/src/platform/drivers/ui/extraleds-generic.o
+Agent ELF: build/cnic7-insecure-g2/release/agent-cnic7-insecure-g2-v22.35.11.elf
+INFO:root:Wrote version-2 image with 324704 B code
+Firmware image: build/cnic7-insecure-g2/release/agent-cnic7-insecure-g2-v22.35.11.image
+ARCHIVE build/cnic7-insecure-g2/dist/cnic7-insecure-g2-v22.35.11.tar.gz
+CC build/cnic7-sei-dlms-g2/src/platform/drivers/uid/uid-efr32.o
+CC build/cnic7-sei-dlms-insecure-g2/src/device/drivers/dlms/meter_getconfiguration.o
+rm build/cnic7-insecure-g2/bin/agent.srec build/cnic7-insecure-g2/src/config/monitoring_profiles.xml.pp
+CC build/cnic7-sei-dlms-g2/src/platform/drivers/watchdog/watchdog-efm32.o
+GEN build/dlt645/cnd_config.h
+CC build/cnic7-genus-dlms-insecure-g2/build/3pp/mbedtls/library/ecp_curves.o
+CC build/cnic7-sei-dlms-g2/src/platform/drivers/ids/ids-efm32.o
+DOC build/dlt645/doc/licenses.html
+make[1]: o: Command not found
+make[1]: [tools/buildsys/configrules.mk:103: build/dlt645/src/config/config_parameters.xml.pp] Error 127 (ignored)
+cp: cannot stat 'build/dlt645/src/config/config_parameters.xml.pp': No such file or directory
+make[1]: *** [tools/buildsys/configrules.mk:41: build/dlt645/release/config_parameters-dlt645-v22.35.11.xml] Error 1
+make: *** [Makefile:75: build-dlt645] Error 2
+make: *** Waiting for unfinished jobs....
+CC build/cnic7-sei-dlms-g2/src/platform/freertos/freertos.o
+CC build/cnic7-sei-dlms-insecure-g2/src/device/drivers/dlms/load-curtailment-config.o
+
+
 
