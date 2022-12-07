@@ -42952,4 +42952,27 @@ CC build/cnic7-sei-dlms-g2/src/platform/freertos/freertos.o
 CC build/cnic7-sei-dlms-insecure-g2/src/device/drivers/dlms/load-curtailment-config.o
 
 
+steve@steve-VirtualBox:/Data/Projects/terminalGLMaster$ make Q= dlt645
+Checking submodules
+git submodule | awk '/^-/ { print $2 }' | xargs --no-run-if-empty git submodule update --init --
+Running prebuild step
+make --no-print-directory -f tools/buildsys/prebuild.mk \
+        BUILDSYS_ROOT=tools/buildsys prebuild
+make[1]: Nothing to be done for 'prebuild'.
+make --no-print-directory -f tools/buildsys/main.mk BUILDSYS_ROOT=tools/buildsys CONFIGURATION=dlt645 ROOTDIR=/Data/Projects/terminalGLMaster/ VERSION_SHORT=v22.35.11 VERSION_LONG=v22.35.11+gcee99a19e all
+mkdir -p build/dlt645/src/config
+o build/dlt645/src/config/config_parameters.xml.pp -Isrc/ -Isrc/base/options/options-lib/ -I3pp/wolfssl/ -Ibuild/3pp/wolfssl -Ibuild/3pp/freertos/FreeRTOS/Source/include -Ibuild/3pp/nanopb -Ibuild/3pp/smip -Ibui
+ld/3pp/smip/m2m -I3pp/stm32cubef2/ -Ibuild/3pp/stm32cubef2/Drivers/STM32F2xx_HAL_Driver/Inc -Ibuild/3pp/liblzf -I3pp/uffs/ -Ibuild/3pp/uffs/src/inc -I3pp/mbedtls/ -Ibuild/3pp/mbedtls -Ibuild/3pp/mbedtls/include
+-Ibuild/3pp/mbedtls/library -Ibuild/dlt645/ -D_SHORT_FILE_=\"config_parameters.xml\"  src/config/config_parameters.xml
+make[1]: o: Command not found
+make[1]: [tools/buildsys/configrules.mk:103: build/dlt645/src/config/config_parameters.xml.pp] Error 127 (ignored)
+mkdir -p build/dlt645/release/
+cp build/dlt645/src/config/config_parameters.xml.pp build/dlt645/release/config_parameters-dlt645-v22.35.11.xml
+cp: cannot stat 'build/dlt645/src/config/config_parameters.xml.pp': No such file or directory
+make[1]: *** [tools/buildsys/configrules.mk:41: build/dlt645/release/config_parameters-dlt645-v22.35.11.xml] Error 1
+make: *** [Makefile:75: build-dlt645] Error 2
+
+
+
+
 
