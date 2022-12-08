@@ -43022,9 +43022,10 @@ db
 
 SET GLOBAL slow_query_log = 'ON';
 SHOW GLOBAL VARIABLES LIKE 'slow\_%';
-SET GLOBAL long_query_time = 0.01;
+SET GLOBAL long_query_time = 0;
 FLUSH LOGS;
 
+set profiling=1;
 SET GLOBAL general_log_file = '/var/lib/mysql/query.log';
 SET GLOBAL general_log = 'ON';
 SET GLOBAL general_log = 'OFF';
