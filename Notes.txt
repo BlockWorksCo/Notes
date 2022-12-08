@@ -43025,6 +43025,10 @@ SHOW GLOBAL VARIABLES LIKE 'slow\_%';
 SET GLOBAL long_query_time = 0.01;
 FLUSH LOGS;
 
+SET GLOBAL general_log_file = '/var/lib/mysql/query.log';
+SET GLOBAL general_log = 'ON';
+SET GLOBAL general_log = 'OFF';
+
 
 
 
