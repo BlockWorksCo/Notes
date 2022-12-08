@@ -43018,7 +43018,7 @@ file locks                      (-x) unlimited
 
 
 -------------------------------------------------
-db
+db slow log query log
 
 SET GLOBAL slow_query_log = 'ON';
 SHOW GLOBAL VARIABLES LIKE 'slow\_%';
