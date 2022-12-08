@@ -43061,6 +43061,20 @@ insert into meter_sample (create_time, device_id, device_profile_id, mq_time, no
 001A0517000000001A0517448520001A0517449620001A0517422000001A0E090C07E30117FF0F0000FF014A001A0517423800001A0E090C07E30118FF001E00FF014A001A051748D7D0401A031200041A0211E51A0312001E1A0517000000001A051700000
 0001A0203011A0506000005DC2210B5841ED03BC655C5E7BB65BEA004784428AECFC69C06', '2022-12-08 09:00:30', 41);
 
+# Time: 2022-12-08T08:56:15.882776Z
+# User@Host: meshnet[meshnet] @ devstack_nms-0_1.devstack_internal [172.16.21.7]  Id:   147
+# Query_time: 8.774239  Lock_time: 0.000108 Rows_sent: 2  Rows_examined: 535946
+SET timestamp=1670489775;
+select networktyp0_.network_type as col_0_0_, sum(case when terminal1_.status='LOGIN' then 1 else 0 end) as col_1_0_, count(terminal1_.id) as col_2_0_ from network_type_set networktyp0_ cross join termin
+al terminal1_ where networktyp0_.terminal_id=terminal1_.id and networktyp0_.sequence_number=1 and terminal1_.state='ACTIVE' group by networktyp0_.network_type;
+
+# Time: 2022-12-08T09:35:38.660911Z
+# User@Host: meshnet[meshnet] @ devstack_nms-0_1.devstack_internal [172.16.21.7]  Id:   146
+# Query_time: 6.527253  Lock_time: 0.000095 Rows_sent: 1  Rows_examined: 268689
+SET timestamp=1670492138;
+select terminal0_.firmware_version as col_0_0_, sum(case when terminal0_.status='LOGIN' then 1 else 0 end) as col_1_0_, count(*) as col_2_0_ from terminal terminal0_ group by terminal0_.firmware_version
+order by terminal0_.firmware_version;
+
 
 
 
