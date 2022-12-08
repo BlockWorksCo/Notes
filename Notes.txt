@@ -43033,6 +43033,26 @@ SET GLOBAL general_log = 'OFF';
 
 docker cp devstack_db_1:/var/lib/mysql/db-slow.log ~/
 
+# Time: 2022-12-08T09:35:29.842253Z
+# User@Host: meshnet[meshnet] @ devstack_nms-0_1.devstack_internal [172.16.21.7]  Id:   146
+# Query_time: 1.877805  Lock_time: 0.000218 Rows_sent: 2  Rows_examined: 537378
+SET timestamp=1670492129;
+select networktyp0_.network_type as col_0_0_, sum(case when terminal1_.status='LOGIN' then 1 else 0 end) as col_1_0_, count(terminal1_.id) as col_2_0_ from network_type_set networktyp0_ cross join termin
+al terminal1_ where networktyp0_.terminal_id=terminal1_.id and networktyp0_.sequence_number=1 and terminal1_.state='ACTIVE' group by networktyp0_.network_type;
+# Time: 2022-12-08T09:35:32.133290Z
+# User@Host: meshnet[meshnet] @ devstack_nms-0_1.devstack_internal [172.16.21.7]  Id:   146
+# Query_time: 2.290805  Lock_time: 0.000256 Rows_sent: 1  Rows_examined: 537376
+SET timestamp=1670492132;
+select upper(terminal1_.product_type) as col_0_0_, sum(case when terminal1_.status='LOGIN' then 1 else 0 end) as col_1_0_, count(terminal1_.id) as col_2_0_ from network_type_set networktyp0_ cross join t
+erminal terminal1_ where networktyp0_.terminal_id=terminal1_.id and networktyp0_.sequence_number=1 and terminal1_.state='ACTIVE' group by terminal1_.product_type;
+# Time: 2022-12-08T09:35:38.660911Z
+# User@Host: meshnet[meshnet] @ devstack_nms-0_1.devstack_internal [172.16.21.7]  Id:   146
+# Query_time: 6.527253  Lock_time: 0.000095 Rows_sent: 1  Rows_examined: 268689
+SET timestamp=1670492138;
+select terminal0_.firmware_version as col_0_0_, sum(case when terminal0_.status='LOGIN' then 1 else 0 end) as col_1_0_, count(*) as col_2_0_ from terminal terminal0_ group by terminal0_.firmware_version
+order by terminal0_.firmware_version;
+
+
 
 
 
