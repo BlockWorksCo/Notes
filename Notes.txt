@@ -43075,6 +43075,28 @@ SET timestamp=1670492138;
 select terminal0_.firmware_version as col_0_0_, sum(case when terminal0_.status='LOGIN' then 1 else 0 end) as col_1_0_, count(*) as col_2_0_ from terminal terminal0_ group by terminal0_.firmware_version
 order by terminal0_.firmware_version;
 
+---------------------------------------
+crash:
+
+2022-12-08 14:17:36.303 [debug] [              hdlc] {      device}: tx: ( 2/ 2): 2da34751
+2022-12-08 14:17:36.303 [debug] [              hdlc] {      device}: tx: ( 1/ 1): 6244
+2022-12-08 14:17:36.303 [debug] [              hdlc] {      device}: tx: ( 1/ 1): 7e
+2022-12-08 14:17:36.303 [debug] [              hdlc] {      device}: ** Giving s_responseSem to start the timeout cycle... **
+=================================================================
+==2845869==ERROR: AddressSanitizer: global-buffer-overflow on address 0x5555559e1510 at pc 0x55555579fd0a bp 0x7fffecbf0bf0 sp 0x7fffecbf0be0
+READ of size 4 at 0x5555559e1510 thread T15
+dlmsFreeResponse 0x5555559e15202022-12-08 14:17:36.303 [debug] [              hdlc] {        hdlc}: Restarting HDLC timeout due to HDLC send operation
+2022-12-08 14:17:36.303 [debug] [              hdlc] {        hdlc}: ** Waiting for HDLC event (60000ms) **
+    #0 0x55555579fd09 in reallocInternal src/platform/core/memory.c:543
+    #1 0x5555557a01c5 in freeWrapper src/platform/core/memory.c:714
+    #2 0x5555557789c0 in dlmsFreeResponse src/device/communication/dlms/dlms.c:4694
+    #3 0x55555572da58 in processDlmsPayload src/device/drivers/dlms/device-dlms.c:4612
+    #4 0x55555572dc31 in deviceTask src/device/drivers/dlms/device-dlms.c:4655
+    #5 0x5555557b1c32 in taskWrapper src/platform/osal/osal-posix/osal_posix.c:134
+    #6 0x7ffff73e7608 in start_thread /build/glibc-SzIz7B/glibc-2.31/nptl/pthread_create.c:477
+    #7 0x7ffff730c132 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f132)
+
+
 
 
 
