@@ -43031,5 +43031,8 @@ SET GLOBAL general_log = 'ON';
 SET GLOBAL general_log = 'OFF';
 
 
+docker cp devstack_db_1:/var/lib/mysql/db-slow.log ~/
+
+
 
 
