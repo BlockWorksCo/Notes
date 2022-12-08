@@ -43017,4 +43017,14 @@ file locks                      (-x) unlimited
 
 
 
+-------------------------------------------------
+db
+
+SET GLOBAL slow_query_log = 'ON';
+SHOW GLOBAL VARIABLES LIKE 'slow\_%';
+SET GLOBAL long_query_time = 0.01;
+FLUSH LOGS;
+
+
+
 
