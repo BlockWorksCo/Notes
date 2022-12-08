@@ -43096,6 +43096,24 @@ dlmsFreeResponse 0x5555559e15202022-12-08 14:17:36.303 [debug] [              hd
     #6 0x7ffff73e7608 in start_thread /build/glibc-SzIz7B/glibc-2.31/nptl/pthread_create.c:477
     #7 0x7ffff730c132 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f132)
 
+-------------------------
+crash:
+
+(gdb) where
+#0  0x0005041a in mbedtls_ssl_reset_in_out_pointers (ssl=ssl@entry=0x200045f8 <ssl>)
+    at build/3pp/mbedtls/library/ssl_msg.c:5170
+#1  0x00055d0e in mbedtls_ssl_session_reset_int (ssl=0x200045f8 <ssl>, partial=partial@entry=0)
+    at build/3pp/mbedtls/library/ssl_tls.c:3934
+#2  0x00055d96 in mbedtls_ssl_session_reset (ssl=<optimized out>)
+    at build/3pp/mbedtls/library/ssl_tls.c:4030
+#3  0x0001473c in dtlsSessionCacheClear () at src/communication/dtls/session_cache.c:224
+#4  0x0002d5f2 in loginClearDtlsCallback (req=0x2000255c <info>) at src/management/login/login.c:670
+#5  0x0001169e in forwardRequestToResource (resource=0x682ec <res+16>, content=0x2001cac0,
+    sessionId=<optimized out>, messageInfo=0x2001cd70) at src/communication/coap/coap_task.c:857
+#6  dispatchIncomingRequest (info=info@entry=0x2001cd70, payload=payload@entry=0x2001cac0,
+    session=session@entry=0x2001ccb0) at src/communication/coap/coap_task.c:1061
+
+
 
 
 
