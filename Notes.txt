@@ -43114,6 +43114,59 @@ crash:
     session=session@entry=0x2001ccb0) at src/communication/coap/coap_task.c:1061
 
 
+----------------------------------------------
+
+2022-12-09 12:10:59.370 :: [000:02:40.053] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:11:05.555 :: [000:02:46.229] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:11:05.556 :: [000:02:46.236] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:11:06.625 :: [000:02:47.305] [panic] ======== Panic ========
+2022-12-09 12:11:06.626 :: [000:02:47.305] [panic] memory:766, in task lowpan_tx: malloc failed
+2022-12-09 12:11:36.249 :: [000:00:01.655] [ info] [    log_ring] { terminal}: Filter level: WARN, module: (null), task: (null), fw: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on ipa3
+2022-12-09 12:11:36.274 :: [000:00:01.670] [event] [    terminal] { terminal}: Starting version ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on hardware ipa3
+2022-12-09 12:11:44.867 :: [000:00:10.272] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:11:44.868 :: [000:00:10.280] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:11:50.838 :: [000:00:16.257] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:11:50.855 :: [000:00:16.265] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:11:53.331 :: [000:00:18.748] [debug] [ meter/gstar] {   device}: Set meter hop count: 1
+2022-12-09 12:11:56.813 :: [000:00:22.216] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:11:56.813 :: [000:00:22.223] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:12:03.152 :: [000:00:28.553] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:12:03.153 :: [000:00:28.561] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:12:08.023 :: [000:00:33.424] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:12:08.024 :: [000:00:33.431] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:12:10.828 :: [000:00:36.229] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:12:10.829 :: [000:00:36.236] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:12:36.894 :: [000:01:02.282] [ info] [      status] { schedule}: Version: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on hw ipa3
+2022-12-09 12:13:36.899 :: [000:02:02.282] [ info] [      status] { schedule}: Version: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on hw ipa3
+2022-12-09 12:13:45.499 :: [000:02:10.914] [panic] ======== Panic ========
+2022-12-09 12:13:45.511 :: [000:02:10.914] [panic] binarybuf:185, in task schedule: malloc failed
+2022-12-09 12:14:15.996 :: [000:00:00.637] [ info] [    log_ring] { terminal}: Filter level: WARN, module: (null), task: (null), fw: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on ipa3
+2022-12-09 12:14:16.025 :: [000:00:00.652] [event] [    terminal] { terminal}: Starting version ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on hardware ipa3
+2022-12-09 12:14:24.520 :: [000:00:09.152] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:14:24.521 :: [000:00:09.160] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:14:29.521 :: [000:00:14.150] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:14:29.521 :: [000:00:14.157] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:14:34.548 :: [000:00:19.145] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:14:34.549 :: [000:00:19.153] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:14:39.513 :: [000:00:24.146] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:14:39.514 :: [000:00:24.153] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:14:44.519 :: [000:00:29.151] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:14:44.520 :: [000:00:29.158] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:14:50.594 :: [000:00:35.221] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:14:50.594 :: [000:00:35.229] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:15:16.676 :: [000:01:01.284] [ info] [      status] { schedule}: Version: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on hw ipa3
+2022-12-09 12:16:16.652 :: [000:02:01.275] [ info] [      status] { schedule}: Version: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on hw ipa3
+2022-12-09 12:16:33.755 :: [000:02:18.399] [ info] [ meter/gstar] {   device}: Got meter channel: 65535
+2022-12-09 12:16:33.776 :: [000:02:18.407] [ WARN] [ meter/gstar] {   device}: Meter channelNo is out of range
+2022-12-09 12:16:36.512 :: [000:02:21.145] [debug] [ meter/gstar] {   device}: Alarm filter mask from meter:: ( 1/ 1): 00020003000000000000000000000000
+2022-12-09 12:16:43.541 :: [000:02:28.140] [ info] [  meter/dlms] {   device}: Device variant: gstar_dlms, ID: 2003699019, vendor: STA, fwVersion: Z106-A4-KMZ106X-20220310-V1-STAR, hwVersion: B
+190311KMZ106X
+2022-12-09 12:16:43.543 :: [000:02:28.178] [ info] [meter/device] {   device}: Device connected, id: 2003699019, vendor: STA, hwVersion: BGZ103Z-E-201 Ver20190311KMZ106X, fwVersion: Z106-A4-KMZ
+TAR, driver: gstar_dlms
+2022-12-09 12:16:43.994 :: [000:02:28.626] [panic] ======== Panic ========
+2022-12-09 12:16:43.995 :: [000:02:28.626] [panic] coap_task:2151, in task device: malloc failed
+2022-12-09 12:17:12.297 :: [000:00:01.655] [ info] [    log_ring] { terminal}: Filter level: WARN, module: (null), task: (null), fw: ipa3-gstar-dlms-insecure-g2:v22.35.15+g5b5eca376 on ipa3
+
 
 
 
