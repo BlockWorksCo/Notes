@@ -43169,6 +43169,60 @@ TAR, driver: gstar_dlms
 
 
 
+-----------------------------------------------
+server performance SMA 500K
+
+===========TERM EMU STATISTIC========
+----------Common info ---------
+Emu_start_time:              2022-12-12 22:50:12
+Current_time:                2022-12-13 10:33:28
+----------Protocol statistic---
+DTLS_start_time:                2022-12-12 22:54:20
+Login_start_time:               2022-12-12 22:54:24
+Registration_start_time:        2022-12-12 22:54:55
+Login_finish_time:              2022-12-13 10:03:33
+Registration_finish_time:       2022-12-13 10:12:01
+----------Protocol counters------
+Handshake_finished:             521440
+Handshake_ongoing:              0
+Handshake_failed (current):     0
+Handshake_failed (total):       0
+Handshake_restart (current)     0
+Current_HandshakeOK_speed:      0
+Total_HandshakeOK_speed:        12
+COAP_login_finished:            521440
+COAP_login_ongoing:             0
+COAP_login_failed:              0
+Current_login_speed:            0
+Total_login_speed:              12
+COAP_registration_finished:     512512
+COAP_registration_ongoing:      0
+COAP_registration_resend:       4088
+Current_registraion_speed:      0
+Total_Registration_speed:       12
+Num_of_request_received:        3083279
+Current_request_received_speed: 0
+Num_of_keepAlive_sent:          2684722
+Num_of_keepAlive_timeout:       8928
+Current_keepAlive_speed:        143
+Num_of_event_sent:              521440
+Current_event_speed:            0
+Num_of_sample_sent:             545908
+Current_sample_speed:           22
+Num_of_reading_sent:            0
+Current_reading_speed:          0
+Num_of_alarms_sent:             512512
+Current_alarms_speed:           0
+Num_of_file_download_ongoing:   0
+Num_of_file_download_finished:  0
+Num_of_broadcast_ongoing:       0
+Num_of_broadcast_finished:      0
+Num_of_firmware_update_ongoing: 0
+Num_of_firmware_update_finished:0
+Num_of_meter_upgrade_ongoing:   0
+Num_of_meter_upgrade_finished:  0
+
+
 
 
 
