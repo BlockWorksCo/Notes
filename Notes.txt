@@ -43222,6 +43222,11 @@ Num_of_firmware_update_finished:0
 Num_of_meter_upgrade_ongoing:   0
 Num_of_meter_upgrade_finished:  0
 
+---------------------------------------------
+testing for Ajit
+
+- How to test the ethernet without IP stack.
+- MAC/Raw level crafted ICMP packet?
 
 
 
