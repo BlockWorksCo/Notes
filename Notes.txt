@@ -43228,6 +43228,7 @@ testing for Ajit
 - How to test the ethernet without IP stack.
 - MAC/Raw level crafted ICMP packet?
 - testing RF path on CNIC?
+- Interface between the systems REST API ok
 
 
 
