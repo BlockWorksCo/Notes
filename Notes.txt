@@ -43230,6 +43230,30 @@ testing for Ajit
 - testing RF path on CNIC?
 - Interface between the systems REST API ok
 
+-----------------------------------------------
+terminal emulator crash:
+
+AddressSanitizer:DEADLYSIGNAL
+=================================================================
+==12==ERROR: AddressSanitizer: SEGV on unknown address 0x559bf8e84520 (pc 0x559bf5f3fd64 bp 0x7fef568d4030 sp 0x7fef568d3f90 T5)
+==12==The signal is caused by a READ memory access.
+AddressSanitizer:DEADLYSIGNAL
+AddressSanitizer:DEADLYSIGNAL
+AddressSanitizer:DEADLYSIGNAL
+    #0 0x559bf5f3fd63 in createEvent src/tools/terminal_emulator/terminal_emulator_events.c:115
+    #1 0x559bf5f4027b in generateEvent src/tools/terminal_emulator/terminal_emulator_events.c:158
+    #2 0x559bf5f36fb9 in poolHandlerThread src/tools/terminal_emulator/terminal_emulator.c:2684
+    #3 0x7fef6aeb26da in start_thread (/lib/x86_64-linux-gnu/libpthread.so.0+0x76da)
+    #4 0x7fef6abdb61e in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x12161e)
+
+AddressSanitizer can not provide additional info.
+SUMMARY: AddressSanitizer: SEGV src/tools/terminal_emulator/terminal_emulator_events.c:115 in createEvent
+Thread T5 created by T0 here:
+    #0 0x7fef6bde89ef in __interceptor_pthread_create (/usr/lib/x86_64-linux-gnu/libasan.so.5+0x519ef)
+    #1 0x559bf5f3daf9 in main src/tools/terminal_emulator/terminal_emulator.c:3505
+    #2 0x7fef6aadbc86 in __libc_start_main (/lib/x86_64-linux-gnu/libc.so.6+0x21c86)
+
+
 
 
 
