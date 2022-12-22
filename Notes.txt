@@ -43286,8 +43286,10 @@ cnd-13015 branch
 --------------------------------------
 comms watchdog
 
-- If no packets received for <configurable period> then perform soft-restart.
-
+- If not able to ping the server for <configurable period> then perform soft-restart.
+- too many restarts?
+- exponential-delay between restarts?
+- Dont want to trigger bad behaviour from cellular network.
 
 
 
