@@ -43283,6 +43283,11 @@ cnd-13015 branch
 - Added heap-partitioning option (for near future builds). Deactivated for now.
 
 
+--------------------------------------
+comms watchdog
+
+- If no packets received for <configurable period> then perform soft-restart.
+
 
 
 
