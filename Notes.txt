@@ -43270,8 +43270,13 @@ f4
 -------------------------------------------
 cnd-13015 branch
 
-- drop incoming mesh packets if no RAM available.
+- drop incoming mesh packets if no RAM available. Prevents DoS attack vector also.
 - Perform a modem-reset sooner than we would otherwise when tunnel does not come up.
+- Removed old ifdef'd code in modem.c
+- Made uplink-targetted packets get dropped when no uplink is present.
+- Adjusted uplink decision between tun6/tunat to make ethernet work ok.
+- Made tunat place its reconstructed packet in dyamic RAM to relieve heap pressure.
+- Allowed TunAT to drop incoming packets if no RAM available. Prevents DoS attack also.
 
 
 
