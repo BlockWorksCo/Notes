@@ -43277,6 +43277,11 @@ cnd-13015 branch
 - Adjusted uplink decision between tun6/tunat to make ethernet work ok.
 - Made tunat place its reconstructed packet in dyamic RAM to relieve heap pressure.
 - Allowed TunAT to drop incoming packets if no RAM available. Prevents DoS attack also.
+- Added checking of socket-crete in TunAT and failing early if IPv6 is not going to work.
+- Fixed buffer-overflow issue (incorrectly sized command buffer).
+- Reduced buffer size requried to decrypt OTA image from 4KB to 256b.
+- Added heap-partitioning option (for near future builds). Deactivated for now.
+
 
 
 
