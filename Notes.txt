@@ -43267,6 +43267,11 @@ f4
 6ecc67061ad776350cea0df0f1e5088a
 2a132e5653f34c1ee17865
 
+-------------------------------------------
+cnd-13015 branch
+
+- drop incoming mesh packets if no RAM available.
+- Perform a modem-reset sooner than we would otherwise when tunnel does not come up.
 
 
 
