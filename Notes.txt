@@ -43292,5 +43292,7 @@ comms watchdog
 - Dont want to trigger bad behaviour from cellular network.
 - Dont want synchronised restarts, randomise.
 
+- need to start without login starting
+- need to also use uptime to work even in absence of server time.
 
 
