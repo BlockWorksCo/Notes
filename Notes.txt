@@ -43290,6 +43290,7 @@ comms watchdog
 - too many restarts?
 - exponential-delay between restarts?
 - Dont want to trigger bad behaviour from cellular network.
+- Dontw ant synchronised restarts, randomise.
 
 
 
