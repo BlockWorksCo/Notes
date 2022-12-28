@@ -43295,4 +43295,11 @@ comms watchdog
 - need to start without login starting
 - need to also use uptime to work even in absence of server time.
 
+---------------------------------------------------------
+server test setup
+
+dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 512000 -g 512 --nms-version ~/Temp/nms --sma-version ~/Projects/server/smas --nodocker
+
+dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 36000 -g 36 --nms-version ~/Temp/nms --sma-version ~/Projects/server/smas --nodocker
+
 
