@@ -43315,6 +43315,8 @@ unified build
 determine if the meter is SEI, then perform SEI-specific discoveries.
 - Keep features as large-grained as possible?
 - manufacturing test considerations?
+- Determine feature-flags from examination of proposed drivers. These will make their way
+into DeviceFeatureFlag enum.
 
 
 
