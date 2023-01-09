@@ -43314,6 +43314,7 @@ unified build
 - Move discovery into its own module to allow for further extension. discovery-state-machine extensions should be based on nameplate, i.e. first
 determine if the meter is SEI, then perform SEI-specific discoveries.
 - Keep features as large-grained as possible?
+- manufacturing test considerations?
 
 
 
