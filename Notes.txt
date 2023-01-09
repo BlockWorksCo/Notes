@@ -43302,4 +43302,20 @@ dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 512000 -g 512 --nms-version ~
 
 dev-stack --pkidir ~/pki160K setup -n 1 -s 1 -e -a 36000 -g 36 --nms-version ~/Temp/nms --sma-version ~/Projects/server/smas --nodocker
 
+-----------------------------------------------------
+unified build
+
+
+- start IS15959 build.
+- determine base driver to start with.
+- Discovery of meter is desirable over configuration.
+- discovery would be largely based off nameplate, with additions in discovery state-machine.
+- discovery populates a runtime configuration table.
+- Move discovery into its own module to allow for further extension. discovery-state-machine extensions should be based on nameplate, i.e. first
+determine if the meter is SEI, then perform SEI-specific discoveries.
+
+
+
+
+
 
