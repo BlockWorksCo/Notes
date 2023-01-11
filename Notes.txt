@@ -43318,6 +43318,12 @@ determine if the meter is SEI, then perform SEI-specific discoveries.
 - Determine feature-flags from examination of proposed drivers. These will make their way
 into DeviceFeatureFlag enum.
 
+------------------------------------
+ublox modem update / upgrade FOTA
+
+- https://content.u-blox.com/sites/default/files/TOBY-L2-MPCI-L2-boot-fix_PCN_UBX-21036626.pdf
+- +UFWUPD
+- +UFWINSTALL
 
 
 
