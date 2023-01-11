@@ -43336,6 +43336,9 @@ ublox modem update / upgrade FOTA
 
 - SIM PIN may be required after new install.
 
+- MOre robust to download file separately then allow gw to repeatedly try to trigger upgrade
+rather than rely on a remote trigger, so may require modification of code to handle this case.
+
 
 
 
