@@ -43324,6 +43324,8 @@ ublox modem update / upgrade FOTA
 - https://content.u-blox.com/sites/default/files/TOBY-L2-MPCI-L2-boot-fix_PCN_UBX-21036626.pdf
 - +UFWUPD
 - +UFWINSTALL
+- FOAT (Firmware Update Over AT) https://content.u-blox.com/sites/default/files/ublox-CellularModules-FirmwareUpdate_ApplicationNote_%28UBX-13001845%29.pdf?hash=undefined
+
 
 
 
