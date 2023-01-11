@@ -43325,6 +43325,10 @@ ublox modem update / upgrade FOTA
 - +UFWUPD
 - +UFWINSTALL
 - FOAT (Firmware Update Over AT) https://content.u-blox.com/sites/default/files/ublox-CellularModules-FirmwareUpdate_ApplicationNote_%28UBX-13001845%29.pdf?hash=undefined
+- Need the .bin file from ublox
+- L210 & L280 are different.
+- AT+UFWUPD=<md5>
+- Uses XModem protocol to transfer packets of either 128 or 1024 bytes.
 
 
 
