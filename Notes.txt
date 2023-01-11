@@ -43329,6 +43329,7 @@ ublox modem update / upgrade FOTA
 - L210 & L280 are different.
 - AT+UFWUPD=<md5>
 - Uses XModem protocol to transfer packets of either 128 or 1024 bytes.
+- Power-failure during upgrade results in staying in FOAT mode, must be resumed.
 
 
 
