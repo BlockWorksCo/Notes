@@ -43331,6 +43331,10 @@ ublox modem update / upgrade FOTA
 - Uses XModem protocol to transfer packets of either 128 or 1024 bytes.
 - Power-failure during upgrade results in staying in FOAT mode, must be resumed.
 
+- UFWINSTALL takes file from the filesystem.
+- file is placed there via UDWNFILE or other mechanism.
+
+- SIM PIN may be required after new install.
 
 
 
