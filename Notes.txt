@@ -43344,7 +43344,7 @@ rather than rely on a remote trigger, so may require modification of code to han
 contractor CVs:
 
 - Tomasz, possibly good.
--
+- Andrew Chilcott. ZigBee & LoRA.
 
 
 
