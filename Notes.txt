@@ -39612,7 +39612,7 @@ HMP IPA3b issue
 
 
 ----------------------------------
-txqueeulen and buffers:
+txqueuelen and buffers:
 
 
 7
