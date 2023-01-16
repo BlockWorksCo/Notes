@@ -43340,6 +43340,11 @@ ublox modem update / upgrade FOTA
 rather than rely on a remote trigger, so may require modification of code to handle this case.
 
 
+------------------------
+contractor CVs:
+
+- Tomasz, possibly good.
+-
 
 
 
