@@ -40454,6 +40454,7 @@ embedded interview:
 - cellular, AT commands, LCP, IPCP, PPP
 - priority inversion.
 - internal vs external errors.
+- crypto/AES/etc.
 
 Team:
 - Process
