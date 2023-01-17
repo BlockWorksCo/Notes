@@ -43347,5 +43347,7 @@ contractor CVs:
 - Tomasz, possibly good.
 - Andrew Chilcott. ZigBee & LoRA.
 
-
+Andrew:
+- competent embedded guy, but limited network-level.
+- done quite a bit of radio work tho.
 
