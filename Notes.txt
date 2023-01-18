@@ -43351,3 +43351,8 @@ Andrew:
 - competent embedded guy, but limited network-level.
 - done quite a bit of radio work tho.
 
+-------------------------------------------------
+dev-stack errors:
+
+- Error: Could not find or load main class 172.16.21.6
+
