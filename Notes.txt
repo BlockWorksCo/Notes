@@ -43356,3 +43356,35 @@ dev-stack errors:
 
 - Error: Could not find or load main class 172.16.21.6
 
+---------------------------------------------------
+Neoway IPv6 support
+
+AT+UDPSEND
+AT+UDPSETUP
+AT+UDPRECV
+
+AT+UDPSETUP=1,220.199.66.56,7000
+OK
++UDPSETUP: 1,OK
+Set up a connection to 220.199.66.56,7000
+Successfully
+AT+UDPSETUP=0,neowayjsr.oicp.net,60010
+OK
++UDPSETUP: 0,OK
+Set up a connection to neowayjsr.oicp.net,60010 on socket
+0
+Successfully
+AT+UDPSETUP=0,58.60.184.213,11008
++UDPSETUP: 0, ERROR1 A TCP/UDP connection is set up on socket 0.
+AT+UDPSETUP=1,192.168.20.6,7000
+OK
++UDPSETUP: 1,FAIL
+Failed to set up a connection to 192.168.20.6,7000
+AT+UDPSETUP=6,192.168.20.6,6800
++UDPSETUP: ERROR Socket number error
+AT+UDPSETUP=0.58.60.184.213.10012
++UDPSETUP: ERROR The punctuations in the command are incorrect.
+AT+UDPSET=0,58.60.184.213,10012
+ERROR The AT command is not complete.
+
+
