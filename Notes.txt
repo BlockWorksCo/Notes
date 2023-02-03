@@ -43398,5 +43398,31 @@ OK<CR><LF>
 <CR><LF>
 +PPPSTATUS:OPENED<CR><LF>
 
+-------------------------------------------------
+RAM issues on YTL
+
+- get-calendar with 116 days.
+- on-demand for a week of data.
+
+All caused by large amount of data received from meter.
+
+- Implement a BinaryBuf mode that writes multiple HDLC segments to file instead of RAM.
+- Have it only store to flash if a small 1KB RAM buffer is too small. This is to prevent
+too many writes to flash.
+
+
+Size of flash sectors	                    4096
+Amount of data per profile read	            5000
+Number of profile reads per hour	        16
+Number of erase cycles	                    100000
+Sectors available for wear-levelling	    150
+
+sectors erased per hour	                    32
+sectors erased per year	                    280320
+number of erases per sector per year	    1868.8
+Lifetime before sector failure (in years)	53.51027397
+
+
+
 
 
