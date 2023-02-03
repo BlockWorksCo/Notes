@@ -43409,6 +43409,7 @@ All caused by large amount of data received from meter.
 - Implement a BinaryBuf mode that writes multiple HDLC segments to file instead of RAM.
 - Have it only store to flash if a small 1KB RAM buffer is too small. This is to prevent
 too many writes to flash.
+- File needs to be created dynamically to take advantage of wear-leveling on fsCreate().
 
 
 Size of flash sectors	                    4096
