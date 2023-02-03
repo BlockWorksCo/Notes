@@ -43423,6 +43423,8 @@ sectors erased per year	                    280320
 number of erases per sector per year	    1868.8
 Lifetime before sector failure (in years)	53.51027397
 
+blaa
+
 
 
 
