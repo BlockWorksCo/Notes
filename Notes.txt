@@ -43410,6 +43410,9 @@ All caused by large amount of data received from meter.
 - Have it only store to flash if a small 1KB RAM buffer is too small. This is to prevent
 too many writes to flash.
 - File needs to be created dynamically to take advantage of wear-leveling on fsCreate().
+- hdlc.c:s_rxPayload is the buf to change.
+- Need to change/add a bbGet operation that performs a memcpy of a certain number of bytes
+then change hdlc.c to use that instead of existing bbGet().
 
 
 Size of flash sectors	                    4096
@@ -43424,6 +43427,7 @@ number of erases per sector per year	    1868.8
 Lifetime before sector failure (in years)	53.51027397
 
 blaa
+blaa2
 
 
 
