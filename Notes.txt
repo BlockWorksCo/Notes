@@ -43429,6 +43429,12 @@ Lifetime before sector failure (in years)	53.51027397
 blaa
 blaa2
 
+--------------------------------------------------
+ublox jio ipv6 issue
+
+https://portal.u-blox.com/s/question/0D52p00008laB5CCAU/lara203-packet-switched-data-action-upsda-fails-with-cme-error-operation-not-allowed
+
+
 
 
 
