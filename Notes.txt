@@ -43485,6 +43485,12 @@ sw test requirements for the NIC7/IPA3:
     - debug
 
 
+-------------------------
+hardware version:
+
+
+- identify hw uniquely.
+- identify breaking differences between hardware and identify them.
 
 
 
