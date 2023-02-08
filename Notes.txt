@@ -43434,6 +43434,22 @@ ublox jio ipv6 issue
 
 https://portal.u-blox.com/s/question/0D52p00008laB5CCAU/lara203-packet-switched-data-action-upsda-fails-with-cme-error-operation-not-allowed
 
+--------------------------------------
+MTS test requirements
+
+s/w test requirements for GW7 (IPA3 & CNIC modules are assumed to be functional at this point).
+- GPIOs
+    - LED outputs
+    - PSU status inputs
+    - hw revision id
+    - slot id
+- I2C
+    - connectivity
+    - basic test (bytes being passed back & forth).
+
+
+
+
 
 
 
