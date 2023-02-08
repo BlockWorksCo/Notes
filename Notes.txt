@@ -43460,17 +43460,29 @@ sw test requirements for the CNIC7:
 - GPIOs
 - I2C
 - SWD
+    - ability to program.
 - cellular
+    - transmit power
+    - receive signal strength.
 - SPI flash
 - UARTs
+    - meter
+    - debug
 
 sw test requirements for the NIC7/IPA3:
 - GPIOs
 - I2C
 - SWD
-- cellular
+    - ability to program.
+- sub-GHz radio
+    - transmit power
+    - receive signal strength.
 - SPI flash
+    - identity read
+    - sector erase & write
 - UARTs
+    - meter
+    - debug
 
 
 
