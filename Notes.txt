@@ -43446,6 +43446,14 @@ s/w test requirements for GW7 (IPA3 & CNIC modules are assumed to be functional 
 - I2C
     - connectivity
     - basic test (bytes being passed back & forth).
+- SWD lines (CNIC & IPA)
+    - ability to program the CNIC & IPA.
+- Ethernet
+    - packet transmit
+    - packet receive
+- RF path between CNIC & antenna.
+- RF path between IPA sub-GHz radio and antenna.
+
 
 
 
