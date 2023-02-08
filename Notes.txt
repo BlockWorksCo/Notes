@@ -43492,6 +43492,14 @@ hardware version:
 - identify hw uniquely.
 - identify breaking differences between hardware and identify them.
 
+- BOM?
+- layout/PCB?
+
+- from hw and s/w PoV.
+
+
+
+
 
 
 
