@@ -43454,6 +43454,23 @@ s/w test requirements for GW7 (IPA3 & CNIC modules are assumed to be functional 
     - packet receive
 - RF path between CNIC & antenna.
 - RF path between IPA sub-GHz radio and antenna.
+- UARTs
+
+sw test requirements for the CNIC7:
+- GPIOs
+- I2C
+- SWD
+- cellular
+- SPI flash
+- UARTs
+
+sw test requirements for the NIC7/IPA3:
+- GPIOs
+- I2C
+- SWD
+- cellular
+- SPI flash
+- UARTs
 
 
 
