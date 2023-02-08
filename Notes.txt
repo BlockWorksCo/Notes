@@ -43496,6 +43496,7 @@ hardware version:
 - layout/PCB?
 
 - from hw and s/w PoV.
+- Confirm with Jose/Binish about hw revision line.
 
 
 
