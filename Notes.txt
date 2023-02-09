@@ -43437,7 +43437,12 @@ https://portal.u-blox.com/s/question/0D52p00008laB5CCAU/lara203-packet-switched-
 --------------------------------------
 MTS test requirements
 
+
 s/w test requirements for GW7 (IPA3 & CNIC modules are assumed to be functional at this point).
+These tests represent the functional aspects, not electrical. i.e. if signal-levels are not ideal
+on I2C but still functional then these tests would still pass.
+
+GW7 motherboard (not modules):
 - GPIOs
     - LED outputs
     - PSU status inputs
@@ -43450,6 +43455,7 @@ s/w test requirements for GW7 (IPA3 & CNIC modules are assumed to be functional 
 - SWD lines (CNIC & IPA)
     - ability to program the CNIC & IPA.
 - Ethernet
+    - controller identity/version.
     - packet transmit
     - packet receive
 - RF path between CNIC & antenna.
@@ -43468,7 +43474,12 @@ sw test requirements for the CNIC7:
 - cellular
     - transmit power
     - receive signal strength.
+    - modem identity
+    - SIM card(s)
 - SPI flash
+    - identity
+    - data access
+    - reset
 - UARTs
     - meter
     - debug
