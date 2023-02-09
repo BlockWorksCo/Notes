@@ -43443,9 +43443,12 @@ These tests represent the functional aspects, not electrical. i.e. if signal-lev
 on I2C but still functional then these tests would still pass.
 
 GW7 motherboard (not modules):
-- GPIOs
+- GPIOs (both states)
     - LED outputs
     - PSU status inputs
+        - Over-temp
+        - Mains
+        - battery
     - hw revision id
     - slot id
 - I2C
@@ -43453,7 +43456,7 @@ GW7 motherboard (not modules):
     - basic test (bytes being passed back & forth).
     - I/O expander function.
 - SWD lines (CNIC & IPA)
-    - ability to program the CNIC & IPA.
+    - ability to unlock, erase and program the CNIC & IPA.
 - Ethernet
     - controller identity/version.
     - packet transmit
@@ -43463,36 +43466,38 @@ GW7 motherboard (not modules):
 - UARTs
 
 sw test requirements for the CNIC7:
-- GPIOs
+- GPIOs (both states)
     - nEVENT
     - PFAIL
     - DEVSTAT
     - NETSTAT
 - I2C
+    - hi-speed (400KHz, 1MHz)
 - SWD
-    - ability to program.
+    - ability to unlock, erase and program.
 - cellular
     - transmit power
     - receive signal strength.
     - modem identity
-    - SIM card(s)
+    - SIM card(s) identity
 - SPI flash
     - identity
     - data access
     - reset
 - UARTs
-    - meter
-    - debug
+    - meter loopback
+    - debug loopback
 
 sw test requirements for the NIC7/IPA3:
-- GPIOs
+- GPIOs (both states)
     - nEVENT
     - PFAIL
     - DEVSTAT
     - NETSTAT
 - I2C
+    - hi-speed (400KHz, 1MHz)
 - SWD
-    - ability to program.
+    - ability to unlock, erase and program.
 - sub-GHz radio
     - transmit power
     - receive signal strength.
@@ -43500,8 +43505,8 @@ sw test requirements for the NIC7/IPA3:
     - identity read
     - sector erase & write
 - UARTs
-    - meter
-    - debug
+    - meter loopback
+    - debug loopback
 
 
 -------------------------
