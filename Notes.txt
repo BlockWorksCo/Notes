@@ -43458,6 +43458,10 @@ s/w test requirements for GW7 (IPA3 & CNIC modules are assumed to be functional 
 
 sw test requirements for the CNIC7:
 - GPIOs
+    - nEVENT
+    - PFAIL
+    - DEVSTAT
+    - NETSTAT
 - I2C
 - SWD
     - ability to program.
@@ -43471,6 +43475,10 @@ sw test requirements for the CNIC7:
 
 sw test requirements for the NIC7/IPA3:
 - GPIOs
+    - nEVENT
+    - PFAIL
+    - DEVSTAT
+    - NETSTAT
 - I2C
 - SWD
     - ability to program.
