@@ -43477,7 +43477,9 @@ sw test requirements for the CNIC7:
     - ability to unlock, erase and program.
 - cellular
     - transmit power
+        - power diode
     - receive signal strength.
+        - golden master?
     - modem identity
     - SIM card(s) identity
 - SPI flash
