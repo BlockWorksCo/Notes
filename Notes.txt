@@ -43479,7 +43479,7 @@ sw test requirements for the CNIC7:
     - transmit power
         - power diode
     - receive signal strength.
-        - golden master?
+        - golden master equivalency?
     - modem identity
     - SIM card(s) identity
 - SPI flash
