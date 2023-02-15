@@ -43524,6 +43524,252 @@ hardware version:
 - from hw and s/w PoV.
 - Confirm with Jose/Binish about hw revision line.
 
+--------------------------------------------
+modme ipv6 investigation
+
+
+1.      For the below IMSI, traces are captured in network and a lot of UE/Device side discrepancies are observed.
+
+
+
+service_id
+
+
+serviceid_IMSI
+
+
+static_ip
+
+
+SIM NO
+
+5753010021210
+
+
+405855706032235
+
+
+2405:0203:051e:0060:0000:0000:0000:0010
+
+
+8991855050706032235
+
+
+
+2023-02-09 13:03:59.725 #1   001bc50c6020141e <log> 0:00:48.872 [ WARN] [     at_chat] {    modem}: cmd 'AT+CGACT=1,1' failed: NO CARRIER
+
+
+
+Discrepancies:
+
+
+
+    In an static IPV6 solution, this UE is requesting PDN connection with type “IPV4” instead of IPV6/IPV4V6 and default APN set to IMS instead of JioCIoT, Network accepts the attach request but QCI-5 is established instead of QCI-9 as wrong APN is offered.
+    Also, this use case require UE setting to be “Data centric” and not “Voice Centric”.
+    IF UE sends UE setting as Voice Centric, network would expect UE to establish a separate bearer for IMS and also register to IMS. If UE fails to do so, network would ask UE to re-attach until it registers to IMS.
+    Later, UE sends PDN connectivity request with PDN type IPV4 and APN JioCIOT which the network rejects which is an expected behavior.
+
+
+
+Further corrections:
+
+
+
+    In a static IPV6 solution, UE need to send PDN type as IPV6V4 or IPV6 only
+    Default AN for Attach need to be the Private APN assigned to this solution.
+    UE setting need to be set to “Data Centric” as Voice services are not required in this solution.
+
+
+
+Log snippets for reference only
+
+
+
+11||6000||0||2023-02-09 12:57:11||-||-1||2023-02-09 12:57:11||3393
+
+
+
+//Attach request
+
+Message Type            : Initial UE Message
+
+   eNB UE S1AP ID          : H'289
+
+   NAS-PDU
+
+    - NAS Msg Type         : Attach Request
+
+    - Security Header Type : No Security Protection
+
+    - EPS Attach Type      : Combined EPS/IMSIAttach
+
+    - NAS Key Set Id       : TSC(0) KSI(7)
+
+    - EPS Mobile Identity  : GUTI(405 855 H'C207 H'C1 H'C9D640D8)
+
+    - UE Network Capa      : E0 E0 E0 E0 08
+
+                             EEA0(1) EEA1(1) EEA2(1) EEA3(0) EEA4(0) EEA5(0) EEA6(0) EEA7(0)
+
+                             EIA0(1) EIA1(1) EIA2(1) EIA3(0) EIA4(0) EIA5(0) EIA6(0) EIA7(0)
+
+                             UEA0(1) UEA1(1) UEA2(1) UEA3(0) UEA4(0) UEA5(0) UEA6(0) UEA7(0)
+
+                             UCS2(1) UIA1(1) UIA2(1) UIA3(0) UIA4(0) UIA5(0) UIA6(0) UIA7(0)
+
+                             PROSE-DD(0) PROSE(0) H.245-ASH(0) ACC-CSFB(0) LPP(1) LCS(0) 1xSRVCC(0) NF(0)
+
+    - ESM Container        : 02 01 D0 11 D1
+
+                             [ ESM Container Contents ]
+
+    - NAS Msg Type         : PDN Connectivity Request
+
+    - EPS Bearer Identity  : 0
+
+    - Proc Transaction Id  : H'01
+
+    - NAS Request Type     : Initial Attach
+
+    - PDN Type             : IPv4
+
+    - ESM Info Trans Flag  : ESM Information Transfer Request
+
+
+
+    - Last Visit TAI       : MCC(405) MNC(855) TAC(H'0001)
+
+    - MS Network Capa      : F5 61 34
+
+                             GEA1_ENC_ALG(1) SM_CAPA_DEDI(1) SM_CAPA_GPRS(1) UCS2_SUPPORT(1)
+
+                             SS_SCRIND(B'01) SO_LSA_CAPA(0)  REV_LEVELIND(1)
+
+                             PFC_FEAT_MOD(0) GEA2_ENC_ALG(1) GEA3_ENC_ALG(1) GEA4_ENC_ALG(0)
+
+                             GEA5_ENC_ALG(0) GEA6_ENC_ALG(0) GEA7_ENC_ALG(0) LCS_VA_CAPA(1)
+
+                             PSHO_G_TO_UT(0) PSHO_G_TO_EU(0) EMM_COMBINED(1) ISR_SUPPORT(1)
+
+                             SRVCC_TO_G/U(0) EPC_CAPA(1)     NF_CAPA(0)
+
+    - Old LAI              : MCC(405) MNC(855) LAC(H'FFFE)
+
+    - Voice Domain Pref.   : UeSet(Voice Centric) VoDomainPref(CS Voice Only)
+
+   TAI                     : MCC(405) MNC(855) TAC(H'0001)
+
+   E-UTRAN CGI             : MCC(405) MNC(855) CELL(4333-36)
+
+   RRC Establishment Cause : MO Signalling
+
+   MME Group Id            : H'C207
+
+
+
+//PDN connectivity request
+
+- NAS Msg Type         : PDN Connectivity Request
+
+    - EPS Bearer Identity  : 0
+
+    - Proc Transaction Id  : H'01
+
+    - NAS Request Type     : Initial Attach
+
+    - PDN Type             : IPv4
+
+    - APN                  : 07 4A 49 4F 43 49 4F 54
+
+                             JIOCIOT
+
+
+
+//QCI-5 is established instead of QCI 1 due to IMS APN shared in ESM information transfer
+
+- NAS Msg Type         : Activate Default EPS Bearer Context Request
+
+    - EPS Bearer Identity  : 5
+
+    - Proc Transaction Id  : H'01
+
+    - EPS QoS              : 05
+
+                             QCI(5)
+
+    - APN                  : 03 69 6D 73 06 6D 6E 63 38 35
+
+                             35 06 6D 63 63 34 30 35 04 67
+
+                             70 72 73
+
+                             ims.mnc855.mcc405.gprs
+
+
+
+//PDN rejected by the network
+
+    - NAS Msg Type         : PDN Connectivity Reject
+
+    - EPS Bearer Identity  : 0
+
+    - Proc Transaction Id  : H'01
+
+    - ESM Cause            : MultiPDNConnsForGivenAPNnotAllow (H'37)
+
+
+
+
+
+2.      No traces available in the network for the below IMSI.
+
+ervice_id
+
+
+serviceid_IMSI
+
+
+static_ip
+
+
+SIM NO
+
+5753010021203
+
+
+405855706032228
+
+
+2405:0203:051e:0059:0000:0000:0000:0010
+
+
+8991855050706032228
+
+
+
+2023-02-09 13:30:20.199 #1   001bc50c601f40e7 <log> 0:05:13.521 [debug] [       modem] {    modem}: Waiting for network registration
+
+2023-02-09 13:31:12.842 #1   001bc50c601f40e7 <log> 0:06:06.161 [debug] [     at_chat] {    modem}: +CREG: 3
+
+2023-02-09 13:31:12.843 #1   001bc50c601f40e7 <log> 0:06:06.167 [debug] [       modem] {    modem}: processURC(+CREG: 3) +CREG:
+
+2023-02-09 13:31:12.843 #1   001bc50c601f40e7 <log> 0:06:06.175 [ERROR] [       modem] {    modem}: Registration denied
+
+
+
+No request is sent to network. Expecting the above behaviors of this device also if it would have sent request to network.
+
+
+
+
+
+Also, please help share device logs again if issue persists after correction in the device at your end.
+
+
+
+
+
+
 
 
 
