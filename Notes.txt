@@ -43525,7 +43525,7 @@ hardware version:
 - Confirm with Jose/Binish about hw revision line.
 
 --------------------------------------------
-modme ipv6 investigation
+modem ipv6 investigation
 
 
 1.      For the below IMSI, traces are captured in network and a lot of UE/Device side discrepancies are observed.
