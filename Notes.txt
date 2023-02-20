@@ -43773,6 +43773,24 @@ server performance
 - scheduling runs
 
 
+--------------------------------------------------
+ipv6 modem issues:
+
+
+
+TOBY-L4 / TOBY-L2 / MPCI-L2 / LARA-R2 / TOBY-R2 / SARA-U2 / LISA-U2 / LISA-U1 / SARA-G4 / SARA-G3 /
+LEON-G1
+u-blox cellular modules - AT commands manual
+UBX-13002752 - R67 18 Packet switched data services Page 409 of 1001
+AT+CGACT command (both in successful and unsuccessful case) triggers signalling attempts whose
+number is internally counted by the SW and limited based on MNO specific thresholds. The AT&T RPM
+feature (see also the +URPM AT command) and the Verizon configuration (see the +UMNOCONF AT
+command) might cause the AT command to return an error result code when the maximum number of
+attempts has been reached. In these cases, the command might become available again after a while.
+
+
+
+
 
 
 
