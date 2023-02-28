@@ -43805,6 +43805,7 @@ needing to switch.
 - Clean up URC handling.
 - TunAT when forced comes up ok, then immediately tries to bring itself up again.
 - (null) state in modem log.
+- tun6d packet/chunk-drop fix.
 
 
 
