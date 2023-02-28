@@ -43789,6 +43789,16 @@ command) might cause the AT command to return an error result code when the maxi
 attempts has been reached. In these cases, the command might become available again after a while.
 
 
+-----------------------------------------------------
+tun6/modem improvements:
+
+- TunAT: wait for coverage before attempting UPSDA.
+- ICMPv4 debug to handle disaply of proto 1 packets (address/port unreachable).
+- last-known-good uplink-type.
+- Remove debug AT commands
+- Add diagnostic URC such as URC periodically showing LAC & cellid & reg status.
+- Check status of each AT command.
+- Add metric/event for change of cell-tower/RAT.
 
 
 
