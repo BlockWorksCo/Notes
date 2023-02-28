@@ -43803,6 +43803,7 @@ tun6/modem improvements:
 - Remove tun6 and have tunAT for IPv4 also. Removes/simplifies code & recovery mechanisms and modem is always in AT mode rather than
 needing to switch.
 - Clean up URC handling.
+- TunAT when forced comes up ok, then immediately tries to bring itself up again.
 
 
 
