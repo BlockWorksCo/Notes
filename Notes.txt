@@ -43796,9 +43796,10 @@ tun6/modem improvements:
 - ICMPv4 debug to handle disaply of proto 1 packets (address/port unreachable).
 - last-known-good uplink-type.
 - Remove debug AT commands
-- Add diagnostic URC such as URC periodically showing LAC & cellid & reg status.
+- Add diagnostic URC such as URC periodically showing LAC & cellid & reg status. This is useful info the network is giving us.
 - Check status of each AT command.
 - Add metric/event for change of cell-tower/RAT.
+- Have two sets of configuration params for two entire sets of cellular sessions (operation-mode, APN, UplinkType, cerdentials, etc)
 
 
 
