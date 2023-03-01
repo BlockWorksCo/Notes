@@ -43808,6 +43808,8 @@ needing to switch.
 - tun6d packet/chunk-drop fix.
 - ethernet failover, take down tunat when tun6 comes up on eth.
 - (null) is now up
+- deadlock/watchdog issue on connect.
+- buffer flushing.
 
 
 
