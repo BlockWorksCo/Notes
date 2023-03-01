@@ -43806,7 +43806,7 @@ needing to switch.
 - TunAT when forced comes up ok, then immediately tries to bring itself up again. Once from PoweredOn state and once in Unknown state.
 - (null) state in modem log.
 - tun6d packet/chunk-drop fix.
-- ethernet failover
+- ethernet failover, take down tunat when tun6 comes up on eth.
 - (null) is now up
 
 
