@@ -43807,6 +43807,7 @@ needing to switch.
 - (null) state in modem log.
 - tun6d packet/chunk-drop fix.
 - ethernet failover
+- (null) is now up
 
 
 
