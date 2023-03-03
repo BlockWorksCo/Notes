@@ -42684,7 +42684,8 @@ https://www.opencellid.org/#zoom=17&lat=28.497848510742&lon=77.084884643555
 Airtel:
 77.086716
 28.498306
-https://www.opencellid.org/#zoom=17&lat=28.497848510742&lon=77.084884643555
+https://www.opencellid.org/#zoom=17&lat=28.498306&lon=77.086716
+
 
 ---------------------------------------------
 
