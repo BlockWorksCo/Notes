@@ -43811,6 +43811,8 @@ needing to switch.
 - deadlock/watchdog issue on connect.
 - buffer flushing/truncating on from-modem and to-log.
 - SIM PIN in IPv6 mode.
+- --- Initialising TunAT --- Unknown -> (null)
+
 
 
 
