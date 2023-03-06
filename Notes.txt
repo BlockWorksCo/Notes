@@ -43829,6 +43829,11 @@ needing to switch.
 tunat improvements:
 - CGREG status 5 = registered roaming. 2 = registered home, so need to account for that also.
 
+TOBY-L2 / MPCI-L2
+When registering in LTE, <cid>= 4 is mapped to the initial default EPS bearer (see +UCGDFLT AT
+command for details).
+
+
 
 
 
