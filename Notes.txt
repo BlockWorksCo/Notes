@@ -43825,6 +43825,9 @@ needing to switch.
 - SIM PIN in IPv6 mode.
 - --- Initialising TunAT --- Unknown -> (null)
 
+-------------------------------------------------------
+tunat improvements:
+- CGREG status 5 = registered roaming. 2 = registered home, so need to account for that also.
 
 
 
