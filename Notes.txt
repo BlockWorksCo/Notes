@@ -43840,6 +43840,11 @@ In case <cid>=4 has been already defined via +CGDCONT (to be avoided), the <cid>
 EPS bearer will be selected in the following order [3,2,1,5,6,7,8]. It is recommended to leave <cid>=4
 undefined.
 
+ Steering of Roaming enabled with automatic switch from manual to automatic
+PLMN selection mode if the maximum number of registration attempts rejected
+with cause 17 (Network Failure) has been reached
+
+
 
 
 
