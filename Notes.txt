@@ -43824,6 +43824,7 @@ needing to switch.
 - buffer flushing/truncating on from-modem and to-log.
 - SIM PIN in IPv6 mode.
 - --- Initialising TunAT --- Unknown -> (null)
+- cellular going down does not necessitatetaking mesh down.
 
 -------------------------------------------------------
 tunat improvements:
