@@ -43825,6 +43825,7 @@ needing to switch.
 - SIM PIN in IPv6 mode.
 - --- Initialising TunAT --- Unknown -> (null)
 - cellular going down does not necessitatetaking mesh down.
+- modem ICCID IMEI reading in TunAT.
 
 -------------------------------------------------------
 tunat improvements:
