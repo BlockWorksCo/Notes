@@ -43852,10 +43852,17 @@ prioritisation of RC/DC
 
 Options to increase reliability of disconnector requests:
 
-- Simple modification of mq-push schedule from 1hr periodic to (say) 2hr periodic between specified
+1. Simple modification of mq-push schedule from 1hr periodic to (say) 2hr periodic between specified
 hours. With no other mods, this would make it more bursty during that period with no other restrictions
 as it tries to transfer the same amount of data, so a restriction on the number of mq-items transferred
 would probably also be necessary. This is fairly easy to implement.
+2. A more generic "traffic priority" scheme that has a schedule for high priority traffic based on a shared
+i.e. wall-clock time. For example, all nodes agree that in the first 15 minutes of every hour, only
+traffic tagged as high-priority should be transmitted. This would keep the air clear during those scheduled
+periods to reduce contention. Not too difficult to implement, but would allow prioritisation of all traffic.
+3. Add priorities to the mq system. Currently the mq is single-priority, we've had discussions previously
+about the benefits of making it a priority-q. This in itself wouldnt allow a period of clear air, but may
+be combined the above two points to get alarms through in a timely manner.
 
 
 
