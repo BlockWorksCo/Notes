@@ -43864,6 +43864,8 @@ periods to reduce contention. Not too difficult to implement, but would allow pr
 about the benefits of making it a priority-q. This in itself wouldnt allow a period of clear air, but may
 be combined the above two points to get alarms through in a timely manner.
 
+All the above involve a high/low priority separation and schedule for traffic management, its just
+a case of the granularity and scope of the mods.
 
 
 
