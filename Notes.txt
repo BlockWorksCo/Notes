@@ -43826,6 +43826,7 @@ needing to switch.
 - --- Initialising TunAT --- Unknown -> (null)
 - cellular going down does not necessitatetaking mesh down.
 - modem ICCID IMEI reading in TunAT.
+- turn off ICMP echo replies on modem (AT+UDCONF=4,<icmp_echo_reply>)
 
 -------------------------------------------------------
 tunat improvements:
