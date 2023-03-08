@@ -43850,6 +43850,9 @@ with cause 17 (Network Failure) has been reached
 ----------------------------------------
 prioritisation of RC/DC
 
+One question to start off with... are they seeing high-latency/bad-performance from disconnector requests?
+If so, what kind of performance are they wanting?
+
 Options to increase reliability of disconnector requests:
 
 1. Simple modification of mq-push schedule from 1hr periodic to (say) 2hr periodic between specified
@@ -43864,6 +43867,8 @@ periods to reduce contention. Not too difficult to implement, but would allow pr
 about the benefits of making it a priority-q. This in itself wouldnt allow a period of clear air, but may
 be combined the above two points to get alarms through in a timely manner. This would be fairly straightforward
 to implement also.
+4. Could a simple "retry high-priority requests more often" work? doesnt really get to the root of the
+problem, but could be effective depending on if they're really seeing poor mesh performance or not.
 
 All the above involve a high/low priority separation and schedule for traffic management, its just
 a case of the granularity and scope of the mods. The implementation isnt particularly difficult.
