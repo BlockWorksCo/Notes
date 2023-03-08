@@ -43847,6 +43847,15 @@ undefined.
 PLMN selection mode if the maximum number of registration attempts rejected
 with cause 17 (Network Failure) has been reached
 
+----------------------------------------
+prioritisation of RC/DC
+
+Options to increase reliability of disconnector requests:
+
+- Simple modification of mq-push schedule from 1hr periodic to (say) 2hr periodic between specified
+hours. With no other mods, this would make it more bursty during that period with no other restrictions
+as it tries to transfer the same amount of data, so a restriction on the number of mq-items transferred
+would probably also be necessary.
 
 
 
