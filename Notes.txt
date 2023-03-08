@@ -43862,10 +43862,13 @@ traffic tagged as high-priority should be transmitted. This would keep the air c
 periods to reduce contention. Not too difficult to implement, but would allow prioritisation of all traffic.
 3. Add priorities to the mq system. Currently the mq is single-priority, we've had discussions previously
 about the benefits of making it a priority-q. This in itself wouldnt allow a period of clear air, but may
-be combined the above two points to get alarms through in a timely manner.
+be combined the above two points to get alarms through in a timely manner. This would be fairly straightforward
+to implement also.
 
 All the above involve a high/low priority separation and schedule for traffic management, its just
 a case of the granularity and scope of the mods.
+As always... we would need to test how this performs in the real world under stress and allow for "tuning"
+time.
 
 
 
