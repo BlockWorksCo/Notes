@@ -43866,7 +43866,7 @@ be combined the above two points to get alarms through in a timely manner. This 
 to implement also.
 
 All the above involve a high/low priority separation and schedule for traffic management, its just
-a case of the granularity and scope of the mods.
+a case of the granularity and scope of the mods. The implementation isnt particularly difficult.
 As always... we would need to test how this performs in the real world under stress and allow for "tuning"
 time.
 
