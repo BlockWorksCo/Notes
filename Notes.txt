@@ -40194,6 +40194,23 @@ Global
 
 or change /etc/resolv.conf to point to correct ip addresses.
 
+https://serverfault.com/questions/528773/networkmanager-is-not-changing-etc-resolv-conf-after-openvpn-dns-push
+This works for me: http://www.softwarepassion.com/solving-dns-problems-with-openvpn-on-ubuntu-box/
+
+The important step is adding following two lines of configuration into your client openvpn config file:
+
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf
+
+
+or:
+
+https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1774632
+Switching the symbolic link solves the problem. Here is my solution:
+
+$ sudo rm -f /etc/resolv.conf
+$ sudo ln -s /run/systemd/resolve/resolv.conf /etc/resolv.conf
+
 --------------------------------------------
 secure local coap
 
