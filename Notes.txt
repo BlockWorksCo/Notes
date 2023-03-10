@@ -40183,7 +40183,7 @@ https://unix.stackexchange.com/questions/588658/override-ubuntu-20-04-dns-using-
 DNS=1.1.1.1 8.8.8.8
 FallbackDNS=8.8.4.4
 
-    Restart system resolved: service systemd-resolved restart
+    Restart system resolved: "service systemd-resolved restart" (doesnt work)
     Run systemd-resolve --status
 
 the output should look like this:
@@ -40191,6 +40191,8 @@ the output should look like this:
 Global
          DNS Servers: 1.1.1.1
                       8.8.8.8
+
+or change /etc/resolv.conf to point to correct ip addresses.
 
 --------------------------------------------
 secure local coap
