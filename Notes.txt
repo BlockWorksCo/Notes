@@ -43907,6 +43907,7 @@ current roles & their characteristics:
     - UI (periodic + ad-hoc, spread of large (dashboard) & small (ping) ).
     - Job management (ad-hoc + periodic (prepayment), spread of heavy&light).
     - meter upgrade.
+    - Meter metadata management (relational)
 - NMS:
     - DTLS/security endpoint
     - Agent-MQ management (high-rate, low-latency, upstream).
