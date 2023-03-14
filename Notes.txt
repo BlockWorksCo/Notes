@@ -43924,7 +43924,14 @@ Breakdown roles/responsibilities & scaling-benefit:
     - Node management (node metadata, relational db).
     - UI (separate into SMA/NMS/OpRep or combined?)
     - ID-Mapper (efficiently mapping between lists of node-id/meter-id).
-    - MDMS API (respond to MDMS).
+    - MDMS API (respond to MDMS, samples from Kafka).
+    - Jobs:
+        - meter-config
+        - upgrade/file-distribution
+        - prepayment
+        - on-demand
+        - ping
+        - etc
 
 
 All joined by message-bus (Kafka?)
