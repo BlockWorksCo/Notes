@@ -43897,6 +43897,23 @@ time.
 [15:30] Steve Tickle
 Stepping back to a bigger picture, there is the idea I had a while ago about prioritising RPL packets on the mesh. Currently, they can potentially be drowned out by heavy traffic, so prioritising RPL would (hopefully) hold the mesh together better under load. This would benefit the mesh as a whole rather than targetting this particular use-case.In a similar vein of making the mesh more robust generally, getting a more reliable dynamic power alg. should have a measurable effect on collisions measured over the whole of the mesh and therefore reduce retries and latency. In order to develop this tho, we would need a more sophisticated metrics system to guide it.Reducing collisions can also be done by using some form of TDM/scheduling system as you mentioned above, but could potentially be done using a token-passing/round-robin type of approach possibly guided by the gateway. This probably has the potential to have a large effect, but would need development time.When I was looking at the large-mesh options a while ago, I also considered modification of the RPL statistics that guide which parent nodes are chosen. Nodes making more informed choices about their parents in order to route through quieter-but-more-hops parts of the network may have beneficial effects on overall throughput. Its hard to tell without time spent on alg. development though. Another half-formed, wacky idea, is to identify high-priority requests in the headers and broadcast them over the mesh instead of unicasting them. Then no matter where the target-node pops up, the packet can be forwarded to it without needing a mesh to be formed. The idea here being that we can transmit downstream to nodes that arent even on the mesh if we flood the network (yes, there are obvious drawbacks with this one that would have to be mitigated, but it may be worth it).
 
+---------------------------------
+microservices:
+
+current roles & their characteristics:
+- SMA:
+    - Configuration API (low-rate, downstream, ad-hoc).
+    - Samples API (high-rate, upstream, periodic).
+    - UI (periodic + ad-hoc, spread of large (dashboard) & small (ping) ).
+    - Job management (ad-hoc + periodic (prepayment), spread of heavy&light).
+    - meter upgrade.
+- NMS:
+    - Agent-MQ management
+    - Agent metadata management
+    - node upgrades
+- OpRep:
+    - Display, potentially heavy, potentially use read-replica of db for querying?
+
 
 
 
