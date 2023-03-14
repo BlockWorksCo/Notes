@@ -43902,15 +43902,16 @@ microservices:
 
 current roles & their characteristics:
 - SMA:
-    - Configuration API (low-rate, downstream, ad-hoc).
-    - Samples API (high-rate, upstream, periodic).
+    - Configuration API (low-rate,high-latency downstream, ad-hoc).
+    - Samples API (high-rate,low-latency, upstream, periodic).
     - UI (periodic + ad-hoc, spread of large (dashboard) & small (ping) ).
     - Job management (ad-hoc + periodic (prepayment), spread of heavy&light).
     - meter upgrade.
 - NMS:
-    - Agent-MQ management
+    - Agent-MQ management (high-rate, low-latency, upstream).
     - Agent metadata management
-    - node upgrades
+    - file distribution (high-rate, high-latency, downstream).
+    - Job management (ad-hoc + periodic (prepayment), spread of heavy&light).
 - OpRep:
     - Display, potentially heavy, potentially use read-replica of db for querying?
 
