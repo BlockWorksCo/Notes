@@ -43908,12 +43908,21 @@ current roles & their characteristics:
     - Job management (ad-hoc + periodic (prepayment), spread of heavy&light).
     - meter upgrade.
 - NMS:
+    - DTLS/security endpoint
     - Agent-MQ management (high-rate, low-latency, upstream).
     - Agent metadata management
     - file distribution (high-rate, high-latency, downstream).
     - Job management (ad-hoc + periodic (prepayment), spread of heavy&light).
 - OpRep:
     - Display, potentially heavy, potentially use read-replica of db for querying?
+- tund:
+    - tunnelling (high-rate, up & downstream).
+
+Breakdown into:
+    - DTLS front-end (decryption, encryption, authentication) potentially written in C using mbedtls to avoid having multiple libraries.
+
+
+joined by message-bus (Kafka?)
 
 
 
