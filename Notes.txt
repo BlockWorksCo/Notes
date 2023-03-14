@@ -43920,6 +43920,8 @@ current roles & their characteristics:
 
 Breakdown into:
     - DTLS front-end (decryption, encryption, authentication) potentially written in C using mbedtls to avoid having multiple libraries.
+    - Agent-MQ management (Gap-filler, optimised for sample storage and low-latency alarms, time-series db?).
+    - Node management (node metadata, relational db).
 
 
 joined by message-bus (Kafka?)
