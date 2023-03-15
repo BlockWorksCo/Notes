@@ -43982,16 +43982,14 @@ Kafka is an all-purpose strictly-ordered-within-partition buffer of data with au
 
 Man, I sound like I'm some Confluent salesman. I'm not affiliated. I work for Klarrio, we build streaming systems.
 
+----------------------
+tangedco credentials:
 
 
-
-
-
-
-
-
-
-
-
-
-
+Genus Tangedco:
+tools/c4-tools/coap_request.py --config device.dlms.lls_password 3141324233433444
+tools/c4-tools/coap_request.py --config device.dlms.hls_key 746764636c686c7375676d3434616263
+tools/c4-tools/coap_request.py --config device.dlms.encryption_key 546744634c654b616b674d3434616263
+tools/c4-tools/coap_request.py --config device.dlms.authentication_key 546744634c654b616b674d3434616263
+tools/c4-tools/coap_request.py --config device.dlms.FirmwareUpgrade_key 746764636C686C7366676D3434616263
+also ciphering = 1
