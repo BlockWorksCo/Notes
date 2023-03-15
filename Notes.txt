@@ -43937,6 +43937,51 @@ Breakdown roles/responsibilities & scaling-benefit:
 
 All joined by message-bus (Kafka?)
 
+-----------------------------------------
+kafka:
+
+
+If you can live with it (low traffic, small data set) you totally should. Where ‘low’ and ‘small’ are based on what a modern server can do, so they can go up quite a bit. And with shards and/or replicas you can get N times the throughput in an easy way
+
+reply
+
+
+rad_gruchalski 9 hours ago | unvote | root | parent | prev | next [–]
+
+> When should you use Kafka instead of storing rows in SQL with a timestamp so you can replay them/fetch them if needed?
+
+Lots to unpack here. The simple answer is: you use Kafka when you need to have the data in order in arrival written to disk but you don't need ad-hoc query. Messages must be persisted, processed at least once by someone, in order. It's common to have Kafka in front of a database as a sort of buffer: when data is in Kafka, it has been acknowledged as seen and will be processed later.
+
+Now, why would you store it in Kafka rather than in a table with timestamps. I said in my previous comment that messages are persisted based on the arrival time on the broker. This is somewhat inaccurate. Kafka is not related in a message arrival time. It's interested in message arrival. All messages arriving on a partition are process in order of arrival. Messages are stored on disk as byes, each message is written to a segment file, a partition will often have more than one segment file. Segments are sequential. A message is written at a byte offset within a segment and the format is something like: {metadata, length, message body}, the protocol is documented here: https://kafka.apache.org/protocol. Each segment file has an index file. The index file maps the partition message offset to a byte offset within a segment file. To read a message, the broker needs to know the message sequence you want. The broker will identify the segment by looking at (AFAIR) the index file name which contains the first message offset within its respective segment. It will read the index, find the byte offset of the message, check the message length, read the message, and return it.
+
+However, as you can imagine, this is a pretty involved scenario because it implies a bunch of random reads from disk. The point of Kafka is sequential reads over complete partitions or segments. So Kafka shines when you need to read large sequences from a partition. It will identify a segment, memory map it and do a sequential read over a large file (usually a segment is something like 1GB).
+
+This is different than inserting into an SQL table with timestamps. First of all - you will have duplicated timestamps. The only way to avoid duplication is auto-incremental indexes. These will be similar to the message offset. However, a large number of writers will inevitably lead to a congestion on your auto-incremented sequences. Next, your table will have indexes: as you want ACID, those indexes will have to be updated before data is considered stored (C). Next, you have the data stored but it's an SQL database, so your data is on one node. This is different than Kafka minimum replication factor where the data is considered as stored when at least N replicas confirm it. As for reads: so your client application would store it's own last processed sequence number from your auto-incremented index, and this would work the same as the consumer offset in Kafka. But it you have hundreds of GBs of data on your server, you'll be hitting disk pretty often for index scans, or your indexes will outgrow your RAM. Sure, you can scale to a bigger box (costly) or you go for a DRDBMS (YBDB or Cockroach or similar) but due to how your tables are distributed in those systems, you will hit a latency cliff. Reads are usually better than writes, writes can be atrocious, DRDBMS large batch writes can be 500x+ slower than single node RDBMS.
+
+> so you can replay them/fetch them if needed?
+
+If you need ad-hoc queries, that's the best way to go. But for volumes of data larger than your SQL server, I'd consider Kafka in front and SQL to store only what needs to be queried.
+
+> Why do you need a sharded Kafka cluster?
+
+Three reasons:
+
+1. Write performance. I wrote higher that messages are written in order into a sequence file. I have personally worked with clusters ingesting 400Mbps per partition on multiple partitions on a single node. Basically, Kafka can saturate your bandwidth and if you have SSDs, everything what's ingested, will be persisted because Kafka uses zero-copy and memory mapped files. So it's basically like writing to RAM. If you need to ingest more data than a single node can handle, you need more machines.
+
+2. Read performance: data within a topic partition is written in sequence and will be read in sequence. Your typical scenario if using some derivative of a key to establish the partition number. By default kafka uses murmur2 hash. What this basically means. Imagine that you have data for email addresses. The email address is the key. All data for a given email address ends up on the same partition. Thus your consumer will always read from one partition for a given email address. The more partitions you have, the higher is the number of consumers. Of course one there will be multiple email addresses within a single partition because their hash maps to the same partition number. The higher the number of partitions, the higher the granularity of that distribution. However, it's easy to hit a hotspot for a key if you have a lot of data for a hot key.
+
+3. I would argue, the most important one: replication. If you have 3 brokers and your topic has a replication factor of 3, you have one copy of data per physical machine, all data consistent across brokers. That is - each partition and every segment exists in three copies, one copy per physical broker. There will be multiple partitions for the same topic on the same broker and each will be replicated to other brokers.
+
+Taking a broker out does not impact your operations. You can still read and write, you will have under-replicated partitions but Kafka will automatically recover once the missing broker comes back. If a broker falls out, and that broker was a leader for a partition, Kafka will elect a new leader from one of the remaining brokers and your consumers and producers will automatically continue writing like nothing happened.
+
+> Most businesses are going to have Redis, SQL, and probably RabbitMQ.
+
+> Where/why add Kafka to that stack?
+
+Kafka is an all-purpose strictly-ordered-within-partition buffer of data with automated replication and leader election. Multiple consumers can read from the same topic partitions at the same time. Each one has its own offset and can consume at its own pace. Each consumer can do different things with those messages at the same time. Those consumers can be located at different org levels. Kafka is great at moving large volumes of data within the organization and facilitating other processes, for example ETL.
+
+Man, I sound like I'm some Confluent salesman. I'm not affiliated. I work for Klarrio, we build streaming systems.
+
 
 
 
