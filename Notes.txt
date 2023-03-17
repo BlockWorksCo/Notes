@@ -44012,8 +44012,10 @@ testing ipv6 gateway
 setup script
 
 getting_started
-- sudo usermode -aG docker $USER
+- sudo usermod -aG docker $USER
 - newgrp docker
+- apt install python3-pip
+- virtualenv not found
 
 
 
