@@ -44014,8 +44014,8 @@ setup script
 getting_started
 - sudo usermod -aG docker $USER
 - newgrp docker
-- apt install python3-pip
-- virtualenv not found
+- pip3 uninstall virtualenv
+- apt install python3-pip python3-virtualenv
 
 
 
