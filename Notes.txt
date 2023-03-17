@@ -44008,4 +44008,12 @@ testing ipv6 gateway
 - --blockrx / --unblockrx   (simulate network going quiet without disconnect).
 
 
+------------------------------
+setup script
+
+getting_started
+- sudo usermode -aG docker $USER
+- newgrp docker
+
+
 
