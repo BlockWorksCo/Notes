@@ -44002,3 +44002,10 @@ device.dlms.encryption_key=756776636c656b616b67313836616263
 device.dlms.hls_key=756776636c686c737567313836616263
 ciphering = 0
 
+----------------------------------
+testing ipv6 gateway
+- --modem-at-cmd AT+CFUN=0  (cause a disconnect event).
+- --blockrx / --unblockrx   (simulate network going quiet without disconnect).
+
+
+
