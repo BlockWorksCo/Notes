@@ -44017,5 +44017,11 @@ getting_started
 - pip3 uninstall virtualenv
 - apt install python3-pip python3-virtualenv
 
+---------------------------------------
+tun6d improvements
+
+- add ability to runtime-config timeout to aid testing.
+- add ability to block individual gateways to cause a reset & recovery.
+-
 
 
