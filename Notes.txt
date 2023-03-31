@@ -44032,3 +44032,17 @@ F4 60 06F70D 00 08 3A40 FD000000000000000000000000000001 FDC894D63BF2012
 F4 60 06F70D0008 3A 40 FD000000000000000000000000000001 FDC8:94D6:3BF2:0124:021B:C50C:601F:7457 81006A5C ABCD 003D ICMP echo reply.
 F4 60 0F43D90042 11 40 FD000000000000000000000000000001 FDC8:94D6:3BF2:0124:021B:C50C:6020:77BC 163416340042879616FEFD0000000000000000002D030000210000000000000021FEFF1E47DB
 
+---------------------------
+Cellular monitoring
+
+- high water mark for ping-failures
+- latency of pings metric
+- synchronised cron for pinger.
+
+In order to infer that the network is at fault, we need to be able to compare across gateways.
+For this to be valid, the time of pings must be synchronised.
+
+
+
+
+
