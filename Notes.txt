@@ -44045,11 +44045,14 @@ For this to be valid, the time of pings must be synchronised.
 -----------------------------------
 kafka
 
+https://tecadmin.net/how-to-install-apache-kafka-on-ubuntu-22-04/
+
 - pip3 install kafka-python
 - wget https://downloads.apache.org/kafka/3.4.0/kafka_2.12-3.4.0.tgz
 - ./bin/kafka-storage.sh random-uuid
 - ./bin/kafka-storage.sh format --cluster-id kDYZTGCvQsq2q4o0TtCYPg --config ./config/kraft/server.properties
 - ./bin/kafka-server-start.sh ./config/kraft/server.properties
+- ./bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic testTopic
 
 
 
