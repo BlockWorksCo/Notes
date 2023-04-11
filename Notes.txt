@@ -44042,6 +44042,13 @@ Cellular monitoring
 In order to infer that the network is at fault, we need to be able to compare across gateways.
 For this to be valid, the time of pings must be synchronised.
 
+-----------------------------------
+kafka
+
+- pip3 install kafka-python
+- wget https://downloads.apache.org/kafka/3.4.0/kafka_2.12-3.4.0.tgz
+- ./bin/kafka-server-start.sh ./config/kraft/server.properties
+
 
 
 
