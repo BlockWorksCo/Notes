@@ -21163,6 +21163,7 @@ ost.c,986:ERROR: ezspErrorHandler : EZSP_ERROR_INVALID_FRAME_ID (0x31)
     -
 
     ------------------------------------------
+xmas tree christmas tree:
 
     rack of nodes 16 nodes
     ./RunRack.sh
