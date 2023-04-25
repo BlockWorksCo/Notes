@@ -44069,5 +44069,12 @@ GW7 test MTS
 - Modem test issue tx/rx to Ajit.
 - Mesh radio tx/rx code to Ajit.
 
+--------------------------------------------------
+gw bootloop
+
+- pageSize = 256
+- pagesPerBlock = 4096 / 256 = 16
+- blocks = (1<<25)/4096 = 8192
+
 
 
