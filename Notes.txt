@@ -44076,5 +44076,8 @@ gw bootloop
 - pagesPerBlock = 4096 / 256 = 16
 - blocks = (1<<25)/4096 = 8192
 
+gw board mea : 001bc50c60279e5c
+
+
 
 
