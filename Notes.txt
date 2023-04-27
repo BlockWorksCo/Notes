@@ -44083,6 +44083,12 @@ cellular testing LTE basestation using SDR
 
 https://open5gs.org/open5gs/docs/tutorial/01-your-first-lte/
 
+--------------------------------
+IPv6 termem terminal_emulator
+
+https://gitlab.cyco.io/Omnimesh/terminal/-/tree/CND12335-IPv6TermEm
+
+prefixBase
 
 
 
