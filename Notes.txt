@@ -44078,6 +44078,12 @@ gw bootloop
 
 gw board mea : 001bc50c60279e5c
 
+-----------------------------------------------------
+cellular testing LTE basestation using SDR
+
+https://open5gs.org/open5gs/docs/tutorial/01-your-first-lte/
+
+
 
 
 
