@@ -44090,6 +44090,11 @@ https://gitlab.cyco.io/Omnimesh/terminal/-/tree/CND12335-IPv6TermEm
 
 prefixBase
 
+------------------------------------------
+modem:
+
+blockRx only works on ipv6, should work on ipv4 also.
+
 
 
 
