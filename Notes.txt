@@ -44099,11 +44099,13 @@ blockRx only works on ipv6, should work on ipv4 also.
 cellular dropouts:
 
 modem investigation:
-- get debug lines on gw200 board
+- get debug lines on gw200 board. USB (d- d+ GND, 5V) UUSBCONF command to configure diagnostic output on USB-CDC.
 - comparison to cnic7/neoway
 - ublox dev board
+- modem log to modem filesystem
+- radio coexistence issues?
+- Create simplisitic/minimal ping application to demonstrate issue.
 -
-
 
 
 
