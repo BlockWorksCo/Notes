@@ -44105,8 +44105,8 @@ modem investigation:
 - modem log to modem filesystem
 - radio coexistence issues?
 - Create simplisitic/minimal ping application to demonstrate issue.
--
-
+- Examine errata & Firmware update changelog
+- Lock to LTE because of: [CA-107933 / u-blox ID 3450]: Improved network connection stability in idle mode by fixing a ping pong among 4G and 3G cells of the same MNO
 
 
 
