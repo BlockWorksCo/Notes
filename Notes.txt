@@ -44095,6 +44095,18 @@ modem:
 
 blockRx only works on ipv6, should work on ipv4 also.
 
+-------------------------------------------------------
+cellular dropouts:
+
+modem investigation:
+- get debug lines on gw200 board
+- comparison to cnic7/neoway
+- ublox dev board
+-
+
+
+
+
 
 
 
