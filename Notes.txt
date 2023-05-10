@@ -44100,13 +44100,26 @@ cellular dropouts:
 
 modem investigation:
 - get debug lines on gw200 board. USB (d- d+ GND, 5V) UUSBCONF command to configure diagnostic output on USB-CDC.
+   (https://u-blox.my.site.com/s/question/0D52p00008HKDZ8CAP/access-diagnostic-trace-on-toby-l210eval-board)
 - comparison to cnic7/neoway
 - ublox dev board
 - modem log to modem filesystem
 - radio coexistence issues?
 - Create simplisitic/minimal ping application to demonstrate issue.
 - Examine errata & Firmware update changelog
+
+https://content.u-blox.com/sites/default/files/TOBY-L2-Auto-SIB24-PCN_UBX-20058838.pdf
+
 - Lock to LTE because of: [CA-107933 / u-blox ID 3450]: Improved network connection stability in idle mode by fixing a ping pong among 4G and 3G cells of the same MNO
+- [CA-90921 / u-blox ID-2 3492] In some mobile networks, when the LTE network deploys
+SIB24 for 4G-to-5G SA reselection, the module receives scheduling information in SIB1,
+which contains SIB Type = sibType24-v1530. The current firmware does not handle this
+newly defined value, which results dropping the SIB1 message. Consequently, the cell
+broadcasting SIB24 is considered as barred, and eventually the module will move to 2G or
+3G network and lose 4G services. The new firmware properly handles the SIB24 value and
+prevents this condition.
+
+
 
 
 
