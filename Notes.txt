@@ -44108,7 +44108,12 @@ modem investigation:
 - Create simplisitic/minimal ping application to demonstrate issue.
 - Examine errata & Firmware update changelog
 - Over temperature? +USTS AT+UTEMP
+<<<<<<< HEAD
 - Focus on working coverage first by making configurable tunnel-timeout. Allows experimentation without reconfiguring entire field.
+=======
+- Perform a CGREG periodically to get connection status and current RAT.
+- Possibly lock to 3G? AT+URAT
+>>>>>>> WIP
 
 https://content.u-blox.com/sites/default/files/TOBY-L2-Auto-SIB24-PCN_UBX-20058838.pdf
 
