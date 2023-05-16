@@ -44124,6 +44124,19 @@ broadcasting SIB24 is considered as barred, and eventually the module will move 
 3G network and lose 4G services. The new firmware properly handles the SIB24 value and
 prevents this condition.
 
+- AT+CGED=1
+
+<Lrrc> Number 4G RRC state:
+• 0: null
+• 1: IDLE
+• 2: ATTEMPT TO CONNECT
+• 3: CONNECTED
+• 4: LEAVING CONNECTED STATE
+• 5: ATTEMPT LEAVING E-UTRA
+• 6: ATTEMPT ENTERING E-UTRA
+• 255: not known or not detectable
+
+
 
 
 
