@@ -44142,6 +44142,14 @@ bands enabled. IMS service is enabled, and it will register automatically only i
 MNO does not support CS services over its LTE network (see +UIMSCFG command
 description). The LTE initial default bearer (<cid>=1) is configured with empty APN.
 
+The difference between priority mapped from QCI and ARP based priority is as follows:
+
+    QCI Priority refers to priority in terms of resource allocation for a specific service i.e. in case where the UE is running concurrently VoIP (higher QCI priority) session and browsing WWW (lower QCI priority), the resources are assigned firstly to packets of VoIP and then to WWW (and e.g. if we don’t have in the particular TTI resources to assign both packets, WWW need to wait and VoIP goes through).
+
+    ARP priority refers to priority in terms of allocation of a service / bearer, i.e. if the eNB is highly loaded and a UE would like to setup VoIP (higher ARP priority) and WWW (lower ARP priority), the eNB would typically set only VoIP session, in order not to get overloaded. Or in other case if it is already overloaded it would kick off (retent) the bearers / services with lower ARP priorities.
+
+
+
 
 
 
