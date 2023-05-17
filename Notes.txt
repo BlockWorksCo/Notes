@@ -44121,6 +44121,15 @@ broadcasting SIB24 is considered as barred, and eventually the module will move 
 3G network and lose 4G services. The new firmware properly handles the SIB24 value and
 prevents this condition.
 
+--------------------------
+cellular:
+
+- can ping modem on external ipv6 address from laptop even while tunnel fails.
+- therefore link can be up but tunnel fails to connect.
+- Also saw opposite evidence earlier, so 50/50.
+- Can try to ping from the modem to test liveness instead of in-tunnel.
+- Need root on omnidev to debug tun6d.
+
 
 
 
