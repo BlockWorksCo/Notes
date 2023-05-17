@@ -44137,6 +44137,12 @@ prevents this condition.
 • 255: not known or not detectable
 
 
+: Global Data Only. The module is configured as data only, all supported LTE
+bands enabled. IMS service is enabled, and it will register automatically only if the
+MNO does not support CS services over its LTE network (see +UIMSCFG command
+description). The LTE initial default bearer (<cid>=1) is configured with empty APN.
+
+
 
 
 
