@@ -44149,6 +44149,9 @@ The difference between priority mapped from QCI and ARP based priority is as fol
     ARP priority refers to priority in terms of allocation of a service / bearer, i.e. if the eNB is highly loaded and a UE would like to setup VoIP (higher ARP priority) and WWW (lower ARP priority), the eNB would typically set only VoIP session, in order not to get overloaded. Or in other case if it is already overloaded it would kick off (retent) the bearers / services with lower ARP priorities.
 
 
+Similar report:
+https://community.hologram.io/t/connection-keeps-dropping-cannot-keepalive/4359/12
+
 
 
 
