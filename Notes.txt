@@ -44155,6 +44155,13 @@ https://community.hologram.io/t/connection-keeps-dropping-cannot-keepalive/4359/
 
 lte networks are cranky beasts & their operators provide no metrics for tower or back haul loading. So you can have a connection but still be unable to run data to your server or sync the rtc for several minutes at a time.
 
+EMM detach codes
+https://telecompedia.net/lte-release-causes/
+
+Cause #22 – Congestion
+
+      This EMM cause is sent to the UE because of congestion in the network (e.g. no channel, facility busy/congested etc.).
+
 
 
 
