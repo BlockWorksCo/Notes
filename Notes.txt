@@ -44173,6 +44173,12 @@ Cause #42 – Severe network failure
 
 If the attach request is rejected due to NAS level congestion control, the network shall set the EMM cause value to #22 "congestion" and optionally assigns a back-off timer T3346
 
+http://howltestuffworks.blogspot.com/2011/12/nas-level-congestion-control.html
+
+ When general NAS level mobility management control is active, the network may prioritize rejecting messages that has the NAS signalling low priority indicator before rejecting messages without the NAS signalling low priority indicator
+
+ When subscribed APN based congestion control is active for a particular APN, the network may reject attach request from UEs with a subscription to this APN
+
 
 
 
