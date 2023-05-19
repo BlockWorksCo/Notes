@@ -44162,6 +44162,18 @@ Cause #22 – Congestion
 
       This EMM cause is sent to the UE because of congestion in the network (e.g. no channel, facility busy/congested etc.).
 
+Cause #39 – CS service temporarily not available
+
+      This EMM cause is sent to the UE when the CS fallback or 1xCS fallback request cannot be served temporarily due to O&M reasons or a mobile terminating CS fallback call is aborted by the network during call establishment (see 3GPP TS 29.118 [16A]).
+
+Cause #42 – Severe network failure
+
+      This EMM cause is sent to the UE when the network has determined that the requested procedure cannot be completed successfully due to network failure. The failure is not expected to be temporary and repeated request is not likely to succeed in near future.
+
+
+If the attach request is rejected due to NAS level congestion control, the network shall set the EMM cause value to #22 "congestion" and optionally assigns a back-off timer T3346
+
+
 
 
 
