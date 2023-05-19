@@ -44153,6 +44153,8 @@ Similar report:
 https://community.hologram.io/t/connection-keeps-dropping-cannot-keepalive/4359/12
 
 
+lte networks are cranky beasts & their operators provide no metrics for tower or back haul loading. So you can have a connection but still be unable to run data to your server or sync the rtc for several minutes at a time.
+
 
 
 
