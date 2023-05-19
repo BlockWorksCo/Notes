@@ -44181,6 +44181,10 @@ http://howltestuffworks.blogspot.com/2011/12/nas-level-congestion-control.html
 
 
 
+ETSI spec on congestion control
+https://www.etsi.org/deliver/etsi_ts/124300_124399/124301/10.14.00_60/ts_124301v101400p.pdf
+Subscribed APN based congestion control: Congestion control in mobility management where the network can reject
+attach requests from UEs with a certain APN in the subscription.
 
 
 
