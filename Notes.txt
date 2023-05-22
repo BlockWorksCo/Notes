@@ -44187,6 +44187,12 @@ Subscribed APN based congestion control: Congestion control in mobility manageme
 attach requests from UEs with a certain APN in the subscription.
 
 
+------------------------------------------
+CVs
+
+- "Candidate1" medical, motors, PHd
+- "Candidate 4" good bluetooth experience, Roku.
+
 
 
 
