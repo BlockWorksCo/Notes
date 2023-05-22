@@ -44192,6 +44192,9 @@ CVs
 
 - "Candidate1" medical, motors, PHd
 - "Candidate 4" good bluetooth experience, Roku.
+- "David Kind" general automotive & RF controller, radar also.
+- "Marsu prichard" Oculus Quest @Facebook, Smart meters with STI, zigbee
+- "Marien Mupepele" more senior? footballer? all-rounder. BLE wifi
 
 
 
