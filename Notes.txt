@@ -44191,12 +44191,13 @@ attach requests from UEs with a certain APN in the subscription.
 CVs
 
 - "Candidate1" medical, motors, PHd
-- "Candidate 4" good bluetooth experience, Roku.
-- "David Kind" general automotive & RF controller, radar also.
+- "Candidate 4" good bluetooth experience, Roku. <-- 1
+- "David Kind" general automotive & RF controller, radar also. <-- 2
 - "Marsu prichard" Oculus Quest @Facebook, Smart meters with STI, zigbee
-- "Marien Mupepele" more senior? footballer? all-rounder. BLE wifi
-- "Raja Das" low-level, boot code, TCP/IP stacks, networking, UDP/IP DSPs <--
+- "Marien Mupepele" more senior? footballer? all-rounder. BLE wifi <-- 2
+- "Raja Das" low-level, boot code, TCP/IP stacks, networking, UDP/IP DSPs <-- 1
 - "Rick Weng". general eng. nothing standout.
+- "Sayli" AWS IoT, mbedtls. Nothing standout.
 
 
 
