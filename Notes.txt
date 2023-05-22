@@ -44195,6 +44195,8 @@ CVs
 - "David Kind" general automotive & RF controller, radar also.
 - "Marsu prichard" Oculus Quest @Facebook, Smart meters with STI, zigbee
 - "Marien Mupepele" more senior? footballer? all-rounder. BLE wifi
+- "Raja Das" low-level, boot code, TCP/IP stacks, networking, UDP/IP DSPs <--
+- "Rick Weng". general eng. nothing standout.
 
 
 
