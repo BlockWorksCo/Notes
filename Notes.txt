@@ -44199,6 +44199,10 @@ CVs
 - "Rick Weng". general eng. nothing standout.
 - "Sayli" AWS IoT, mbedtls. Nothing standout.
 
+-----------------------------------------------
+IPv6 APN selection
+
+- disable PS auto-attach AT+UCGATT=0 (defaults to auto-attach 1)
 
 
 
