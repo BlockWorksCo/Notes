@@ -44209,6 +44209,13 @@ TOBY-L2 / MPCI-L2
 Use the +UCGDFLT AT command to set the connection parameters of the initial default bearer.
 Since dial-up supports only IPv4 connectivity, the defined IPv6 EPS bearers / PDP contexts will not be used.
 
+AT+CGACT command (both in successful and unsuccessful case) triggers signalling attempts whose
+number is internally counted by the SW and limited based on MNO specific thresholds. The AT&T RPM
+feature (see also the +URPM AT command) and the Verizon configuration (see the +UMNOCONF AT
+command) might cause the AT command to return an error result code when the maximum number of
+attempts has been reached. In these cases, the command might become available again after a while
+
+
 
 
 
