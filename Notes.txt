@@ -44205,6 +44205,11 @@ IPv6 APN selection
 - disable PS auto-attach AT+UCGATT=0 (defaults to auto-attach 1)
 - default APN may be working but we get NO CARRIER.
 
+TOBY-L2 / MPCI-L2
+Use the +UCGDFLT AT command to set the connection parameters of the initial default bearer.
+Since dial-up supports only IPv4 connectivity, the defined IPv6 EPS bearers / PDP contexts will not be used.
+
+
 
 
 
