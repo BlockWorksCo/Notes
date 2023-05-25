@@ -44203,6 +44203,7 @@ CVs
 IPv6 APN selection
 
 - disable PS auto-attach AT+UCGATT=0 (defaults to auto-attach 1)
+- default APN may be working but we get NO CARRIER.
 
 
 
