@@ -44215,6 +44215,22 @@ feature (see also the +URPM AT command) and the Verizon configuration (see the +
 command) might cause the AT command to return an error result code when the maximum number of
 attempts has been reached. In these cases, the command might become available again after a while
 
+---------------------------------------
+APN operator identifier
+
+https://www.etsi.org/deliver/etsi_ts/123000_123099/123003/08.08.00_60/ts_123003v080800p.pdf
+
+9.1.2 Format of APN Operator Identifier
+The APN Operator Identifier is composed of three labels. The last label (or domain) shall be "gprs". The first and
+second labels together shall uniquely identify the GPRS/EPS PLMN.
+For each operator, there is a default APN Operator Identifier (i.e. domain name). This default APN Operator Identifier
+is derived from the IMSI as follows:
+"mnc<MNC>.mcc<MCC>.gprs"
+where:
+"mnc" and "mcc" serve as invariable identifiers for the following digits.
+<MNC> and <MCC> are derived from the components of the IMSI defined in subclause 2.2
+
+
 
 
 
