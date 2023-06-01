@@ -44273,4 +44273,4 @@ OK
 AT+TRACE?
 +TRACE: 1,115200,"PPP=1,IPDUMP=080,EXTDUMP=0",,,,"uart"
 
-
+echo -ne '\x7E\x7E\x92\x0B\xFF\x80\x08\x00\x04\x2B\xFF\x80\x20\xDA\x6F\xA0\x00\x00\x81\x81' > StartTrace.bin
