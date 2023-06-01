@@ -40476,6 +40476,7 @@ embedded interview:
 - internal vs external errors.
 - crypto/AES/etc.
 - radio protocols, BT, WiFi, etc
+- Documentation
 
 Team:
 - Process
