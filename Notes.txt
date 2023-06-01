@@ -44230,6 +44230,39 @@ where:
 "mnc" and "mcc" serve as invariable identifiers for the following digits.
 <MNC> and <MCC> are derived from the components of the IMSI defined in subclause 2.2
 
+-----------------------------
+UBlox EVK trace
+
+
+16.19
+
+OK
+
+OK
+
++CME ERROR: 10
+
++CME ERROR: 4
+
++UUSBCONF: 0,"",,"0x1141"
+
+OK
+
+OK
+
+OK
+AT
+OK
+AT+TRACE?
++TRACE: 1,115200,"PPP=0,IPDUMP=080,EXTDUMP=0",,,,"cdc-acm"
+
+OK
+ATUN=1,1
+OK
+AT+TRACE=1,115200,,,,,"CDC-ACM"
+OK
+
+
 
 
 
