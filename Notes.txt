@@ -40475,6 +40475,7 @@ embedded interview:
 - priority inversion.
 - internal vs external errors.
 - crypto/AES/etc.
+- radio protocols, BT, WiFi, etc
 
 Team:
 - Process
