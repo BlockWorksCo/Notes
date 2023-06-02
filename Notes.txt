@@ -44279,4 +44279,5 @@ echo -ne '\x7E\x7E\x92\x0B\xFF\x80\x08\x00\x04\x2B\xFF\x80\x20\xDA\x6F\xA0\x00\x
 cat ./StartTrace.bin > /dev/ttyS0
 cat /dev/ttyS0 > linux-trace.sdl
 
++TRACE: 1,115200,"MTIL=1,PPP=1,IPDUMP=080,EXTDUMP=0",,,,"uart"
 
