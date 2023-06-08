@@ -40466,7 +40466,7 @@ embedded interview:
 - RTOSs, priorities, threads
 - Linux, pipes, processes vs threads. paging.
 - Networking, TCP, UDP, latency, reordering, resource consumption, applications, ARP, address allocation
-- example, high throughput, no timing requirements, low data rate strict timing requirements
+- example, high throughput (ADC SPI), no timing requirements, low data rate strict timing requirements (UART, timing)
 - flash, eeprom
 - Protocols, CRC, retrying, windowing.
 - testing, automating embedded targets, unit testing, fuzzing, end-to-end, CI.
