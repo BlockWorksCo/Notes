@@ -44281,3 +44281,12 @@ cat /dev/ttyS0 > linux-trace.sdl
 
 +TRACE: 1,115200,"MTIL=1,PPP=1,IPDUMP=080,EXTDUMP=0",,,,"uart"
 
+---------------------------------------------
+export metrics from db
+
+
+select code,metric_time,value from node_metric where node_id=(select id from terminal where terminal_id='00-1b-c5-0c-60-06-75-30') and code=262147 order by metric_time ASC;
+FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
