@@ -44289,3 +44289,9 @@ select code,metric_time,value from node_metric where node_id=(select id from ter
 
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' LINES TERMINATED BY '\n';
 
+---------------------------------------------
+file to clipboard
+
+ cat t.csv | xclip -i -sel clipboard
+
+
