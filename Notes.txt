@@ -44294,4 +44294,15 @@ file to clipboard
 
  cat t.csv | xclip -i -sel clipboard
 
+--------------------------------------------------
+DNS failure flush:
+
+41542b55444e53524e3d302c22617373
+2023-06-13  0:22:08.995 #1   001bc50c6029c5d2 <log> 4:59:23.902 [debug] [     at_chat] { schedule}: flush: ( 2/ 4): 616d2d6865732d697076362d736f7574
+2023-06-13  0:22:08.995 #1   001bc50c6029c5d2 <log> 4:59:23.912 [debug] [     at_chat] { schedule}: flush: ( 3/ 4): 682e617373616d2e70726f642e637961
+2023-06-13  0:22:09.003 #1   001bc50c6029c5d2 <log> 4:59:23.921 [debug] [     at_chat] { schedule}: flush: ( 4/ 4): 6e636f6e6e6f64652e636f6d220d
+
+
+616d2d6865732d697076362d736f7574682e617373616d2e70726f642e6379616e636f6e6e6f64652e636f6d220d
+
 
