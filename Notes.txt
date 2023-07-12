@@ -44326,3 +44326,15 @@ neoway URC
 
 2b 55 44 50 53 45 4e 44 3a 31 2c 31 36
 2b 55 44 50 52 45 43 56 3a 31 2c 32 38 2c 31 39 34 31 30 39 30 39 31 32 31 36 30
+------------------------------------------
+Changes to gw build
+
+- URC parsing improvements
+- Turned on BIP notifications to identify SIM-application interactions
+- Quick-recovery mechanism to prevent resetting modem during outage recovery.
+- Changes to PDP context deletion and creation as suggested by UBlox.
+- Changes to enable modem logging on development kit.
+- Monitoring of current APN/dynamic-parameters throughout runtime.
+
+
+
