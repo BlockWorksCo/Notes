@@ -44337,4 +44337,9 @@ Changes to gw build
 - Monitoring of current APN/dynamic-parameters throughout runtime.
 
 
+----------------------------------------
+tun6d
+
+sudo TUN6D_SECRET=ZV9IPCHFvINmOEKv ./tun6d --loglevel debug | tee -a tun6d.log.1
+
 
