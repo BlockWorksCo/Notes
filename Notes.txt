@@ -44342,4 +44342,13 @@ tun6d
 
 sudo TUN6D_SECRET=ZV9IPCHFvINmOEKv ./tun6d --loglevel debug | tee -a tun6d.log.1
 
+----------------------------------------
+UBlox call
+
+- turnoff BIP and test to enable clean JIO logs.
+- add CFUN=0/1 block to restart lockout tracking timer.
+- get new version with v17.01 which fixes tracking lockout error and BIPv4 issue.
+- Need to confirm with MNO about disabling SIM refresh check. May have impact on decision to upgrade.
+- Investigate upgrade options.
+
 
