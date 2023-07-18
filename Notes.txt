@@ -44363,6 +44363,9 @@ branch notes:
 - Fixed crash seen in DTLS setup when keydata is initialised incorrectly.
 - Added quick-recover to TunAT to allow recovery without modem reset.
 - CND-13525 adjust timing of restarts to prevent newly started sessions being taken down by previous timeout.
+- Added CellID information.
+- Added tunnel recovery and modem restart events.
+- Added uptime metric from CommsWatchdog.
 
 
 
