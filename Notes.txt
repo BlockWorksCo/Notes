@@ -44362,6 +44362,7 @@ branch notes:
 - CND-13654 Enable CommsWatchdog in IPA3 builds but disabled by default.
 - Fixed crash seen in DTLS setup when keydata is initialised incorrectly.
 - Added quick-recover to TunAT to allow recovery without modem reset.
+- CND-13525 adjust timing of restarts to prevent newly started sessions being taken down by previous timeout.
 
 
 
