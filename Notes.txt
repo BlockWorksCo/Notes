@@ -44366,6 +44366,7 @@ branch notes:
 - Added CellID information.
 - Added tunnel recovery and modem restart events.
 - Added uptime metric from CommsWatchdog.
+- CND-13658 Added re-enabling of mq-push after power-recovery.
 
 
 
