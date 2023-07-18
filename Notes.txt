@@ -44347,7 +44347,7 @@ UBlox call
 
 - turnoff BIP and test to enable clean JIO logs.
 - add CFUN=0/1 block to restart lockout tracking timer.
-- get new version with v17.01 which fixes tracking lockout error and BIPv4 issue.
+- get new version with v17.01 which fixes tracking lockout error and BIPv4 issue (12 min timer).
 - Need to confirm with MNO about disabling SIM refresh check. May have impact on decision to upgrade.
 - Investigate upgrade options.
 
