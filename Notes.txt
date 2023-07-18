@@ -44351,6 +44351,24 @@ UBlox call
 - Need to confirm with MNO about disabling SIM refresh check. May have impact on decision to upgrade.
 - Investigate upgrade options.
 
+Here is the AT command to disable the BIP:
+
+AT+UCATPROF=32,"FFFFFFFF7F9100DFBF0302000000000000EB0F00000448005000000000080000"
+
+After this commands is better to reboot the SIM card:
+
+AT+CFUN=19
+AT+CFUN=1
+
+And check that the value has been correctly loaded:
+AT+UCATPROF?
+
+
+The command is not persistent. You have to issue it at every reboot of the module.
+
+
+
+
 -----------------------------------------
 branch notes:
 
