@@ -44394,33 +44394,20 @@ define configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES in FreeRTOSConfig.h
 
 struct xSTATIC_LIST_ITEM
 {
-
 if( configUSELISTDATAINTEGRITYCHECK_BYTES == 1 )
-
-
 TickType_t uxDummy0;
-
-
-
 endif /* configUSELISTDATAINTEGRITYCHECK_BYTES */
-
 
 TickType_t xDummy1;
 void *pvDummy2[ 4 ];
 
-
-
 if( configUSELISTDATAINTEGRITYCHECK_BYTES == 1 )
-
-
 TickType_t uxDummy3;
-
-
-
 endif /* configUSELISTDATAINTEGRITYCHECK_BYTES */
 
-
 };
+
+
 typedef struct xSTATICLISTITEM StaticListItem_t;
 
 /* See the comments above the struct xSTATICLISTITEM definition. */
@@ -44428,52 +44415,31 @@ struct xSTATIC_MINI_LIST_ITEM
 {
 
 if( configUSELISTDATAINTEGRITYCHECK_BYTES == 1 )
-
-
 TickType_t uxDummy0;
-
-
-
 endif /* configUSELISTDATAINTEGRITYCHECK_BYTES */
 
 
 TickType_t xDummy1;
 void *pvDummy2[ 2 ];
-
-
-
 };
+
+
 typedef struct xSTATICMINILISTITEM StaticMiniListItemt;
 
 /* See the comments above the struct xSTATICLISTITEM definition. */
 typedef struct xSTATIC_LIST
 {
-
 if( configUSELISTDATAINTEGRITYCHECK_BYTES == 1 )
-
-
 TickType_t uxDummy0;
-
-
-
 endif /* configUSELISTDATAINTEGRITYCHECK_BYTES */
-
 
 UBaseType_t uxDummy1;
 void *pvDummy2;
 StaticMiniListItem_t xDummy3;
 
-
-
 if( configUSELISTDATAINTEGRITYCHECK_BYTES == 1 )
-
-
 TickType_t uxDummy4;
-
-
-
 endif /* configUSELISTDATAINTEGRITYCHECK_BYTES */
-
 
 } StaticList_t;
 
