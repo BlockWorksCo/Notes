@@ -44446,6 +44446,14 @@ endif /* configUSELISTDATAINTEGRITYCHECK_BYTES */
 
 https://www.freertos.org/FreeRTOS_Support_Forum_Archive/June_2016/freertos_Usage_of_configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES_750fbe73j.html
 
+-----------------------------------
+
+
+Global unicast address:
+
+2a00:23c7:b502:7800::1
+
+
 
 
 
