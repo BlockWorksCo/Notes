@@ -44454,6 +44454,13 @@ Global unicast address:
 2a00:23c7:b502:7800::1
 
 
+-----------------------------------------------------
+MTS
+
+exception handling for API
+- failure to communicate
+- duplicate IDs
+- etc.
 
 
 
