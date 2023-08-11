@@ -44462,6 +44462,13 @@ exception handling for API
 - duplicate IDs
 - etc.
 
+--------------------------------------------------
+nmsstub:
+
+- Generate certs via dev-stack
+- Set nmsstub/RunMe.sh to point to certs
+- sudo ip -6 add add fd00::1 dev enp0s3
+-
 
 
 
