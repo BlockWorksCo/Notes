@@ -44469,6 +44469,7 @@ nmsstub:
 - Set nmsstub/RunMe.sh to point to certs
 - sudo ip -6 add add fd00::1 dev enp0s3
 - cd nmstub
+- rm nmsstub.db && sqlite3 nmsstub.db < schema.sql
 - ./RunMe.sh
 - build/terminal_emulator-genus/bin/terminal_emulator -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 10000 -db /home/steve/Work/pki/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/Work/pki/ca.crt.pem -server fd00::1 -numOfGateways 1 -numOfThreads 1 -logLevel info -handshakeBurstRate 200
 - sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel debug
