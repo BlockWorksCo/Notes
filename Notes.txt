@@ -44477,7 +44477,7 @@ nmsstub:
 - ./devicesHash
 - ./parent
 - ./registration
-- build/terminal_emulator-genus/bin/terminal_emulator -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 1000 -db /home/steve/Work/pki/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/Work/pki/ca.crt.pem -server fd00::1 -numOfGateways 500 -numOfThreads 5 -logLevel none -handshakeBurstRate 5
+- build/terminal_emulator-genus/bin/terminal_emulator -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 1000 -db /home/steve/Work/pki/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/Work/pki/ca.crt.pem -server fd00::1 -numOfGateways 1000 -numOfThreads 5 -logLevel none -handshakeBurstRate 5
 - sudo TUN6D_SECRET=whatsfordinner ./build/tun6d --loglevel info
 
 
