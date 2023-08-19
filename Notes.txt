@@ -44486,5 +44486,17 @@ ext4fs ext max directory limit issue
 https://serverfault.com/questions/827289/ubuntu-server-ext4-hitting-65000-subdirectory-limit
 
 
+sudo tune2fs -O dir_index,dir_nlink /dev/partition
+
+
+    Unmount the partition
+
+    Enable the dir_index (hash-based dirs) and dir_nlink (unlimited links) features.
+
+    sudo tune2fs -O dir_index,dir_nlink /dev/partition
+
+
+
+
 
 
