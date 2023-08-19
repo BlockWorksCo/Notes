@@ -44498,6 +44498,7 @@ sudo tune2fs -O dir_index,dir_nlink /dev/partition
     sudo tune2fs -O dir_index,dir_nlink /dev/partition
 
 
+optimise inodes for large num of files
 sudo e2fsck -f -D /dev/partition
 
 
