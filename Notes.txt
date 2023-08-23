@@ -44522,5 +44522,11 @@ Kit list:
 - FTDI cables x3
 
 
+--------------------------------------------------------------
+GapFiller.
+
+find . -iname "nmsstub.journal.*" | sort | xargs -n 1 -I {}  echo ./GapFiller {} >> r
+
+
 
 
