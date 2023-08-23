@@ -44501,6 +44501,26 @@ sudo tune2fs -O dir_index,dir_nlink /dev/partition
 optimise inodes for large num of files
 sudo e2fsck -f -D /dev/partition
 
+---------------------------------------------------
+Kit list:
+- laptop (min 16GB, I7, 1TB). Ubuntu native ideally.
+- jlink
+- ipa3
+- gw7
+- gw200
+- CNIC7
+- ARM SWD 10-pin adapter (Olimex).
+- meter
+- isolation transformer
+- USB logic analyser
+- IPA3 dev board
+- USB hub
+- ethernet hub
+- Documentation pack for overview, Agent HLD, etc.
+- Docs for toolchain setup (or clone?)
+- "Jason" board riser for IPA3 dev in meter.
+- FTDI cables x3
+
 
 
 
