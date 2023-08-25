@@ -44527,6 +44527,11 @@ GapFiller.
 
 find . -iname "nmsstub.journal.*" | sort | xargs -n 1 -I {}  echo ./GapFiller {} >> r
 
+------------------------------
+show heap allocation of process ram usage memory mem
+
+pmap -X `pidof mq` | ag heap
+
 
 
 
