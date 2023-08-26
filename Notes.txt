@@ -44532,6 +44532,65 @@ show heap allocation of process ram usage memory mem
 
 pmap -X `pidof mq` | ag heap
 
+2023-08-26  2:20:09.221 [ WARN] [               emu]: [GwId=671][MeshId=671462][fd87:6095:bd8e:29e:200:29f:0:1cf]: Handshake failed restart
+2023-08-26  2:20:10.618 [ WARN] [               emu]: [GwId=671][MeshId=671463][fd87:6095:bd8e:29e:200:29f:0:1d0]: Handshake failed restart
+2023-08-26  2:20:10.619 [ WARN] [               emu]: [GwId=671][MeshId=671464][fd87:6095:bd8e:29e:200:29f:0:1d1]: Handshake failed restart
+2023-08-26  2:20:10.620 [ WARN] [               emu]: [GwId=671][MeshId=671465][fd87:6095:bd8e:29e:200:29f:0:1d2]: Handshake failed restart
+2023-08-26  2:20:10.842 [ WARN] [               emu]: [GwId=671][MeshId=671466][fd87:6095:bd8e:29e:200:29f:0:1d3]: Handshake failed restart
+=================================================================
+==915070==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7fba337eee20 at pc 0x55f2b3b1ee9b bp 0x7fba337eed80 sp 0x7fba337eed70
+WRITE of size 1 at 0x7fba337eee20 thread T3
+    #0 0x55f2b3b1ee9a in handleCoapData src/tools/terminal_emulator/terminal_emulator.c:1731
+    #1 0x55f2b3b25357 in eventDataHandler src/tools/terminal_emulator/terminal_emulator.c:2284
+    #2 0x55f2b3b2a525 in poolHandlerThread src/tools/terminal_emulator/terminal_emulator.c:2870
+    #3 0x7fba585a3608 in start_thread /build/glibc-SzIz7B/glibc-2.31/nptl/pthread_create.c:477
+    #4 0x7fba584c8132 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f132)
+
+Address 0x7fba337eee20 is located in stack of thread T3 at offset 48 in frame
+    #0 0x55f2b3b1d83d in handleCoapData src/tools/terminal_emulator/terminal_emulator.c:1613
+
+  This frame has 1 object(s):
+    [32, 48) 'deviceId' (line 1725) <== Memory access at offset 48 overflows this variable
+HINT: this may be a false positive if your program uses some custom stack unwind mechanism, swapcontext or vfork
+      (longjmp and C++ exceptions *are* supported)
+Thread T3 created by T0 here:
+    #0 0x7fba5889e815 in __interceptor_pthread_create ../../../../src/libsanitizer/asan/asan_interceptors.cc:208
+    #1 0x55f2b3b2fa3c in main src/tools/terminal_emulator/terminal_emulator.c:3496
+    #2 0x7fba583cd082 in __libc_start_main ../csu/libc-start.c:308
+
+SUMMARY: AddressSanitizer: stack-buffer-overflow src/tools/terminal_emulator/terminal_emulator.c:1731 in handleCoapData
+Shadow bytes around the buggy address:
+  0x0ff7c66f5d70: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff7c66f5d80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff7c66f5d90: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff7c66f5da0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff7c66f5db0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 f1 f1
+=>0x0ff7c66f5dc0: f1 f1 00 00[f3]f3 00 00 00 00 00 00 00 00 00 00
+  0x0ff7c66f5dd0: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+  0x0ff7c66f5de0: f1 f1 f1 f1 f1 f1 04 f2 00 f2 f2 f2 00 f2 f2 f2
+  0x0ff7c66f5df0: 00 f2 f2 f2 00 f2 f2 f2 00 00 f2 f2 00 00 f2 f2
+  0x0ff7c66f5e00: 00 00 f2 f2 00 00 00 00 f2 f2 f2 f2 00 00 00 00
+  0x0ff7c66f5e10: f3 f3 f3 f3 00 00 00 00 00 00 00 00 00 00 00 00
+Shadow byte legend (one shadow byte represents 8 application bytes):
+  Addressable:           00
+  Partially addressable: 01 02 03 04 05 06 07
+  Heap left redzone:       fa
+  Freed heap region:       fd
+  Stack left redzone:      f1
+  Stack mid redzone:       f2
+  Stack right redzone:     f3
+  Stack after return:      f5
+  Stack use after scope:   f8
+  Global redzone:          f9
+  Global init order:       f6
+  Poisoned by user:        f7
+  Container overflow:      fc
+  Array cookie:            ac
+  Intra object redzone:    bb
+  ASan internal:           fe
+  Left alloca redzone:     ca
+  Right alloca redzone:    cb
+  Shadow gap:              cc
 
 
 
