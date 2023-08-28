@@ -44482,6 +44482,7 @@ nmsstub:
 
 - build/terminal_emulator-genus/bin/terminal_emulator -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 1000 -db /Data/pki/agent.db -tun6d 192.168.1.121 -rootCert /Data/pki/ca.crt.pem -server fd00::1 -numOfGateways 950 -numOfThreads 5 -logLevel none -handshakeBurstRate 5
 
+- build/terminal_emulator-genus/bin/terminal_emulator -server fd00::1 -tun6dsecret whatsfordinner -numOfMeshs 10000 -db /home/steve/Work/pki/agent.db -tun6d 0.0.0.0 -rootCert /home/steve/Work/pki/ca.crt.pem -server fd00::1 -numOfGateways 100 -numOfThreads 5 -logLevel none -handshakeBurstRate 5
 -----------------------------------------------
 ext4fs ext max directory limit issue
 
