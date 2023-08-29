@@ -44652,4 +44652,12 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 ==2444822==ABORTING
 steve@steve-xps15:~/Work/t1$
 
+------------------------------------------
+
+00000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+9309953) 000d0796 28+1 : 34 bytes
+first set bit 100 27
+latestSeqNum = 27
+start seqnum: 82
+[
 
