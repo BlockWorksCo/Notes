@@ -44734,8 +44734,8 @@ unexpected ipv6 packet to tun6d:
 ------------------------------------------------------------------------------------
 mq push every 5 minutes =
 alarm every 5 minutes       = 12 per hour
-event every 5 minutes       = 12 per hour
+event every 15 minutes      = 4 per hour
 sample every 15 minutes     = 4 per hour.
-
-total                       = 16/3600 per second
+total                       = 20 per hour
+total for 1mill             = 1000000*20/3600=5555 per second
 
