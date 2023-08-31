@@ -44719,3 +44719,9 @@ sysctl:
 
     The “route_max_size” needs to be increased to allow greater number of routes with large numbers of nodes.
 
+-----------------------------------------------------
+tun6d log on servers:
+
+journalctl -u tun6d
+
+
