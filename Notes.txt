@@ -44706,3 +44706,16 @@ packet receive steps
   - Data is added to receive buffers attached to sockets by protocol layers.
 
 
+sysctl:
+    UDP receive & transmit buffers were set to 128MByte which is larger than is allowed by default. Sysctl settings are required to raise this limit. Not having this results in buffer overruns and consequent packet-drops, leading to retries.
+
+    If operating in a VM, at least 27000 MB is required to be allocated to it which is beyond the safe point for a VirtualBox VM (it warns about this).
+
+    ‘txqueuelen’ for the network interfaces is increased to 10000 from 1000. To allow the interface transmit queue more space to handle the transient peak loads without dropping packets.
+
+    ‘netdev_max_backlog’ needs to be increased to allow space in the receive queue to handle large transient loads.
+
+    The ‘gc_thresh’ parameters need to be increased if ‘neighbour table’ issues are seen in the system log.
+
+    The “route_max_size” needs to be increased to allow greater number of routes with large numbers of nodes.
+
