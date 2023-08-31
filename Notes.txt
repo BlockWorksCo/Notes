@@ -44664,4 +44664,11 @@ start seqnum: 82
 c70181ff0009111000000ca4566445ca63df7738418b182d
 
 
+------------------------------------------------------
+packet drops monitoring
+
+cat /proc/net/softnet_stat
+cat /proc/net/udp4
+cat /proc/net/udp6
+
 
