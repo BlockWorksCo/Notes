@@ -44668,7 +44668,25 @@ c70181ff0009111000000ca4566445ca63df7738418b182d
 packet drops monitoring
 
 cat /proc/net/softnet_stat
+    Column-01: packet_process: Packet processed by each CPU.
+    Column-02: packet_drop: Packets dropped.
+    Column-03: time_squeeze: net_rx_action.
+    Column-09: cpu_collision: collision occur while obtaining device lock while transmitting.
+    Column-10: received_rps: number of times cpu woken up received_rps.
+    Column-11: flow_limit_count: number of times reached flow limit count.
+    Column-12: softnet_backlog_len: Backlog status
+    Column-13: index: core id owning this softnet_data
+
 cat /proc/net/udp4
+    last column is packet drops for that IPv4 connection
+
 cat /proc/net/udp6
+    last column is packet drops for that IPv6 connection
+
+ethtool -S enp0s3
+    interface level errors/drops, not supported on all interfaces.
+
+netstat -anus
+    total packet drops for protocol
 
 
