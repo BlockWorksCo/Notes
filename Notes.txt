@@ -44731,4 +44731,11 @@ unexpected ipv6 packet to tun6d:
                   nextheader=3a                                                                                               type=81
                   ICMPv6                                                                                                      echo reply
 
+------------------------------------------------------------------------------------
+mq push every 5 minutes =
+alarm every 5 minutes       = 12 per hour
+event every 5 minutes       = 12 per hour
+sample every 15 minutes     = 4 per hour.
+
+total                       = 16/3600 per second
 
