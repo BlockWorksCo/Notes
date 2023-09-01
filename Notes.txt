@@ -44742,5 +44742,14 @@ total for 1mill             = 1000000*17/3600=4722 per second
 
 --------------------------------------------------------------------
 Onboarding
+Step 1:
 - setup script for emb. environment.
 - Make script work on 20.04.4 initially.
+- unit tests for environment ("make test && make ipa3, etc").
+
+Step 2:
+- Make script work on 23.04 with unit tests.
+- Use VM to start from clean every time.
+
+
+
