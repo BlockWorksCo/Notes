@@ -44752,4 +44752,31 @@ Step 2:
 - Use VM to start from clean every time.
 
 
+------------------------------------------------------
+release notes since v23.20 (.24 and .26 never got released I beleive).
+
+MTI-43 : RSSI testing at MM production with manufacturing gateway
+Linkwell_MD_params RTC garbage value fixed
+CND-13760 Increased uplink-tx stack size on TunAT builds
+CND-13604 MQ-stall fix and isntrumentation
+CND-13660 CNIC7 escape sequence (Pulse DTR) not stable fix
+CND-13718 CNIC crash fixes
+CND-13744 Add configurable BIP enable to gw200 builds
+CND-13657 CNIC TunAT port for IPv6
+CND-13605 MQ-Stall detection improvements.
+CND-13654 Enable CommsWatchdog in IPA3 builds but disabled by default.
+CND-13525 adjust timing of restarts to prevent newly started sessions being taken down by previous timeout.
+CND-13658 Added re-enabling of mq-push after power-recovery.
+
++miscellaneous fixes found during development:
+Improved watchdog debugging feature.
+host gw ports for N58 and L210 modems.
+CommsWatchdog pinger high-water-mark correction.
+Fixed crash seen in DTLS setup when keydata is initialised incorrectly.
+Added quick-recover to TunAT to allow recovery without modem reset.
+Added CellID information.
+Added tunnel recovery and modem restart events.
+Added uptime metric from CommsWatchdog.
+
+
 
