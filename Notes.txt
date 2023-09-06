@@ -44790,7 +44790,7 @@ OpenHES PoC
 - Create a Pseudo-UART for WPDU to plug into. Ideally this would be a "uart" module that actually uses UDP rather than TCP.
 - Is DLMS push possible? what mechanism?
 - event wrapper decode.
-- heartbeat parsing.
+- heartbeat parsing. zero length IEC 47 frame.
 
 
 
