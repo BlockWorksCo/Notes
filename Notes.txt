@@ -44783,6 +44783,8 @@ OpenHES PoC
 
 - Obtain multiple IP-connected meters that the demo will be run on.
 - Use DLMS-pipe in the meantime.
+- First step, use opto probe and do normal integration w.r.t. HLS/address settings/credentials/etc.
+
 - Ideally use UDP rather than TCP to avoid overhead of connections between hundreds of thousands of nodes eventually.
 - Create a Pseudo-UART for WPDU to plug into. Ideally this would be a "uart" module that actually uses UDP rather than TCP.
 - Is DLMS push possible? what mechanism?
