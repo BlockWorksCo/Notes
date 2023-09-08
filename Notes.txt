@@ -44801,6 +44801,9 @@ edit to add "init" to end of first line
 ag --nonumbers "eui" rr > rrr
 sort --parallel=10 rrr > rrr.sorted
 uniq -c rrr.sorted > rrr.sorted.uniq
+ag -v "  1 " rrr.sorted.uniq > rrr.sorted.uniq.dupes
+wc -l rrr.sorted.uniq.dupes
+
 
 
 
