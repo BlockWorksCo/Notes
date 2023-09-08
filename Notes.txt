@@ -44795,6 +44795,9 @@ OpenHES PoC
 --------------------------------------
 validate nmsstub.journal
 
+find . -iname "nmsstub.journal.*" | sort | xargs -n 1 -I {}  echo ../../nmsstub/GapFiller {} >> r.sh
+edit to add "init" to end of first line
+./r.sh > rr
 ag --nonumbers "eui" rr > rrr
 sort --parallel=10 rrr > rrr.sorted
 uniq -c rrr.sorted > rrr.sorted.uniq
