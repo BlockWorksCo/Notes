@@ -44469,7 +44469,7 @@ nmsstub:
 - Set nmsstub/RunMe.sh to point to certs
 - sudo ip -6 add add fd00::1 dev enp0s3
 - cd nmstub
-- rm nmsstub.db && sqlite3 nmsstub.db < schema.sql
+- rm *.db ; rm nmsstub.journal.* ; sqlite3 metadata.db < metadataSchema.sql ; sqlite3 mq.db < mqSchema.sql
 - ./RunMe.sh
 - ./login
 - ./alive
