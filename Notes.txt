@@ -44792,6 +44792,13 @@ OpenHES PoC
 - event wrapper decode.
 - heartbeat parsing. zero length IEC 47 frame.
 
+--------------------------------------
+validate nmsstub.journal
+
+ag --nonumbers "eui" rr > rrr
+sort --parallel=10 rrr > rrr.sorted
+uniq -c rrr.sorted > rrr.sorted.uniq
+
 
 
 
