@@ -44165,4 +44165,10 @@ cellular:
 - NMSStub runs with high numbers show term-em & tun6d can handle load well with buffer size tuning.
 
 
+- Run dev-stack on same machine as NMSStub with same tuning.
+- compare packet counts at DTLSNetwork and thru DTLS threadpool.
+- capture ICMP packets to examine for address/port unreachable.
+- Run dev-stack with term-em -6 to eliminate possibility of tun6d0.
+
+
 
