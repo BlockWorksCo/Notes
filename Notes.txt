@@ -44171,10 +44171,12 @@ cellular:
 - capture ICMP packets to examine for address/port unreachable.
 - Run dev-stack with term-em -6 to eliminate possibility of tun6d0.
 - trigger thread-dumps of NMS when login-churn is high, and low. compare number of blocked tasks
+- Does "ip route flush cache" trigger slowness/churn?
 
 
 https://daniel-lange.com/archives/109-IPv6-Getting-rid-of-the-dreaded-Neighbour-table-overflow.html
 https://www.rfc-editor.org/rfc/rfc4861#section-5.1
+http://linux-ip.net/html/routing-cache.html
 
 
 
