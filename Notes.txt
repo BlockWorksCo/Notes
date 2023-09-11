@@ -44140,3 +44140,21 @@ cellular:
 - monitor number of packets reaching NMS and/or tun6d. is the level varying? is the outgoing direction varying?do they vary independently?
 - neighbour table overflow? why?
 
+- packet drops at tun6d0?
+- packet drops at en?
+- gc in tun6d?
+- routing setup issue in tun6d?
+- cellular drops?
+- mesh drops?
+- agent drops?
+- NMS drops?
+- NMS buffers infinitely instead of responding? does queue grow in same pattern as login churn?
+- NMS output queue not processed?
+- NMS DTLS threadpool not processing quickly enough?
+- NMS processes packets, but updates database slowly causing backlog?
+- NMS backpressure into NMS DTLS threadpool from slow SMA?
+
+
+
+
+
