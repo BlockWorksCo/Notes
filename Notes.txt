@@ -44135,4 +44135,7 @@ cellular:
 
 
 
+-------------------------------
+- monitor ICMP for any address-unerachable? does pattern match login-chrun pattern?
+- monitor number of packets reaching NMS and/or tun6d. is the level varying? is the outgoing direction varying?do they vary independently?
 
