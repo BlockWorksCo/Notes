@@ -44154,7 +44154,9 @@ cellular:
 - NMS processes packets, but updates database slowly causing backlog?
 - NMS backpressure into NMS DTLS threadpool from slow SMA?
 - ICMP packet capture showing address/port unavailable? would indicate routing issues.
-
+- Incorrect logic within NMS, incorrectly logging out nodes?
+- High interrupt load causing failure to read packets from interface?
+- tun6d incorrectly drops packets instead of forwarding? bypass tun6d with term-em -6 ?
 
 
 
