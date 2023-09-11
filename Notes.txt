@@ -44169,6 +44169,9 @@ cellular:
 - compare packet counts at DTLSNetwork and thru DTLS threadpool.
 - capture ICMP packets to examine for address/port unreachable.
 - Run dev-stack with term-em -6 to eliminate possibility of tun6d0.
+- trigger thread-dumps of NMS when login-churn is high, and low. compare number of blocked tasks
 
+
+https://daniel-lange.com/archives/109-IPv6-Getting-rid-of-the-dreaded-Neighbour-table-overflow.html
 
 
