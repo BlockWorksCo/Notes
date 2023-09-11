@@ -44159,6 +44159,7 @@ cellular:
 - tun6d incorrectly drops packets instead of forwarding? bypass tun6d with term-em -6 ?
 - neighbour-table overflow?
 - firewall incorrectly dropping? iptables stats?
+- packets delayed waiting for address-resolution to complete?
 
 
 - login churn is visible on dev-stack at high numbers. Assume for the same reason as on deployed system?
@@ -44173,5 +44174,7 @@ cellular:
 
 
 https://daniel-lange.com/archives/109-IPv6-Getting-rid-of-the-dreaded-Neighbour-table-overflow.html
+https://www.rfc-editor.org/rfc/rfc4861#section-5.1
+
 
 
