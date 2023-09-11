@@ -44153,6 +44153,8 @@ cellular:
 - NMS DTLS threadpool not processing quickly enough?
 - NMS processes packets, but updates database slowly causing backlog?
 - NMS backpressure into NMS DTLS threadpool from slow SMA?
+- ICMP packet capture showing address/port unavailable? would indicate routing issues.
+
 
 
 
