@@ -44147,7 +44147,7 @@ cellular:
 - cellular drops?
 - mesh drops?
 - agent drops?
-- NMS drops?
+- NMS drops from socket buffer?
 - NMS buffers infinitely instead of responding? does queue grow in same pattern as login churn?
 - NMS output queue not processed?
 - NMS DTLS threadpool not processing quickly enough?
@@ -44157,8 +44157,12 @@ cellular:
 - Incorrect logic within NMS, incorrectly logging out nodes?
 - High interrupt load causing failure to read packets from interface?
 - tun6d incorrectly drops packets instead of forwarding? bypass tun6d with term-em -6 ?
+- neighbour-table overflow?
+- firewall incorrectly dropping? iptables stats?
 
 
+- login churn is visible on dev-stack at high numbers. Assume for the same reason as on deployed system?
+- NMSStub runs with high numbers show term-em & tun6d can handle load well with buffer size tuning.
 
 
 
