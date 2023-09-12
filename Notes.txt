@@ -44805,6 +44805,50 @@ ag -v "  1 " rrr.sorted.uniq > rrr.sorted.uniq.dupes
 wc -l rrr.sorted.uniq.dupes
 
 
+- monitor ICMP for any address-unerachable? does pattern match login-chrun pattern?
+- monitor number of packets reaching NMS and/or tun6d. is the level varying? is the outgoing direction varying?do they vary independently?
+- neighbour table overflow? why?
+
+- packet drops at tun6d0?
+- packet drops at en?
+- gc in tun6d?
+- routing setup issue in tun6d?
+- cellular drops?
+- mesh drops?
+- agent drops?
+- NMS drops from socket buffer?
+- NMS buffers infinitely instead of responding? does queue grow in same pattern as login churn?
+- NMS output queue not processed?
+- NMS DTLS threadpool not processing quickly enough?
+- NMS processes packets, but updates database slowly causing backlog?
+- NMS backpressure into NMS DTLS threadpool from slow SMA?
+- ICMP packet capture showing address/port unavailable? would indicate routing issues.
+- Incorrect logic within NMS, incorrectly logging out nodes?
+- High interrupt load causing failure to read packets from interface?
+- tun6d incorrectly drops packets instead of forwarding? bypass tun6d with term-em -6 ?
+- neighbour-table overflow?
+- firewall incorrectly dropping? iptables stats?
+- packets delayed waiting for address-resolution to complete?
+
+
+- login churn is visible on dev-stack at high numbers. Assume for the same reason as on deployed system?
+- NMSStub runs with high numbers show term-em & tun6d can handle load well with buffer size tuning.
+
+
+- Run dev-stack on same machine as NMSStub with same tuning.
+- compare packet counts at DTLSNetwork and thru DTLS threadpool.
+- capture ICMP packets to examine for address/port unreachable.
+- Run dev-stack with term-em -6 to eliminate possibility of tun6d0.
+- trigger thread-dumps of NMS when login-churn is high, and low. compare number of blocked tasks
+- Does "ip route flush cache" trigger slowness/churn?
+
+
+https://daniel-lange.com/archives/109-IPv6-Getting-rid-of-the-dreaded-Neighbour-table-overflow.html
+https://www.rfc-editor.org/rfc/rfc4861#section-5.1
+http://linux-ip.net/html/routing-cache.html
+
+
+
 
 
 
