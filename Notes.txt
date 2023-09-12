@@ -44871,7 +44871,7 @@ http://linux-ip.net/html/routing-cache.html
 
 
 - Do we see parent-changes along with logins? could imply mesh issues? Is parent-change frequency correlated with login-frequency?
--
+- Any ICMP address/port unavailable either side of tun60?
 
 
 
