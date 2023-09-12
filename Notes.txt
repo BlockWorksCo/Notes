@@ -44875,6 +44875,8 @@ http://linux-ip.net/html/routing-cache.html
 - iptables causing drops? "iptables -vL"?
 - If packet drops are low, can we measure packet delays? buffers/queueing too much in NMS? RAM usage/heap dump of NMS an indicator?
 
+ net.core.netdev_budget (number of packets taken from all interfaces in one cycle).
+ netdev_budget_usecs (amount of time allowed for a single cycle).
 
 
 
