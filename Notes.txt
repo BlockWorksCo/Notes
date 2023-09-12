@@ -44877,6 +44877,7 @@ http://linux-ip.net/html/routing-cache.html
 
  net.core.netdev_budget (number of packets taken from all interfaces in one cycle).
  netdev_budget_usecs (amount of time allowed for a single cycle).
+ cat /proc/net/stat/ndisc_cache for neighbour table stats.
 
 
 
