@@ -44870,6 +44870,9 @@ https://www.rfc-editor.org/rfc/rfc4861#section-5.1
 http://linux-ip.net/html/routing-cache.html
 
 
+- Do we see parent-changes along with logins? could imply mesh issues? Is parent-change frequency correlated with login-frequency?
+-
+
 
 
 
