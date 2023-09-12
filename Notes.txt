@@ -44872,6 +44872,8 @@ http://linux-ip.net/html/routing-cache.html
 
 - Do we see parent-changes along with logins? could imply mesh issues? Is parent-change frequency correlated with login-frequency?
 - Any ICMP address/port unavailable either side of tun60?
+- iptables causing drops? "iptables -vL"?
+- If packet drops are low, can we measure packet delays? buffers/queueing too much in NMS? RAM usage/heap dump of NMS an indicator?
 
 
 
