@@ -44887,7 +44887,9 @@ building server:
 - mkdir -p sma/pkg
 - tar xf  ~/Work/s1/dist/sma-v23.29.0.tar.gz -C sma/pkg
 - tar xf  ~/Work/s1/dist/nms-v23.29.0.tar.gz -C nms/pkg
--
+- dev-stack setup -n 1 -s 1 -e -a 100000 -g 50 --nms-version ~/Work/Temp/nms --sma-version ~/Work/Temp/sma
+
+
 
 
 
