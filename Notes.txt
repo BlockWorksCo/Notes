@@ -44879,6 +44879,16 @@ http://linux-ip.net/html/routing-cache.html
  netdev_budget_usecs (amount of time allowed for a single cycle).
  cat /proc/net/stat/ndisc_cache for neighbour table stats.
 
+------------------------------------
+building server:
+
+- ./build-tools/cibuild
+- mkdir -p nms/pkg
+- mkdir -p sma/pkg
+- tar xf  ~/Work/s1/dist/sma-v23.29.0.tar.gz -C sma/pkg
+- tar xf  ~/Work/s1/dist/nms-v23.29.0.tar.gz -C nms/pkg
+-
+
 
 
 
