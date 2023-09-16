@@ -44889,6 +44889,8 @@ building server:
 - tar xf  ~/Work/s1/dist/nms-v23.29.0.tar.gz -C nms/pkg
 - dev-stack setup -n 1 -s 1 -e -a 100000 -g 50 --nms-version ~/Work/Temp/nms --sma-version ~/Work/Temp/sma
 - https://192.168.1.123:8080/panmesh/#dashboard
+- https://localhost:8080/dashboard
+
 
 
 
