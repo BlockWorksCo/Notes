@@ -44895,6 +44895,19 @@ building server:
 
 
 ------------------------------------------------
+Trace and debug
+
+- OpenTelemetry
+- HyperDx
+- LOG_TRACE logs PC/ThreadId to non-zeroed RAM location.
+- LOG_SPAN logs start/end ID to mark logical spans of time.
+- LOG_METRIC logs counters/values.
+- Trace buffer is a non-zeroed circular buffer.
+- LoginRequest has a flag to indicate trace-buffer exists to server after a crash&restart.
+- Server indicates a trace-buffer is available. Button allows retrieval.
+- Capturing to buffer can be turned on via UI/Job?
+- Gareth/George notice problem, retrieve crash-trace or enable trace during faulty operation
+for a specific set of nodes, then retreive trace when finished.
 
 
 
