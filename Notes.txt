@@ -44911,6 +44911,24 @@ Trace and debug
 for a specific set of nodes, then retreive trace when finished.
 - NMS implements an OpenTelemetry "collector" and exports data to Prometheus or HyperDx or log generated from .elf and trace
 
+--------------------------------------------------
+tracing
+
+extern char __executable_start[];
+
+fixedReferencePoint = __builtin_extract_return_addr(__builtin_return_address(0));
+fixedReferencePoint = &__executable_start;
+
+extern char __executable_start[];       // to deal with ASLR/PIE
+
+fixedReferencePoint = __builtin_extract_return_addr(__builtin_return_address(0));
+fixedReferencePoint = &__executable_start;
+
+#define TRACE() traceExecution((uint32_t)(ptrdiff_t)((ptrdiff_t)__builtin_return_address(0)-(ptrdiff_t)fixedReferencePoint))
+
+
+to find file/line from address:
+addr2line -a -f -e  build/host-gw-n58/bin/agent 0x94644
 
 
 
