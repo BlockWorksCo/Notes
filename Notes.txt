@@ -44930,6 +44930,7 @@ fixedReferencePoint = &__executable_start;
 to find file/line from address:
 addr2line -a -f -e  build/host-gw-n58/bin/agent 0x94644
 
+https://interrupt.memfault.com/blog/gnu-binutils#addr2line
 
 
 
