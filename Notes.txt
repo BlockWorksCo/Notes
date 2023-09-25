@@ -44932,6 +44932,11 @@ addr2line -a -f -e  build/host-gw-n58/bin/agent 0x94644
 
 https://interrupt.memfault.com/blog/gnu-binutils#addr2line
 
+----------------------------------------------------------------
+dev-stack
+
+dev-stack --pkidir ~/Work/pki/ setup -n 1 -s 1 -e -a 10000 -g 1000 --nms-version ~/Work/Temp/nms --sma-version ~/Work/Temp/sma
+
 
 
 
