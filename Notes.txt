@@ -44981,6 +44981,10 @@ to drop 2% of egress packets:
 to duplicate 2% of packets:
 - tc qdisc add dev tun6d0 root netem duplicate 2%
 
+to add multiple rules, give root a handle number (e.g. 1:) then every rule gets chaned using parent.
+- tc qdisc add dev tun6d0 root handle 1: netem duplicate 10%
+- tc qdisc add dev tun6d0 parent 1:1 netem loss 2%
+
 
 
 
