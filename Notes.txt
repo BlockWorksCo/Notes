@@ -44958,6 +44958,8 @@ OTEL_RESOURCE_ATTRIBUTES=service.name=Agent OTEL_EXPORTER_OTLP_ENDPOINT="https:/
 ------------------------------
 net simulator
 
+"man tc-netem"
+
 in devstack_tuund, add 500ms delay to egress of packets from tun6d0
 - tc qdisc add dev eth0 root netem delay 200ms
 
@@ -44975,6 +44977,9 @@ to corrupt 10% of outgoing packets:
 
 to drop 2% of egress packets:
 - tc qdisc add dev tun6d0 root netem loss 2%
+
+to duplicate 2% of packets:
+- tc qdisc add dev tun6d0 root netem duplicate 2%
 
 
 
