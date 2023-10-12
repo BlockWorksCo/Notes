@@ -44955,6 +44955,11 @@ PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION=python make host-gw-n58 -j 10
 
 OTEL_RESOURCE_ATTRIBUTES=service.name=Agent OTEL_EXPORTER_OTLP_ENDPOINT="https://ingest.eu.signoz.cloud:443" OTEL_EXPORTER_OTLP_HEADERS="signoz-access-token=c31db77a-e362-46cb-adfa-6f34d32860e9" opentelemetry-instrument python example.py
 
+------------------------------
+net simulator
+
+in devstack_tuund, add 500ms delay to egress of packets from tun6d0
+- tc qdisc add dev eth0 root netem delay 200ms
 
 
 
