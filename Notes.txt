@@ -44973,6 +44973,10 @@ to remove qdiscs from interface:
 to corrupt 10% of outgoing packets:
 - tc qdisc add dev tun6d0 root netem corrupt 10%
 
+to drop 2% of egress packets:
+- tc qdisc add dev tun6d0 root netem loss 2%
+
+
 
 
 
