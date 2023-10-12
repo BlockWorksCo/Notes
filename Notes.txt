@@ -44964,6 +44964,17 @@ in devstack_tuund, add 500ms delay to egress of packets from tun6d0
 to add 500ms delay to ingress, first add an ingress qdisc:
 - sudo tc qdisc add dev tun6d0 handle ffff: ingress
 
+to show status of qdiscs on an interface:
+- tc qdisc show dev tun6d0
+
+to remove qdiscs from interface:
+- qdisc del dev tun6d0 root
+
+to corrupt 10% of outgoing packets:
+- tc qdisc add dev tun6d0 root netem corrupt 10%
+
+
+
 
 
 
