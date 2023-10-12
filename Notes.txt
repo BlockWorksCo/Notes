@@ -44961,6 +44961,9 @@ net simulator
 in devstack_tuund, add 500ms delay to egress of packets from tun6d0
 - tc qdisc add dev eth0 root netem delay 200ms
 
+to add 500ms delay to ingress, first add an ingress qdisc:
+- sudo tc qdisc add dev tun6d0 handle ffff: ingress
+
 
 
 
