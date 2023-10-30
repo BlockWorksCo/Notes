@@ -44985,6 +44985,30 @@ to add multiple rules, give root a handle number (e.g. 1:) then every rule gets 
 - tc qdisc add dev tun6d0 root handle 1: netem duplicate 10%
 - tc qdisc add dev tun6d0 parent 1:1 netem loss 2%
 
+----------------------------------------------------
+WPDU:
+
+
+Explanation:
+
+00 01 00 01 00 10 00 1A =>Wrapper header，8 bytes，the last two bytes(0x001A) are used to verify the length of the event message
+
+C2 01 =>Event notification tag
+
+0C 07 E2 01 10 02 11 16 08 00 80 00 00 =>Time stamp
+
+00 01 => the class_id of event code object（1）
+
+00 00 60 0B 01 FF => the OBIS of event code object, used to identify event groups (standard events, Fraud events, upgrade events, etc.)
+
+02 => the attribute of event code object（2）
+
+11 04 => the value of event code object（4），Used to identify which event object it is
+
+This example only works in the point-to-point case. If the case is not point-to-point, such as 485 connection, HDLC protocol needs to be used to replace the 8 bytes Wrapper header
+
+
+
 
 
 
