@@ -45009,6 +45009,18 @@ This example only works in the point-to-point case. If the case is not point-to-
 
 
 
+--------------------------------------------
+2023-10-28 01:35:41.838 [coap-scavenger] TRACE com.connode.coap.LocalCoapSession - Garbage collected incoming message tracker (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /mq, CONFIRMABLE, 7)
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - ENTER request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - Sending to peer /fd94:32d8:6f19:3:200:4:0:10:5684 request [POST /sm/METER_D1_000412/conf], with payload [32021001].
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE com.connode.coap.LocalCoapSession - ENTER sendRequestMessage (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE com.connode.coap.LocalCoapSession - EXIT sendRequestMessage (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - EXIT request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
+2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 2b5036d2 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
+2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 762022b3 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
+2023-10-28 01:36:06.498 [coap-scavenger] TRACE c.c.coap.OutgoingMessageTracker - Retransmitting session=/fd94:32d8:6f19:3:200:4:0:10:5684, messageId=(/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
+
+
 
 
 
