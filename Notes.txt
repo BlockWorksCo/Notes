@@ -45057,9 +45057,7 @@ This example only works in the point-to-point case. If the case is not point-to-
 // Packet coming from gw and dropped (no corresponding IP6 to NMS).
 01:35:56.370608 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 131
 
-
-
-
+// NMS gives up waiting for ACK/response and retransmits.
 2023-10-28 01:36:06.498 [coap-scavenger] TRACE c.c.coap.OutgoingMessageTracker - Retransmitting session=/fd94:32d8:6f19:3:200:4:0:10:5684, messageId=(/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
 
 
