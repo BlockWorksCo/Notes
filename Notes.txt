@@ -45010,6 +45010,15 @@ This example only works in the point-to-point case. If the case is not point-to-
 
 
 --------------------------------------------
+pcap & nms analysis
+
+
+44.177 == tun6d
+43.222 == gw
+fd94:32d8:6f19:3:200:4:0:10 == target Agent
+
+
+
 
 // Previous request from Agent cleared.
 2023-10-28 01:35:41.838 [coap-scavenger] TRACE com.connode.coap.LocalCoapSession - Garbage collected incoming message tracker (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /mq, CONFIRMABLE, 7)
@@ -45022,7 +45031,6 @@ This example only works in the point-to-point case. If the case is not point-to-
 
 // Packet coming from another Agent and forwarded thru gw and tunnel to NMS.
 01:35:56.354046 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 131
-01:35:56.354049 IP6 fd94:32d8:6f19:3:200:4:0:12.5684 > fd00::1.5684: UDP, length 41
 
 // NMS sending request to Agent.
 2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - ENTER request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
