@@ -45017,7 +45017,7 @@ pcap & nms analysis
 43.222 == gw
 fd94:32d8:6f19:3:200:4:0:10 == target Agent
 fd94:32d8:6f19:3 == target gw prefix
-
+sizeof(IPv4) == sizeof(IPv6)+48   (why is this? v6 header is 20 bytes larger than minimum IPv4)
 
 
 
@@ -45043,15 +45043,15 @@ fd94:32d8:6f19:3 == target gw prefix
     2023-10-28 01:35:56.361 [executor-pool-07] TRACE com.connode.coap.LocalCoapSession - EXIT sendRequestMessage (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
 2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - EXIT request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
 
-// Request from NMS to Agent going through tunnel to gw.
+// Request from NMS to Agent-1 going through tunnel to gw.
 01:35:56.361470 IP6 fd00::1.5684 > fd94:32d8:6f19:3:200:4:0:10.5684: UDP, length 74
 01:35:56.361517 IP 10.232.44.177.8050 > 10.232.43.222.33101: UDP, length 122
 
-// Packet from Agent to NMS coming thru tunnel from gw.
+// Packet from Agent-1 to NMS coming thru tunnel from gw. (Response to above request?)
 01:35:56.361716 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 89
 01:35:56.361761 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 41
 
-// Packet coming from Agent to NMS thru tunnel from gw.
+// Packet coming from Agent-1 to NMS thru tunnel from gw.
 01:35:56.361763 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 131
 01:35:56.361796 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 83
 
