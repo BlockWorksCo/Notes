@@ -45016,6 +45016,7 @@ pcap & nms analysis
 44.177 == tun6d
 43.222 == gw
 fd94:32d8:6f19:3:200:4:0:10 == target Agent
+fd94:32d8:6f19:3 == target gw prefix
 
 
 
