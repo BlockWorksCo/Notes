@@ -45092,7 +45092,61 @@ Contrast to equivalent for fd94:32d8:6f19:1e:200:1f:0:1
 
 
 
+analysis for bug report:
 
+// Previous request from Agent-1 cleared.
+2023-10-28 01:35:41.838 [coap-scavenger] TRACE com.connode.coap.LocalCoapSession - Garbage collected incoming message tracker (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /mq, CONFIRMABLE, 7)
 
+// Packet from tun6d to gw (agent-2)
+01:35:56.353791 IP6 fd00::1.5684 > fd94:32d8:6f19:3:200:4:0:12.5684: UDP, length 74
+01:35:56.353838 IP 10.232.44.177.8050 > 10.232.43.222.33101: UDP, length 122
+
+// Packet coming from agent-2 thru tund to NMS.
+01:35:56.354008 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 89
+01:35:56.354049 IP6 fd94:32d8:6f19:3:200:4:0:12.5684 > fd00::1.5684: UDP, length 41
+
+// Packet coming from agent-2 thru tund to NMS.
+01:35:56.354046 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 131
+01:35:56.354081 IP6 fd94:32d8:6f19:3:200:4:0:12.5684 > fd00::1.5684: UDP, length 83
+
+// NMS sending request to Agent-1.
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - ENTER request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
+    2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - Sending to peer /fd94:32d8:6f19:3:200:4:0:10:5684 request [POST /sm/METER_D1_000412/conf], with payload [32021001].
+    2023-10-28 01:35:56.361 [executor-pool-07] TRACE com.connode.coap.LocalCoapSession - ENTER sendRequestMessage (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
+    2023-10-28 01:35:56.361 [executor-pool-07] TRACE com.connode.coap.LocalCoapSession - EXIT sendRequestMessage (/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
+2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - EXIT request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
+
+// Request from NMS to Agent-1 going through tunnel to gw.
+01:35:56.361470 IP6 fd00::1.5684 > fd94:32d8:6f19:3:200:4:0:10.5684: UDP, length 74
+01:35:56.361517 IP 10.232.44.177.8050 > 10.232.43.222.33101: UDP, length 122
+
+// Response/ACK packet from Agent-1 to NMS coming thru tunnel from gw.
+// NMS receives Response/ACK packet into DTLSConnection.
+01:35:56.361716 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 89
+01:35:56.361761 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 41
+2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 2b5036d2 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
+
+// Alarm notification coming from Agent-1 to NMS thru tunnel from gw.
+// NMS receives Alarm notification into DTLSConnection.
+01:35:56.361763 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 131
+01:35:56.361796 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 83
+2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 762022b3 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
+
+*** MISSING OPERATIONS IN RETRANSMIT CASE ***
+
+    // Handle ACK response from Agent.
+    TRACE com.connode.coap.LocalCoapSession - ENTER receiveResponseMessage (/fd94:32d8:6f19:6:200:7:0:1:5684, 2.04 Changed, ACKNOWLEDGEMENT, 19016)
+    Received from peer /fd94:32d8:6f19:6:200:7:0:1:5684 response for request [POST /sm/METER_D1_000007/conf], with response code [2.04 Changed] and payload [null].
+
+    // Handle DeviceAlarm notification in /mq
+    TRACE c.c.s.t.s.coap.IncomingCoapExchange - Received request POST /mq from peer /fd94:32d8:6f19:1e:200:1f:0:1:5684 with payload [080512230897b0f0a9066a1b0a0f4d455445525f44315f303030303331105610541897b0f0a906].
+    TRACE c.c.s.t.m.b.MessageQueuePersister -  Message=MessagesFromNode{dbNodeId=16, scheduledPush=false, startSequenceNumber=5, messages=[MessageWithPayloads{message=Message{resetCounter=0, sequenceNumber=5, status=PUSH, timestamp=Sat Oct 28 01:35:43 IST 2023, timestampUnreliable=false}, payloads=[com.connode.service.device.alarm.DeviceAlarmPayload@7a73fd39]}]}
+
+*** BAD CASE: RETRANSMIT ****
+
+    // NMS gives up waiting for ACK/response and retransmits.
+    2023-10-28 01:36:06.498 [coap-scavenger] TRACE c.c.coap.OutgoingMessageTracker - Retransmitting session=/fd94:32d8:6f19:3:200:4:0:10:5684, messageId=(/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
+
+*****************************
 
 
