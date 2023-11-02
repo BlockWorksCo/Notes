@@ -45047,14 +45047,14 @@ sizeof(IPv4) == sizeof(IPv6)+48   (why is this? v6 header is 20 bytes larger tha
 01:35:56.361470 IP6 fd00::1.5684 > fd94:32d8:6f19:3:200:4:0:10.5684: UDP, length 74
 01:35:56.361517 IP 10.232.44.177.8050 > 10.232.43.222.33101: UDP, length 122
 
-// Packet-1 from Agent-1 to NMS coming thru tunnel from gw. (Response to above request?)
-// NMS receives packet-1 into DTLSConnection.
+// Response/ACK packet from Agent-1 to NMS coming thru tunnel from gw.
+// NMS receives Response/ACK packet into DTLSConnection.
 01:35:56.361716 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 89
 01:35:56.361761 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 41
 2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 2b5036d2 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
 
-// Packet-2 coming from Agent-1 to NMS thru tunnel from gw.
-// NMS receives packet-2 into DTLSConnection. (Why? this is different than the previous as can be seen in the hashCode).
+// Alarm notification coming from Agent-1 to NMS thru tunnel from gw.
+// NMS receives Alarm notification into DTLSConnection.
 01:35:56.361763 IP 10.232.43.222.33101 > 10.232.44.177.8050: UDP, length 131
 01:35:56.361796 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 83
 2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 762022b3 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
