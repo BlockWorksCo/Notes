@@ -45132,7 +45132,7 @@ analysis for bug report:
 01:35:56.361796 IP6 fd94:32d8:6f19:3:200:4:0:10.5684 > fd00::1.5684: UDP, length 83
 2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 762022b3 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84b32fa394eb0d7fb4efb21cea1f1c093), migrating=false
 
-*** MISSING OPERATIONS IN RETRANSMIT CASE ***
+*** MISSING OPERATIONS IN RETRANSMIT CASE (this is from a good case) ***
 
     // Handle ACK response from Agent.
     TRACE com.connode.coap.LocalCoapSession - ENTER receiveResponseMessage (/fd94:32d8:6f19:6:200:7:0:1:5684, 2.04 Changed, ACKNOWLEDGEMENT, 19016)
@@ -45142,7 +45142,7 @@ analysis for bug report:
     TRACE c.c.s.t.s.coap.IncomingCoapExchange - Received request POST /mq from peer /fd94:32d8:6f19:1e:200:1f:0:1:5684 with payload [080512230897b0f0a9066a1b0a0f4d455445525f44315f303030303331105610541897b0f0a906].
     TRACE c.c.s.t.m.b.MessageQueuePersister -  Message=MessagesFromNode{dbNodeId=16, scheduledPush=false, startSequenceNumber=5, messages=[MessageWithPayloads{message=Message{resetCounter=0, sequenceNumber=5, status=PUSH, timestamp=Sat Oct 28 01:35:43 IST 2023, timestampUnreliable=false}, payloads=[com.connode.service.device.alarm.DeviceAlarmPayload@7a73fd39]}]}
 
-*** BAD CASE: RETRANSMIT ****
+*** BAD CASE: NO PROCESSING AND RETRANSMIT ****
 
     // NMS gives up waiting for ACK/response and retransmits.
     2023-10-28 01:36:06.498 [coap-scavenger] TRACE c.c.coap.OutgoingMessageTracker - Retransmitting session=/fd94:32d8:6f19:3:200:4:0:10:5684, messageId=(/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
