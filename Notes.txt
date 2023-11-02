@@ -45061,8 +45061,13 @@ sizeof(IPv4) == sizeof(IPv6)+48   (why is this? v6 header is 20 bytes larger tha
 
 *** MISSING OPERATIONS IN RETRANSMIT CASE ***
 
-            TRACE com.connode.coap.LocalCoapSession - ENTER receiveResponseMessage (/fd94:32d8:6f19:6:200:7:0:1:5684, 2.04 Changed, ACKNOWLEDGEMENT, 19016)
-            Received from peer /fd94:32d8:6f19:6:200:7:0:1:5684 response for request [POST /sm/METER_D1_000007/conf], with response code [2.04 Changed] and payload [null].
+        // Handle ACK response from Agent.
+        TRACE com.connode.coap.LocalCoapSession - ENTER receiveResponseMessage (/fd94:32d8:6f19:6:200:7:0:1:5684, 2.04 Changed, ACKNOWLEDGEMENT, 19016)
+        Received from peer /fd94:32d8:6f19:6:200:7:0:1:5684 response for request [POST /sm/METER_D1_000007/conf], with response code [2.04 Changed] and payload [null].
+
+        // Handle DeviceAlarm notification in /mq
+        RACE c.c.s.t.s.coap.IncomingCoapExchange - Received request POST /mq from peer /fd94:32d8:6f19:1e:200:1f:0:1:5684 with payload [080512230897b0f0a9066a1b0a0f4d455445525f44315f303030303331105610541897b0f0a906].
+        TRACE c.c.s.t.m.b.MessageQueuePersister -  Message=MessagesFromNode{dbNodeId=16, scheduledPush=false, startSequenceNumber=5, messages=[MessageWithPayloads{message=Message{resetCounter=0, sequenceNumber=5, status=PUSH, timestamp=Sat Oct 28 01:35:43 IST 2023, timestampUnreliable=false}, payloads=[com.connode.service.device.alarm.DeviceAlarmPayload@7a73fd39]}]}
 
 *********************************************
 
