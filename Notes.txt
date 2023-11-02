@@ -45075,7 +45075,7 @@ sizeof(IPv4) == sizeof(IPv6)+48   (why is this? v6 header is 20 bytes larger tha
 2023-10-28 01:36:06.498 [coap-scavenger] TRACE c.c.coap.OutgoingMessageTracker - Retransmitting session=/fd94:32d8:6f19:3:200:4:0:10:5684, messageId=(/fd94:32d8:6f19:3:200:4:0:10:5684, POST /sm/METER_D1_000412/conf, CONFIRMABLE, 52454)
 
 
-Contrast to equivalent for 2023-10-28 01:35:43.901
+Contrast to equivalent for fd94:32d8:6f19:1e:200:1f:0:1
 
 
 
