@@ -45149,4 +45149,9 @@ analysis for bug report:
 
 *****************************
 
+---------------------------------------------------------------------------------
+analyse requests
+
+cat Requests | python3 -c "import sys,re;[print(re.search('(2023-..-.. ..:..:..\....)',line).group(0)+', '+re.search('(METER.*)/',line).group(0)) for line in sys.stdin]"
+
 
