@@ -45154,4 +45154,7 @@ analyse requests
 
 cat Requests | python3 -c "import sys,re;[print(re.search('(2023-..-.. ..:..:..\....)',line).group(0)+', '+re.search('(METER.*)/',line).group(0)) for line in sys.stdin]"
 
+cat reqs | ag -o "(METER_D1_......)" | xargs -n 1 -I {} bash -c "echo grep -o {} resp"
+
+
 
