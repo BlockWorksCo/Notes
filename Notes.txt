@@ -45156,5 +45156,7 @@ cat Requests | python3 -c "import sys,re;[print(re.search('(2023-..-.. ..:..:..\
 
 cat reqs | ag -o "(METER_D1_......)" | xargs -n 1 -I {} bash -c "echo grep -o {} resp"
 
+cat reqs | ag -o "(METER_D1_......)" | xargs -n 1 -I {} bash -c "grep {} resp" > resp.orderedbyreq
+
 
 
