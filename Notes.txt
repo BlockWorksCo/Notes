@@ -45186,7 +45186,8 @@ METER_D1_000412 (bad case):
 - 1.5 minutes between "added to queue" and "being processed"
 - 5.75 minutes between "being processed" and "finalized".
 - Split over "dtls-pool-10" and "dtls-pool-2".
-- Retry happens, but the processed packet has same hashCode as original received packet.
+- Retry happens, but the processed packet has same hashCode as original received packet (will retry-response have same hashCode?).
+- Cant find evidence of a second "retry response" packet.
 
 
 
