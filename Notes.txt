@@ -45197,7 +45197,7 @@ NMS:terminalFinished()
 NMS:DeviceConfigurationJob::sendResultsToAppServer()
 NMS:AppServerClient::pushMessage()    -> "Sending {} job results for {} , results ={}"                      @ 01:39:26.840
 NMS:ConfigurationMeshNetwork::run()                                                                                         <---- 80ms
-  SMA:JobDevicesResultHandler:: updateJobDeviceCountInfo() "Handle result jobName job_536_for_py_group_536" @ 01:39:26.920
+  SMA:JobDevicesResultHandler::updateJobDeviceCountInfo() "Handle result jobName job_536_for_py_group_536" @ 01:39:26.920
   ???? Return the response from SMA->NMS ???                                                                                <----- > 2 sec gap here
 NMS:ConfigurationMeshNetwork::finish() -> "ENTER checkAllTerminalsFinished"                                 @ 01:39:29.340
 
