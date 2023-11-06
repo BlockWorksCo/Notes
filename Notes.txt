@@ -45195,7 +45195,8 @@ METER_D1_000412 (bad case):
 
 terminalFinished()
 DeviceConfigurationJob::sendResultsToAppServer()
-AppServerClient::pushMessage()
-
+AppServerClient::pushMessage()    -> "Sending {} job results for {} , results ={}"
+ConfigurationMeshNetwork::run()
+ConfigurationMeshNetwork::finish() -> "ENTER checkAllTerminalsFinished"
 
 
