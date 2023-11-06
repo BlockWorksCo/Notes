@@ -45193,10 +45193,11 @@ METER_D1_000412 (bad case):
 
 
 
-terminalFinished()
-DeviceConfigurationJob::sendResultsToAppServer()
-AppServerClient::pushMessage()    -> "Sending {} job results for {} , results ={}"
-ConfigurationMeshNetwork::run()
-ConfigurationMeshNetwork::finish() -> "ENTER checkAllTerminalsFinished"
+NMS:terminalFinished()
+NMS:DeviceConfigurationJob::sendResultsToAppServer()
+NMS:AppServerClient::pushMessage()    -> "Sending {} job results for {} , results ={}"
+NMS:ConfigurationMeshNetwork::run()
+  SMA:JobDevicesResultHandler:: updateJobDeviceCountInfo() "Handle result jobName job_536_for_py_group_536"
+NMS:ConfigurationMeshNetwork::finish() -> "ENTER checkAllTerminalsFinished"
 
 
