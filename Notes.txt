@@ -45159,4 +45159,24 @@ cat reqs | ag -o "(METER_D1_......)" | xargs -n 1 -I {} bash -c "echo grep -o {}
 cat reqs | ag -o "(METER_D1_......)" | xargs -n 1 -I {} bash -c "grep {} resp" > resp.orderedbyreq
 
 
+----------------------------------------------
+NMS analysis:
+
+METER_D1_000007:
+
+
+
+METER_D1_000412:
+
+
+2023-10-28 01:43:11.184 [dtls-pool-2] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - Received from peer /fd94:32d8:6f19:3:200:4:0:10:5684 response for request [POST /sm/METER_D1_000412/conf], with response coode [2.04 Changed] and payload [null].
+2023-10-28 01:43:11.184 [dtls-pool-2] TRACE c.c.s.t.job.ConfigurationTerminal - finalizing the terminal 00-00-00-00-00-00-01-9c with FINISHED
+
+
+
+
+
+
+
+
 
