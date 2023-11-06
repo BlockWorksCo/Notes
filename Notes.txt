@@ -45162,16 +45162,18 @@ cat reqs | ag -o "(METER_D1_......)" | xargs -n 1 -I {} bash -c "grep {} resp" >
 ----------------------------------------------
 NMS analysis:
 
-METER_D1_000007:
+METER_D1_000007 (good case):
 
 2023-10-28 01:35:43.341 [executor-pool-16] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - ENTER request remoteAddress=/fd94:32d8:6f19:6:200:7:0:1:5684 request=POST /sm/METER_D1_000007/conf
 2023-10-28 01:35:43.343 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 7bf7bc5a added to queue, address=/fd94:32d8:6f19:6:200:7:0:1:5684, sessionId=SessionId(5ebcdb19aabda7575e2347dcc27479165cbf205742987a47b02fd773693984ab), migrating=false
 2023-10-28 01:35:43.345 [dtls-pool-6] TRACE com.connode.dtls.DTLSConnection - DTLS packet 7bf7bc5a being processed, address=/fd94:32d8:6f19:6:200:7:0:1:5684, sessionId=SessionId(5ebcdb19aabda7575e2347dcc27479165cbf205742987a47b02fd773693984ab), migrating=false
+2023-10-28 01:35:43.345 [dtls-pool-6] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - Received from peer /fd94:32d8:6f19:6:200:7:0:1:5684 response for request [POST /sm/METER_D1_000007/conf], with response code [2.04 Changed] and payload [null].
+2023-10-28 01:35:43.346 [dtls-pool-6] TRACE c.c.s.t.job.ConfigurationTerminal - finalizing the terminal 00-00-00-00-00-00-00-07 with FINISHED
+
+- Total elapsed time: 5ms
 
 
-
-
-METER_D1_000412:
+METER_D1_000412 (bad case):
 
 2023-10-28 01:35:56.361 [executor-pool-07] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - ENTER request remoteAddress=/fd94:32d8:6f19:3:200:4:0:10:5684 request=POST /sm/METER_D1_000412/conf
 2023-10-28 01:35:56.361 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 2b5036d2 added to queue, address=/fd94:32d8:6f19:3:200:4:0:10:5684, sessionId=SessionId(8a621bd3f5a1a82e1830ce61be2bd6b84
@@ -45180,6 +45182,11 @@ METER_D1_000412:
 2023-10-28 01:43:11.184 [dtls-pool-2] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - Received from peer /fd94:32d8:6f19:3:200:4:0:10:5684 response for request [POST /sm/METER_D1_000412/conf], with response coode [2.04 Changed] and payload [null].
 2023-10-28 01:43:11.184 [dtls-pool-2] TRACE c.c.s.t.job.ConfigurationTerminal - finalizing the terminal 00-00-00-00-00-00-01-9c with FINISHED
 
+- Total elapsed time: 435sec (7 1/4 minutes)
+- 1.5 minutes between "added to queue" and "being processed"
+- 5.75 minutes between "being processed" and "finalized".
+- Split over "dtls-pool-10" and "dtls-pool-2".
+- Retry happens, but the processed packet has same hashCode as original received packet.
 
 
 
