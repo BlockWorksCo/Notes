@@ -45164,6 +45164,11 @@ NMS analysis:
 
 METER_D1_000007:
 
+2023-10-28 01:35:43.341 [executor-pool-16] TRACE c.c.s.t.s.coap.OutgoingCoapExchange - ENTER request remoteAddress=/fd94:32d8:6f19:6:200:7:0:1:5684 request=POST /sm/METER_D1_000007/conf
+2023-10-28 01:35:43.343 [dtls] TRACE com.connode.dtls.DTLSConnection - DTLS packet 7bf7bc5a added to queue, address=/fd94:32d8:6f19:6:200:7:0:1:5684, sessionId=SessionId(5ebcdb19aabda7575e2347dcc27479165cbf205742987a47b02fd773693984ab), migrating=false
+2023-10-28 01:35:43.345 [dtls-pool-6] TRACE com.connode.dtls.DTLSConnection - DTLS packet 7bf7bc5a being processed, address=/fd94:32d8:6f19:6:200:7:0:1:5684, sessionId=SessionId(5ebcdb19aabda7575e2347dcc27479165cbf205742987a47b02fd773693984ab), migrating=false
+
+
 
 
 METER_D1_000412:
