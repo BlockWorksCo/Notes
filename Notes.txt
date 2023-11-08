@@ -45201,4 +45201,12 @@ NMS:ConfigurationMeshNetwork::run()                                             
   ???? Return the response from SMA->NMS ???                                                                                <----- > 2 sec gap here
 NMS:ConfigurationMeshNetwork::finish() -> "ENTER checkAllTerminalsFinished"                                 @ 01:39:29.340
 
+-------------------------------------------------------------
+udp log analysis
+
+ag -o --nonumbers "\] fd68.*RX .*" /home/steve/Downloads/udpLogReceiver_20231107_2.txt | cut -d' ' -f 2 | sort | uniq > gwAddresses
+
+ag --nonumbers ":7107" /home/steve/Downloads/bad_packets.csv | cut -d, -f 4 | tr '\n' ','
+
+
 
