@@ -45218,6 +45218,8 @@ drop table filteredLog ;
 CREATE TABLE filteredLog (targetLineId, lineId INTEGER PRIMARY KEY);
 INSERT INTO filteredLog (targetLineId) SELECT lineId FROM log where threadId='terminal' order by lineId;
 select * from filteredLog limit 10;
+select * from log inner join filteredLog on filteredLog.targetLineId = log.lineId limit 10;
+
 
 
 
