@@ -45212,4 +45212,12 @@ ag --nonumbers ":7107" /home/steve/Downloads/bad_packets.csv | cut -d, -f 4 | tr
 pull out the "RX bad" lines for each unique gw in the log, transpose the counts into a row format with a first column of the gateways ip address.
 ag -o --nonumbers "\] fd68.*RX .*" /home/steve/Downloads/udpLogReceiver_20231107_2.txt | cut -d' ' -f 2 | sort | uniq | xargs -n 1 -I{} bash -c "echo -n {}, ; $(echo 'ag -o "{} RX.*" ~/Downloads/udpLogReceiver_20231107_2.txt | cut -d" " -f 4 | ag -o "[0-9]+" | tr "\n" ","') ; echo"
 
+--------------------------------------------------
+
+drop table filteredLog ;
+CREATE TABLE filteredLog (targetLineId, lineId INTEGER PRIMARY KEY);
+INSERT INTO filteredLog (targetLineId) SELECT lineId FROM log where threadId='terminal' order by lineId;
+select * from filteredLog limit 10;
+
+
 
