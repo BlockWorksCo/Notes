@@ -45223,7 +45223,11 @@ select log.* from log inner join filteredLog on filteredLog.targetLineId = log.l
 ---------------------------
 
 apt install pypy3
+pypy3 -m venv ./.venv
 pip install textual textual-dev
+.venv/bin/activate
+./viewer.py ^C
+
 
 
 
