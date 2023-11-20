@@ -45220,6 +45220,10 @@ INSERT INTO filteredLog (targetLineId) SELECT lineId FROM log where threadId='te
 select * from filteredLog limit 10;
 select log.* from log inner join filteredLog on filteredLog.targetLineId = log.lineId limit 10;
 
+---------------------------
+
+apt install pypy3
+pip install textual textual-dev
 
 
 
