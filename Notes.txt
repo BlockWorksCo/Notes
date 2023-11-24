@@ -45231,6 +45231,7 @@ pip install textual textual-dev
 -----------------------------
 git reset submodule .gitmodules
 
+git restore –staged interface
 git submodule update --init
 
 
