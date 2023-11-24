@@ -45242,7 +45242,7 @@ ag -o "[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-
 ag -o -i "[0-9a-f]+:[0-9a-f]+:[0-9a-f]+$" IPs | sed -e "s/://g" > shortIPs
 
 tshark -t a -r dump.pcap > packets
-cat IPs | xargs -n 1 -I{}  bash -c "echo {} ; ag {} packets" > t
+cat IPs | xargs -n 1 -I{}  bash -c "echo -e '\\n' {} ; ag {} packets" > packetsPerJobIP
 
 
 
