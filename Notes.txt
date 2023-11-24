@@ -45228,6 +45228,12 @@ pip install textual textual-dev
 .venv/bin/activate
 ./viewer.py ^C
 
+-----------------------------
+git reset submodule .gitmodules
+
+git submodule update --init
+
+
 
 
 
