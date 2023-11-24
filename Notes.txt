@@ -45234,6 +45234,14 @@ git reset submodule .gitmodules
 git restore –staged interface
 git submodule update --init
 
+-----------------------------------------------
+pcap analysis:
+
+ag -o "[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+" /home/steve/Downloads/jvvnl-tn72_job_data.json > IPs
+
+ag -o -i "[0-9a-f]+:[0-9a-f]+:[0-9a-f]+$" IPs | sed -e "s/://g" > shortIPs
+
+
 
 
 
