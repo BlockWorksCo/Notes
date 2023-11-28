@@ -45253,6 +45253,10 @@ cat failingMeterIDs | xargs -n 1 -I{} bash -c "ag -A 2 {} ~/Downloads/jvvnl-tn72
 
 --------------------------------------------------------
 
+
+pip install google-cloud
+pip install google-cloud-vision
+
 ./coap_request.py --server localhost:8080 --agent fdbc:8573:24a1:6:21b:c50c:6006:7528 --config-list
 
 
