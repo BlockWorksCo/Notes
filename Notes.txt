@@ -45250,6 +45250,12 @@ ag TIMEOUT /home/steve/Downloads/jvvnl-tn72_processed_relay_status_20231123T2255
 cat goodMeterIDs | xargs -n 1 -I{} bash -c "ag -A 2 {} ~/Downloads/jvvnl-tn72_job_data.json | ag address" > goodJobIPs
 cat failingMeterIDs | xargs -n 1 -I{} bash -c "ag -A 2 {} ~/Downloads/jvvnl-tn72_job_data.json | ag address" > failingJobIPs
 
+ag -o "[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+" goodJobIPs > goodIPs
+ag -o "[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+:[0-9a-f]+" failingJobIPs > failingIPs
+
+cat goodIPs | xargs -n 1 -I{}  bash -c "echo -e '\\n' {} ; ag {} packets" > goodJobPackets
+cat failingIPs | xargs -n 1 -I{}  bash -c "echo -e '\\n' {} ; ag {} packets" > failingJobPackets
+
 
 --------------------------------------------------------
 
