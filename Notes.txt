@@ -45275,6 +45275,10 @@ jobs
    19 156.300586080    fd00::101 → fd5b:2b5b:5bc4:c:200::1 DTLSv1.2 135 Application Data
    20 156.303501490 fd5b:2b5b:5bc4:c:200::1 → fd00::101    DTLSv1.2 108 Application Data
 
+icmp
+   33 271.283103978    fd00::101 → fd5b:2b5b:5bc4:c:200::1 ICMPv6 104 Echo (ping) request id=0x0005, seq=3, hop limit=63
+   34 271.284931320 fd5b:2b5b:5bc4:c:200::1 → fd00::101    ICMPv6 104 Echo (ping) reply id=0x0005, seq=3, hop limit=32 (request in 33)
+
 
 
 
