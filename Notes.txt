@@ -45260,6 +45260,23 @@ pip install google-cloud-vision
 ./coap_request.py --server localhost:8080 --agent fdbc:8573:24a1:6:21b:c50c:6006:7528 --config-list
 
 
+---------------------------------------------------------
+
+
+active
+   15 138.414311392    fd00::101 → fd5b:2b5b:5bc4:c:200::1 DTLSv1.2 125 Application Data
+   16 138.417161289 fd5b:2b5b:5bc4:c:200::1 → fd00::101    DTLSv1.2 111 Application Data
+
+--ping
+   17 150.774747178    fd00::101 → fd5b:2b5b:5bc4:c:200::1 DTLSv1.2 100 Application Data
+   18 150.777296284 fd5b:2b5b:5bc4:c:200::1 → fd00::101    DTLSv1.2 89 Application Data
+
+jobs
+   19 156.300586080    fd00::101 → fd5b:2b5b:5bc4:c:200::1 DTLSv1.2 135 Application Data
+   20 156.303501490 fd5b:2b5b:5bc4:c:200::1 → fd00::101    DTLSv1.2 108 Application Data
+
+
+
 
 
 
