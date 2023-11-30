@@ -45286,6 +45286,33 @@ icmp
    34 271.284931320 fd5b:2b5b:5bc4:c:200::1 → fd00::101    ICMPv6 104 Echo (ping) reply id=0x0005, seq=3, hop limit=32 (request in 33)
 
 
+-----------------------------------------------------------
+possible issue in nms-debug log:
+
+2023-11-23 22:48:16.971 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392913 and text code : node.boot
+2023-11-23 22:48:16.972 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392916 and text code : node.powerLost
+2023-11-23 22:48:16.973 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392917 and text code : node.boot
+2023-11-23 22:48:16.974 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392918 and text code : node.powerLost
+2023-11-23 22:48:16.974 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392919 and text code : node.boot
+2023-11-23 22:48:16.975 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392920 and text code : node.powerLost
+2023-11-23 22:48:16.976 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392921 and text code : node.boot
+2023-11-23 22:48:16.977 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392922 and text code : node.powerLost
+2023-11-23 22:48:16.978 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392923 and text code : node.boot
+2023-11-23 22:48:16.978 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392924 and text code : node.powerLost
+2023-11-23 22:48:16.979 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392925 and text code : node.boot
+2023-11-23 22:48:16.980 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392926 and text code : node.powerLost
+2023-11-23 22:48:16.981 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392927 and text code : node.boot
+2023-11-23 22:48:16.981 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392928 and text code : node.powerLost
+2023-11-23 22:48:16.982 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392929 and text code : node.boot
+2023-11-23 22:48:16.983 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392930 and text code : node.powerLost
+2023-11-23 22:48:16.984 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392931 and text code : node.boot
+2023-11-23 22:48:16.984 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392932 and text code : node.powerLost
+2023-11-23 22:48:16.985 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392933 and text code : node.boot
+2023-11-23 22:48:16.986 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392934 and text code : node.powerLost
+2023-11-23 22:48:16.987 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392935 and text code : node.boot
+2023-11-23 22:48:16.988 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392938 and text code : node.powerLost
+2023-11-23 22:48:16.988 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392941 and text code : node.boot
+
 
 
 
