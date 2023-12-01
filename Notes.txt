@@ -45313,6 +45313,17 @@ possible issue in nms-debug log:
 2023-11-23 22:48:16.988 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441793 and message Id : 9769392938 and text code : node.powerLost
 2023-11-23 22:48:16.988 [mq-consumer-Queue-04] DEBUG c.c.s.t.mq.NodeEventPersister - Received event with code : 1441792 and message Id : 9769392941 and text code : node.boot
 
+-------------------------------------------------------------
+
+../InitDB.py GW7_47-3d_Merged_20231130.db
+../AddLogToDB.py GW7_47-3d_Merged_20231130.db GW7_47-3d_Master_20231130_debug_full_file.log
+../AddLogToDB.py GW7_47-3d_Merged_20231130.db GW7_47-3d_Modem_20231130_debug_full_file.log
+tshark -tad dump.pcap >  packets
+tshark -tad -r dump.pcap >  packets
+../AddLogToDB.py GW7_47-3d_Merged_20231130.db packets
+sqlite3 GW7_47-3d_Merged_20231130.db "select timestamp,originalText from log order by timestamp" > GW7_47-3d_Merged_20231130.log
+
+
 
 
 
