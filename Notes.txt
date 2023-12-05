@@ -45268,6 +45268,8 @@ pip install google-cloud-vision
 
 ---------------------------------------------------------
 
+./coap_request.py --server localhost:8080 --agent fd5b:2b5b:5bc4:c:200:0:0:1 --ping
+./jobs.py
 
 active
    15 138.414311392    fd00::101 → fd5b:2b5b:5bc4:c:200::1 DTLSv1.2 125 Application Data
