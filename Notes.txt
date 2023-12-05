@@ -45325,6 +45325,12 @@ tshark -tad -r dump.pcap >  packets
 ../AddLogToDB.py GW7_47-3d_Merged_20231130.db packets
 sqlite3 GW7_47-3d_Merged_20231130.db "select timestamp,originalText from log order by timestamp" > GW7_47-3d_Merged_20231130.log
 
+----------------------------------------------------
+tun6d logging on omnidev
+
+omnidev-in-01.dev.cyanconnode.com
+sudo TUN6D_SECRET=ZV9IPCHFvINmOEKv /opt/omnimesh/tun6d/current/bin/tun6d --loglevel debug 2>&1 | tee -a  tun6d.log.1
+
 
 
 
