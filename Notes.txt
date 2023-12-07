@@ -45331,6 +45331,13 @@ tun6d logging on omnidev
 omnidev-in-01.dev.cyanconnode.com
 sudo TUN6D_SECRET=ZV9IPCHFvINmOEKv /opt/omnimesh/tun6d/current/bin/tun6d --loglevel debug 2>&1 | tee -a  tun6d.log.1
 
+----------------------------------------
+UHES PoC ucspi_tcp
+
+apt install ucspi-tcp
+
+tcpserver
+tcpclient
 
 
 
