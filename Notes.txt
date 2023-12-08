@@ -45345,6 +45345,10 @@ eth
 
 server @ 10.232.0.169
 
+Offered 192.168.1.97/255.255.255.0
+State: 2 (was 1), timeout: 0 ms
+Binding to 192.168.1.97/24 lease time 65090 s
+
 
 
 
