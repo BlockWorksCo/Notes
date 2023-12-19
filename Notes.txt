@@ -45350,6 +45350,11 @@ State: 2 (was 1), timeout: 0 ms
 Binding to 192.168.1.97/24 lease time 65090 s
 
 
+---------------------------------------------------
+round trip time for request = 500ms.
+total number of nodes = 200
+total time spent = 200*500ms = 100seconds = 1min 40.
+
 
 
 
