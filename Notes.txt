@@ -45351,11 +45351,14 @@ Binding to 192.168.1.97/24 lease time 65090 s
 
 
 ---------------------------------------------------
+Totally sequential operation:
 round trip time for request = 500ms.
 total number of nodes = 200
 total time spent = 200*500ms = 100seconds = 1min 40.
 
 
+in parallel:
+- gw can handle 10 tx/rx pairs per second.
 
 
 
