@@ -40461,7 +40461,7 @@ BSNL:
 
 ------------------------------------
 embedded interview:
-- SPI, I2C, compare, comtrast, multi-master mode
+- SPI, I2C, compare, comtrast, multi-master mode DMA?
 - interrupts, exceptions, differences.
 - RTOSs, priorities, threads
 - Linux, pipes, processes vs threads. paging.
