@@ -45362,4 +45362,4 @@ in parallel:
 
 
 115200 @ 10 bits per byte (start/stop) = 11520 byte/sec = 11KB/sec
-
+time per byte = 1/11520 =
