@@ -45361,4 +45361,5 @@ in parallel:
 - gw can handle 10 tx/rx pairs per second.
 
 
+115200 @ 10 bits per byte (start/stop) = 11520 byte/sec = 11KB/sec
 
