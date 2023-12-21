@@ -45368,4 +45368,8 @@ rate of packets per second in log:
 
 select count() from log where logText regexp('UDPSEND|UDPRECV') group by strftime('%s',timestamp)/1;
 
+--------------------------------------------
+tcpdumpp to capture 60 sec pcap
+
+sudo timeout 60 tcpdump -i eth0 -w dump.pcap udp or icmp or icmp6
 
