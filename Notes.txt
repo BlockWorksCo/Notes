@@ -45373,3 +45373,15 @@ tcpdumpp to capture 60 sec pcap
 
 sudo timeout 60 tcpdump -i eth0 -w dump.pcap udp or icmp or icmp6
 
+------------------------------------------------
+network loading
+
+- depth of uplink pktq is indicative of loading level.
+- loaded uplink pktq causes slower responses and higher latencies. This can be detected upstream on tund or NMS.
+- gw could also report the loading level upstream via ICMP or ping-payload.
+- tund or NMS would intercept the loading-indicator packets and throttle the downstream in response (increase or decrease rate).
+- tund or NMS could also simply monitor packet rates to each gw and throttle appropriately. timeouts would need to be adjusted to accomodate the throttling beahviour.[
+
+
+
+
