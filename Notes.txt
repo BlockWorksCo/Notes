@@ -45387,6 +45387,8 @@ hardware identity:
 
 - SOFTWARE_VERSION is generated in version.h by Makefile as "v23.45.15+g464eb5173".
 - CONFIG_NAME in .mk files gets formed into BUILD_VERSION as CONFIG_NAME:SOFTWARE_VERSION.
+- mkfwimage.py takes CONFIG_NAME:VERSION_LONG as the parameter to specify the
+- mkfwimage.py takes BL_COMPAT to specify
 
 
 
