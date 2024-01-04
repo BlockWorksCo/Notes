@@ -45403,4 +45403,9 @@ bootloader/upgrade point of view:
 - This can only be set when in prodmode then is immutable.
 
 
+HardwareIdentity (enumeration in login.proto)
+- This is used for the ProductIdentity message sent from Agent to NMS on login in addition to the old "hardwareVersion" field which has other uses.
+- Used in the NMS to ...
+
+
 
