@@ -45388,6 +45388,7 @@ hardware identity:
 - SOFTWARE_VERSION is generated in version.h by Makefile as "v23.45.15+g464eb5173".
 - CONFIG_NAME is specified in .mk files as "CONFIG_NAME=gw200-bl"
 - CONFIG_NAME in .mk files gets formed into BUILD_VERSION as CONFIG_NAME:SOFTWARE_VERSION.
+- VERSION_LONG is generated in Makefile as output of build-tools/version script which examines git tags and commits to give the "v23.45.15+g464eb5173".
 - mkfwimage.py takes CONFIG_NAME:VERSION_LONG as the parameter to specify the
 - mkfwimage.py takes BL_COMPAT to specify TAG_COMPATIBLE_CONFIG tags in the fwimage (multiple allowed).
 - Bootloader checks all TAG_COMPATIBLE_CONFIG tags against its own CONFIG_NAME to test whether the upgrade should be allowed.
