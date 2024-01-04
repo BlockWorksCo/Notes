@@ -45382,6 +45382,12 @@ network loading
 - tund or NMS would intercept the loading-indicator packets and throttle the downstream in response (increase or decrease rate).
 - tund or NMS could also simply monitor packet rates to each gw and throttle appropriately. timeouts would need to be adjusted to accomodate the throttling beahviour.[
 
+-------------------------------------------------
+hardware identity:
+
+- SOFTWARE_VERSION is generated in version.h by Makefile as "v23.45.15+g464eb5173".
+- CONFIG_NAME in .mk files gets formed into BUILD_VERSION as CONFIG_NAME:SOFTWARE_VERSION.
+
 
 
 
