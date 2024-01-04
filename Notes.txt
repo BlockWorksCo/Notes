@@ -45385,6 +45385,7 @@ network loading
 -------------------------------------------------
 hardware identity:
 
+bootloader/upgrade point of view:
 - CONFIG_NAME is specified in .mk files as "CONFIG_NAME=gw200-bl"
 - VERSION_LONG is generated in Makefile as output of build-tools/version script which examines git tags and commits to give the "v23.45.15+g464eb5173".
 - SOFTWARE_VERSION definition is generated in version.h by Makefile as "v23.45.15+g464eb5173" (VERSION_LONG).
@@ -45393,6 +45394,13 @@ hardware identity:
 - mkfwimage.py takes BL_COMPAT to specify TAG_COMPATIBLE_CONFIG tags in the fwimage (multiple allowed).
 - Bootloader checks all TAG_COMPATIBLE_CONFIG tags against its own CONFIG_NAME to test whether the upgrade should be allowed.
 
+
+"prod.hw.version" config option.
+- PARAM_PROD_HW_VERSION in config is reported to agent code through terminalPlatformGetHardwareName().
+- terminalPlatformGetHardwareName() is reported to NMS on /login request in the "hardwareVersion" field.
+- Same gets reported to ctrlporthub and in debug.
+- This value never gets compared against anything in the Agent code, only reported to the NMS.
+- This can only be set when in prodmode then is immutable.
 
 
 
