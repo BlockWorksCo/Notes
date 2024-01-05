@@ -45408,4 +45408,6 @@ HardwareIdentity (enumeration in login.proto)
 - Used in the NMS to ...
 
 
+ProductIdentity (login.proto)
+- ProductType.java
 
