@@ -45409,5 +45409,11 @@ HardwareIdentity (enumeration in login.proto)
 
 
 ProductIdentity (login.proto)
+- Enumeration of device-type defined in login.proto and sent to server from agent during login process.
+- "old" isGateway field is replaced by this.
 - ProductType.java
+
+
+
+
 
