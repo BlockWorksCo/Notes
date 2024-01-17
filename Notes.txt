@@ -44204,5 +44204,10 @@ Secure local-coap
 - Allows removal of secure/insecure build distinction.
 - The switch between secure/insecure modes is performed at boot time based on presence of verified debug certificate.
 - debug certificate stored in on-board flash, can be programmed and removed via openocd.
+- debug certificate is used to setup a DTLS-over-ctrlport session for debug logging and control/configuration of board.
+- Debug certificate can be downloaded from server, allowing in-field devices to be reprovisioned onto a test network.
+- Debug certificate can be removed by a command from the server, allowing insecure devices to become secure again.
+- Encrypted output means debug log output will not be usable in production devices.
+- Certificate chain for debug certificate should be signed by CyanConnode CA? Is there a case for third-party debug certificates?
 
 
