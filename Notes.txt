@@ -44181,6 +44181,8 @@ http://linux-ip.net/html/routing-cache.html
 -----------------------------------------------------------
 Traffic management
 
+Pushback:
+- Treats tun6d as an upstream router to the gateways and adds rate-limiting based on individual gateway-loading.
 - outgoing uplink packet queue on gateway is monitored for length of time that packets have spent in the queue. This is the "expected-delay" for
 requests from the server.
 - Expected-delay is used as a good proxy for "network loading".
