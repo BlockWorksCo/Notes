@@ -44212,7 +44212,7 @@ Secure local-coap
 - Debug certificate should be signed by CyanConnode CA? Is there a case for third-party debug certificates? prod?
 - production "mode" can be removed as all provisioning can be done with debug-cert. Testing is also now done externally to the MTS, so that isnt relevant either.
 - ProdPaks incorproate a debug-certificate to program onto device via SWD.
-- Immutability of config parameters is irrelevant in presence of a debug-certificate as the entire config file can be replaced at will.
+- Immutability of config parameters is irrelevant in presence of a debug-certificate as the entire config file can be replaced at will. Also, there is no prodmode for those fields to be made mutable in.
 - Role-based access to config parameters may be a nice-to-have on the server side tho.
 
 
