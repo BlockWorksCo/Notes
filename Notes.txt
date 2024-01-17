@@ -44178,5 +44178,17 @@ https://daniel-lange.com/archives/109-IPv6-Getting-rid-of-the-dreaded-Neighbour-
 https://www.rfc-editor.org/rfc/rfc4861#section-5.1
 http://linux-ip.net/html/routing-cache.html
 
+-----------------------------------------------------------
+Traffic management
+
+- outgoing uplink packet queue on gateway is monitored for length of time that packets have spent in the queue. This is the "expected-delay" for
+requests from the server.
+- Expected-delay is used as a good proxy for "network loading".
+- The expected-delay statistic is passed up to tun6 via an addition to the tunnel protocol.
+- Tun6d maintains the latest expected-delay for each gateway/tunnel.
+- When tun6d receives a downstream packet from the NMS, it examines the current expected-delay for that mesh and only forwards the packet if the
+current expected-delay is below a threshold. Otherwise, it queues or drops the packet.
+- When the expected-delay for a tunnel drops below the threshold, packets are sent from the downstream-queue.
+
 
 
