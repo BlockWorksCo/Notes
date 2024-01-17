@@ -44189,6 +44189,7 @@ requests from the server.
 - When tun6d receives a downstream packet from the NMS, it examines the current expected-delay for that mesh and only forwards the packet if the
 current expected-delay is below a threshold. Otherwise, it queues or drops the packet.
 - When the expected-delay for a tunnel drops below the threshold, packets are sent from the downstream-queue.
+-
 
 
 
