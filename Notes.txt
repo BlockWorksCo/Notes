@@ -44194,5 +44194,8 @@ current expected-delay is below a threshold. Otherwise, it queues or drops the p
 - From the NMS, jobs can be "burst" into each mesh instead of doing sequential operations.
 - Tun6d will rate-limit these queued job requests down to the gateway at a rate that does not overwhelm the cellular/mesh/gateway.
 
+Extensions:
+- In tunnel setup protocol, incorporte rate-limit capability so gateways can be tailored to areas (basically gw send threshold to tun6d).
+- Dynamic rate-limiting. acceptable rates will vary based on environment & time.
 
 
