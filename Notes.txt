@@ -44198,4 +44198,11 @@ Extensions:
 - In tunnel setup protocol, incorporte rate-limit capability so gateways can be tailored to areas (basically gw send threshold to tun6d).
 - Dynamic rate-limiting. acceptable rates will vary based on environment & time.
 
+---------------------------------------------------------
+Secure local-coap
+
+- Allows removal of secure/insecure build distinction.
+- The switch between secure/insecure modes is performed at boot time based on presence of verified debug certificate.
+- debug certificate stored in on-board flash, can be programmed and removed via openocd.
+
 
