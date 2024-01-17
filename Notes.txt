@@ -44210,5 +44210,7 @@ Secure local-coap
 - Debug certificate can be removed by a command from the server, allowing insecure devices to become secure again.
 - Encrypted output means debug log output will not be usable in production devices.
 - Debug certificate should be signed by CyanConnode CA? Is there a case for third-party debug certificates? prod?
+- production "mode" can be removed as all provisioning can be done with debug-cert. Testing is also now done externally to the MTS, so that isnt relevant either.
+- ProdPaks incorproate a debug-certificate to program onto device via SWD.
 
 
