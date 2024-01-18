@@ -44214,4 +44214,10 @@ Secure local-coap
 - ProdPaks incorproate a debug-certificate to program onto device via SWD.
 - Role-based access to config parameters may be a nice-to-have on the server side tho.
 
+-------------------------------
+laptop fixes: latitude 7390
+
+https://www.linux.org/threads/constant-freezing-forcing-me-back-to-windows.42373/
+https://www.dell.com/community/en/conversations/latitude/dell-latitude-7390-fan-problem-on-ubuntu/647f8e47f4ccf8a8def1bc0d
+
 
