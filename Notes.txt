@@ -44220,4 +44220,13 @@ laptop fixes: latitude 7390
 https://www.linux.org/threads/constant-freezing-forcing-me-back-to-windows.42373/
 https://www.dell.com/community/en/conversations/latitude/dell-latitude-7390-fan-problem-on-ubuntu/647f8e47f4ccf8a8def1bc0d
 
+--------------------------------------
+buildenv and dev setup script (getting_started).
+
+- Uses buildenv_base to run getting_started script.
+
+
+
+
+
 
