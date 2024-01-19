@@ -44226,6 +44226,8 @@ buildenv and dev setup script (getting_started).
 - CI test for getting_started uses published buildenv_base
 - CI test for buildenv_base uses published getting_started
 
+- CA is broken on Ubuntu23.04, which means all build scripts are also.
+
 - apt install python3-full
 - python3 -m venv ~/.build
 - source ~/.build/bin/activate
