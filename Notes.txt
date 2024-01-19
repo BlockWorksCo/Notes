@@ -44232,7 +44232,13 @@ buildenv and dev setup script (getting_started).
 - python3 -m venv ~/.build
 - source ~/.build/bin/activate
 
+- On Ubuntu 23.10:
+- apt install python3-pytest pyinvoke
+- then pyinvoke is 2.0.0-1
 
+Building CA in Ubuntu 23.10:
+- python3 setup.py bdist_wheel --universal && pytest tests/ && pytest tests/
+- results in passes but warnings, should fix.
 
 
 
