@@ -44226,6 +44226,10 @@ buildenv and dev setup script (getting_started).
 - CI test for getting_started uses published buildenv_base
 - CI test for buildenv_base uses published getting_started
 
+- apt install python3-full
+- python3 -m venv ~/.build
+- source ~/.build/bin/activate
+
 
 
 
