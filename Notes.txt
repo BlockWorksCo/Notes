@@ -44223,7 +44223,9 @@ https://www.dell.com/community/en/conversations/latitude/dell-latitude-7390-fan-
 --------------------------------------
 buildenv and dev setup script (getting_started).
 
-- Uses buildenv_base to run getting_started script.
+- CI test for getting_started uses published buildenv_base
+- CI test for buildenv_base uses published getting_started
+
 
 
 
