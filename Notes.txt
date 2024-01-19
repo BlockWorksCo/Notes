@@ -44239,6 +44239,7 @@ buildenv and dev setup script (getting_started).
 Building CA in Ubuntu 23.10:
 - python3 setup.py bdist_wheel --universal && pytest tests/ && pytest tests/
 - results in passes but warnings, should fix.
+- install inside venv with: pip install dist/ca-xxxxx.whl
 
 
 
