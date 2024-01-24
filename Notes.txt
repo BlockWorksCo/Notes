@@ -44250,6 +44250,7 @@ Production server
 - on-demand cert generation?
 - receipt of logs & test results and barcodeID from MTS to register against each EUI.
 - Simple ProdServer UI to allow entry of template configs
+- Does MTS need to work offline from prodserver? Suggest yes.
 
 
 
