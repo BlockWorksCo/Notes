@@ -44245,11 +44245,22 @@ Building CA in Ubuntu 23.10:
 ----------------------------------------------------
 Production server
 
+aims:
+- full traceability between EUI and manufactured device.
+- product lifecycle notes? e.g. rework/refurbishment? change of deployment?
+- secure transfer of PKI data to MTS
+- Cert generation tests
+- User selectable root-cert, prod or dev (or other?)
+- WiSUN cert generation?
+- Debug cert generation?
+
+implementation:
 - Generate prodpaks for MTS?
 - Move away from prodpaks?
 - on-demand cert generation?
 - receipt of logs & test results and barcodeID from MTS to register against each EUI.
-- Simple ProdServer UI to allow entry of template configs
+- Simple ProdServer UI to allow entry of template configs.
+- MTS is assigned to work with a template configuration that is contained on prodserver.
 - Does MTS need to work offline from prodserver? Suggest yes.
 
 
