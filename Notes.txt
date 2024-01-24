@@ -44242,6 +44242,17 @@ Building CA in Ubuntu 23.10:
 - install inside venv with: pip install dist/ca-xxxxx.whl
 - pyyaml==5.4.1 required also
 
+----------------------------------------------------
+Production server
+
+- Generate prodpaks for MTS?
+- Move away from prodpaks?
+- on-demand cert generation?
+- receipt of logs & test results and barcodeID from MTS to register against each EUI.
+- Simple ProdServer UI to allow entry of template configs
+
+
+
 
 
 
