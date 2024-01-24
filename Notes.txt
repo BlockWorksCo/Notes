@@ -44248,6 +44248,7 @@ Production server
 aims:
 - full traceability between EUI and manufactured device.
 - product lifecycle notes? e.g. rework/refurbishment? change of deployment?
+- UI for device lookup by EUI and barcode. shows history.
 - secure transfer of PKI data to MTS
 - Cert generation tests
 - User selectable root-cert, prod or dev (or other?)
