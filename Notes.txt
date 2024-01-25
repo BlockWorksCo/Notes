@@ -44264,6 +44264,10 @@ implementation:
 - MTS is assigned to work with a template configuration that is contained on prodserver.
 - Does MTS need to work offline from prodserver? Suggest yes.
 
+-------------------------------------------------------
+Multi-Agent for UHES
+
+- One Agent, many (100's of 1000's devices (meters).
 
 
 
