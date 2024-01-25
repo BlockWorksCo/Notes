@@ -44267,6 +44267,10 @@ implementation:
 -------------------------------------------------------
 Multi-Agent for UHES
 
+16-bit port number limit comes into effect for port allocations, meaning that without further
+sysctl, the limit is ~25000.
+file desicriptor limit comes into effect also.
+
 - One Agent, many (1000's devices (meters).
 - Per executable limit will be system configured but may be as low as 2^15, necessitating multiple processes? Check this.
         https://serverfault.com/questions/168285/max-number-of-socket-on-linux
