@@ -44268,6 +44268,8 @@ implementation:
 Multi-Agent for UHES
 
 - One Agent, many (1000's devices (meters).
+- Per executable limit will be system configured but may be as low as 2^15, necessitating multiple processes? Check this.
+        https://serverfault.com/questions/168285/max-number-of-socket-on-linux
 - Wrap up meter-driver state into struct, have large array of these structs.
 - HDLC layer needs to be made asynchronous/non-blocking as many drivers may respond simultaneously.
 - HDLC layer opens many sockes
