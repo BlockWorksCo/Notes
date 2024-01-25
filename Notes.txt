@@ -44272,6 +44272,9 @@ sysctl, the limit is ~25000.
 file desicriptor limit comes into effect also.
  /proc/sys/net/ipv4/ip_local_port_range
 - Need to use multiple interfaces to get around port-range limitation.
+- Need to specify source port in bind as kernel source-port allocation breaks near 2^16
+- https://stackoverflow.com/questions/69290158/define-source-port-of-tcp-socket-sock-stream
+- https://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3
 
 - One Agent, many (1000's devices (meters).
 - Per executable limit will be system configured but may be as low as 2^15, necessitating multiple processes? Check this.
