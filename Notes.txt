@@ -44271,6 +44271,7 @@ Multi-Agent for UHES
 sysctl, the limit is ~25000.
 file desicriptor limit comes into effect also.
  /proc/sys/net/ipv4/ip_local_port_range
+- Need to use multiple interfaces to get around port-range limitation.
 
 - One Agent, many (1000's devices (meters).
 - Per executable limit will be system configured but may be as low as 2^15, necessitating multiple processes? Check this.
