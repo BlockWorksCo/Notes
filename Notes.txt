@@ -44267,9 +44267,10 @@ implementation:
 -------------------------------------------------------
 Multi-Agent for UHES
 
-- One Agent, many (100's of 1000's devices (meters).
+- One Agent, many (1000's devices (meters).
 - Wrap up meter-driver state into struct, have large array of these structs.
-- No change to threading model. One thread would iterate around all meters.
+- HDLC layer needs to be made asynchronous/non-blocking as many drivers may respond simultaneously.
+- HDLC layer opens many sockes
 
 
 
