@@ -44272,6 +44272,7 @@ sysctl, the limit is ~25000.
 file desicriptor limit comes into effect also.
  /proc/sys/net/ipv4/ip_local_port_range
 - Need to use multiple interfaces to get around port-range limitation.
+- Create multiple alias/virtual interfaces with "for i in `seq 1 17`; do echo sudo ifconfig eth0:$i 10.0.0.$i up ; done".
 - Need to specify source port in bind as kernel source-port allocation breaks near 2^16
 - https://stackoverflow.com/questions/69290158/define-source-port-of-tcp-socket-sock-stream
 - https://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3
