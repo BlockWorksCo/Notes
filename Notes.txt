@@ -44254,6 +44254,7 @@ aims:
 - User selectable root-cert, prod or dev (or other?)
 - WiSUN cert generation?
 - Debug cert generation?
+- trace node production into meter production? current RSSI results
 
 implementation:
 - Generate prodpaks for MTS?
