@@ -44310,6 +44310,9 @@ FG25 review:
 - In projects directory, lots of symlinks missing.
 - Is the documentation in place for radio conf on the FG25?
 - Radio_channel_plan.c: Wpc865 has 16 channels instead of 11. Is this correct?
+- In drivers/Makefile: "radio" directory now included in all builds instead of just MESH builds. Is this correct?
+- In terminal/Makefile: Do we still need the .hex generation? it can always be generated when needed from the .elf.
+- src/testapp: still needed?
 
 
 
