@@ -44307,7 +44307,9 @@ gcc -dM -E - </dev/null
 ----------------------------------------
 FG25 review:
 
-
+- In projects directory, lots of symlinks missing.
+- Is the documentation in place for radio conf on the FG25?
+- Radio_channel_plan.c: Wpc865 has 16 channels instead of 11. Is this correct?
 
 
 
