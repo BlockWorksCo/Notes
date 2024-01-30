@@ -44315,9 +44315,9 @@ FG25 review:
 - src/testapp: still needed?
 
 ----------------------------------------
-tcmpdump for log analysis
+tshark/tcmpdump for log analysis
 
-tcpdump -tttt -n -r 8050_captureT1hr.pcap > packets.log
+tshark -tad -r 8050_captureT1hr.pcap > packets.log
 
 
 
