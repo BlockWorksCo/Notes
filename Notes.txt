@@ -44314,6 +44314,10 @@ FG25 review:
 - In terminal/Makefile: Do we still need the .hex generation? it can always be generated when needed from the .elf.
 - src/testapp: still needed?
 
+----------------------------------------
+tcmpdump for log analysis
+
+tcpdump -tttt -n -r 8050_captureT1hr.pcap > packets.log
 
 
 
