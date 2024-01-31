@@ -44137,6 +44137,17 @@ prevents this condition.
 • 5: ATTEMPT LEAVING E-UTRA
 • 6: ATTEMPT ENTERING E-UTRA
 • 255: not known or not detectable
+--------------------------
+cellular:
+
+- can ping modem on external ipv6 address from laptop even while tunnel fails.
+- therefore link can be up but tunnel fails to connect.
+- Also saw opposite evidence earlier, so 50/50.
+- Can try to ping from the modem to test liveness instead of in-tunnel.
+- Need root on omnidev to debug tun6d.
+
+
+
 
 
 : Global Data Only. The module is configured as data only, all supported LTE
@@ -44166,9 +44177,38 @@ Cause #22 – Congestion
 
 Cause #39 – CS service temporarily not available
 
+-------------------------------
+- monitor ICMP for any address-unerachable? does pattern match login-chrun pattern?
+- monitor number of packets reaching NMS and/or tun6d. is the level varying? is the outgoing direction varying?do they vary independently?
+- neighbour table overflow? why?
+
+- packet drops at tun6d0?
+- packet drops at en?
+- gc in tun6d?
+- routing setup issue in tun6d?
+- cellular drops?
+- mesh drops?
+- agent drops?
+- NMS drops from socket buffer?
+- NMS buffers infinitely instead of responding? does queue grow in same pattern as login churn?
+- NMS output queue not processed?
+- NMS DTLS threadpool not processing quickly enough?
+- NMS processes packets, but updates database slowly causing backlog?
+- NMS backpressure into NMS DTLS threadpool from slow SMA?
+- ICMP packet capture showing address/port unavailable? would indicate routing issues.
+- Incorrect logic within NMS, incorrectly logging out nodes?
+- High interrupt load causing failure to read packets from interface?
+- tun6d incorrectly drops packets instead of forwarding? bypass tun6d with term-em -6 ?
+- neighbour-table overflow?
+- firewall incorrectly dropping? iptables stats?
+- packets delayed waiting for address-resolution to complete?
+
       This EMM cause is sent to the UE when the CS fallback or 1xCS fallback request cannot be served temporarily due to O&M reasons or a mobile terminating CS fallback call is aborted by the network during call establishment (see 3GPP TS 29.118 [16A]).
 
 Cause #42 – Severe network failure
+
+- login churn is visible on dev-stack at high numbers. Assume for the same reason as on deployed system?
+- NMSStub runs with high numbers show term-em & tun6d can handle load well with buffer size tuning.
 
       This EMM cause is sent to the UE when the network has determined that the requested procedure cannot be completed successfully due to network failure. The failure is not expected to be temporary and repeated request is not likely to succeed in near future.
 
@@ -44177,6 +44217,13 @@ If the attach request is rejected due to NAS level congestion control, the netwo
 
 http://howltestuffworks.blogspot.com/2011/12/nas-level-congestion-control.html
 
+
+- Run dev-stack on same machine as NMSStub with same tuning.
+- compare packet counts at DTLSNetwork and thru DTLS threadpool.
+- capture ICMP packets to examine for address/port unreachable.
+- Run dev-stack with term-em -6 to eliminate possibility of tun6d0.
+- trigger thread-dumps of NMS when login-churn is high, and low. compare number of blocked tasks
+- Does "ip route flush cache" trigger slowness/churn?
  When general NAS level mobility management control is active, the network may prioritize rejecting messages that has the NAS signalling low priority indicator before rejecting messages without the NAS signalling low priority indicator
 
  When subscribed APN based congestion control is active for a particular APN, the network may reject attach request from UEs with a subscription to this APN
@@ -45413,6 +45460,150 @@ ProductIdentity (login.proto)
 - "old" isGateway field is replaced by this.
 - ProductType.java
 
+https://daniel-lange.com/archives/109-IPv6-Getting-rid-of-the-dreaded-Neighbour-table-overflow.html
+https://www.rfc-editor.org/rfc/rfc4861#section-5.1
+http://linux-ip.net/html/routing-cache.html
+
+-----------------------------------------------------------
+Traffic management
+
+Pushback:
+- Treats tun6d as an upstream router to the gateways and adds rate-limiting based on individual gateway-loading.
+- outgoing uplink packet queue on gateway is monitored for length of time that packets have spent in the queue. This is the "expected-delay" for
+requests from the server.
+- Expected-delay is used as a good proxy for "network loading".
+- The expected-delay statistic is passed up to tun6 via an addition to the tunnel protocol.
+- Tun6d maintains the latest expected-delay for each gateway/tunnel.
+- When tun6d receives a downstream packet from the NMS, it examines the current expected-delay for that mesh and only forwards the packet if the
+current expected-delay is below a threshold. Otherwise, it queues or drops the packet.
+- When the expected-delay for a tunnel drops below the threshold, packets are sent from the downstream-queue.
+- From the NMS, jobs can be "burst" into each mesh instead of doing sequential operations.
+- Tun6d will rate-limit these queued job requests down to the gateway at a rate that does not overwhelm the cellular/mesh/gateway.
+
+Extensions:
+- In tunnel setup protocol, incorporte rate-limit capability so gateways can be tailored to areas (basically gw send threshold to tun6d).
+- Dynamic rate-limiting. acceptable rates will vary based on environment & time.
+
+---------------------------------------------------------
+Secure local-coap
+
+- Allows removal of secure/insecure build distinction.
+- The switch between secure/insecure modes is performed at boot time based on presence of verified debug certificate.
+- debug certificate stored in on-board flash, can be programmed and removed via openocd.
+- Normal debug-flag security is implemented, so when the debug-bit is set (to allow debugger connection), the internal flash and debug cert is wiped. This prevents readout of the debug cert.
+- debug certificate is used to setup a DTLS-over-ctrlport session for debug logging and control/configuration of board.
+- Debug certificate can be downloaded from server, allowing in-field devices to be reprovisioned onto a test network.
+- Debug certificate can be removed by a command from the server, allowing insecure devices to become secure again.
+- Encrypted output means debug log output will not be usable in production devices.
+- Debug certificate should be signed by CyanConnode CA? Is there a case for third-party debug certificates? prod?
+- production "mode" can be removed as all provisioning can be done with debug-cert. Testing is also now done externally to the MTS, so that isnt relevant either.
+- ProdPaks incorproate a debug-certificate to program onto device via SWD.
+- Role-based access to config parameters may be a nice-to-have on the server side tho.
+
+-------------------------------
+laptop fixes: latitude 7390
+
+https://www.linux.org/threads/constant-freezing-forcing-me-back-to-windows.42373/
+https://www.dell.com/community/en/conversations/latitude/dell-latitude-7390-fan-problem-on-ubuntu/647f8e47f4ccf8a8def1bc0d
+
+--------------------------------------
+buildenv and dev setup script (getting_started).
+
+- CI test for getting_started uses published buildenv_base
+- CI test for buildenv_base uses published getting_started
+
+- CA is broken on Ubuntu23.04, which means all build scripts are also.
+
+- apt install python3-full
+- python3 -m venv ~/.build
+- source ~/.build/bin/activate
+
+- On Ubuntu 23.10:
+- apt install python3-pytest pyinvoke
+- then pyinvoke is 2.0.0-1
+
+Building CA in Ubuntu 23.10:
+- python3 setup.py bdist_wheel --universal && pytest tests/ && pytest tests/
+- results in passes but warnings, should fix.
+- install inside venv with: pip install dist/ca-xxxxx.whl
+- pyyaml==5.4.1 required also
+
+----------------------------------------------------
+Production server
+
+aims:
+- full traceability between EUI and manufactured device.
+- product lifecycle notes? e.g. rework/refurbishment? change of deployment?
+- UI for device lookup by EUI and barcode. shows history.
+- secure transfer of PKI data to MTS
+- testability, cert-gen, transfer, etc.
+- User selectable root-cert, prod or dev (or other?)
+- WiSUN cert generation?
+- Debug cert generation?
+- trace node production into meter production? current RSSI results
+
+implementation:
+- Generate prodpaks for MTS?
+- Move away from prodpaks?
+- on-demand cert generation?
+- receipt of logs & test results and barcodeID from MTS to register against each EUI.
+- Simple ProdServer UI to allow entry of template configs.
+- MTS is assigned to work with a template configuration that is contained on prodserver.
+- Does MTS need to work offline from prodserver? Suggest yes.
+
+-------------------------------------------------------
+Multi-Agent for UHES
+
+16-bit port number limit comes into effect for port allocations, meaning that without further
+sysctl, the limit is ~25000.
+file desicriptor limit comes into effect also.
+ /proc/sys/net/ipv4/ip_local_port_range
+- Need to use multiple interfaces to get around port-range limitation.
+- Create multiple alias/virtual interfaces with "for i in `seq 1 17`; do echo sudo ifconfig eth0:$i 10.0.0.$i up ; done".
+- Need to specify source port in bind as kernel source-port allocation breaks near 2^16
+- https://stackoverflow.com/questions/69290158/define-source-port-of-tcp-socket-sock-stream
+- https://www.metabrew.com/article/a-million-user-comet-application-with-mochiweb-part-3
+- Result is ~2KB per connection minimum
+
+working sysctls for a 1M connection machine.
+net.core.rmem_max = 33554432
+net.core.wmem_max = 33554432
+net.ipv4.tcp_rmem = 4096 16384 33554432
+net.ipv4.tcp_wmem = 4096 16384 33554432
+net.ipv4.tcp_mem = 786432 1048576 26777216
+net.ipv4.tcp_max_tw_buckets = 360000
+net.core.netdev_max_backlog = 2500
+vm.min_free_kbytes = 65536
+vm.swappiness = 0
+net.ipv4.ip_local_port_range = 1024 65535
+
+
+- One Agent, many (1000's devices (meters).
+- Per executable limit will be system configured but may be as low as 2^15, necessitating multiple processes? Check this.
+        https://serverfault.com/questions/168285/max-number-of-socket-on-linux
+- Wrap up meter-driver state into struct, have large array of these structs.
+- HDLC layer needs to be made asynchronous/non-blocking as many drivers may respond simultaneously.
+- HDLC layer opens many sockes
+
+---------------------------------
+compiler platform directives
+
+gcc -dM -E - </dev/null
+
+----------------------------------------
+FG25 review:
+
+- In projects directory, lots of symlinks missing.
+- Is the documentation in place for radio conf on the FG25?
+- Radio_channel_plan.c: Wpc865 has 16 channels instead of 11. Is this correct?
+- In drivers/Makefile: "radio" directory now included in all builds instead of just MESH builds. Is this correct?
+- In terminal/Makefile: Do we still need the .hex generation? it can always be generated when needed from the .elf.
+- src/testapp: still needed?
+
+----------------------------------------
+tshark/tcmpdump for log analysis
+
+tshark -tad -r 8050_captureT1hr.pcap > packets.log
 
 
 
