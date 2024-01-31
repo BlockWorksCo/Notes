@@ -45605,6 +45605,15 @@ tshark/tcmpdump for log analysis
 
 tshark -tad -r 8050_captureT1hr.pcap > packets.log
 
+----------------------------------------------
+nonblocking pipe for logging
+
+- mkfifo loggingPipe
+- exec 4<> loggingPipe  # using an fd like this makes it non-blocking which the pipe would otherwise be.
+- tcpdump -l -tttt 2>&4
+
+then whenever you want to log:
+- cat loggingPipe
 
 
 
