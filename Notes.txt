@@ -45532,6 +45532,7 @@ Building CA in Ubuntu 23.10:
 Production server
 
 aims:
+- interopability with old MTSs.
 - full traceability between EUI and manufactured device.
 - product lifecycle notes? e.g. rework/refurbishment? change of deployment?
 - UI for device lookup by EUI and barcode. shows history.
