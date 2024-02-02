@@ -45542,6 +45542,7 @@ aims:
 - WiSUN cert generation?
 - Debug cert generation?
 - trace node production into meter production? current RSSI results
+- start off by using prod-paks for transfer to maintain interopability, but make them invisible to user. eventually move to direct supply of pki data.
 
 implementation:
 - Generate prodpaks for MTS?
