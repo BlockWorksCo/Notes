@@ -45591,6 +45591,11 @@ net.ipv4.ip_local_port_range = 1024 65535
 
 - epoll limits. above 500K (https://news.ycombinator.com/item?id=1740823)
 
+- Having one agent executable for entire network may be risky if it crashes and takes everything down, may be wiser to spread
+over many instances.
+- Eventually, move state into redis(?) and load state from there on receipt of data.
+- failover? state would be in redis, would need to make it restartable in another instance.
+
 ---------------------------------
 compiler platform directives
 
