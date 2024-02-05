@@ -45589,6 +45589,8 @@ net.ipv4.ip_local_port_range = 1024 65535
 - HDLC layer needs to be made asynchronous/non-blocking as many drivers may respond simultaneously.
 - HDLC layer opens many sockes
 
+- epoll limits. above 500K (https://news.ycombinator.com/item?id=1740823)
+
 ---------------------------------
 compiler platform directives
 
