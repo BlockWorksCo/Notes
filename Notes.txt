@@ -45617,6 +45617,11 @@ total------------ 1000*4 = 4000b
 
 saving of 7600b
 
+
+dlms task:
+- can initiate HDLC frames such as RR and DISC to be sent.
+- retries sent frames
+
 ---------------------------------
 compiler platform directives
 
