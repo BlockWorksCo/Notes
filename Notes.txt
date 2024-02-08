@@ -45596,6 +45596,10 @@ over many instances.
 - Eventually, move state into redis(?) and load state from there on receipt of data.
 - failover? state would be in redis, would need to make it restartable in another instance.
 
+- Removing sleeps from dlms.c
+- hdlcLocks need to go, only needed due to multiple tasks using hdlc/dlms.
+- mutexTakes need to go, only needed due to multiple tasks using hdlc/dlms.
+
 ---------------------------------
 compiler platform directives
 
