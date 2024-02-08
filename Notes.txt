@@ -45604,6 +45604,19 @@ over many instances.
 - Need ability to schedule a minimum time delay, the actual delay will likely be longer under load such as upgrading thousands of meters.
 - time-sync task collapse into dev-dlms state machine.
 
+before:
+hdlc stack size 300
+dlms stack size 600
+devdlms stack size 1000
+synch stack size 1000
+total----------- 2900*4 = 11600b
+
+after:
+hdlc stack size 1000
+total------------ 1000*4 = 4000b
+
+saving of 7600b
+
 ---------------------------------
 compiler platform directives
 
