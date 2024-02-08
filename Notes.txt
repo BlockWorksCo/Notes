@@ -45599,6 +45599,7 @@ over many instances.
 - Removing sleeps from dlms.c
 - hdlcLocks need to go, only needed due to multiple tasks using hdlc/dlms.
 - mutexTakes need to go, only needed due to multiple tasks using hdlc/dlms.
+- dlms task, dev-dlms task goes, allowing sync operations to go. All driven from bottom-up hdlc task.
 
 ---------------------------------
 compiler platform directives
