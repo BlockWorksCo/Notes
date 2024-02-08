@@ -45600,6 +45600,7 @@ over many instances.
 - hdlcLocks need to go, only needed due to multiple tasks using hdlc/dlms.
 - mutexTakes need to go, only needed due to multiple tasks using hdlc/dlms.
 - dlms task, dev-dlms task goes, allowing sync operations to go. All driven from bottom-up hdlc task.
+- meter-upgrade has some sleeps in it which exist to allow meter to work while blocking other requests. We could queue a continuation instead.
 
 ---------------------------------
 compiler platform directives
