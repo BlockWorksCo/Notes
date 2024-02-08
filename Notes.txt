@@ -45601,6 +45601,7 @@ over many instances.
 - mutexTakes need to go, only needed due to multiple tasks using hdlc/dlms.
 - dlms task, dev-dlms task goes, allowing sync operations to go. All driven from bottom-up hdlc task.
 - meter-upgrade has some sleeps in it which exist to allow meter to work while blocking other requests. We could queue a continuation instead.
+- Need ability to schedule a minimum time delay, the actual delay will likely be longer under load such as upgrading thousands of meters.
 
 ---------------------------------
 compiler platform directives
