@@ -45666,6 +45666,12 @@ UHES, task thread removal.
 
 - Need to wait on signals from both UART/TCP *and* Queue.
 
+- rewrite osal_posix_queue.c to use pipe() instead, then we can use select to wait on it.
+- Use asyncioRegisterCallback() to get notified of queue messages in device-dlms.c
+- Write an asyncio for FreeRTOS that can wait on queues and sems.
+- make asyncio use epoll() instead of select().
+
+
 
 
 
