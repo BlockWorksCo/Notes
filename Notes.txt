@@ -45653,4 +45653,20 @@ then whenever you want to log:
 - cat loggingPipe
 
 
+--------------------------------------------------
+UHES, task thread removal.
+
+- FreeRTOS:
+    UART: semGiveFromISR()
+    Queue: xQueueReceive()
+-Linux:
+    - UART: asyncio task performing select()
+    - TCP: epoll()
+    - Queue: pthread_cond_wait()
+
+- Need to wait on signals from both UART/TCP *and* Queue.
+
+
+
+
 
