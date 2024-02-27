@@ -45501,6 +45501,11 @@ config:
 entire set of config options and reboot to get latest set. Would remove lots of complexity.
 
 
+---------------------------------------------------------------
+Pushes:
+- Resource reduction:
+    - task removal saves lots of RAM, allows better control of heap lifecycle and simplifies code.
+    - partitioned heap
 
 
 
