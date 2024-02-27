@@ -45497,6 +45497,8 @@ config:
 - RBAC for config options
 - new hierarchy? aliases to old hierarchy?
 - deprecated options should not be in new prodpaks.
+- Current system is agent is very flexible but costly in terms of size and complexity of code. Better to just have bulk setting of
+entire set of config options and reboot to get latest set. Would remove lots of complexity.
 
 
 
