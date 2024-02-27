@@ -45490,6 +45490,13 @@ UHES, task thread removal.
 - Write an asyncio for FreeRTOS that can wait on queues and sems.
 - make asyncio use epoll() instead of select().
 
+-----------------------------------------------------------------------
+config:
+- document detail about options
+- remove unused options (RPL?)
+- RBAC for config options
+- new hierarchy? aliases to old hierarchy?
+- deprecated options should not be in new prodpaks.
 
 
 
