@@ -45525,19 +45525,26 @@ HED-287 write up about standards
 ---------------------------------------
 CNIC manufacturing sequence:
 
-One OBIS each for:
+0.128.96.0.3.255 (Written by node once after startup)
+EUI64
 
+0.128.96.0.9.255 (Written by node once after startup)
+Firmware version
+
+0.128.96.0.18.255
 StaticDataFromNode (written by node once after startup):
 Contents are a structure containing all othe following:
 - IMEI
 - ICCID
 - MSISDN
 
+0.128.96.0.19.255
 DynamicDataFromNode (written by node once every 20s):
 Contents are a structure containing all othe following:
 - (RSSI)
 - testIdentifier (64-bytes, to verify update has completed from StaticDataToNode.testIdentifier)
 
+0.128.96.0.20.255
 StaticDataToNode (polled by node every 10s):
 Contents are a structure containing all othe following:
 - testFlag (bool, false = disable device-testing).
