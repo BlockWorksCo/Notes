@@ -45541,8 +45541,11 @@ Contents are a structure containing all othe following:
 0.128.96.0.19.255
 DynamicDataFromNode (written by node once every 20s):
 Contents are a structure containing all othe following:
-- (RSSI)
-- testIdentifier (64-bytes, to verify update has completed from StaticDataToNode.testIdentifier)
+- RSSI (int16).
+- RSRW (int16).
+- RSRP (int16).
+- testFlag (bool, 0==dev-test disabled)
+- testIdentifier (64-byte octet-string, to verify update has completed from StaticDataToNode)
 
 0.128.96.0.20.255
 StaticDataToNode (polled by node every 10s):
