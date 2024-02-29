@@ -45540,7 +45540,8 @@ Contents are a structure containing all othe following:
 
 StaticDataToNode (polled by node every 10s):
 Contents are a structure containing all othe following:
-- testIdentifier (change from "" to terminate test). (64 bytes string).
+- testFlag (bool, false = disable device-testing).
+- testIdentifier (octet-string, reported back in DynamicDataFromNode for confirmation of write, stored in prod.test.identifier).
 
 So, 3 OBIS codes for the above data, two that are written once (static) and one dynamic.
 
