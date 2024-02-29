@@ -45553,3 +45553,15 @@ Contents are a structure containing all othe following:
 So, 3 OBIS codes for the above data, two that are written once (static) and one dynamic.
 
 
+
+- Node resets
+- Node writes EUI64 to meter
+- Node writes firmware version to meter
+- Node writes StaticDataFromNode to meter
+- Approximately every 10s, the node performs:
+    - write DynamicDataFromNode to meter
+    - read from StaticDataToNode
+
+
+
+
