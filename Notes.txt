@@ -45519,6 +45519,8 @@ absolute value = 1.2*10^3 mV
                 = 1.2*1000 mV
                 = 1200 mV
                 = 1.2V
+HED-287 write up about standards
 
 
+---------------------------------------
 
