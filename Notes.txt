@@ -45523,4 +45523,25 @@ HED-287 write up about standards
 
 
 ---------------------------------------
+CNIC manufacturing sequence:
+
+One OBIS each for:
+
+StaticDataFromNode (written by node once after startup):
+Contents are a structure containing all othe following:
+- IMEI
+- ICCID
+- MSISDN
+
+DynamicDataFromNode (written by node once every 20s):
+Contents are a structure containing all othe following:
+- (RSSI)
+- testIdentifier (64-bytes, to verify update has completed from StaticDataToNode.testIdentifier)
+
+StaticDataToNode (polled by node every 10s):
+Contents are a structure containing all othe following:
+- testIdentifier (change from "" to terminate test). (64 bytes string).
+
+So, 3 OBIS codes for the above data, two that are written once (static) and one dynamic.
+
 
