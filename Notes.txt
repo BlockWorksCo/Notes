@@ -45565,6 +45565,16 @@ So, 3 OBIS codes for the above data, two that are written once (static) and one 
     - write DynamicDataFromNode to meter
     - read from StaticDataToNode
 
+---------------------------------------------------------
+simplification, resource reduction, code removal:
+- PPP modem state machine
+- OSAL, use CMSIS_OS instead? over FreeRTOS?
+- all "Stop" code, its redundant in an embedded system.
+- IPv4 core? when possible.
+- CNDFS? just use direct PersistentCircularBuffers on flash.
+- protobufs for config, just use a struct or straight protobuf?
+- dlmspipe, or at least dynamically allocate stack and start task so it doesnt use up RAM constantly.
+- merge scheduler into asyncio task
 
 
 
