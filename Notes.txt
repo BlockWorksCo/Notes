@@ -45575,6 +45575,9 @@ simplification, resource reduction, code removal:
 - protobufs for config, just use a struct or straight protobuf?
 - dlmspipe, or at least dynamically allocate stack and start task so it doesnt use up RAM constantly.
 - merge scheduler into asyncio task
+- terminal task from asyncio.
+- radio tasks called from asyncio
+- when all tasks are called from asyncio superloop, freertos can go.
 
 
 
