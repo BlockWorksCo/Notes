@@ -45579,6 +45579,8 @@ simplification, resource reduction, code removal:
 - radio tasks called from asyncio
 - when all tasks are called from asyncio superloop, freertos can go.
 - ProdMode and all coap "test" methods, when secure-local-coap is in.
+- IPSEC
+- activity report
 
 
 
