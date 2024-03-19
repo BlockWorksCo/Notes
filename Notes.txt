@@ -45599,4 +45599,5 @@ MTI-98
 ----------------------------------------------------
 ublox upgrade
 
-
+AT+UFWINSTALL=<filename>[,<Serial_Port_Number>[,<BaudRate>]]
+AT+UFWINSTALL="update.bin"
