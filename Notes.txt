@@ -45610,6 +45610,10 @@ AT+UDELFILE="Update_FW_90_to_91.upd"
 HTTP example:
 verbose errors: AT+CMEE=2
 reset profile 0: AT+UHTTP=0
+set server name: AT+UHTTP=0,1,"httpbin.org"
+set serer port: AT+UHTTP=0,5,80
+DNS resolve: AT+UDNSRN=0,"httpbin.org"
+GET request for file: AT+UHTTPC=0,1,"/file.bin","file.bin"
 command: AT+UHTTPC=1,100,"/update_L210_FWI.zip"
 gives URC: +UUHTTPCR: 1,100,1,200,"a57c33e66457a89ad0abb7c2d9aa7938"
 Then use command: AT+UFWINSTALL=a57c33e66457a89ad0abb7c2d9aa7938
