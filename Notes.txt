@@ -45625,4 +45625,28 @@ v15.63 -> v17 ok
 
 ./tools/c4-tools/coap_request.py --modem-fw --modem-fw-host 178.62.35.86 --modem-fw-path /update.zip --modem-fw-user modemupgrade --modem-fw-pass cyanconnode
 
+root@playground:~/FTPRoot# python3 ../SimpleFTPServer.py ^C
+root@playground:~/FTPRoot# python3 ../SimpleFTPServer.py
+[I 2024-03-27 15:07:56] concurrency model: async
+[I 2024-03-27 15:07:56] masquerade (NAT) address: 151.25.42.11
+[I 2024-03-27 15:07:56] passive ports: 60000->65534
+[I 2024-03-27 15:07:56] >>> starting FTP server on 0.0.0.0:21, pid=30759 <<<
+
+
+[I 2024-03-27 15:08:05] 193.192.201.26:51181-[] FTP session opened (connect)
+[I 2024-03-27 15:08:05] 193.192.201.26:51181-[modemupgrade] USER 'modemupgrade' logged in.
+
+
+[I 2024-03-27 15:10:26] 193.192.201.26:36753-[] FTP session opened (connect)
+[I 2024-03-27 15:10:26] 193.192.201.26:36753-[modemupgrade] USER 'modemupgrade' logged in.
+
+[I 2024-03-27 15:10:53] 193.192.201.26:51181-[modemupgrade] RETR /root/FTPRoot/update.zip completed=0 byt
+es=11387104 seconds=166.673
+[I 2024-03-27 15:10:53] 193.192.201.26:51181-[modemupgrade] FTP session closed (disconnect).
+[I 2024-03-27 15:11:12] 193.192.201.26:36753-[modemupgrade] RETR /root/FTPRoot/update.zip completed=1 byt
+es=23144782 seconds=45.099
+[I 2024-03-27 15:11:20] 193.192.201.26:36753-[modemupgrade] FTP session closed (disconnect).
+[I 2024-03-27 15:19:43] 167.94.138.50:33096-[] FTP session opened (connect)
+[I 2024-03-27 15:19:44] 167.94.138.50:33096-[] FTP session closed (disconnect).
+
 
