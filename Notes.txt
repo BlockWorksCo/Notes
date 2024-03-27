@@ -45618,3 +45618,11 @@ command: AT+UHTTPC=1,100,"/update_L210_FWI.zip"
 gives URC: +UUHTTPCR: 1,100,1,200,"a57c33e66457a89ad0abb7c2d9aa7938"
 Then use command: AT+UFWINSTALL=a57c33e66457a89ad0abb7c2d9aa7938
 
+---------------------------------------------------------------------
+modem fw upgrade:
+
+v15.63 -> v17 ok
+
+./tools/c4-tools/coap_request.py --modem-fw --modem-fw-host 178.62.35.86 --modem-fw-path /update.zip --modem-fw-user modemupgrade --modem-fw-pass cyanconnode
+
+
