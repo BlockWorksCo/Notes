@@ -45649,4 +45649,10 @@ es=23144782 seconds=45.099
 [I 2024-03-27 15:19:43] 167.94.138.50:33096-[] FTP session opened (connect)
 [I 2024-03-27 15:19:44] 167.94.138.50:33096-[] FTP session closed (disconnect).
 
+------------------------------------------------------------------------------
+debug certificate:
+
+- just provisioned device will not have any debug cert?
+- NMS should be able to provision a device for debugging and able to revoke permission.
+
 
