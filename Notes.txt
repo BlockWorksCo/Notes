@@ -45654,6 +45654,7 @@ debug certificate:
 
 - just provisioned device will not have any debug cert?
 - Provisioning a device causes the device to generate and send a CSR to the NMS to obtain cert.
+- CSR must be sent over a pre-existing DTLS session to the server.
 - NMS should be able to provision a device for debugging and able to revoke permission.
 - NMS can direct the Device to remove the certificate.
 - Device will authenticate incoming requests against the debug certificate.
