@@ -45661,6 +45661,8 @@ debug certificate:
 - Device will authenticate incoming requests against the debug certificate.
 - Device and coap_request will negotiate a session key using the debug certificate.
 - Device will decrypt incoming requests using its session key.
+- Server authentication is needed to verify that client is connecting to correct, debug-provisioned device.
+- Client authentication is needed to verify that connecting client is allowed to connect.
 
 
 
