@@ -45653,6 +45653,17 @@ es=23144782 seconds=45.099
 debug certificate:
 
 - just provisioned device will not have any debug cert?
+- Provisioning a device causes the device to generate and send a CSR to the NMS to obtain cert.
 - NMS should be able to provision a device for debugging and able to revoke permission.
+- NMS can direct the Device to remove the certificate.
+- Device will authenticate incoming requests against the debug certificate.
+- Device and coap_request will negotiate a session key using the debug certificate.
+- Device will decrypt incoming requests using its session key.
+
+
+
+
+
+
 
 
