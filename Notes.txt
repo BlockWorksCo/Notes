@@ -45666,6 +45666,13 @@ debug certificate:
 
 
 
+- Local CoAP moves to a DTLS transport, leveraging existing mechanisms.
+- Operations that are now able to be triggered via local-CoAP move to being DTLS-secured (i.e. all of them).
+- To use local-CoAP, you will need a debug certificate.
+- the local-coap session will use mutual-authentication, i.e. both sides authenticate each other. this means that:
+    - Both sides need a certificate.
+    - Device-side debug cert is generated via Certificate Signing Request to the server.
+    - Device-side debug cert can be generated externally and
 
 
 
