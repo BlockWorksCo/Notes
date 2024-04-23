@@ -45674,6 +45674,19 @@ debug certificate:
     - Device-side debug cert is generated via Certificate Signing Request to the server.
     - Device-side debug cert can be generated externally and
 
+-------------------------------------------------------
+secure boot:
+- Preprogrammed cert in OTP
+- 2nd stage bootloader is authenticated by SiLabs immutable bootloader prior to execution.
+
+secure upgrade:
+- 2nd stage bootloader (ours) needs to authenticate application prior to upgrading.
+- Against which cert? same as above?
+
+Encrypted comms link between coap_request & DUT:
+- Cant authenticate empty device.
+- Ideally would preprogram cert on to device.
+- encryption only, so key exchange + 'NULL' cert validation.
 
 
 
