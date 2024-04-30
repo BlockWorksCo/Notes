@@ -45690,4 +45690,8 @@ Encrypted comms link between coap_request & DUT:
 
 
 
+------------------------------------------
+aliasid going
+prod.identifier = product code.
+prod.custoemr.ordercode = part number
 
