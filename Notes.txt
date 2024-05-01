@@ -45696,7 +45696,7 @@ prod.identifier = product code.
 prod.custoemr.ordercode = part number
 
 -------------------------------------------------------
-release:
+release v24.12:
 EMD-324: CCA failure messages now show noise floor (cosmetic)
 EMD-222: Unresponsive long-range parents marked as such and joining not attempted.
 EMD-217: RPL bug causing leaving and rapid rejoining of nodes onto mesh.
