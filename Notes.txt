@@ -45704,4 +45704,22 @@ EMD-216: Logging out of packet tx/rx events (cosmetic)
 EMD-157: Tunnel timeout overide period is half what it should be.
 EMD-146: Code coverage metrics to agent codebase.
 
+--------------------------------------------------------
+
+  #0 0x5622bfbfb0d8 in vTaskSwitchContext build/3pp/freertos/FreeRTOS/Source/tasks.c:2833                                                                                       
+  #1 0x5622bfb63bd6 in vSwitchAndTickAsNeeded src/platform/freertos/freertos_port-linux/freertos_port/port.c:337                                                                
+  #2 0x5622bfb63fa0 in vPortYield src/platform/freertos/freertos_port-linux/freertos_port/port.c:417                                                                            
+  #3 0x5622bfb640b3 in vPortYieldWithinAPI src/platform/freertos/freertos_port-linux/freertos_port/port.c:460                                                                   
+  #4 0x5622bfbf8902 in xQueueGenericReceive build/3pp/freertos/FreeRTOS/Source/queue.c:1401                                                                                     
+  #5 0x5622bfb650ed in OS_queueReceive src/platform/osal/osal-freertos/osal_freertos.c:294                                                                                      
+  #6 0x5622bfa14849 in coapTask src/communication/coap/coap_task.c:2112                                                                                                         
+  #7 0x5622bfb64958 in taskWrapper src/platform/osal/osal-freertos/osal_freertos.c:136                                                                                          
+  #8 0x5622bfb6326e in prvWaitForStart src/platform/freertos/freertos_port-linux/freertos_port/port.c:135                                                                       
+  #9 0x7f0cd4d1a608 in start_thread /build/glibc-wuryBv/glibc-2.31/nptl/pthread_create.c:477                                                                                    
+  #10 0x7f0cd4c3f352 in __clone (/lib/x86_64-linux-gnu/libc.so.6+0x11f352)                                                                                                      
+                                                                                                                                                                                
+5622bfd71c08 is located 0 bytes to the right of global variable 'xDelayedTaskList1' defined in 'build/3pp/freertos/FreeRTOS/Source/tasks.c:378:31' (0x5622bfd71be0) of size 40  
+5622bfd71c08 is located 56 bytes to the left of global variable 'xDelayedTaskList2' defined in 'build/3pp/freertos/FreeRTOS/Source/tasks.c:379:31' (0x5622bfd71c40) of size 40  
+
+
 
