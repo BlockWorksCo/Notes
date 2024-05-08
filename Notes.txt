@@ -45721,5 +45721,13 @@ EMD-146: Code coverage metrics to agent codebase.
 5622bfd71c08 is located 0 bytes to the right of global variable 'xDelayedTaskList1' defined in 'build/3pp/freertos/FreeRTOS/Source/tasks.c:378:31' (0x5622bfd71be0) of size 40  
 5622bfd71c08 is located 56 bytes to the left of global variable 'xDelayedTaskList2' defined in 'build/3pp/freertos/FreeRTOS/Source/tasks.c:379:31' (0x5622bfd71c40) of size 40  
 
+--------------------------
+AddressSanitizer catch breakpoint
+
+catch syscall exit_group
+set env TSAN_OPTIONS=halt_on_error=1
+
+https://stackoverflow.com/questions/63964739/how-to-add-breakpoint-when-thread-sanitizer-reports-data-race
+
 
 
