@@ -45735,5 +45735,6 @@ Neoway N58 chipset
 
 Unisoc UIS8910DM platform
 https://www.unisoc.com/en_us/home/TGYWLW-8910DM-3
+https://pallavaggarwal.in/2024/01/06/teardown-quectel-ec200u-gsm-modem/
 
 
