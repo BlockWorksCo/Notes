@@ -45730,4 +45730,10 @@ set env TSAN_OPTIONS=halt_on_error=1
 https://stackoverflow.com/questions/63964739/how-to-add-breakpoint-when-thread-sanitizer-reports-data-race
 
 
+--------------------------------------------------------------
+Neoway N58 chipset
+
+Unisoc UIS8910DM platform
+https://www.unisoc.com/en_us/home/TGYWLW-8910DM-3
+
 
