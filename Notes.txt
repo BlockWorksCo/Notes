@@ -45797,7 +45797,7 @@ event driven Agent.
 
 
 - PosixQueues, initial work
-- scheduler
+- scheduler... have scheduleAdd create notifications behind the scene and call the given handler.
 - work queue for blocking operations.
 - asyncio for non blocking handlers.
 - MODULE_POINTER in platform_*.c for asyncio.
