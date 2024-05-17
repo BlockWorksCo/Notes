@@ -45791,3 +45791,12 @@ Quectel, SimCOM, Neoway and other support it
 
 https://www.opencpu.org/api.html
 
+----------------------------------------------------
+event driven Agent.
+
+
+
+- PosixQueues, initial work
+- scheduler
+- work queue for blocking operations.
+- asyncio for non blocking handlers.
