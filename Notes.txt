@@ -45801,3 +45801,4 @@ event driven Agent.
 - work queue for blocking operations.
 - asyncio for non blocking handlers.
 - MODULE_POINTER in platform_*.c for asyncio.
+- DLMS pipe is still a separate task.
