@@ -45802,3 +45802,26 @@ event driven Agent.
 - asyncio for non blocking handlers.
 - MODULE_POINTER in platform_*.c for asyncio.
 - DLMS pipe is still a separate task.
+
+---------------------------------------------------------
+future changes:
+
+- task removal/superloop architectural change.
+    - RAM reduction
+    - cost reduction
+    - simplicity/maintenance
+    - head-end agent.
+- Maintenance/upgrade
+    - Ubuntu 24.04 LTS
+    - mbedtls
+    - nanopb
+- Documentation
+- Current MTS
+- New MTS
+- Secure local CoAP
+- Observability/Debugability at scale
+    - GetLastErrorDetails.
+    - Trace log.
+- Tun6d testing
+- Tun6d HA
+
