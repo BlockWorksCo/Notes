@@ -45822,6 +45822,7 @@ future changes:
 - Observability/Debugability at scale
     - GetLastErrorDetails.
     - Trace log.
+    - analysis tool.
 - Tun6d testing
 - Tun6d HA
 - Network throttling
@@ -45829,6 +45830,9 @@ future changes:
 - Large scale test rigs
     - logging
     - analysis
+- cellular performance and stability
+    - analysis
+    - refator modem modules.
 
 
 
