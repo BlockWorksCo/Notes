@@ -45827,6 +45827,8 @@ future changes:
 - Network throttling
     - Agent/gw/tun6d interaction
 - Large scale test rigs
+    - logging
+    - analysis
 
 
 
