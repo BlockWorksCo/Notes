@@ -45837,7 +45837,8 @@ future changes:
     - analysis
 - cellular performance and stability
     - analysis
-    - refator modem modules.
+    - refactor modem modules.
+    - focus on quick recovery to maintain uptime.
 - Omnibox
     - dev test process
 - GW/CNIC costdown
