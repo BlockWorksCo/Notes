@@ -45815,6 +45815,8 @@ future changes:
     - Ubuntu 24.04 LTS
     - mbedtls
     - nanopb
+    - unit test stability
+    - test coverage monitoring
 - Documentation
 - Current MTS
 - New MTS
@@ -45824,7 +45826,10 @@ future changes:
     - Trace log.
     - analysis tool.
 - Tun6d testing
+    - unit testing
+    - module/subsystem testing
 - Tun6d HA
+    - redis?
 - Network throttling
     - Agent/gw/tun6d interaction
 - Large scale test rigs
@@ -45835,6 +45840,9 @@ future changes:
     - refator modem modules.
 - Omnibox
     - dev test process
+- GW/CNIC costdown
+    - OpenCPU/no micro.
+- Node flash removal.
 
 
 
