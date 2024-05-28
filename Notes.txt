@@ -45859,6 +45859,11 @@ Release
 - EMD-359 Bootloop fix due to mq-stall-checker initialising before time is set.
 
 
+---------------------------------------------------------
+Issues:
+
+- timeout to a meter ping results in "Empty response" coap response being sent back which gets
+ignored by SMA and meter-ping times out on server.
 
 
 
