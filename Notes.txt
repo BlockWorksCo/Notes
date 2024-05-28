@@ -45844,6 +45844,11 @@ future changes:
 - GW/CNIC costdown
     - OpenCPU/no micro.
 - Node flash removal.
+- HDLC/DLMS optimisation
+    - maintain open HDLC session
+    - maintain open DLMS association
+    - means less time spent in overehead, and allows more time to respond to HES.
+    - will reduce average response time to/from HES.
 
 --------------------------------------------------------------
 Release
