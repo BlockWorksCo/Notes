@@ -45845,6 +45845,12 @@ future changes:
     - OpenCPU/no micro.
 - Node flash removal.
 
+--------------------------------------------------------------
+Release
+- EMD-211 malaysian channel plan
+- EMD-334 GW7b with new IPA3b build
+- EMD-340 Support for modem test mode in Neoway N58
+
 
 
 
