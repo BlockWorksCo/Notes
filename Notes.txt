@@ -45862,6 +45862,7 @@ Release
 + MTI-271 RTC sync/set events
 + MTI-272 JPM support
 - MTI-258 Avon support
+- EMD-332 modem fw upgrade
 
 
 ---------------------------------------------------------
