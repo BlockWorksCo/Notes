@@ -45852,15 +45852,17 @@ future changes:
 
 --------------------------------------------------------------
 Release v24.14
++ MTI-272 JPM support
 + MTI-339 interface repo change for Avon? where is the server-side?
 + EMD-148 force-ipv4
++ MTI-271 RTC sync/set events
+
 - EMD-334 GW7b with new IPA3b build
 - EMD-340 Support for modem test mode in Neoway N58
 - MTI-82 Holley integration
 - MTI-297 RTC sync and set events (blocked)
-+ MTI-271 RTC sync/set events
-+ MTI-272 JPM support
 - MTI-258 Avon support
+
 - EMD-211 malaysian channel plan (testing)
 - EMD-359 Bootloop fix due to mq-stall-checker initialising before time is set. (testing)
 - EMD-332 modem fw upgrade (testing)
