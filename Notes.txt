@@ -45852,6 +45852,7 @@ future changes:
 
 --------------------------------------------------------------
 Release v24.14
+- MTI-339 interface repo change for Avon? where is the server-side?
 + EMD-148 force-ipv4
 - EMD-211 malaysian channel plan
 - EMD-334 GW7b with new IPA3b build
