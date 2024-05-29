@@ -45851,7 +45851,7 @@ future changes:
     - will reduce average response time to/from HES.
 
 --------------------------------------------------------------
-Release
+Release v24.14
 + EMD-148 force-ipv4
 - EMD-211 malaysian channel plan
 - EMD-334 GW7b with new IPA3b build
