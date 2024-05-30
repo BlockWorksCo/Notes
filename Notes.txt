@@ -45861,6 +45861,7 @@ future changes:
     - small message coalescing?
     - power-control
     - RPL metric to optimise traffic thru mesh to minimise ETX instead of hop counts? research needed.
+- Authenticated OTA upgrades
 
 --------------------------------------------------------------
 Release v24.14
