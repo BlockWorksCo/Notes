@@ -45825,6 +45825,7 @@ future changes:
     - GetLastErrorDetails.
     - Trace log.
     - analysis tool.
+    - synced/timed capture of mesh snapshot
 - Tun6d testing
     - unit testing
     - module/subsystem testing
@@ -45851,6 +45852,11 @@ future changes:
     - maintain open DLMS association
     - means less time spent in overehead, and allows more time to respond to HES.
     - will reduce average response time to/from HES.
+- mesh optimisation
+    - reduce reform time to enhance stability. persistent/timestamped tables?
+    - small message coalescing?
+    - power-control
+    - RPL metric to optimise traffic thru mesh to minimise ETX instead of hop counts? research needed.
 
 --------------------------------------------------------------
 Release v24.14
