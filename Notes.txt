@@ -45820,7 +45820,9 @@ future changes:
 - Documentation
 - Current MTS
 - New MTS
+    - secure prod bootstrap.
 - Secure local CoAP
+    - secure/insecure build merging.
 - Observability/Debugability at scale
     - GetLastErrorDetails.
     - Trace log.
