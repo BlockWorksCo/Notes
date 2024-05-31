@@ -45870,7 +45870,7 @@ Release v24.14
 + EMD-148 force-ipv4
 + MTI-271 RTC sync/set events
 + MTI-258 Avon support
-- EMD-359 Bootloop fix due to mq-stall-checker initialising before time is set.
++ EMD-359 Bootloop fix due to mq-stall-checker initialising before time is set.
 
 - EMD-334 GW7b with new IPA3b build
 - EMD-340 Support for modem test mode in Neoway N58
