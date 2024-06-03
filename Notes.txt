@@ -45863,6 +45863,10 @@ future changes:
     - power-control
     - RPL metric to optimise traffic thru mesh to minimise ETX instead of hop counts? research needed.
 - Authenticated OTA upgrades
+- Power reduction (water & gas):
+    - task removal (resource reduction and sleep time)
+    - flash removal (flash writes expensive).
+    - sleepy mesh
 
 --------------------------------------------------------------
 Release v24.14
