@@ -45810,7 +45810,7 @@ future changes:
     - RAM reduction
     - cost reduction
     - simplicity/maintenance
-    - head-end agent.
+    - head-end agent (OpenHES/UHES).
 - Maintenance/upgrade
     - Ubuntu 24.04 LTS
     - mbedtls
