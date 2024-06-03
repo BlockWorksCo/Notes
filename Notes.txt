@@ -45876,13 +45876,13 @@ Release v24.14
 + MTI-271 RTC sync/set events
 + MTI-258 Avon support
 + EMD-359 Bootloop fix due to mq-stall-checker initialising before time is set.
++ EMD-211 malaysian channel plan
 
 - EMD-334 GW7b with new IPA3b build
 - EMD-340 Support for modem test mode in Neoway N58
 - MTI-82 Holley integration
 - MTI-297 RTC sync and set events (blocked)
 
-- EMD-211 malaysian channel plan (testing)
 - EMD-332 modem fw upgrade (testing)
 
 
