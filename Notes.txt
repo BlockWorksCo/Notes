@@ -45856,6 +45856,7 @@ future changes:
     - means less time spent in overehead, and allows more time to respond to HES.
     - will reduce average response time to/from HES.
     - break up long-running operations to allow better response to server requests.
+    - remove tx: rx: debug output for hdlc as it slows down meter interaction.
 - mesh optimisation
     - reduce reform time to enhance stability. persistent/timestamped tables?
     - small message coalescing?
