@@ -45821,6 +45821,7 @@ future changes:
 - Current MTS
 - New MTS
     - secure prod bootstrap.
+    - socat replacement
 - Secure local CoAP
     - secure/insecure build merging.
 - Observability/Debugability at scale
