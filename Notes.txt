@@ -45880,7 +45880,7 @@ Release v24.14
 + EMD-211 malaysian channel plan
 + EMD-332 modem fw upgrade
 
-- EMD-334 GW7b with new IPA3b build
+- EMD-334 GW7b with new IPA3b build (And Sarawak IPA3b pinout changes)
 - EMD-340 Support for modem test mode in Neoway N58
 - MTI-82 Holley integration
 - MTI-297 RTC sync and set events (blocked)
