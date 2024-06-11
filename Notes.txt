@@ -45872,10 +45872,8 @@ future changes:
 --------------------------------------------------------------
 Release v24.14
 + MTI-272 JPM support
-+ MTI-339 interface repo change for Avon? where is the server-side?
 + EMD-148 force-ipv4
 + MTI-271 RTC sync/set events
-+ MTI-258 Avon support
 + EMD-359 Bootloop fix due to mq-stall-checker initialising before time is set.
 + EMD-211 malaysian channel plan
 + EMD-332 modem fw upgrade
@@ -45885,6 +45883,8 @@ Release v24.14
 - MTI-82 Holley integration
 - MTI-297 RTC sync and set events (blocked)
 
++ MTI-258 Avon support (reverted)
++ MTI-339 interface repo change for Avon? where is the server-side? (reverted)
 
 
 ---------------------------------------------------------
