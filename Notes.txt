@@ -45893,5 +45893,20 @@ Issues:
 - timeout to a meter ping results in "Empty response" coap response being sent back which gets
 ignored by SMA and meter-ping times out on server.
 
+-----------------------------------------------
+tasks:
+
+- Time sync events go where in the SMA
+    - "virtual" profile in SMA?
+    - separate tab?
+    - bypass NMS?
+    - what about existing meter events tmo, etc.
+
+- How to analyse performance of large mesh.
+    - SLA scripts?
+    - metrics?
+    - analyse each node and overall records.
+    - clear db on test start.
+    - defined test period or ongoing?
 
 
