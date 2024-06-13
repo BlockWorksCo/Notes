@@ -45868,6 +45868,10 @@ future changes:
     - task removal (resource reduction and sleep time)
     - flash removal (flash writes expensive).
     - sleepy mesh
+- Deprecate old code from codebase
+    - Kaifa
+    - L&G e350
+    - HW1
 
 --------------------------------------------------------------
 Release v24.14
