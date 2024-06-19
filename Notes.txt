@@ -45872,6 +45872,9 @@ future changes:
     - Kaifa
     - L&G e350
     - HW1
+- Unit test coverage
+- Documentation
+
 
 --------------------------------------------------------------
 Release v24.14
