@@ -45918,4 +45918,17 @@ skip CI
 git push -o co.skip
 
 
+-------------------------------------
+Peter
+
+Yes, I do believe it would be best to extend Peters contract, he has significant experience in the mesh and RPL algorithms that we are 
+using and has recently delivered some improvements to the mesh that are in the process of being field-qualified on the latest release.
+(Specifically EMD-217,222 and 226).
+This is useful knowledge and has taken significant load of myself, freeing me up to concentrate on other areas. We still have work to 
+do in making the mesh robust as we scale up and the "large mesh" test bed is key to that.
+If we extend his contract for another 6 months, I can envision him working on analysis and improvement of RPL/mesh behaviour using the
+large mesh setup to get to the bottom of what Matt calls the "1% issues", i.e. the hard-to-reproduce networking issues that we see.
+I beleive these types of issues will become more important as we scale up and the "1%" starts hitting a noticeable number of nodes.
+
+
 
