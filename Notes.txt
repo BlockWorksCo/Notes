@@ -45992,11 +45992,13 @@ RTC sync events:
     - push from meter with no data
 - Need a UI for this also?
 
-- Possibly add a psuedo-profile that contains "metering events".
+- Possibly add a pseudo-profile that contains "metering events".
 - Completely new table and protocol in the SMA? seems unnecessary for what is effectively a "profile".
 
 - deviceError, reportOperationResult and MeterUpgradeReportResult need to be redirected to new profile.
 - cant store any data on nodes, must send immediately, ODR wont work.
+- Might be confusing to have a "special" profile.
+- would have to make up OBIS codes for each item.
 
 
 
