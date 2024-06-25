@@ -45990,6 +45990,12 @@ RTC sync events:
     - invalid sample time stamps
     - other scripts use meter-upgrade events, so need to leave them.
     - push from meter with no data
+- Need a UI for this also?
+
+- Possibly add a psuedo-profile that contains "metering events".
+- Completely new table and protocol in the SMA? seems unnecessary for what is effectively a "profile".
+
+- deviceError, reportOperationResult and MeterUpgradeReportResult need to be redirected to new profile.
 
 
 
