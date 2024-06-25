@@ -45998,7 +45998,8 @@ RTC sync events:
 - deviceError, reportOperationResult and MeterUpgradeReportResult need to be redirected to new profile.
 - cant store any data on nodes, must send immediately, ODR wont work.
 - Might be confusing to have a "special" profile.
-- would have to make up OBIS codes for each item.
+- would have to make up OBIS codes for each item of structure.
+- Would go into mq and get sent up in next mq push.
 
 
 
