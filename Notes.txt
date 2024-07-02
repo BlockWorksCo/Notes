@@ -46005,4 +46005,9 @@ RTC sync events:
 ----------------------------------
 ASSERT failed: device-dlms.c:5037
 
+------------------------------------------------
+IPA test jig
+
+- tx packet at given power
+- rx packet, report RSSI
 
