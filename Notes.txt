@@ -46011,3 +46011,10 @@ IPA test jig
 - tx packet at given power
 - rx packet, report RSSI
 
+--------------------------------------------
+RP2040 debug probe
+
+CMSIS-DAP interface
+orange=SWCLK
+yellow=SWDIO
+
