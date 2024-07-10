@@ -46018,3 +46018,15 @@ CMSIS-DAP interface
 orange=SWCLK
 yellow=SWDIO
 
+------------------------------------------------
+
+Adam: EMD-383
+Vivek: EMD-314
+Steve: EMD-314
+Raja: EMD-225
+Ajay: 
+Deena: EMD-361
+Peter: EMD-192 EMD-368
+
+
+
