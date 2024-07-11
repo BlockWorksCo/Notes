@@ -45873,7 +45873,6 @@ future changes:
     - L&G e350
     - HW1
 - Unit test coverage
-- Documentation
 - DLMS & HDLC context removal
     - Might need dlms-pipe to be moved to notifications first.
 
