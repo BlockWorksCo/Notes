@@ -46033,9 +46033,9 @@ Lixin:
 errors: CND-14046
 
 garbled: RAM corruption
-S~device:171 ASSERT FAILED
+S~device:171 ASSERT FAILED : deviceError() with NULL deviceId
 S~device-dlms:2935 ASSERT FAILED
-S~device-dlms:3164 ASSERT FAILED
+S~device-dlms:3164 ASSERT FAILED : discoverProfiles() hit default switch case.
 S~dlms:2125 ASSERT FAILED : dlmsCalculateTimePeriodForSample() now == 0
 S~dlms:2126 ASSERT FAILED : dlmsCalculateTimePeriodForSample() now == 0
 S~fs_api_cndfs:57 ASSERT FAILED
