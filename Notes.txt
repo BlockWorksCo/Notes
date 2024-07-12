@@ -46038,8 +46038,8 @@ S~device-dlms:2935 ASSERT FAILED
 S~device-dlms:3164 ASSERT FAILED : discoverProfiles() hit default switch case.
 S~dlms:2125 ASSERT FAILED : dlmsCalculateTimePeriodForSample() now == 0
 S~dlms:2126 ASSERT FAILED : dlmsCalculateTimePeriodForSample() now == 0
-S~fs_api_cndfs:57 ASSERT FAILED
-S~mbedtls_funcs:85 ASSERT FAILED
+S~fs_api_cndfs:57 ASSERT FAILED : CNDFS setError() called with a bad task number! (RAM corruption?)
+S~mbedtls_funcs:85 ASSERT FAILED : mbedtls_md_setup() failed! (corruption? very unusual!)
 
 
 
