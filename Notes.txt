@@ -46041,20 +46041,27 @@ S~mbedtls_funcs:85 ASSERT FAILED : mbedtls_md_setup() failed! (corruption? very 
 
 
 -----------------------------------------
-golden 
-calibration:
-- define Golden-node calibration process
-- define Golden-node UART comms protocol.
-- Golden-node build
-- store rx and tx mapping tables.
-- store timestamp of cal.
-- Modify radio driver to use calibration tables for RF levels.
+New MTS test jig IPA NIC7
 
-- implement Golden-node comms protocol on UART.
-- implement handlers for GPIO state set/get
-- implement handlers for RF level get (RSSI)
-- implement handlers for RF level set (tx power continuous)
-- implement handlers for RF tx packet (tx power)
-- implement handlers for RF rx packet (tx power)
+CC work:
+golden-node:
+- define Golden-node calibration process [3d]
+- define Golden-node UART comms protocol. [3d]
+- Golden-node build [1d]
+- store rx and tx mapping tables. [5d]
+- store timestamp of cal. [1d]
+- Modify radio driver to use calibration tables for RF levels. [5d]
+
+- implement Golden-node comms protocol on UART. [5d]
+- implement handlers for GPIO state set/get [2d]
+- implement handlers for RF level get (RSSI) [2d]
+- implement handlers for RF level set (tx power continuous) [2d]
+- implement handlers for RF tx packet (tx power) [2d]
+- implement handlers for RF rx packet (tx power) [2d]
+
+Ajit work:
+- Node-under-test image.
+
+
 
 
