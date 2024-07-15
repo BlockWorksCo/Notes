@@ -46026,7 +46026,7 @@ Raja: EMD-225 (Proxy handlers for fw upgrade on gw7)
 Ajay: EMD-306 (Secure/https reqeusts to MTS from TC). 
 Deena: EMD-361 (Quectel modem bringup)
 Peter: EMD-192 (RPL status snapshot) EMD-368 (Missing ICCID for gw on HES UI)
-Lixin:
+Lixin:A emd-365
 
 
 --------------------------------------
@@ -46039,5 +46039,14 @@ S~dlms:2125/6 ASSERT FAILED : dlmsCalculateTimePeriodForSample() now == 0
 S~fs_api_cndfs:57 ASSERT FAILED : CNDFS setError() called with a bad task number! (RAM corruption?)
 S~mbedtls_funcs:85 ASSERT FAILED : mbedtls_md_setup() failed! (corruption? very unusual!)
 
+
+-----------------------------------------
+golden 
+calibration:
+- store rx and tx mapping tables.
+- store timestamp of cal.
+
+- define UART test protocol.
+- implement handlers
 
 
