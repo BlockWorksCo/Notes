@@ -46059,6 +46059,8 @@ golden-node:
 - implement handlers for RF tx packet (tx power) [2d]
 - implement handlers for RF rx packet (tx power) [2d]
 
+Total 33 days (~6/7 weeks)
+
 Ajit work:
 - Node-under-test image.
 
