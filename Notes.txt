@@ -46064,6 +46064,16 @@ Total 33 days (~6/7 weeks)
 Ajit work:
 - Node-under-test image.
 
+-----------------------------------
+MTS test framework
+- MTS unit tests
+- MTS test harness
+- MTS/TC/GW7 test harness
+- MTS/TC/IPA3 test harness
+- MTS/TC/GW7 initial test cases
+- MTS/TC/IPA3 initial test cases
+- CI integration
+
 
 
 
