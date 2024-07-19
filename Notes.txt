@@ -46077,7 +46077,7 @@ MTS test framework
 ---------------------------------------------------
 Discovery process
 
-- foreach profile:
+- foreach data profile:
     md5Init(profileHash)
     md5Update(profileHash, profileOBIS) [6 bytes]
     md5Update(profileHash, capturePeriod) [uint32, Get from profileOBIS, attr 4 of class 7]
@@ -46091,4 +46091,5 @@ Discovery process
 
     md5Finalise(profileHash)
 
+- foreach event profile:
 
