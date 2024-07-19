@@ -46074,6 +46074,19 @@ MTS test framework
 - MTS/TC/IPA3 initial test cases
 - CI integration
 
+---------------------------------------------------
+Discovery process
 
+- foreach profile:
+    md5Init(profileHash)
+    md5Update(profileHash, profileOBIS) [6 bytes]
+    md5Update(profileHash, capturePeriod) [4 bytes]
+    md5Update(profileHash, features) [4 bytes]
+    foreach register in profile:
+       md5Update(profileHash, IC) [2 bytes] 
+       md5Update(profileHash, OBIS) [6 bytes] 
+       md5Update(profileHash, attributeId) [1 byte] 
+
+    md5Finalise(profileHash)
 
 
