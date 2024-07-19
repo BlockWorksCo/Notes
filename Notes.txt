@@ -46086,6 +46086,8 @@ Discovery process
        md5Update(profileHash, IC) [2 bytes] 
        md5Update(profileHash, OBIS) [6 bytes] 
        md5Update(profileHash, attributeId) [1 byte] 
+       md5Update(profileHash, attributeId) [1 byte] 
+       md5Update(profileHash, scalerUnit) [first 4 bytes of the 6 read from OBIS, attr 3 or 4 if IC is 5] 
 
     md5Finalise(profileHash)
 
