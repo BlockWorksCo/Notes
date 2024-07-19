@@ -46080,7 +46080,7 @@ Discovery process
 - foreach profile:
     md5Init(profileHash)
     md5Update(profileHash, profileOBIS) [6 bytes]
-    md5Update(profileHash, capturePeriod) [4 bytes]
+    md5Update(profileHash, capturePeriod) [4 bytes, attr 4 of class 7]
     md5Update(profileHash, features) [4 bytes, uint32, constant defined by Agent]
     foreach register in profile:
        md5Update(profileHash, IC) [2 bytes] 
