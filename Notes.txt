@@ -46093,3 +46093,11 @@ Discovery process
 
 - foreach event profile:
 
+
+--------------------------------------
+sprint7 integration branch:
+- EMD-325
+- EMD-362
+- EMD-355
+- EMD-368
+- MTI-351
