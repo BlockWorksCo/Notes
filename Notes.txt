@@ -46078,6 +46078,7 @@ MTS test framework
 Discovery process
 
 - Hash for profile metadata
+`
 foreach data profile:
     md5Init(profileHash)
     md5Update(profileHash, profileOBIS) [6 bytes]
@@ -46091,13 +46092,16 @@ foreach data profile:
        md5Update(profileHash, scalerUnit) [first 4 bytes of the 6 read from OBIS, attr 3 or 4 if IC is 5] 
 
     md5Finalise(profileHash)
+`
 
 
 - Hash over all profile-hashes
+`
 md5Init(profilesHash)
 foreach profile:
     md5Update(profilesHash, profileOBIS) [6 bytes]
     md5Update(profilesHash, profileHash) [16 bytes]
+`
 
 --------------------------------------
 sprint7 integration branch:
