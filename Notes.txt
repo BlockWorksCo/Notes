@@ -46094,6 +46094,12 @@ Discovery process
 - foreach event profile:
 
 
+
+- md5Init(profilesHash)
+- foreach profile:
+    md5Update(profilesHash, profileOBIS) [6 bytes]
+    md5Update(profilesHash, profileHash) [16 bytes]
+
 --------------------------------------
 sprint7 integration branch:
 - EMD-325
