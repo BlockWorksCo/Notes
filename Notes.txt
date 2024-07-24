@@ -46110,3 +46110,11 @@ sprint7 integration branch:
 - EMD-355
 - EMD-368
 - MTI-351
+- EMD-150 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/487
+- EMD-172 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/532
+
+
+
+
+
+
