@@ -46106,7 +46106,7 @@ foreach profile:
 --------------------------------------
 sprint7 integration branch:
 - EMD-325 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/533
-- EMD-362
+- EMD-362 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/534
 - MTI-351
 - EMD-150 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/487
 - EMD-172 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/532
