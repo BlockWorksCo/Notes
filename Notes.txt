@@ -46110,8 +46110,9 @@ sprint7 integration branch:
 - MTI-351 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/535
 - EMD-150 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/487
 - EMD-172 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/532
-- EMD-181
 
+
+- EMD-181
 - EMD-340 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/513 Needs NewParameters discussion.
 
 
