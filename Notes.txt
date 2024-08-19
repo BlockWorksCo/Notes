@@ -46131,9 +46131,19 @@ CNIC manufacturing
 - To what extent should diagnostics be part of integration testing?
     - If very large %age of boards fail -> stop prod run, analyse all failed boards while prod stopped.
     - If small %age of boards fail -> analyse each individually, off the prod line so it can continue.
-    - Either way, we have a relatively small number of boards to analyse. Why are we continuint to produce boards with large failure rate?
+    - Either way, we have a relatively small number of boards to analyse. Why are we continuing to produce boards with large failure rate?
     - Current analysis procedure is to attach ctrlporthub to each individually and log output. This could be streamlined, but is not the purpose of the MTS.
 - MEA procedure appears to be manual (waiting for LEDs, etc). This is intended to be an automated process.
+    - LED patterns are defined and standardised
+
+
+
+What does the solution look like:
+Either:
+    - Existing test process/script with Agent that simply reports last LOG_ERROR into another register for readout.
+    - Problem: The integration process is intended to be automated, MEA process is manual and temporary.
+Or:
+    - Separate application that hooks up to log UART, reads logs.
 
 
 
