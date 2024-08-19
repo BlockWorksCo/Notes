@@ -46124,6 +46124,8 @@ CNIC manufacturing
     - Manufacturing stations are connected to meter only, not to log UART. MEA is a special case where integration is into a test meter
     for retro-fitting into an in-field meter.
     - Retro-fit CNIC module test case has not been defined.
+- Diagnostic data has to come through meter as no other interface physically exists.
+    - Diagnostic register can be defined with error code & text. Maybe LOG_ERROR can update it?
 
 
 
