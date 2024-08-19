@@ -46143,9 +46143,10 @@ Either:
     - Existing test process/script with Agent that simply reports last LOG_ERROR into another register for readout.
     - Problem: The integration process is intended to be automated, MEA process is manual and temporary (and different due to retrofit).
 Or:
-    - Separate application that hooks up to log UART, reads logs.
+    - Separate application that hooks up to log UART, reads logs (i.e. ctrlporthub).
 
 
 
 
+Retrofit process differences (online/manual/diag) -> 
 
