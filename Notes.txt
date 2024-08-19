@@ -46121,6 +46121,9 @@ CNIC manufacturing
     - Test with a test SIM that is valid in mfg location?
 - Using LEDs as a method to convey diagnsotic information is not feasible given the number of required combinations is very large.
     - Diagnostics should be performed via ctrlporthub, outside of the MTS.
+    - Manufacturing stations are connected to meter only, not to log UART. MEA is a special case where integration is into a test meter
+    for retro-fitting into an in-field meter.
+    - Retro-fit CNIC module test case has not been defined.
 
 
 
