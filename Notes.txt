@@ -46131,6 +46131,8 @@ CNIC manufacturing
 - To what extent should diagnostics be part of integration testing?
     - If very large %age of boards fail -> stop prod run, analyse all failed boards while prod stopped.
     - If small %age of boards fail -> analyse each individually, off the prod line so it can continue.
+    - Either way, we have a relatively small number of boards to analyse. Why are we continuint to produce boards with large failure rate?
+    - Current analysis procedure is to attach ctrlporthub to each individually and log output. This could be streamlined, but is not the purpose of the MTS.
 
 
 
