@@ -46128,6 +46128,9 @@ CNIC manufacturing
     - Diagnostic register can be defined with error code & text. Maybe LOG_ERROR can update it?
     - Would require Agent to contain code that identifies errors and updates diagnsotic register. This is a new development.
 - The major failure has been prodpak issues. These should absolutely be tested prior to major production run. That is unrelated to this document.
+- To what extent should diagnostics be part of integration testing?
+    - If very large %age of boards fail -> stop prod run, analyse all failed boards while prod stopped.
+    - If small %age of boards fail -> analyse each individually, off the prod line so it can continue.
 
 
 
