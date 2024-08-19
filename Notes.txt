@@ -46115,6 +46115,10 @@ sprint7 integration branch:
 - EMD-181
 - EMD-340 https://gitlab.cyco.io/Omnimesh/terminal/-/merge_requests/513 Needs NewParameters discussion.
 
+------------------------------------------------
+CNIC manufacturing
+- MEA process requires modem to connect, documented process does not as SIMs are not necessarilly valid for manufacturing location.
+    - Test with a test SIM that is valid in mfg location?
 
 
 
