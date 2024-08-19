@@ -46119,6 +46119,8 @@ sprint7 integration branch:
 CNIC manufacturing
 - MEA process requires modem to connect, documented process does not as SIMs are not necessarilly valid for manufacturing location.
     - Test with a test SIM that is valid in mfg location?
+- Using LEDs as a method to convey diagnsotic information is not feasible given the number of required combinations is very large.
+    - Diagnostics should be performed via ctrlporthub, outside of the MTS.
 
 
 
