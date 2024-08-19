@@ -46126,6 +46126,8 @@ CNIC manufacturing
     - Retro-fit CNIC module test case has not been defined.
 - Diagnostic data has to come through meter as no other interface physically exists.
     - Diagnostic register can be defined with error code & text. Maybe LOG_ERROR can update it?
+    - Would require Agent to contain code that identifies errors and updates diagnsotic register. This is a new development.
+- The major failure has been prodpak issues. These should absolutely be tested prior to major production run. That is unrelated to this document.
 
 
 
