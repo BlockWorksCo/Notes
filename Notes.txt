@@ -46168,11 +46168,11 @@ Retrofit process differences (online/manual/diag) ->
 
 
 Test stages:
-- Module prod test              -
-- I/F board prod test           -
-- ProdPak test                  -
-- Meter/node integration test   -
-- Final installation check      -
+- Module prod test              - modem/SoC connectivity, GPIO connectivity.
+- I/F board prod test           - Bad SIM holder, meter header connectivity, super-cap?.
+- ProdPak test                  - Config issues such as APN, modem credentials & flags.
+- Meter/node integration test   - meter/node connectivity
+- Final installation check      - SIM activation
 
 
 
