@@ -46153,3 +46153,18 @@ Or:
 
 Retrofit process differences (online/manual/diag) -> 
 
+
+
+    Damaged SIM card slot                                                           - I/F board prod test.
+    Incorrectly configured devices from CC production                               - prodpak test
+    SIM card not activated                                                          - Final installation check.
+    Wrong APN                                                                       -
+    EFM32 chip unable to communicate with the modem due to manufacturing issue      -
+    Modem fault                                                                     -
+    Interface Card assembly fault                                                   -
+    CC  CNIC manufacturing Fault                                                    -
+    Infrastructure issues denying a CNIC to login to HES.                           -
+    HES may be down but cellular is working.                                        -
+
+
+
