@@ -45925,10 +45925,10 @@ git push -o co.skip
 -------------------------------------
 Peter
 
-Yes, I do believe it would be best to extend Peters contract, he has significant experience in the mesh and RPL algorithms that we are 
+Yes, I do believe it would be best to extend Peters contract, he has significant experience in the mesh and RPL algorithms that we are
 using and has recently delivered some improvements to the mesh that are in the process of being field-qualified on the latest release.
 (Specifically EMD-217,222 and 226).
-This is useful knowledge and has taken significant load of myself, freeing me up to concentrate on other areas. We still have work to 
+This is useful knowledge and has taken significant load of myself, freeing me up to concentrate on other areas. We still have work to
 do in making the mesh robust as we scale up and the "large mesh" test bed is key to that.
 If we extend his contract for another 6 months, I can envision him working on analysis and improvement of RPL/mesh behaviour using the
 large mesh setup to get to the bottom of what Matt calls the "1% issues", i.e. the hard-to-reproduce networking issues that we see.
@@ -46023,7 +46023,7 @@ Adam: EMD-383 (Add detection of charging fault state to gw)
 Vivek: EMD-314 (RAM reduction)
 Steve: EMD-314 (RAM reduction)
 Raja: EMD-225 (Proxy handlers for fw upgrade on gw7)
-Ajay: EMD-306 (Secure/https reqeusts to MTS from TC). 
+Ajay: EMD-306 (Secure/https reqeusts to MTS from TC).
 Deena: EMD-361 (Quectel modem bringup)
 Peter: EMD-192 (RPL status snapshot) EMD-368 (Missing ICCID for gw on HES UI)
 Lixin:A emd-365
@@ -46085,11 +46085,11 @@ foreach data profile:
     md5Update(profileHash, capturePeriod) [uint32, Get from profileOBIS, attr 4 of class 7]
     md5Update(profileHash, features) [4 bytes, uint32, constant defined by Agent]
     foreach register in profile: [Get from attribute 3/CaptureObjects from profileOBIS]
-       md5Update(profileHash, IC) [2 bytes] 
-       md5Update(profileHash, OBIS) [6 bytes] 
-       md5Update(profileHash, attributeId) [1 byte] 
+       md5Update(profileHash, IC) [2 bytes]
+       md5Update(profileHash, OBIS) [6 bytes]
+       md5Update(profileHash, attributeId) [1 byte]
        md5Update(profileHash, attributeId) [1 byte, duplicate of above]
-       md5Update(profileHash, scalerUnit) [first 4 bytes of the 6 read from OBIS, attr 3 or 4 if IC is 5] 
+       md5Update(profileHash, scalerUnit) [first 4 bytes of the 6 read from OBIS, attr 3 or 4 if IC is 5]
 
     md5Finalise(profileHash)
 `
@@ -46151,7 +46151,7 @@ Or:
 
 
 
-Retrofit process differences (online/manual/diag) -> 
+Retrofit process differences (online/manual/diag) ->
 
 
 
@@ -46174,5 +46174,7 @@ Test stages:
 - Meter/node integration test   - meter/node connectivity, UART, event and pfail.
 - Final installation check      - SIM activation
 
+------------------------------------------------------------------------
+reviews, MTS RC & Adams ticket review.
 
 
