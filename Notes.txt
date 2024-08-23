@@ -46191,4 +46191,5 @@ FG28 port
     - Drop FreeRTOS, go baremetal eventloop/superloop style.
     - mq persisted into circular buffer of flash sectors, overallocated to account for wear & bad blocks).
     - Rewrite bootloader to be very much smaller
-    - Aim to get image size down to total flash-size/3 to allow storage in internal flash.
+    - Aim to get image size down to total flash-size/3 to allow storage of new image in internal flash. Hopefully use bank-switching also?
+    - bluetooth stack size?
