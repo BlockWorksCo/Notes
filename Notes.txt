@@ -46178,3 +46178,17 @@ Test stages:
 reviews, MTS RC & Adams ticket review.
 wiki page
 
+-------------------------------------------------------------------------
+FG28 port
+- based on FG25 
+
+"New" Agent
+- Target FG28
+- Only functionality required to support meter-driver.
+    - Use mbedtls stack (our stack is very close to Thread/OpenThread stack and will allow easy migration to WiSUN).
+    - Port event-driven meter-driver onto mbedtls event loop.
+    - Drop filesystem
+    - Drop FreeRTOS, go baremetal eventloop/superloop style.
+    - mq persisted into circular buffer of flash sectors, overallocated to account for wear & bad blocks).
+    - Rewrite bootloader to be very much smaller
+    - Aim to get image size down to total flash-size/3 to allow storage in internal flash.
