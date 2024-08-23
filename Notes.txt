@@ -46186,6 +46186,7 @@ FG28 port
 - Target FG28
 - Only functionality required to support meter-driver.
     - Use mbedtls stack (our stack is very close to Thread/OpenThread stack and will allow easy migration to WiSUN).
+        - Is this possible? RPL interaction with C4 nodes? IPv6 fragmentation & header compatibility?
     - Port event-driven meter-driver onto mbedtls event loop.
     - Drop filesystem
     - Drop FreeRTOS, go baremetal eventloop/superloop style.
