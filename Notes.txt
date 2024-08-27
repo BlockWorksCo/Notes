@@ -46206,8 +46206,9 @@ OpenCPU/N58 port
     - gcc-arm?
 - resources
     - CPU : Cortex A5 500MHz
-    - flash
-    - RAM
+    - flash fs 1.2MB
+    - code space: 1.8MB? clarification of ROM? APPIMG says 192KB == far too small.
+    - RAM 900KB is ok
     - GPIO (interupt driven?)
     - UART
     - SPI?
@@ -46221,6 +46222,8 @@ OpenCPU/N58 port
     - provisioning
         - writing of files individually?
         - May have to pre-from the .pac and images prior to programming.
+- OTA:
+    - how is this possible to upgrade running image?
 
 
 
