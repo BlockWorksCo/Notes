@@ -46210,7 +46210,7 @@ OpenCPU/N58 port
     - code space: 1.8MB? clarification of ROM? APPIMG says 192KB == far too small.
     - RAM 900KB is ok
     - GPIO (interupt driven?)
-    - UART
+    - UART, callback for received data.
     - SPI?
 - API:
     - OSAL port
@@ -46227,6 +46227,7 @@ OpenCPU/N58 port
     - Do we need to use FTP? FTPS? will have implications on NMS/alternate upgrade server.
     - Wont be able to control download rate other than thru initiating in a controlled way.
 
+- All APIs are prefixed with nwy_ indicating that this is not portable to Quectel and others.
 
 
 
