@@ -46225,6 +46225,8 @@ OpenCPU/N58 port
 - OTA:
     - how is this possible to upgrade running image?
     - Do we need to use FTP? FTPS? will have implications on NMS/alternate upgrade server.
+    - Wont be able to control download rate other than thru initiating in a controlled way.
+
 
 
 
