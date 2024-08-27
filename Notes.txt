@@ -46220,6 +46220,7 @@ OpenCPU/N58 port
         - Can we get a Linux version of RESEARCHDOWNLOAD and firmware merging tools?
     - provisioning
         - writing of files individually?
+        - May have to pre-from the .pac and images prior to programming.
 
 
 
