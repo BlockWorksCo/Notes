@@ -46226,6 +46226,8 @@ OpenCPU/N58 port
     - how is this possible to upgrade running image?
     - Do we need to use FTP? FTPS? will have implications on NMS/alternate upgrade server.
     - Wont be able to control download rate other than thru initiating in a controlled way.
+    - How is rollback handled? e.g. corrupted download? integrity check?
+    - Authentication of .pac?
 
 - All APIs are prefixed with nwy_ indicating that this is not portable to Quectel and others.
 
