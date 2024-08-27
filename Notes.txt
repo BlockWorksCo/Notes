@@ -46197,4 +46197,25 @@ FG28 port
     - bluetooth stack size?
 
 
+------------------------------------------------------------------
+OpenCPU/N58 port
+
+- toolchain
+    - Download script needs writing of .pac file using AT^FORCEDNLD or AT+CFUN=9,0. Need protocol description.
+    - debugger?
+    - gcc-arm?
+- resources
+    - flash
+    - RAM
+    - GPIO (interupt driven?)
+    - UART
+    - SPI?
+- API:
+    - OSAL port
+    - Modem/at_chat port
+- production
+    - programming
+    - provisioning
+
+
 
