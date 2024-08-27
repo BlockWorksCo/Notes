@@ -46209,9 +46209,9 @@ OpenCPU/N58 port
     - flash fs 1.2MB
     - code space: 1.8MB? clarification of ROM? APPIMG says 192KB == far too small.
     - RAM 900KB is ok
-    - GPIO (interupt driven?)
+    - GPIO (callbacks for ISR)
     - UART, callback for received data.
-    - SPI?
+    - SPI yes and VFS flash mounting
 - API:
     - OSAL port
     - Modem/at_chat port
