@@ -46235,4 +46235,17 @@ OpenCPU/N58 port
 https://spdflashtool.com/category/research-tool works with WINE under Linux which limits us to x86
 
 
+---------------------------------------------
+barn setup:
+
+- Investigate whether RPi probes are suitable, will need RP2040DebugProbe branch finished off.
+- Physical layout
+- Obtaining an RPi per board
+- Setup of RPi to collect logs from all nodes and route them to central server.
+- Scripts to allow control of debug probe for multiple nodes (program/erase/reset-assert/reset-release)
+- Testing & tuning.
+
+
+
+
 
