@@ -46234,6 +46234,8 @@ OpenCPU/N58 port
 
 https://spdflashtool.com/category/research-tool works with WINE under Linux which limits us to x86
 https://spdflashtool.com/source/spd-tool-source-code   Says Linux port is available.
+PAC format parser/extractor at https://github.com/cocktail828/dloader
+
 
 
 ---------------------------------------------
