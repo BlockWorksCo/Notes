@@ -46233,19 +46233,20 @@ OpenCPU/N58 port
 
 
 https://spdflashtool.com/category/research-tool works with WINE under Linux which limits us to x86
+https://spdflashtool.com/source/spd-tool-source-code   Says Linux port is available.
 
 
 ---------------------------------------------
 barn setup:
 
 - EMD: Investigate whether RPi probes are suitable, will need RP2040DebugProbe branch finished off.
-- Physical layout of boards
-- Obtaining an RPi per board and ethernet switch for network.
-- Obtaining a logging-server (reappropriate from an unused machine?)
+- SOL: Physical layout of boards
+- HW: Obtaining an RPi per board and ethernet switch for network.
+- IT: Obtaining a logging-server (reappropriate from an unused machine?)
 - EMD: Setup of RPi to collect logs from all nodes and route them to central server.
 - EMD: Scripts to allow control of debug probe for multiple nodes (program/erase/reset-assert/reset-deassert)
-- Testing & tuning. Do each board in isolation, then multiple boards.
-- Arranging for remote access to the logging-server?
+- SOL: Testing & tuning. Do each board in isolation, then multiple boards.
+- IT: Arranging for remote access to the logging-server?
 
 
 
