@@ -46250,6 +46250,16 @@ barn setup:
 - SOL: Testing & tuning. Do each board in isolation, then multiple boards.
 - IT: Arranging for remote access to the logging-server?
 
+-----------------------------------------------------
+Speeding up mesh formation and FB SLA latency.
+- mesh formation improvements
+    - save/restore previous RPL state (neighbour/mac/routing tables) with discard if its too old.
+    - tune the RPL trickle timers to different size meshes
+    - prioritise RPL traffic over data traffic.
+- meter discovery improvements
+    - speed up meter comms (suspect crypto is very slow, e.g. host-agent can discover meter in ~10s with same I/O limitations)
+    - read meter alarms prior to full profile discovery, but after nameplate reading.
+    - start discovery earlier, not after 30s.
 
 
 
