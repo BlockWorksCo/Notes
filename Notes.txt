@@ -46257,7 +46257,7 @@ Speeding up mesh formation and FB SLA latency.
     - tune the RPL trickle timers to different size meshes
     - prioritise RPL traffic over data traffic.
 - meter discovery improvements
-    - speed up meter comms (suspect crypto is very slow, e.g. host-agent can discover meter in ~10s with same I/O limitations)
+    - speed up meter comms (suspect crypto is very slow, e.g. host-agent can discover meter in ~10s with same I/O limitations, compared to ~3min)
     - read meter alarms prior to full profile discovery, but after nameplate reading.
     - start discovery earlier, not after 30s.
 
