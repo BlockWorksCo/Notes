@@ -46261,6 +46261,30 @@ Speeding up mesh formation and FB SLA latency.
     - read meter alarms prior to full profile discovery, but after nameplate reading.
     - start discovery earlier, not after 30s.
 
+----------------------------------------------------------------
+task removal:
 
+https://cyanconnode.atlassian.net/browse/EMD-141
+
+00000118 s_idleStack
+000004b0 s_cronStack
+000004b0 s_hdlcStack
+00000640 s_ctrlportStack
+00000640 s_readingsStack
+00000730 s_scheduleTaskSta
+000007d0 s_terminalTaskSta
+00000800 s_coapTaskStack
+00000898 s_macRxStack
+00000960 s_dlmsStack
+00000960 s_filedlStack
+00000960 s_radioTaskStack
+00000960 s_rplStack
+00000960 s_stack
+00000a28 s_dtlsTaskStack
+00000c80 s_lowpanTxStack
+00000fa0 s_deviceStack
+00000fa0 s_timeSynchStack
+
+00000000 Total
 
 
