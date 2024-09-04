@@ -46287,4 +46287,11 @@ https://cyanconnode.atlassian.net/browse/EMD-141
 
 00009b58 Total = 39768B = 38KB
 
+----------------------------------------------------
+force allocate:
+
+- used to enable safe use of MALLOC in imageProcess()
+- to safely be able to force-allocate, you have to be able to guarantee that the blocks wont be
+used again.
+- To get this guarantee, you stop the tasks that own those blocks.
 
