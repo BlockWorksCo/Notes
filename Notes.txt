@@ -46290,9 +46290,6 @@ https://cyanconnode.atlassian.net/browse/EMD-141
 ----------------------------------------------------
 force allocate:
 
-- used to enable safe use of MALLOC in imageProcess()
-- to safely be able to force-allocate, you have to be able to guarantee that the blocks wont be
-used again.
-- To get this guarantee, you stop the tasks that own those blocks.
-- assumes that each "pool" is separate and a set of tasks operate only on that pool.
+- reuses the stack space for an "emergency heap" if the related tasks are stopped.
+
 
