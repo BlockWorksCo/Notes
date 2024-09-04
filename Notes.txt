@@ -46292,4 +46292,28 @@ force allocate:
 
 - reuses the stack space for an "emergency heap" if the related tasks are stopped.
 
+00000118 s_idleStack
+000004b0 s_cronStack
+00000640 s_ctrlportStack
+00000730 s_scheduleTaskSta
+000007d0 s_terminalTaskSta
+00000960 s_filedlStack
+Total=2468=9KB
+
+000004b0 s_hdlcStack
+00000640 s_readingsStack
+00000960 s_stack
+00000960 s_dlmsStack
+00000fa0 s_deviceStack
+00000fa0 s_timeSynchStack
+Total=3390=13KB
+
+00000800 s_coapTaskStack
+00000898 s_macRxStack
+00000960 s_radioTaskStack
+00000960 s_rplStack
+00000a28 s_dtlsTaskStack
+00000c80 s_lowpanTxStack
+Total=3a00=14KB
+
 
