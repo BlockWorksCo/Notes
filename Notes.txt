@@ -46316,4 +46316,12 @@ Total=3390=13KB
 00000c80 s_lowpanTxStack
 Total=3a00=14KB
 
+---------------------------------------------------------------
+
+so, I'm looking at what happens when it cools off and tries again... it tries to join 640c again and gets no response from it (again). It tries also probing ead5 and also gets no response from that either...
+There arent any CCA failures, so it may be packet-drops due to congestion on 740c and ead5 or simply bad RF performance so either of the 3 nodes is talking too quietly.
+ 
+Given that it has missed beacons from a bunch of nodes and isnt receiving ACKs from its potential parents... has it gone deaf? i.e. is the receiver ok on that node?
+
+
 
