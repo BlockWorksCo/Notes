@@ -46324,4 +46324,25 @@ There arent any CCA failures, so it may be packet-drops due to congestion on 740
 Given that it has missed beacons from a bunch of nodes and isnt receiving ACKs from its potential parents... has it gone deaf? i.e. is the receiver ok on that node?
 
 
+----------------------------------------------------------------------------
+DLMS manufacturer specific OBIS code private schema
+
+Manufacturer specific codes
+In value groups B to F, the following ranges are available for manufacturer-specific purposes:
+• group B: 128…199;
+• group C: 128…199, 240;
+• group D: 128…254;
+• group E: 128…254;
+• group F: 128…254.
+If any of these value groups contain a value in the manufacturer specific range, then the whole
+OBIS code shall be considered as manufacturer specific, and the value of the other groups
+does not necessarily carry a meaning defined in this document or in IEC 62056‑6‑2:2023.
+In addition, manufacturer specific ranges are defined in Table 8 with A = 0, C = 96 and in
+Table 20 with A = 1, C = 96.
+
+https://cdn.standards.iteh.ai/samples/104764/4d38fe3f8b9148ffa707ff974ae4f3a9/IEC-62056-6-1-2023.pdf
+
+non-metering data is handled as "abstract data" with an A code of 0.
+
+
 
