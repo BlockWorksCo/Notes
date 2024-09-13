@@ -46344,5 +46344,12 @@ https://cdn.standards.iteh.ai/samples/104764/4d38fe3f8b9148ffa707ff974ae4f3a9/IE
 
 non-metering data is handled as "abstract data" with an A code of 0.
 
+--------------------------------------------------------------
+MBus ondemand ODR
+
+/sample
+    - saveRegisterValue returns "00000" for all registers.
+
+
 
 
