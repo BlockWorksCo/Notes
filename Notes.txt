@@ -46347,10 +46347,14 @@ non-metering data is handled as "abstract data" with an A code of 0.
 --------------------------------------------------------------
 MBus ondemand ODR
 
-/sample
+/sampleG
     - deviceReadout()
     - saveRegisterValue returns "00000" for all registers.
 
+/ondemand
+    - deviceOnDemand() -> services->onDemand()
 
+/ondemandprofile
+    - deviceOnDemandProfile() -> services->onDemandProfile()
 
 
