@@ -46357,4 +46357,7 @@ MBus ondemand ODR
 /ondemandprofile
     - deviceOnDemandProfile() -> services->onDemandProfile()
 
+This req is incomplete, hence the zeroes:
+https://cyanconnode.atlassian.net/browse/HMPDEV-80
+
 
