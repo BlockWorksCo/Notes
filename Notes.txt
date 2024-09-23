@@ -46360,4 +46360,13 @@ MBus ondemand ODR
 This req is incomplete, hence the zeroes:
 https://cyanconnode.atlassian.net/browse/HMPDEV-80
 
+--------------------------------------------------
+RPL reversions from v24.18.9
+
+- EMD-216
+- EMD-324
+- EMD-217
+- EMD-222
+
+
 
