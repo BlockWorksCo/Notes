@@ -46370,12 +46370,12 @@ RPL reversions from v24.18.9
 
 --------------------------------------
 merged from Sprint7 into master
-- EMD-365
-- EMD-444
-- EMD-368
-- EMD-455
-- EMD-398
-- EMD-243
+- EMD-365: Better recovery for bad config
+- EMD-444: Battery charging hysteresis on status reporting/
+- EMD-368: ICCID not read and pushed to NMS in all cases.
+- EMD-355: Neoway modem upgrade
+- EMD-398: RAM corruption 'garbled' issue.
+- EMD-243: GW7 failure to set config on CNIC module.
 - EMD-172: Get last error details
 - EMD-150: Feedback to server regarding discovery period.
 - MTI-351: AEW calendar support
