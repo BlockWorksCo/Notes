@@ -46377,7 +46377,6 @@ merged from Sprint7 into master
 - EMD-398: RAM corruption 'garbled' issue.
 - EMD-402: NULL timestamp handling.
 - EMD-243: GW7 failure to set config on CNIC module.
-- CND-12280: 
 - EMD-172: Get last error details
 - EMD-150: Feedback to server regarding discovery period.
 - MTI-351: AEW calendar support
