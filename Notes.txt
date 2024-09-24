@@ -46375,6 +46375,7 @@ merged from Sprint7 into master
 - EMD-368: ICCID not read and pushed to NMS in all cases.
 - EMD-355: Neoway modem upgrade
 - EMD-398: RAM corruption 'garbled' issue.
+- CND-12280: GW7 unit tests
 - EMD-402: NULL timestamp handling.
 - EMD-243: GW7 failure to set config on CNIC module.
 - EMD-172: Get last error details
