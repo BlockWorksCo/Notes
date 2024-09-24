@@ -46376,10 +46376,10 @@ merged from Sprint7 into master
 - EMD-455
 - EMD-398
 - EMD-243
-- EMD-172
-- EMD-150
-- MTI-351
-- EMD-325
+- EMD-172: Get last error details
+- EMD-150: Feedback to server regarding discovery period.
+- MTI-351: AEW calendar support
+- EMD-325: Documentation start.
 
 
 
