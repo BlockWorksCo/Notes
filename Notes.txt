@@ -46369,18 +46369,19 @@ RPL reversions from v24.18.9
 - EMD-222
 
 --------------------------------------
-merged from Sprint7 into master
+since v24.22:
 + EMD-365: Better recovery for bad config
-- EMD-444: Battery charging hysteresis on status reporting/
-- EMD-368: ICCID not read and pushed to NMS in all cases.
-- EMD-355: Neoway modem upgrade
-- EMD-398: RAM corruption 'garbled' issue.
++ EMD-444: Battery charging hysteresis on status reporting/
++ EMD-368: ICCID not read and pushed to NMS in all cases.
++ EMD-355: Neoway modem upgrade
++ EMD-398: RAM corruption 'garbled' issue.
 + EMD-402: NULL timestamp handling.
 + EMD-172: Get last error details
 + EMD-150: Feedback to server regarding discovery period.
 + MTI-351: AEW calendar support
 + EMD-362: ipadrFromString misbehavure.
 + EMD-325: Documentation start.
++ EMD-381: better recovery from bad config.
 
 
 
