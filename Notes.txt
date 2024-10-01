@@ -46404,4 +46404,10 @@ Metering session
     - Alarms
         - First Breath/Last Gasp
         - tamper
+- Documentation DLMS
+    - Green book (physical and link layer)
+    - Blue book (App layer/ schema).
+
+
+
 
