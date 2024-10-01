@@ -46426,4 +46426,15 @@ Metering session
 
 
 
+---------------------------------------
+ODR:
+- Cant use more than ~3KB RAM for response.
+- Typical billing 465 Bytes
+- Typical block 85 Bytes
+- Scanning day by day is extremely slow for billing.
+- Server needs to handle partial results
+- Server needs to handle empty results while still moving forward (guaranteed minimum search duration?)
+- Repeated responses to keep coap session alive and avoid timeout?
+- Response should include "last scanned timestamp" as pointer to where to start again?
+- Response should be guaranteed within CoAP timeout.
 
