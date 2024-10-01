@@ -46418,10 +46418,11 @@ Metering session
     - Blue book (App layer/ schema).
     - Data items addressed by OBIS,attribute-ID.
     - Object Oriented... its from the '90s.
-        - e.g. Clock (class_id = 8)
+        - e.g. Clock (class_id = 8) disconnector (class_id = 70)
         - Can have many instances of same "class"
         - OBIS number identifies the "instance", so is unique.
         - attribute is index of field.
+    - Countries have their own specs that select parts of blue book, e.g. IS15959
 
 
 
