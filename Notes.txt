@@ -46393,6 +46393,11 @@ Metering session
 - Meter-side stack
     - COSEM (Object model/schema)
     - HDLC (transport/link layer)
+    - Associations
+        - Encryption
+        - Authentication
+    - Server=meter, Client=Agent.
+- Omnidev demo
 - What does a meter do?
     - accuulating data/statistics about the power supply and usage.
 - Types of data:
