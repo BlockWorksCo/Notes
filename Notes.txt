@@ -46436,5 +46436,5 @@ ODR:
 - Server needs to handle empty results while still moving forward (guaranteed minimum search duration?)
 - Repeated responses to keep coap session alive and avoid timeout?
 - Response should include "last scanned timestamp" as pointer to where to start again?
-- Response should be guaranteed within CoAP timeout.
+- A response should be guaranteed within CoAP timeout (or timeout) even if the response is empty but for "last scanned timestamp"
 
