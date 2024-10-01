@@ -46384,4 +46384,24 @@ since v24.22:
 + EMD-381: better recovery from bad config.
 
 
+------------------------------------------------------
+Metering session
+
+- Overall agent architecture
+    - network-side
+    - meter-driver side
+- Meter-side stack
+- What does a meter do?
+    - accuulating data/statistics about the power supply and usage.
+- Types of data:
+    - Periodic capture profiles
+        - Daily load (24h)
+        - Billing (monthly)
+        - Block load (15/40minutes)
+        - Instantaneous
+    - Event profiles
+        - time sync.
+    - Alarms
+        - First Breath/Last Gasp
+        - tamper
 
