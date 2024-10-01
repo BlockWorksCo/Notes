@@ -46416,6 +46416,12 @@ Metering session
 - Documentation DLMS
     - Green book (physical and link layer)
     - Blue book (App layer/ schema).
+    - Data items addressed by OBIS,attribute-ID.
+    - Object Oriented... its from the '90s.
+        - e.g. Clock (class_id = 8)
+        - Can have many instances of same "class"
+        - OBIS number identifies the "instance", so is unique.
+        - attribute is index of field.
 
 
 
