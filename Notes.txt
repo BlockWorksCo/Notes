@@ -46391,6 +46391,8 @@ Metering session
     - network-side
     - meter-driver side
 - Meter-side stack
+    - COSEM (Object model/schema)
+    - HDLC (transport/link layer)
 - What does a meter do?
     - accuulating data/statistics about the power supply and usage.
 - Types of data:
