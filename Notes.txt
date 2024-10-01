@@ -46398,6 +46398,8 @@ Metering session
         - Authentication
     - Server=meter, Client=Agent.
 - Omnidev demo
+    - NMS
+    - SMA
 - What does a meter do?
     - accuulating data/statistics about the power supply and usage.
 - Types of data:
