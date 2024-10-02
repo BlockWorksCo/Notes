@@ -46438,3 +46438,14 @@ ODR:
 - Response should include "last scanned timestamp" as pointer to where to start again?
 - A response should be guaranteed within CoAP timeout (or timeout) even if the response is empty but for "last scanned timestamp"
 
+--------------------------------------------
+todo:                         
+                              
++ Meter Driver Architecture   
+- CNIC Integration Guide      
+- IPA Golden Nodes req doc    
+- OpenCPU backlog tickets     
+- Burst Mode design           
+- CND-14075 ODR cancellation
+
+
