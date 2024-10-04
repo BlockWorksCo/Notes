@@ -46443,7 +46443,7 @@ todo:
                               
 + Meter Driver Architecture   
 - CNIC Integration Guide      
-- IPA Golden Nodes req doc    
++ IPA Golden Nodes req doc    
 - OpenCPU backlog tickets     
 - Burst Mode design           
 - CND-14075 ODR cancellation
