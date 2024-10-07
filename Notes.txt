@@ -46448,4 +46448,9 @@ todo:
 - Burst Mode design           
 - CND-14075 ODR cancellation
 
+----------------------------------------------
+RPL asserts
+
+93d183d2e07981cac1835134d57059a6468508a2 RPL data mutex
+
 
