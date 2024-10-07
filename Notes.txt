@@ -46462,3 +46462,18 @@ burst mode
 - Simple dont transmit >x packets in y seconds, both x & y confnigurable.
 - hook into mac radio in same position as duty-cycle limimter.
 
+-------------------------------------------
+ODR speed up
+
+- Add to OnDemandProfileResponseMessage proto
+    - firstAvailableTimestamp
+    - lastAvailableTimestamp
+- "sparse" profiles such as billing
+- "dense" profiles such as block load
+- How does HES iterate over full range?
+- two timeouts on HES:
+    - coap session timeout
+    - ODR request timeout.
+
+
+
