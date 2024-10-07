@@ -46460,4 +46460,5 @@ burst mode
 - Aim to prevent reseting node by continuous transmits.
 - Aim also to drop packets and not timeout on receipt of ACK which is never going to come.
 - Simple dont transmit >x packets in y seconds, both x & y confnigurable.
+- hook into mac radio in same position as duty-cycle limimter.
 
