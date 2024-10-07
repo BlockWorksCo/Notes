@@ -46454,3 +46454,10 @@ RPL asserts
 93d183d2e07981cac1835134d57059a6468508a2 RPL data mutex EMD-226
 6548380f47b5ed75cbb36e436a71143b8d167011
 
+---------------------------------
+burst mode
+
+- Aim to prevent reseting node by continuous transmits.
+- Aim also to drop packets and not timeout on receipt of ACK which is never going to come.
+- Simple dont transmit >x packets in y seconds, both x & y confnigurable.
+
