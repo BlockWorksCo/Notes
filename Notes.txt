@@ -46470,8 +46470,10 @@ ODR speed up
     - lastAvailableTimestamp
 - "sparse" profiles such as billing
     - end of data will be reached before end timestamp
+    - many selections per sample
 - "dense" profiles such as block load
     - end timestamp will be reached before end of data
+    - many samples per selection.
 - How does HES iterate over full range?
 - two timeouts on HES:
     - coap session timeout
