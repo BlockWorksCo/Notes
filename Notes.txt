@@ -46445,7 +46445,7 @@ todo:
 - CNIC Integration Guide      
 + IPA Golden Nodes req doc    
 - OpenCPU backlog tickets     
-- Burst Mode design           
++ Burst Mode design           
 - CND-14075 ODR cancellation
 
 ----------------------------------------------
