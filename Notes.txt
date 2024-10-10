@@ -46480,4 +46480,10 @@ ODR speed up
     - ODR request timeout.
 
 
+------------------------------------
+cyan--eng184 172.16.32.65 TestNetworkLaptop:
+
+ubuntu/ubuntu
+Installed https://github.com/raspberrypi/openocd
+
 
