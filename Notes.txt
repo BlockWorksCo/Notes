@@ -46491,5 +46491,10 @@ FG28
 
 EFR32FG28A120F1024GM48-AR  -  FG28, Sub-GHz, 1024kB Flash, 256kB RAM, +20 dBm, Secure Vault-Mid, QFN48
 
+- Plenty RAM
+- Bluetooth stack integration
+- Will require flash space optimisation to make space for BTLE stack
+- otherwise mostly same as FG25
+- OpenOCD support?
 
 
