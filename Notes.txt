@@ -46513,7 +46513,10 @@ Setting up Ubuntu server RPi
 - sudo apt install raspi-config
 - Using raspi-config,expand root fs to full SD card
 
-- sudo apt install build-essential git quilt tmux protobuf-compiler unzip python-is-python3 python3-protobuf
+- git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+- ~/.fzf/install
+
+- sudo apt install build-essential git quilt tmux protobuf-compiler unzip python-is-python3 python3-protobuf libjansson-dev
 - sudo cpan install XML::LibXML
 
 
