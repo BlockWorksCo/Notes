@@ -46517,6 +46517,7 @@ Setting up Ubuntu server RPi
 - ~/.fzf/install
 
 - sudo apt install build-essential git quilt tmux protobuf-compiler unzip python-is-python3 python3-protobuf libjansson-dev
-- sudo cpan install XML::LibXML
+- DONT: sudo cpan install XML::LibXML
+- DO: remove xmlvalid lines from src/config/Makefile
 
 
