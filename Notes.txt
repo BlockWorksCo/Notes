@@ -46511,6 +46511,6 @@ Setting up Ubuntu server RPi
 
 - sudo apt update
 - sudo apt install raspi-config
-- expand root fs to full SD card
+- Using raspi-config,expand root fs to full SD card
 
 
