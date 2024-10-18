@@ -46180,7 +46180,7 @@ wiki page
 
 -------------------------------------------------------------------------
 FG28 port
-- based on FG25 
+- based on FG25
 
 "New" Agent
 - Target FG28
@@ -46320,7 +46320,7 @@ Total=3a00=14KB
 
 so, I'm looking at what happens when it cools off and tries again... it tries to join 640c again and gets no response from it (again). It tries also probing ead5 and also gets no response from that either...
 There arent any CCA failures, so it may be packet-drops due to congestion on 740c and ead5 or simply bad RF performance so either of the 3 nodes is talking too quietly.
- 
+
 Given that it has missed beacons from a bunch of nodes and isnt receiving ACKs from its potential parents... has it gone deaf? i.e. is the receiver ok on that node?
 
 
@@ -46439,13 +46439,13 @@ ODR:
 - A response should be guaranteed within CoAP timeout (or timeout) even if the response is empty but for "last scanned timestamp"
 
 --------------------------------------------
-todo:                         
-                              
-+ Meter Driver Architecture   
-- CNIC Integration Guide      
-+ IPA Golden Nodes req doc    
-- OpenCPU backlog tickets     
-+ Burst Mode design           
+todo:
+
++ Meter Driver Architecture
+- CNIC Integration Guide
++ IPA Golden Nodes req doc
+- OpenCPU backlog tickets
++ Burst Mode design
 - CND-14075 ODR cancellation
 
 ----------------------------------------------
@@ -46513,7 +46513,7 @@ Setting up Ubuntu server RPi
 - sudo apt install raspi-config
 - Using raspi-config,expand root fs to full SD card
 
-- sudo apt install build-essential git quilt tmux
+- sudo apt install build-essential git quilt tmux protobuf-compiler unzip python-is-python3
 - sudo cpan install XML::LibXML
 
 
