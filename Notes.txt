@@ -46499,4 +46499,13 @@ EFR32FG28A120F1024GM48-AR  -  FG28, Sub-GHz, 1024kB Flash, 256kB RAM, +20 dBm,
 - Move to secure production with secure attestation?
 - Initially keep BLE out and go for a straight port, later project can optimise and add BLE
 
+---------------------------------------------------
+Setting up Ubuntu server RPi
+
+- dd .img to SD card
+- boot with SD card.
+- attempt to ssh ubuntu@192.168.1.98 (this will fail but will write the following file).
+- shutdown RPi
+- on a Linux PC, mount the SD card /sdb2 and modify /mnt/Temp/etc/ssh/sshd_config.d/50-cloud-init.conf so PasswordAuthentication is "no".
+- unmount, reinsert into RPi and ssh in again.pw=ubuntu
 
