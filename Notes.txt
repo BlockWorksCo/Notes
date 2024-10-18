@@ -46514,5 +46514,6 @@ Setting up Ubuntu server RPi
 - Using raspi-config,expand root fs to full SD card
 
 - sudo apt install build-essential git quilt tmux
+- sudo cpan install XML::LibXML
 
 
