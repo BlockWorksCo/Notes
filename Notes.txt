@@ -46509,3 +46509,8 @@ Setting up Ubuntu server RPi
 - on a Linux PC, mount the SD card /sdb2 and modify /mnt/Temp/etc/ssh/sshd_config.d/50-cloud-init.conf so PasswordAuthentication is "no".
 - unmount, reinsert into RPi and ssh in again.pw=ubuntu
 
+- sudo apt update
+- sudo apt install raspi-config
+- expand root fs to full SD card
+
+
