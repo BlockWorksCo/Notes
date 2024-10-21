@@ -46516,7 +46516,7 @@ Setting up Ubuntu server RPi
 - git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 - ~/.fzf/install
 
-- sudo apt install build-essential git quilt tmux protobuf-compiler unzip python-is-python3 python3-protobuf libjansson-dev pkg-config gcc-arm-none-eabi libtool
+- sudo apt install build-essential git quilt tmux protobuf-compiler unzip python-is-python3 python3-protobuf libjansson-dev pkg-config gcc-arm-none-eabi libtool libusb-1.0-0-dev
 - DONT: sudo cpan install XML::LibXML
 - DO: remove xmlvalid lines from src/config/Makefile
 
