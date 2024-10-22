@@ -46539,7 +46539,8 @@ ODR improvements
     - Processing time on Agent for HDLC, DLMS.
     - Association transaction(s) duration
     - Response formation duration
-    - Max time for response packet in output queue given queue-depth and max retry time for other queued packets.
+    - Max time for response packet in output queue given queue-depth and max MAC-level retry time for other queued packets.
+    - HES time to decode/process/respond with an ACK on a loaded system.
 - HTTP timeout should be scaled with expected size of total result-data (i.e. many CoAP timeouts).
 - Agent should limit sample-set to appropriate size for RAM.
 - Agent should retain or pass along state/context, allowing continuation of a search/filter operation.
