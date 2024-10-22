@@ -46533,7 +46533,8 @@ ODR improvements
     - Are crypto operations on DLMS making it CPU-bound?
     - Are crypto operations on DTLS making it CPU-bound?
 - CoAP-blockwise failures preventing multiple samples being sent.
-- Search restarts on every set of samples retreived.
+    - Must be investigated on HES and Agent.
+- Search restarts on every set of samples retreived (i.e. each follow-on request).
 - RAM resource limits the size of the sample-set.
     - We know sample-size in bytes for each profile.
     - Use TRY_REALLOC to determine if we can read another sample or must send what we have.
@@ -46550,6 +46551,7 @@ ODR improvements
     - Assume worst case of 1 sample per response.
 - Agent should limit sample-set to appropriate size for RAM.
 - Agent should retain or pass along state/context, allowing continuation of a search/filter operation. (EMD-503).
+- Smaller sample-set per response === finer grained responses === smaller CoAP timeout (also vice-versa).
 
 
 
