@@ -46538,6 +46538,8 @@ ODR improvements
     - HDLC timeout given corruption and max number of retries over max number of transactions.
     - Processing time on Agent for HDLC, DLMS.
     - Association transaction(s) duration
+    - Response formation duration
+    - Max time for response packet in output queue given queue-depth and max retry time for other queued packets.
 - HTTP timeout should be scaled with expected size of total result-data (i.e. many CoAP timeouts).
 - Agent should limit sample-set to appropriate size for RAM.
 - Agent should retain or pass along state/context, allowing continuation of a search/filter operation.
