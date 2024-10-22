@@ -46536,7 +46536,13 @@ ODR improvements
 - CoAP timeout on HES should be constant and sized for a single sample-set.
 - HTTP timeout should be scaled with expected size of total result-data (i.e. many CoAP timeouts).
 - Agent should limit sample-set to appropriate size for RAM.
-- Agent should retain state/context, allowing continuation of a search/filter operation.
+- Agent should retain or pass along state/context, allowing continuation of a search/filter operation.
+
+
+
+
+
+
 
 
 
