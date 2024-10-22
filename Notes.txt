@@ -46500,7 +46500,7 @@ EFR32FG28A120F1024GM48-AR  -  FG28, Sub-GHz, 1024kB Flash, 256kB RAM, +20 dBm,
 - Initially keep BLE out and go for a straight port, later project can optimise and add BLE
 
 ---------------------------------------------------
-Setting up Ubuntu server RPi
+Setting up Ubuntu 23.04 server RPi
 
 - dd .img to SD card
 - boot with SD card.
