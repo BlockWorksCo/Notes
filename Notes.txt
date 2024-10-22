@@ -46526,4 +46526,15 @@ Setting up Ubuntu server RPi
 - ./configure --enable-cmsis-dap
 - git checkout 
 
+-------------------------------------------------------
+ODR improvements
+- Slow meter transactions
+    - Remove constant associations
+- CoAP-blockwise failures preventing multiple samples being sent.
+- Search restarts on every set of samples retreived.
+- RAM resource limits the size of the sample-set.
+- CoAP timeout on HES should be constant and sized for a single sample-set.
+- HTTP timeout should be scaled with expected size of total result-data (i.e. many CoAP timeouts).
+
+
 
