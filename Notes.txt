@@ -46551,7 +46551,7 @@ ODR improvements
     - Assume worst case of 1 sample per response.
 - Agent should limit sample-set to appropriate size for RAM.
 - Agent should retain or pass along state/context, allowing continuation of a search/filter operation. (EMD-503).
-- Smaller sample-set per response === finer grained responses === smaller CoAP timeout (also vice-versa).
+- Less available RAM === smaller sample-set per response === finer grained responses === smaller CoAP timeout === less efficient overall === larger HTTP-timeout (also vice-versa).
 
 
 
