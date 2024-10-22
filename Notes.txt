@@ -46534,6 +46534,10 @@ ODR improvements
 - Search restarts on every set of samples retreived.
 - RAM resource limits the size of the sample-set.
 - CoAP timeout on HES should be constant and sized for a single sample-set.
+    - Consider reasonable max for meter search duration
+    - HDLC timeout given corruption and max number of retries over max number of transactions.
+    - Processing time on Agent for HDLC, DLMS.
+    - Association transaction(s) duration
 - HTTP timeout should be scaled with expected size of total result-data (i.e. many CoAP timeouts).
 - Agent should limit sample-set to appropriate size for RAM.
 - Agent should retain or pass along state/context, allowing continuation of a search/filter operation.
