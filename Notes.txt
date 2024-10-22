@@ -46530,9 +46530,14 @@ Setting up Ubuntu 23.04 server RPi
 ODR improvements
 - Slow meter transactions
     - Remove constant associations
+    - Are crypto operations on DLMS making it CPU-bound?
+    - Are crypto operations on DTLS making it CPU-bound?
 - CoAP-blockwise failures preventing multiple samples being sent.
 - Search restarts on every set of samples retreived.
 - RAM resource limits the size of the sample-set.
+    - We know sample-size in bytes for each profile.
+    - Use TRY_REALLOC to determine if we can read another sample or must send what we have.
+    - EMD-141 techniques (partitioned-heap, no BinaryBuf during response, etc).
 - CoAP timeout on HES should be constant and sized for a single sample-set.
     - Consider reasonable max for meter search duration
     - HDLC timeout given corruption and max number of retries over max number of transactions.
@@ -46542,8 +46547,9 @@ ODR improvements
     - Max time for response packet in output queue given queue-depth and max MAC-level retry time for other queued packets.
     - HES time to decode/process/respond with an ACK on a loaded system.
 - HTTP timeout should be scaled with expected size of total result-data (i.e. many CoAP timeouts).
+    - Assume worst case of 1 sample per response.
 - Agent should limit sample-set to appropriate size for RAM.
-- Agent should retain or pass along state/context, allowing continuation of a search/filter operation.
+- Agent should retain or pass along state/context, allowing continuation of a search/filter operation. (EMD-503).
 
 
 
