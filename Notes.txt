@@ -46524,7 +46524,7 @@ Setting up Ubuntu 23.04 server RPi
 -cd openocd
 - ./bootstrap
 - ./configure --enable-cmsis-dap
-- git checkout 
+- git checkout
 
 -------------------------------------------------------
 ODR improvements
@@ -46553,6 +46553,14 @@ ODR improvements
 - Agent should retain or pass along state/context, allowing continuation of a search/filter operation. (EMD-503).
 - Less available RAM === smaller sample-set per response === finer grained responses === smaller CoAP timeout === less efficient overall === larger HTTP-timeout (also vice-versa).
 
+
+---------------------------------------------------
+corruption:
+
+4D47 1FEFBFBD       7F
+     1FEFBFBDEFBFBD
+     1FEFBFBDEFBFBD EF
+         BFBDEFBFBD
 
 
 
