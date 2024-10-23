@@ -46568,12 +46568,12 @@ corruption:
 Chain:
 Meter:
     RTC->I2C->uC->SPI->flash
-    flash->SPI->uC->UART
+    flash->SPI->uC->UART        HDLC/CRC16 DLMS/TLV
 Node:
     UART->uC->flash             HDLC/CRC16 DLMS/TLV
-    flash->uC->radio
+    flash->uC->radio            DTLS/AES
 HES:
-    ethernet->Proc->flash
+    ethernet->Proc->flash       DTLS/AES
 
 
 
