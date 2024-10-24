@@ -46522,6 +46522,7 @@ Setting up Ubuntu 23.04 server RPi
 
 - git checkout https://github.com/raspberrypi/openocd
 -cd openocd
+- apt install autoconf-archive
 - ./bootstrap
 - ./configure --enable-cmsis-dap
 - git checkout
