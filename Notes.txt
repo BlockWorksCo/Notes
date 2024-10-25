@@ -46592,6 +46592,11 @@ Persistent Circular Buffers
 - Wear levelling is managed by over-allocation of sectors.
 - Over-allocation can be tuned to expected update rate of data type.
 - Over-allocation needs to be tuned with expected bad-block rate.
+- Each sector can be CRC-checked, failed sectors get skipped for writes.
+    - read-and-check-before-write means no bad-block map is required.
+    - read-and-check-after-write means write can move to next sector.
+
+
 
 
 
