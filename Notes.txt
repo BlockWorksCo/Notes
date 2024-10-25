@@ -46577,6 +46577,25 @@ HES:
     ethernet->Proc->flash       DTLS/AES
 
 
+---------------------------------------------------
+Filesystem replacement CNDFS
+
+- Must be compatible API-wise.
+- Must be simple. flexibility of filesystem is not required.
+- bad block management
+- wear levelling.
+- Able to use internal flash as well as external.
+
+
+Persistent Circular Buffers
+- Each "file" is a circular buffer stored in sequential flash sectors.
+- Wear levelling is managed by over-allocation of sectors.
+- Over-allocation can be tuned to expected update rate of data type.
+- Over-allocation needs to be tuned with expected bad-block rate.
+
+
+
+
 
 
 
