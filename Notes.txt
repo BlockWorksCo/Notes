@@ -46620,6 +46620,17 @@ NOR Flash devices:
 - write can fail.
 - repeated erase can sometime clear bits.
 
+------------------------------------------------
+OpenCPU
+
+- Improve workflow, compile tools, flash/erase/debug scripts & tools where possible.
+- ctrlporthub_service: can work over debug channel?
+- devicekeys/encrypted filesystem investigation
+- Production issues investigation:
+    - secure production? keys/certs in manufacturing?
+    - Provisioning can work over ctrlporthub?
+- GPIO investigation
+
 
 
 
