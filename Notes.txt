@@ -46585,6 +46585,8 @@ Filesystem replacement CNDFS
 - bad block management
 - wear levelling.
 - Able to use internal flash as well as external.
+- Low RAM reqs.
+- Low Flash/code reqs.
 
 
 Persistent Circular Buffers
