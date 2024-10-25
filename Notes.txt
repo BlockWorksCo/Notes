@@ -46625,7 +46625,7 @@ OpenCPU
 
 - Aim to get Agent functionality working on EVK, no hardware.
     - "terminal" app
-    - filesystem
+    - unencrypted filesystem
     - uplink
     - UART
     - I2C
