@@ -46636,6 +46636,11 @@ OpenCPU
     - UI
     - Watchdog
 
+Potential h/w additions. There is a cost tradeoff/decisions to be made here:
+    - External watchdog?
+    - External HSM for key storage?
+    - External IO expander?
+
 
 
 - Improve workflow, compile tools, flash/erase/debug scripts & tools where possible.
