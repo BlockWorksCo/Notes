@@ -46608,8 +46608,14 @@ Persistent Circular Buffers
 - Write modes are:
     - Full overwrite
     - append-only
-    - eplicitly no random modifications.
+    - explicitly no random modifications.
 - Scan PCBs/files on startup to determine head/tail from sequence number in header.
+
+NOR Flash devices:
+- typical failure mode is failure-to-erase
+- Read is typically very reliable.
+- write can fail.
+- repeated erase can sometime clear bits.
 
 
 
