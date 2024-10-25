@@ -46623,6 +46623,17 @@ NOR Flash devices:
 ------------------------------------------------
 OpenCPU
 
+- Aim to get Agent functionality working on EVK, no hardware.
+    - "terminal" app
+    - filesystem
+    - uplink
+    - UART
+    - I2C
+    - GPIO
+    - meter-driver
+
+
+
 - Improve workflow, compile tools, flash/erase/debug scripts & tools where possible.
 - ctrlporthub_service: can work over debug channel?
 - devicekeys/encrypted filesystem investigation
