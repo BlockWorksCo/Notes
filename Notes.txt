@@ -46645,6 +46645,7 @@ OpenCPU
     - secure production? keys/certs in manufacturing?
     - Provisioning can work over ctrlporthub?
 - GPIO investigation
+- may need external h/w watchdog.
 
 
 
