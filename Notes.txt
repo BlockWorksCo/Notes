@@ -46631,6 +46631,10 @@ OpenCPU
     - I2C
     - GPIO
     - meter-driver
+    - file distribution
+    - OSAL
+    - UI
+    - Watchdog
 
 
 
