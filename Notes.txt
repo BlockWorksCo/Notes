@@ -46595,6 +46595,21 @@ Persistent Circular Buffers
 - Each sector can be CRC-checked, failed sectors get skipped for writes.
     - read-and-check-before-write means no bad-block map is required.
     - read-and-check-after-write means write can move to next sector.
+    - Update sequence is:
+        1 read
+        2 check CRC
+        3 skip to next sector if CRC fails
+        4 erase
+        5 write
+        6 read
+        7 check CRC
+        8 retry from 4 if CRC fails
+        9 if max retry count hit, move to next sector.
+- Write modes are:
+    - Full overwrite
+    - append-only
+    - eplicitly no random modifications.
+- Scan PCBs/files on startup to determine head/tail from sequence number in header.
 
 
 
