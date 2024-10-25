@@ -46610,6 +46610,8 @@ Persistent Circular Buffers
     - append-only
     - explicitly no random modifications.
 - Scan PCBs/files on startup to determine head/tail from sequence number in header.
+- Only one sector is being written at once, so can be flushed very quickly (~100 ms).
+- Metadata is distributed over whole device in sector headers. No single-point-of-failure.
 
 NOR Flash devices:
 - typical failure mode is failure-to-erase
