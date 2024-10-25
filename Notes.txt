@@ -46588,6 +46588,7 @@ Filesystem replacement CNDFS
 
 
 Persistent Circular Buffers
+- Data integrity is required to be checked.
 - Each "file" is a circular buffer stored in sequential flash sectors.
 - Wear levelling is managed by over-allocation of sectors.
 - Over-allocation can be tuned to expected update rate of data type.
