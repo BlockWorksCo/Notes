@@ -46562,7 +46562,7 @@ corruption:
      1FEFBFBD
        EFBFBD
      1FEFBFBD
-       EFBFBD 
+       EFBFBD
        EFBFBD
        EFBFBD
 
@@ -46655,6 +46655,11 @@ Potential h/w additions. There is a cost tradeoff/decisions to be made here:
 - may need external h/w watchdog. Does the modem have an internal watchdog?
 
 
+------------------------------------
+natwest app
+customer number :
+passcode: isabelle12
+PIN: 1709
 
 
 
