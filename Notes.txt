@@ -46620,7 +46620,7 @@ Persistent Circular Buffers
 
 NOR Flash devices:
 - typical failure mode is failure-to-erase
-- Read is typically very reliable.
+- Read is typically very reliable with no limit.
 - write can fail.
 - repeated erase can sometime clear bits.
 
