@@ -46697,7 +46697,7 @@ https://rfc5424-logging-handler.readthedocs.io/en/latest/basics.html#basic-examp
 write script that parses stdin from ctrlporthub and splits lines into fields for logging
 using syslogd and key/value pairs for metadata.
 
-_Possibly use GrayLog for fancy UI
+-Possibly use GrayLog for fancy UI
 
 
 
