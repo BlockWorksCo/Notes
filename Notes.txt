@@ -46687,6 +46687,18 @@ OpenCPU:
 
 - Read Out Protection
 
+--------------------------------------------------
+500 node network
+
+syslog
+pip install rfc5424-logging-handler
+https://rfc5424-logging-handler.readthedocs.io/en/latest/basics.html#basic-example
+
+write script that parses stdin from ctrlporthub and splits lines into fields for logging
+using syslogd and key/value pairs for metadata.
+
+_Possibly use GrayLog for fancy UI
+
 
 
 
