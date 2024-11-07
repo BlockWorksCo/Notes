@@ -46765,6 +46765,12 @@ commit 48b24783a9cc3b22d573a92e1a2cda3a4f5288b2 (tag: v24.31, tag: v24.30, tag: 
 
 
 
+EMD-314: Simplifying task architecture to reduce RAM requirements
+EMD-225: Prevent GW7 upgrade if CNIC upgrade fails.
+EMD-397: Ability to read secure files via coap_request
+EMD-497: Correcting modem RSSI during meter manufacturing mode
+
+
 
 
 
