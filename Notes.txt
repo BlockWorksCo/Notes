@@ -46700,6 +46700,68 @@ using syslogd and key/value pairs for metadata.
 -Possibly use GrayLog for fancy UI
 
 
+---------------------------------------------------
+release v24.36
+
+commit a0ad2c8cf087ad7ea79fec1c2ea884188c4fef57 (HEAD -> master, tag: v24.37, tag: v24.36, origin/release/v24.36.x, origin/master, origin/HEAD)
+Merge: 08b30e776 32b4cc820
+Author: SteveTickle <steve.tickle@cyanconnode.com>
+Date:   Thu Oct 24 08:37:24 2024 +0000
+
+    Merge branch 'EMD-497-mea-cnic-gstar-3-ph-v-24-8-0-and-above-not-writing-rssi-into-meter-correctly-mf-testing' into 'master'
+    
+    EMD-497 CESQ and CSQ will run and update their respective params
+    
+    See merge request Omnimesh/terminal!564
+
+commit 32b4cc8201f90dc2c0c944451c198adb6ecad523
+Author: AdamRiekert <adam.riekert@cyanconnode.com>
+Date:   Thu Oct 24 08:37:24 2024 +0000
+
+    EMD-497 CESQ and CSQ will run and update their respective params
+
+commit 08b30e7761388446a28cb1f81c30c740162fb530
+Merge: 03980faaa 1f3506f21
+Author: SteveTickle <steve.tickle@cyanconnode.com>
+Date:   Wed Oct 23 10:37:28 2024 +0000
+
+    Merge branch 'EMD-397-coap-read-write-secure-file' into 'master'
+    
+    EMD-397  Tools: coap_request.py should be able to read and write encrypted files
+    
+    See merge request Omnimesh/terminal!538
+
+commit 03980faaa6117eaf9f8b677a86a921f22c227fec
+Merge: a2283c6a4 fc7be73dd
+Author: SteveTickle <steve.tickle@cyanconnode.com>
+Date:   Wed Oct 23 10:33:49 2024 +0000
+
+    Merge branch 'upgrade_gw7' into 'master'
+    
+    EMD225: GW7 Master should not upgrade if CNIC failed upgrade
+    
+    See merge request Omnimesh/terminal!552
+
+commit a2283c6a47d7229ddf12050b6035a6c79e082980
+Merge: 48b24783a 66bd9d248
+Author: SteveTickle <steve.tickle@cyanconnode.com>
+Date:   Wed Oct 23 09:18:29 2024 +0000
+
+    Merge branch 'EMD-314-ReduceNumberOfTasks_Rebase' into 'master'
+    
+    Emd 314 reduce number of tasks
+    
+    See merge request Omnimesh/terminal!522
+
+commit 66bd9d248870a279f8e0d5e49b2fcec3a7784352
+Author: SteveTickle <steve.tickle@cyanconnode.com>
+Date:   Wed Oct 23 09:18:28 2024 +0000
+
+    Emd 314 reduce number of tasks
+
+commit 48b24783a9cc3b22d573a92e1a2cda3a4f5288b2 (tag: v24.31, tag: v24.30, tag: v24.27, tag: v24.26, tag: v24.21, origin/release/v24.26.x, origin/EMD-504-GW200-runni
+
+
 
 
 
