@@ -46782,12 +46782,14 @@ RPL persist
     - RPLDRouteEntry: Routing table entry.
 - rpl_routelist:
     - RplRouteList: route list
-- expite after 1 day (?)
+- expire after 1 day (?)
+    - Store timestamp with data.
 - Periodically (and on mesh join):
     - Serialise all data and store timestamp
 - On boot: 
     - Deserialise the state into rpl_data.
 - unit tests to show same behaviour before and after serialisation.
+    - Maybe hard since unit tests use Vector instead of arrays. Maybe unify these mechanisms?
 - Get baseline power-on -> all-nodes-pingable.
 - PFail Test on the 94 node network:
     - boot to stable network
