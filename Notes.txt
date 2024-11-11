@@ -46775,10 +46775,10 @@ EMD-498: MEA - CNIC - ODR Block load reads Can't handle more than 3 or 4 hours w
 RPL persist
 
 - rpl_data:
-    - RPLState: misc state for node.
+    - RPLState: misc state for node. s_rplState_allNodes
     - RPLDagConfig: DAG config data
-    - RPLDagState: DAG state (may need refreshing/expiring)
-    - RPLNBEntry: neighbour table (may need expiring).
+    - RPLDagState: DAG state (may need refreshing/expiring) s_rplDagState_allNodes * RPL_N_DAG
+    - RPLNBEntry: neighbour table (may need expiring). s_rplNBEntry_allNodes * RPL_N_NB
     - RPLDRouteEntry: Routing table entry.
 - Periodically (and on mesh join):
     - Serialise all data and store timestamp
