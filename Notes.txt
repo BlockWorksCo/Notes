@@ -46780,6 +46780,10 @@ RPL persist
     - RPLDagState: DAG state (may need refreshing/expiring)
     - RPLNBEntry: neighbour table (may need expiring).
     - RPLDRouteEntry: Routing table entry.
+- Periodically (and on mesh join):
+    - Serialise all data and store timestamp
+- On boot: 
+    - Deserialise the state into rpl_data.
 
 
 
