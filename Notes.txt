@@ -46786,7 +46786,14 @@ RPL persist
     - Serialise all data and store timestamp
 - On boot: 
     - Deserialise the state into rpl_data.
-- unit tests to show same behviour before and after serialisation.
+- unit tests to show same behaviour before and after serialisation.
+- PFail Test on the 94 node network:
+    - boot to stable network
+    - allow to persist
+    - power off entire network
+    - wait for x minutes.
+    - power on network
+    - Check time till all-nodes-pingable
 
 
 
