@@ -46784,6 +46784,8 @@ RPL persist
     - RplRouteList: route list
 - expire after 1 day (?)
     - Store timestamp with data.
+- Mesh may be sub-optimal for a while after deserialisation but normal RPL procedures will
+reoptimise for closer new neighbour for example.
 - Periodically (and on mesh join):
     - Serialise all data and store timestamp
 - On boot: 
