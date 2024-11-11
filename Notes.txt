@@ -46782,11 +46782,13 @@ RPL persist
     - RPLDRouteEntry: Routing table entry.
 - rpl_routelist:
     - RplRouteList: route list
+- expite after 1 day (?)
 - Periodically (and on mesh join):
     - Serialise all data and store timestamp
 - On boot: 
     - Deserialise the state into rpl_data.
 - unit tests to show same behaviour before and after serialisation.
+- Get baseline power-on -> all-nodes-pingable.
 - PFail Test on the 94 node network:
     - boot to stable network
     - allow to persist
@@ -46794,6 +46796,9 @@ RPL persist
     - wait for x minutes.
     - power on network
     - Check time till all-nodes-pingable
+- Perform all-nodes-pingable test when one node is turned off for 10 minutes
+- Perform all-nodes-pingable test when one node is turned off for 1hour.
+- Perform all-nodes-pingable test when one node is turned off for 1 day (expired data).
 
 
 
