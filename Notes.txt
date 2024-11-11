@@ -46801,6 +46801,12 @@ RPL persist
 - Perform all-nodes-pingable test when one node is turned off for 10 minutes
 - Perform all-nodes-pingable test when one node is turned off for 1hour.
 - Perform all-nodes-pingable test when one node is turned off for 1 day (expired data).
+- Test time taken for:
+    - Large settled mesh
+    - power off
+    - New gateway turned on
+    - mesh turned on
+    - Expect normal timeout-and-reform time.
 
 
 
