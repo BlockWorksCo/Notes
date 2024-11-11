@@ -46771,6 +46771,15 @@ EMD-397: Ability to read secure files via coap_request
 EMD-497: Correcting modem RSSI during meter manufacturing mode
 EMD-498: MEA - CNIC - ODR Block load reads Can't handle more than 3 or 4 hours worth of data
 
+-------------------------------------------------
+RPL persist
+
+- rpl_data:
+    - RPLState: misc state for node.
+    - RPLDagConfig: DAG config data
+    - RPLDagState: DAG state (may need refreshing/expiring)
+    - RPLNBEntry: neighbour table (may need expiring).
+    - RPLDRouteEntry: Routing table entry.
 
 
 
