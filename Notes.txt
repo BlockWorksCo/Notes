@@ -46817,6 +46817,8 @@ tries to MALLOC 32KB for mount at startup
 symbols from nm -A -S --size-sort
 heapSize=__HeapLimit-__HeapBase
 
+to get symbol sizes in BSS:
+nm --size-sort -A -S build/gw200-g2/bin/agent.elf | ag " b | B " >t.nm
 
 
 
