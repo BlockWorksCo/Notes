@@ -46810,6 +46810,12 @@ reoptimise for closer new neighbour for example.
     - mesh turned on
     - Expect normal timeout-and-reform time.
 
+-------------------------------------------------------
+large-flash gw malloc failure
+
+tries to MALLOC 32KB for mount at startup
+symbols from nm -A -S --size-sort
+heapSize=__HeapLimit-__HeapBase
 
 
 
