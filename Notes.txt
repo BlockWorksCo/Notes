@@ -46823,6 +46823,9 @@ nm --size-sort -A -S build/gw200-g2/bin/agent.elf | ag " b | B " >t.nm
 ------------------------------------
 large test network
 
+Loki/syslog/grafana:
+https://github.com/lux4rd0/grafana-loki-syslog-aio
+
 pip install rfc5424-logging-handler
 
 
