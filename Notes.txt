@@ -46820,6 +46820,12 @@ heapSize=__HeapLimit-__HeapBase
 to get symbol sizes in BSS:
 nm --size-sort -A -S build/gw200-g2/bin/agent.elf | ag " b | B " >t.nm
 
+------------------------------------
+large test network
+
+pip install rfc5424-logging-handler
+
+
 
 
 
