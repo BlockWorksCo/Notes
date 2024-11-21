@@ -46831,6 +46831,18 @@ pip install rfc5424-logging-handler
 --------------------------------------------
 barnlogger-01 setup
 
+docker
+docker-compose
+
+https://github.com/lux4rd0/grafana-loki-syslog-aio
+
+sudo apt install tmux unzip
+
+wget https://github.com/lux4rd0/grafana-loki-syslog-aio/archive/main.zip
+unzip main.zip
+cd grafana...
+docker-compose -f ./docker-compose.yml up -d
+
 
 
 
