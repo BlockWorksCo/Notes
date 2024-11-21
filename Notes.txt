@@ -46828,6 +46828,10 @@ https://github.com/lux4rd0/grafana-loki-syslog-aio
 
 pip install rfc5424-logging-handler
 
+--------------------------------------------
+barnlogger-01 setup
+
+
 
 
 
