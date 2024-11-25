@@ -46845,6 +46845,14 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 docker-compose -f ./docker-compose.yml up -d
 
+------------------------------------
+release v24.38
+
+- EMD-457: fwup block size reduce for RAM saving
+- EMD-540: Genus CNIC mfr process improvements (RSSI/net-status)
+- EMD-575: Fix large-flash MEA gw malloc failure
+- EMD-461: Channel plan 13 for Indonesia
+- EMD-504: Ethernet logout issue due to cellular.
 
 
 
