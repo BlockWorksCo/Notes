@@ -46855,6 +46855,10 @@ release v24.38 since v24.36
 - EMD-504: Ethernet logout issue due to cellular.
 - MTI-464: EsyaSoft (?)
 
+--------------------------------------
+CND
+
+
 
 
 
