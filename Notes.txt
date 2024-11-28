@@ -46851,6 +46851,11 @@ docker-compose -f ./docker-compose.yml up -d
 - apt install samba cifs-utils
 - mkdir /barn
 - sudo chmod a+rw /barn
+- sudo chown nobody:nogroup /barn
+- add this to /etc/sambaa/smb.conf
+
+- sudo systemctl restart smbd.service nmbd.service
+- from rpi: sudo mount -t cifs -o //barnlogger-01/barn /mnt/barn
 
 
 ------------------------------------
