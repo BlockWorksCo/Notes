@@ -46848,6 +46848,11 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 docker-compose -f ./docker-compose.yml up -d
 
+- apt install samba cifs-utils
+- mkdir /barn
+- sudo chmod a+rw /barn
+
+
 ------------------------------------
 release v24.38 since v24.36
 
