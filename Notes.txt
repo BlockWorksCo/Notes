@@ -46856,6 +46856,7 @@ docker-compose -f ./docker-compose.yml up -d
 
 - sudo systemctl restart smbd.service nmbd.service
 - from rpi: sudo mount -t cifs -o username=ubuntu,password=ubuntu //barnlogger-01/barn /barn
+sudo mount -t cifs -o username=ubuntu,password=ubuntu,domain=mydomain,uid=$(id -u),gid=$(id -g),forceuid,forcegid //barnlogger-01/barn /barn
 
 
 ------------------------------------
