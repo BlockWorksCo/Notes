@@ -46712,9 +46712,9 @@ Author: SteveTickle <steve.tickle@cyanconnode.com>
 Date:   Thu Oct 24 08:37:24 2024 +0000
 
     Merge branch 'EMD-497-mea-cnic-gstar-3-ph-v-24-8-0-and-above-not-writing-rssi-into-meter-correctly-mf-testing' into 'master'
-    
+
     EMD-497 CESQ and CSQ will run and update their respective params
-    
+
     See merge request Omnimesh/terminal!564
 
 commit 32b4cc8201f90dc2c0c944451c198adb6ecad523
@@ -46729,9 +46729,9 @@ Author: SteveTickle <steve.tickle@cyanconnode.com>
 Date:   Wed Oct 23 10:37:28 2024 +0000
 
     Merge branch 'EMD-397-coap-read-write-secure-file' into 'master'
-    
+
     EMD-397  Tools: coap_request.py should be able to read and write encrypted files
-    
+
     See merge request Omnimesh/terminal!538
 
 commit 03980faaa6117eaf9f8b677a86a921f22c227fec
@@ -46740,9 +46740,9 @@ Author: SteveTickle <steve.tickle@cyanconnode.com>
 Date:   Wed Oct 23 10:33:49 2024 +0000
 
     Merge branch 'upgrade_gw7' into 'master'
-    
+
     EMD225: GW7 Master should not upgrade if CNIC failed upgrade
-    
+
     See merge request Omnimesh/terminal!552
 
 commit a2283c6a47d7229ddf12050b6035a6c79e082980
@@ -46751,9 +46751,9 @@ Author: SteveTickle <steve.tickle@cyanconnode.com>
 Date:   Wed Oct 23 09:18:29 2024 +0000
 
     Merge branch 'EMD-314-ReduceNumberOfTasks_Rebase' into 'master'
-    
+
     Emd 314 reduce number of tasks
-    
+
     See merge request Omnimesh/terminal!522
 
 commit 66bd9d248870a279f8e0d5e49b2fcec3a7784352
@@ -46791,7 +46791,7 @@ RPL persist
 reoptimise for closer new neighbour for example.
 - Periodically (and on mesh join):
     - Serialise all data and store timestamp
-- On boot: 
+- On boot:
     - Deserialise the state into rpl_data.
 - unit tests to show same behaviour before and after serialisation.
     - Maybe hard since unit tests use Vector instead of arrays. Maybe unify these mechanisms?
@@ -46857,6 +46857,18 @@ docker-compose -f ./docker-compose.yml up -d
 - sudo systemctl restart smbd.service nmbd.service
 - from rpi: sudo mount -t cifs -o username=ubuntu,password=ubuntu //barnlogger-01/barn /barn
 sudo mount -t cifs -o username=ubuntu,password=ubuntu,domain=mydomain,uid=$(id -u),gid=$(id -g),forceuid,forcegid //barnlogger-01/barn /barn
+
+Add to /etc/samba/smb.conf
+
+[barn]
+    comment = Barn test network metadata
+    path = /barn
+    browsable = yes
+    guest ok = yes
+    read only = no
+    writeable = yes
+    create mask = 0666
+
 
 
 ------------------------------------
