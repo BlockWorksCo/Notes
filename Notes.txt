@@ -46869,6 +46869,13 @@ Add to /etc/samba/smb.conf
     writeable = yes
     create mask = 0666
 
+sudo systemctl restart smbd nmbd
+
+
+Then from barn-rpi1:
+sudo mount -t cifs -o username=ubuntu,password=ubuntu,uid=$(id -u),gid=$(id -g),forceuid,forcegid //barnlogger-01/barn /mnt/barn
+Check that /mnt/barn is writeable from barn-rpi1 ubuntu user.
+
 
 
 ------------------------------------
