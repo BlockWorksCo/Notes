@@ -46898,7 +46898,7 @@ barn machines
 
 - barnlogger-01
 - barn-rpi1
-- barn-rpi51
+- barnrpi51
 - barnrpi31
 
 
