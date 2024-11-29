@@ -46893,6 +46893,13 @@ release v24.38 since v24.36
 CND
 
 
+---------------------------
+barn machines
+
+- barnlogger-01
+- barn-rpi1
+- barn-rpi51
+- barnrpi31
 
 
 
