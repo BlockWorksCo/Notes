@@ -46500,7 +46500,7 @@ EFR32FG28A120F1024GM48-AR  -  FG28, Sub-GHz, 1024kB Flash, 256kB RAM, +20 dBm,
 - Initially keep BLE out and go for a straight port, later project can optimise and add BLE
 
 ---------------------------------------------------
-Setting up Ubuntu 24.04 server RPi
+Setting up Ubuntu 24.04 server RPi barn-rpi1
 
 - dd .img to SD card
 - boot with SD card.
@@ -46527,8 +46527,9 @@ Setting up Ubuntu 24.04 server RPi
 - ./configure --enable-cmsis-dap
 - git checkout
 
-- mkdir /mnt/barn
-- sudo mount -t cifs //barnlogger-01/barn /mnt/barn
+- sudo mkdir /mnt/barn
+- sudo chmod a+rw /mnt/barn
+- sudo mount -t cifs -o username=ubuntu,password=ubuntu,uid=$(id -u),gid=$(id -g),forceuid,forcegid //barnlogger-01/barn /mnt/barn
 
 -------------------------------------------------------
 ODR improvements
