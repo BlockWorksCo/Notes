@@ -46903,8 +46903,8 @@ barn machines
 - barnrpi33
 
 steve@steve-xps15:~/Work/OmniCtl$ ssh-copy-id ubuntu@barnrpi51                                                                          
-steve@steve-xps15:~/Work/OmniCtl$ scp SetupRPi.sh ubuntu@barnrpi51:~/                                                                   
-steve@steve-xps15:~/Work/OmniCtl$ ssh ubuntu@barnrpi51 -C "~/SetupRPi.sh"
+steve@steve-xps15:~/Work/OmniCtl$ scp -r ../OmniCtl ubuntu@barnrpi51:~/                                                                   
+steve@steve-xps15:~/Work/OmniCtl$ ssh ubuntu@barnrpi51 -C "~/OmniCtl/SetupRPi.sh"
 
 
 
