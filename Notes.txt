@@ -46849,7 +46849,7 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 docker-compose -f ./docker-compose.yml up -d
 
-- apt install samba cifs-utils
+- apt install samba cifs-utils build-essential golang
 - mkdir /barn
 - sudo chmod a+rw /barn
 - sudo chown nobody:nogroup /barn
@@ -46876,6 +46876,12 @@ sudo systemctl restart smbd nmbd
 Then from barn-rpi1:
 sudo mount -t cifs -o username=ubuntu,password=ubuntu,uid=$(id -u),gid=$(id -g),forceuid,forcegid //barnlogger-01/barn /mnt/barn
 Check that /mnt/barn is writeable from barn-rpi1 ubuntu user.
+
+
+LogCLI:
+git clone https://github.com/grafana/loki.git
+cd loki
+make logcli
 
 
 
