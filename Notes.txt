@@ -46916,6 +46916,13 @@ steve@steve-xps15:~/Work/OmniCtl$ ssh ubuntu@barnrpi51 -C "~/OmniCtl/SetupRPi.sh
 logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --output=jsonl '{job="syslog"}'                   
 ./cmd/logcli/logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --limit=100000 '{job="syslog", host="001bc50c6058dd6b"}'
 
+--------------------------------------
+RPi MAC address change:
+
+edit /boot/firmware/cmdline.txt and add "smsc95xx.macaddr=b8:27:eb:78:24:a0" to the end of the line to change the 
+MAC address to a non-clashing value.                                                                              
+
+
 
 
 
