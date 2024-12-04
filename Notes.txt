@@ -46921,6 +46921,15 @@ RPi MAC address change:
 
 edit /boot/firmware/cmdline.txt and add "smsc95xx.macaddr=b8:27:eb:78:24:a0" to the end of the line to change the 
 MAC address to a non-clashing value.                                                                              
+----------------------
+barn-rpi startup
+
+sudo mount -t cifs -o username=ubuntu,password=ubuntu,uid=$(id -u),gid=$(id -g),forceuid,forcegid //barnlogger-01/barn /mnt/barn
+cd
+source ~/.venv/bin/activate
+cat /mnt/barn/All | xargs -I '{}' -n 1 ./omnictl.sh --adapter={} --operation=syslog --syslogserver=barnlogger-01
+
+
 
 
 
