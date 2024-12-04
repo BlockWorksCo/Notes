@@ -46912,6 +46912,10 @@ steve@steve-xps15:~/Work/OmniCtl$ ssh-copy-id ubuntu@barnrpi51
 steve@steve-xps15:~/Work/OmniCtl$ scp -r ../OmniCtl ubuntu@barnrpi51:~/                                                                   
 steve@steve-xps15:~/Work/OmniCtl$ ssh ubuntu@barnrpi51 -C "~/OmniCtl/SetupRPi.sh"
 
+sudo apt install raspi-config
+sudo raspi-config
+# set wait for network at boot
+
 -----------------------------------
 logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --output=jsonl '{job="syslog"}'                   
 ./cmd/logcli/logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --limit=100000 '{job="syslog", host="001bc50c6058dd6b"}'
