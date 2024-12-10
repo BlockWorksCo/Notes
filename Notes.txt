@@ -46938,8 +46938,10 @@ cat /mnt/barn/All | xargs -I '{}' -n 1 ./omnictl.sh --adapter={} --operation=sys
 full mesh reset test
 10:18 start
 10:22 end
+10:31 settled (no parent changes).
 
 49 nodes: 4 minutes.
+
 
 
 
