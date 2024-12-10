@@ -46934,6 +46934,10 @@ source ~/.venv/bin/activate
 cat /mnt/barn/All | xargs -I '{}' -n 1 ./omnictl.sh --adapter={} --operation=syslog --syslogserver=barnlogger-01
 
 
+------------------------------------------------
+full mesh reset test
+10:18 start
+
 
 
 
