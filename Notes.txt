@@ -46840,7 +46840,7 @@ docker-compose
 
 https://github.com/lux4rd0/grafana-loki-syslog-aio
 
-sudo apt install tmux unzip docker samba cifs-utils build-essential golang
+sudo apt install tmux unzip docker samba cifs-utils build-essential golang docker-compose
 scp -r grafana-loki-syslog-aio ubuntu@barnlogger-02:~/
 scp -r OmniCtl ubuntu@barnlogger-02:~/
 
@@ -46853,7 +46853,7 @@ unzip main.zip
 cd grafana...
 sudo groupadd docker
 sudo usermod -aG docker $USER
-docker-compose -f ./docker-compose.yml up -d
+docker-compose -f LargeTestNetwork.yml up -d
 
 - apt install samba cifs-utils build-essential golang
 - sudo mkdir /barn
