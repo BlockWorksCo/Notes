@@ -46840,7 +46840,11 @@ docker-compose
 
 https://github.com/lux4rd0/grafana-loki-syslog-aio
 
-sudo apt install tmux unzip
+sudo apt install tmux unzip docker samba cifs-utils build-essential golang
+scp -r grafana-loki-syslog-aio ubuntu@barnlogger-02:~/
+scp -r OmniCtl ubuntu@barnlogger-02:~/
+
+
 
 wget https://github.com/lux4rd0/grafana-loki-syslog-aio/archive/main.zip
 unzip main.zip
