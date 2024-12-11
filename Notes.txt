@@ -46846,6 +46846,8 @@ scp -r OmniCtl ubuntu@barnlogger-02:~/
 
 
 
+cp OmniCtl/.tmux.conf .
+
 wget https://github.com/lux4rd0/grafana-loki-syslog-aio/archive/main.zip
 unzip main.zip
 cd grafana...
@@ -46854,7 +46856,7 @@ sudo usermod -aG docker $USER
 docker-compose -f ./docker-compose.yml up -d
 
 - apt install samba cifs-utils build-essential golang
-- mkdir /barn
+- sudo mkdir /barn
 - sudo chmod a+rw /barn
 - sudo chown nobody:nogroup /barn
 - add this to /etc/sambaa/smb.conf
