@@ -46953,16 +46953,16 @@ full mesh reset test
 
 
 ----------------------------------------
-EMD-457
-EMD-504
-EMD-461
-EMD-346
-EMD-540
-EMD-314
-EMD-575
-EMD-557
-EMD-368
-EMD-588
+EMD-457 RAM reduction (fwImage)
+EMD-504 gw eth logout issue
+EMD-461 Channel plan 13 (Indonesia)
+EMD-346 LOG_DEBUGS->LOG_ERRORS
+EMD-540 CNIC mfg test
+EMD-314 RAM reduction (task removal)
+EMD-575 asyncio removal from gw
+EMD-557 ODR improvements
+EMD-368 ICCID SIM read gw200
+EMD-588 timesync fix for 314
 
 
 
