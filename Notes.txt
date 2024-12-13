@@ -46908,7 +46908,8 @@ CND
 ---------------------------
 barn machines
 
-- barnlogger-01
+- barnlogger-02
+- barnhpcube101
 - barn-rpi1
 - barnrpi51
 - barnrpi31
