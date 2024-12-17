@@ -46972,6 +46972,7 @@ EMD sprint 19
 - MTI-464 Esyasoft
 - MTI-567 LRCF
 - EMD-565 Avon IPA3b build
+- EMD-578 meter-testing states
 
 
 
