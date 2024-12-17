@@ -46973,6 +46973,8 @@ EMD sprint 19
 - MTI-567 LRCF
 - EMD-565 Avon IPA3b build
 - EMD-578 meter-testing states
+- HED-568/EMD-557 ODR improvements
+- Build env upgrade to 24.04
 
 
 
