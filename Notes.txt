@@ -46977,4 +46977,12 @@ EMD sprint 19
 - Build env upgrade to 24.04
 
 
+------------------------------------------
+lsusb equivalent 
+
+udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E6633861A3118338-if01 | grep ID_SERIAL_SHORT
+udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E6633861A3118338-if01 | grep ID_VENDOR_ID
+udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E6633861A3118338-if01 | grep ID_MODEL_ID
+
+
 
