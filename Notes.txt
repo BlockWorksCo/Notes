@@ -46975,6 +46975,7 @@ EMD sprint 19
 - EMD-578 meter-testing states
 - HED-568/EMD-557 ODR improvements
 - Build env upgrade to 24.04
+- FG25 bringup/check
 
 
 ------------------------------------------
