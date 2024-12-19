@@ -46985,4 +46985,11 @@ udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E
 udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E6633861A3118338-if01 | grep ID_MODEL_ID
 
 
+--------------------------------------------
+servers:
+
+ssh stickle@omnidev-in-01.dev.cyanconnode.com
+ssh stickle@barn.dev.cyanconnode.com
+
+
 
