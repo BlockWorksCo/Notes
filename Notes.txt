@@ -46969,7 +46969,6 @@ EMD-588 timesync fix for 314
 EMD sprint 19
 
 - EMD-573 device id in RTC sync events
-- MTI-464 Esyasoft
 - MTI-567 LRCF
 - EMD-565 Avon IPA3b build
 - EMD-578 meter-testing states
