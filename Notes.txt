@@ -46978,10 +46978,10 @@ EMD sprint 19
 - EMD-506 Build env upgrade to 24.04 Ubuntu2304patches
 - EMD-592 FG25 bringup/check
 - EMD-509 RSRQ on gw
-- GN/NuT/TC integration.
+- EMD-593 GN/NuT/TC integration.
 - EMD-591 WPDU driver breakage.
 - EMD-258 stuttering on GW7 specifically, no longer appears on 200.
-- EMD-565: Avon IPA3b build (Done).
+- EMD-565 Avon IPA3b build (Done).
 
 RPL tickets to be tested on large test networks
 - EMD-254
