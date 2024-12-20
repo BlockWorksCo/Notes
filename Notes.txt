@@ -46976,7 +46976,7 @@ EMD sprint 19
 - Build env upgrade to 24.04
 - FG25 bringup/check
 - EMD-509 RSRQ on gw
-- CND-14092: RTC sync improvements, dontn meter-sync when logged out, degrade time without sync.
+- CND-14092: RTC sync improvements, dont meter-sync when logged out, degrade time without sync.
 - Flash failures, fs replacement.
 - GN/NuT/TC integration.
 
