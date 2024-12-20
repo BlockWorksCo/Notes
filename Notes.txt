@@ -46979,6 +46979,7 @@ EMD sprint 19
 - CND-14092: RTC sync improvements, dont meter-sync when logged out, degrade time without sync.
 - Flash failures, fs replacement.
 - GN/NuT/TC integration.
+- EMD-xxx WPDU driver breakage.
 
 
 ------------------------------------------
