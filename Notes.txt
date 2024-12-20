@@ -46973,7 +46973,7 @@ EMD sprint 19
 - EMD-565 Avon IPA3b build
 - EMD-578 meter-testing states
 - HED-568/EMD-557 ODR improvements
-- Build env upgrade to 24.04
+- EMD-506 Build env upgrade to 24.04 Ubuntu2304patches
 - FG25 bringup/check
 - EMD-509 RSRQ on gw
 - CND-14092: RTC sync improvements, dont meter-sync when logged out, degrade time without sync.
