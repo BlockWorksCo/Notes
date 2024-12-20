@@ -47005,5 +47005,11 @@ servers:
 ssh stickle@omnidev-in-01.dev.cyanconnode.com
 ssh stickle@barn.dev.cyanconnode.com
 
+---------------------------------------
+sma/nms logging to barnlogger-02
+
+ssh stickle@barn.dev.cyanconnode.com "tail -F --retry /opt/omnimesh/current/nms/logs/nms-debug.log" | logger --rfc5424 --server barnlogger-02 --stderr
+ssh stickle@barn.dev.cyanconnode.com "tail -F --retry /opt/omnimesh/current/sma/logs/sma-debug.log" | logger --rfc5424 --server barnlogger-02 --stderr
+
 
 
