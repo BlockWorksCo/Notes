@@ -46978,6 +46978,7 @@ EMD sprint 19
 - EMD-509 RSRQ on gw
 - CND-14092: RTC sync improvements, dontn meter-sync when logged out, degrade time without sync.
 - Flash failures, fs replacement.
+- GN/NuT/TC integration.
 
 
 ------------------------------------------
