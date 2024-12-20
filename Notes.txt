@@ -46980,6 +46980,7 @@ EMD sprint 19
 - Flash failures, fs replacement.
 - GN/NuT/TC integration.
 - EMD-591 WPDU driver breakage.
+- EMD-258 stuttering.
 
 
 ------------------------------------------
