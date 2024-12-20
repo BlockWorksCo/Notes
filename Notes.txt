@@ -46969,19 +46969,18 @@ EMD-588 timesync fix for 314
 EMD sprint 19
 
 - MTI-567 LRCF
+- HED-568/EMD-557 ODR improvements
+- CND-14092: RTC sync improvements, dont meter-sync when logged out, degrade time without sync.
+- Flash failures, fs replacement.
 
 - EMD-573 device id in RTC sync events
-- EMD-565 Avon IPA3b build
 - EMD-578 meter-testing states
-- HED-568/EMD-557 ODR improvements
 - EMD-506 Build env upgrade to 24.04 Ubuntu2304patches
 - EMD-592 FG25 bringup/check
 - EMD-509 RSRQ on gw
-- CND-14092: RTC sync improvements, dont meter-sync when logged out, degrade time without sync.
-- Flash failures, fs replacement.
 - GN/NuT/TC integration.
 - EMD-591 WPDU driver breakage.
-- EMD-258 stuttering.
+- EMD-258 stuttering on GW7 specifically, no longer appears on 200.
 - EMD-565: Avon IPA3b build (Done).
 
 RPL tickets to be tested on large test networks
