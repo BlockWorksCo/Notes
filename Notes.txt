@@ -47005,6 +47005,9 @@ servers:
 ssh stickle@omnidev-in-01.dev.cyanconnode.com
 ssh stickle@barn.dev.cyanconnode.com
 
+https://omnidev-in-02.dev.cyanconnode.com
+momentum noble optimism honey
+
 ---------------------------------------
 sma/nms logging to barnlogger-02
 
