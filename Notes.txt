@@ -46915,8 +46915,8 @@ barn machines
 - barnrpi31
 - barnrpi33
 
-steve@steve-xps15:~/Work/OmniCtl$ ssh-copy-id ubuntu@barnrpi51                                                                          
-steve@steve-xps15:~/Work/OmniCtl$ scp -r ../OmniCtl ubuntu@barnrpi51:~/                                                                   
+steve@steve-xps15:~/Work/OmniCtl$ ssh-copy-id ubuntu@barnrpi51
+steve@steve-xps15:~/Work/OmniCtl$ scp -r ../OmniCtl ubuntu@barnrpi51:~/
 steve@steve-xps15:~/Work/OmniCtl$ ssh ubuntu@barnrpi51 -C "~/OmniCtl/SetupRPi.sh"
 
 sudo apt install raspi-config
@@ -46924,14 +46924,14 @@ sudo raspi-config
 # set wait for network at boot
 
 -----------------------------------
-logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --output=jsonl '{job="syslog"}'                   
+logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --output=jsonl '{job="syslog"}'
 ./cmd/logcli/logcli query --timezone=UTC --from="2024-12-01T00:00:00Z" --to="2024-12-02T23:00:00Z" --limit=100000 '{job="syslog", host="001bc50c6058dd6b"}'
 
 --------------------------------------
 RPi MAC address change:
 
-edit /boot/firmware/cmdline.txt and add "smsc95xx.macaddr=b8:27:eb:78:24:a0" to the end of the line to change the 
-MAC address to a non-clashing value.                                                                              
+edit /boot/firmware/cmdline.txt and add "smsc95xx.macaddr=b8:27:eb:78:24:a0" to the end of the line to change the
+MAC address to a non-clashing value.
 ----------------------
 barn-rpi startup
 
@@ -46988,11 +46988,11 @@ RPL tickets to be tested on large test networks
 - EMD-126
 - EMD-310
 - EMD-421
-- 
+-
 
 
 ------------------------------------------
-lsusb equivalent 
+lsusb equivalent
 
 udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E6633861A3118338-if01 | grep ID_SERIAL_SHORT
 udevadm info --name=/dev/serial/by-id/usb-Raspberry_Pi_Debug_Probe__CMSIS-DAP__E6633861A3118338-if01 | grep ID_VENDOR_ID
@@ -47019,13 +47019,23 @@ ssh stickle@barn.dev.cyanconnode.com "tail -F --retry /opt/omnimesh/current/sma/
 ---------------------------------
 - EMD-594 Memory leak issue
 - EMD-595 Automated test for heap-usage/memory leaks
-- EMD-573 device id in RTC sync events                                 
-- EMD-578 meter-testing states                                         
-- EMD-593 GN/NuT/TC integration.                                       
-- EMD-591 WPDU driver breakage.                                        
-- EMD-506 Build env upgrade to 24.04 Ubuntu2304patches                 
-- EMD-592 FG25 bringup/check                                           
-- EMD-509 RSRQ on gw                                                   
+- EMD-573 device id in RTC sync events
+- EMD-578 meter-testing states
+- EMD-593 GN/NuT/TC integration.
+- EMD-591 WPDU driver breakage.
+- EMD-506 Build env upgrade to 24.04 Ubuntu2304patches
+- EMD-592 FG25 bringup/check
+- EMD-509 RSRQ on gw
 - EMD-565 Avon IPA3b build (Done but has issues).
-- EMD-258 stuttering on GW7 specifically, no longer appears on 200.    
+- EMD-258 stuttering on GW7 specifically, no longer appears on 200.
+
+-------------------------------------
+
+30th arrive & hard rock cafe
+31st Golden Circle & street food
+1st Hamburger factory & northern light tour
+2nd Sky lagoon bastard burgers not booked.
+3rd fly home
+
+
 
