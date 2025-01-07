@@ -47037,5 +47037,9 @@ ssh stickle@barn.dev.cyanconnode.com "tail -F --retry /opt/omnimesh/current/sma/
 2nd Sky lagoon bastard burgers not booked.
 3rd fly home
 
+---------------------------------------------------
+v25.02
+
+- EMD-537 repeated DTLS failures to clear cache.
 
 
