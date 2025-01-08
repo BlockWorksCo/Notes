@@ -47055,6 +47055,7 @@ There are a few outstanding questions on there that need to be resolved in paral
 - The lack of a watchdog (software or hardware)
 - The lack of sufficient GPIOs for our full "UI".
 - Storage size is still not clearly sufficient when taking into account upgrades.
+- It isnt clear whether SFFS has wear-levelling & bad-block management so may not be suitable for application use.
 Any one of these can be a show-stopper depending on what trade--offs the business decides to take w.r.t. security and functionality vs cost
 
 to completely resolve these issues, we need the following (or accept reduced functionality and robustness and/or increased risk).
