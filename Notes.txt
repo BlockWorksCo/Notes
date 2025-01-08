@@ -47029,6 +47029,7 @@ ssh stickle@barn.dev.cyanconnode.com "tail -F --retry /opt/omnimesh/current/sma/
 - EMD-509 RSRQ on gw
 - EMD-565 Avon IPA3b build (Done but has issues).
 - EMD-258 stuttering on GW7 specifically, no longer appears on 200.
+- EMD-549 OpenCPU fs investigation.
 
 -------------------------------------
 
