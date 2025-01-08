@@ -47045,4 +47045,17 @@ v25.02
 - EMD-426 cal table
 - EMD-340 modem test mode.
 
+-----------------------------------------------------------
+OpenCPU state:
+
+The OpenCPU plan/task breakdown is on https://cyanconnode.atlassian.net/browse/EMD-458
+There are a few outstanding questions on there that need to be resolved in parallel with starting the implementation, namely:
+- The lack of secure storage for a key to the encrypted files.
+- The lack of Read-Out-Protection
+- The lack of a watchdog (software or hardware)
+- The lack of sufficient GPIOs for our full "UI".
+Any one of these can be a show-stopper depending on what trade--offs the business decides to take w.r.t. security and functionality vs cost
+
+
+
 
