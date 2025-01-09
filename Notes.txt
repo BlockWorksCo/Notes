@@ -47067,4 +47067,9 @@ to completely resolve these issues, we need the following (or accept reduced fun
 - External SPI flash to resolve space issue
 
 
+----------------------------------------
+GhostTTY
+
+terminfo issue: copy ghosttty terminfo to remote:
+infocmp -x | ssh YOUR-SERVER -- tic -x -
 
