@@ -47078,7 +47078,7 @@ network statistics
 
 - Stability of topology, number of children, parent-changes, DAO RATE
 - Stability of connection: DTLS HELLO count, RPL packet activity. RPL/Data packet ratio? solicitin-node count
-- Mobility: time-to-hop?
+- Mobility: time-to-hop? parent-change count
 
 
 
