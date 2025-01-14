@@ -47085,10 +47085,11 @@ network statistics
 -----------------------------------------
 ssh tunnel remote port forwarding
 
-forward port 8443 on bar.dev to this machine port 443
+forward port 8443 on barn.dev to this machine port 443
 ssh -R 8443:localhost:443 stickle@barn.dev.cyanconnode.com
 
-ssh -L 4000:barn.dev.cyanconnode.com:4000 stickle@barn.dev.cyanconnode.com
+Forward local port 4000 to "remote localhost" on remote machine barn.dev
+ssh -L 4000:localhost:4000 stickle@barn.dev.cyanconnode.com
 
 
 
