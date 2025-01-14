@@ -47088,7 +47088,7 @@ ssh tunnel remote port forwarding
 forward port 8443 on bar.dev to this machine port 443
 ssh -R 8443:localhost:443 stickle@barn.dev.cyanconnode.com
 
-ssh -R 443:barn.dev.cyanconnode.com:8443 stickle@barn.dev.cyanconnode.com
+ssh -L 4000:barn.dev.cyanconnode.com:4000 stickle@barn.dev.cyanconnode.com
 
 
 
