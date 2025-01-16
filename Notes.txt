@@ -47080,6 +47080,13 @@ network statistics
 - Stability of connection: DTLS HELLO count, RPL packet activity. RPL/Data packet ratio? solicitin-node count
 - Mobility: time-to-hop? parent-change count
 
+define dashboard for each operation:
+- "mesh stability"
+- "mesh formation"
+- "data transfer"
+These dashboards can be focussed on the period of time in question to evauate the quality.
+
+Each test run should start clean.
 
 
 -----------------------------------------
