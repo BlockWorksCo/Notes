@@ -47088,6 +47088,10 @@ These dashboards can be focussed on the period of time in question to evauate th
 
 Each test run should start clean.
 
+metrics should be independent of number of nodes, i.e per-node ?
+
+Comparison testing setup? two meshes in parallel running different s/w in same conditions.
+
 
 -----------------------------------------
 ssh tunnel remote port forwarding
