@@ -47140,11 +47140,12 @@ id[2] = 0x01: Product version
 
 ---------------------------------------------------
 OpenCPU questions:
-- Can readout be disabled? disable UART? are files availble to be readout over UART/ATcommands?
+- Can readout be disabled? disable UART? are files availble to be readout over UART/ATcommands? nwy_uart_deinit()?
     - key storage is the critical issue.
 - filesystem size insufficient (270KB) so will need to use external flash.
 - lack of hardware watchdog reduces robustness
 - Is FOTA capable of changing partitioning? if so, do files remain over a FOTA upgrade?
+- Limited GPIO (3 lines)
 
 
 
