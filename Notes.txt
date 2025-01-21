@@ -47171,6 +47171,7 @@ SDLogging
 - EMD-602: FG28 openocd.
 - EMD-603: FG28 pinout changes
 - EMD-591: WPDU breakage
+- EMD-607: MQ robustness improvements.
 -
 
 
