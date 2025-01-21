@@ -47166,6 +47166,13 @@ SDLogging
 ------------------------------------------------------
 
 - EMD-593: MTS integration
+- EMD-606: RPL queue overflow
+- EMD-604: Airtel modem-upgrade improvements
+- EMD-602: FG28 openocd.
+- EMD-603: FG28 pinout changes
+- EMD-591: WPDU breakage
+-
+
 
 
 
