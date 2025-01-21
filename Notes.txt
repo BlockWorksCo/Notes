@@ -47154,6 +47154,13 @@ immy home
 belle to dance 5:15
 belle finishes 6pm
 
+------------------------------------------
+SDLogging
+
+- Replace LOG UART by LOG SD card attached via SPI.
+- Agent uses SPI to probe for SD card ID on boot and if present uses UART as SPI.
+- SD card used as a block device. No fs.
+- two Circular buffers on SD card, one containing metadata, another containing data.
 
 
 
