@@ -47163,5 +47163,9 @@ SDLogging
 - two Circular buffers on SD card, one containing metadata, another containing data.
 
 
+------------------------------------------------------
+
+- EMD-593: MTS integration
+
 
 
