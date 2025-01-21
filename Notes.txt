@@ -47105,37 +47105,37 @@ ssh -4 -L 4000:localhost:4000 stickle@barn.dev.cyanconnode.com
 ------------------------------------
 supported flash devices
 
-id[0] = 0xc2: Macronix Jedec ID                                                  
-id[1] = 0x23 or 0x28: Memory type            
-id[2] = 0x14 or 0x15: Memory size (2**0x14 = 1MiB, 2**0x15 = 2MiB)            
-        
-id[0] = 0xbf: Microchip Jedec ID             
-id[1] = 0x26: SST26VF032B chip ID            
-id[2] = 0x42: SST26VF032B chip ID            
-        
-id[0] = 0x1f: Adesto Jedec ID            
-id[1] = 0x8?: AT25SFxxx family code, 5 LSB density: 6=2MiB, 7=4MiB            
-id[2] = 0x0?: AT25SFxxx sub code            
-        
-id[0] = 0x1f: Adesto Jedec ID            
-id[1] = 0x4?: AT25FFxxx family code, 5 LSB density: 6=16Mb(2MB), 7=32Mb(4MB)     
-id[2] = 0x0?: AT25FFxxx sub code            
-        
-id[0] = 0xef; Winbond Serial Flash            
-id[1] = 0x40: W25Q16JV-IQ/JQ || 0x70: W25Q16JV-IM/JM            
-id[2] = 0x15: 16M            
-        
-id[0] = 0xef; Winbond Serial Flash            
-id[1] = 0x40: W25Q32JV-IQ/JQ || 0x70: W25Q32JV-IM/JM            
-id[2] = 0x16: 32M            
-        
-id[0] = 0x01; Cypress Jedec ID            
-id[1] = 0x60: S25FL256L/S25FL128L: 256-Mb(32-MB)/128-Mb(16-MB)            
-id[2] = 0x19: 256Mb                        
-                                           
-id[0] = 0x1f; Atmel Jedec ID               
-id[1] = 0x27: 32Mbit AT45 flash            
-id[2] = 0x01: Product version            
+id[0] = 0xc2: Macronix Jedec ID
+id[1] = 0x23 or 0x28: Memory type
+id[2] = 0x14 or 0x15: Memory size (2**0x14 = 1MiB, 2**0x15 = 2MiB)
+
+id[0] = 0xbf: Microchip Jedec ID
+id[1] = 0x26: SST26VF032B chip ID
+id[2] = 0x42: SST26VF032B chip ID
+
+id[0] = 0x1f: Adesto Jedec ID
+id[1] = 0x8?: AT25SFxxx family code, 5 LSB density: 6=2MiB, 7=4MiB
+id[2] = 0x0?: AT25SFxxx sub code
+
+id[0] = 0x1f: Adesto Jedec ID
+id[1] = 0x4?: AT25FFxxx family code, 5 LSB density: 6=16Mb(2MB), 7=32Mb(4MB)
+id[2] = 0x0?: AT25FFxxx sub code
+
+id[0] = 0xef; Winbond Serial Flash
+id[1] = 0x40: W25Q16JV-IQ/JQ || 0x70: W25Q16JV-IM/JM
+id[2] = 0x15: 16M
+
+id[0] = 0xef; Winbond Serial Flash
+id[1] = 0x40: W25Q32JV-IQ/JQ || 0x70: W25Q32JV-IM/JM
+id[2] = 0x16: 32M
+
+id[0] = 0x01; Cypress Jedec ID
+id[1] = 0x60: S25FL256L/S25FL128L: 256-Mb(32-MB)/128-Mb(16-MB)
+id[2] = 0x19: 256Mb
+
+id[0] = 0x1f; Atmel Jedec ID
+id[1] = 0x27: 32Mbit AT45 flash
+id[2] = 0x01: Product version
 
 
 ---------------------------------------------------
@@ -47146,6 +47146,13 @@ OpenCPU questions:
 - lack of hardware watchdog reduces robustness
 - Is FOTA capable of changing partitioning? if so, do files remain over a FOTA upgrade?
 - Limited GPIO (3 lines)
+
+----------------
+Immy at school till 4:30
+belle needs key
+immy home
+belle to dance 5:15
+belle finishes 6pm
 
 
 
