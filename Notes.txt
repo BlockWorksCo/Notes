@@ -47174,6 +47174,12 @@ SDLogging
 - EMD-607: MQ robustness improvements.
 -
 
+-------------------------------------
+ssh jump thru host
+
+get to barnlogger-02 which has a tunnel from barn.dev
+ssh -J stickle@barn.dev.cyanconnode.com ubuntu@localhost -p 2947
+
 
 
 
