@@ -47221,6 +47221,12 @@ Filesystem options:
     - bad-block/wear-levelling?
 - External flash
     - cost disadvantage
+- Consider flash removal option?
+    - advantages all nodes
+    - sidesteps upcoming bad-block management issue.
+    - timescale issue.
+    - Would require effort to reduce image size now.
+
 
 
 
