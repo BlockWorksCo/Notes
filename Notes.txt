@@ -47187,6 +47187,14 @@ immy remember key
 4:45 ->7:30 dance, pink hat pastabake. tap shoes
 Swap cars over at school.
 
+---------------------------------
+v25.02 release MTI tickets:
+
+MTI-577 - SALFM346 3P Meter integration
+MTI-569 - EsyaSoft 3P Meter Integration
+MTI-354 - SALFM146 SALZER 1P meter integration
+MTI-561 - SEIPL LTCT panic issue caused due to unsupported OBIS fixed
+MTI-562 - ?
 
 
 
