@@ -47213,6 +47213,26 @@ Agent requirements:
 - Voltage monitor or ADC
 - Ability to securely generate a key on-device during production process. TRNG + secure storage with RoP.
 
+Filesystem options:
+- Modem flash
+    - probable size issue
+    - cost advantage
+    - potential performance issue with XIP and frequent writing?
+    - bad-block/wear-levelling?
+- External flash
+    - cost disadvantage
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
