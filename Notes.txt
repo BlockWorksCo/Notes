@@ -47210,6 +47210,8 @@ Agent requirements:
 - Application-level h/w watchdog timer.
 - Readout-protection for our secure filesystem key.
 - Ability to upgrade application/FOTA using our own protocol to retrive upgrade image.
+- Voltage monitor or ADC
+- Ability to securely generate a key on-device during production process. TRNG + secure storage with RoP.
 
 
 
