@@ -47196,5 +47196,13 @@ MTI-354 - SALFM146 SALZER 1P meter integration
 MTI-561 - SEIPL LTCT panic issue caused due to unsupported OBIS fixed
 MTI-562 - ?
 
+---------------------------------------
+Agent requirements:
+
+
+
+
+
+
 
 
