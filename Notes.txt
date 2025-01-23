@@ -47206,6 +47206,8 @@ Agent requirements:
 - Typical RTOS API, threads/mutex/sem/timers/etc.
 - Debug interface? Ideally SWD/JTAG.
 - >=128KB RAM
+- WDT
+- ROP
 
 
 
