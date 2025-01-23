@@ -47199,6 +47199,13 @@ MTI-562 - ?
 ---------------------------------------
 Agent requirements:
 
+- 4xGPIOs nEVENT (interrupt),nPFAIL (interrupt), NETSTAT (output), DEVSTAT (output).
+- 1xUART to meter typical 9600 no flow control.
+- modem interface (virtual-AT)
+- Typical 2MB filesystem, frequently written so over-provisioned.
+- Typical RTOS API, threads/mutex/sem/timers/etc.
+- Debug interface? Ideally SWD/JTAG.
+- >=128KB RAM
 
 
 
