@@ -47227,6 +47227,36 @@ Filesystem options:
     - timescale issue.
     - Would require effort to reduce image size now.
 
+--------------------------------------------------
+sshTunnel.service
+
+[Unit]
+Description=SSH tunnel from tickle.dev
+Documentation=man:ssh(1)
+Wants=ssh-agent.service
+After=network.target ssh-agent.service
+
+[Service]
+Type=simple
+#EnvironmentFile=/home/ubuntu/tunnels
+ExecStart=/bin/sh -c "exec /usr/bin/ssh \
+  -4NT \
+  -o ExitOnForwardFailure=yes \
+  -o ServerAliveInterval=60 \
+  -o GlobalKnownHostsFile=/home/ubuntu/.ssh/known_hosts \
+  -o CheckHostIP=no \
+  -o IdentitiesOnly=yes \
+  -o IdentityFile=/home/ubuntu/.ssh/id_rsa \
+  -R 127.0.0.1:2222:127.0.0.1:22 \
+  -o Port=22 \
+  steve@tickle.dev"
+RestartSec=60
+Restart=on-success
+RestartForceExitStatus=255
+
+[Install]
+WantedBy=multi-user.target
+
 
 
 
