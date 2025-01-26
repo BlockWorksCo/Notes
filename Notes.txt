@@ -47180,6 +47180,9 @@ ssh jump thru host
 get to barnlogger-02 which has a tunnel from barn.dev
 ssh -J stickle@barn.dev.cyanconnode.com ubuntu@localhost -p 2947
 
+get to barnlogger-02 which has a tunnel from barn.dev and make it publically available from rhis machine.
+ssh -g -4 -L 4000:0.0.0.0:4000 stickle@barn.dev.cyanconnode.com
+
 -----------------------
 take girls to school 7:50 to get there by 8:30
 immy samosa fruit drink (rasp lucozade)
