@@ -47321,8 +47321,14 @@ For bug reports, read
 FG12 Info : SWD DPIDR 0x2ba01477
 FG28 Info : SWD DPIDR 0x6ba02477
 
-./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes
 
+
+git clone https://github.com/libusb/libusb.git libusb_master          
+cd libusb_master/                                                     
+./autogen.sh                                                          
+sudo apt install libudev-dev                                          
+make -j 10                                                            
+sudo make install                                                     
 
 
 git clone https://github.com/syntacore/libjaylink.git libjaylink_master        
