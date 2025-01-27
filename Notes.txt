@@ -47259,8 +47259,67 @@ RestartForceExitStatus=255
 
 [Install]
 WantedBy=multi-user.target
+-------------------------------------------------------------
+FG28 openocd
 
 
+
+FG12:
+Info : J-Link ARM V8 compiled Nov 28 2014 13:44:46
+Info : Hardware version: 8.00
+Info : VTarget = 3.325 V
+Info : clock speed 1000 kHz
+Info : SWD DPIDR 0x2ba01477
+Info : [efm32.cpu] Cortex-M4 r0p1 processor detected
+Info : [efm32.cpu] target has 6 breakpoints, 4 watchpoints
+Info : starting gdb server for efm32.cpu on 3333
+Info : Listening on port 3333 for gdb connections
+[efm32.cpu] halted due to debug-request, current mode: Thread
+xPSR: 0x01000000 pc: 0x0fe10000 msp: 0x20000400
+pc (/32): 0x00000ad8
+
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Polling target efm32.cpu failed, trying to reexamine
+
+FG28:
+steve@steve-xps15:~/Work/t1$ ./tools/gdb/debug-cnic7.sh
+Open On-Chip Debugger 0.12.0-g4d87f6d (2024-07-04-15:29)
+Licensed under GNU GPL v2
+For bug reports, read
+        http://openocd.org/doc/doxygen/bugs.html
+        DEPRECATED! use 'adapter driver' not 'interface'
+        DEPRECATED! use 'adapter speed' not 'adapter_khz'
+        adapter speed: 1000 kHz
+
+        cortex_m reset_config sysresetreq
+
+        Info : J-Link ARM V8 compiled Nov 28 2014 13:44:46
+        Info : Hardware version: 8.00
+        Info : VTarget = 3.332 V
+        Info : clock speed 1000 kHz
+        Info : SWD DPIDR 0x6ba02477
+        Info : [efm32.cpu] Cortex-M33 r1p0 processor detected
+        Info : [efm32.cpu] target has 8 breakpoints, 4 watchpoints
+        Info : starting gdb server for efm32.cpu on 3333
+        Info : Listening on port 3333 for gdb connections
+        Error: [efm32.cpu] clearing lockup after double fault
+        Polling target efm32.cpu failed, trying to reexamine
+        Info : [efm32.cpu] Cortex-M33 r1p0 processor detected
+        Info : [efm32.cpu] target has 8 breakpoints, 4 watchpoints
+        [efm32.cpu] halted due to debug-request, current mode: Thread
+        xPSR: 0xf9000000 pc: 0xfffffffe msp: 0xfffffffc
+        pc (/32): 0x00000ad8
+
+        Info : Listening on port 6666 for tcl connections
+        Info : Listening on port 4444 for telnet connections
+        ^Cshutdown command invoked
+
+
+
+
+FG12 Info : SWD DPIDR 0x2ba01477
+FG28 Info : SWD DPIDR 0x6ba02477
 
 
 
