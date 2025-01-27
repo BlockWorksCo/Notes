@@ -47321,6 +47321,31 @@ For bug reports, read
 FG12 Info : SWD DPIDR 0x2ba01477
 FG28 Info : SWD DPIDR 0x6ba02477
 
+./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes
+
+
+
+git clone https://github.com/openocd-org/openocd.git openocd_master                       
+cd openocd_master/                                                                        
+ll                                                                                        
+./bootstrap                                                                               
+./configure                                                                               
+sudo apt install libjim-dev                                                               
+./configure                                                                               
+vi ~/Notes/Notes.txt                                                                      
+ag CMSIS configure                                                                        
+vi configure                                                                              
+./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes                              
+sudo apt install libhidapi-dev                                                            
+./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes                              
+vi configure                                                                              
+./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes           
+sudo apt install libjaylink-dev                                                           
+sudo apt autoremove                                                                       
+sudo apt install libjaylink-dev                                                           
+./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes           
+
+
 
 
 
