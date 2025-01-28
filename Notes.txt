@@ -47357,6 +47357,16 @@ barn teamviewer
 1774306246 h7xjsta9
 
 
+--------------------------------------------
+IGW test process
+
+- Get baseline using gw200 on 94 network
+    - for 10, 25, 50, 94:
+        - power on
+        - let mesh form for 5(?) minutes
+        - attempt to ping all nodes, record success rate
+        - repeat every 15 minutes for an hour to confirm stability.
+- Transfer to IGW and repeat.
 
 
 
