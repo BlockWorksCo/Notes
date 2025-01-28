@@ -47351,6 +47351,11 @@ sudo apt install libjaylink-dev
 ./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes           
 
 
+---------------------------------------------
+barn teamviewer
+
+1774306246 h7xjsta9
+
 
 
 
