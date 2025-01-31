@@ -47371,8 +47371,9 @@ IGW test process
 ---------------------------------
 CPU identify:
 
-FG28 : SWD DPIDR 0x6ba02477
-FG12 : SWD DPIDR 0x2ba01477
+EFR32FG28 : SWD DPIDR 0x6ba02477
+EFR32FG12 : SWD DPIDR 0x2ba01477
+EFM32GG
 
 
 
