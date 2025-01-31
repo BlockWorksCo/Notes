@@ -47368,6 +47368,10 @@ IGW test process
         - repeat every 15 minutes for an hour to confirm stability.
 - Transfer to IGW and repeat.
 
+---------------------------------
+CPU identify:
+
+FG28 : SWD DPIDR 0x6ba02477
 
 
 
