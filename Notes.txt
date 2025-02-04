@@ -46984,7 +46984,7 @@ EMD sprint 19
 - EMD-565 Avon IPA3b build (Done).
 - EMD-514 flash test agent
 
-RPL tickets to be tested on large test networks
+RPL tickets to be tested on large test networks (EMD-615)
 - EMD-254
 - EMD-126
 - EMD-310
