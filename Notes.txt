@@ -47408,6 +47408,13 @@ OpenCPU Neoway N58 pin allocation:
 71	UART1_CTS
 72	UART1_RTS
 
+----------------------------------------------
+mesh congestion:
+
+- power control sends beacons at fixed rate no matter the density. In large/dense networks this
+could take a significant proportion of the available bandwidth.
+    - Increase period between beacons dependent on density.
+- Evictions cause loss of history and affect parent calculations
 
 
 
