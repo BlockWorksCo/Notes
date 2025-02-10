@@ -47417,6 +47417,8 @@ mesh congestion:
 - Evictions cause loss of history and affect parent calculations
     - numOfSamples that make up ETX calcs are typically "1" which isnt accurate.
     - Because ETX is inaccurate, all behaviour derived from ETX is suspect.
+    - Reaction to low ETX is to probe to increase accuracy.
+        - Significant amounts of bandwidth are taken by probes.
 
 
 
