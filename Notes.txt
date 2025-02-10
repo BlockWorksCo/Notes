@@ -47416,6 +47416,7 @@ mesh congestion:
     - Increase period between beacons dependent on density.
 - Evictions cause loss of history and affect parent calculations
     - numOfSamples that make up ETX calcs are typically "1" which isnt accurate.
+    - Because ETX is inaccurate, all behaviour derived from ETX is suspect.
 
 
 
