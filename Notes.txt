@@ -47323,32 +47323,32 @@ FG28 Info : SWD DPIDR 0x6ba02477
 
 
 
-git clone https://github.com/libusb/libusb.git libusb_master          
-cd libusb_master/                                                     
-./autogen.sh                                                          
-sudo apt install libudev-dev                                          
-make -j 10                                                            
-sudo make install                                                     
+git clone https://github.com/libusb/libusb.git libusb_master
+cd libusb_master/
+./autogen.sh
+sudo apt install libudev-dev
+make -j 10
+sudo make install
 
 
-git clone https://github.com/syntacore/libjaylink.git libjaylink_master        
-cd libjaylink_master/                                                          
-./autogen.sh                                                                   
-./configure                                                                    
-make                                                                           
-sudo make install                                                              
+git clone https://github.com/syntacore/libjaylink.git libjaylink_master
+cd libjaylink_master/
+./autogen.sh
+./configure
+make
+sudo make install
 
 
 
-git clone https://github.com/openocd-org/openocd.git openocd_master                       
-cd openocd_master/                                                                        
-ll                                                                                        
-./bootstrap                                                                               
-./configure                                                                               
-sudo apt install libjim-dev                                                               
-sudo apt install libhidapi-dev                                                            
-sudo apt install libjaylink-dev                                                           
-./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes           
+git clone https://github.com/openocd-org/openocd.git openocd_master
+cd openocd_master/
+ll
+./bootstrap
+./configure
+sudo apt install libjim-dev
+sudo apt install libhidapi-dev
+sudo apt install libjaylink-dev
+./configure --enable-cmsis-dap=yes --enable-cmsis-dap-v2=yes --enable-jlink=yes
 
 
 ---------------------------------------------
@@ -47411,7 +47411,7 @@ OpenCPU Neoway N58 pin allocation:
 ----------------------------------------------
 mesh congestion:
 
-- power control sends beacons at fixed rate no matter the density. 
+- power control sends beacons at fixed rate no matter the density.
     - In large/dense networks this could take a significant proportion of the available bandwidth.
     - Increase period between beacons dependent on density.
 - Evictions cause loss of history and affect parent calculations
@@ -47420,6 +47420,27 @@ mesh congestion:
     - Reaction to low ETX is to probe to increase accuracy.
         - Significant amounts of bandwidth are taken by probes.
 
+-----------------------
+FG28
+- SDK into repo
+- basic build for FG28
+- Check out all peripherals:
+    - external flash/SPI
+    - I2C
+    - LED
+    - Watchdog
+    - VMon
+    - ADC
+    - internal flash
+    - radio
+    - DEVSTAT
+    - NETSTAT
+    - meter UART
+    - log UART
+    - systick
+    - debug-disable
+- MTS:
+    - OpenOCD update
 
 
 
