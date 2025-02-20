@@ -47447,6 +47447,26 @@ Dev total 43d
 Test: (10d)
 
 
+---------------------------------------
+readings task
+
+static void processMsg(Message* msg)
+{
+    switch (msg->type) {
+        case MessageRestoreProfiles:
+            processRestoreProfilesMsg();
+            break;
+        case MessageDiscoveryComplete:
+            processDiscoveryCompleteMsg();
+            break;
+        case MessageDeviceRegistered:
+            processDeviceRegisteredMsg(msg);
+        default:
+            break;
+    }
+}
+
+
 
 
 
