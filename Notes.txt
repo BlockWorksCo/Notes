@@ -47422,25 +47422,29 @@ mesh congestion:
 
 -----------------------
 FG28
-- SDK into repo
-- basic build for FG28
+- SDK into repo (5d)
+- basic build for FG28 (5d)
 - Check out all peripherals:
-    - external flash/SPI
-    - I2C
-    - LED
-    - Watchdog
-    - VMon
-    - ADC
-    - internal flash
-    - radio
-    - DEVSTAT
-    - NETSTAT
-    - meter UART
-    - log UART
-    - systick
-    - debug-disable
+    - external flash/SPI (2d)
+    - I2C (2d)
+    - LED (2d)
+    - Watchdog (2d)
+    - VMon (2d)
+    - ADC (2d)
+    - internal flash (2d)
+    - radio (2d)
+    - DEVSTAT (2d)
+    - NETSTAT (2d)
+    - meter UART (2d)
+    - log UART (2d)
+    - systick (2d)
+    - Read out protection. (2d)
 - MTS:
-    - OpenOCD update
+    - OpenOCD update (5d)
+
+Dev total 43d
+
+Test: (10d)
 
 
 
